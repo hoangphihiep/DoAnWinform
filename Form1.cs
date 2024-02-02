@@ -354,5 +354,10 @@ namespace DoAnDuLich
                 e.Cancel = true;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnDuLich;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DuLich
 {
     public partial class fRegister : Form
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         public fRegister()
         {
             InitializeComponent();
@@ -98,8 +102,31 @@ namespace DuLich
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn đã đăng ký thành công ");
-            this.Close();
+            if (txt_TenDangNhap.Text == "" || txt_HoVaTen.Text == "" || cbb_GioiTinh.Text == "" || txt_DiaChi.Text == "" || dtp_NgayThangNamSinh.Value == null || txt_Email.Text == "" || txt_SoDienThoai.Text == "" || txt_MatKhau.Text == "")  
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+            else
+            {
+                if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
+                {
+                    MessageBox.Show("Mật khẩu nhập lại không trùng khớp");
+                }
+                else
+                {
+                    if (cb_ToiDongY.Checked == true)
+                    {
+                        MessageBox.Show("Bạn đã đăng ký thành công ");
+                        Account account = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
+                        account.AddAccount(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hãy đọc kĩ điều khoản và điều kiện đăng ký");
+                    }
+                }
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
