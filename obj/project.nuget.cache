@@ -1,8 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "E1mBuZsda3kwqIv+V1CJZlulUGBHrXPVOPbHtfSW1ZmV1INus8WsOyPLuleGi7dBIx0tvYkntQEY96cgz0a5Jg==",
+  "dgSpecHash": "vcAt919/anfZinIa+U7ThzBhNF6fJqKZoxO2HbxWJo9S3TVk5uXYvZWsUrMFgkaOXK8gvpy7sapE6yYOUyZz2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DoAnDuLich.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DuLich.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

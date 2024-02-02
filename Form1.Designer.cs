@@ -37,6 +37,7 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             panel1 = new Panel();
+            numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
             label3 = new Label();
             label2 = new Label();
@@ -50,21 +51,17 @@
             btn_DangNhap = new Button();
             btn_DangKy = new Button();
             panel2 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
             label4 = new Label();
-            numericUpDown2 = new NumericUpDown();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -77,6 +74,7 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             pictureBox1.Visible = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox3
             // 
@@ -169,6 +167,13 @@
             panel1.Size = new Size(1199, 300);
             panel1.TabIndex = 12;
             // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(980, 160);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(175, 27);
+            numericUpDown2.TabIndex = 25;
+            // 
             // numericUpDown1
             // 
             numericUpDown1.Location = new Point(740, 160);
@@ -239,6 +244,7 @@
             button1.TabIndex = 12;
             button1.Text = "Tìm kiếm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dateTimePicker2
             // 
@@ -284,9 +290,6 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(btn_DangNhap);
             panel2.Controls.Add(btn_DangKy);
@@ -294,59 +297,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1315, 70);
             panel2.TabIndex = 15;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Transparent;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.Location = new Point(623, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(153, 60);
-            button5.TabIndex = 18;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Transparent;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(436, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(153, 60);
-            button4.TabIndex = 17;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(255, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(153, 60);
-            button3.TabIndex = 16;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(74, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 60);
-            button2.TabIndex = 15;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -360,12 +310,14 @@
             label4.TabIndex = 16;
             label4.Text = "see more of the world";
             // 
-            // numericUpDown2
+            // button2
             // 
-            numericUpDown2.Location = new Point(980, 160);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(175, 27);
-            numericUpDown2.TabIndex = 25;
+            button2.Location = new Point(780, 16);
+            button2.Name = "button2";
+            button2.Size = new Size(223, 47);
+            button2.TabIndex = 26;
+            button2.Text = "Đăng ký cho thuê khách sạn";
+            button2.UseVisualStyleBackColor = true;
             // 
             // FTrangChuTK
             // 
@@ -394,9 +346,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -422,12 +374,9 @@
         private Label label1;
         private Label label6;
         private Panel panel2;
-        private Button button3;
-        private Button button2;
-        private Button button5;
-        private Button button4;
         private Label label4;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
+        private Button button2;
     }
 }

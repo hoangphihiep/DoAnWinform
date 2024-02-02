@@ -57,5 +57,10 @@
         {
 
         }
+
+        private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

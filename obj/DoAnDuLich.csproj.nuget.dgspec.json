@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DoAnDuLich.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DoAnDuLich.csproj",
         "packagesPath": "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\obj\\",
+=======
+    "C:\\Users\\ADMIN\\Downloads\\Winform\\DoAnDuLich.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ADMIN\\Downloads\\Winform\\DoAnDuLich.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\Winform\\DoAnDuLich.csproj",
+        "projectName": "DoAnDuLich",
+        "projectPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\DoAnDuLich.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\",
+>>>>>>> f319e1a75e2194c582a6ec325758ec6e13df003e
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phihi_6b0xaz1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +53,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

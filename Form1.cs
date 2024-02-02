@@ -20,14 +20,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox1;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox1;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox1;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox1;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox1;
-                button5.BackColor = Color.Transparent;
                 pictureBox1.Visible = true;
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = false;
@@ -62,14 +54,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox2;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox2;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox2;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox2;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox2;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox2.Visible == true)
             {
@@ -89,14 +73,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox3;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox3;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox3;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox3;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox3;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox3.Visible == true)
             {
@@ -116,14 +92,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox4;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox4;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox4;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox4;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox4;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox4.Visible == true)
             {
@@ -143,14 +111,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox5;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox5;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox5;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox5;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox5;
-                button5.BackColor = Color.Transparent;
             }
             else
             {
@@ -170,14 +130,6 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox1;
                 btn_back.BackColor = Color.Transparent;
-                button2.Parent = pictureBox1;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox1;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox1;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox1;
-                button5.BackColor = Color.Transparent;
             }
         }
 
@@ -202,14 +154,6 @@ namespace DoAnDuLich
                 btn_back.BackColor = Color.Transparent;
                 btn_next.Parent = pictureBox2;
                 btn_next.BackColor = Color.Transparent;
-                button2.Parent = pictureBox2;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox2;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox2;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox2;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox2.Visible == true)
             {
@@ -229,14 +173,6 @@ namespace DoAnDuLich
                 btn_back.BackColor = Color.Transparent;
                 btn_next.Parent = pictureBox3;
                 btn_next.BackColor = Color.Transparent;
-                button2.Parent = pictureBox3;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox3;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox3;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox3;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox3.Visible == true)
             {
@@ -256,14 +192,6 @@ namespace DoAnDuLich
                 btn_back.BackColor = Color.Transparent;
                 btn_next.Parent = pictureBox4;
                 btn_next.BackColor = Color.Transparent;
-                button2.Parent = pictureBox4;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox4;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox4;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox4;
-                button5.BackColor = Color.Transparent;
             }
             else if (pictureBox4.Visible == true)
             {
@@ -283,14 +211,6 @@ namespace DoAnDuLich
                 btn_back.BackColor = Color.Transparent;
                 btn_next.Parent = pictureBox5;
                 btn_next.BackColor = Color.Transparent;
-                button2.Parent = pictureBox5;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox5;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox5;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox5;
-                button5.BackColor = Color.Transparent;
             }
             else
             {
@@ -310,14 +230,6 @@ namespace DoAnDuLich
                 btn_back.BackColor = Color.Transparent;
                 btn_next.Parent = pictureBox1;
                 btn_next.BackColor = Color.Transparent;
-                button2.Parent = pictureBox1;
-                button2.BackColor = Color.Transparent;
-                button3.Parent = pictureBox1;
-                button3.BackColor = Color.Transparent;
-                button4.Parent = pictureBox1;
-                button4.BackColor = Color.Transparent;
-                button5.Parent = pictureBox1;
-                button5.BackColor = Color.Transparent;
             }
         }
 
@@ -353,6 +265,19 @@ namespace DoAnDuLich
             {
                 e.Cancel = true;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+            this.Hide();
+            k.ShowDialog();
+            this.Show();
         }
     }
 }

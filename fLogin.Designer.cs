@@ -128,6 +128,7 @@
             txt_TenDangNhap.Name = "txt_TenDangNhap";
             txt_TenDangNhap.Size = new Size(731, 27);
             txt_TenDangNhap.TabIndex = 1;
+            txt_TenDangNhap.TextChanged += txt_TenDangNhap_TextChanged;
             // 
             // lbl_TenDangNhap
             // 
