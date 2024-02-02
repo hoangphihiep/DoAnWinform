@@ -37,14 +37,13 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             panel1 = new Panel();
+            numericUpDown1 = new NumericUpDown();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             label6 = new Label();
             label5 = new Label();
             button1 = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             lb_TimKiem = new TextBox();
@@ -56,13 +55,16 @@
             button3 = new Button();
             button2 = new Button();
             label4 = new Label();
+            numericUpDown2 = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -151,14 +153,14 @@
             panel1.AccessibleRole = AccessibleRole.IpAddress;
             panel1.BackColor = Color.WhiteSmoke;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(numericUpDown2);
+            panel1.Controls.Add(numericUpDown1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(dateTimePicker2);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(lb_TimKiem);
@@ -167,6 +169,13 @@
             panel1.Size = new Size(1199, 300);
             panel1.TabIndex = 12;
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(740, 160);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(175, 27);
+            numericUpDown1.TabIndex = 24;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -174,9 +183,9 @@
             label3.ForeColor = SystemColors.ButtonHighlight;
             label3.Location = new Point(980, 118);
             label3.Name = "label3";
-            label3.Size = new Size(81, 25);
+            label3.Size = new Size(148, 25);
             label3.TabIndex = 23;
-            label3.Text = "Mức giá";
+            label3.Text = "Số lượng trẻ em";
             // 
             // label2
             // 
@@ -185,9 +194,9 @@
             label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(740, 118);
             label2.Name = "label2";
-            label2.Size = new Size(143, 25);
+            label2.Size = new Size(175, 25);
             label2.TabIndex = 22;
-            label2.Text = "Số lượng người";
+            label2.Text = "Số lượng người lớn";
             // 
             // label1
             // 
@@ -230,20 +239,6 @@
             button1.TabIndex = 12;
             button1.Text = "Tìm kiếm";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(980, 157);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(740, 157);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 27);
-            textBox1.TabIndex = 13;
             // 
             // dateTimePicker2
             // 
@@ -362,6 +357,13 @@
             label4.TabIndex = 16;
             label4.Text = "see more of the world";
             // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(980, 160);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(175, 27);
+            numericUpDown2.TabIndex = 25;
+            // 
             // FTrangChuTK
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -387,7 +389,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -402,8 +406,6 @@
         private PictureBox pictureBox5;
         private Panel panel1;
         private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
         private TextBox lb_TimKiem;
@@ -420,5 +422,7 @@
         private Button button5;
         private Button button4;
         private Label label4;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown2;
     }
 }
