@@ -1,0 +1,17 @@
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DoAnDuLich.exe
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DoAnDuLich.deps.json
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DoAnDuLich.runtimeconfig.json
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DoAnDuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DoAnDuLich.pdb
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.csproj.GenerateResource.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.AssemblyInfoInputs.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.AssemblyInfo.cs
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.csproj.CoreCompileInputs.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\refint\DoAnDuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.pdb
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.genruntimeconfig.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\ref\DoAnDuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.Properties.Resources.resources
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DoAnDuLich.FTrangChuTK.resources
