@@ -270,6 +270,7 @@
             btn_DangNhap.TabIndex = 13;
             btn_DangNhap.Text = "Đăng nhập";
             btn_DangNhap.UseVisualStyleBackColor = true;
+            btn_DangNhap.Click += btn_DangNhap_Click;
             // 
             // btn_DangKy
             // 
@@ -279,6 +280,7 @@
             btn_DangKy.TabIndex = 14;
             btn_DangKy.Text = "Đăng Ký";
             btn_DangKy.UseVisualStyleBackColor = true;
+            btn_DangKy.Click += btn_DangKy_Click;
             // 
             // panel2
             // 
@@ -318,6 +320,7 @@
             button4.TabIndex = 17;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -380,7 +383,9 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Name = "FTrangChuTK";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            FormClosing += FTrangChuTK_FormClosing;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
