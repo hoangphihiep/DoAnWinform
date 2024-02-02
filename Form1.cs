@@ -1,4 +1,6 @@
-﻿namespace DoAnDuLich
+﻿using DuLich;
+
+namespace DoAnDuLich
 {
     public partial class FTrangChuTK : Form
     {
@@ -322,6 +324,35 @@
         private void btn_next_Paint(object sender, PaintEventArgs e)
         {
             btn_next.BackColor = Color.Transparent;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DangKy_Click(object sender, EventArgs e)
+        {
+            fRegister f = new fRegister();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            fLogin f = new fLogin();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void FTrangChuTK_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn thực sự có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
