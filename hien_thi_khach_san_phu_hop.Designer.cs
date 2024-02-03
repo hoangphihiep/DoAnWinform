@@ -32,7 +32,6 @@
             panel2 = new Panel();
             panel1 = new Panel();
             button1 = new Button();
-            menuStrip1 = new MenuStrip();
             panel3 = new Panel();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
@@ -44,17 +43,18 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
-            toolStripMenuItem4 = new ToolStripMenuItem();
-            toolStripMenuItem5 = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
+            tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
+            lịchSửToolStripMenuItem = new ToolStripMenuItem();
+            thoátToolStripMenuItem = new ToolStripMenuItem();
             panel2.SuspendLayout();
-            menuStrip1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -82,17 +82,6 @@
             button1.TabIndex = 0;
             button1.Text = "Đăng ký cho thuê khách sạn";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Dock = DockStyle.Right;
-            menuStrip1.ImageScalingSize = new Size(60, 60);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
-            menuStrip1.Location = new Point(397, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(920, 74);
-            menuStrip1.TabIndex = 18;
-            menuStrip1.Text = "menuStrip1";
             // 
             // panel3
             // 
@@ -194,39 +183,48 @@
             tabPage4.Text = "Được đánh giá nhiều nhất";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // toolStripMenuItem1
+            // menuStrip1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3, toolStripMenuItem4, toolStripMenuItem5 });
-            toolStripMenuItem1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripMenuItem1.Image = (Image)resources.GetObject("toolStripMenuItem1.Image");
-            toolStripMenuItem1.ImageAlign = ContentAlignment.BottomCenter;
-            toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(907, 924);
+            menuStrip1.Dock = DockStyle.Right;
+            menuStrip1.ImageScalingSize = new Size(60, 60);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tàiKhoảnToolStripMenuItem });
+            menuStrip1.Location = new Point(1166, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(151, 74);
+            menuStrip1.TabIndex = 18;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripMenuItem2
+            // tàiKhoảnToolStripMenuItem
             // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(224, 26);
-            toolStripMenuItem2.Text = "Thông tin tài khoản";
+            tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
+            tàiKhoảnToolStripMenuItem.Image = (Image)resources.GetObject("tàiKhoảnToolStripMenuItem.Image");
+            tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            tàiKhoảnToolStripMenuItem.Size = new Size(138, 64);
+            tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
-            // toolStripMenuItem3
+            // thôngTinTàiKhoảnToolStripMenuItem
             // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(224, 26);
-            toolStripMenuItem3.Text = "Khách sạn đã đặt";
+            thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
-            // toolStripMenuItem4
+            // kháchSạnĐãĐặtToolStripMenuItem
             // 
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(224, 26);
-            toolStripMenuItem4.Text = "Lịch sử";
+            kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             // 
-            // toolStripMenuItem5
+            // lịchSửToolStripMenuItem
             // 
-            toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(224, 26);
-            toolStripMenuItem5.Text = "Đăng xuất";
+            lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
+            lịchSửToolStripMenuItem.Size = new Size(224, 26);
+            lịchSửToolStripMenuItem.Text = "Lịch sử";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            thoátToolStripMenuItem.Size = new Size(224, 26);
+            thoátToolStripMenuItem.Text = "Thoát";
             // 
             // hien_thi_khach_san_phu_hop
             // 
@@ -236,18 +234,17 @@
             Controls.Add(tabControl1);
             Controls.Add(panel3);
             Controls.Add(panel2);
-            MainMenuStrip = menuStrip1;
             Name = "hien_thi_khach_san_phu_hop";
             Text = "hien_thi_khach_san_phu_hop";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -268,10 +265,10 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
-        private ToolStripMenuItem toolStripMenuItem4;
-        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
+        private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
+        private ToolStripMenuItem lịchSửToolStripMenuItem;
+        private ToolStripMenuItem thoátToolStripMenuItem;
     }
 }
