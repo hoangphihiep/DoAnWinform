@@ -32,6 +32,12 @@
             panel2 = new Panel();
             panel1 = new Panel();
             button1 = new Button();
+            menuStrip1 = new MenuStrip();
+            tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
+            lịchSửToolStripMenuItem = new ToolStripMenuItem();
+            thoátToolStripMenuItem = new ToolStripMenuItem();
             panel3 = new Panel();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
@@ -43,18 +49,20 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            menuStrip1 = new MenuStrip();
-            tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
-            thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
-            kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
-            lịchSửToolStripMenuItem = new ToolStripMenuItem();
-            thoátToolStripMenuItem = new ToolStripMenuItem();
+            trackBar1 = new TrackBar();
+            label1 = new Label();
+            label2 = new Label();
+            trackBar2 = new TrackBar();
+            label3 = new Label();
+            label4 = new Label();
             panel2.SuspendLayout();
+            menuStrip1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -66,6 +74,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1317, 74);
             panel2.TabIndex = 16;
+            panel2.Paint += panel2_Paint;
             // 
             // panel1
             // 
@@ -82,6 +91,49 @@
             button1.TabIndex = 0;
             button1.Text = "Đăng ký cho thuê khách sạn";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Dock = DockStyle.Right;
+            menuStrip1.ImageScalingSize = new Size(60, 60);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tàiKhoảnToolStripMenuItem });
+            menuStrip1.Location = new Point(1166, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(151, 74);
+            menuStrip1.TabIndex = 18;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
+            tàiKhoảnToolStripMenuItem.Image = (Image)resources.GetObject("tàiKhoảnToolStripMenuItem.Image");
+            tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            tàiKhoảnToolStripMenuItem.Size = new Size(138, 64);
+            tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // thôngTinTàiKhoảnToolStripMenuItem
+            // 
+            thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            // 
+            // kháchSạnĐãĐặtToolStripMenuItem
+            // 
+            kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
+            // 
+            // lịchSửToolStripMenuItem
+            // 
+            lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
+            lịchSửToolStripMenuItem.Size = new Size(220, 26);
+            lịchSửToolStripMenuItem.Text = "Lịch sử";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            thoátToolStripMenuItem.Size = new Size(220, 26);
+            thoátToolStripMenuItem.Text = "Thoát";
             // 
             // panel3
             // 
@@ -138,99 +190,120 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
-            tabControl1.Location = new Point(-1, 152);
+            tabControl1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl1.Location = new Point(319, 137);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1318, 545);
+            tabControl1.Size = new Size(998, 545);
             tabControl1.TabIndex = 18;
             // 
             // tabPage1
             // 
             tabPage1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 50);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1310, 512);
+            tabPage1.Size = new Size(990, 491);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Phù hợp nhất";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 50);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1310, 512);
+            tabPage2.Size = new Size(990, 491);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Giá thấp nhất";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            tabPage3.Location = new Point(4, 29);
+            tabPage3.Location = new Point(4, 50);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1310, 512);
+            tabPage3.Size = new Size(990, 491);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Khoảng cách";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
-            tabPage4.Location = new Point(4, 29);
+            tabPage4.Location = new Point(4, 50);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(1310, 512);
+            tabPage4.Size = new Size(990, 491);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Được đánh giá nhiều nhất";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // trackBar1
             // 
-            menuStrip1.Dock = DockStyle.Right;
-            menuStrip1.ImageScalingSize = new Size(60, 60);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tàiKhoảnToolStripMenuItem });
-            menuStrip1.Location = new Point(1166, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(151, 74);
-            menuStrip1.TabIndex = 18;
-            menuStrip1.Text = "menuStrip1";
+            trackBar1.Location = new Point(37, 187);
+            trackBar1.Maximum = 5000000;
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new Size(229, 56);
+            trackBar1.TabIndex = 20;
+            trackBar1.Scroll += trackBar1_Scroll;
             // 
-            // tàiKhoảnToolStripMenuItem
+            // label1
             // 
-            tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
-            tàiKhoảnToolStripMenuItem.Image = (Image)resources.GetObject("tàiKhoảnToolStripMenuItem.Image");
-            tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            tàiKhoảnToolStripMenuItem.Size = new Size(138, 64);
-            tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            label1.AutoSize = true;
+            label1.Location = new Point(47, 263);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 21;
+            label1.Text = "Giá tiền";
             // 
-            // thôngTinTàiKhoảnToolStripMenuItem
+            // label2
             // 
-            thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
-            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            label2.AutoSize = true;
+            label2.Location = new Point(132, 263);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 22;
+            label2.Text = "label2";
             // 
-            // kháchSạnĐãĐặtToolStripMenuItem
+            // trackBar2
             // 
-            kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
-            kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
+            trackBar2.Location = new Point(47, 304);
+            trackBar2.Maximum = 5000000;
+            trackBar2.Name = "trackBar2";
+            trackBar2.RightToLeft = RightToLeft.Yes;
+            trackBar2.RightToLeftLayout = true;
+            trackBar2.Size = new Size(207, 56);
+            trackBar2.TabIndex = 23;
+            trackBar2.Value = 5000000;
+            trackBar2.Scroll += trackBar2_Scroll;
             // 
-            // lịchSửToolStripMenuItem
+            // label3
             // 
-            lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(224, 26);
-            lịchSửToolStripMenuItem.Text = "Lịch sử";
+            label3.AutoSize = true;
+            label3.Location = new Point(47, 363);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 20);
+            label3.TabIndex = 24;
+            label3.Text = "Giá tiền";
             // 
-            // thoátToolStripMenuItem
+            // label4
             // 
-            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(224, 26);
-            thoátToolStripMenuItem.Text = "Thoát";
+            label4.AutoSize = true;
+            label4.Location = new Point(132, 363);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 20);
+            label4.TabIndex = 25;
+            label4.Text = "label4";
             // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 709);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(trackBar2);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(trackBar1);
             Controls.Add(tabControl1);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -238,14 +311,17 @@
             Text = "hien_thi_khach_san_phu_hop";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -270,5 +346,11 @@
         private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
         private ToolStripMenuItem lịchSửToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
+        private TrackBar trackBar1;
+        private Label label1;
+        private Label label2;
+        private TrackBar trackBar2;
+        private Label label3;
+        private Label label4;
     }
 }
