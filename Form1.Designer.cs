@@ -297,6 +297,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1315, 70);
             panel2.TabIndex = 15;
+            panel2.Paint += panel2_Paint;
             // 
             // button2
             // 
@@ -337,7 +338,7 @@
             Controls.Add(pictureBox5);
             Name = "FTrangChuTK";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Giao diện";
             FormClosing += FTrangChuTK_FormClosing;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

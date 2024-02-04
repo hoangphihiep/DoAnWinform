@@ -16,5 +16,110 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void lbl_TienNghi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_ChiTietPhongO_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TenToaNhaTangCanHo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_QuocGia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_TenPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_GiaToiThieuMoiDem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_QuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_TiepTheo_Click(object sender, EventArgs e)
+        {
+            fHotel_Posting_Image f = new fHotel_Posting_Image();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void fHotel_Posting_RoomDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

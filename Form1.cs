@@ -1,5 +1,5 @@
-﻿using DuLich;
-
+﻿using DoAnDuLich;
+using DuLich;
 namespace DoAnDuLich
 {
     public partial class FTrangChuTK : Form
@@ -8,9 +8,6 @@ namespace DoAnDuLich
         {
             InitializeComponent();
         }
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -286,6 +283,11 @@ namespace DoAnDuLich
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

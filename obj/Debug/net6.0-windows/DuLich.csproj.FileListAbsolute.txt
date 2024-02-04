@@ -62,3 +62,6 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting.
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHoTel_Posting_Position.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Convinient.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_RoomDetails.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Image.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Profile.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Upload.resources

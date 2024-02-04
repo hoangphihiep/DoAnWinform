@@ -10,10 +10,19 @@
     <Compile Update="fHotel_Posting_Convinient.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fHotel_Posting_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fHoTel_Posting_Position.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fHotel_Posting_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fHotel_Posting_RoomDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fHotel_Posting_Upload.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fLogin.cs">

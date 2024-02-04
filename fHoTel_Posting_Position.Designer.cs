@@ -342,9 +342,10 @@
             lbl_KhachHangChiNhanDuoc.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_KhachHangChiNhanDuoc.Location = new Point(39, 128);
             lbl_KhachHangChiNhanDuoc.Name = "lbl_KhachHangChiNhanDuoc";
-            lbl_KhachHangChiNhanDuoc.Size = new Size(512, 69);
+            lbl_KhachHangChiNhanDuoc.Size = new Size(512, 23);
             lbl_KhachHangChiNhanDuoc.TabIndex = 2;
-            lbl_KhachHangChiNhanDuoc.Text = "Khách hàng chỉ nhận được địa chỉ cụ thể một khi đã xác nhận phòng\r\n\r\n\r\n";
+            lbl_KhachHangChiNhanDuoc.Text = "Khách hàng chỉ nhận được địa chỉ cụ thể một khi đã xác nhận phòng";
+            lbl_KhachHangChiNhanDuoc.Visible = false;
             lbl_KhachHangChiNhanDuoc.Click += lbl_HayTanDung_Click;
             // 
             // lbl_ViTriCuaBan
