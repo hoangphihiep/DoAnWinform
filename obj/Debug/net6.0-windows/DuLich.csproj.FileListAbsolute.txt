@@ -67,3 +67,5 @@ C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Convinient.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_RoomDetails.resources
 >>>>>>> 1dbd251f5cda05eaf6c0a3e1058ea945bca8f23e
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Convinient.resources
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_RoomDetails.resources
