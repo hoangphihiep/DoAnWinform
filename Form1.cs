@@ -10,7 +10,6 @@ namespace DoAnDuLich
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
             if (pictureBox1.Visible == false)
             {
                 btn_next.Parent = pictureBox1;
@@ -128,6 +127,31 @@ namespace DoAnDuLich
                 btn_back.Parent = pictureBox1;
                 btn_back.BackColor = Color.Transparent;
             }
+        }
+        public void HideMenuStrip()
+        {
+            //hien menustrip
+            menuTaiKhoan.Visible = false;
+        }
+        public void ShowMenuStrip()
+        {
+            menuTaiKhoan.Visible = true;
+        }
+        public void HideDangNhap()
+        {
+            btn_DangNhap.Visible = false;
+        }
+        public void ShowDangNhap()
+        {
+            btn_DangNhap.Visible = true;
+        }
+        public void HideDangKy()
+        {
+            btn_DangKy.Visible = false;
+        }
+        public void ShowDangKy()
+        {
+            btn_DangKy.Visible = true;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -250,7 +274,9 @@ namespace DoAnDuLich
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            int t = 0;
             fLogin f = new fLogin();
+            f.KiemTra(t);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -285,9 +311,15 @@ namespace DoAnDuLich
             this.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        //private void panel2_Paint(object sender, PaintEventArgs e)
+        //{
 
-        }
+        //    private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        //    {
+        //        ShowDangNhap();
+        //        ShowDangKy();
+        //        HideMenuStrip();
+        //    }
+        //}
     }
 }

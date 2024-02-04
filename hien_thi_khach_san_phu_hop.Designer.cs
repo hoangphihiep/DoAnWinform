@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hien_thi_khach_san_phu_hop));
             panel2 = new Panel();
+            btn_DangKy = new Button();
+            btn_DangNhap = new Button();
             panel1 = new Panel();
             button1 = new Button();
             menuStrip1 = new MenuStrip();
-            tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            MenuStripTaiKhoan = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
             lịchSửToolStripMenuItem = new ToolStripMenuItem();
@@ -67,6 +69,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btn_DangKy);
+            panel2.Controls.Add(btn_DangNhap);
             panel2.Controls.Add(panel1);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(menuStrip1);
@@ -75,6 +79,26 @@
             panel2.Size = new Size(1317, 74);
             panel2.TabIndex = 16;
             panel2.Paint += panel2_Paint;
+            // 
+            // btn_DangKy
+            // 
+            btn_DangKy.Location = new Point(1064, 12);
+            btn_DangKy.Name = "btn_DangKy";
+            btn_DangKy.Size = new Size(99, 47);
+            btn_DangKy.TabIndex = 28;
+            btn_DangKy.Text = "Đăng Ký";
+            btn_DangKy.UseVisualStyleBackColor = true;
+            btn_DangKy.Click += btn_DangKy_Click;
+            // 
+            // btn_DangNhap
+            // 
+            btn_DangNhap.Location = new Point(1185, 12);
+            btn_DangNhap.Name = "btn_DangNhap";
+            btn_DangNhap.Size = new Size(99, 47);
+            btn_DangNhap.TabIndex = 27;
+            btn_DangNhap.Text = "Đăng nhập";
+            btn_DangNhap.UseVisualStyleBackColor = true;
+            btn_DangNhap.Click += btn_DangNhap_Click;
             // 
             // panel1
             // 
@@ -97,20 +121,21 @@
             // 
             menuStrip1.Dock = DockStyle.Right;
             menuStrip1.ImageScalingSize = new Size(60, 60);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tàiKhoảnToolStripMenuItem });
-            menuStrip1.Location = new Point(1166, 0);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuStripTaiKhoan });
+            menuStrip1.Location = new Point(1287, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(151, 74);
+            menuStrip1.Size = new Size(30, 74);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
-            // tàiKhoảnToolStripMenuItem
+            // MenuStripTaiKhoan
             // 
-            tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
-            tàiKhoảnToolStripMenuItem.Image = (Image)resources.GetObject("tàiKhoảnToolStripMenuItem.Image");
-            tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            tàiKhoảnToolStripMenuItem.Size = new Size(138, 64);
-            tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
+            MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
+            MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
+            MenuStripTaiKhoan.Size = new Size(138, 64);
+            MenuStripTaiKhoan.Text = "Tài khoản";
+            MenuStripTaiKhoan.Visible = false;
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -267,12 +292,12 @@
             // 
             // trackBar2
             // 
-            trackBar2.Location = new Point(47, 304);
+            trackBar2.Location = new Point(37, 304);
             trackBar2.Maximum = 5000000;
             trackBar2.Name = "trackBar2";
             trackBar2.RightToLeft = RightToLeft.Yes;
             trackBar2.RightToLeftLayout = true;
-            trackBar2.Size = new Size(207, 56);
+            trackBar2.Size = new Size(229, 56);
             trackBar2.TabIndex = 23;
             trackBar2.Value = 5000000;
             trackBar2.Scroll += trackBar2_Scroll;
@@ -312,6 +337,7 @@
             Name = "hien_thi_khach_san_phu_hop";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "hien_thi_khach_san_phu_hop";
+            Load += hien_thi_khach_san_phu_hop_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             menuStrip1.ResumeLayout(false);
@@ -344,7 +370,7 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private ToolStripMenuItem MenuStripTaiKhoan;
         private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
         private ToolStripMenuItem lịchSửToolStripMenuItem;
@@ -355,5 +381,7 @@
         private TrackBar trackBar2;
         private Label label3;
         private Label label4;
+        private Button btn_DangNhap;
+        private Button btn_DangKy;
     }
 }
