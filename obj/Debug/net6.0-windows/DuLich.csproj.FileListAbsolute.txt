@@ -60,3 +60,4 @@ C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.hien_thi_khach_san_phu_hop.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHoTel_Posting_Position.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting_Convinient.resources
