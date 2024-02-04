@@ -602,7 +602,7 @@
             Controls.Add(label1);
             Name = "fHotel_Posting";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "fHotelPosting";
+            Text = "Thông tin căn bản";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

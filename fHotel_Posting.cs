@@ -203,7 +203,10 @@ namespace DuLich
 
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
-
+            fHoTel_Posting_Position f = new fHoTel_Posting_Position();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }
