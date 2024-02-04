@@ -603,6 +603,7 @@
             Name = "fHotel_Posting";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Thông tin căn bản";
+            Load += fHotel_Posting_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

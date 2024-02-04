@@ -322,9 +322,9 @@
             menuStrip1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(50, 50);
             menuStrip1.Items.AddRange(new ToolStripItem[] { menuTaiKhoan });
-            menuStrip1.Location = new Point(1159, 0);
+            menuStrip1.Location = new Point(1285, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(156, 70);
+            menuStrip1.Size = new Size(30, 70);
             menuStrip1.TabIndex = 27;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -333,8 +333,9 @@
             menuTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
             menuTaiKhoan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuTaiKhoan.Image = (Image)resources.GetObject("menuTaiKhoan.Image");
+            menuTaiKhoan.ImageAlign = ContentAlignment.BottomCenter;
             menuTaiKhoan.Name = "menuTaiKhoan";
-            menuTaiKhoan.Size = new Size(143, 54);
+            menuTaiKhoan.Size = new Size(128, 54);
             menuTaiKhoan.Text = "Tài khoản";
             menuTaiKhoan.Visible = false;
             // 
@@ -361,7 +362,6 @@
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             thoátToolStripMenuItem.Size = new Size(224, 26);
             thoátToolStripMenuItem.Text = "Thoát";
-            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
             // label4
             // 
@@ -393,7 +393,7 @@
             MainMenuStrip = menuStrip1;
             Name = "FTrangChuTK";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Giao diện";
             FormClosing += FTrangChuTK_FormClosing;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

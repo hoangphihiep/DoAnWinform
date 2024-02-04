@@ -51,7 +51,7 @@ namespace DuLich
         {
             int value = trackBar1.Value;
             // Xử lý giá trị mới tại đây
-            label2.Text = $"{value}";
+            lbl_Min.Text = $"{value}";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -67,7 +67,7 @@ namespace DuLich
             value = trackBar2.Maximum - value;
 
             // Hiển thị giá trị đảo ngược lên label
-            label4.Text = value.ToString();
+            lbl_max.Text = value.ToString();
 
 
         }
@@ -102,6 +102,11 @@ namespace DuLich
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

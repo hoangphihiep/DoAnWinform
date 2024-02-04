@@ -44,7 +44,7 @@ namespace DuLich
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
-            }    
+            }
             else
             {
                 FTrangChuTK f = new FTrangChuTK();
@@ -55,7 +55,7 @@ namespace DuLich
                 f.ShowDialog();
                 this.Show();
             }
-            
+
 
         }
 
@@ -83,6 +83,11 @@ namespace DuLich
         }
 
         private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

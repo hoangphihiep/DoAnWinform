@@ -208,5 +208,10 @@ namespace DuLich
             f.ShowDialog();
             this.Show();
         }
+
+        private void fHotel_Posting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

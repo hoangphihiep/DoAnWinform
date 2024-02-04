@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hien_thi_khach_san_phu_hop));
             panel2 = new Panel();
+            btn_DangKy = new Button();
+            btn_DangNhap = new Button();
             panel1 = new Panel();
             button1 = new Button();
             menuStrip1 = new MenuStrip();
@@ -51,20 +53,23 @@
             tabPage4 = new TabPage();
             trackBar1 = new TrackBar();
             label1 = new Label();
-            label2 = new Label();
+            lbl_Min = new Label();
             trackBar2 = new TrackBar();
             label3 = new Label();
-            label4 = new Label();
-            btn_DangNhap = new Button();
-            btn_DangKy = new Button();
+            lbl_max = new Label();
+            panel4 = new Panel();
+            pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -79,6 +84,26 @@
             panel2.Size = new Size(1317, 74);
             panel2.TabIndex = 16;
             panel2.Paint += panel2_Paint;
+            // 
+            // btn_DangKy
+            // 
+            btn_DangKy.Location = new Point(1064, 12);
+            btn_DangKy.Name = "btn_DangKy";
+            btn_DangKy.Size = new Size(99, 47);
+            btn_DangKy.TabIndex = 28;
+            btn_DangKy.Text = "Đăng Ký";
+            btn_DangKy.UseVisualStyleBackColor = true;
+            btn_DangKy.Click += btn_DangKy_Click;
+            // 
+            // btn_DangNhap
+            // 
+            btn_DangNhap.Location = new Point(1185, 12);
+            btn_DangNhap.Name = "btn_DangNhap";
+            btn_DangNhap.Size = new Size(99, 47);
+            btn_DangNhap.TabIndex = 27;
+            btn_DangNhap.Text = "Đăng nhập";
+            btn_DangNhap.UseVisualStyleBackColor = true;
+            btn_DangNhap.Click += btn_DangNhap_Click;
             // 
             // panel1
             // 
@@ -120,25 +145,25 @@
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // kháchSạnĐãĐặtToolStripMenuItem
             // 
             kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             // 
             // lịchSửToolStripMenuItem
             // 
             lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(224, 26);
+            lịchSửToolStripMenuItem.Size = new Size(220, 26);
             lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(224, 26);
+            thoátToolStripMenuItem.Size = new Size(220, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // panel3
@@ -205,6 +230,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(panel4);
             tabPage1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             tabPage1.Location = new Point(4, 50);
             tabPage1.Name = "tabPage1";
@@ -261,14 +287,14 @@
             label1.TabIndex = 21;
             label1.Text = "Giá tiền";
             // 
-            // label2
+            // lbl_Min
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(132, 263);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 22;
-            label2.Text = "label2";
+            lbl_Min.AutoSize = true;
+            lbl_Min.Location = new Point(132, 263);
+            lbl_Min.Name = "lbl_Min";
+            lbl_Min.Size = new Size(17, 20);
+            lbl_Min.TabIndex = 22;
+            lbl_Min.Text = "0";
             // 
             // trackBar2
             // 
@@ -291,44 +317,41 @@
             label3.TabIndex = 24;
             label3.Text = "Giá tiền";
             // 
-            // label4
+            // lbl_max
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(132, 363);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 25;
-            label4.Text = "label4";
+            lbl_max.AutoSize = true;
+            lbl_max.Location = new Point(132, 363);
+            lbl_max.Name = "lbl_max";
+            lbl_max.Size = new Size(17, 20);
+            lbl_max.TabIndex = 25;
+            lbl_max.Text = "0";
             // 
-            // btn_DangNhap
+            // panel4
             // 
-            btn_DangNhap.Location = new Point(1185, 12);
-            btn_DangNhap.Name = "btn_DangNhap";
-            btn_DangNhap.Size = new Size(99, 47);
-            btn_DangNhap.TabIndex = 27;
-            btn_DangNhap.Text = "Đăng nhập";
-            btn_DangNhap.UseVisualStyleBackColor = true;
-            btn_DangNhap.Click += btn_DangNhap_Click;
+            panel4.Controls.Add(pictureBox1);
+            panel4.Location = new Point(35, 24);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(917, 137);
+            panel4.TabIndex = 0;
             // 
-            // btn_DangKy
+            // pictureBox1
             // 
-            btn_DangKy.Location = new Point(1064, 12);
-            btn_DangKy.Name = "btn_DangKy";
-            btn_DangKy.Size = new Size(99, 47);
-            btn_DangKy.TabIndex = 28;
-            btn_DangKy.Text = "Đăng Ký";
-            btn_DangKy.UseVisualStyleBackColor = true;
-            btn_DangKy.Click += btn_DangKy_Click;
+            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
+            pictureBox1.Location = new Point(15, 10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(185, 111);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 709);
-            Controls.Add(label4);
+            Controls.Add(lbl_max);
             Controls.Add(label3);
             Controls.Add(trackBar2);
-            Controls.Add(label2);
+            Controls.Add(lbl_Min);
             Controls.Add(label1);
             Controls.Add(trackBar1);
             Controls.Add(tabControl1);
@@ -337,6 +360,7 @@
             Name = "hien_thi_khach_san_phu_hop";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "hien_thi_khach_san_phu_hop";
+            Load += hien_thi_khach_san_phu_hop_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             menuStrip1.ResumeLayout(false);
@@ -346,8 +370,11 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -376,11 +403,13 @@
         private ToolStripMenuItem thoátToolStripMenuItem;
         private TrackBar trackBar1;
         private Label label1;
-        private Label label2;
+        private Label lbl_Min;
         private TrackBar trackBar2;
         private Label label3;
-        private Label label4;
+        private Label lbl_max;
         private Button btn_DangNhap;
         private Button btn_DangKy;
+        private Panel panel4;
+        private PictureBox pictureBox1;
     }
 }

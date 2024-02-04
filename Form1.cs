@@ -1,5 +1,5 @@
-﻿using DuLich;
-
+﻿using DoAnDuLich;
+using DuLich;
 namespace DoAnDuLich
 {
     public partial class FTrangChuTK : Form
@@ -8,9 +8,6 @@ namespace DoAnDuLich
         {
             InitializeComponent();
         }
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             if (pictureBox1.Visible == false)
@@ -156,7 +153,7 @@ namespace DoAnDuLich
         {
             btn_DangKy.Visible = true;
         }
-        
+
         private void btn_back_Click(object sender, EventArgs e)
         {
 
@@ -301,9 +298,22 @@ namespace DoAnDuLich
         private void button1_Click(object sender, EventArgs e)
         {
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-            this.Hide();
-            k.ShowDialog();
-            this.Show();
+            if (menuStrip1.Visible == true)
+            {
+                k.ShowMenuStrip();
+                k.HideDangKy();
+                k.HideDangNhap();
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -314,11 +324,15 @@ namespace DoAnDuLich
             this.Show();
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowDangNhap();
-            ShowDangKy();
-            HideMenuStrip();
-        }
+        //private void panel2_Paint(object sender, PaintEventArgs e)
+        //{
+
+        //    private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        //    {
+        //        ShowDangNhap();
+        //        ShowDangKy();
+        //        HideMenuStrip();
+        //    }
+        //}
     }
 }
