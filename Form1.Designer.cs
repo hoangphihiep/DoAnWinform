@@ -51,8 +51,8 @@
             btn_DangNhap = new Button();
             btn_DangKy = new Button();
             panel2 = new Panel();
-            label4 = new Label();
             button2 = new Button();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -298,6 +298,16 @@
             panel2.Size = new Size(1315, 70);
             panel2.TabIndex = 15;
             // 
+            // button2
+            // 
+            button2.Location = new Point(780, 16);
+            button2.Name = "button2";
+            button2.Size = new Size(223, 47);
+            button2.TabIndex = 26;
+            button2.Text = "Đăng ký cho thuê khách sạn";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -309,15 +319,6 @@
             label4.Size = new Size(741, 123);
             label4.TabIndex = 16;
             label4.Text = "see more of the world";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(780, 16);
-            button2.Name = "button2";
-            button2.Size = new Size(223, 47);
-            button2.TabIndex = 26;
-            button2.Text = "Đăng ký cho thuê khách sạn";
-            button2.UseVisualStyleBackColor = true;
             // 
             // FTrangChuTK
             // 

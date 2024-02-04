@@ -43,8 +43,21 @@ namespace DuLich
 
             // Hiển thị giá trị đảo ngược lên label
             label4.Text = value.ToString();
-            
-            
+
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fHotel_Posting f = new fHotel_Posting();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

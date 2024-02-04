@@ -91,6 +91,7 @@
             button1.TabIndex = 0;
             button1.Text = "Đăng ký cho thuê khách sạn";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // menuStrip1
             // 
@@ -207,6 +208,7 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Phù hợp nhất";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // tabPage2
             // 
@@ -308,6 +310,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Name = "hien_thi_khach_san_phu_hop";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "hien_thi_khach_san_phu_hop";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

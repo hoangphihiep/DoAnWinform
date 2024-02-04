@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DuLich.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
       "projectName": "DuLich",
-      "projectPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DuLich.csproj",
-      "packagesPath": "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\phihi_6b0xaz1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -535,13 +535,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
