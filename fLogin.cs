@@ -1,4 +1,6 @@
-﻿namespace DuLich
+﻿using DoAnDuLich;
+
+namespace DuLich
 {
     public partial class fLogin : Form
     {
@@ -26,13 +28,35 @@
         {
 
         }
-
+        private int y;
+        public void KiemTra(int x)
+        {
+            y = x;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            fApp f = new fApp();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (y == 1)
+            {
+                hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+                k.ShowMenuStrip();
+                k.HideDangNhap();
+                k.HideDangKy();
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }    
+            else
+            {
+                FTrangChuTK f = new FTrangChuTK();
+                f.ShowMenuStrip();
+                f.HideDangNhap();
+                f.HideDangKy();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)

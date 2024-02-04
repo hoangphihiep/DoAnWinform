@@ -4,6 +4,12 @@
     <Compile Update="fApp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fHotel_Posting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fHoTel_Posting_Position.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>

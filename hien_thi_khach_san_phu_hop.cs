@@ -21,6 +21,31 @@ namespace DuLich
             trackBar2.Value = 4000000; // Giá trị mặc định
             trackBar2.Scroll += trackBar2_Scroll;
         }
+        public void HideMenuStrip()
+        {
+            //hien menustrip
+            MenuStripTaiKhoan.Visible = false;
+        }
+        public void ShowMenuStrip()
+        {
+            MenuStripTaiKhoan.Visible = true;
+        }
+        public void HideDangNhap()
+        {
+            btn_DangNhap.Visible = false;
+        }
+        public void ShowDangNhap()
+        {
+            btn_DangNhap.Visible = true;
+        }
+        public void HideDangKy()
+        {
+            btn_DangKy.Visible = false;
+        }
+        public void ShowDangKy()
+        {
+            btn_DangKy.Visible = true;
+        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -43,8 +68,40 @@ namespace DuLich
 
             // Hiển thị giá trị đảo ngược lên label
             label4.Text = value.ToString();
-            
-            
+
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fHotel_Posting f = new fHotel_Posting();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            int t = 0;
+            fLogin f = new fLogin();
+            t = 1;
+            f.KiemTra(t);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_DangKy_Click(object sender, EventArgs e)
+        {
+            fRegister f = new fRegister();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }
