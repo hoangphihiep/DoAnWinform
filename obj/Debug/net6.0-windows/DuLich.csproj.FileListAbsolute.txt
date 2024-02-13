@@ -74,8 +74,13 @@ C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.genruntim
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\ref\DuLich.dll
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fCollections.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fHotel_Details.resources
+<<<<<<< HEAD
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fCollections.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fHotel_Details.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fThongTinTaiKhoan.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UThongtin.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UMatKhau.resources
+=======
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Hotel_booked.resources
+>>>>>>> 9dfdff902084547a34aeba8bdb8c83db2b63dbae
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.Hotel_booked.resources
