@@ -48,6 +48,9 @@
             lb_TimKiem = new TextBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            panel4 = new Panel();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
@@ -57,8 +60,6 @@
             trackBar2 = new TrackBar();
             label3 = new Label();
             lbl_max = new Label();
-            panel4 = new Panel();
-            pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
             panel3.SuspendLayout();
@@ -66,10 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -127,9 +128,9 @@
             menuStrip1.Dock = DockStyle.Right;
             menuStrip1.ImageScalingSize = new Size(60, 60);
             menuStrip1.Items.AddRange(new ToolStripItem[] { MenuStripTaiKhoan });
-            menuStrip1.Location = new Point(1287, 0);
+            menuStrip1.Location = new Point(1161, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(30, 74);
+            menuStrip1.Size = new Size(156, 74);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -138,33 +139,35 @@
             MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
             MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
             MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
-            MenuStripTaiKhoan.Size = new Size(138, 64);
+            MenuStripTaiKhoan.Size = new Size(143, 64);
             MenuStripTaiKhoan.Text = "Tài khoản";
             MenuStripTaiKhoan.Visible = false;
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // kháchSạnĐãĐặtToolStripMenuItem
             // 
             kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
+            kháchSạnĐãĐặtToolStripMenuItem.Click += kháchSạnĐãĐặtToolStripMenuItem_Click;
             // 
             // lịchSửToolStripMenuItem
             // 
             lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(220, 26);
+            lịchSửToolStripMenuItem.Size = new Size(224, 26);
             lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(220, 26);
+            thoátToolStripMenuItem.Size = new Size(224, 26);
             thoátToolStripMenuItem.Text = "Thoát";
+            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
             // panel3
             // 
@@ -240,6 +243,39 @@
             tabPage1.Text = "Phù hợp nhất";
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Gainsboro;
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(pictureBox1);
+            panel4.ForeColor = SystemColors.ControlText;
+            panel4.Location = new Point(35, 24);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(917, 137);
+            panel4.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(406, 10);
+            label2.Name = "label2";
+            label2.Size = new Size(202, 38);
+            label2.TabIndex = 1;
+            label2.Text = "Khach san dep";
+            label2.Click += label2_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = null;
+            pictureBox1.Location = new Point(15, 10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(185, 111);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
@@ -326,23 +362,6 @@
             lbl_max.TabIndex = 25;
             lbl_max.Text = "0";
             // 
-            // panel4
-            // 
-            panel4.Controls.Add(pictureBox1);
-            panel4.Location = new Point(35, 24);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(917, 137);
-            panel4.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
-            pictureBox1.Location = new Point(15, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(185, 111);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -371,10 +390,11 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -411,5 +431,6 @@
         private Button btn_DangKy;
         private Panel panel4;
         private PictureBox pictureBox1;
+        private Label label2;
     }
 }

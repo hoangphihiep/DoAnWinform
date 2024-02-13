@@ -20,6 +20,11 @@ namespace DuLich
             trackBar1.Scroll += trackBar1_Scroll;
             trackBar2.Value = 4000000; // Giá trị mặc định
             trackBar2.Scroll += trackBar2_Scroll;
+            int value = trackBar1.Value;
+            lbl_Min.Text = $"{value}";
+            int value2 = trackBar2.Value;
+            value = trackBar2.Maximum - value2;
+            lbl_max.Text = value.ToString();
         }
         public void HideMenuStrip()
         {
@@ -107,6 +112,29 @@ namespace DuLich
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowDangNhap();
+            ShowDangKy();
+            HideMenuStrip();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            fHotel_Details f = new fHotel_Details();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCollections f = new fCollections();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

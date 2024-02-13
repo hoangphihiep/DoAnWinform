@@ -4,6 +4,9 @@
     <Compile Update="fApp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fHotel_Posting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,8 +37,20 @@
     <Compile Update="fRegister.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="hien_thi_khach_san_phu_hop.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fHotel_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UThongtin.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

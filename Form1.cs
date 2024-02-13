@@ -324,6 +324,29 @@ namespace DoAnDuLich
             this.Show();
         }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowDangKy();
+            ShowDangNhap();
+            HideMenuStrip();
+        }
+
+        private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCollections f = new fCollections();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTinTaiKhoan t = new fThongTinTaiKhoan();
+            this.Hide();
+            t.ShowDialog();
+            this.Show();
+        }
+
         //private void panel2_Paint(object sender, PaintEventArgs e)
         //{
 
