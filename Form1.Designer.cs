@@ -342,25 +342,25 @@
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // kháchSạnĐãĐặtToolStripMenuItem
             // 
             kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             // 
             // lịchSửToolStripMenuItem
             // 
             lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(224, 26);
+            lịchSửToolStripMenuItem.Size = new Size(220, 26);
             lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(224, 26);
+            thoátToolStripMenuItem.Size = new Size(220, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // label4
