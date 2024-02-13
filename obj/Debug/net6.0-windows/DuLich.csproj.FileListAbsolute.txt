@@ -74,3 +74,4 @@ C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.genruntim
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\ref\DuLich.dll
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fCollections.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fHotel_Details.resources
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Hotel_booked.resources

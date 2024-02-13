@@ -249,6 +249,7 @@
             // 
             // panel5
             // 
+            panel5.AutoSize = true;
             panel5.Controls.Add(panel19);
             panel5.Controls.Add(panel12);
             panel5.Controls.Add(panel6);
@@ -470,6 +471,7 @@
             // 
             // panel12
             // 
+            panel12.AutoSize = true;
             panel12.BackColor = SystemColors.ControlLightLight;
             panel12.Controls.Add(flowLayoutPanel2);
             panel12.Controls.Add(label13);
@@ -720,9 +722,9 @@
             label28.ForeColor = SystemColors.ControlText;
             label28.Location = new Point(3, 10);
             label28.Name = "label28";
-            label28.Size = new Size(244, 20);
+            label28.Size = new Size(222, 20);
             label28.TabIndex = 0;
-            label28.Text = "Beach Front 1 Bedroom Pool Villa";
+            label28.Text = "1 Bedroom Pool Villa Sea View";
             // 
             // pictureBox15
             // 
@@ -741,9 +743,9 @@
             label29.ForeColor = Color.DarkTurquoise;
             label29.Location = new Point(5, 6);
             label29.Name = "label29";
-            label29.Size = new Size(310, 25);
+            label29.Size = new Size(283, 25);
             label29.TabIndex = 0;
-            label29.Text = "1 Bedroom Pool Villa Beach Front";
+            label29.Text = "1 Bedroom Pool Villa Sea View";
             // 
             // panel17
             // 
@@ -847,9 +849,9 @@
             label36.ForeColor = SystemColors.ControlText;
             label36.Location = new Point(3, 10);
             label36.Name = "label36";
-            label36.Size = new Size(244, 20);
+            label36.Size = new Size(222, 20);
             label36.TabIndex = 0;
-            label36.Text = "Beach Front 1 Bedroom Pool Villa";
+            label36.Text = "2 Bedroom Pool Villa Sea View";
             // 
             // pictureBox16
             // 
@@ -868,9 +870,9 @@
             label37.ForeColor = Color.DarkTurquoise;
             label37.Location = new Point(5, 6);
             label37.Name = "label37";
-            label37.Size = new Size(310, 25);
+            label37.Size = new Size(283, 25);
             label37.TabIndex = 0;
-            label37.Text = "1 Bedroom Pool Villa Beach Front";
+            label37.Text = "2 Bedroom Pool Villa Sea View";
             // 
             // label13
             // 
@@ -1204,7 +1206,9 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             panel19.ResumeLayout(false);
             panel19.PerformLayout();
             panel21.ResumeLayout(false);

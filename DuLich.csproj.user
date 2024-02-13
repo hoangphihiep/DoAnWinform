@@ -43,5 +43,8 @@
     <Compile Update="fHotel_Details.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Hotel_booked.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
