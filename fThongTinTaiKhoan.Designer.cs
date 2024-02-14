@@ -31,7 +31,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             btn_MatKhau = new Button();
-            btn_ThanhToan = new Button();
+            btn_ThongTinKhachSan = new Button();
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
@@ -51,7 +51,7 @@
             panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(btn_MatKhau);
-            panel1.Controls.Add(btn_ThanhToan);
+            panel1.Controls.Add(btn_ThongTinKhachSan);
             panel1.Controls.Add(btn_ThongTin);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -77,15 +77,15 @@
             btn_MatKhau.UseVisualStyleBackColor = true;
             btn_MatKhau.Click += btn_MatKhau_Click;
             // 
-            // btn_ThanhToan
+            // btn_ThongTinKhachSan
             // 
-            btn_ThanhToan.Location = new Point(0, 197);
-            btn_ThanhToan.Name = "btn_ThanhToan";
-            btn_ThanhToan.Size = new Size(190, 40);
-            btn_ThanhToan.TabIndex = 2;
-            btn_ThanhToan.Text = "Phương thức thanh toán";
-            btn_ThanhToan.TextAlign = ContentAlignment.MiddleLeft;
-            btn_ThanhToan.UseVisualStyleBackColor = true;
+            btn_ThongTinKhachSan.Location = new Point(0, 197);
+            btn_ThongTinKhachSan.Name = "btn_ThongTinKhachSan";
+            btn_ThongTinKhachSan.Size = new Size(190, 40);
+            btn_ThongTinKhachSan.TabIndex = 2;
+            btn_ThongTinKhachSan.Text = "Thông tin khách sạn";
+            btn_ThongTinKhachSan.TextAlign = ContentAlignment.MiddleLeft;
+            btn_ThongTinKhachSan.UseVisualStyleBackColor = true;
             // 
             // btn_ThongTin
             // 
@@ -110,9 +110,9 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(uMatKhau1);
             panel5.Controls.Add(uThongtin2);
             panel5.Controls.Add(uThongtin1);
+            panel5.Controls.Add(uMatKhau1);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
             panel5.Size = new Size(903, 611);
@@ -167,7 +167,7 @@
 
         private Panel panel1;
         private Button btn_MatKhau;
-        private Button btn_ThanhToan;
+        private Button btn_ThongTinKhachSan;
         private Button btn_ThongTin;
         private Panel panel2;
         private Panel panel3;

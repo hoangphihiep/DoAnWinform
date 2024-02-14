@@ -19,7 +19,7 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_ThongTin_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace DuLich
         }
 
         private void btn_MatKhau_Click(object sender, EventArgs e)
-        {  
+        {
             uThongtin2.SendToBack();
         }
     }
