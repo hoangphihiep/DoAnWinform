@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void btn_ChinhSua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
