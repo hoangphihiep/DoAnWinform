@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnDuLich;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,17 @@ namespace DuLich
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void fCollections_Load(object sender, EventArgs e)
+        {
+            FTrangChuTK f1 = new FTrangChuTK();
+            f1.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
