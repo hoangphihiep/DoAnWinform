@@ -77,6 +77,7 @@
             btn_ChinhSua.TabIndex = 15;
             btn_ChinhSua.Text = "Chỉnh sửa";
             btn_ChinhSua.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Click += btn_ChinhSua_Click;
             // 
             // UMatKhau
             // 
