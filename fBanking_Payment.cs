@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void fBanking_Payment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

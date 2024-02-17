@@ -319,6 +319,7 @@
             btn_BookNow.TabIndex = 35;
             btn_BookNow.Text = "BOOK NOW !";
             btn_BookNow.UseVisualStyleBackColor = false;
+            btn_BookNow.Click += btn_BookNow_Click;
             // 
             // lbl_ChoKhachHangXem
             // 

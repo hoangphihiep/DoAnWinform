@@ -36,5 +36,13 @@ namespace DuLich
         {
             this.Close();
         }
+
+        private void btn_BookNow_Click(object sender, EventArgs e)
+        {
+            fHotel_Booked f = new fHotel_Booked();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
