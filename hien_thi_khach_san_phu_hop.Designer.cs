@@ -38,9 +38,9 @@
             MenuStripTaiKhoan = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
-            lịchSửToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panel3 = new Panel();
+            btn_TimKiem = new Button();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
             dateTimePicker1 = new DateTimePicker();
@@ -136,7 +136,7 @@
             // 
             // MenuStripTaiKhoan
             // 
-            MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
+            MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, thoátToolStripMenuItem });
             MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
             MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
             MenuStripTaiKhoan.Size = new Size(143, 64);
@@ -157,12 +157,6 @@
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             kháchSạnĐãĐặtToolStripMenuItem.Click += kháchSạnĐãĐặtToolStripMenuItem_Click;
             // 
-            // lịchSửToolStripMenuItem
-            // 
-            lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(224, 26);
-            lịchSửToolStripMenuItem.Text = "Lịch sử";
-            // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
@@ -173,6 +167,7 @@
             // panel3
             // 
             panel3.BackColor = Color.Navy;
+            panel3.Controls.Add(btn_TimKiem);
             panel3.Controls.Add(numericUpDown2);
             panel3.Controls.Add(numericUpDown1);
             panel3.Controls.Add(dateTimePicker1);
@@ -183,30 +178,39 @@
             panel3.Size = new Size(1318, 59);
             panel3.TabIndex = 17;
             // 
+            // btn_TimKiem
+            // 
+            btn_TimKiem.Location = new Point(1186, 13);
+            btn_TimKiem.Name = "btn_TimKiem";
+            btn_TimKiem.Size = new Size(108, 29);
+            btn_TimKiem.TabIndex = 27;
+            btn_TimKiem.Text = "Tiềm Kiếm";
+            btn_TimKiem.UseVisualStyleBackColor = true;
+            // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(1016, 17);
+            numericUpDown2.Location = new Point(981, 15);
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(175, 27);
             numericUpDown2.TabIndex = 26;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(814, 17);
+            numericUpDown1.Location = new Point(779, 15);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(175, 27);
             numericUpDown1.TabIndex = 25;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(537, 17);
+            dateTimePicker1.Location = new Point(502, 15);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 18;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(260, 19);
+            dateTimePicker2.Location = new Point(225, 17);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 12;
@@ -214,7 +218,7 @@
             // lb_TimKiem
             // 
             lb_TimKiem.ForeColor = SystemColors.AppWorkspace;
-            lb_TimKiem.Location = new Point(48, 19);
+            lb_TimKiem.Location = new Point(13, 17);
             lb_TimKiem.Name = "lb_TimKiem";
             lb_TimKiem.Size = new Size(185, 27);
             lb_TimKiem.TabIndex = 10;
@@ -420,7 +424,6 @@
         private ToolStripMenuItem MenuStripTaiKhoan;
         private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
-        private ToolStripMenuItem lịchSửToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private TrackBar trackBar1;
         private Label label1;
@@ -433,5 +436,6 @@
         private Panel panel4;
         private PictureBox pictureBox1;
         private Label label2;
+        private Button btn_TimKiem;
     }
 }
