@@ -7,7 +7,13 @@
     <Compile Update="fApp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fBanking_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fHotel_Booked.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fHotel_Posting.cs">
@@ -35,6 +41,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fPayment_Slip.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fRegister.cs">
