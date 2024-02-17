@@ -311,7 +311,16 @@ namespace DoAnDuLich
         private void button1_Click(object sender, EventArgs e)
         {
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-            if (menuTaiKhoan.Visible == true)
+            if (menuTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
+            {
+                k.ShowMenuStrip();
+                k.HideDangKy();
+                k.HideDangNhap();
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+            else if (menuTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
             {
                 k.ShowMenuStrip();
                 k.HideDangKy();
@@ -320,7 +329,7 @@ namespace DoAnDuLich
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
-            }
+            }    
             else
             {
                 this.Hide();
