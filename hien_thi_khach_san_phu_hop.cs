@@ -51,6 +51,10 @@ namespace DuLich
         {
             btn_DangKy.Visible = true;
         }
+        public void HideDangKyKS()
+        {
+            btn_DangKyKS.Visible = false;
+        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -81,24 +85,34 @@ namespace DuLich
         {
 
         }
-
+        public int KT_DangNhap1 = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            fHotel_Posting f = new fHotel_Posting();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (KT_DangNhap1 == 0)
+            {
+                MessageBox.Show("Bạn chưa có tài khoản!!! Vui lòng tạo tài khoản", "Thông báo", MessageBoxButtons.OKCancel);
+            }
+            else
+            {
+                int t = 1;
+                fHotel_Posting f = new fHotel_Posting();
+                KT_DangNhap1++;
+                f.kiemtratrang1 = t;
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }   
         }
-
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             int t = 0;
             fLogin f = new fLogin();
             t = 1;
+            KT_DangNhap1++;
             f.KiemTra(t);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btn_DangKy_Click(object sender, EventArgs e)

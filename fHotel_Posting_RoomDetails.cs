@@ -108,13 +108,21 @@ namespace DuLich
         {
             this.Close();
         }
-
+        public int kiemtratrang4;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
             fHotel_Posting_Image f = new fHotel_Posting_Image();
+            if (kiemtratrang4 == 1)
+            {
+                f.kiemtratrang5 = 1;
+            }
+            else
+            {
+                f.kiemtratrang5 = 0;
+            }
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void fHotel_Posting_RoomDetails_Load(object sender, EventArgs e)

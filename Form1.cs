@@ -153,7 +153,10 @@ namespace DoAnDuLich
         {
             btn_DangKy.Visible = true;
         }
-
+        public void HideDangKyKS()
+        {
+            btn_DangKyKS.Visible = false;
+        }
         private void btn_back_Click(object sender, EventArgs e)
         {
 
@@ -271,23 +274,32 @@ namespace DoAnDuLich
             f.ShowDialog();
             this.Show();
         }
-
+        public int KT_DangNhap = 0;
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             int t = 0;
             fLogin f = new fLogin();
+            KT_DangNhap++;
             f.KiemTra(t);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void FTrangChuTK_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn thực sự có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (KT_DangNhap == 0)
             {
-                e.Cancel = true;
+                if (MessageBox.Show("Bạn thực sự có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
             }
+            else
+            {
+                Application.Exit();
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -298,11 +310,12 @@ namespace DoAnDuLich
         private void button1_Click(object sender, EventArgs e)
         {
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-            if (menuStrip1.Visible == true)
+            if (menuTaiKhoan.Visible == true)
             {
                 k.ShowMenuStrip();
                 k.HideDangKy();
                 k.HideDangNhap();
+                k.HideDangKyKS();
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -315,13 +328,22 @@ namespace DoAnDuLich
             }
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            fHotel_Posting f = new fHotel_Posting();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (KT_DangNhap == 0)
+            {
+                MessageBox.Show("Bạn chưa có tài khoản!!! Vui lòng tạo tài khoản", "Thông báo", MessageBoxButtons.OKCancel);
+            }
+            else
+            {
+                int t = 0;
+                fHotel_Posting f = new fHotel_Posting();
+                KT_DangNhap++;
+                f.kiemtratrang1 = t;
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)

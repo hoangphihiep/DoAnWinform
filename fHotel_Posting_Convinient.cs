@@ -140,13 +140,21 @@ namespace DuLich
         {
             this.Close();
         }
-
+        public int kiemtratrang3;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
             fHotel_Posting_RoomDetails f = new fHotel_Posting_RoomDetails();
+            if (kiemtratrang3 == 1)
+            {
+                f.kiemtratrang4 = 1;
+            }
+            else
+            {
+                f.kiemtratrang4 = 0;
+            }
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }

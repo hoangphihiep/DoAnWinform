@@ -44,14 +44,14 @@
             label1 = new Label();
             label6 = new Label();
             label5 = new Label();
-            button1 = new Button();
+            btn_TimKiem = new Button();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             lb_TimKiem = new TextBox();
             btn_DangNhap = new Button();
             btn_DangKy = new Button();
             panel2 = new Panel();
-            button2 = new Button();
+            btn_DangKyKS = new Button();
             menuStrip1 = new MenuStrip();
             menuTaiKhoan = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
@@ -165,7 +165,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btn_TimKiem);
             panel1.Controls.Add(dateTimePicker2);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(lb_TimKiem);
@@ -243,15 +243,15 @@
             label5.TabIndex = 19;
             label5.Text = "Địa điểm";
             // 
-            // button1
+            // btn_TimKiem
             // 
-            button1.Location = new Point(545, 226);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 43);
-            button1.TabIndex = 12;
-            button1.Text = "Tìm kiếm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_TimKiem.Location = new Point(545, 226);
+            btn_TimKiem.Name = "btn_TimKiem";
+            btn_TimKiem.Size = new Size(115, 43);
+            btn_TimKiem.TabIndex = 12;
+            btn_TimKiem.Text = "Tìm kiếm";
+            btn_TimKiem.UseVisualStyleBackColor = true;
+            btn_TimKiem.Click += button1_Click;
             // 
             // dateTimePicker2
             // 
@@ -297,7 +297,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btn_DangKyKS);
             panel2.Controls.Add(btn_DangNhap);
             panel2.Controls.Add(btn_DangKy);
             panel2.Controls.Add(menuStrip1);
@@ -307,15 +307,15 @@
             panel2.TabIndex = 15;
             panel2.Paint += panel2_Paint;
             // 
-            // button2
+            // btn_DangKyKS
             // 
-            button2.Location = new Point(780, 16);
-            button2.Name = "button2";
-            button2.Size = new Size(223, 47);
-            button2.TabIndex = 26;
-            button2.Text = "Đăng ký cho thuê khách sạn";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btn_DangKyKS.Location = new Point(780, 16);
+            btn_DangKyKS.Name = "btn_DangKyKS";
+            btn_DangKyKS.Size = new Size(223, 47);
+            btn_DangKyKS.TabIndex = 26;
+            btn_DangKyKS.Text = "Đăng ký cho thuê khách sạn";
+            btn_DangKyKS.UseVisualStyleBackColor = true;
+            btn_DangKyKS.Click += button2_Click;
             // 
             // menuStrip1
             // 
@@ -426,7 +426,7 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Panel panel1;
-        private Button button1;
+        private Button btn_TimKiem;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
         private TextBox lb_TimKiem;
@@ -441,7 +441,7 @@
         private Label label4;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
-        private Button button2;
+        private Button btn_DangKyKS;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuTaiKhoan;
         private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;

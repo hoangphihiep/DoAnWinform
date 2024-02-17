@@ -122,13 +122,21 @@ namespace DuLich
         {
 
         }
-
+        public int kiemtratrang2;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
             fHotel_Posting_Convinient f = new fHotel_Posting_Convinient();
+            if (kiemtratrang2 == 1)
+            {
+                f.kiemtratrang3 = 1;
+            }
+            else
+            {
+                f.kiemtratrang3 = 0;
+            }
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void label1_Click_2(object sender, EventArgs e)

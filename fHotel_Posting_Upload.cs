@@ -69,11 +69,34 @@ namespace DuLich
         {
 
         }
-
+        public int kiemtratrang7;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Đăng tải hoàn tất ");
-            // dong tat ca form con lai
+            if (kiemtratrang7 == 1)
+            {
+                hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+                k.ShowMenuStrip();
+                k.HideDangNhap();
+                k.HideDangKy();
+                k.HideDangKyKS();
+                this.Hide();
+                k.ShowDialog();
+                k.Close();
+            }
+            else
+            {
+                FTrangChuTK f = new FTrangChuTK();
+                f.HideDangKyKS();
+                f.ShowMenuStrip();
+                f.HideDangNhap();
+                f.HideDangKy();
+                this.Hide();
+                f.ShowDialog();
+                Application.Exit();
+                // dong tat ca form con lai
+            }
         }
 
         private void fHotel_Posting_Upload_Load(object sender, EventArgs e)

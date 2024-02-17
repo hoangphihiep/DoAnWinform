@@ -200,13 +200,21 @@ namespace DuLich
         private void lbl_Tu1_Click(object sender, EventArgs e)
         {
         }
-
+        public int kiemtratrang1;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
             fHoTel_Posting_Position f = new fHoTel_Posting_Position();
+            if (kiemtratrang1 == 1)
+            {
+                f.kiemtratrang2 = 1;
+            }
+            else
+            {
+                f.kiemtratrang2 = 0;
+            }
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void fHotel_Posting_Load(object sender, EventArgs e)

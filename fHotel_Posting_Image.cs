@@ -56,13 +56,21 @@ namespace DuLich
         {
 
         }
-
+        public int kiemtratrang5;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
             fHotel_Posting_Profile f = new fHotel_Posting_Profile();
+            if (kiemtratrang5 == 1)
+            {
+                f.kiemtratrang6 = 1;
+            }
+            else
+            {
+                f.kiemtratrang6 = 0;
+            }
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void lbl_Anh_Click(object sender, EventArgs e)

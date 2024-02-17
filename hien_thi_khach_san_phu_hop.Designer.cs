@@ -33,7 +33,7 @@
             btn_DangKy = new Button();
             btn_DangNhap = new Button();
             panel1 = new Panel();
-            button1 = new Button();
+            btn_DangKyKS = new Button();
             menuStrip1 = new MenuStrip();
             MenuStripTaiKhoan = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
@@ -78,7 +78,7 @@
             panel2.Controls.Add(btn_DangKy);
             panel2.Controls.Add(btn_DangNhap);
             panel2.Controls.Add(panel1);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btn_DangKyKS);
             panel2.Controls.Add(menuStrip1);
             panel2.Location = new Point(0, -3);
             panel2.Name = "panel2";
@@ -113,24 +113,24 @@
             panel1.Size = new Size(1317, 60);
             panel1.TabIndex = 17;
             // 
-            // button1
+            // btn_DangKyKS
             // 
-            button1.Location = new Point(792, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(223, 44);
-            button1.TabIndex = 0;
-            button1.Text = "Đăng ký cho thuê khách sạn";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_DangKyKS.Location = new Point(792, 15);
+            btn_DangKyKS.Name = "btn_DangKyKS";
+            btn_DangKyKS.Size = new Size(223, 44);
+            btn_DangKyKS.TabIndex = 0;
+            btn_DangKyKS.Text = "Đăng ký cho thuê khách sạn";
+            btn_DangKyKS.UseVisualStyleBackColor = true;
+            btn_DangKyKS.Click += button1_Click;
             // 
             // menuStrip1
             // 
             menuStrip1.Dock = DockStyle.Right;
             menuStrip1.ImageScalingSize = new Size(60, 60);
             menuStrip1.Items.AddRange(new ToolStripItem[] { MenuStripTaiKhoan });
-            menuStrip1.Location = new Point(1161, 0);
+            menuStrip1.Location = new Point(1287, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(156, 74);
+            menuStrip1.Size = new Size(30, 74);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -139,33 +139,33 @@
             MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
             MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
             MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
-            MenuStripTaiKhoan.Size = new Size(143, 64);
+            MenuStripTaiKhoan.Size = new Size(138, 64);
             MenuStripTaiKhoan.Text = "Tài khoản";
             MenuStripTaiKhoan.Visible = false;
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // kháchSạnĐãĐặtToolStripMenuItem
             // 
             kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             kháchSạnĐãĐặtToolStripMenuItem.Click += kháchSạnĐãĐặtToolStripMenuItem_Click;
             // 
             // lịchSửToolStripMenuItem
             // 
             lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(224, 26);
+            lịchSửToolStripMenuItem.Size = new Size(220, 26);
             lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(224, 26);
+            thoátToolStripMenuItem.Size = new Size(220, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
@@ -403,7 +403,7 @@
 
         private Panel panel2;
         private Panel panel1;
-        private Button button1;
+        private Button btn_DangKyKS;
         private Panel panel3;
         private TextBox lb_TimKiem;
         private DateTimePicker dateTimePicker2;

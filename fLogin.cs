@@ -38,22 +38,24 @@ namespace DuLich
             if (y == 1)
             {
                 hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+                k.KT_DangNhap1++;
                 k.ShowMenuStrip();
                 k.HideDangNhap();
                 k.HideDangKy();
                 this.Hide();
                 k.ShowDialog();
-                this.Show();
+                this.Close();
             }
             else
             {
                 FTrangChuTK f = new FTrangChuTK();
+                f.KT_DangNhap++;
                 f.ShowMenuStrip();
                 f.HideDangNhap();
                 f.HideDangKy();
                 this.Hide();
                 f.ShowDialog();
-                this.Show();
+                this.Close();
             }
 
 
