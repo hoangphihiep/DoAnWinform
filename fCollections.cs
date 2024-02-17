@@ -27,13 +27,16 @@ namespace DuLich
         {
 
         }
-
+        public int kiemtratrang;
         private void fCollections_Load(object sender, EventArgs e)
         {
-            FTrangChuTK f1 = new FTrangChuTK();
-            this.Hide();
-            f1.ShowDialog();
-            this.Close();
+            if (kiemtratrang != 1)
+            {
+                FTrangChuTK f1 = new FTrangChuTK();
+                this.Hide();
+                f1.ShowDialog();
+                this.Close();
+            } 
         }
 
         private void button1_Click(object sender, EventArgs e)
