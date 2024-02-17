@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\DuLich.csproj",
+      "projectUniqueName": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform1\\DuLich.csproj",
       "projectName": "DuLich",
-      "projectPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\DuLich.csproj",
+      "projectPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform1\\DuLich.csproj",
       "packagesPath": "C:\\Users\\Anya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\obj\\",
+      "outputPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

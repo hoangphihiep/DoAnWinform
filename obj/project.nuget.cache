@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K6uuhCwmpL6NgSkaKIQTsUqDnmmCCFTb5x+uYJBtZ7LxBI6Ty/uprIl3LEHlX0IjjY/d3a/P7KgFtKNlotuPUg==",
+  "dgSpecHash": "WQk4qpjB+hvHcI+Xe7TE62SS7bAXooVc9jc4Q0pnIBBSop0uVwWeEyM3mlBoEhVctqF7GgBQ7E4KEnL0Ag7Gpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\DuLich.csproj",
+  "projectFilePath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform1\\DuLich.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anya\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Anya\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
