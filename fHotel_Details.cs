@@ -16,5 +16,29 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Customer_Information f = new Customer_Information();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer_Information f = new Customer_Information();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Customer_Information f = new Customer_Information();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

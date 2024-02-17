@@ -55,5 +55,18 @@ namespace DuLich
         {
 
         }
+
+        private void btn_NEXT_Click(object sender, EventArgs e)
+        {
+            Payment_Information f = new Payment_Information();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
