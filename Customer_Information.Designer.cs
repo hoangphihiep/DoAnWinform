@@ -203,6 +203,7 @@
             btn_Back.TabIndex = 50;
             btn_Back.Text = "BACK";
             btn_Back.UseVisualStyleBackColor = false;
+            btn_Back.Click += btn_Back_Click;
             // 
             // btn_NEXT
             // 
@@ -215,6 +216,7 @@
             btn_NEXT.TabIndex = 35;
             btn_NEXT.Text = "NEXT";
             btn_NEXT.UseVisualStyleBackColor = false;
+            btn_NEXT.Click += btn_NEXT_Click;
             // 
             // lbl_ChonLoaiHinh
             // 
@@ -650,6 +652,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Customer_Information";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Customer_Information";
             Load += Customer_Information_Load;
             panel2.ResumeLayout(false);
