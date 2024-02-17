@@ -76,9 +76,9 @@
             // 
             // btn_HoSo
             // 
-            btn_HoSo.Location = new Point(44, 370);
+            btn_HoSo.Location = new Point(44, 278);
             btn_HoSo.Name = "btn_HoSo";
-            btn_HoSo.Size = new Size(146, 38);
+            btn_HoSo.Size = new Size(146, 41);
             btn_HoSo.TabIndex = 8;
             btn_HoSo.Text = "Hồ Sơ";
             btn_HoSo.TextAlign = ContentAlignment.MiddleLeft;
@@ -88,9 +88,9 @@
             // 
             // btn_Anh
             // 
-            btn_Anh.Location = new Point(44, 338);
+            btn_Anh.Location = new Point(44, 246);
             btn_Anh.Name = "btn_Anh";
-            btn_Anh.Size = new Size(146, 38);
+            btn_Anh.Size = new Size(146, 41);
             btn_Anh.TabIndex = 7;
             btn_Anh.Text = "Ảnh";
             btn_Anh.TextAlign = ContentAlignment.MiddleLeft;
@@ -100,9 +100,9 @@
             // 
             // btn_ChiTietPhong
             // 
-            btn_ChiTietPhong.Location = new Point(44, 304);
+            btn_ChiTietPhong.Location = new Point(44, 212);
             btn_ChiTietPhong.Name = "btn_ChiTietPhong";
-            btn_ChiTietPhong.Size = new Size(146, 38);
+            btn_ChiTietPhong.Size = new Size(146, 41);
             btn_ChiTietPhong.TabIndex = 6;
             btn_ChiTietPhong.Text = "Chi tiết phòng";
             btn_ChiTietPhong.TextAlign = ContentAlignment.MiddleLeft;
@@ -112,9 +112,9 @@
             // 
             // btn_ViTri
             // 
-            btn_ViTri.Location = new Point(44, 269);
+            btn_ViTri.Location = new Point(44, 177);
             btn_ViTri.Name = "btn_ViTri";
-            btn_ViTri.Size = new Size(146, 38);
+            btn_ViTri.Size = new Size(146, 41);
             btn_ViTri.TabIndex = 5;
             btn_ViTri.Text = "Vị trí";
             btn_ViTri.TextAlign = ContentAlignment.MiddleLeft;
@@ -124,9 +124,9 @@
             // 
             // btn_ThongTingKS
             // 
-            btn_ThongTingKS.Location = new Point(44, 235);
+            btn_ThongTingKS.Location = new Point(44, 143);
             btn_ThongTingKS.Name = "btn_ThongTingKS";
-            btn_ThongTingKS.Size = new Size(146, 38);
+            btn_ThongTingKS.Size = new Size(146, 41);
             btn_ThongTingKS.TabIndex = 4;
             btn_ThongTingKS.Text = "Thông tin căn bản";
             btn_ThongTingKS.TextAlign = ContentAlignment.MiddleLeft;
@@ -143,9 +143,9 @@
             // 
             // btn_MatKhau
             // 
-            btn_MatKhau.Location = new Point(0, 160);
+            btn_MatKhau.Location = new Point(0, 49);
             btn_MatKhau.Name = "btn_MatKhau";
-            btn_MatKhau.Size = new Size(190, 40);
+            btn_MatKhau.Size = new Size(190, 47);
             btn_MatKhau.TabIndex = 3;
             btn_MatKhau.Text = "Mật khẩu";
             btn_MatKhau.TextAlign = ContentAlignment.MiddleLeft;
@@ -154,20 +154,21 @@
             // 
             // btn_ThongTinKhachSan
             // 
-            btn_ThongTinKhachSan.Location = new Point(0, 197);
+            btn_ThongTinKhachSan.Location = new Point(0, 93);
             btn_ThongTinKhachSan.Name = "btn_ThongTinKhachSan";
-            btn_ThongTinKhachSan.Size = new Size(190, 40);
+            btn_ThongTinKhachSan.Size = new Size(190, 53);
             btn_ThongTinKhachSan.TabIndex = 2;
             btn_ThongTinKhachSan.Text = "Thông tin khách sạn";
             btn_ThongTinKhachSan.TextAlign = ContentAlignment.MiddleLeft;
             btn_ThongTinKhachSan.UseVisualStyleBackColor = true;
+            btn_ThongTinKhachSan.Visible = false;
             btn_ThongTinKhachSan.Click += btn_ThongTinKhachSan_Click;
             // 
             // btn_ThongTin
             // 
-            btn_ThongTin.Location = new Point(0, 123);
+            btn_ThongTin.Location = new Point(0, 0);
             btn_ThongTin.Name = "btn_ThongTin";
-            btn_ThongTin.Size = new Size(190, 40);
+            btn_ThongTin.Size = new Size(190, 51);
             btn_ThongTin.TabIndex = 1;
             btn_ThongTin.Text = "Thông tin người dùng";
             btn_ThongTin.TextAlign = ContentAlignment.MiddleLeft;
@@ -201,7 +202,7 @@
             // 
             // uThongtin2
             // 
-            uThongtin2.Location = new Point(0, 3);
+            uThongtin2.Location = new Point(0, 0);
             uThongtin2.Name = "uThongtin2";
             uThongtin2.Size = new Size(903, 611);
             uThongtin2.TabIndex = 1;

@@ -61,6 +61,10 @@ namespace DuLich
         {
             btn_HoSo.Visible = false;
         }
+        public void ShowThongTinKS()
+        {
+            btn_ThongTinKhachSan.Visible = true;
+        }
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
             uThongtin2.BringToFront();
@@ -98,7 +102,7 @@ namespace DuLich
         int dem = 0;
         private void btn_ThongTinKhachSan_Click(object sender, EventArgs e)
         {
-            
+
             if (dem % 2 == 0)
             {
                 ShowThongTinCanBan();
@@ -117,7 +121,7 @@ namespace DuLich
                 HideHoSo();
                 dem++;
             }
-            
+
         }
     }
 }

@@ -101,7 +101,7 @@ namespace DuLich
                 this.Hide();
                 f.ShowDialog();
                 this.Close();
-            }   
+            }
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
@@ -149,6 +149,25 @@ namespace DuLich
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        public int kiemtradangkiKS1;
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTinTaiKhoan t = new fThongTinTaiKhoan();
+            if (kiemtradangkiKS1 == 2)
+            {
+                this.Hide();
+                t.ShowThongTinKS();
+                t.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                this.Hide();
+                t.ShowDialog();
+                this.Show();
+            }
         }
     }
 }

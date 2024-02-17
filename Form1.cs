@@ -360,13 +360,24 @@ namespace DoAnDuLich
             f.ShowDialog();
             this.Show();
         }
-
+        public int kiemtradangkiKS;
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fThongTinTaiKhoan t = new fThongTinTaiKhoan();
-            this.Hide();
-            t.ShowDialog();
-            this.Show();
+            if (kiemtradangkiKS == 1)
+            {
+                this.Hide();
+                t.ShowThongTinKS();
+                t.ShowDialog();
+                this.Show();
+            }
+            else
+            {   
+                this.Hide();
+                t.ShowDialog();
+                this.Show();
+            }
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

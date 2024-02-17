@@ -128,9 +128,9 @@
             menuStrip1.Dock = DockStyle.Right;
             menuStrip1.ImageScalingSize = new Size(60, 60);
             menuStrip1.Items.AddRange(new ToolStripItem[] { MenuStripTaiKhoan });
-            menuStrip1.Location = new Point(1287, 0);
+            menuStrip1.Location = new Point(1161, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(30, 74);
+            menuStrip1.Size = new Size(156, 74);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -139,33 +139,34 @@
             MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, lịchSửToolStripMenuItem, thoátToolStripMenuItem });
             MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
             MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
-            MenuStripTaiKhoan.Size = new Size(138, 64);
+            MenuStripTaiKhoan.Size = new Size(143, 64);
             MenuStripTaiKhoan.Text = "Tài khoản";
             MenuStripTaiKhoan.Visible = false;
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
+            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            thôngTinTàiKhoảnToolStripMenuItem.Click += thôngTinTàiKhoảnToolStripMenuItem_Click;
             // 
             // kháchSạnĐãĐặtToolStripMenuItem
             // 
             kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
+            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(224, 26);
             kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
             kháchSạnĐãĐặtToolStripMenuItem.Click += kháchSạnĐãĐặtToolStripMenuItem_Click;
             // 
             // lịchSửToolStripMenuItem
             // 
             lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            lịchSửToolStripMenuItem.Size = new Size(220, 26);
+            lịchSửToolStripMenuItem.Size = new Size(224, 26);
             lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(220, 26);
+            thoátToolStripMenuItem.Size = new Size(224, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 

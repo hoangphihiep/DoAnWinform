@@ -81,6 +81,7 @@ namespace DuLich
                 k.HideDangNhap();
                 k.HideDangKy();
                 k.HideDangKyKS();
+                k.kiemtradangkiKS1 = 2;
                 this.Hide();
                 k.ShowDialog();
                 k.Close();
@@ -92,6 +93,7 @@ namespace DuLich
                 f.ShowMenuStrip();
                 f.HideDangNhap();
                 f.HideDangKy();
+                f.kiemtradangkiKS = 1;
                 this.Hide();
                 f.ShowDialog();
                 Application.Exit();
