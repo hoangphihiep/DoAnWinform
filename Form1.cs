@@ -307,6 +307,7 @@ namespace DoAnDuLich
 
         }
 
+        public int kiemtradangnhap;
         private void button1_Click(object sender, EventArgs e)
         {
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
