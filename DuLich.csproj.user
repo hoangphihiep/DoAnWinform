@@ -40,13 +40,13 @@
     <Compile Update="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FTrangChuTK.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="fPayment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fPayment_Slip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FTrangChuTK.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fRegister.cs">
@@ -59,9 +59,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="fHotel_Details.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Hotel_booked.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Payment_Information.cs">

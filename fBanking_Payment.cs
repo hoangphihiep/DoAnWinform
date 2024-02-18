@@ -17,9 +17,12 @@ namespace DuLich
             InitializeComponent();
         }
 
-        private void fBanking_Payment_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            fPayment_Slip f =new fPayment_Slip();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

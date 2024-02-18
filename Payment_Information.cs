@@ -39,7 +39,7 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
-            fHotel_Booked f = new fHotel_Booked();
+            fHotel_booked f = new fHotel_booked();
             this.Hide();
             f.ShowDialog();
             this.Show();
