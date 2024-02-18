@@ -470,19 +470,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\Anya\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
+      "projectUniqueName": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\DuLich.csproj",
       "projectName": "DuLich",
-      "projectPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\",
+      "projectPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\DuLich.csproj",
+      "packagesPath": "C:\\Users\\Anya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anya\\Source\\Repos\\DoAnWinform\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
