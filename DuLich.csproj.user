@@ -40,6 +40,9 @@
     <Compile Update="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fPayment1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FTrangChuTK.cs">
       <SubType>Form</SubType>
     </Compile>
