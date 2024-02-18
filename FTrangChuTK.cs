@@ -361,6 +361,7 @@ namespace DoAnDuLich
             ShowDangKy();
             ShowDangNhap();
             HideMenuStrip();
+            KT_DangNhap = 0;
         }
 
         private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)

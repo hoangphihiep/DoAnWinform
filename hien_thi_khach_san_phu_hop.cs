@@ -133,6 +133,7 @@ namespace DuLich
             ShowDangNhap();
             ShowDangKy();
             HideMenuStrip();
+            KT_DangNhap1 = 0;
         }
 
         private void label2_Click(object sender, EventArgs e)
