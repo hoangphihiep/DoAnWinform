@@ -43,7 +43,7 @@
             btn_Back = new Button();
             btn_NEXT = new Button();
             lbl_ChonLoaiHinh = new Label();
-            lbl_LetUs = new Label();
+            lbl_ChoChungToi = new Label();
             lbl_ChoKhachHangXem = new Label();
             panel1 = new Panel();
             panel3 = new Panel();
@@ -65,7 +65,7 @@
             label26 = new Label();
             label27 = new Label();
             lbl_34 = new Label();
-            lbl_Welldone = new Label();
+            lbl_ChucMung = new Label();
             cb_ToiMuonCo2GiuongDon = new CheckBox();
             cb_ToiMuonMotChiecGiuongLon = new CheckBox();
             cb_CoHutThuoc = new CheckBox();
@@ -226,16 +226,16 @@
             lbl_ChonLoaiHinh.Size = new Size(0, 31);
             lbl_ChonLoaiHinh.TabIndex = 5;
             // 
-            // lbl_LetUs
+            // lbl_ChoChungToi
             // 
-            lbl_LetUs.AutoSize = true;
-            lbl_LetUs.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_LetUs.Location = new Point(38, 86);
-            lbl_LetUs.Name = "lbl_LetUs";
-            lbl_LetUs.Size = new Size(257, 31);
-            lbl_LetUs.TabIndex = 1;
-            lbl_LetUs.Text = "Let us know who you are";
-            lbl_LetUs.Click += lbl_HoTen_Click;
+            lbl_ChoChungToi.AutoSize = true;
+            lbl_ChoChungToi.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ChoChungToi.Location = new Point(38, 86);
+            lbl_ChoChungToi.Name = "lbl_ChoChungToi";
+            lbl_ChoChungToi.Size = new Size(291, 31);
+            lbl_ChoChungToi.TabIndex = 1;
+            lbl_ChoChungToi.Text = "Cho chúng tôi biết  bạn là ai";
+            lbl_ChoChungToi.Click += lbl_HoTen_Click;
             // 
             // lbl_ChoKhachHangXem
             // 
@@ -251,7 +251,7 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel10);
             panel1.Controls.Add(lbl_34);
-            panel1.Controls.Add(lbl_Welldone);
+            panel1.Controls.Add(lbl_ChucMung);
             panel1.Controls.Add(cb_ToiMuonCo2GiuongDon);
             panel1.Controls.Add(cb_ToiMuonMotChiecGiuongLon);
             panel1.Controls.Add(cb_CoHutThuoc);
@@ -274,7 +274,7 @@
             panel1.Controls.Add(btn_Back);
             panel1.Controls.Add(btn_NEXT);
             panel1.Controls.Add(lbl_ChonLoaiHinh);
-            panel1.Controls.Add(lbl_LetUs);
+            panel1.Controls.Add(lbl_ChoChungToi);
             panel1.Controls.Add(lbl_ChoKhachHangXem);
             panel1.Location = new Point(311, 12);
             panel1.Name = "panel1";
@@ -488,17 +488,17 @@
             lbl_34.Text = "GIẢM GIÁ 34% NGAY HÔM NAY";
             lbl_34.Click += label3_Click;
             // 
-            // lbl_Welldone
+            // lbl_ChucMung
             // 
-            lbl_Welldone.AutoSize = true;
-            lbl_Welldone.BackColor = SystemColors.ButtonHighlight;
-            lbl_Welldone.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_Welldone.ForeColor = Color.Green;
-            lbl_Welldone.Location = new Point(643, 467);
-            lbl_Welldone.Name = "lbl_Welldone";
-            lbl_Welldone.Size = new Size(403, 62);
-            lbl_Welldone.TabIndex = 109;
-            lbl_Welldone.Text = "Well done! You're getting this property's\r\n lowest price!";
+            lbl_ChucMung.AutoSize = true;
+            lbl_ChucMung.BackColor = SystemColors.ButtonHighlight;
+            lbl_ChucMung.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ChucMung.ForeColor = Color.Green;
+            lbl_ChucMung.Location = new Point(643, 467);
+            lbl_ChucMung.Name = "lbl_ChucMung";
+            lbl_ChucMung.Size = new Size(412, 62);
+            lbl_ChucMung.TabIndex = 109;
+            lbl_ChucMung.Text = "Chúc mừng! Bạn đã nhận được mức giá \r\nthấp nhất";
             // 
             // cb_ToiMuonCo2GiuongDon
             // 
@@ -658,7 +658,7 @@
         private Button btn_Back;
         private Button btn_NEXT;
         private Label lbl_ChonLoaiHinh;
-        private Label lbl_LetUs;
+        private Label lbl_ChoChungToi;
         private Label lbl_ChoKhachHangXem;
         private Panel panel1;
         private Label lbl_SignIn;
@@ -675,7 +675,7 @@
         private CheckBox cb_KhongHutThuoc;
         private CheckBox cb_ToiMuonCo2GiuongDon;
         private CheckBox cb_ToiMuonMotChiecGiuongLon;
-        private Label lbl_Welldone;
+        private Label lbl_ChucMung;
         private Label lbl_34;
         private Panel panel10;
         private Button btn_ThayDoi;
