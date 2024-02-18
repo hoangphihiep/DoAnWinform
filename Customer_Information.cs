@@ -68,5 +68,10 @@ namespace DuLich
         {
             this.Close();
         }
+
+        private void lbl_Customer_information_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
