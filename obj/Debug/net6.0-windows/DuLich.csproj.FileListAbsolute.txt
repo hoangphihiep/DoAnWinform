@@ -136,7 +136,6 @@ C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fRegister
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fThongTinTaiKhoan.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DoAnDuLich.FTrangChuTK.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.hien_thi_khach_san_phu_hop.resources
-C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Hotel_booked.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Payment_Information.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Properties.Resources.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.UAnh.resources

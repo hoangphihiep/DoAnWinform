@@ -36,12 +36,15 @@ namespace DuLich
                 this.Hide();
                 f1.ShowDialog();
                 this.Close();
-            } 
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
-            
+            fHotel_booked f1 = new fHotel_booked();
+            this.Hide();
+            f1.ShowDialog();
+            this.Show();
         }
     }
 }

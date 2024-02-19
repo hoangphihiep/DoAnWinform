@@ -147,6 +147,7 @@ namespace DuLich
         private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fCollections f = new fCollections();
+            f.kiemtratrang = 1;
             this.Hide();
             f.ShowDialog();
             this.Show();

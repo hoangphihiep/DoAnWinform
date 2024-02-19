@@ -263,11 +263,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(406, 10);
+            label2.Location = new Point(353, 10);
             label2.Name = "label2";
-            label2.Size = new Size(202, 38);
+            label2.Size = new Size(421, 38);
             label2.TabIndex = 1;
-            label2.Text = "Khach san dep";
+            label2.Text = "Melia Vinpearl Nha Trang Empir";
             label2.Click += label2_Click;
             // 
             // pictureBox1

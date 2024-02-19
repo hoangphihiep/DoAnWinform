@@ -73,7 +73,7 @@
             label37 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel3 = new Panel();
-            button1 = new Button();
+            btn_Add = new Button();
             label2 = new Label();
             panel4 = new Panel();
             button2 = new Button();
@@ -554,7 +554,7 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btn_Add);
             panel3.Controls.Add(label2);
             panel3.Location = new Point(3, 4);
             panel3.Margin = new Padding(3, 4, 3, 4);
@@ -562,19 +562,19 @@
             panel3.Size = new Size(246, 224);
             panel3.TabIndex = 0;
             // 
-            // button1
+            // btn_Add
             // 
-            button1.BackColor = SystemColors.ControlLightLight;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Highlight;
-            button1.Location = new Point(91, 108);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(67, 31);
-            button1.TabIndex = 1;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btn_Add.BackColor = SystemColors.ControlLightLight;
+            btn_Add.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Add.ForeColor = SystemColors.Highlight;
+            btn_Add.Location = new Point(91, 108);
+            btn_Add.Margin = new Padding(3, 4, 3, 4);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(67, 31);
+            btn_Add.TabIndex = 1;
+            btn_Add.Text = "Add";
+            btn_Add.UseVisualStyleBackColor = false;
+            btn_Add.Click += btn_Add_Click;
             // 
             // label2
             // 
@@ -718,7 +718,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel3;
         private Label label2;
-        private Button button1;
+        private Button btn_Add;
         private Panel panel4;
         private Label label3;
         private Label label4;

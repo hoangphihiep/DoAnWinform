@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void fPayment_Slip_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
