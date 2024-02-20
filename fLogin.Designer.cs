@@ -45,27 +45,29 @@
             // 
             // panel1
             // 
+            panel1.BackgroundImage = Properties.Resources.pngtree_summer_travel_exclusive_seaside_background_material_picture_image_909955;
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(-2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 242);
+            panel1.Size = new Size(663, 499);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // panel3
             // 
+            panel3.BackColor = SystemColors.Control;
             panel3.Controls.Add(btn_DangNhap);
             panel3.Controls.Add(lbl_ChuaCoTaiKhoan);
             panel3.Controls.Add(btn_DangKy);
-            panel3.Location = new Point(14, 134);
+            panel3.Location = new Point(37, 258);
             panel3.Name = "panel3";
-            panel3.Size = new Size(728, 84);
+            panel3.Size = new Size(575, 84);
             panel3.TabIndex = 4;
             // 
             // btn_DangNhap
             // 
-            btn_DangNhap.Location = new Point(374, 3);
+            btn_DangNhap.Location = new Point(311, 3);
             btn_DangNhap.Name = "btn_DangNhap";
             btn_DangNhap.Size = new Size(94, 29);
             btn_DangNhap.TabIndex = 1;
@@ -76,6 +78,7 @@
             // lbl_ChuaCoTaiKhoan
             // 
             lbl_ChuaCoTaiKhoan.AutoSize = true;
+            lbl_ChuaCoTaiKhoan.BackColor = SystemColors.ControlLightLight;
             lbl_ChuaCoTaiKhoan.Location = new Point(23, 48);
             lbl_ChuaCoTaiKhoan.Name = "lbl_ChuaCoTaiKhoan";
             lbl_ChuaCoTaiKhoan.Size = new Size(143, 20);
@@ -95,13 +98,14 @@
             // 
             // panel2
             // 
+            panel2.BackColor = SystemColors.Control;
             panel2.Controls.Add(txt_MatKhau);
             panel2.Controls.Add(lbl_MatKhau);
             panel2.Controls.Add(txt_TenDangNhap);
             panel2.Controls.Add(lbl_TenDangNhap);
-            panel2.Location = new Point(14, 18);
+            panel2.Location = new Point(37, 159);
             panel2.Name = "panel2";
-            panel2.Size = new Size(728, 93);
+            panel2.Size = new Size(575, 93);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
             // 
@@ -109,7 +113,7 @@
             // 
             txt_MatKhau.Location = new Point(154, 50);
             txt_MatKhau.Name = "txt_MatKhau";
-            txt_MatKhau.Size = new Size(574, 27);
+            txt_MatKhau.Size = new Size(417, 27);
             txt_MatKhau.TabIndex = 3;
             txt_MatKhau.UseSystemPasswordChar = true;
             txt_MatKhau.TextChanged += textBox2_TextChanged;
@@ -117,6 +121,7 @@
             // lbl_MatKhau
             // 
             lbl_MatKhau.AutoSize = true;
+            lbl_MatKhau.BackColor = SystemColors.ControlLightLight;
             lbl_MatKhau.Location = new Point(23, 53);
             lbl_MatKhau.Name = "lbl_MatKhau";
             lbl_MatKhau.Size = new Size(81, 20);
@@ -127,13 +132,14 @@
             // 
             txt_TenDangNhap.Location = new Point(154, 3);
             txt_TenDangNhap.Name = "txt_TenDangNhap";
-            txt_TenDangNhap.Size = new Size(731, 27);
+            txt_TenDangNhap.Size = new Size(417, 27);
             txt_TenDangNhap.TabIndex = 1;
             txt_TenDangNhap.TextChanged += txt_TenDangNhap_TextChanged;
             // 
             // lbl_TenDangNhap
             // 
             lbl_TenDangNhap.AutoSize = true;
+            lbl_TenDangNhap.BackColor = SystemColors.ControlLightLight;
             lbl_TenDangNhap.Location = new Point(23, 9);
             lbl_TenDangNhap.Name = "lbl_TenDangNhap";
             lbl_TenDangNhap.Size = new Size(118, 20);
@@ -145,7 +151,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 282);
+            BackColor = SystemColors.ControlDarkDark;
+            BackgroundImage = Properties.Resources.pngtree_summer_travel_exclusive_seaside_background_material_picture_image_909955;
+            ClientSize = new Size(659, 501);
             Controls.Add(panel1);
             Name = "fLogin";
             StartPosition = FormStartPosition.CenterScreen;

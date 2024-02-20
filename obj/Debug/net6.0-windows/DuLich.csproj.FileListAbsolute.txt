@@ -53,7 +53,6 @@ C:\Users\ADMIN\Downloads\Winform\bin\Debug\net6.0-windows\runtimes\win-x86\nativ
 C:\Users\ADMIN\Downloads\Winform\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ADMIN\Downloads\Winform\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fApp.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fCollections.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Details.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Posting.resources
@@ -68,7 +67,6 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DoAnDuLich.FTrangChuTK
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fRegister.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fThongTinTaiKhoan.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.hien_thi_khach_san_phu_hop.resources
-C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.Hotel_booked.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.Properties.Resources.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.UMatKhau.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.UThongtin.resources
@@ -157,3 +155,7 @@ C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\refint\DuLich.dl
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.pdb
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.genruntimeconfig.cache
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\ref\DuLich.dll
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fBanking_Payment.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_booked.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fPayment.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fPayment_Slip.resources

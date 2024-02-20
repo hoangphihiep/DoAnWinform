@@ -11,7 +11,8 @@ namespace DuLich
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            panel2.BackColor = Color.FromArgb(50, 0, 0, 0);
+            panel3.BackColor = Color.FromArgb(50, 0, 0, 0);
         }
 
         private void label1_Click(object sender, EventArgs e)
