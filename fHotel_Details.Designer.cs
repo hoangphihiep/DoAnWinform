@@ -1145,7 +1145,7 @@
             pictureBox8.Margin = new Padding(3, 4, 3, 4);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(161, 133);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 6;
             pictureBox8.TabStop = false;
             // 
@@ -1156,7 +1156,7 @@
             pictureBox7.Margin = new Padding(3, 4, 3, 4);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(166, 133);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 5;
             pictureBox7.TabStop = false;
             // 
@@ -1167,7 +1167,7 @@
             pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(161, 127);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 4;
             pictureBox6.TabStop = false;
             // 
@@ -1178,7 +1178,7 @@
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(166, 127);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 3;
             pictureBox5.TabStop = false;
             // 
@@ -1189,7 +1189,7 @@
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(161, 135);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 2;
             pictureBox4.TabStop = false;
             // 
@@ -1200,18 +1200,18 @@
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(166, 135);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(8, 9);
+            pictureBox2.Location = new Point(8, 13);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(622, 415);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.Size = new Size(612, 411);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
@@ -1250,6 +1250,7 @@
             Name = "fHotel_Details";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hotel_Details";
+            Load += fHotel_Details_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

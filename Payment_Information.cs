@@ -34,7 +34,10 @@ namespace DuLich
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Customer_Information f = new Customer_Information();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void btn_BookNow_Click(object sender, EventArgs e)

@@ -40,5 +40,10 @@ namespace DuLich
             f.ShowDialog();
             this.Show();
         }
+
+        private void fHotel_Details_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
