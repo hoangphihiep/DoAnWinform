@@ -105,7 +105,7 @@
             panel2.Controls.Add(lbl_ThongTinThanhToan);
             panel2.Location = new Point(-11, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(316, 1031);
+            panel2.Size = new Size(316, 579);
             panel2.TabIndex = 14;
             // 
             // lbl_DatCho
@@ -145,7 +145,7 @@
             btn_BookNow.BackColor = SystemColors.Highlight;
             btn_BookNow.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_BookNow.ForeColor = SystemColors.ButtonHighlight;
-            btn_BookNow.Location = new Point(565, 911);
+            btn_BookNow.Location = new Point(735, 870);
             btn_BookNow.Name = "btn_BookNow";
             btn_BookNow.Size = new Size(136, 56);
             btn_BookNow.TabIndex = 35;
@@ -164,6 +164,7 @@
             // 
             // panel1
             // 
+            panel1.AutoScroll = true;
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(lbl_34);
             panel1.Controls.Add(panel10);
@@ -178,7 +179,7 @@
             panel1.Controls.Add(lbl_ChoKhachHangXem);
             panel1.Location = new Point(311, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1123, 1031);
+            panel1.Size = new Size(1112, 584);
             panel1.TabIndex = 15;
             panel1.TabStop = true;
             // 
@@ -451,9 +452,10 @@
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox1.Location = new Point(217, 317);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(125, 30);
             textBox1.TabIndex = 107;
             // 
             // lbl_Expiry_date
@@ -468,9 +470,10 @@
             // 
             // txt_Expiry_date
             // 
+            txt_Expiry_date.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_Expiry_date.Location = new Point(18, 317);
             txt_Expiry_date.Name = "txt_Expiry_date";
-            txt_Expiry_date.Size = new Size(125, 27);
+            txt_Expiry_date.Size = new Size(125, 30);
             txt_Expiry_date.TabIndex = 105;
             // 
             // cb_IAgree
@@ -485,9 +488,10 @@
             // 
             // txt_PhoneNumber
             // 
+            txt_PhoneNumber.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_PhoneNumber.Location = new Point(17, 224);
             txt_PhoneNumber.Name = "txt_PhoneNumber";
-            txt_PhoneNumber.Size = new Size(325, 27);
+            txt_PhoneNumber.Size = new Size(325, 30);
             txt_PhoneNumber.TabIndex = 103;
             // 
             // lbl_Credit_debit_card_number
@@ -502,11 +506,12 @@
             // 
             // cbb_Select_payment
             // 
+            cbb_Select_payment.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             cbb_Select_payment.FormattingEnabled = true;
             cbb_Select_payment.Items.AddRange(new object[] { "Visa / MasterCard / Amex / JCB", "UnionPay - Creditcard" });
             cbb_Select_payment.Location = new Point(12, 49);
             cbb_Select_payment.Name = "cbb_Select_payment";
-            cbb_Select_payment.Size = new Size(519, 28);
+            cbb_Select_payment.Size = new Size(519, 31);
             cbb_Select_payment.TabIndex = 102;
             // 
             // lbl_PhoneNumber
@@ -531,9 +536,10 @@
             // 
             // txt_Credit
             // 
+            txt_Credit.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_Credit.Location = new Point(13, 144);
             txt_Credit.Name = "txt_Credit";
-            txt_Credit.Size = new Size(324, 27);
+            txt_Credit.Size = new Size(324, 30);
             txt_Credit.TabIndex = 100;
             txt_Credit.TextChanged += txt_Ten_TextChanged;
             // 
@@ -604,7 +610,7 @@
             btn_Back.BackColor = SystemColors.Highlight;
             btn_Back.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_Back.ForeColor = SystemColors.ButtonHighlight;
-            btn_Back.Location = new Point(135, 911);
+            btn_Back.Location = new Point(305, 870);
             btn_Back.Name = "btn_Back";
             btn_Back.Size = new Size(136, 56);
             btn_Back.TabIndex = 50;
@@ -616,7 +622,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1422, 1055);
+            ClientSize = new Size(1420, 600);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Payment_Information";

@@ -59,5 +59,66 @@ namespace DuLich.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dulichPhuQuoc_1649392573_9234_1649405369 {
+            get {
+                object obj = ResourceManager.GetObject("dulichPhuQuoc-1649392573-9234-1649405369", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__1_ {
+            get {
+                object obj = ResourceManager.GetObject("images (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_summer_travel_exclusive_seaside_background_material_picture_image_909955 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-summer-travel-exclusive-seaside-background-material-picture-image_909955", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_summer_travel_exclusive_seaside_background_material_picture_image_9099551 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-summer-travel-exclusive-seaside-background-material-picture-image_9099551" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4899699868584_aa8e46fd9265d476eadec8b8d60a6238 {
+            get {
+                object obj = ResourceManager.GetObject("z4899699868584_aa8e46fd9265d476eadec8b8d60a6238", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

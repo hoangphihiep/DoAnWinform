@@ -180,12 +180,15 @@
             // 
             // btn_TimKiem
             // 
+            btn_TimKiem.BackColor = Color.White;
+            btn_TimKiem.FlatStyle = FlatStyle.Popup;
+            btn_TimKiem.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btn_TimKiem.Location = new Point(1186, 13);
             btn_TimKiem.Name = "btn_TimKiem";
             btn_TimKiem.Size = new Size(108, 29);
             btn_TimKiem.TabIndex = 27;
             btn_TimKiem.Text = "Tìm Kiếm";
-            btn_TimKiem.UseVisualStyleBackColor = true;
+            btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // numericUpDown2
             // 

@@ -28,149 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel3 = new Panel();
-            btn_DangNhap = new Button();
-            lbl_ChuaCoTaiKhoan = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             btn_DangKy = new Button();
-            panel2 = new Panel();
-            txt_MatKhau = new TextBox();
-            lbl_MatKhau = new Label();
+            pictureBox1 = new PictureBox();
             txt_TenDangNhap = new TextBox();
-            lbl_TenDangNhap = new Label();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            pictureBox2 = new PictureBox();
+            txt_MatKhau = new TextBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            btn_DangNhap = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(776, 242);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(btn_DangNhap);
-            panel3.Controls.Add(lbl_ChuaCoTaiKhoan);
-            panel3.Controls.Add(btn_DangKy);
-            panel3.Location = new Point(14, 134);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(728, 84);
-            panel3.TabIndex = 4;
-            // 
-            // btn_DangNhap
-            // 
-            btn_DangNhap.Location = new Point(374, 3);
-            btn_DangNhap.Name = "btn_DangNhap";
-            btn_DangNhap.Size = new Size(94, 29);
-            btn_DangNhap.TabIndex = 1;
-            btn_DangNhap.Text = "Đăng nhập";
-            btn_DangNhap.UseVisualStyleBackColor = true;
-            btn_DangNhap.Click += button1_Click;
-            // 
-            // lbl_ChuaCoTaiKhoan
-            // 
-            lbl_ChuaCoTaiKhoan.AutoSize = true;
-            lbl_ChuaCoTaiKhoan.Location = new Point(23, 48);
-            lbl_ChuaCoTaiKhoan.Name = "lbl_ChuaCoTaiKhoan";
-            lbl_ChuaCoTaiKhoan.Size = new Size(143, 20);
-            lbl_ChuaCoTaiKhoan.TabIndex = 3;
-            lbl_ChuaCoTaiKhoan.Text = "Chưa có tài khoản ? ";
-            lbl_ChuaCoTaiKhoan.Click += label1_Click_1;
             // 
             // btn_DangKy
             // 
-            btn_DangKy.Location = new Point(172, 44);
+            btn_DangKy.FlatStyle = FlatStyle.Popup;
+            btn_DangKy.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_DangKy.Location = new Point(46, 400);
             btn_DangKy.Name = "btn_DangKy";
-            btn_DangKy.Size = new Size(94, 29);
+            btn_DangKy.Size = new Size(319, 54);
             btn_DangKy.TabIndex = 2;
             btn_DangKy.Text = "Đăng ký";
             btn_DangKy.UseVisualStyleBackColor = true;
             btn_DangKy.Click += btn_DangKy_Click;
             // 
-            // panel2
+            // pictureBox1
             // 
-            panel2.Controls.Add(txt_MatKhau);
-            panel2.Controls.Add(lbl_MatKhau);
-            panel2.Controls.Add(txt_TenDangNhap);
-            panel2.Controls.Add(lbl_TenDangNhap);
-            panel2.Location = new Point(14, 18);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(728, 93);
-            panel2.TabIndex = 0;
-            panel2.Paint += panel2_Paint;
-            // 
-            // txt_MatKhau
-            // 
-            txt_MatKhau.Location = new Point(154, 50);
-            txt_MatKhau.Name = "txt_MatKhau";
-            txt_MatKhau.Size = new Size(574, 27);
-            txt_MatKhau.TabIndex = 3;
-            txt_MatKhau.UseSystemPasswordChar = true;
-            txt_MatKhau.TextChanged += textBox2_TextChanged;
-            // 
-            // lbl_MatKhau
-            // 
-            lbl_MatKhau.AutoSize = true;
-            lbl_MatKhau.Location = new Point(23, 53);
-            lbl_MatKhau.Name = "lbl_MatKhau";
-            lbl_MatKhau.Size = new Size(81, 20);
-            lbl_MatKhau.TabIndex = 2;
-            lbl_MatKhau.Text = "Mật khẩu : ";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(134, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(122, 113);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // txt_TenDangNhap
             // 
-            txt_TenDangNhap.Location = new Point(154, 3);
+            txt_TenDangNhap.BorderStyle = BorderStyle.None;
+            txt_TenDangNhap.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_TenDangNhap.Location = new Point(111, 224);
             txt_TenDangNhap.Name = "txt_TenDangNhap";
-            txt_TenDangNhap.Size = new Size(731, 27);
+            txt_TenDangNhap.Size = new Size(254, 21);
             txt_TenDangNhap.TabIndex = 1;
+            txt_TenDangNhap.Text = "Tên tài khoản";
+            txt_TenDangNhap.MouseClick += txt_TenDangNhap_MouseClick;
             txt_TenDangNhap.TextChanged += txt_TenDangNhap_TextChanged;
+            txt_TenDangNhap.MouseEnter += txt_TenDangNhap_MouseEnter;
             // 
-            // lbl_TenDangNhap
+            // pictureBox2
             // 
-            lbl_TenDangNhap.AutoSize = true;
-            lbl_TenDangNhap.Location = new Point(23, 9);
-            lbl_TenDangNhap.Name = "lbl_TenDangNhap";
-            lbl_TenDangNhap.Size = new Size(118, 20);
-            lbl_TenDangNhap.TabIndex = 0;
-            lbl_TenDangNhap.Text = "Tên đăng nhập : ";
-            lbl_TenDangNhap.Click += label1_Click;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(105, 116);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(177, 62);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // txt_MatKhau
+            // 
+            txt_MatKhau.BorderStyle = BorderStyle.None;
+            txt_MatKhau.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_MatKhau.Location = new Point(111, 284);
+            txt_MatKhau.Name = "txt_MatKhau";
+            txt_MatKhau.Size = new Size(254, 21);
+            txt_MatKhau.TabIndex = 3;
+            txt_MatKhau.Text = "Mật khẩu";
+            txt_MatKhau.UseSystemPasswordChar = true;
+            txt_MatKhau.MouseClick += txt_MatKhau_MouseClick;
+            txt_MatKhau.TextChanged += textBox2_TextChanged;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(46, 214);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(46, 37);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(46, 274);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(46, 37);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 8;
+            pictureBox4.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Location = new Point(111, 243);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(254, 1);
+            panel1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Black;
+            panel2.Location = new Point(111, 303);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(254, 1);
+            panel2.TabIndex = 10;
+            // 
+            // btn_DangNhap
+            // 
+            btn_DangNhap.BackColor = Color.Azure;
+            btn_DangNhap.FlatStyle = FlatStyle.Popup;
+            btn_DangNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_DangNhap.Location = new Point(46, 332);
+            btn_DangNhap.Name = "btn_DangNhap";
+            btn_DangNhap.Size = new Size(319, 52);
+            btn_DangNhap.TabIndex = 11;
+            btn_DangNhap.Text = "Đăng nhập";
+            btn_DangNhap.UseVisualStyleBackColor = false;
+            btn_DangNhap.Click += btn_DangNhap_Click;
             // 
             // fLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 282);
+            BackColor = Color.White;
+            ClientSize = new Size(407, 499);
+            Controls.Add(btn_DangNhap);
+            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(pictureBox4);
+            Controls.Add(btn_DangKy);
+            Controls.Add(txt_MatKhau);
+            Controls.Add(pictureBox3);
+            Controls.Add(txt_TenDangNhap);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
             Name = "fLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
             FormClosing += fLogin_FormClosing;
             Load += Form1_Load;
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
+        private Button btn_DangKy;
+        private PictureBox pictureBox1;
+        private TextBox txt_TenDangNhap;
+        private PictureBox pictureBox2;
+        private TextBox txt_MatKhau;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
         private Panel panel1;
         private Panel panel2;
-        private TextBox txt_TenDangNhap;
-        private Label lbl_TenDangNhap;
-        private TextBox txt_MatKhau;
-        private Label lbl_MatKhau;
         private Button btn_DangNhap;
-        private Label lbl_ChuaCoTaiKhoan;
-        private Button btn_DangKy;
-        private Panel panel3;
     }
 }

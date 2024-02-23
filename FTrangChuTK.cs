@@ -329,7 +329,7 @@ namespace DoAnDuLich
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
-            }    
+            }
             else
             {
                 this.Hide();
@@ -393,6 +393,11 @@ namespace DoAnDuLich
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

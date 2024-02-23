@@ -60,14 +60,14 @@
             panel2.Controls.Add(lbl_ThongTinCanBan);
             panel2.Location = new Point(17, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(316, 1031);
+            panel2.Size = new Size(263, 548);
             panel2.TabIndex = 8;
             // 
             // lbl_Dang
             // 
             lbl_Dang.AutoSize = true;
             lbl_Dang.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_Dang.Location = new Point(73, 441);
+            lbl_Dang.Location = new Point(19, 438);
             lbl_Dang.Name = "lbl_Dang";
             lbl_Dang.Size = new Size(75, 35);
             lbl_Dang.TabIndex = 11;
@@ -77,7 +77,7 @@
             // 
             lbl_HoSo.AutoSize = true;
             lbl_HoSo.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_HoSo.Location = new Point(73, 372);
+            lbl_HoSo.Location = new Point(19, 369);
             lbl_HoSo.Name = "lbl_HoSo";
             lbl_HoSo.Size = new Size(77, 35);
             lbl_HoSo.TabIndex = 10;
@@ -88,7 +88,7 @@
             lbl_Anh.AutoSize = true;
             lbl_Anh.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_Anh.ForeColor = SystemColors.Highlight;
-            lbl_Anh.Location = new Point(73, 301);
+            lbl_Anh.Location = new Point(19, 298);
             lbl_Anh.Name = "lbl_Anh";
             lbl_Anh.Size = new Size(59, 35);
             lbl_Anh.TabIndex = 9;
@@ -100,7 +100,7 @@
             lbl_ChiTietPhongO.BackColor = SystemColors.Control;
             lbl_ChiTietPhongO.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_ChiTietPhongO.ForeColor = SystemColors.Desktop;
-            lbl_ChiTietPhongO.Location = new Point(73, 228);
+            lbl_ChiTietPhongO.Location = new Point(19, 225);
             lbl_ChiTietPhongO.Name = "lbl_ChiTietPhongO";
             lbl_ChiTietPhongO.Size = new Size(189, 35);
             lbl_ChiTietPhongO.TabIndex = 8;
@@ -110,7 +110,7 @@
             // 
             lbl_TienNghi.AutoSize = true;
             lbl_TienNghi.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_TienNghi.Location = new Point(73, 155);
+            lbl_TienNghi.Location = new Point(19, 152);
             lbl_TienNghi.Name = "lbl_TienNghi";
             lbl_TienNghi.Size = new Size(115, 35);
             lbl_TienNghi.TabIndex = 7;
@@ -121,7 +121,7 @@
             lbl_ViTri.AutoSize = true;
             lbl_ViTri.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_ViTri.ForeColor = SystemColors.Desktop;
-            lbl_ViTri.Location = new Point(76, 85);
+            lbl_ViTri.Location = new Point(22, 82);
             lbl_ViTri.Name = "lbl_ViTri";
             lbl_ViTri.Size = new Size(74, 35);
             lbl_ViTri.TabIndex = 6;
@@ -132,7 +132,7 @@
             lbl_ThongTinCanBan.AutoSize = true;
             lbl_ThongTinCanBan.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_ThongTinCanBan.ForeColor = SystemColors.Desktop;
-            lbl_ThongTinCanBan.Location = new Point(73, 20);
+            lbl_ThongTinCanBan.Location = new Point(19, 17);
             lbl_ThongTinCanBan.Name = "lbl_ThongTinCanBan";
             lbl_ThongTinCanBan.Size = new Size(213, 35);
             lbl_ThongTinCanBan.TabIndex = 5;
@@ -140,6 +140,7 @@
             // 
             // panel1
             // 
+            panel1.AutoScroll = true;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btn_QuayLai);
             panel1.Controls.Add(lbl_HinhAnhRatQuanTrong);
@@ -147,9 +148,9 @@
             panel1.Controls.Add(lbl_ChonLoaiHinh);
             panel1.Controls.Add(lbl_MatNgoai);
             panel1.Controls.Add(lbl_ChoKhachHangXem);
-            panel1.Location = new Point(339, 12);
+            panel1.Location = new Point(286, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1123, 1031);
+            panel1.Size = new Size(960, 548);
             panel1.TabIndex = 9;
             panel1.Paint += panel1_Paint;
             // 
@@ -170,7 +171,7 @@
             btn_QuayLai.BackColor = SystemColors.Highlight;
             btn_QuayLai.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_QuayLai.ForeColor = SystemColors.ButtonHighlight;
-            btn_QuayLai.Location = new Point(48, 911);
+            btn_QuayLai.Location = new Point(162, 479);
             btn_QuayLai.Name = "btn_QuayLai";
             btn_QuayLai.Size = new Size(136, 56);
             btn_QuayLai.TabIndex = 50;
@@ -194,7 +195,7 @@
             btn_TiepTheo.BackColor = SystemColors.Highlight;
             btn_TiepTheo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_TiepTheo.ForeColor = SystemColors.ButtonHighlight;
-            btn_TiepTheo.Location = new Point(565, 911);
+            btn_TiepTheo.Location = new Point(679, 479);
             btn_TiepTheo.Name = "btn_TiepTheo";
             btn_TiepTheo.Size = new Size(136, 56);
             btn_TiepTheo.TabIndex = 35;
@@ -237,7 +238,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1478, 1055);
+            ClientSize = new Size(1250, 600);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "fHotel_Posting_Image";

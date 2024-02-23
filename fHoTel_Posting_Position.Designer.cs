@@ -71,7 +71,7 @@
             panel2.Controls.Add(lbl_ThongTinCanBan);
             panel2.Location = new Point(12, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(316, 1031);
+            panel2.Size = new Size(263, 548);
             panel2.TabIndex = 4;
             panel2.Paint += panel2_Paint;
             // 
@@ -79,7 +79,7 @@
             // 
             lbl_Dang.AutoSize = true;
             lbl_Dang.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_Dang.Location = new Point(73, 441);
+            lbl_Dang.Location = new Point(14, 438);
             lbl_Dang.Name = "lbl_Dang";
             lbl_Dang.Size = new Size(75, 35);
             lbl_Dang.TabIndex = 11;
@@ -89,7 +89,7 @@
             // 
             lbl_HoSo.AutoSize = true;
             lbl_HoSo.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_HoSo.Location = new Point(73, 372);
+            lbl_HoSo.Location = new Point(14, 369);
             lbl_HoSo.Name = "lbl_HoSo";
             lbl_HoSo.Size = new Size(77, 35);
             lbl_HoSo.TabIndex = 10;
@@ -99,7 +99,7 @@
             // 
             lbl_Anh.AutoSize = true;
             lbl_Anh.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_Anh.Location = new Point(73, 301);
+            lbl_Anh.Location = new Point(14, 298);
             lbl_Anh.Name = "lbl_Anh";
             lbl_Anh.Size = new Size(59, 35);
             lbl_Anh.TabIndex = 9;
@@ -109,7 +109,7 @@
             // 
             lbl_ChiTietPhongO.AutoSize = true;
             lbl_ChiTietPhongO.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_ChiTietPhongO.Location = new Point(73, 228);
+            lbl_ChiTietPhongO.Location = new Point(14, 225);
             lbl_ChiTietPhongO.Name = "lbl_ChiTietPhongO";
             lbl_ChiTietPhongO.Size = new Size(189, 35);
             lbl_ChiTietPhongO.TabIndex = 8;
@@ -119,7 +119,7 @@
             // 
             lbl_TienNghi.AutoSize = true;
             lbl_TienNghi.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_TienNghi.Location = new Point(73, 155);
+            lbl_TienNghi.Location = new Point(14, 152);
             lbl_TienNghi.Name = "lbl_TienNghi";
             lbl_TienNghi.Size = new Size(115, 35);
             lbl_TienNghi.TabIndex = 7;
@@ -130,7 +130,7 @@
             lbl_ViTri.AutoSize = true;
             lbl_ViTri.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_ViTri.ForeColor = SystemColors.Highlight;
-            lbl_ViTri.Location = new Point(76, 85);
+            lbl_ViTri.Location = new Point(17, 82);
             lbl_ViTri.Name = "lbl_ViTri";
             lbl_ViTri.Size = new Size(74, 35);
             lbl_ViTri.TabIndex = 6;
@@ -141,7 +141,7 @@
             lbl_ThongTinCanBan.AutoSize = true;
             lbl_ThongTinCanBan.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_ThongTinCanBan.ForeColor = SystemColors.Desktop;
-            lbl_ThongTinCanBan.Location = new Point(73, 20);
+            lbl_ThongTinCanBan.Location = new Point(14, 17);
             lbl_ThongTinCanBan.Name = "lbl_ThongTinCanBan";
             lbl_ThongTinCanBan.Size = new Size(213, 35);
             lbl_ThongTinCanBan.TabIndex = 5;
@@ -149,6 +149,7 @@
             // 
             // panel1
             // 
+            panel1.AutoScroll = true;
             panel1.Controls.Add(btn_QuayLai);
             panel1.Controls.Add(comboBox4);
             panel1.Controls.Add(comboBox3);
@@ -168,9 +169,9 @@
             panel1.Controls.Add(lbl_KhachHangChiNhanDuoc);
             panel1.Controls.Add(lbl_ViTriCuaBan);
             panel1.Controls.Add(lbl_XacDinhViTri);
-            panel1.Location = new Point(334, 12);
+            panel1.Location = new Point(281, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1123, 1031);
+            panel1.Size = new Size(966, 548);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
             // 
@@ -179,7 +180,7 @@
             btn_QuayLai.BackColor = SystemColors.Highlight;
             btn_QuayLai.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_QuayLai.ForeColor = SystemColors.ButtonHighlight;
-            btn_QuayLai.Location = new Point(48, 911);
+            btn_QuayLai.Location = new Point(39, 565);
             btn_QuayLai.Name = "btn_QuayLai";
             btn_QuayLai.Size = new Size(136, 56);
             btn_QuayLai.TabIndex = 50;
@@ -189,37 +190,41 @@
             // 
             // comboBox4
             // 
+            comboBox4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
             comboBox4.Location = new Point(491, 381);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(229, 28);
+            comboBox4.Size = new Size(229, 31);
             comboBox4.TabIndex = 49;
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
             // comboBox3
             // 
+            comboBox3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Ninh", "Biên Hòa", "Buôn Ma Thuột", "Cà Mau", "Cần Thơ", "Cao Bằng", "Đà Lạt", "Đà Nẵng", "Đồng Hới", "Hà Nội", "Hải Dương", "Hải Phòng", "Hà Tĩnh", "Hòa Bình", "Huế", "Hưng Yên", "Kon Tum", "Lạng Sơn", "Lào Cai", "Long Xuyên", "Nam Định", "Nha Trang", "Ninh Bình", "Phan Thiết", "Pleiku", "Quảng Ngãi", "Quảng Ninh", "Quy Nhơn", "Rạch Giá", "Sóc Trăng", "Tam Kỳ", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thủ Dầu Một", "Tây Ninh", "Tuy Hòa", "Việt Trì", "Vinh", "Vũng Tàu", "Yên Bái", "TP.HCM (Thành phố Hồ Chí Minh)" });
             comboBox3.Location = new Point(39, 478);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(229, 28);
+            comboBox3.Size = new Size(229, 31);
             comboBox3.TabIndex = 48;
             // 
             // comboBox2
             // 
+            comboBox2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor (Timor-Leste)", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (fka Swaziland)", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Ivory Coast (Côte d'Ivoire)", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia (fka Macedonia)", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City (Holy See)", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
             comboBox2.Location = new Point(39, 381);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(229, 28);
+            comboBox2.Size = new Size(229, 31);
             comboBox2.TabIndex = 47;
             // 
             // txt_MaBuuDien
             // 
+            txt_MaBuuDien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_MaBuuDien.Location = new Point(492, 479);
             txt_MaBuuDien.Name = "txt_MaBuuDien";
-            txt_MaBuuDien.Size = new Size(228, 27);
+            txt_MaBuuDien.Size = new Size(228, 30);
             txt_MaBuuDien.TabIndex = 45;
             txt_MaBuuDien.TextChanged += txt_MaBuuDien_TextChanged;
             // 
@@ -278,9 +283,10 @@
             // 
             // txt_TenToaNhaTangCanHo
             // 
+            txt_TenToaNhaTangCanHo.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_TenToaNhaTangCanHo.Location = new Point(39, 283);
             txt_TenToaNhaTangCanHo.Name = "txt_TenToaNhaTangCanHo";
-            txt_TenToaNhaTangCanHo.Size = new Size(633, 27);
+            txt_TenToaNhaTangCanHo.Size = new Size(633, 30);
             txt_TenToaNhaTangCanHo.TabIndex = 38;
             txt_TenToaNhaTangCanHo.TextChanged += txt_TenToaNhaTangCanHo_TextChanged;
             // 
@@ -300,7 +306,7 @@
             btn_TiepTheo.BackColor = SystemColors.Highlight;
             btn_TiepTheo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_TiepTheo.ForeColor = SystemColors.ButtonHighlight;
-            btn_TiepTheo.Location = new Point(565, 911);
+            btn_TiepTheo.Location = new Point(556, 565);
             btn_TiepTheo.Name = "btn_TiepTheo";
             btn_TiepTheo.Size = new Size(136, 56);
             btn_TiepTheo.TabIndex = 35;
@@ -331,9 +337,10 @@
             // 
             // txt_DiaChi
             // 
+            txt_DiaChi.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txt_DiaChi.Location = new Point(39, 200);
             txt_DiaChi.Name = "txt_DiaChi";
-            txt_DiaChi.Size = new Size(633, 27);
+            txt_DiaChi.Size = new Size(633, 30);
             txt_DiaChi.TabIndex = 3;
             // 
             // lbl_KhachHangChiNhanDuoc
@@ -372,7 +379,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1469, 1055);
+            ClientSize = new Size(1250, 600);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "fHoTel_Posting_Position";

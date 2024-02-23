@@ -4,9 +4,6 @@
     <Compile Update="Customer_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="fApp.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="fBanking_Payment.cs">
       <SubType>Form</SubType>
     </Compile>
