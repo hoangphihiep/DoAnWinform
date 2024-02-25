@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPayment_Slip));
             panel1 = new Panel();
+            btn_Back = new Button();
+            btn_BookNow = new Button();
             panel5 = new Panel();
             label25 = new Label();
             label24 = new Label();
@@ -66,6 +68,10 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            panel6 = new Panel();
+            lbl_DatCho = new Label();
+            lbl_ThongTinKhachHang = new Label();
+            lbl_ThongTinThanhToan = new Label();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -76,21 +82,50 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(btn_Back);
+            panel1.Controls.Add(btn_BookNow);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(2, 5);
+            panel1.Location = new Point(334, 13);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1003, 681);
+            panel1.Size = new Size(1003, 579);
             panel1.TabIndex = 0;
+            // 
+            // btn_Back
+            // 
+            btn_Back.BackColor = SystemColors.Highlight;
+            btn_Back.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Back.ForeColor = SystemColors.ButtonHighlight;
+            btn_Back.Location = new Point(240, 688);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(136, 56);
+            btn_Back.TabIndex = 52;
+            btn_Back.Text = "BACK";
+            btn_Back.UseVisualStyleBackColor = false;
+            btn_Back.Click += btn_Back_Click;
+            // 
+            // btn_BookNow
+            // 
+            btn_BookNow.BackColor = SystemColors.Highlight;
+            btn_BookNow.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_BookNow.ForeColor = SystemColors.ButtonHighlight;
+            btn_BookNow.Location = new Point(670, 688);
+            btn_BookNow.Name = "btn_BookNow";
+            btn_BookNow.Size = new Size(136, 56);
+            btn_BookNow.TabIndex = 51;
+            btn_BookNow.Text = "Xác Nhận";
+            btn_BookNow.UseVisualStyleBackColor = false;
+            btn_BookNow.Click += btn_BookNow_Click;
             // 
             // panel5
             // 
@@ -357,7 +392,7 @@
             panel2.Location = new Point(543, 423);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(406, 217);
+            panel2.Size = new Size(406, 243);
             panel2.TabIndex = 5;
             // 
             // label27
@@ -479,11 +514,55 @@
             label1.TabIndex = 3;
             label1.Text = "Thông tin đặt chỗ";
             // 
+            // panel6
+            // 
+            panel6.Controls.Add(lbl_DatCho);
+            panel6.Controls.Add(lbl_ThongTinKhachHang);
+            panel6.Controls.Add(lbl_ThongTinThanhToan);
+            panel6.Location = new Point(12, 13);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(316, 579);
+            panel6.TabIndex = 15;
+            // 
+            // lbl_DatCho
+            // 
+            lbl_DatCho.AutoSize = true;
+            lbl_DatCho.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_DatCho.ForeColor = SystemColors.Highlight;
+            lbl_DatCho.Location = new Point(23, 157);
+            lbl_DatCho.Name = "lbl_DatCho";
+            lbl_DatCho.Size = new Size(251, 35);
+            lbl_DatCho.TabIndex = 18;
+            lbl_DatCho.Text = "3.Đặt chỗ hoàn thành\r\n";
+            // 
+            // lbl_ThongTinKhachHang
+            // 
+            lbl_ThongTinKhachHang.AutoSize = true;
+            lbl_ThongTinKhachHang.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinKhachHang.ForeColor = SystemColors.Desktop;
+            lbl_ThongTinKhachHang.Location = new Point(23, 24);
+            lbl_ThongTinKhachHang.Name = "lbl_ThongTinKhachHang";
+            lbl_ThongTinKhachHang.Size = new Size(271, 35);
+            lbl_ThongTinKhachHang.TabIndex = 16;
+            lbl_ThongTinKhachHang.Text = "1.Thông tin khách hàng";
+            // 
+            // lbl_ThongTinThanhToan
+            // 
+            lbl_ThongTinThanhToan.AutoSize = true;
+            lbl_ThongTinThanhToan.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinThanhToan.ForeColor = SystemColors.Desktop;
+            lbl_ThongTinThanhToan.Location = new Point(23, 90);
+            lbl_ThongTinThanhToan.Name = "lbl_ThongTinThanhToan";
+            lbl_ThongTinThanhToan.Size = new Size(263, 35);
+            lbl_ThongTinThanhToan.TabIndex = 17;
+            lbl_ThongTinThanhToan.Text = "2.Thông tin thanh toán";
+            // 
             // fPayment_Slip
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1019, 717);
+            ClientSize = new Size(1336, 600);
+            Controls.Add(panel6);
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "fPayment_Slip";
@@ -505,6 +584,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -547,5 +628,11 @@
         private Label label24;
         private Label label26;
         private Label label27;
+        private Button btn_Back;
+        private Button btn_BookNow;
+        private Panel panel6;
+        private Label lbl_DatCho;
+        private Label lbl_ThongTinKhachHang;
+        private Label lbl_ThongTinThanhToan;
     }
 }
