@@ -27,7 +27,7 @@ namespace DuLich
             Payment_Information f = new Payment_Information();
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btn_BookNow_Click(object sender, EventArgs e)

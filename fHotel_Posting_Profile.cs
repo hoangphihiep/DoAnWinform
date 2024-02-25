@@ -79,6 +79,9 @@ namespace DuLich
 
         private void btn_QuayLai_Click(object sender, EventArgs e)
         {
+            fHotel_Posting_Image f = new fHotel_Posting_Image();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
         public int kiemtratrang6;

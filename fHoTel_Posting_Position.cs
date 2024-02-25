@@ -156,6 +156,9 @@ namespace DuLich
 
         private void button1_Click(object sender, EventArgs e)
         {
+            fHotel_Posting f = new fHotel_Posting();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
     }

@@ -37,7 +37,7 @@ namespace DuLich
             Customer_Information f = new Customer_Information();
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btn_BookNow_Click(object sender, EventArgs e)

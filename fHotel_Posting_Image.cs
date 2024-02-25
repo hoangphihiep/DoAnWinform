@@ -19,6 +19,9 @@ namespace DuLich
 
         private void btn_QuayLai_Click(object sender, EventArgs e)
         {
+            fHotel_Posting_RoomDetails f = new fHotel_Posting_RoomDetails();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 

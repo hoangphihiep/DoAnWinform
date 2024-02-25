@@ -38,11 +38,11 @@
             lbl_ThongTinThanhToan = new Label();
             lbl_ThongTinKhachHang = new Label();
             panel2 = new Panel();
-            btn_Back = new Button();
             btn_NEXT = new Button();
             lbl_ChonLoaiHinh = new Label();
             lbl_ChoKhachHangXem = new Label();
             panel1 = new Panel();
+            label2 = new Label();
             panel3 = new Panel();
             lbl_TuanTheo = new Label();
             lbl_Gia = new Label();
@@ -74,7 +74,6 @@
             cbb_QuocGia = new ComboBox();
             lbl_NeuBan = new Label();
             txt_PhoneNumber = new TextBox();
-            label2 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -172,19 +171,6 @@
             panel2.Size = new Size(316, 579);
             panel2.TabIndex = 12;
             // 
-            // btn_Back
-            // 
-            btn_Back.BackColor = SystemColors.Highlight;
-            btn_Back.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Back.ForeColor = SystemColors.ButtonHighlight;
-            btn_Back.Location = new Point(170, 876);
-            btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(136, 56);
-            btn_Back.TabIndex = 50;
-            btn_Back.Text = "BACK";
-            btn_Back.UseVisualStyleBackColor = false;
-            btn_Back.Click += btn_Back_Click;
-            // 
             // btn_NEXT
             // 
             btn_NEXT.BackColor = SystemColors.Highlight;
@@ -240,7 +226,6 @@
             panel1.Controls.Add(lbl_Email);
             panel1.Controls.Add(txt_Email);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(btn_Back);
             panel1.Controls.Add(btn_NEXT);
             panel1.Controls.Add(lbl_ChonLoaiHinh);
             panel1.Controls.Add(lbl_ChoKhachHangXem);
@@ -249,6 +234,16 @@
             panel1.Size = new Size(1079, 579);
             panel1.TabIndex = 13;
             panel1.TabStop = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(18, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 23);
+            label2.TabIndex = 119;
+            label2.Text = "Họ và tên : ";
             // 
             // panel3
             // 
@@ -579,16 +574,6 @@
             txt_PhoneNumber.Size = new Size(556, 30);
             txt_PhoneNumber.TabIndex = 98;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(18, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 23);
-            label2.TabIndex = 119;
-            label2.Text = "Họ và tên : ";
-            // 
             // Customer_Information
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -624,7 +609,6 @@
         private Label lbl_ThongTinThanhToan;
         private Label lbl_ThongTinKhachHang;
         private Panel panel2;
-        private Button btn_Back;
         private Button btn_NEXT;
         private Label lbl_ChonLoaiHinh;
         private Label lbl_ChoKhachHangXem;

@@ -138,11 +138,15 @@ namespace DuLich
 
         private void btn_QuayLai_Click(object sender, EventArgs e)
         {
+            fHoTel_Posting_Position f = new fHoTel_Posting_Position();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
         public int kiemtratrang3;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
+            this.Hide();
             fHotel_Posting_RoomDetails f = new fHotel_Posting_RoomDetails();
             if (kiemtratrang3 == 1)
             {
@@ -152,7 +156,6 @@ namespace DuLich
             {
                 f.kiemtratrang4 = 0;
             }
-            this.Hide();
             f.ShowDialog();
             this.Close();
         }

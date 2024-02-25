@@ -201,8 +201,10 @@ namespace DuLich
         {
         }
         public int kiemtratrang1;
+        public int kiemTraQuayLai;
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
+            this.Hide();
             fHoTel_Posting_Position f = new fHoTel_Posting_Position();
             if (kiemtratrang1 == 1)
             {
@@ -212,7 +214,6 @@ namespace DuLich
             {
                 f.kiemtratrang2 = 0;
             }
-            this.Hide();
             f.ShowDialog();
             this.Close();
         }
