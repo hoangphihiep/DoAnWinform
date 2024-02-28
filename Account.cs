@@ -155,6 +155,9 @@ namespace DuLich
             //3. Kiểm tra tất cả các field không được rỗng khi thêm
             if (tk.getTenDangNhap == "")
                 MessageBox.Show("Chưa nhập Ten Dang Nhap");
+            //mk dai hon 6 ki tu
+            else if (tk.getTenDangNhap.Length < 6)
+                MessageBox.Show("Tk phải dài hơn 6 kí tự ");
             else if (tk.getHoTen == "")
                 MessageBox.Show("Chưa nhập Ho va Ten ");
             else if (tk.getGioiTinh == "")
@@ -169,6 +172,9 @@ namespace DuLich
                 MessageBox.Show("Chưa nhập So Dien Thoai ");
             else if (tk.getMatKhau == "")
                 MessageBox.Show("Chưa nhập Mat Khau ");
+            //mk dai hon 6 ki tu
+            else if(tk.getMatKhau.Length < 6)
+                MessageBox.Show("Mật khẩu phải dài hơn 6 kí tự ");
             //4.Kiểm tra năm sinh >= 18 tuổi khi thêm
             else if ((DateTime.Now - tk.getNgayThangNamSinh).TotalDays < 18 * 365.25)
                 MessageBox.Show("Vui Long nhap >= 17 tuoi ");
