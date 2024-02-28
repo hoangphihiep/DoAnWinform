@@ -126,6 +126,7 @@
             pictureBox2.Location = new Point(0, -4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1315, 713);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
             pictureBox2.Visible = false;
