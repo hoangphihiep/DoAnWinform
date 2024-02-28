@@ -20,7 +20,6 @@ namespace DuLich
         {
             InitializeComponent();
         }
-
         private void fRegister_Load(object sender, EventArgs e)
         {
             panel2.BackColor = Color.FromArgb(50, 0, 0, 0);
@@ -100,12 +99,12 @@ namespace DuLich
         {
 
         }
-
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            if (txt_TenDangNhap.Text == "" || txt_HoVaTen.Text == "" || cbb_GioiTinh.Text == "" || txt_DiaChi.Text == "" || dtp_NgayThangNamSinh.Value == null || txt_Email.Text == "" || txt_SoDienThoai.Text == "" || txt_MatKhau.Text == "")
+            Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
+            if (!tk.checkInput(tk))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                
             }
             else
             {
