@@ -347,7 +347,7 @@ namespace DoAnDuLich
             else
             {
                 int t = 0;
-                fHotel_Posting f = new fHotel_Posting();
+                fHotel_Rental f = new fHotel_Rental();
                 KT_DangNhap++;
                 f.kiemtratrang1 = t;
                 this.Hide();
