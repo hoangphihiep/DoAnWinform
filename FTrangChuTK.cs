@@ -349,7 +349,7 @@ namespace DoAnDuLich
                 int t = 0;
                 fHotel_Rental f = new fHotel_Rental();
                 KT_DangNhap++;
-                f.kiemtratrang1 = t;
+               // f.kiemtratrang1 = t;
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

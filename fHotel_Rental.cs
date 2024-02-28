@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void btn_TiepTheo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
