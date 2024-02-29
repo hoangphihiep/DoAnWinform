@@ -21,11 +21,18 @@ namespace DuLich
         {
             string tk = txt_TenDangNhap.Text;
             string mk = txt_MatKhau.Text;
+            string mkMoi = txt_NhapMatKhauMoi.Text;
             string nhapLaimk = txt_NhapLaiMatKhau.Text;
             if (tk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập tài khoản");
             else if (mk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập mật khẩu");
+            else if (mkMoi.Trim() == "")
+                MessageBox.Show("Vui lòng nhập mật khẩu mới");
+            else if (mkMoi.Length < 6)
+                MessageBox.Show("Vui lòng nhập mật khẩu mới dài hơn 6 kí tự");
+            else if(mkMoi == mk)
+                MessageBox.Show("Vui lòng nhập mật khẩu mới khác mật khẩu cũ");
             else
             {
                 string query = "Select * from TaiKhoan where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";

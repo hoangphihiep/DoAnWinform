@@ -26,12 +26,12 @@ namespace DuLich
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
-
+                    MessageBox.Show("Thành công");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("that bai" + ex);
+                MessageBox.Show("Thất bại" + ex);
             }
             finally
             {

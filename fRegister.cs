@@ -102,7 +102,7 @@ namespace DuLich
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-            if (false)//!tk.checkInput(tk))
+            if (!tk.checkInput(tk))
             {
                 
             }
@@ -120,7 +120,6 @@ namespace DuLich
                     {
                         if (cb_ToiDongY.Checked == true)
                         {
-                            MessageBox.Show("Bạn đã đăng ký thành công ");
                             tk.AddAccount(tk, "TaiKhoan");
                             this.Close();
                         }

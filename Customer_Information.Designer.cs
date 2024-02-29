@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Information));
-            lbl_QuocGia = new Label();
-            lbl_DiaDiem = new Label();
             lbl_Email = new Label();
             txt_Email = new TextBox();
             label1 = new Label();
@@ -63,15 +61,6 @@
             label27 = new Label();
             lbl_34 = new Label();
             lbl_ChucMung = new Label();
-            cb_ToiMuonCo2GiuongDon = new CheckBox();
-            cb_ToiMuonMotChiecGiuongLon = new CheckBox();
-            cb_CoHutThuoc = new CheckBox();
-            cb_KhongHutThuoc = new CheckBox();
-            lbl_BanThich = new Label();
-            lbl_BanCo = new Label();
-            lbl_YeuCau = new Label();
-            lbl_ChoChungToiBiet = new Label();
-            cbb_QuocGia = new ComboBox();
             lbl_NeuBan = new Label();
             txt_PhoneNumber = new TextBox();
             panel2.SuspendLayout();
@@ -80,25 +69,6 @@
             panel10.SuspendLayout();
             panel11.SuspendLayout();
             SuspendLayout();
-            // 
-            // lbl_QuocGia
-            // 
-            lbl_QuocGia.AutoSize = true;
-            lbl_QuocGia.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_QuocGia.Location = new Point(17, 253);
-            lbl_QuocGia.Name = "lbl_QuocGia";
-            lbl_QuocGia.Size = new Size(186, 23);
-            lbl_QuocGia.TabIndex = 92;
-            lbl_QuocGia.Text = "Quốc gia/khu vực cư trú";
-            // 
-            // lbl_DiaDiem
-            // 
-            lbl_DiaDiem.AutoSize = true;
-            lbl_DiaDiem.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_DiaDiem.Location = new Point(28, 276);
-            lbl_DiaDiem.Name = "lbl_DiaDiem";
-            lbl_DiaDiem.Size = new Size(0, 31);
-            lbl_DiaDiem.TabIndex = 82;
             // 
             // lbl_Email
             // 
@@ -210,19 +180,8 @@
             panel1.Controls.Add(panel10);
             panel1.Controls.Add(lbl_34);
             panel1.Controls.Add(lbl_ChucMung);
-            panel1.Controls.Add(cb_ToiMuonCo2GiuongDon);
-            panel1.Controls.Add(cb_ToiMuonMotChiecGiuongLon);
-            panel1.Controls.Add(cb_CoHutThuoc);
-            panel1.Controls.Add(cb_KhongHutThuoc);
-            panel1.Controls.Add(lbl_BanThich);
-            panel1.Controls.Add(lbl_BanCo);
-            panel1.Controls.Add(lbl_YeuCau);
-            panel1.Controls.Add(lbl_ChoChungToiBiet);
-            panel1.Controls.Add(cbb_QuocGia);
             panel1.Controls.Add(lbl_NeuBan);
             panel1.Controls.Add(txt_PhoneNumber);
-            panel1.Controls.Add(lbl_QuocGia);
-            panel1.Controls.Add(lbl_DiaDiem);
             panel1.Controls.Add(lbl_Email);
             panel1.Controls.Add(txt_Email);
             panel1.Controls.Add(label1);
@@ -463,97 +422,6 @@
             lbl_ChucMung.TabIndex = 109;
             lbl_ChucMung.Text = "Chúc mừng! Bạn đã nhận được mức giá \r\nthấp nhất";
             // 
-            // cb_ToiMuonCo2GiuongDon
-            // 
-            cb_ToiMuonCo2GiuongDon.AutoSize = true;
-            cb_ToiMuonCo2GiuongDon.Location = new Point(320, 526);
-            cb_ToiMuonCo2GiuongDon.Name = "cb_ToiMuonCo2GiuongDon";
-            cb_ToiMuonCo2GiuongDon.Size = new Size(207, 24);
-            cb_ToiMuonCo2GiuongDon.TabIndex = 108;
-            cb_ToiMuonCo2GiuongDon.Text = "Tôi muốn có 2 giường đơn";
-            cb_ToiMuonCo2GiuongDon.UseVisualStyleBackColor = true;
-            // 
-            // cb_ToiMuonMotChiecGiuongLon
-            // 
-            cb_ToiMuonMotChiecGiuongLon.AutoSize = true;
-            cb_ToiMuonMotChiecGiuongLon.Location = new Point(46, 526);
-            cb_ToiMuonMotChiecGiuongLon.Name = "cb_ToiMuonMotChiecGiuongLon";
-            cb_ToiMuonMotChiecGiuongLon.Size = new Size(239, 24);
-            cb_ToiMuonMotChiecGiuongLon.TabIndex = 107;
-            cb_ToiMuonMotChiecGiuongLon.Text = "Tôi muốn một chiếc giường lớn\r\n";
-            cb_ToiMuonMotChiecGiuongLon.UseVisualStyleBackColor = true;
-            // 
-            // cb_CoHutThuoc
-            // 
-            cb_CoHutThuoc.AutoSize = true;
-            cb_CoHutThuoc.Location = new Point(320, 441);
-            cb_CoHutThuoc.Name = "cb_CoHutThuoc";
-            cb_CoHutThuoc.Size = new Size(115, 24);
-            cb_CoHutThuoc.TabIndex = 106;
-            cb_CoHutThuoc.Text = "Có hút thuốc";
-            cb_CoHutThuoc.UseVisualStyleBackColor = true;
-            // 
-            // cb_KhongHutThuoc
-            // 
-            cb_KhongHutThuoc.AutoSize = true;
-            cb_KhongHutThuoc.Location = new Point(46, 441);
-            cb_KhongHutThuoc.Name = "cb_KhongHutThuoc";
-            cb_KhongHutThuoc.Size = new Size(140, 24);
-            cb_KhongHutThuoc.TabIndex = 105;
-            cb_KhongHutThuoc.Text = "Không hút thuốc";
-            cb_KhongHutThuoc.UseVisualStyleBackColor = true;
-            // 
-            // lbl_BanThich
-            // 
-            lbl_BanThich.AutoSize = true;
-            lbl_BanThich.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_BanThich.Location = new Point(28, 481);
-            lbl_BanThich.Name = "lbl_BanThich";
-            lbl_BanThich.Size = new Size(297, 25);
-            lbl_BanThich.TabIndex = 104;
-            lbl_BanThich.Text = "Bạn thích cấu hình giường nào hơn?";
-            lbl_BanThich.Click += lbl_Whatbed_Click;
-            // 
-            // lbl_BanCo
-            // 
-            lbl_BanCo.AutoSize = true;
-            lbl_BanCo.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_BanCo.Location = new Point(28, 397);
-            lbl_BanCo.Name = "lbl_BanCo";
-            lbl_BanCo.Size = new Size(273, 25);
-            lbl_BanCo.TabIndex = 103;
-            lbl_BanCo.Text = "Bạn có sở thích hút thuốc không?";
-            // 
-            // lbl_YeuCau
-            // 
-            lbl_YeuCau.AutoSize = true;
-            lbl_YeuCau.BackColor = SystemColors.ButtonHighlight;
-            lbl_YeuCau.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_YeuCau.ForeColor = SystemColors.Desktop;
-            lbl_YeuCau.Location = new Point(18, 360);
-            lbl_YeuCau.Name = "lbl_YeuCau";
-            lbl_YeuCau.Size = new Size(569, 20);
-            lbl_YeuCau.TabIndex = 102;
-            lbl_YeuCau.Text = "Yêu cầu tùy thuộc vào tình trạng sẵn có. Chúng tôi sẽ gửi của bạn ngay sau khi bạn đặt.";
-            // 
-            // lbl_ChoChungToiBiet
-            // 
-            lbl_ChoChungToiBiet.AutoSize = true;
-            lbl_ChoChungToiBiet.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lbl_ChoChungToiBiet.Location = new Point(17, 307);
-            lbl_ChoChungToiBiet.Name = "lbl_ChoChungToiBiet";
-            lbl_ChoChungToiBiet.Size = new Size(372, 31);
-            lbl_ChoChungToiBiet.TabIndex = 101;
-            lbl_ChoChungToiBiet.Text = "Cho chúng tôi biết những gì bạn cần";
-            // 
-            // cbb_QuocGia
-            // 
-            cbb_QuocGia.FormattingEnabled = true;
-            cbb_QuocGia.Location = new Point(254, 252);
-            cbb_QuocGia.Name = "cbb_QuocGia";
-            cbb_QuocGia.Size = new Size(151, 28);
-            cbb_QuocGia.TabIndex = 100;
-            // 
             // lbl_NeuBan
             // 
             lbl_NeuBan.AutoSize = true;
@@ -598,8 +466,6 @@
         }
 
         #endregion
-        private Label lbl_QuocGia;
-        private Label lbl_DiaDiem;
         private Label lbl_Email;
         private TextBox txt_Email;
         private Label lbl_PhoneNumber;
@@ -618,15 +484,6 @@
         private Label lbl_FullName;
         private TextBox txt_PhoneNumber;
         private Label lbl_NeuBan;
-        private ComboBox cbb_QuocGia;
-        private Label lbl_YeuCau;
-        private Label lbl_ChoChungToiBiet;
-        private Label lbl_BanCo;
-        private Label lbl_BanThich;
-        private CheckBox cb_CoHutThuoc;
-        private CheckBox cb_KhongHutThuoc;
-        private CheckBox cb_ToiMuonCo2GiuongDon;
-        private CheckBox cb_ToiMuonMotChiecGiuongLon;
         private Label lbl_ChucMung;
         private Label lbl_34;
         private Panel panel10;

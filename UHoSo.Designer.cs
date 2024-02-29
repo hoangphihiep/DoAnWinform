@@ -28,51 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbl_TenKhachSan = new Label();
-            txt_TenKS = new TextBox();
-            lbl_QuocGia = new Label();
+            lbl_TenChuKhachSan = new Label();
+            txt_HoVaTenChuKhachSan = new TextBox();
             lbl_SDT = new Label();
             lbl_Email = new Label();
             lbl_PhuongThucTT = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txt_SoDienThoai = new TextBox();
+            txt_Email = new TextBox();
+            txt_PhuongThucThanhToan = new TextBox();
             btn_ChinhSua = new Button();
+            txt_DiaChi = new TextBox();
+            txt_ThanhPho = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            txt_Tinh = new TextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
-            // lbl_TenKhachSan
+            // lbl_TenChuKhachSan
             // 
-            lbl_TenKhachSan.AutoSize = true;
-            lbl_TenKhachSan.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_TenKhachSan.Location = new Point(33, 40);
-            lbl_TenKhachSan.Name = "lbl_TenKhachSan";
-            lbl_TenKhachSan.Size = new Size(93, 25);
-            lbl_TenKhachSan.TabIndex = 1;
-            lbl_TenKhachSan.Text = "Họ và Tên";
+            lbl_TenChuKhachSan.AutoSize = true;
+            lbl_TenChuKhachSan.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_TenChuKhachSan.Location = new Point(33, 40);
+            lbl_TenChuKhachSan.Name = "lbl_TenChuKhachSan";
+            lbl_TenChuKhachSan.Size = new Size(210, 25);
+            lbl_TenChuKhachSan.TabIndex = 1;
+            lbl_TenChuKhachSan.Text = "Họ và tên chủ khách sạn\r\n";
             // 
-            // txt_TenKS
+            // txt_HoVaTenChuKhachSan
             // 
-            txt_TenKS.Location = new Point(298, 38);
-            txt_TenKS.Name = "txt_TenKS";
-            txt_TenKS.Size = new Size(313, 27);
-            txt_TenKS.TabIndex = 16;
-            // 
-            // lbl_QuocGia
-            // 
-            lbl_QuocGia.AutoSize = true;
-            lbl_QuocGia.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_QuocGia.Location = new Point(33, 123);
-            lbl_QuocGia.Name = "lbl_QuocGia";
-            lbl_QuocGia.Size = new Size(86, 25);
-            lbl_QuocGia.TabIndex = 17;
-            lbl_QuocGia.Text = "Quốc gia";
+            txt_HoVaTenChuKhachSan.Location = new Point(298, 38);
+            txt_HoVaTenChuKhachSan.Name = "txt_HoVaTenChuKhachSan";
+            txt_HoVaTenChuKhachSan.Size = new Size(313, 27);
+            txt_HoVaTenChuKhachSan.TabIndex = 16;
             // 
             // lbl_SDT
             // 
             lbl_SDT.AutoSize = true;
             lbl_SDT.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_SDT.Location = new Point(33, 205);
+            lbl_SDT.Location = new Point(33, 94);
             lbl_SDT.Name = "lbl_SDT";
             lbl_SDT.Size = new Size(122, 25);
             lbl_SDT.TabIndex = 18;
@@ -82,7 +76,7 @@
             // 
             lbl_Email.AutoSize = true;
             lbl_Email.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Email.Location = new Point(33, 295);
+            lbl_Email.Location = new Point(33, 157);
             lbl_Email.Name = "lbl_Email";
             lbl_Email.Size = new Size(56, 25);
             lbl_Email.TabIndex = 19;
@@ -92,39 +86,32 @@
             // 
             lbl_PhuongThucTT.AutoSize = true;
             lbl_PhuongThucTT.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_PhuongThucTT.Location = new Point(33, 375);
+            lbl_PhuongThucTT.Location = new Point(33, 399);
             lbl_PhuongThucTT.Name = "lbl_PhuongThucTT";
             lbl_PhuongThucTT.Size = new Size(213, 25);
             lbl_PhuongThucTT.TabIndex = 20;
             lbl_PhuongThucTT.Text = "Phương thức thanh toán";
             // 
-            // textBox1
+            // txt_SoDienThoai
             // 
-            textBox1.Location = new Point(298, 121);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(313, 27);
-            textBox1.TabIndex = 21;
+            txt_SoDienThoai.Location = new Point(298, 92);
+            txt_SoDienThoai.Name = "txt_SoDienThoai";
+            txt_SoDienThoai.Size = new Size(313, 27);
+            txt_SoDienThoai.TabIndex = 22;
             // 
-            // textBox2
+            // txt_Email
             // 
-            textBox2.Location = new Point(298, 203);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(313, 27);
-            textBox2.TabIndex = 22;
+            txt_Email.Location = new Point(298, 155);
+            txt_Email.Name = "txt_Email";
+            txt_Email.Size = new Size(313, 27);
+            txt_Email.TabIndex = 23;
             // 
-            // textBox3
+            // txt_PhuongThucThanhToan
             // 
-            textBox3.Location = new Point(298, 293);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(313, 27);
-            textBox3.TabIndex = 23;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(298, 373);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(313, 27);
-            textBox4.TabIndex = 24;
+            txt_PhuongThucThanhToan.Location = new Point(298, 397);
+            txt_PhuongThucThanhToan.Name = "txt_PhuongThucThanhToan";
+            txt_PhuongThucThanhToan.Size = new Size(313, 27);
+            txt_PhuongThucThanhToan.TabIndex = 24;
             // 
             // btn_ChinhSua
             // 
@@ -135,21 +122,76 @@
             btn_ChinhSua.Text = "Chỉnh sửa";
             btn_ChinhSua.UseVisualStyleBackColor = true;
             // 
+            // txt_DiaChi
+            // 
+            txt_DiaChi.Location = new Point(298, 344);
+            txt_DiaChi.Name = "txt_DiaChi";
+            txt_DiaChi.Size = new Size(313, 27);
+            txt_DiaChi.TabIndex = 31;
+            // 
+            // txt_ThanhPho
+            // 
+            txt_ThanhPho.Location = new Point(298, 280);
+            txt_ThanhPho.Name = "txt_ThanhPho";
+            txt_ThanhPho.Size = new Size(313, 27);
+            txt_ThanhPho.TabIndex = 30;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(33, 346);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 25);
+            label1.TabIndex = 29;
+            label1.Text = "Địa chỉ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(33, 282);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 25);
+            label2.TabIndex = 28;
+            label2.Text = "Thành phố";
+            // 
+            // txt_Tinh
+            // 
+            txt_Tinh.Location = new Point(298, 221);
+            txt_Tinh.Name = "txt_Tinh";
+            txt_Tinh.Size = new Size(313, 27);
+            txt_Tinh.TabIndex = 27;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(33, 223);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 25);
+            label3.TabIndex = 26;
+            label3.Text = "Tỉnh";
+            // 
             // UHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(txt_DiaChi);
+            Controls.Add(txt_ThanhPho);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(txt_Tinh);
+            Controls.Add(label3);
             Controls.Add(btn_ChinhSua);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txt_PhuongThucThanhToan);
+            Controls.Add(txt_Email);
+            Controls.Add(txt_SoDienThoai);
             Controls.Add(lbl_PhuongThucTT);
             Controls.Add(lbl_Email);
             Controls.Add(lbl_SDT);
-            Controls.Add(lbl_QuocGia);
-            Controls.Add(txt_TenKS);
-            Controls.Add(lbl_TenKhachSan);
+            Controls.Add(txt_HoVaTenChuKhachSan);
+            Controls.Add(lbl_TenChuKhachSan);
             Name = "UHoSo";
             Size = new Size(821, 563);
             ResumeLayout(false);
@@ -158,16 +200,20 @@
 
         #endregion
 
-        private Label lbl_TenKhachSan;
-        private TextBox txt_TenKS;
-        private Label lbl_QuocGia;
+        private Label lbl_TenChuKhachSan;
+        private TextBox txt_HoVaTenChuKhachSan;
         private Label lbl_SDT;
         private Label lbl_Email;
         private Label lbl_PhuongThucTT;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txt_SoDienThoai;
+        private TextBox txt_Email;
+        private TextBox txt_PhuongThucThanhToan;
         private Button btn_ChinhSua;
+        private TextBox txt_DiaChi;
+        private TextBox txt_ThanhPho;
+        private Label label1;
+        private Label label2;
+        private TextBox txt_Tinh;
+        private Label label3;
     }
 }

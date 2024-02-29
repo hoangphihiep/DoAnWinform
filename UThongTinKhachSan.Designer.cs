@@ -30,8 +30,6 @@
         {
             lbl_TenKhachSan = new Label();
             lbl_MoTa = new Label();
-            lbl_LoaiHinhChoNghi = new Label();
-            lbl_ChinhSachHuy = new Label();
             lbl_ThanhPho = new Label();
             label1 = new Label();
             lbl_NhanPhong = new Label();
@@ -40,8 +38,6 @@
             btn_ChinhSua = new Button();
             txt_TenKS = new TextBox();
             txt_MoTa = new TextBox();
-            txt_LoaiHinh = new TextBox();
-            txt_ChinhSach = new TextBox();
             txt_KhoangCachTP = new TextBox();
             txt_KhoangCachSB = new TextBox();
             txt_NhanPhong = new TextBox();
@@ -69,31 +65,11 @@
             lbl_MoTa.TabIndex = 1;
             lbl_MoTa.Text = "Mô tả của khách sạn";
             // 
-            // lbl_LoaiHinhChoNghi
-            // 
-            lbl_LoaiHinhChoNghi.AutoSize = true;
-            lbl_LoaiHinhChoNghi.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_LoaiHinhChoNghi.Location = new Point(32, 143);
-            lbl_LoaiHinhChoNghi.Name = "lbl_LoaiHinhChoNghi";
-            lbl_LoaiHinhChoNghi.Size = new Size(163, 25);
-            lbl_LoaiHinhChoNghi.TabIndex = 2;
-            lbl_LoaiHinhChoNghi.Text = "Loại hình chổ nghỉ";
-            // 
-            // lbl_ChinhSachHuy
-            // 
-            lbl_ChinhSachHuy.AutoSize = true;
-            lbl_ChinhSachHuy.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ChinhSachHuy.Location = new Point(32, 211);
-            lbl_ChinhSachHuy.Name = "lbl_ChinhSachHuy";
-            lbl_ChinhSachHuy.Size = new Size(134, 25);
-            lbl_ChinhSachHuy.TabIndex = 3;
-            lbl_ChinhSachHuy.Text = "Chính sách hủy";
-            // 
             // lbl_ThanhPho
             // 
             lbl_ThanhPho.AutoSize = true;
             lbl_ThanhPho.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ThanhPho.Location = new Point(32, 282);
+            lbl_ThanhPho.Location = new Point(32, 143);
             lbl_ThanhPho.Name = "lbl_ThanhPho";
             lbl_ThanhPho.Size = new Size(227, 25);
             lbl_ThanhPho.TabIndex = 4;
@@ -103,7 +79,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(32, 356);
+            label1.Location = new Point(32, 217);
             label1.Name = "label1";
             label1.Size = new Size(205, 25);
             label1.TabIndex = 5;
@@ -113,7 +89,7 @@
             // 
             lbl_NhanPhong.AutoSize = true;
             lbl_NhanPhong.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_NhanPhong.Location = new Point(32, 424);
+            lbl_NhanPhong.Location = new Point(32, 285);
             lbl_NhanPhong.Name = "lbl_NhanPhong";
             lbl_NhanPhong.Size = new Size(115, 25);
             lbl_NhanPhong.TabIndex = 6;
@@ -123,7 +99,7 @@
             // 
             lbl_TraPhong.AutoSize = true;
             lbl_TraPhong.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_TraPhong.Location = new Point(32, 488);
+            lbl_TraPhong.Location = new Point(32, 349);
             lbl_TraPhong.Name = "lbl_TraPhong";
             lbl_TraPhong.Size = new Size(96, 25);
             lbl_TraPhong.TabIndex = 7;
@@ -133,7 +109,7 @@
             // 
             lbl_XepLoai.AutoSize = true;
             lbl_XepLoai.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_XepLoai.Location = new Point(32, 552);
+            lbl_XepLoai.Location = new Point(32, 413);
             lbl_XepLoai.Name = "lbl_XepLoai";
             lbl_XepLoai.Size = new Size(79, 25);
             lbl_XepLoai.TabIndex = 8;
@@ -141,7 +117,7 @@
             // 
             // btn_ChinhSua
             // 
-            btn_ChinhSua.Location = new Point(744, 530);
+            btn_ChinhSua.Location = new Point(744, 391);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(112, 49);
             btn_ChinhSua.TabIndex = 14;
@@ -162,51 +138,37 @@
             txt_MoTa.Size = new Size(313, 27);
             txt_MoTa.TabIndex = 16;
             // 
-            // txt_LoaiHinh
-            // 
-            txt_LoaiHinh.Location = new Point(322, 141);
-            txt_LoaiHinh.Name = "txt_LoaiHinh";
-            txt_LoaiHinh.Size = new Size(313, 27);
-            txt_LoaiHinh.TabIndex = 17;
-            // 
-            // txt_ChinhSach
-            // 
-            txt_ChinhSach.Location = new Point(322, 209);
-            txt_ChinhSach.Name = "txt_ChinhSach";
-            txt_ChinhSach.Size = new Size(313, 27);
-            txt_ChinhSach.TabIndex = 18;
-            // 
             // txt_KhoangCachTP
             // 
-            txt_KhoangCachTP.Location = new Point(322, 280);
+            txt_KhoangCachTP.Location = new Point(322, 141);
             txt_KhoangCachTP.Name = "txt_KhoangCachTP";
             txt_KhoangCachTP.Size = new Size(313, 27);
             txt_KhoangCachTP.TabIndex = 19;
             // 
             // txt_KhoangCachSB
             // 
-            txt_KhoangCachSB.Location = new Point(322, 354);
+            txt_KhoangCachSB.Location = new Point(322, 215);
             txt_KhoangCachSB.Name = "txt_KhoangCachSB";
             txt_KhoangCachSB.Size = new Size(313, 27);
             txt_KhoangCachSB.TabIndex = 20;
             // 
             // txt_NhanPhong
             // 
-            txt_NhanPhong.Location = new Point(322, 422);
+            txt_NhanPhong.Location = new Point(322, 283);
             txt_NhanPhong.Name = "txt_NhanPhong";
             txt_NhanPhong.Size = new Size(313, 27);
             txt_NhanPhong.TabIndex = 21;
             // 
             // txt_TraPhong
             // 
-            txt_TraPhong.Location = new Point(322, 489);
+            txt_TraPhong.Location = new Point(322, 350);
             txt_TraPhong.Name = "txt_TraPhong";
             txt_TraPhong.Size = new Size(313, 27);
             txt_TraPhong.TabIndex = 22;
             // 
             // txt_XepLoai
             // 
-            txt_XepLoai.Location = new Point(322, 550);
+            txt_XepLoai.Location = new Point(322, 411);
             txt_XepLoai.Name = "txt_XepLoai";
             txt_XepLoai.Size = new Size(313, 27);
             txt_XepLoai.TabIndex = 23;
@@ -220,8 +182,6 @@
             Controls.Add(txt_NhanPhong);
             Controls.Add(txt_KhoangCachSB);
             Controls.Add(txt_KhoangCachTP);
-            Controls.Add(txt_ChinhSach);
-            Controls.Add(txt_LoaiHinh);
             Controls.Add(txt_MoTa);
             Controls.Add(txt_TenKS);
             Controls.Add(btn_ChinhSua);
@@ -230,8 +190,6 @@
             Controls.Add(lbl_NhanPhong);
             Controls.Add(label1);
             Controls.Add(lbl_ThanhPho);
-            Controls.Add(lbl_ChinhSachHuy);
-            Controls.Add(lbl_LoaiHinhChoNghi);
             Controls.Add(lbl_MoTa);
             Controls.Add(lbl_TenKhachSan);
             Name = "UThongTinKhachSan";
@@ -244,8 +202,6 @@
 
         private Label lbl_TenKhachSan;
         private Label lbl_MoTa;
-        private Label lbl_LoaiHinhChoNghi;
-        private Label lbl_ChinhSachHuy;
         private Label lbl_ThanhPho;
         private Label label1;
         private Label lbl_NhanPhong;
@@ -254,8 +210,6 @@
         private Button btn_ChinhSua;
         private TextBox txt_TenKS;
         private TextBox txt_MoTa;
-        private TextBox txt_LoaiHinh;
-        private TextBox txt_ChinhSach;
         private TextBox txt_KhoangCachTP;
         private TextBox txt_KhoangCachSB;
         private TextBox txt_NhanPhong;
