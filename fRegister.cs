@@ -102,29 +102,37 @@ namespace DuLich
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-            if (!tk.checkInput(tk))
+            if (false)//!tk.checkInput(tk))
             {
                 
             }
             else
-            {
-                if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
+            {   
+                Modify modify = new Modify();
+                string query = "Select * from TaiKhoan where TenDangNhap = '" + tk.getTenDangNhap + "'";
+                if (modify.accounts(query).Count() == 0)
                 {
-                    MessageBox.Show("Mật khẩu nhập lại không trùng khớp");
-                }
-                else
-                {
-                    if (cb_ToiDongY.Checked == true)
+                    if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
                     {
-                        MessageBox.Show("Bạn đã đăng ký thành công ");
-                        Account account = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-                        account.AddAccount(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-                        this.Close();
+                        MessageBox.Show("Mật khẩu nhập lại không trùng khớp");
                     }
                     else
                     {
-                        MessageBox.Show("Hãy đọc kĩ điều khoản và điều kiện đăng ký");
+                        if (cb_ToiDongY.Checked == true)
+                        {
+                            MessageBox.Show("Bạn đã đăng ký thành công ");
+                            tk.AddAccount(tk, "TaiKhoan");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hãy đọc kĩ điều khoản và điều kiện đăng ký");
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
                 }
             }
         }
