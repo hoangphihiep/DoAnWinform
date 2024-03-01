@@ -68,8 +68,10 @@
             // 
             // txt_MatKhau
             // 
+            txt_MatKhau.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txt_MatKhau.Location = new Point(248, 118);
             txt_MatKhau.Name = "txt_MatKhau";
+            txt_MatKhau.PasswordChar = '*';
             txt_MatKhau.Size = new Size(281, 27);
             txt_MatKhau.TabIndex = 14;
             txt_MatKhau.TextChanged += textBox1_TextChanged;
@@ -86,8 +88,10 @@
             // 
             // txt_NhapLaiMatKhau
             // 
+            txt_NhapLaiMatKhau.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txt_NhapLaiMatKhau.Location = new Point(248, 251);
             txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
+            txt_NhapLaiMatKhau.PasswordChar = '*';
             txt_NhapLaiMatKhau.Size = new Size(281, 27);
             txt_NhapLaiMatKhau.TabIndex = 17;
             // 
@@ -103,8 +107,10 @@
             // 
             // txt_NhapMatKhauMoi
             // 
+            txt_NhapMatKhauMoi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txt_NhapMatKhauMoi.Location = new Point(248, 189);
             txt_NhapMatKhauMoi.Name = "txt_NhapMatKhauMoi";
+            txt_NhapMatKhauMoi.PasswordChar = '*';
             txt_NhapMatKhauMoi.Size = new Size(281, 27);
             txt_NhapMatKhauMoi.TabIndex = 19;
             // 

@@ -117,7 +117,7 @@
             // 
             // btn_ChinhSua
             // 
-            btn_ChinhSua.Location = new Point(744, 391);
+            btn_ChinhSua.Location = new Point(714, 523);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(112, 49);
             btn_ChinhSua.TabIndex = 14;

@@ -314,7 +314,7 @@
             panel3.Location = new Point(23, 33);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(686, 152);
+            panel3.Size = new Size(727, 152);
             panel3.TabIndex = 6;
             // 
             // label14
@@ -527,33 +527,33 @@
             // lbl_DatCho
             // 
             lbl_DatCho.AutoSize = true;
-            lbl_DatCho.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_DatCho.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_DatCho.ForeColor = SystemColors.Highlight;
             lbl_DatCho.Location = new Point(23, 157);
             lbl_DatCho.Name = "lbl_DatCho";
-            lbl_DatCho.Size = new Size(251, 35);
+            lbl_DatCho.Size = new Size(263, 35);
             lbl_DatCho.TabIndex = 18;
             lbl_DatCho.Text = "3.Đặt chỗ hoàn thành\r\n";
             // 
             // lbl_ThongTinKhachHang
             // 
             lbl_ThongTinKhachHang.AutoSize = true;
-            lbl_ThongTinKhachHang.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinKhachHang.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThongTinKhachHang.ForeColor = SystemColors.Desktop;
             lbl_ThongTinKhachHang.Location = new Point(23, 24);
             lbl_ThongTinKhachHang.Name = "lbl_ThongTinKhachHang";
-            lbl_ThongTinKhachHang.Size = new Size(271, 35);
+            lbl_ThongTinKhachHang.Size = new Size(283, 35);
             lbl_ThongTinKhachHang.TabIndex = 16;
             lbl_ThongTinKhachHang.Text = "1.Thông tin khách hàng";
             // 
             // lbl_ThongTinThanhToan
             // 
             lbl_ThongTinThanhToan.AutoSize = true;
-            lbl_ThongTinThanhToan.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinThanhToan.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThongTinThanhToan.ForeColor = SystemColors.Desktop;
             lbl_ThongTinThanhToan.Location = new Point(23, 90);
             lbl_ThongTinThanhToan.Name = "lbl_ThongTinThanhToan";
-            lbl_ThongTinThanhToan.Size = new Size(263, 35);
+            lbl_ThongTinThanhToan.Size = new Size(280, 35);
             lbl_ThongTinThanhToan.TabIndex = 17;
             lbl_ThongTinThanhToan.Text = "2.Thông tin thanh toán";
             // 

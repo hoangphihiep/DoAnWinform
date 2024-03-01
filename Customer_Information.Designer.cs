@@ -73,10 +73,10 @@
             // lbl_Email
             // 
             lbl_Email.AutoSize = true;
-            lbl_Email.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_Email.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_Email.Location = new Point(17, 112);
             lbl_Email.Name = "lbl_Email";
-            lbl_Email.Size = new Size(64, 23);
+            lbl_Email.Size = new Size(65, 23);
             lbl_Email.TabIndex = 81;
             lbl_Email.Text = "Email : ";
             // 
@@ -100,21 +100,21 @@
             // lbl_DatCho
             // 
             lbl_DatCho.AutoSize = true;
-            lbl_DatCho.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_DatCho.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_DatCho.Location = new Point(23, 153);
             lbl_DatCho.Name = "lbl_DatCho";
-            lbl_DatCho.Size = new Size(251, 35);
+            lbl_DatCho.Size = new Size(263, 35);
             lbl_DatCho.TabIndex = 7;
             lbl_DatCho.Text = "3.Đặt chỗ hoàn thành\r\n";
             // 
             // lbl_ThongTinThanhToan
             // 
             lbl_ThongTinThanhToan.AutoSize = true;
-            lbl_ThongTinThanhToan.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinThanhToan.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThongTinThanhToan.ForeColor = SystemColors.Desktop;
             lbl_ThongTinThanhToan.Location = new Point(23, 86);
             lbl_ThongTinThanhToan.Name = "lbl_ThongTinThanhToan";
-            lbl_ThongTinThanhToan.Size = new Size(263, 35);
+            lbl_ThongTinThanhToan.Size = new Size(280, 35);
             lbl_ThongTinThanhToan.TabIndex = 6;
             lbl_ThongTinThanhToan.Text = "2.Thông tin thanh toán";
             lbl_ThongTinThanhToan.Click += lbl_Payment_information_Click;
@@ -122,11 +122,11 @@
             // lbl_ThongTinKhachHang
             // 
             lbl_ThongTinKhachHang.AutoSize = true;
-            lbl_ThongTinKhachHang.Font = new Font("Segoe UI", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThongTinKhachHang.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThongTinKhachHang.ForeColor = SystemColors.Highlight;
             lbl_ThongTinKhachHang.Location = new Point(23, 20);
             lbl_ThongTinKhachHang.Name = "lbl_ThongTinKhachHang";
-            lbl_ThongTinKhachHang.Size = new Size(271, 35);
+            lbl_ThongTinKhachHang.Size = new Size(283, 35);
             lbl_ThongTinKhachHang.TabIndex = 5;
             lbl_ThongTinKhachHang.Text = "1.Thông tin khách hàng";
             lbl_ThongTinKhachHang.Click += lbl_Customer_information_Click;
@@ -197,10 +197,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(18, 20);
             label2.Name = "label2";
-            label2.Size = new Size(96, 23);
+            label2.Size = new Size(98, 23);
             label2.TabIndex = 119;
             label2.Text = "Họ và tên : ";
             // 
@@ -221,10 +221,10 @@
             // 
             lbl_TuanTheo.AutoSize = true;
             lbl_TuanTheo.BackColor = SystemColors.ButtonHighlight;
-            lbl_TuanTheo.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_TuanTheo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_TuanTheo.Location = new Point(3, 179);
             lbl_TuanTheo.Name = "lbl_TuanTheo";
-            lbl_TuanTheo.Size = new Size(354, 23);
+            lbl_TuanTheo.Size = new Size(367, 23);
             lbl_TuanTheo.TabIndex = 121;
             lbl_TuanTheo.Text = "Tuân theo điều khoản hoàn tiền     ₫ 3,894,199";
             // 
@@ -243,10 +243,10 @@
             // 
             lbl_ThanHToan.AutoSize = true;
             lbl_ThanHToan.BackColor = SystemColors.ButtonHighlight;
-            lbl_ThanHToan.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ThanHToan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_ThanHToan.Location = new Point(3, 121);
             lbl_ThanHToan.Name = "lbl_ThanHToan";
-            lbl_ThanHToan.Size = new Size(317, 20);
+            lbl_ThanHToan.Size = new Size(321, 20);
             lbl_ThanHToan.TabIndex = 119;
             lbl_ThanHToan.Text = "Thanh toán ₫ 4.166.731 ngay và nhận ₫ 272.532";
             // 
@@ -264,10 +264,10 @@
             // lbl_GiaPhong
             // 
             lbl_GiaPhong.AutoSize = true;
-            lbl_GiaPhong.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_GiaPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_GiaPhong.Location = new Point(3, 3);
             lbl_GiaPhong.Name = "lbl_GiaPhong";
-            lbl_GiaPhong.Size = new Size(355, 46);
+            lbl_GiaPhong.Size = new Size(366, 46);
             lbl_GiaPhong.TabIndex = 117;
             lbl_GiaPhong.Text = "Giá phòng (1 phòng x 1 đêm)         ₫ 3.674.366\r\nPhí đặt chỗ                                      MIỄN PHÍ";
             // 
@@ -401,11 +401,11 @@
             // 
             lbl_34.AutoSize = true;
             lbl_34.BackColor = Color.OrangeRed;
-            lbl_34.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_34.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_34.ForeColor = SystemColors.HighlightText;
-            lbl_34.Location = new Point(792, 556);
+            lbl_34.Location = new Point(786, 556);
             lbl_34.Name = "lbl_34";
-            lbl_34.Size = new Size(254, 23);
+            lbl_34.Size = new Size(260, 23);
             lbl_34.TabIndex = 112;
             lbl_34.Text = "GIẢM GIÁ 34% NGAY HÔM NAY";
             lbl_34.Click += label3_Click;
@@ -414,23 +414,23 @@
             // 
             lbl_ChucMung.AutoSize = true;
             lbl_ChucMung.BackColor = SystemColors.ButtonHighlight;
-            lbl_ChucMung.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ChucMung.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ChucMung.ForeColor = Color.Green;
             lbl_ChucMung.Location = new Point(643, 467);
             lbl_ChucMung.Name = "lbl_ChucMung";
-            lbl_ChucMung.Size = new Size(412, 62);
+            lbl_ChucMung.Size = new Size(383, 62);
             lbl_ChucMung.TabIndex = 109;
-            lbl_ChucMung.Text = "Chúc mừng! Bạn đã nhận được mức giá \r\nthấp nhất";
+            lbl_ChucMung.Text = "Chúc mừng! Bạn đã nhận được mức\r\ngiá thấp nhất";
             // 
             // lbl_NeuBan
             // 
             lbl_NeuBan.AutoSize = true;
             lbl_NeuBan.BackColor = SystemColors.ButtonHighlight;
-            lbl_NeuBan.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_NeuBan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_NeuBan.ForeColor = SystemColors.Desktop;
             lbl_NeuBan.Location = new Point(17, 193);
             lbl_NeuBan.Name = "lbl_NeuBan";
-            lbl_NeuBan.Size = new Size(565, 40);
+            lbl_NeuBan.Size = new Size(580, 40);
             lbl_NeuBan.TabIndex = 99;
             lbl_NeuBan.Text = "Nếu bạn nhập địa chỉ email của mình và không hoàn tất việc đặt chỗ, chúng tôi có thể \r\ngửi cho bạn lời nhắc để giúp bạn tiếp tục đặt chỗ.";
             // 
