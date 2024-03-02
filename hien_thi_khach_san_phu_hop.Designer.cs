@@ -40,6 +40,11 @@
             kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panel3 = new Panel();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             btn_TimKiem = new Button();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
@@ -167,6 +172,11 @@
             // panel3
             // 
             panel3.BackColor = Color.Navy;
+            panel3.Controls.Add(label8);
+            panel3.Controls.Add(label7);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(label4);
             panel3.Controls.Add(btn_TimKiem);
             panel3.Controls.Add(numericUpDown2);
             panel3.Controls.Add(numericUpDown1);
@@ -175,45 +185,100 @@
             panel3.Controls.Add(lb_TimKiem);
             panel3.Location = new Point(-1, 69);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1318, 59);
+            panel3.Size = new Size(1318, 89);
             panel3.TabIndex = 17;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(981, 7);
+            label8.Name = "label8";
+            label8.Size = new Size(147, 25);
+            label8.TabIndex = 31;
+            label8.Text = "Số lượng trẻ em";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(779, 7);
+            label7.Name = "label7";
+            label7.Size = new Size(173, 25);
+            label7.TabIndex = 29;
+            label7.Text = "Số lượng người lớn";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(502, 7);
+            label6.Name = "label6";
+            label6.Size = new Size(76, 25);
+            label6.TabIndex = 30;
+            label6.Text = "Ngày đi";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonHighlight;
+            label5.Location = new Point(225, 7);
+            label5.Name = "label5";
+            label5.Size = new Size(92, 25);
+            label5.TabIndex = 29;
+            label5.Text = "Ngày đến";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(12, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(86, 25);
+            label4.TabIndex = 28;
+            label4.Text = "Địa điểm";
             // 
             // btn_TimKiem
             // 
             btn_TimKiem.BackColor = Color.White;
             btn_TimKiem.FlatStyle = FlatStyle.Popup;
             btn_TimKiem.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_TimKiem.Location = new Point(1186, 13);
+            btn_TimKiem.Location = new Point(1174, 21);
             btn_TimKiem.Name = "btn_TimKiem";
-            btn_TimKiem.Size = new Size(108, 29);
+            btn_TimKiem.Size = new Size(132, 48);
             btn_TimKiem.TabIndex = 27;
             btn_TimKiem.Text = "Tìm Kiếm";
             btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(981, 15);
+            numericUpDown2.Location = new Point(981, 42);
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(175, 27);
             numericUpDown2.TabIndex = 26;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(779, 15);
+            numericUpDown1.Location = new Point(779, 42);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(175, 27);
             numericUpDown1.TabIndex = 25;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(502, 15);
+            dateTimePicker1.Location = new Point(502, 42);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 18;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(225, 17);
+            dateTimePicker2.Location = new Point(225, 44);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 12;
@@ -221,7 +286,7 @@
             // lb_TimKiem
             // 
             lb_TimKiem.ForeColor = SystemColors.AppWorkspace;
-            lb_TimKiem.Location = new Point(13, 17);
+            lb_TimKiem.Location = new Point(13, 44);
             lb_TimKiem.Name = "lb_TimKiem";
             lb_TimKiem.Size = new Size(185, 27);
             lb_TimKiem.TabIndex = 10;
@@ -233,10 +298,10 @@
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            tabControl1.Location = new Point(319, 137);
+            tabControl1.Location = new Point(319, 164);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(998, 545);
+            tabControl1.Size = new Size(998, 533);
             tabControl1.TabIndex = 18;
             // 
             // tabPage1
@@ -246,7 +311,7 @@
             tabPage1.Location = new Point(4, 50);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(990, 491);
+            tabPage1.Size = new Size(990, 479);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Phù hợp nhất";
             tabPage1.UseVisualStyleBackColor = true;
@@ -290,7 +355,7 @@
             tabPage2.Location = new Point(4, 50);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(990, 491);
+            tabPage2.Size = new Size(990, 479);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Giá thấp nhất";
             tabPage2.UseVisualStyleBackColor = true;
@@ -299,7 +364,7 @@
             // 
             tabPage3.Location = new Point(4, 50);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(990, 491);
+            tabPage3.Size = new Size(990, 479);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Khoảng cách";
             tabPage3.UseVisualStyleBackColor = true;
@@ -308,7 +373,7 @@
             // 
             tabPage4.Location = new Point(4, 50);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(990, 491);
+            tabPage4.Size = new Size(990, 479);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Được đánh giá nhiều nhất";
             tabPage4.UseVisualStyleBackColor = true;
@@ -440,5 +505,10 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Button btn_TimKiem;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label8;
     }
 }

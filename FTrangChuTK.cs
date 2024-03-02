@@ -1,5 +1,9 @@
 ﻿using DoAnDuLich;
 using DuLich;
+using System.Drawing.Drawing2D;
+using System.IO;
+using System.Security.Policy;
+
 namespace DoAnDuLich
 {
     public partial class FTrangChuTK : Form
@@ -28,7 +32,73 @@ namespace DoAnDuLich
             panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
             label4.Parent = pictureBox1;
             label4.BackColor = Color.Transparent;
-
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+            data.Add("An Giang");
+            data.Add("Bà rịa Vũng Tàu");
+            data.Add("Bạc Liêu");
+            data.Add("Bắc Giang");
+            data.Add("Bắc Kạn");
+            data.Add("Bắc Ninh");
+            data.Add("Bến Tre");
+            data.Add("Bình Dương");
+            data.Add("Bình Định");
+            data.Add("Bình Phước");
+            data.Add("Bình Thuận");
+            data.Add("Cà Mau");
+            data.Add("Cao Bằng");
+            data.Add("Cần Thơ");
+            data.Add("Đà Nẵng");
+            data.Add("Đắk Lắk");
+            data.Add("Đắk Nông");
+            data.Add("Điện Biên");
+            data.Add("Đồng Nai");
+            data.Add("Đồng Tháp");
+            data.Add("Gia Lai");
+            data.Add("Hà Giang");
+            data.Add("Hà Nam");
+            data.Add("Hà Nội");
+            data.Add("Hà Tĩnh");
+            data.Add("Hải Dương");
+            data.Add("Hải Phòng");
+            data.Add("Hậu Giang");
+            data.Add("Hòa Bình");
+            data.Add("Hưng Yên");
+            data.Add("Khánh Hòa");
+            data.Add("Kiên Giang");
+            data.Add("Kon Tum");
+            data.Add("Lai Châu");
+            data.Add("Lạng Sơn");
+            data.Add("Lào Cai");
+            data.Add("Lâm Đồng");
+            data.Add("Long An");
+            data.Add("Nam Định");
+            data.Add("Nghệ An");
+            data.Add("Ninh Bình");
+            data.Add("Ninh Thuận");
+            data.Add("Phú Thọ");
+            data.Add("Phú Yên");
+            data.Add("Quảng Bình");
+            data.Add("Quảng Nam");
+            data.Add("Quảng Ngãi");
+            data.Add("Quảng Ninh");
+            data.Add("Quảng Trị");
+            data.Add("Sóc Trăng");
+            data.Add("Sơn La");
+            data.Add("Tây Ninh");
+            data.Add("Thái Bình");
+            data.Add("Thái Nguyên");
+            data.Add("Thanh Hóa");
+            data.Add("Thừa Thiên Huế");
+            data.Add("Tiền Giang");
+            data.Add("TP Hồ Chí Minh");
+            data.Add("Trà Vinh");
+            data.Add("Tuyên Quang");
+            data.Add("Vĩnh Long");
+            data.Add("Vĩnh Phúc");
+            data.Add("Yên Bái");
+            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox1.AutoCompleteCustomSource = data;
         }
 
         private void btn_next_Click(object sender, EventArgs e)
@@ -349,7 +419,7 @@ namespace DoAnDuLich
                 int t = 0;
                 fHotel_Rental f = new fHotel_Rental();
                 KT_DangNhap++;
-               // f.kiemtratrang1 = t;
+                // f.kiemtratrang1 = t;
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -401,6 +471,17 @@ namespace DoAnDuLich
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //private void panel2_Paint(object sender, PaintEventArgs e)
         //{

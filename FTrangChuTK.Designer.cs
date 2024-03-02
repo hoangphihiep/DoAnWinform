@@ -37,6 +37,7 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
             label3 = new Label();
@@ -47,7 +48,6 @@
             btn_TimKiem = new Button();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
-            lb_TimKiem = new TextBox();
             btn_DangNhap = new Button();
             btn_DangKy = new Button();
             panel2 = new Panel();
@@ -158,6 +158,7 @@
             panel1.AccessibleRole = AccessibleRole.IpAddress;
             panel1.BackColor = Color.WhiteSmoke;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(numericUpDown2);
             panel1.Controls.Add(numericUpDown1);
             panel1.Controls.Add(label3);
@@ -168,25 +169,36 @@
             panel1.Controls.Add(btn_TimKiem);
             panel1.Controls.Add(dateTimePicker2);
             panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(lb_TimKiem);
             panel1.Location = new Point(57, 397);
             panel1.Name = "panel1";
             panel1.Size = new Size(1199, 300);
             panel1.TabIndex = 12;
             panel1.Paint += panel1_Paint;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Location = new Point(85, 62);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(1023, 43);
+            textBox1.TabIndex = 26;
+            textBox1.Click += textBox1_Click;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(980, 160);
+            numericUpDown2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            numericUpDown2.Location = new Point(912, 153);
             numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(175, 27);
+            numericUpDown2.Size = new Size(196, 31);
             numericUpDown2.TabIndex = 25;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(740, 160);
+            numericUpDown1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            numericUpDown1.Location = new Point(703, 153);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(175, 27);
+            numericUpDown1.Size = new Size(193, 31);
             numericUpDown1.TabIndex = 24;
             // 
             // label3
@@ -194,7 +206,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(980, 118);
+            label3.Location = new Point(912, 116);
             label3.Name = "label3";
             label3.Size = new Size(148, 25);
             label3.TabIndex = 23;
@@ -205,7 +217,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(740, 118);
+            label2.Location = new Point(703, 116);
             label2.Name = "label2";
             label2.Size = new Size(175, 25);
             label2.TabIndex = 22;
@@ -216,7 +228,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(410, 118);
+            label1.Location = new Point(395, 116);
             label1.Name = "label1";
             label1.Size = new Size(78, 25);
             label1.TabIndex = 21;
@@ -227,7 +239,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(75, 118);
+            label6.Location = new Point(85, 116);
             label6.Name = "label6";
             label6.Size = new Size(94, 25);
             label6.TabIndex = 20;
@@ -238,7 +250,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(238, 45);
+            label5.Location = new Point(85, 34);
             label5.Name = "label5";
             label5.Size = new Size(87, 25);
             label5.TabIndex = 19;
@@ -248,10 +260,10 @@
             // 
             btn_TimKiem.BackColor = Color.White;
             btn_TimKiem.FlatStyle = FlatStyle.Popup;
-            btn_TimKiem.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_TimKiem.Location = new Point(545, 226);
+            btn_TimKiem.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_TimKiem.Location = new Point(440, 216);
             btn_TimKiem.Name = "btn_TimKiem";
-            btn_TimKiem.Size = new Size(115, 43);
+            btn_TimKiem.Size = new Size(319, 52);
             btn_TimKiem.TabIndex = 12;
             btn_TimKiem.Text = "Tìm kiếm";
             btn_TimKiem.UseVisualStyleBackColor = false;
@@ -259,25 +271,19 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(410, 157);
+            dateTimePicker2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTimePicker2.Location = new Point(395, 153);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
+            dateTimePicker2.Size = new Size(292, 31);
             dateTimePicker2.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(75, 157);
+            dateTimePicker1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTimePicker1.Location = new Point(85, 153);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.Size = new Size(294, 31);
             dateTimePicker1.TabIndex = 10;
-            // 
-            // lb_TimKiem
-            // 
-            lb_TimKiem.ForeColor = SystemColors.AppWorkspace;
-            lb_TimKiem.Location = new Point(355, 43);
-            lb_TimKiem.Name = "lb_TimKiem";
-            lb_TimKiem.Size = new Size(480, 27);
-            lb_TimKiem.TabIndex = 9;
             // 
             // btn_DangNhap
             // 
@@ -427,7 +433,6 @@
         private Button btn_TimKiem;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
-        private TextBox lb_TimKiem;
         private Button btn_DangNhap;
         private Button btn_DangKy;
         private Label label5;
@@ -445,5 +450,6 @@
         private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
+        private TextBox textBox1;
     }
 }
