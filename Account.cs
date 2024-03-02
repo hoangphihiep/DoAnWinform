@@ -101,25 +101,16 @@ namespace DuLich
         {
             MatKhau = matKhau;
         }
-        public void AddAccount(string TenDangNhap, string HoTen, string GioiTinh, string DiaChi, DateTime NgayThangNamSinh, string Email, string SoDienThoai, string MatKhau)
+        Connection_to_SQL connection = new Connection_to_SQL();
+        public void AddAccount(Account acc,string TenQuanHe)
         {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                Account account = new Account(TenDangNhap, HoTen, GioiTinh, DiaChi, NgayThangNamSinh, Email, SoDienThoai, MatKhau);
-                string sqlStr = string.Format("INSERT INTO TaiKhoan(TenDangNhap, HoTen, GioiTinh, DiaChi, NgayThangNamSinh, Email, SoDienThoai, MatKhau) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", account.TenDangNhap, account.HoTen, account.GioiTinh, account.DiaChi, account.NgayThangNamSinh, account.Email, account.SoDienThoai, account.MatKhau);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thất bại" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            string sqlStr = string.Format("INSERT INTO {0} (TenDangNhap, HoTen ,GioiTinh,DiaChi, NgayThangNamSinh,Email,SoDienThoai,MatKhau) VALUES ('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", TenQuanHe, acc.getTenDangNhap, acc.getHoTen, acc.getGioiTinh, acc.getDiaChi, acc.getNgayThangNamSinh, acc.getEmail, acc.getSoDienThoai, acc.getMatKhau);
+            connection.ThucThi(acc, sqlStr);
+        }
+        public void UpdateAccount(Account acc, string TenQuanHe)
+        {
+            string SQL = string.Format("UPDATE {0} SET  HoTen ='{1}',GioiTinh ='{2}',DiaChi ='{3}',NgayThangNamSinh ='{4}',Email ='{5}',SoDienThoai ='{6}',MatKhau ='{7}' WHERE TenDangNhap ='{8}'", TenQuanHe, acc.getHoTen, acc.getGioiTinh, acc.getDiaChi, acc.getNgayThangNamSinh, acc.getEmail, acc.getSoDienThoai, acc.getMatKhau, acc.getTenDangNhap);
+            connection.ThucThi(acc, SQL);
         }
         public bool CheckPhone(string phone)
         {
@@ -155,6 +146,9 @@ namespace DuLich
             //3. Kiểm tra tất cả các field không được rỗng khi thêm
             if (tk.getTenDangNhap == "")
                 MessageBox.Show("Chưa nhập Ten Dang Nhap");
+            //mk dai hon 6 ki tu
+            else if (tk.getTenDangNhap.Length < 6)
+                MessageBox.Show("Tk phải dài hơn 6 kí tự ");
             else if (tk.getHoTen == "")
                 MessageBox.Show("Chưa nhập Ho va Ten ");
             else if (tk.getGioiTinh == "")
@@ -169,6 +163,9 @@ namespace DuLich
                 MessageBox.Show("Chưa nhập So Dien Thoai ");
             else if (tk.getMatKhau == "")
                 MessageBox.Show("Chưa nhập Mat Khau ");
+            //mk dai hon 6 ki tu
+            else if(tk.getMatKhau.Length < 6)
+                MessageBox.Show("Mật khẩu phải dài hơn 6 kí tự ");
             //4.Kiểm tra năm sinh >= 18 tuổi khi thêm
             else if ((DateTime.Now - tk.getNgayThangNamSinh).TotalDays < 18 * 365.25)
                 MessageBox.Show("Vui Long nhap >= 17 tuoi ");
@@ -182,6 +179,5 @@ namespace DuLich
                 return true;
             return false;
         }
-
     }
 }

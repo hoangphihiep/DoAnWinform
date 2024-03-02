@@ -74,7 +74,6 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.GeneratedMSBuil
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.AssemblyInfoInputs.cache
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.AssemblyInfo.cs
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.CopyComplete
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.dll
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\refint\DuLich.dll
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.pdb
@@ -159,3 +158,6 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_booked.r
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fPayment.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fPayment_Slip.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.fHotel_Rental.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Rental.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.sourcelink.json
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.Up2Date

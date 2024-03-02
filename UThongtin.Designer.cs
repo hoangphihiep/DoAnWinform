@@ -57,7 +57,7 @@
             // 
             lbl_GioiTinh.AutoSize = true;
             lbl_GioiTinh.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GioiTinh.Location = new Point(45, 114);
+            lbl_GioiTinh.Location = new Point(45, 97);
             lbl_GioiTinh.Name = "lbl_GioiTinh";
             lbl_GioiTinh.Size = new Size(84, 25);
             lbl_GioiTinh.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             lbl_DiaChi.AutoSize = true;
             lbl_DiaChi.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_DiaChi.Location = new Point(45, 215);
+            lbl_DiaChi.Location = new Point(45, 176);
             lbl_DiaChi.Name = "lbl_DiaChi";
             lbl_DiaChi.Size = new Size(67, 25);
             lbl_DiaChi.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             lbl_Date.AutoSize = true;
             lbl_Date.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Date.Location = new Point(45, 315);
+            lbl_Date.Location = new Point(45, 258);
             lbl_Date.Name = "lbl_Date";
             lbl_Date.Size = new Size(188, 25);
             lbl_Date.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             lbl_Email.AutoSize = true;
             lbl_Email.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Email.Location = new Point(45, 418);
+            lbl_Email.Location = new Point(45, 338);
             lbl_Email.Name = "lbl_Email";
             lbl_Email.Size = new Size(56, 25);
             lbl_Email.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             lbl_Phone.AutoSize = true;
             lbl_Phone.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Phone.Location = new Point(45, 509);
+            lbl_Phone.Location = new Point(45, 432);
             lbl_Phone.Name = "lbl_Phone";
             lbl_Phone.Size = new Size(122, 25);
             lbl_Phone.TabIndex = 5;
@@ -112,35 +112,35 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(286, 112);
+            textBox2.Location = new Point(286, 95);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(281, 27);
             textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(286, 213);
+            textBox3.Location = new Point(286, 174);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(281, 27);
             textBox3.TabIndex = 8;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(286, 416);
+            textBox5.Location = new Point(286, 339);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(281, 27);
             textBox5.TabIndex = 10;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(286, 507);
+            textBox6.Location = new Point(286, 430);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(281, 27);
             textBox6.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(286, 313);
+            dateTimePicker1.Location = new Point(286, 256);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(281, 27);
             dateTimePicker1.TabIndex = 12;

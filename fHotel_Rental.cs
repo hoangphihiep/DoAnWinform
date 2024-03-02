@@ -21,5 +21,10 @@ namespace DuLich
         {
 
         }
+
+        private void pn_ThongTin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
