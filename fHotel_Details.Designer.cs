@@ -36,6 +36,57 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
+            panel56 = new Panel();
+            label137 = new Label();
+            label136 = new Label();
+            label135 = new Label();
+            label134 = new Label();
+            label133 = new Label();
+            flowLayoutPanel7 = new FlowLayoutPanel();
+            panel57 = new Panel();
+            label125 = new Label();
+            label126 = new Label();
+            label127 = new Label();
+            label128 = new Label();
+            panel58 = new Panel();
+            label129 = new Label();
+            label130 = new Label();
+            label131 = new Label();
+            label132 = new Label();
+            panel55 = new Panel();
+            comboBox1 = new ComboBox();
+            label124 = new Label();
+            label123 = new Label();
+            checkBox4 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            label122 = new Label();
+            panel44 = new Panel();
+            panel54 = new Panel();
+            label118 = new Label();
+            label119 = new Label();
+            label120 = new Label();
+            label121 = new Label();
+            panel53 = new Panel();
+            label114 = new Label();
+            label115 = new Label();
+            label116 = new Label();
+            label117 = new Label();
+            panel51 = new Panel();
+            label110 = new Label();
+            label111 = new Label();
+            label112 = new Label();
+            label113 = new Label();
+            panel45 = new Panel();
+            label109 = new Label();
+            label105 = new Label();
+            label104 = new Label();
+            label94 = new Label();
+            label93 = new Label();
+            pictureBox26 = new PictureBox();
+            label92 = new Label();
+            label91 = new Label();
             panel23 = new Panel();
             panel46 = new Panel();
             pictureBox25 = new PictureBox();
@@ -139,7 +190,7 @@
             label41 = new Label();
             label40 = new Label();
             pictureBox17 = new PictureBox();
-            label39 = new Label();
+            lblCommentDetail = new Label();
             label38 = new Label();
             panel12 = new Panel();
             flowLayoutPanel2 = new FlowLayoutPanel();
@@ -198,7 +249,7 @@
             panel11 = new Panel();
             label11 = new Label();
             pictureBox13 = new PictureBox();
-            label6 = new Label();
+            lblConvenientDetail = new Label();
             label5 = new Label();
             panel4 = new Panel();
             pictureBox8 = new PictureBox();
@@ -209,15 +260,26 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             button1 = new Button();
-            panel1 = new Panel();
+            panelMain = new Panel();
             panel22 = new Panel();
-            label57 = new Label();
-            label56 = new Label();
-            label55 = new Label();
-            label54 = new Label();
+            lblConvenient = new Label();
+            lblComment = new Label();
+            lblRoom = new Label();
+            lblTotal = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
+            panel56.SuspendLayout();
+            flowLayoutPanel7.SuspendLayout();
+            panel57.SuspendLayout();
+            panel58.SuspendLayout();
+            panel55.SuspendLayout();
+            panel44.SuspendLayout();
+            panel54.SuspendLayout();
+            panel53.SuspendLayout();
+            panel51.SuspendLayout();
+            panel45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             panel23.SuspendLayout();
             panel46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
@@ -293,7 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel1.SuspendLayout();
+            panelMain.SuspendLayout();
             panel22.SuspendLayout();
             SuspendLayout();
             // 
@@ -369,13 +431,535 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(panel56);
+            panel3.Controls.Add(panel55);
+            panel3.Controls.Add(panel44);
             panel3.Controls.Add(panel23);
             panel3.Controls.Add(panel5);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(15, 186);
             panel3.Name = "panel3";
-            panel3.Size = new Size(884, 1715);
+            panel3.Size = new Size(884, 2342);
             panel3.TabIndex = 1;
+            // 
+            // panel56
+            // 
+            panel56.BackColor = SystemColors.ControlLightLight;
+            panel56.Controls.Add(label137);
+            panel56.Controls.Add(label136);
+            panel56.Controls.Add(label135);
+            panel56.Controls.Add(label134);
+            panel56.Controls.Add(label133);
+            panel56.Controls.Add(flowLayoutPanel7);
+            panel56.Location = new Point(234, 1999);
+            panel56.Name = "panel56";
+            panel56.Size = new Size(645, 275);
+            panel56.TabIndex = 5;
+            // 
+            // label137
+            // 
+            label137.AutoSize = true;
+            label137.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label137.ForeColor = SystemColors.ControlDark;
+            label137.Location = new Point(583, 11);
+            label137.Name = "label137";
+            label137.Size = new Size(21, 32);
+            label137.TabIndex = 5;
+            label137.Text = ".";
+            // 
+            // label136
+            // 
+            label136.AutoSize = true;
+            label136.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label136.ForeColor = SystemColors.ControlDark;
+            label136.Location = new Point(567, 11);
+            label136.Name = "label136";
+            label136.Size = new Size(21, 32);
+            label136.TabIndex = 4;
+            label136.Text = ".";
+            // 
+            // label135
+            // 
+            label135.AutoSize = true;
+            label135.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label135.ForeColor = Color.DarkTurquoise;
+            label135.Location = new Point(551, 11);
+            label135.Name = "label135";
+            label135.Size = new Size(21, 32);
+            label135.TabIndex = 3;
+            label135.Text = ".";
+            // 
+            // label134
+            // 
+            label134.AutoSize = true;
+            label134.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label134.ForeColor = Color.DarkTurquoise;
+            label134.Location = new Point(599, 15);
+            label134.Name = "label134";
+            label134.Size = new Size(28, 30);
+            label134.TabIndex = 2;
+            label134.Text = ">";
+            // 
+            // label133
+            // 
+            label133.AutoSize = true;
+            label133.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label133.ForeColor = Color.DarkTurquoise;
+            label133.Location = new Point(529, 15);
+            label133.Name = "label133";
+            label133.Size = new Size(28, 30);
+            label133.TabIndex = 1;
+            label133.Text = "<";
+            // 
+            // flowLayoutPanel7
+            // 
+            flowLayoutPanel7.Controls.Add(panel57);
+            flowLayoutPanel7.Controls.Add(panel58);
+            flowLayoutPanel7.Location = new Point(33, 23);
+            flowLayoutPanel7.Name = "flowLayoutPanel7";
+            flowLayoutPanel7.Size = new Size(483, 233);
+            flowLayoutPanel7.TabIndex = 0;
+            // 
+            // panel57
+            // 
+            panel57.BackColor = SystemColors.Control;
+            panel57.Controls.Add(label125);
+            panel57.Controls.Add(label126);
+            panel57.Controls.Add(label127);
+            panel57.Controls.Add(label128);
+            panel57.Location = new Point(3, 3);
+            panel57.Name = "panel57";
+            panel57.Size = new Size(474, 110);
+            panel57.TabIndex = 7;
+            // 
+            // label125
+            // 
+            label125.AutoSize = true;
+            label125.Location = new Point(418, 15);
+            label125.Name = "label125";
+            label125.Size = new Size(24, 15);
+            label125.TabIndex = 3;
+            label125.Text = "/10";
+            // 
+            // label126
+            // 
+            label126.AutoSize = true;
+            label126.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label126.ForeColor = Color.DarkTurquoise;
+            label126.Location = new Point(409, 15);
+            label126.Name = "label126";
+            label126.Size = new Size(14, 15);
+            label126.TabIndex = 2;
+            label126.Text = "9";
+            // 
+            // label127
+            // 
+            label127.Location = new Point(10, 40);
+            label127.Name = "label127";
+            label127.Size = new Size(457, 65);
+            label127.TabIndex = 1;
+            label127.Text = resources.GetString("label127.Text");
+            // 
+            // label128
+            // 
+            label128.AutoSize = true;
+            label128.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label128.ForeColor = Color.DarkTurquoise;
+            label128.Location = new Point(9, 15);
+            label128.Name = "label128";
+            label128.Size = new Size(96, 17);
+            label128.TabIndex = 0;
+            label128.Text = "Nguyễn Văn A";
+            // 
+            // panel58
+            // 
+            panel58.BackColor = SystemColors.Control;
+            panel58.Controls.Add(label129);
+            panel58.Controls.Add(label130);
+            panel58.Controls.Add(label131);
+            panel58.Controls.Add(label132);
+            panel58.Location = new Point(3, 119);
+            panel58.Name = "panel58";
+            panel58.Size = new Size(474, 110);
+            panel58.TabIndex = 8;
+            // 
+            // label129
+            // 
+            label129.AutoSize = true;
+            label129.Location = new Point(418, 15);
+            label129.Name = "label129";
+            label129.Size = new Size(24, 15);
+            label129.TabIndex = 3;
+            label129.Text = "/10";
+            // 
+            // label130
+            // 
+            label130.AutoSize = true;
+            label130.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label130.ForeColor = Color.DarkTurquoise;
+            label130.Location = new Point(409, 15);
+            label130.Name = "label130";
+            label130.Size = new Size(14, 15);
+            label130.TabIndex = 2;
+            label130.Text = "9";
+            // 
+            // label131
+            // 
+            label131.Location = new Point(10, 40);
+            label131.Name = "label131";
+            label131.Size = new Size(439, 65);
+            label131.TabIndex = 1;
+            label131.Text = resources.GetString("label131.Text");
+            // 
+            // label132
+            // 
+            label132.AutoSize = true;
+            label132.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label132.ForeColor = Color.DarkTurquoise;
+            label132.Location = new Point(9, 15);
+            label132.Name = "label132";
+            label132.Size = new Size(74, 17);
+            label132.TabIndex = 0;
+            label132.Text = "Trần Văn B";
+            // 
+            // panel55
+            // 
+            panel55.BackColor = SystemColors.ControlLightLight;
+            panel55.Controls.Add(comboBox1);
+            panel55.Controls.Add(label124);
+            panel55.Controls.Add(label123);
+            panel55.Controls.Add(checkBox4);
+            panel55.Controls.Add(checkBox3);
+            panel55.Controls.Add(checkBox2);
+            panel55.Controls.Add(checkBox1);
+            panel55.Controls.Add(label122);
+            panel55.Location = new Point(7, 2001);
+            panel55.Name = "panel55";
+            panel55.Size = new Size(208, 274);
+            panel55.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Đánh giá tăng dần", "Đánh giá giảm dần", "Thời gian gần đây" });
+            comboBox1.Location = new Point(14, 219);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(177, 23);
+            comboBox1.TabIndex = 7;
+            // 
+            // label124
+            // 
+            label124.AutoSize = true;
+            label124.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label124.ForeColor = Color.DarkTurquoise;
+            label124.Location = new Point(17, 177);
+            label124.Name = "label124";
+            label124.Size = new Size(63, 20);
+            label124.TabIndex = 6;
+            label124.Text = "Sắp xếp";
+            // 
+            // label123
+            // 
+            label123.AutoSize = true;
+            label123.ForeColor = Color.DarkTurquoise;
+            label123.Location = new Point(17, 154);
+            label123.Name = "label123";
+            label123.Size = new Size(162, 15);
+            label123.TabIndex = 5;
+            label123.Text = "-------------------------------";
+            // 
+            // checkBox4
+            // 
+            checkBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox4.ForeColor = SystemColors.ControlDarkDark;
+            checkBox4.Location = new Point(25, 121);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(121, 28);
+            checkBox4.TabIndex = 4;
+            checkBox4.Text = "Kém";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox3.ForeColor = SystemColors.ControlDarkDark;
+            checkBox3.Location = new Point(25, 99);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(121, 28);
+            checkBox3.TabIndex = 3;
+            checkBox3.Text = "Trung bình";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox2.ForeColor = SystemColors.ControlDarkDark;
+            checkBox2.Location = new Point(25, 78);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(121, 28);
+            checkBox2.TabIndex = 2;
+            checkBox2.Text = "Tốt";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.ForeColor = SystemColors.ControlDarkDark;
+            checkBox1.Location = new Point(25, 55);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(121, 28);
+            checkBox1.TabIndex = 1;
+            checkBox1.Text = "Rất tốt";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label122
+            // 
+            label122.AutoSize = true;
+            label122.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label122.ForeColor = Color.DarkTurquoise;
+            label122.Location = new Point(17, 21);
+            label122.Name = "label122";
+            label122.Size = new Size(116, 20);
+            label122.TabIndex = 0;
+            label122.Text = "Bộ lọc đánh giá";
+            // 
+            // panel44
+            // 
+            panel44.BackColor = SystemColors.ControlLightLight;
+            panel44.Controls.Add(panel54);
+            panel44.Controls.Add(panel53);
+            panel44.Controls.Add(panel51);
+            panel44.Controls.Add(panel45);
+            panel44.Controls.Add(label93);
+            panel44.Controls.Add(pictureBox26);
+            panel44.Controls.Add(label92);
+            panel44.Controls.Add(label91);
+            panel44.Location = new Point(6, 1637);
+            panel44.Name = "panel44";
+            panel44.Size = new Size(876, 347);
+            panel44.TabIndex = 3;
+            // 
+            // panel54
+            // 
+            panel54.Controls.Add(label118);
+            panel54.Controls.Add(label119);
+            panel54.Controls.Add(label120);
+            panel54.Controls.Add(label121);
+            panel54.Location = new Point(304, 280);
+            panel54.Name = "panel54";
+            panel54.Size = new Size(440, 50);
+            panel54.TabIndex = 9;
+            // 
+            // label118
+            // 
+            label118.BackColor = Color.DeepSkyBlue;
+            label118.Location = new Point(78, 18);
+            label118.Name = "label118";
+            label118.Size = new Size(61, 14);
+            label118.TabIndex = 3;
+            // 
+            // label119
+            // 
+            label119.AutoSize = true;
+            label119.Location = new Point(398, 18);
+            label119.Name = "label119";
+            label119.Size = new Size(19, 15);
+            label119.TabIndex = 2;
+            label119.Text = "40";
+            // 
+            // label120
+            // 
+            label120.BackColor = SystemColors.Control;
+            label120.Location = new Point(78, 17);
+            label120.Name = "label120";
+            label120.Size = new Size(309, 15);
+            label120.TabIndex = 1;
+            // 
+            // label121
+            // 
+            label121.AutoSize = true;
+            label121.Location = new Point(4, 17);
+            label121.Name = "label121";
+            label121.Size = new Size(37, 15);
+            label121.TabIndex = 0;
+            label121.Text = "Kém :";
+            // 
+            // panel53
+            // 
+            panel53.Controls.Add(label114);
+            panel53.Controls.Add(label115);
+            panel53.Controls.Add(label116);
+            panel53.Controls.Add(label117);
+            panel53.Location = new Point(304, 225);
+            panel53.Name = "panel53";
+            panel53.Size = new Size(440, 49);
+            panel53.TabIndex = 8;
+            // 
+            // label114
+            // 
+            label114.BackColor = Color.DeepSkyBlue;
+            label114.Location = new Point(78, 18);
+            label114.Name = "label114";
+            label114.Size = new Size(53, 14);
+            label114.TabIndex = 3;
+            // 
+            // label115
+            // 
+            label115.AutoSize = true;
+            label115.Location = new Point(405, 22);
+            label115.Name = "label115";
+            label115.Size = new Size(19, 15);
+            label115.TabIndex = 2;
+            label115.Text = "31";
+            // 
+            // label116
+            // 
+            label116.BackColor = SystemColors.Control;
+            label116.Location = new Point(78, 17);
+            label116.Name = "label116";
+            label116.Size = new Size(309, 15);
+            label116.TabIndex = 1;
+            // 
+            // label117
+            // 
+            label117.AutoSize = true;
+            label117.Location = new Point(4, 17);
+            label117.Name = "label117";
+            label117.Size = new Size(70, 15);
+            label117.TabIndex = 0;
+            label117.Text = "Trung bình :";
+            // 
+            // panel51
+            // 
+            panel51.Controls.Add(label110);
+            panel51.Controls.Add(label111);
+            panel51.Controls.Add(label112);
+            panel51.Controls.Add(label113);
+            panel51.Location = new Point(304, 169);
+            panel51.Name = "panel51";
+            panel51.Size = new Size(440, 50);
+            panel51.TabIndex = 7;
+            // 
+            // label110
+            // 
+            label110.BackColor = Color.DeepSkyBlue;
+            label110.Location = new Point(78, 18);
+            label110.Name = "label110";
+            label110.Size = new Size(232, 14);
+            label110.TabIndex = 3;
+            // 
+            // label111
+            // 
+            label111.AutoSize = true;
+            label111.Location = new Point(398, 17);
+            label111.Name = "label111";
+            label111.Size = new Size(25, 15);
+            label111.TabIndex = 2;
+            label111.Text = "126";
+            // 
+            // label112
+            // 
+            label112.BackColor = SystemColors.Control;
+            label112.Location = new Point(78, 17);
+            label112.Name = "label112";
+            label112.Size = new Size(309, 15);
+            label112.TabIndex = 1;
+            // 
+            // label113
+            // 
+            label113.AutoSize = true;
+            label113.Location = new Point(4, 17);
+            label113.Name = "label113";
+            label113.Size = new Size(30, 15);
+            label113.TabIndex = 0;
+            label113.Text = "Tốt :";
+            // 
+            // panel45
+            // 
+            panel45.Controls.Add(label109);
+            panel45.Controls.Add(label105);
+            panel45.Controls.Add(label104);
+            panel45.Controls.Add(label94);
+            panel45.Location = new Point(304, 113);
+            panel45.Name = "panel45";
+            panel45.Size = new Size(440, 50);
+            panel45.TabIndex = 6;
+            // 
+            // label109
+            // 
+            label109.BackColor = Color.DeepSkyBlue;
+            label109.Location = new Point(78, 18);
+            label109.Name = "label109";
+            label109.Size = new Size(262, 14);
+            label109.TabIndex = 3;
+            // 
+            // label105
+            // 
+            label105.AutoSize = true;
+            label105.Location = new Point(398, 18);
+            label105.Name = "label105";
+            label105.Size = new Size(25, 15);
+            label105.TabIndex = 2;
+            label105.Text = "150";
+            // 
+            // label104
+            // 
+            label104.BackColor = SystemColors.Control;
+            label104.Location = new Point(78, 17);
+            label104.Name = "label104";
+            label104.Size = new Size(309, 15);
+            label104.TabIndex = 1;
+            // 
+            // label94
+            // 
+            label94.AutoSize = true;
+            label94.Location = new Point(4, 17);
+            label94.Name = "label94";
+            label94.Size = new Size(48, 15);
+            label94.TabIndex = 0;
+            label94.Text = "Rất tốt :";
+            // 
+            // label93
+            // 
+            label93.AutoSize = true;
+            label93.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            label93.ForeColor = Color.DarkTurquoise;
+            label93.Location = new Point(101, 176);
+            label93.Name = "label93";
+            label93.Size = new Size(128, 86);
+            label93.TabIndex = 5;
+            label93.Text = "8.5";
+            // 
+            // pictureBox26
+            // 
+            pictureBox26.Image = (Image)resources.GetObject("pictureBox26.Image");
+            pictureBox26.Location = new Point(59, 126);
+            pictureBox26.Name = "pictureBox26";
+            pictureBox26.Size = new Size(207, 190);
+            pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox26.TabIndex = 4;
+            pictureBox26.TabStop = false;
+            // 
+            // label92
+            // 
+            label92.AutoSize = true;
+            label92.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label92.ForeColor = SystemColors.ControlDarkDark;
+            label92.Location = new Point(15, 56);
+            label92.Name = "label92";
+            label92.Size = new Size(140, 15);
+            label92.TabIndex = 1;
+            label92.Text = "Từ 500 khách hàng đã ở";
+            // 
+            // label91
+            // 
+            label91.AutoSize = true;
+            label91.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label91.Location = new Point(11, 24);
+            label91.Name = "label91";
+            label91.Size = new Size(245, 20);
+            label91.TabIndex = 0;
+            label91.Text = "Xếp hạng và điểm đánh giá chung";
             // 
             // panel23
             // 
@@ -1270,7 +1854,7 @@
             panel19.Controls.Add(panel20);
             panel19.Controls.Add(label40);
             panel19.Controls.Add(pictureBox17);
-            panel19.Controls.Add(label39);
+            panel19.Controls.Add(lblCommentDetail);
             panel19.Controls.Add(label38);
             panel19.Location = new Point(5, 288);
             panel19.Name = "panel19";
@@ -1453,16 +2037,17 @@
             pictureBox17.TabIndex = 3;
             pictureBox17.TabStop = false;
             // 
-            // label39
+            // lblCommentDetail
             // 
-            label39.AutoSize = true;
-            label39.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label39.ForeColor = Color.DarkTurquoise;
-            label39.Location = new Point(201, 16);
-            label39.Name = "label39";
-            label39.Size = new Size(85, 17);
-            label39.TabIndex = 2;
-            label39.Text = "Xem thêm >";
+            lblCommentDetail.AutoSize = true;
+            lblCommentDetail.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCommentDetail.ForeColor = Color.DarkTurquoise;
+            lblCommentDetail.Location = new Point(201, 16);
+            lblCommentDetail.Name = "lblCommentDetail";
+            lblCommentDetail.Size = new Size(85, 17);
+            lblCommentDetail.TabIndex = 2;
+            lblCommentDetail.Text = "Xem thêm >";
+            lblCommentDetail.Click += lblCommentDetail_Click;
             // 
             // label38
             // 
@@ -1907,7 +2492,7 @@
             // 
             panel6.BackColor = SystemColors.ControlLightLight;
             panel6.Controls.Add(flowLayoutPanel1);
-            panel6.Controls.Add(label6);
+            panel6.Controls.Add(lblConvenientDetail);
             panel6.Controls.Add(label5);
             panel6.Location = new Point(5, 2);
             panel6.Name = "panel6";
@@ -2072,16 +2657,17 @@
             pictureBox13.TabIndex = 0;
             pictureBox13.TabStop = false;
             // 
-            // label6
+            // lblConvenientDetail
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.DarkTurquoise;
-            label6.Location = new Point(209, 11);
-            label6.Name = "label6";
-            label6.Size = new Size(85, 17);
-            label6.TabIndex = 1;
-            label6.Text = "Xem thêm >";
+            lblConvenientDetail.AutoSize = true;
+            lblConvenientDetail.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblConvenientDetail.ForeColor = Color.DarkTurquoise;
+            lblConvenientDetail.Location = new Point(209, 11);
+            lblConvenientDetail.Name = "lblConvenientDetail";
+            lblConvenientDetail.Size = new Size(85, 17);
+            lblConvenientDetail.TabIndex = 1;
+            lblConvenientDetail.Text = "Xem thêm >";
+            lblConvenientDetail.Click += lblConvenientDetail_Click;
             // 
             // label5
             // 
@@ -2189,73 +2775,78 @@
             button1.TabIndex = 5;
             button1.Text = "Chọn phòng";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // panel1
+            // panelMain
             // 
-            panel1.AutoScroll = true;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(34, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(930, 477);
-            panel1.TabIndex = 0;
+            panelMain.AutoScroll = true;
+            panelMain.Controls.Add(button1);
+            panelMain.Controls.Add(panel3);
+            panelMain.Controls.Add(panel2);
+            panelMain.Location = new Point(34, 12);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(930, 477);
+            panelMain.TabIndex = 0;
             // 
             // panel22
             // 
             panel22.BackColor = SystemColors.ControlLightLight;
-            panel22.Controls.Add(label57);
-            panel22.Controls.Add(label56);
-            panel22.Controls.Add(label55);
-            panel22.Controls.Add(label54);
+            panel22.Controls.Add(lblConvenient);
+            panel22.Controls.Add(lblComment);
+            panel22.Controls.Add(lblRoom);
+            panel22.Controls.Add(lblTotal);
             panel22.Location = new Point(-4, 4);
             panel22.Name = "panel22";
             panel22.Size = new Size(986, 63);
             panel22.TabIndex = 1;
             // 
-            // label57
+            // lblConvenient
             // 
-            label57.AutoSize = true;
-            label57.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label57.ForeColor = SystemColors.ControlText;
-            label57.Location = new Point(276, 23);
-            label57.Name = "label57";
-            label57.Size = new Size(74, 20);
-            label57.TabIndex = 3;
-            label57.Text = "Tiện nghi";
+            lblConvenient.AutoSize = true;
+            lblConvenient.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblConvenient.ForeColor = SystemColors.ControlText;
+            lblConvenient.Location = new Point(276, 23);
+            lblConvenient.Name = "lblConvenient";
+            lblConvenient.Size = new Size(74, 20);
+            lblConvenient.TabIndex = 3;
+            lblConvenient.Text = "Tiện nghi";
+            lblConvenient.Click += lblConvenient_Click;
             // 
-            // label56
+            // lblComment
             // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label56.ForeColor = SystemColors.ControlText;
-            label56.Location = new Point(401, 23);
-            label56.Name = "label56";
-            label56.Size = new Size(71, 20);
-            label56.TabIndex = 2;
-            label56.Text = "Đánh giá";
+            lblComment.AutoSize = true;
+            lblComment.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblComment.ForeColor = SystemColors.ControlText;
+            lblComment.Location = new Point(401, 23);
+            lblComment.Name = "lblComment";
+            lblComment.Size = new Size(71, 20);
+            lblComment.TabIndex = 2;
+            lblComment.Text = "Đánh giá";
+            lblComment.Click += lblComment_Click;
             // 
-            // label55
+            // lblRoom
             // 
-            label55.AutoSize = true;
-            label55.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label55.ForeColor = SystemColors.ControlText;
-            label55.Location = new Point(180, 23);
-            label55.Name = "label55";
-            label55.Size = new Size(54, 20);
-            label55.TabIndex = 1;
-            label55.Text = "Phòng";
+            lblRoom.AutoSize = true;
+            lblRoom.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRoom.ForeColor = SystemColors.ControlText;
+            lblRoom.Location = new Point(180, 23);
+            lblRoom.Name = "lblRoom";
+            lblRoom.Size = new Size(54, 20);
+            lblRoom.TabIndex = 1;
+            lblRoom.Text = "Phòng";
+            lblRoom.Click += lblRoom_Click;
             // 
-            // label54
+            // lblTotal
             // 
-            label54.AutoSize = true;
-            label54.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label54.ForeColor = Color.DarkTurquoise;
-            label54.Location = new Point(59, 23);
-            label54.Name = "label54";
-            label54.Size = new Size(88, 20);
-            label54.TabIndex = 0;
-            label54.Text = "Tổng quan ";
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTotal.ForeColor = Color.DarkTurquoise;
+            lblTotal.Location = new Point(59, 23);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(88, 20);
+            lblTotal.TabIndex = 0;
+            lblTotal.Text = "Tổng quan ";
+            lblTotal.Click += lblTotal_Click;
             // 
             // fHotel_Details
             // 
@@ -2263,16 +2854,37 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(976, 475);
             Controls.Add(panel22);
-            Controls.Add(panel1);
+            Controls.Add(panelMain);
             Name = "fHotel_Details";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hotel_Details";
             Load += fHotel_Details_Load;
+            Shown += fHotel_Details_Shown;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel56.ResumeLayout(false);
+            panel56.PerformLayout();
+            flowLayoutPanel7.ResumeLayout(false);
+            panel57.ResumeLayout(false);
+            panel57.PerformLayout();
+            panel58.ResumeLayout(false);
+            panel58.PerformLayout();
+            panel55.ResumeLayout(false);
+            panel55.PerformLayout();
+            panel44.ResumeLayout(false);
+            panel44.PerformLayout();
+            panel54.ResumeLayout(false);
+            panel54.PerformLayout();
+            panel53.ResumeLayout(false);
+            panel53.PerformLayout();
+            panel51.ResumeLayout(false);
+            panel51.PerformLayout();
+            panel45.ResumeLayout(false);
+            panel45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             panel23.ResumeLayout(false);
             panel23.PerformLayout();
             panel46.ResumeLayout(false);
@@ -2388,7 +3000,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel1.ResumeLayout(false);
+            panelMain.ResumeLayout(false);
             panel22.ResumeLayout(false);
             panel22.PerformLayout();
             ResumeLayout(false);
@@ -2412,10 +3024,10 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Button button1;
-        private Panel panel1;
+        private Panel panelMain;
         private Panel panel5;
         private Panel panel6;
-        private Label label6;
+        private Label lblConvenientDetail;
         private Label label5;
         private FlowLayoutPanel flowLayoutPanel1;
         private PictureBox pictureBox9;
@@ -2474,7 +3086,7 @@
         private PictureBox pictureBox16;
         private Label label37;
         private Panel panel19;
-        private Label label39;
+        private Label lblCommentDetail;
         private Label label38;
         private PictureBox pictureBox17;
         private Label label40;
@@ -2494,10 +3106,10 @@
         private Label label53;
         private Label label52;
         private Panel panel22;
-        private Label label57;
-        private Label label56;
-        private Label label55;
-        private Label label54;
+        private Label lblConvenient;
+        private Label lblComment;
+        private Label lblRoom;
+        private Label lblTotal;
         private Panel panel23;
         private Panel panel24;
         private PictureBox pictureBox18;
@@ -2582,5 +3194,56 @@
         private Panel panel52;
         private Label label107;
         private Label label108;
+        private Panel panel44;
+        private Label label91;
+        private PictureBox pictureBox26;
+        private Label label92;
+        private Label label93;
+        private Panel panel45;
+        private Label label104;
+        private Label label94;
+        private Label label109;
+        private Label label105;
+        private Panel panel54;
+        private Label label118;
+        private Label label119;
+        private Label label120;
+        private Label label121;
+        private Panel panel53;
+        private Label label114;
+        private Label label115;
+        private Label label116;
+        private Label label117;
+        private Panel panel51;
+        private Label label110;
+        private Label label111;
+        private Label label112;
+        private Label label113;
+        private Panel panel56;
+        private Panel panel55;
+        private Label label122;
+        private CheckBox checkBox4;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private ComboBox comboBox1;
+        private Label label124;
+        private Label label123;
+        private FlowLayoutPanel flowLayoutPanel7;
+        private Panel panel57;
+        private Label label125;
+        private Label label126;
+        private Label label127;
+        private Label label128;
+        private Panel panel58;
+        private Label label129;
+        private Label label130;
+        private Label label131;
+        private Label label132;
+        private Label label137;
+        private Label label136;
+        private Label label135;
+        private Label label134;
+        private Label label133;
     }
 }

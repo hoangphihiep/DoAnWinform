@@ -46,5 +46,65 @@ namespace DuLich
 
         }
 
+        private void fHotel_Details_Shown(object sender, EventArgs e)
+        {
+            panelMain.VerticalScroll.Value = 0;
+        }
+
+
+        void DeleteColor()
+        {
+            lblTotal.ForeColor = Color.Black;
+            lblRoom.ForeColor = Color.Black;
+            lblConvenient.ForeColor = Color.Black;
+            lblComment.ForeColor = Color.Black;
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 0;
+            lblTotal.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void lblRoom_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 480;
+            lblRoom.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void lblConvenient_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 1170;
+            lblConvenient.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void lblComment_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 1750;
+            lblComment.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblConvenientDetail_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 1170;
+            lblConvenient.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void lblCommentDetail_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            panelMain.VerticalScroll.Value = 1750;
+            lblComment.ForeColor = Color.DarkTurquoise;
+        }
     }
 }
