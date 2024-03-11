@@ -20,6 +20,22 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox1;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox1;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox1;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox1;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox1;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
                 pictureBox1.Visible = true;
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = false;
@@ -32,6 +48,10 @@ namespace DoAnDuLich
             panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
             label4.Parent = pictureBox1;
             label4.BackColor = Color.Transparent;
+            timer1.Interval = 8000; // 3000 milliseconds = 3 seconds
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
+
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
             data.Add("An Giang");
             data.Add("Bà rịa Vũng Tàu");
@@ -100,8 +120,7 @@ namespace DoAnDuLich
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox1.AutoCompleteCustomSource = data;
         }
-
-        private void btn_next_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
             if (pictureBox1.Visible == true)
             {
@@ -120,6 +139,23 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox2;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox2;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox2;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox2;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox2;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+
             }
             else if (pictureBox2.Visible == true)
             {
@@ -139,6 +175,22 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox3;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox3;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox3;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox3;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox3;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             }
             else if (pictureBox3.Visible == true)
             {
@@ -158,6 +210,22 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox4;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox4;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox4;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox4;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox4;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             }
             else if (pictureBox4.Visible == true)
             {
@@ -177,6 +245,22 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox5;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox5;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox5;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox5;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox5;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             }
             else
             {
@@ -196,16 +280,210 @@ namespace DoAnDuLich
                 btn_next.BackColor = Color.Transparent;
                 btn_back.Parent = pictureBox1;
                 btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox1;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox1;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox1;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox1;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+            }
+        }
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Visible == true)
+            {
+                panel1.Parent = pictureBox2;
+                panel1.BackColor = Color.FromArgb(80, 0, 0, 0);
+                panel2.Parent = pictureBox2;
+                panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
+                pictureBox1.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox2.Visible = true;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                label4.Parent = pictureBox2;
+                label4.BackColor = Color.Transparent;
+                btn_next.Parent = pictureBox2;
+                btn_next.BackColor = Color.Transparent;
+                btn_back.Parent = pictureBox2;
+                btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox2;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox2;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox2;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox2;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+
+            }
+            else if (pictureBox2.Visible == true)
+            {
+                panel1.Parent = pictureBox3;
+                panel1.BackColor = Color.FromArgb(80, 0, 0, 0);
+                panel2.Parent = pictureBox3;
+                panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
+
+                pictureBox1.Visible = false;
+                pictureBox3.Visible = true;
+                pictureBox2.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                label4.Parent = pictureBox3;
+                label4.BackColor = Color.Transparent;
+                btn_next.Parent = pictureBox3;
+                btn_next.BackColor = Color.Transparent;
+                btn_back.Parent = pictureBox3;
+                btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox3;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox3;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox3;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox3;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+            }
+            else if (pictureBox3.Visible == true)
+            {
+                panel1.Parent = pictureBox4;
+                panel1.BackColor = Color.FromArgb(80, 0, 0, 0);
+                panel2.Parent = pictureBox4;
+                panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
+
+                pictureBox1.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = false;
+                label4.Parent = pictureBox4;
+                label4.BackColor = Color.Transparent;
+                btn_next.Parent = pictureBox4;
+                btn_next.BackColor = Color.Transparent;
+                btn_back.Parent = pictureBox4;
+                btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox4;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox4;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox4;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox4;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+            }
+            else if (pictureBox4.Visible == true)
+            {
+                panel1.Parent = pictureBox5;
+                panel1.BackColor = Color.FromArgb(80, 0, 0, 0);
+                panel2.Parent = pictureBox5;
+                panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
+
+                pictureBox1.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+                label4.Parent = pictureBox5;
+                label4.BackColor = Color.Transparent;
+                btn_next.Parent = pictureBox5;
+                btn_next.BackColor = Color.Transparent;
+                btn_back.Parent = pictureBox5;
+                btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox5;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox5;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox5;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox5;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
+            }
+            else
+            {
+                panel1.Parent = pictureBox1;
+                panel1.BackColor = Color.FromArgb(80, 0, 0, 0);
+                panel2.Parent = pictureBox1;
+                panel2.BackColor = Color.FromArgb(80, 0, 0, 0);
+
+                pictureBox1.Visible = true;
+                pictureBox3.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                label4.Parent = pictureBox1;
+                label4.BackColor = Color.Transparent;
+                btn_next.Parent = pictureBox1;
+                btn_next.BackColor = Color.Transparent;
+                btn_back.Parent = pictureBox1;
+                btn_back.BackColor = Color.Transparent;
+                btn_DangNhap.Parent = pictureBox1;
+                btn_DangNhap.BackColor = Color.Transparent;
+                btn_DangKy.Parent = pictureBox1;
+                btn_DangKy.BackColor = Color.Transparent;
+                btn_DangKyKS.Parent = pictureBox1;
+                btn_DangKyKS.BackColor = Color.Transparent;
+                btn_MyTaiKhoan.Parent = pictureBox1;
+                btn_MyTaiKhoan.BackColor = Color.Transparent;
+                btn_DangNhap.FlatStyle = FlatStyle.Flat;
+                btn_DangNhap.FlatAppearance.BorderSize = 0;
+                btn_DangKy.FlatStyle = FlatStyle.Flat;
+                btn_DangKy.FlatAppearance.BorderSize = 0;
+                btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+                btn_DangKyKS.FlatAppearance.BorderSize = 0;
+                btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+                btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             }
         }
         public void HideMenuStrip()
         {
             //hien menustrip
-            menuTaiKhoan.Visible = false;
+            btn_MyTaiKhoan.Visible = false;
         }
         public void ShowMenuStrip()
         {
-            menuTaiKhoan.Visible = true;
+            btn_MyTaiKhoan.Visible = true;
         }
         public void HideDangNhap()
         {
@@ -226,6 +504,14 @@ namespace DoAnDuLich
         public void HideDangKyKS()
         {
             btn_DangKyKS.Visible = false;
+        }
+        public void ShowPanel3()
+        {
+            panel3.Visible = true;
+        }
+        public void HidePanel3()
+        {
+            panel3.Visible = false;
         }
         private void btn_back_Click(object sender, EventArgs e)
         {
@@ -381,7 +667,7 @@ namespace DoAnDuLich
         private void button1_Click(object sender, EventArgs e)
         {
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-            if (menuTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
+            if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
             {
                 k.ShowMenuStrip();
                 k.HideDangKy();
@@ -390,7 +676,7 @@ namespace DoAnDuLich
                 k.ShowDialog();
                 this.Show();
             }
-            else if (menuTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
+            else if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
             {
                 k.ShowMenuStrip();
                 k.HideDangKy();
@@ -428,37 +714,17 @@ namespace DoAnDuLich
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowDangKy();
-            ShowDangNhap();
-            HideMenuStrip();
-            KT_DangNhap = 0;
+
         }
 
         private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fCollections f = new fCollections();
-            f.kiemtratrang = 1;
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+
         }
         public int kiemtradangkiKS;
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongTinTaiKhoan t = new fThongTinTaiKhoan();
-            if (kiemtradangkiKS == 1)
-            {
-                this.Hide();
-                t.ShowThongTinKS();
-                t.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                this.Hide();
-                t.ShowDialog();
-                this.Show();
-            }
+
 
         }
 
@@ -481,6 +747,84 @@ namespace DoAnDuLich
         {
 
         }
+        public void ShowThongTinTaiKhoan()
+        {
+            btn_ThongTinTaiKhoan.Visible = true;
+        }
+        public void ShowKSDaDat()
+        {
+            btn_KSDaDat.Visible = true;
+        }
+        public void ShowThoat()
+        {
+            btn_Thoat.Visible = true;
+        }
+        public void HideThongTinTaiKhoan()
+        {
+            btn_ThongTinTaiKhoan.Visible = false;
+        }
+        public void HideKSDaDat()
+        {
+            btn_KSDaDat.Visible = false;
+        }
+        public void HideThoat()
+        {
+            btn_Thoat.Visible = false;
+        }
+        int dem = 0;
+
+        private void btn_MyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            if (dem % 2 == 0)
+            {
+                panel_menu.Visible = true;
+                dem++;
+            }
+            else
+            {
+                panel_menu.Visible = false;
+                dem++;
+            }
+        }
+
+        private void btn_ThongTinTaiKhoan_Click(object sender, EventArgs e)
+        {
+            fThongTinTaiKhoan t = new fThongTinTaiKhoan();
+            if (kiemtradangkiKS == 1)
+            {
+                this.Hide();
+                t.ShowThongTinKS();
+                t.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                this.Hide();
+                t.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void btn_KSDaDat_Click(object sender, EventArgs e)
+        {
+            fCollections f = new fCollections();
+            f.kiemtratrang = 1;
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            ShowDangKy();
+            ShowDangNhap();
+            HideMenuStrip();
+            KT_DangNhap = 0;
+        }
+
+
+
+
 
 
         //private void panel2_Paint(object sender, PaintEventArgs e)
