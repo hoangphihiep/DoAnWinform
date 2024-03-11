@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hien_thi_khach_san_phu_hop));
-            panel2 = new Panel();
+            panel_menu = new Panel();
+            btn_menuTaiKhoan = new Button();
+            btn_Thoat = new Button();
+            btn_ThongTinTaiKhoan = new Button();
+            btn_KSDaDat = new Button();
+            btn_MyTaiKhoan = new Button();
             btn_DangKy = new Button();
             btn_DangNhap = new Button();
-            panel1 = new Panel();
             btn_DangKyKS = new Button();
-            menuStrip1 = new MenuStrip();
-            MenuStripTaiKhoan = new ToolStripMenuItem();
-            thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
-            kháchSạnĐãĐặtToolStripMenuItem = new ToolStripMenuItem();
-            thoátToolStripMenuItem = new ToolStripMenuItem();
             panel3 = new Panel();
             label8 = new Label();
             label7 = new Label();
@@ -65,8 +64,23 @@
             trackBar2 = new TrackBar();
             label3 = new Label();
             lbl_max = new Label();
-            panel2.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            label9 = new Label();
+            label10 = new Label();
+            panel5 = new Panel();
+            checkBox11 = new CheckBox();
+            checkBox10 = new CheckBox();
+            checkBox9 = new CheckBox();
+            checkBox8 = new CheckBox();
+            checkBox7 = new CheckBox();
+            checkBox6 = new CheckBox();
+            checkBox5 = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            panel_menu.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
@@ -76,26 +90,84 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
-            // panel2
+            // panel_menu
             // 
-            panel2.Controls.Add(btn_DangKy);
-            panel2.Controls.Add(btn_DangNhap);
-            panel2.Controls.Add(panel1);
-            panel2.Controls.Add(btn_DangKyKS);
-            panel2.Controls.Add(menuStrip1);
-            panel2.Location = new Point(0, -3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1317, 74);
-            panel2.TabIndex = 16;
-            panel2.Paint += panel2_Paint;
+            panel_menu.Controls.Add(btn_menuTaiKhoan);
+            panel_menu.Controls.Add(btn_Thoat);
+            panel_menu.Controls.Add(btn_ThongTinTaiKhoan);
+            panel_menu.Controls.Add(btn_KSDaDat);
+            panel_menu.Location = new Point(1109, 71);
+            panel_menu.Name = "panel_menu";
+            panel_menu.Size = new Size(198, 203);
+            panel_menu.TabIndex = 35;
+            panel_menu.Visible = false;
+            // 
+            // btn_menuTaiKhoan
+            // 
+            btn_menuTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_menuTaiKhoan.Location = new Point(0, 0);
+            btn_menuTaiKhoan.Name = "btn_menuTaiKhoan";
+            btn_menuTaiKhoan.Size = new Size(196, 48);
+            btn_menuTaiKhoan.TabIndex = 35;
+            btn_menuTaiKhoan.Text = "Tài khoản của tôi";
+            btn_menuTaiKhoan.TextAlign = ContentAlignment.MiddleLeft;
+            btn_menuTaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // btn_Thoat
+            // 
+            btn_Thoat.Location = new Point(0, 148);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new Size(196, 53);
+            btn_Thoat.TabIndex = 33;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
+            // 
+            // btn_ThongTinTaiKhoan
+            // 
+            btn_ThongTinTaiKhoan.Location = new Point(0, 46);
+            btn_ThongTinTaiKhoan.Name = "btn_ThongTinTaiKhoan";
+            btn_ThongTinTaiKhoan.Size = new Size(196, 53);
+            btn_ThongTinTaiKhoan.TabIndex = 31;
+            btn_ThongTinTaiKhoan.Text = "Thông tin tài khoản";
+            btn_ThongTinTaiKhoan.UseVisualStyleBackColor = true;
+            btn_ThongTinTaiKhoan.Click += btn_ThongTinTaiKhoan_Click;
+            // 
+            // btn_KSDaDat
+            // 
+            btn_KSDaDat.Location = new Point(0, 97);
+            btn_KSDaDat.Name = "btn_KSDaDat";
+            btn_KSDaDat.Size = new Size(196, 53);
+            btn_KSDaDat.TabIndex = 32;
+            btn_KSDaDat.Text = "Khách sạn đã đặt";
+            btn_KSDaDat.UseVisualStyleBackColor = true;
+            btn_KSDaDat.Click += btn_KSDaDat_Click;
+            // 
+            // btn_MyTaiKhoan
+            // 
+            btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+            btn_MyTaiKhoan.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_MyTaiKhoan.Image = (Image)resources.GetObject("btn_MyTaiKhoan.Image");
+            btn_MyTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_MyTaiKhoan.Location = new Point(1111, 11);
+            btn_MyTaiKhoan.Name = "btn_MyTaiKhoan";
+            btn_MyTaiKhoan.Size = new Size(196, 53);
+            btn_MyTaiKhoan.TabIndex = 31;
+            btn_MyTaiKhoan.Text = "      Tài khoản";
+            btn_MyTaiKhoan.UseVisualStyleBackColor = true;
+            btn_MyTaiKhoan.Visible = false;
+            btn_MyTaiKhoan.Click += btn_MyTaiKhoan_Click;
             // 
             // btn_DangKy
             // 
-            btn_DangKy.Location = new Point(1064, 12);
+            btn_DangKy.FlatStyle = FlatStyle.Flat;
+            btn_DangKy.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_DangKy.Location = new Point(1108, 12);
             btn_DangKy.Name = "btn_DangKy";
-            btn_DangKy.Size = new Size(99, 47);
+            btn_DangKy.Size = new Size(100, 53);
             btn_DangKy.TabIndex = 28;
             btn_DangKy.Text = "Đăng Ký";
             btn_DangKy.UseVisualStyleBackColor = true;
@@ -103,71 +175,27 @@
             // 
             // btn_DangNhap
             // 
-            btn_DangNhap.Location = new Point(1185, 12);
+            btn_DangNhap.FlatStyle = FlatStyle.Flat;
+            btn_DangNhap.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_DangNhap.Location = new Point(1207, 12);
             btn_DangNhap.Name = "btn_DangNhap";
-            btn_DangNhap.Size = new Size(99, 47);
+            btn_DangNhap.Size = new Size(100, 53);
             btn_DangNhap.TabIndex = 27;
             btn_DangNhap.Text = "Đăng nhập";
             btn_DangNhap.UseVisualStyleBackColor = true;
             btn_DangNhap.Click += btn_DangNhap_Click;
             // 
-            // panel1
-            // 
-            panel1.Location = new Point(0, 74);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1317, 60);
-            panel1.TabIndex = 17;
-            // 
             // btn_DangKyKS
             // 
-            btn_DangKyKS.Location = new Point(792, 15);
+            btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+            btn_DangKyKS.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_DangKyKS.Location = new Point(889, 12);
             btn_DangKyKS.Name = "btn_DangKyKS";
-            btn_DangKyKS.Size = new Size(223, 44);
+            btn_DangKyKS.Size = new Size(220, 53);
             btn_DangKyKS.TabIndex = 0;
             btn_DangKyKS.Text = "Đăng ký cho thuê khách sạn";
             btn_DangKyKS.UseVisualStyleBackColor = true;
             btn_DangKyKS.Click += button1_Click;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Dock = DockStyle.Right;
-            menuStrip1.ImageScalingSize = new Size(60, 60);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuStripTaiKhoan });
-            menuStrip1.Location = new Point(1287, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(30, 74);
-            menuStrip1.TabIndex = 18;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuStripTaiKhoan
-            // 
-            MenuStripTaiKhoan.DropDownItems.AddRange(new ToolStripItem[] { thôngTinTàiKhoảnToolStripMenuItem, kháchSạnĐãĐặtToolStripMenuItem, thoátToolStripMenuItem });
-            MenuStripTaiKhoan.Image = (Image)resources.GetObject("MenuStripTaiKhoan.Image");
-            MenuStripTaiKhoan.Name = "MenuStripTaiKhoan";
-            MenuStripTaiKhoan.Size = new Size(138, 64);
-            MenuStripTaiKhoan.Text = "Tài khoản";
-            MenuStripTaiKhoan.Visible = false;
-            // 
-            // thôngTinTàiKhoảnToolStripMenuItem
-            // 
-            thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(220, 26);
-            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
-            thôngTinTàiKhoảnToolStripMenuItem.Click += thôngTinTàiKhoảnToolStripMenuItem_Click;
-            // 
-            // kháchSạnĐãĐặtToolStripMenuItem
-            // 
-            kháchSạnĐãĐặtToolStripMenuItem.Name = "kháchSạnĐãĐặtToolStripMenuItem";
-            kháchSạnĐãĐặtToolStripMenuItem.Size = new Size(220, 26);
-            kháchSạnĐãĐặtToolStripMenuItem.Text = "Khách sạn đã đặt";
-            kháchSạnĐãĐặtToolStripMenuItem.Click += kháchSạnĐãĐặtToolStripMenuItem_Click;
-            // 
-            // thoátToolStripMenuItem
-            // 
-            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(220, 26);
-            thoátToolStripMenuItem.Text = "Thoát";
-            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
             // panel3
             // 
@@ -183,9 +211,9 @@
             panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(dateTimePicker2);
             panel3.Controls.Add(lb_TimKiem);
-            panel3.Location = new Point(-1, 69);
+            panel3.Location = new Point(-1, 72);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1318, 89);
+            panel3.Size = new Size(1318, 90);
             panel3.TabIndex = 17;
             // 
             // label8
@@ -380,7 +408,7 @@
             // 
             // trackBar1
             // 
-            trackBar1.Location = new Point(37, 187);
+            trackBar1.Location = new Point(20, 230);
             trackBar1.Maximum = 5000000;
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(229, 56);
@@ -390,7 +418,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 263);
+            label1.Location = new Point(30, 276);
             label1.Name = "label1";
             label1.Size = new Size(60, 20);
             label1.TabIndex = 21;
@@ -399,7 +427,7 @@
             // lbl_Min
             // 
             lbl_Min.AutoSize = true;
-            lbl_Min.Location = new Point(132, 263);
+            lbl_Min.Location = new Point(115, 276);
             lbl_Min.Name = "lbl_Min";
             lbl_Min.Size = new Size(17, 20);
             lbl_Min.TabIndex = 22;
@@ -407,7 +435,7 @@
             // 
             // trackBar2
             // 
-            trackBar2.Location = new Point(37, 304);
+            trackBar2.Location = new Point(20, 303);
             trackBar2.Maximum = 5000000;
             trackBar2.Name = "trackBar2";
             trackBar2.RightToLeft = RightToLeft.Yes;
@@ -420,7 +448,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(47, 363);
+            label3.Location = new Point(30, 362);
             label3.Name = "label3";
             label3.Size = new Size(60, 20);
             label3.TabIndex = 24;
@@ -429,17 +457,203 @@
             // lbl_max
             // 
             lbl_max.AutoSize = true;
-            lbl_max.Location = new Point(132, 363);
+            lbl_max.Location = new Point(115, 362);
             lbl_max.Name = "lbl_max";
             lbl_max.Size = new Size(17, 20);
             lbl_max.TabIndex = 25;
             lbl_max.Text = "0";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(20, 189);
+            label9.Name = "label9";
+            label9.Size = new Size(103, 23);
+            label9.TabIndex = 26;
+            label9.Text = "Khoảng tiền";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(20, 405);
+            label10.Name = "label10";
+            label10.Size = new Size(69, 23);
+            label10.TabIndex = 27;
+            label10.Text = "Tiện ích";
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(checkBox11);
+            panel5.Controls.Add(checkBox10);
+            panel5.Controls.Add(checkBox9);
+            panel5.Controls.Add(checkBox8);
+            panel5.Controls.Add(checkBox7);
+            panel5.Controls.Add(checkBox6);
+            panel5.Controls.Add(checkBox5);
+            panel5.Controls.Add(checkBox4);
+            panel5.Controls.Add(checkBox3);
+            panel5.Controls.Add(checkBox2);
+            panel5.Controls.Add(checkBox1);
+            panel5.Location = new Point(30, 431);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(283, 234);
+            panel5.TabIndex = 28;
+            // 
+            // checkBox11
+            // 
+            checkBox11.AutoSize = true;
+            checkBox11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox11.Location = new Point(129, 104);
+            checkBox11.Name = "checkBox11";
+            checkBox11.Size = new Size(151, 24);
+            checkBox11.TabIndex = 10;
+            checkBox11.Text = "Sản phẩm vệ sinh";
+            checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            checkBox10.AutoSize = true;
+            checkBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox10.Location = new Point(129, 74);
+            checkBox10.Name = "checkBox10";
+            checkBox10.Size = new Size(146, 24);
+            checkBox10.TabIndex = 9;
+            checkBox10.Text = "Đưa đón sân bay";
+            checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            checkBox9.AutoSize = true;
+            checkBox9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox9.Location = new Point(129, 44);
+            checkBox9.Name = "checkBox9";
+            checkBox9.Size = new Size(129, 24);
+            checkBox9.TabIndex = 8;
+            checkBox9.Text = "Dịch vụ giặt là";
+            checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            checkBox8.AutoSize = true;
+            checkBox8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox8.Location = new Point(129, 14);
+            checkBox8.Name = "checkBox8";
+            checkBox8.Size = new Size(102, 24);
+            checkBox8.TabIndex = 7;
+            checkBox8.Text = "Bãi đậu xe";
+            checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            checkBox7.AutoSize = true;
+            checkBox7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox7.Location = new Point(10, 194);
+            checkBox7.Name = "checkBox7";
+            checkBox7.Size = new Size(93, 24);
+            checkBox7.TabIndex = 6;
+            checkBox7.Text = "Bữa sáng";
+            checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            checkBox6.AutoSize = true;
+            checkBox6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox6.Location = new Point(11, 164);
+            checkBox6.Name = "checkBox6";
+            checkBox6.Size = new Size(94, 24);
+            checkBox6.TabIndex = 5;
+            checkBox6.Text = "Quày bar";
+            checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox5.Location = new Point(11, 134);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(96, 24);
+            checkBox5.TabIndex = 4;
+            checkBox5.Text = "Tiệm cafe";
+            checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox4.Location = new Point(11, 104);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(58, 24);
+            checkBox4.TabIndex = 3;
+            checkBox4.Text = "Wifi";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox3.Location = new Point(11, 74);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(77, 24);
+            checkBox3.TabIndex = 2;
+            checkBox3.Text = "Hồ bơi";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox2.Location = new Point(11, 44);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(99, 24);
+            checkBox2.TabIndex = 1;
+            checkBox2.Text = "Nhà hàng";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.Location = new Point(11, 14);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(95, 24);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "Máy lạnh";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ActiveCaptionText;
+            panel2.Location = new Point(1207, 12);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1, 53);
+            panel2.TabIndex = 36;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Location = new Point(1108, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1, 53);
+            panel1.TabIndex = 37;
             // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 709);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            Controls.Add(btn_DangNhap);
+            Controls.Add(panel_menu);
+            Controls.Add(btn_DangKy);
+            Controls.Add(panel3);
+            Controls.Add(btn_DangKyKS);
+            Controls.Add(btn_MyTaiKhoan);
+            Controls.Add(panel5);
+            Controls.Add(label10);
+            Controls.Add(label9);
             Controls.Add(lbl_max);
             Controls.Add(label3);
             Controls.Add(trackBar2);
@@ -447,16 +661,11 @@
             Controls.Add(label1);
             Controls.Add(trackBar1);
             Controls.Add(tabControl1);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
             Name = "hien_thi_khach_san_phu_hop";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "hien_thi_khach_san_phu_hop";
             Load += hien_thi_khach_san_phu_hop_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            panel_menu.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
@@ -468,14 +677,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel2;
-        private Panel panel1;
         private Button btn_DangKyKS;
         private Panel panel3;
         private TextBox lb_TimKiem;
@@ -488,11 +696,6 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem MenuStripTaiKhoan;
-        private ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
-        private ToolStripMenuItem kháchSạnĐãĐặtToolStripMenuItem;
-        private ToolStripMenuItem thoátToolStripMenuItem;
         private TrackBar trackBar1;
         private Label label1;
         private Label lbl_Min;
@@ -510,5 +713,27 @@
         private Label label5;
         private Label label4;
         private Label label8;
+        private Label label9;
+        private Label label10;
+        private Panel panel5;
+        private CheckBox checkBox8;
+        private CheckBox checkBox7;
+        private CheckBox checkBox6;
+        private CheckBox checkBox5;
+        private CheckBox checkBox4;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private CheckBox checkBox11;
+        private CheckBox checkBox10;
+        private CheckBox checkBox9;
+        private Button btn_MyTaiKhoan;
+        private Panel panel_menu;
+        private Button btn_menuTaiKhoan;
+        private Button btn_Thoat;
+        private Button btn_ThongTinTaiKhoan;
+        private Button btn_KSDaDat;
+        private Panel panel2;
+        private Panel panel1;
     }
 }

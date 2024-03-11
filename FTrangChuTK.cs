@@ -819,6 +819,8 @@ namespace DoAnDuLich
             ShowDangKy();
             ShowDangNhap();
             HideMenuStrip();
+            ShowPanel3();
+            panel_menu.Visible = false;
             KT_DangNhap = 0;
         }
 

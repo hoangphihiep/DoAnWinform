@@ -113,7 +113,6 @@ C:\Users\Anya\Source\Repos\DoAnWinform\bin\Debug\net6.0-windows\runtimes\unix\li
 C:\Users\Anya\Source\Repos\DoAnWinform\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.csproj.AssemblyReference.cache
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.Customer_Information.resources
-C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fApp.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fBanking_Payment.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fCollections.resources
 C:\Users\Anya\Source\Repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fHotel_Booked.resources
@@ -161,3 +160,4 @@ C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.fHotel_Rental.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.sourcelink.json
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.Up2Date
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fHotel_Rental.resources

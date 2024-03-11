@@ -121,6 +121,7 @@ namespace DuLich
                     k.ShowMenuStrip();
                     k.HideDangNhap();
                     k.HideDangKy();
+                    k.HidePanle2();
                     this.Hide();
                     k.ShowDialog();
                     this.Close();

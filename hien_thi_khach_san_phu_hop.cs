@@ -29,11 +29,11 @@ namespace DuLich
         public void HideMenuStrip()
         {
             //hien menustrip
-            MenuStripTaiKhoan.Visible = false;
+            btn_MyTaiKhoan.Visible = false;
         }
         public void ShowMenuStrip()
         {
-            MenuStripTaiKhoan.Visible = true;
+            btn_MyTaiKhoan.Visible = true;
         }
         public void HideDangNhap()
         {
@@ -54,6 +54,14 @@ namespace DuLich
         public void HideDangKyKS()
         {
             btn_DangKyKS.Visible = false;
+        }
+        public void ShowPanel2()
+        {
+            panel2.Visible = true;
+        }
+        public void HidePanle2()
+        {
+            panel2.Visible = false;
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -125,16 +133,16 @@ namespace DuLich
 
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
-
+            btn_DangNhap.FlatStyle = FlatStyle.Flat;
+            btn_DangNhap.FlatAppearance.BorderSize = 0;
+            btn_DangKy.FlatStyle = FlatStyle.Flat;
+            btn_DangKy.FlatAppearance.BorderSize = 0;
+            btn_DangKyKS.FlatStyle = FlatStyle.Flat;
+            btn_DangKyKS.FlatAppearance.BorderSize = 0;
+            btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
+            btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowDangNhap();
-            ShowDangKy();
-            HideMenuStrip();
-            KT_DangNhap1 = 0;
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -144,17 +152,23 @@ namespace DuLich
             this.Show();
         }
 
-        private void kháchSạnĐãĐặtToolStripMenuItem_Click(object sender, EventArgs e)
+        public int kiemtradangkiKS1;
+        int dem = 0;
+        private void btn_MyTaiKhoan_Click(object sender, EventArgs e)
         {
-            fCollections f = new fCollections();
-            f.kiemtratrang = 1;
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (dem % 2 == 0)
+            {
+                panel_menu.Visible = true;
+                dem++;
+            }
+            else
+            {
+                panel_menu.Visible = false;
+                dem++;
+            }
         }
 
-        public int kiemtradangkiKS1;
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_ThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             fThongTinTaiKhoan t = new fThongTinTaiKhoan();
             if (kiemtradangkiKS1 == 2)
@@ -170,6 +184,25 @@ namespace DuLich
                 t.ShowDialog();
                 this.Show();
             }
+        }
+
+        private void btn_KSDaDat_Click(object sender, EventArgs e)
+        {
+            fCollections f = new fCollections();
+            f.kiemtratrang = 1;
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            ShowDangNhap();
+            ShowDangKy();
+            HideMenuStrip();
+            ShowPanel2();
+            panel_menu.Visible = false;
+            KT_DangNhap1 = 0;
         }
     }
 }
