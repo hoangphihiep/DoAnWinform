@@ -70,21 +70,21 @@ namespace DuLich
         private void lblRoom_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            panelMain.VerticalScroll.Value = 480;
+            panelMain.VerticalScroll.Value = 620;
             lblRoom.ForeColor = Color.DarkTurquoise;
         }
 
         private void lblConvenient_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            panelMain.VerticalScroll.Value = 1170;
+            panelMain.VerticalScroll.Value = 1540;
             lblConvenient.ForeColor = Color.DarkTurquoise;
         }
 
         private void lblComment_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            panelMain.VerticalScroll.Value = 1750;
+            panelMain.VerticalScroll.Value = 2350;
             lblComment.ForeColor = Color.DarkTurquoise;
         }
 

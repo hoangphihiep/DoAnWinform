@@ -103,9 +103,9 @@ namespace DuLich
             else
             {
                 int t = 1;
-                fHotel_Posting f = new fHotel_Posting();
+                fHotel_Rental f = new fHotel_Rental();
                 KT_DangNhap1++;
-                f.kiemtratrang1 = t;
+                f.kiemtratrang7 = t;
                 this.Hide();
                 f.ShowDialog();
                 this.Close();

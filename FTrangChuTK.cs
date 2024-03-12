@@ -672,6 +672,7 @@ namespace DoAnDuLich
                 k.ShowMenuStrip();
                 k.HideDangKy();
                 k.HideDangNhap();
+                k.HidePanle2();
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -682,6 +683,7 @@ namespace DoAnDuLich
                 k.HideDangKy();
                 k.HideDangNhap();
                 k.HideDangKyKS();
+                k.HidePanle2();
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -705,7 +707,7 @@ namespace DoAnDuLich
                 int t = 0;
                 fHotel_Rental f = new fHotel_Rental();
                 KT_DangNhap++;
-                // f.kiemtratrang1 = t;
+                f.kiemtratrang7 = t;
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

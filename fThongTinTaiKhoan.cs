@@ -121,7 +121,6 @@ namespace DuLich
                 HideHoSo();
                 dem++;
             }
-
         }
     }
 }
