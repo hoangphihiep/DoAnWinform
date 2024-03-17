@@ -1,5 +1,6 @@
 ﻿using DoAnDuLich;
 using DuLich;
+using System.Data.SqlClient;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Security.Policy;
@@ -116,9 +117,9 @@ namespace DoAnDuLich
             data.Add("Vĩnh Long");
             data.Add("Vĩnh Phúc");
             data.Add("Yên Bái");
-            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
-            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            textBox1.AutoCompleteCustomSource = data;
+            txt_DiaDiem.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txt_DiaDiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txt_DiaDiem.AutoCompleteCustomSource = data;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -666,35 +667,41 @@ namespace DoAnDuLich
         public int kiemtradangnhap;
         private void button1_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(txt_DiaDiem.Text);
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-            if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
-            {
-                k.ShowMenuStrip();
-                k.HideDangKy();
-                k.HideDangNhap();
-                k.HidePanle2();
-                this.Hide();
-                k.ShowDialog();
-                this.Show();
-            }
-            else if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
-            {
-                k.ShowMenuStrip();
-                k.HideDangKy();
-                k.HideDangNhap();
-                k.HideDangKyKS();
-                k.HidePanle2();
-                this.Hide();
-                k.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                this.Hide();
-                k.ShowDialog();
-                this.Show();
-            }
-
+               if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
+                {
+                    
+                    k.ShowMenuStrip();
+                    k.HideDangKy();
+                    k.HideDangNhap();
+                    k.HidePanle2();
+                    k.diadiem = txt_DiaDiem.Text;
+               
+                    this.Hide();
+                    k.ShowDialog();
+                    this.Show();
+                }
+                else if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
+                {
+                    k.ShowMenuStrip();
+                    k.HideDangKy();
+                    k.HideDangNhap();
+                    k.HideDangKyKS();
+                    k.HidePanle2();
+                    k.diadiem = txt_DiaDiem.Text;
+                    this.Hide();
+                    k.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    k.diadiem = txt_DiaDiem.Text;
+                    this.Hide();
+                    k.ShowDialog();
+                    this.Show();
+                }
+                     
         }
         private void button2_Click(object sender, EventArgs e)
         {

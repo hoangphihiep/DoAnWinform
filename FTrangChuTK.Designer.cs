@@ -38,7 +38,7 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            txt_DiaDiem = new TextBox();
             numericUpDown2 = new NumericUpDown();
             numericUpDown1 = new NumericUpDown();
             label3 = new Label();
@@ -162,7 +162,7 @@
             panel1.AccessibleRole = AccessibleRole.IpAddress;
             panel1.BackColor = Color.WhiteSmoke;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txt_DiaDiem);
             panel1.Controls.Add(numericUpDown2);
             panel1.Controls.Add(numericUpDown1);
             panel1.Controls.Add(label3);
@@ -179,15 +179,15 @@
             panel1.TabIndex = 12;
             panel1.Paint += panel1_Paint;
             // 
-            // textBox1
+            // txt_DiaDiem
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(29, 47);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(161, 34);
-            textBox1.TabIndex = 26;
-            textBox1.Click += textBox1_Click;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_DiaDiem.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_DiaDiem.Location = new Point(29, 47);
+            txt_DiaDiem.Name = "txt_DiaDiem";
+            txt_DiaDiem.Size = new Size(161, 34);
+            txt_DiaDiem.TabIndex = 26;
+            txt_DiaDiem.Click += textBox1_Click;
+            txt_DiaDiem.TextChanged += textBox1_TextChanged;
             // 
             // numericUpDown2
             // 
@@ -498,7 +498,7 @@
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private Button btn_DangKyKS;
-        private TextBox textBox1;
+        private TextBox txt_DiaDiem;
         private Panel panel3;
         private Panel panel4;
         private Button btn_MyTaiKhoan;

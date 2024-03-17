@@ -104,16 +104,17 @@ namespace DuLich
         {
             string tk = txt_TenDangNhap.Text;
             string mk = txt_MatKhau.Text;
-            /*if (tk.Trim() == "")
+            if (tk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập tài khoản");
             else if (mk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập mật khẩu");
             else
-            {*/
-                //string query = "Select * from TaiKhoan where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
-                /*if(modify.accounts(query).Count() != 0) 
-                {*/
-                    //MessageBox.Show("Đăng nhập thành công");
+            {
+ 
+                string query = "Select * from TaiKhoan where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
+                if(modify.accounts(query).Count() != 0) 
+                {
+                    MessageBox.Show("Đăng nhập thành công");
                 if (y == 1)
                 {
                     hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
@@ -138,12 +139,12 @@ namespace DuLich
                     f.ShowDialog();
                     this.Close();
                 }       
-                //}
-                //else
-                //{
-                  //  MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác");
-                //}
-            //}
+            }
+                else
+                {
+                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác");
+                }
+            }
         }
     }
 }

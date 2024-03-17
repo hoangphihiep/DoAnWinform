@@ -51,10 +51,7 @@
             dateTimePicker2 = new DateTimePicker();
             lb_TimKiem = new TextBox();
             tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            panel4 = new Panel();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
+            tab_PhuHopNhat = new TabPage();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
@@ -85,9 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             panel5.SuspendLayout();
@@ -99,7 +93,7 @@
             panel_menu.Controls.Add(btn_Thoat);
             panel_menu.Controls.Add(btn_ThongTinTaiKhoan);
             panel_menu.Controls.Add(btn_KSDaDat);
-            panel_menu.Location = new Point(1109, 71);
+            panel_menu.Location = new Point(1108, 70);
             panel_menu.Name = "panel_menu";
             panel_menu.Size = new Size(198, 203);
             panel_menu.TabIndex = 35;
@@ -118,7 +112,7 @@
             // 
             // btn_Thoat
             // 
-            btn_Thoat.Location = new Point(0, 148);
+            btn_Thoat.Location = new Point(0, 146);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(196, 53);
             btn_Thoat.TabIndex = 33;
@@ -138,7 +132,7 @@
             // 
             // btn_KSDaDat
             // 
-            btn_KSDaDat.Location = new Point(0, 97);
+            btn_KSDaDat.Location = new Point(-1, 93);
             btn_KSDaDat.Name = "btn_KSDaDat";
             btn_KSDaDat.Size = new Size(196, 53);
             btn_KSDaDat.TabIndex = 32;
@@ -282,6 +276,7 @@
             btn_TimKiem.TabIndex = 27;
             btn_TimKiem.Text = "Tìm Kiếm";
             btn_TimKiem.UseVisualStyleBackColor = false;
+            btn_TimKiem.Click += btn_TimKiem_Click_1;
             // 
             // numericUpDown2
             // 
@@ -313,7 +308,7 @@
             // 
             // lb_TimKiem
             // 
-            lb_TimKiem.ForeColor = SystemColors.AppWorkspace;
+            lb_TimKiem.ForeColor = SystemColors.ControlText;
             lb_TimKiem.Location = new Point(13, 44);
             lb_TimKiem.Name = "lb_TimKiem";
             lb_TimKiem.Size = new Size(185, 27);
@@ -321,7 +316,7 @@
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tab_PhuHopNhat);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
@@ -332,51 +327,18 @@
             tabControl1.Size = new Size(998, 533);
             tabControl1.TabIndex = 18;
             // 
-            // tabPage1
+            // tab_PhuHopNhat
             // 
-            tabPage1.Controls.Add(panel4);
-            tabPage1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            tabPage1.Location = new Point(4, 50);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(990, 479);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Phù hợp nhất";
-            tabPage1.UseVisualStyleBackColor = true;
-            tabPage1.Click += tabPage1_Click;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Gainsboro;
-            panel4.Controls.Add(label2);
-            panel4.Controls.Add(pictureBox1);
-            panel4.ForeColor = SystemColors.ControlText;
-            panel4.Location = new Point(35, 24);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(917, 137);
-            panel4.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(353, 10);
-            label2.Name = "label2";
-            label2.Size = new Size(421, 38);
-            label2.TabIndex = 1;
-            label2.Text = "Melia Vinpearl Nha Trang Empir";
-            label2.Click += label2_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.ErrorImage = null;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(15, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(185, 111);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            tab_PhuHopNhat.AutoScroll = true;
+            tab_PhuHopNhat.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            tab_PhuHopNhat.Location = new Point(4, 50);
+            tab_PhuHopNhat.Name = "tab_PhuHopNhat";
+            tab_PhuHopNhat.Padding = new Padding(3);
+            tab_PhuHopNhat.Size = new Size(990, 479);
+            tab_PhuHopNhat.TabIndex = 0;
+            tab_PhuHopNhat.Text = "Phù hợp nhất";
+            tab_PhuHopNhat.UseVisualStyleBackColor = true;
+            tab_PhuHopNhat.Click += tabPage1_Click;
             // 
             // tabPage2
             // 
@@ -671,10 +633,6 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             panel5.ResumeLayout(false);
@@ -692,7 +650,7 @@
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private TabControl tabControl1;
-        private TabPage tabPage1;
+        private TabPage tab_PhuHopNhat;
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
@@ -704,9 +662,6 @@
         private Label lbl_max;
         private Button btn_DangNhap;
         private Button btn_DangKy;
-        private Panel panel4;
-        private PictureBox pictureBox1;
-        private Label label2;
         private Button btn_TimKiem;
         private Label label7;
         private Label label6;
