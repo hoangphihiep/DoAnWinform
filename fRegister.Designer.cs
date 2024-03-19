@@ -170,7 +170,7 @@
             btn_DangKy.BackColor = SystemColors.ControlLightLight;
             btn_DangKy.FlatStyle = FlatStyle.Popup;
             btn_DangKy.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_DangKy.Location = new Point(210, 634);
+            btn_DangKy.Location = new Point(215, 635);
             btn_DangKy.Name = "btn_DangKy";
             btn_DangKy.Size = new Size(237, 52);
             btn_DangKy.TabIndex = 11;

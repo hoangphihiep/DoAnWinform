@@ -111,7 +111,7 @@ namespace DuLich
             else
             {
  
-                string query = "Select * from TaiKhoan where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
                 if(modify.accounts(query).Count() != 0) 
                 {
                     MessageBox.Show("Đăng nhập thành công");

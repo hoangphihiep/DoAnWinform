@@ -163,3 +163,5 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.csproj.Up2Date
 C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.fHotel_Rental.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UKhungKetQua.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.F_ThemHinhanh.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.F_ThemHinhanh.resources
+C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.UKhungKetQua.resources
