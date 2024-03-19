@@ -104,42 +104,46 @@ namespace DuLich
         {
             string tk = txt_TenDangNhap.Text;
             string mk = txt_MatKhau.Text;
+            string name;
             if (tk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập tài khoản");
             else if (mk.Trim() == "")
                 MessageBox.Show("Vui lòng nhập mật khẩu");
             else
             {
- 
+
                 string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
-                if(modify.accounts(query).Count() != 0) 
+                var result = modify.accounts(query);
+                if (result.Count() != 0)
                 {
+                    name = result.FirstOrDefault().getHoTen.ToString();
                     MessageBox.Show("Đăng nhập thành công");
-                if (y == 1)
-                {
-                    hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-                    k.KT_DangNhap1++;
-                    k.ShowMenuStrip();
-                    k.HideDangNhap();
-                    k.HideDangKy();
-                    k.HidePanle2();
-                    this.Hide();
-                    k.ShowDialog();
-                    this.Close();
+                    if (y == 1)
+                    {
+                        hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+                        k.KT_DangNhap1++;
+                        k.ShowMenuStrip();
+                        k.HideDangNhap();
+                        k.HideDangKy();
+                        k.HidePanle2();
+                        this.Hide();
+                        k.ShowDialog();
+                        this.Close();   
+                    }
+                    else
+                    {
+                        FTrangChuTK f = new FTrangChuTK();
+                        f.rename = name;
+                        f.KT_DangNhap++;
+                        f.ShowMenuStrip();
+                        f.HideDangNhap();
+                        f.HideDangKy();
+                        f.HidePanel3();
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Close();
+                    }
                 }
-                else
-                {
-                    FTrangChuTK f = new FTrangChuTK();
-                    f.KT_DangNhap++;
-                    f.ShowMenuStrip();
-                    f.HideDangNhap();
-                    f.HideDangKy();
-                    f.HidePanel3();
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Close();
-                }       
-            }
                 else
                 {
                     MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác");

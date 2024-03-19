@@ -9,12 +9,14 @@ namespace DoAnDuLich
 {
     public partial class FTrangChuTK : Form
     {
+        public string rename;
         public FTrangChuTK()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            btn_MyTaiKhoan.Text = rename;
             if (pictureBox1.Visible == false)
             {
                 btn_next.Parent = pictureBox1;
