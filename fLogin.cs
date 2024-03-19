@@ -117,6 +117,7 @@ namespace DuLich
                 if (result.Count() != 0)
                 {
                     name = result.FirstOrDefault().getHoTen.ToString();
+                    tk = result.FirstOrDefault().getTenDangNhap.ToString();
                     MessageBox.Show("Đăng nhập thành công");
                     if (y == 1)
                     {
@@ -134,6 +135,8 @@ namespace DuLich
                     {
                         FTrangChuTK f = new FTrangChuTK();
                         f.rename = name;
+                        f.tentk = tk;
+                        f.mk = mk;
                         f.KT_DangNhap++;
                         f.ShowMenuStrip();
                         f.HideDangNhap();

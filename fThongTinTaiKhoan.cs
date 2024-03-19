@@ -12,6 +12,8 @@ namespace DuLich
 {
     public partial class fThongTinTaiKhoan : Form
     {
+        public string tentk;
+        public string mk;
         public fThongTinTaiKhoan()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-
+            uThongtin2.tentk = tentk;
+            uThongtin2.mk = mk;
         }
         public void ShowThongTinCanBan()
         {
@@ -121,6 +124,11 @@ namespace DuLich
                 HideHoSo();
                 dem++;
             }
+        }
+
+        private void uThongtin2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

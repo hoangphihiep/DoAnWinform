@@ -35,7 +35,6 @@
             lbl_PhuongThucTT = new Label();
             txt_SoDienThoai = new TextBox();
             txt_Email = new TextBox();
-            txt_PhuongThucThanhToan = new TextBox();
             btn_ChinhSua = new Button();
             txt_DiaChi = new TextBox();
             txt_ThanhPho = new TextBox();
@@ -43,6 +42,7 @@
             label2 = new Label();
             txt_Tinh = new TextBox();
             label3 = new Label();
+            checkedListBox3 = new CheckedListBox();
             SuspendLayout();
             // 
             // lbl_TenChuKhachSan
@@ -106,13 +106,6 @@
             txt_Email.Size = new Size(313, 27);
             txt_Email.TabIndex = 23;
             // 
-            // txt_PhuongThucThanhToan
-            // 
-            txt_PhuongThucThanhToan.Location = new Point(298, 397);
-            txt_PhuongThucThanhToan.Name = "txt_PhuongThucThanhToan";
-            txt_PhuongThucThanhToan.Size = new Size(313, 27);
-            txt_PhuongThucThanhToan.TabIndex = 24;
-            // 
             // btn_ChinhSua
             // 
             btn_ChinhSua.Location = new Point(676, 442);
@@ -173,10 +166,20 @@
             label3.TabIndex = 26;
             label3.Text = "Tỉnh";
             // 
+            // checkedListBox3
+            // 
+            checkedListBox3.FormattingEnabled = true;
+            checkedListBox3.Items.AddRange(new object[] { "Thẻ điện tử", "Tiền gửi trực tiếp vào ngân hàng" });
+            checkedListBox3.Location = new Point(298, 399);
+            checkedListBox3.Name = "checkedListBox3";
+            checkedListBox3.Size = new Size(313, 48);
+            checkedListBox3.TabIndex = 117;
+            // 
             // UHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(checkedListBox3);
             Controls.Add(txt_DiaChi);
             Controls.Add(txt_ThanhPho);
             Controls.Add(label1);
@@ -184,7 +187,6 @@
             Controls.Add(txt_Tinh);
             Controls.Add(label3);
             Controls.Add(btn_ChinhSua);
-            Controls.Add(txt_PhuongThucThanhToan);
             Controls.Add(txt_Email);
             Controls.Add(txt_SoDienThoai);
             Controls.Add(lbl_PhuongThucTT);
@@ -207,7 +209,6 @@
         private Label lbl_PhuongThucTT;
         private TextBox txt_SoDienThoai;
         private TextBox txt_Email;
-        private TextBox txt_PhuongThucThanhToan;
         private Button btn_ChinhSua;
         private TextBox txt_DiaChi;
         private TextBox txt_ThanhPho;
@@ -215,5 +216,6 @@
         private Label label2;
         private TextBox txt_Tinh;
         private Label label3;
+        private CheckedListBox checkedListBox3;
     }
 }

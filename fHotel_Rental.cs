@@ -30,6 +30,7 @@ namespace DuLich
         }
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Đăng tải hoàn tất ");
             if (kiemtratrang7 == 1)
             {

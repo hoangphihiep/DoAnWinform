@@ -101,6 +101,7 @@ namespace DuLich
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            DAO Dao = new DAO();
             Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
             if (!tk.checkInput(tk))
             {
@@ -109,7 +110,7 @@ namespace DuLich
             else
             {   
                 Modify modify = new Modify();
-                string query = "Select * from TaiKhoan where TenDangNhap = '" + tk.getTenDangNhap + "'";
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk.getTenDangNhap + "'";
                 if (modify.accounts(query).Count() == 0)
                 {
                     if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
@@ -120,7 +121,7 @@ namespace DuLich
                     {
                         if (cb_ToiDongY.Checked == true)
                         {
-                            tk.AddAccount(tk, "TaiKhoan");
+                            Dao.AddAccount(tk, "TaiKhoan1");
                             this.Close();
                         }
                         else

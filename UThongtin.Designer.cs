@@ -34,12 +34,12 @@
             lbl_Date = new Label();
             lbl_Email = new Label();
             lbl_Phone = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            txt_HoTen = new TextBox();
+            txt_GioiTinh = new TextBox();
+            txt_DiaChi = new TextBox();
+            txt_Email = new TextBox();
+            txt_SoDienThoai = new TextBox();
+            dtp_ngaythangnamsinh = new DateTimePicker();
             btn_ChinhSua = new Button();
             SuspendLayout();
             // 
@@ -103,47 +103,48 @@
             lbl_Phone.TabIndex = 5;
             lbl_Phone.Text = "Số điện thoại";
             // 
-            // textBox1
+            // txt_HoTen
             // 
-            textBox1.Location = new Point(286, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(281, 27);
-            textBox1.TabIndex = 6;
+            txt_HoTen.Location = new Point(286, 20);
+            txt_HoTen.Name = "txt_HoTen";
+            txt_HoTen.Size = new Size(281, 27);
+            txt_HoTen.TabIndex = 6;
             // 
-            // textBox2
+            // txt_GioiTinh
             // 
-            textBox2.Location = new Point(286, 95);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(281, 27);
-            textBox2.TabIndex = 7;
+            txt_GioiTinh.Location = new Point(286, 95);
+            txt_GioiTinh.Name = "txt_GioiTinh";
+            txt_GioiTinh.Size = new Size(281, 27);
+            txt_GioiTinh.TabIndex = 7;
+            txt_GioiTinh.TextChanged += txt_GioiTinh_TextChanged;
             // 
-            // textBox3
+            // txt_DiaChi
             // 
-            textBox3.Location = new Point(286, 174);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(281, 27);
-            textBox3.TabIndex = 8;
+            txt_DiaChi.Location = new Point(286, 174);
+            txt_DiaChi.Name = "txt_DiaChi";
+            txt_DiaChi.Size = new Size(281, 27);
+            txt_DiaChi.TabIndex = 8;
             // 
-            // textBox5
+            // txt_Email
             // 
-            textBox5.Location = new Point(286, 339);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(281, 27);
-            textBox5.TabIndex = 10;
+            txt_Email.Location = new Point(286, 339);
+            txt_Email.Name = "txt_Email";
+            txt_Email.Size = new Size(281, 27);
+            txt_Email.TabIndex = 10;
             // 
-            // textBox6
+            // txt_SoDienThoai
             // 
-            textBox6.Location = new Point(286, 430);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(281, 27);
-            textBox6.TabIndex = 11;
+            txt_SoDienThoai.Location = new Point(286, 430);
+            txt_SoDienThoai.Name = "txt_SoDienThoai";
+            txt_SoDienThoai.Size = new Size(281, 27);
+            txt_SoDienThoai.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dtp_ngaythangnamsinh
             // 
-            dateTimePicker1.Location = new Point(286, 256);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(281, 27);
-            dateTimePicker1.TabIndex = 12;
+            dtp_ngaythangnamsinh.Location = new Point(286, 256);
+            dtp_ngaythangnamsinh.Name = "dtp_ngaythangnamsinh";
+            dtp_ngaythangnamsinh.Size = new Size(281, 27);
+            dtp_ngaythangnamsinh.TabIndex = 12;
             // 
             // btn_ChinhSua
             // 
@@ -153,18 +154,19 @@
             btn_ChinhSua.TabIndex = 13;
             btn_ChinhSua.Text = "Chỉnh sửa";
             btn_ChinhSua.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Click += btn_ChinhSua_Click;
             // 
             // UThongtin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btn_ChinhSua);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(dtp_ngaythangnamsinh);
+            Controls.Add(txt_SoDienThoai);
+            Controls.Add(txt_Email);
+            Controls.Add(txt_DiaChi);
+            Controls.Add(txt_GioiTinh);
+            Controls.Add(txt_HoTen);
             Controls.Add(lbl_Phone);
             Controls.Add(lbl_Email);
             Controls.Add(lbl_Date);
@@ -173,6 +175,7 @@
             Controls.Add(lbl_HoTen);
             Name = "UThongtin";
             Size = new Size(824, 606);
+            Load += UThongtin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,12 +188,12 @@
         private Label lbl_Date;
         private Label lbl_Email;
         private Label lbl_Phone;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txt_HoTen;
+        private TextBox txt_GioiTinh;
+        private TextBox txt_DiaChi;
+        private TextBox txt_Email;
+        private TextBox txt_SoDienThoai;
+        private DateTimePicker dtp_ngaythangnamsinh;
         private Button btn_ChinhSua;
     }
 }

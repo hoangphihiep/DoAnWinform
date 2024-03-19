@@ -206,6 +206,7 @@
             uThongtin2.Name = "uThongtin2";
             uThongtin2.Size = new Size(903, 611);
             uThongtin2.TabIndex = 1;
+            uThongtin2.Load += uThongtin2_Load;
             // 
             // uThongtin1
             // 

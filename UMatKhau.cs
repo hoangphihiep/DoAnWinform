@@ -35,7 +35,8 @@ namespace DuLich
                 MessageBox.Show("Vui lòng nhập mật khẩu mới khác mật khẩu cũ");
             else
             {
-                string query = "Select * from TaiKhoan where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk + "' and MatKhau = '" + mk + "' ";
+                DAO Dao = new DAO();
                 List<Account> list_accounts = modify.accounts(query);
                 if (list_accounts.Count() != 0)
                 {
@@ -50,7 +51,7 @@ namespace DuLich
                     }
                     account.setMatKhau(txt_NhapMatKhauMoi.Text);
                     if (txt_NhapMatKhauMoi.Text == txt_NhapLaiMatKhau.Text)
-                        account.UpdateAccount(account, "TaiKhoan");
+                        Dao.UpdateAccount(account, "TaiKhoan1");
                     else
                         MessageBox.Show("Mật khẩu nhập lại không chính xác");
 
