@@ -717,6 +717,8 @@ namespace DoAnDuLich
             {
                 int t = 0;
                 fHotel_Rental f = new fHotel_Rental();
+                f.tk = mk;
+                f.mk = mk;
                 KT_DangNhap++;
                 f.kiemtratrang7 = t;
                 this.Hide();

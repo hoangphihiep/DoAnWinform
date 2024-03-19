@@ -101,7 +101,7 @@ namespace DuLich
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            DAO Dao = new DAO();
+            Account_DAO Dao = new Account_DAO();
             Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
             if (!tk.checkInput(tk))
             {

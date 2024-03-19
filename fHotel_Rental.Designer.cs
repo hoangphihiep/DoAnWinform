@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fHotel_Rental));
             pn_Goc = new Panel();
             pn_ThongTin = new Panel();
+            label36 = new Label();
             lbl_TenChuKhachSan = new Label();
             txt_TenChuKhachSan = new TextBox();
             btn_QuayLai = new Button();
-            checkedListBox3 = new CheckedListBox();
+            clb_ThanhToan = new CheckedListBox();
             button1 = new Button();
             btn_TiepTheo = new Button();
             label27 = new Label();
@@ -94,10 +95,10 @@
             label22 = new Label();
             label23 = new Label();
             label24 = new Label();
-            textBox8 = new TextBox();
+            txt_DiaChi2 = new TextBox();
             lbl_HinhAnhRatQuanTrong = new Label();
             lbl_ChiTietPhongO = new Label();
-            cbb_TieuBangTinh = new ComboBox();
+            cbb_Tinh2 = new ComboBox();
             label26 = new Label();
             clb_DichVuKhachSan = new CheckedListBox();
             cbb_ThanhPho = new ComboBox();
@@ -182,7 +183,6 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel6 = new Panel();
-            label36 = new Label();
             pn_Goc.SuspendLayout();
             pn_ThongTin.SuspendLayout();
             tab_ChiTietPhongO.SuspendLayout();
@@ -206,7 +206,7 @@
             pn_ThongTin.Controls.Add(lbl_TenChuKhachSan);
             pn_ThongTin.Controls.Add(txt_TenChuKhachSan);
             pn_ThongTin.Controls.Add(btn_QuayLai);
-            pn_ThongTin.Controls.Add(checkedListBox3);
+            pn_ThongTin.Controls.Add(clb_ThanhToan);
             pn_ThongTin.Controls.Add(button1);
             pn_ThongTin.Controls.Add(btn_TiepTheo);
             pn_ThongTin.Controls.Add(label27);
@@ -216,10 +216,10 @@
             pn_ThongTin.Controls.Add(label28);
             pn_ThongTin.Controls.Add(lbl_Anh);
             pn_ThongTin.Controls.Add(tab_ChiTietPhongO);
-            pn_ThongTin.Controls.Add(textBox8);
+            pn_ThongTin.Controls.Add(txt_DiaChi2);
             pn_ThongTin.Controls.Add(lbl_HinhAnhRatQuanTrong);
             pn_ThongTin.Controls.Add(lbl_ChiTietPhongO);
-            pn_ThongTin.Controls.Add(cbb_TieuBangTinh);
+            pn_ThongTin.Controls.Add(cbb_Tinh2);
             pn_ThongTin.Controls.Add(label26);
             pn_ThongTin.Controls.Add(clb_DichVuKhachSan);
             pn_ThongTin.Controls.Add(cbb_ThanhPho);
@@ -297,6 +297,16 @@
             pn_ThongTin.TabIndex = 0;
             pn_ThongTin.Paint += pn_ThongTin_Paint;
             // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label36.Location = new Point(787, 580);
+            label36.Name = "label36";
+            label36.Size = new Size(45, 28);
+            label36.TabIndex = 126;
+            label36.Text = "Sao";
+            // 
             // lbl_TenChuKhachSan
             // 
             lbl_TenChuKhachSan.AutoSize = true;
@@ -327,14 +337,14 @@
             btn_QuayLai.Text = "QUAY LẠI";
             btn_QuayLai.UseVisualStyleBackColor = false;
             // 
-            // checkedListBox3
+            // clb_ThanhToan
             // 
-            checkedListBox3.FormattingEnabled = true;
-            checkedListBox3.Items.AddRange(new object[] { "Thẻ điện tử", "Tiền gửi trực tiếp vào ngân hàng" });
-            checkedListBox3.Location = new Point(42, 3541);
-            checkedListBox3.Name = "checkedListBox3";
-            checkedListBox3.Size = new Size(413, 48);
-            checkedListBox3.TabIndex = 116;
+            clb_ThanhToan.FormattingEnabled = true;
+            clb_ThanhToan.Items.AddRange(new object[] { "Thẻ điện tử", "Tiền gửi trực tiếp vào ngân hàng" });
+            clb_ThanhToan.Location = new Point(42, 3541);
+            clb_ThanhToan.Name = "clb_ThanhToan";
+            clb_ThanhToan.Size = new Size(413, 48);
+            clb_ThanhToan.TabIndex = 116;
             // 
             // button1
             // 
@@ -967,13 +977,13 @@
             label24.TabIndex = 59;
             label24.Text = "Thiết lập phòng";
             // 
-            // textBox8
+            // txt_DiaChi2
             // 
-            textBox8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox8.Location = new Point(180, 3396);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(301, 30);
-            textBox8.TabIndex = 111;
+            txt_DiaChi2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_DiaChi2.Location = new Point(180, 3396);
+            txt_DiaChi2.Name = "txt_DiaChi2";
+            txt_DiaChi2.Size = new Size(301, 30);
+            txt_DiaChi2.TabIndex = 111;
             // 
             // lbl_HinhAnhRatQuanTrong
             // 
@@ -997,15 +1007,15 @@
             lbl_ChiTietPhongO.TabIndex = 76;
             lbl_ChiTietPhongO.Text = "Chi tiết phòng ở\r\n";
             // 
-            // cbb_TieuBangTinh
+            // cbb_Tinh2
             // 
-            cbb_TieuBangTinh.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            cbb_TieuBangTinh.FormattingEnabled = true;
-            cbb_TieuBangTinh.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
-            cbb_TieuBangTinh.Location = new Point(42, 3335);
-            cbb_TieuBangTinh.Name = "cbb_TieuBangTinh";
-            cbb_TieuBangTinh.Size = new Size(229, 31);
-            cbb_TieuBangTinh.TabIndex = 110;
+            cbb_Tinh2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            cbb_Tinh2.FormattingEnabled = true;
+            cbb_Tinh2.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
+            cbb_Tinh2.Location = new Point(42, 3335);
+            cbb_Tinh2.Name = "cbb_Tinh2";
+            cbb_Tinh2.Size = new Size(229, 31);
+            cbb_Tinh2.TabIndex = 110;
             // 
             // label26
             // 
@@ -1826,16 +1836,6 @@
             panel6.Size = new Size(1, 42);
             panel6.TabIndex = 11;
             // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label36.Location = new Point(787, 580);
-            label36.Name = "label36";
-            label36.Size = new Size(45, 28);
-            label36.TabIndex = 126;
-            label36.Text = "Sao";
-            // 
             // fHotel_Rental
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1996,8 +1996,8 @@
         private Label label27;
         private Label lbl_QuyDoiTacNhanThanhToan;
         private Label label28;
-        private TextBox textBox8;
-        private ComboBox cbb_TieuBangTinh;
+        private TextBox txt_DiaChi2;
+        private ComboBox cbb_Tinh2;
         private ComboBox cbb_ThanhPho;
         private ComboBox cbb_QuocGiaDiaDiem;
         private Label label29;
@@ -2010,7 +2010,7 @@
         private Label lbl_SoDienThoaiLienHe;
         private Label label31;
         private Button button1;
-        private CheckedListBox checkedListBox3;
+        private CheckedListBox clb_ThanhToan;
         private Button btn_QuayLai;
         private Button btn_TiepTheo;
         private Label lbl_TenChuKhachSan;

@@ -17,7 +17,7 @@ namespace DuLich
             return new SqlConnection(Connection);
         }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        public void ThucThi(Account account, string sql)
+        public void ThucThi<T>(T account, string sql)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace DuLich
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
-                    MessageBox.Show("Thành công");
+                    
                 }
             }
             catch (Exception ex)

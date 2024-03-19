@@ -46,7 +46,7 @@ namespace DuLich
             else
             {
                 string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tentk + "'";
-                DAO Dao = new DAO();
+                Account_DAO Dao = new Account_DAO();
                 List<Account> list_accounts = modify.accounts(query);
                 if (list_accounts.Count() != 0)
                 {
