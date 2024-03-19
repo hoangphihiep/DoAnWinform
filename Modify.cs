@@ -44,6 +44,21 @@ namespace DuLich
             }
             return accounts;
         }
-        
+        public List<HoSo> HoSo(string table)
+        {
+            List<HoSo> accounts = new List<HoSo>();
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                cmd = new SqlCommand(table, conn);
+                data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    accounts.Add(new HoSo(data.GetInt32(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7), data.GetInt32(9), data.GetInt32(9)));
+                }
+                conn.Close();
+            }
+            return accounts;
+        }
     }
 }

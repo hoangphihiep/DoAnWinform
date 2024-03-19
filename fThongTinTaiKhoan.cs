@@ -105,7 +105,6 @@ namespace DuLich
         int dem = 0;
         private void btn_ThongTinKhachSan_Click(object sender, EventArgs e)
         {
-
             if (dem % 2 == 0)
             {
                 ShowThongTinCanBan();

@@ -12,6 +12,7 @@ namespace DoAnDuLich
         public string rename;
         public string tentk;
         public string mk;
+        public string MaKS;
         public FTrangChuTK()
         {
             InitializeComponent();
