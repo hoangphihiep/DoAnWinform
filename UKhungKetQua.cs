@@ -21,7 +21,11 @@ namespace DuLich
         {
             fHotel_Details f = new fHotel_Details();
             //this.Hide();
+            f.tenKS = lbl_TenKhachSan.Text;
+            f.tenViTri = lbl_ViTri.Text;
+            f.hinhanh = hinhanh;
             f.ShowDialog();
+          
             this.Show();
         }
 
@@ -34,7 +38,7 @@ namespace DuLich
             this.Size = new Size(917, 137);
             this.Location = new Point(35, viTri);
             lbl_TenKhachSan.Size = new Size(437, 38);
-            lbl_TenKhachSan.Location = new Point(353, 10);
+            lbl_TenKhachSan.Location = new Point(200, 10);
             pictureBox1.Size = new Size(185, 111);
             pictureBox1.Location = new Point(15, 10);
             lbl_ViTri.Size = new Size(56, 20);

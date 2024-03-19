@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,10 +41,54 @@ namespace DuLich
             f.ShowDialog();
             this.Show();
         }
-
+        public string tenKS;
+        public string tenViTri;
+        public byte[] hinhanh;
         private void fHotel_Details_Load(object sender, EventArgs e)
         {
-
+            label2.Text = tenKS;
+            label1.Text = tenViTri;
+            if (hinhanh != null)
+            {
+                using (MemoryStream ms = new MemoryStream(hinhanh))
+                {
+                    pictureBox2.Image = Image.FromStream(ms);
+                }
+            }
+            string query = "SELECT * FROM KhachSan WHERE TENKS = @tenKS";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@tenKS", tenKS);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            int i = 0;
+            while (reader.Read())
+            {
+                label1.Text = reader.GetString(reader.GetOrdinal("DIACHI"));
+                int giaColumnIndex = reader.GetOrdinal("GIA");
+                if (!reader.IsDBNull(giaColumnIndex))
+                {
+                    double gia = reader.GetDouble(giaColumnIndex);
+                    lbl_Tien.Text = gia.ToString() + "VNĐ";
+                }
+                else
+                {
+                    lbl_Tien.Text = "Giá trị không tồn tại";
+                }
+                int giaColumnIndex1 = reader.GetOrdinal("DANHGIA");
+                if (!reader.IsDBNull(giaColumnIndex1))
+                {
+                    double danhgia = reader.GetDouble(giaColumnIndex1);
+                    lbl_DanhGia.Text = danhgia.ToString();
+                }
+                else
+                {
+                    lbl_DanhGia.Text = "Giá trị không tồn tại";
+                }
+                i++;
+            }
+            conn.Close();
         }
 
         private void fHotel_Details_Shown(object sender, EventArgs e)
@@ -105,6 +150,11 @@ namespace DuLich
             DeleteColor();
             panelMain.VerticalScroll.Value = 1750;
             lblComment.ForeColor = Color.DarkTurquoise;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
