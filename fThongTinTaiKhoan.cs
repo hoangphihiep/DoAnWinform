@@ -23,6 +23,9 @@ namespace DuLich
         {
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
+            uThongTinKhachSan1.tentk = tentk;
+            uThongtin1.tentk = tentk;
+            uViTri1.tentk = tentk;
         }
         public void ShowThongTinCanBan()
         {

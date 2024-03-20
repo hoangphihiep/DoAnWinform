@@ -30,7 +30,6 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
             txt_ThemKhach = new TextBox();
             lbl_ThemKhach = new Label();
             txt_GiaMoiDem = new TextBox();
@@ -42,6 +41,7 @@
             lbl_SucChua = new Label();
             lbl_PhongTam = new Label();
             lbl_KichThuoc = new Label();
+            tabPage2 = new TabPage();
             textBox1 = new TextBox();
             label1 = new Label();
             textBox2 = new TextBox();
@@ -89,28 +89,7 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Phòng Đơn";
             tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(textBox1);
-            tabPage2.Controls.Add(label1);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(textBox3);
-            tabPage2.Controls.Add(textBox4);
-            tabPage2.Controls.Add(textBox5);
-            tabPage2.Controls.Add(button1);
-            tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(label3);
-            tabPage2.Controls.Add(label4);
-            tabPage2.Controls.Add(label5);
-            tabPage2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(771, 569);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Phòng đôi";
-            tabPage2.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // txt_ThemKhach
             // 
@@ -206,6 +185,28 @@
             lbl_KichThuoc.Size = new Size(98, 25);
             lbl_KichThuoc.TabIndex = 28;
             lbl_KichThuoc.Text = "Kích thước";
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(textBox3);
+            tabPage2.Controls.Add(textBox4);
+            tabPage2.Controls.Add(textBox5);
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label5);
+            tabPage2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(771, 569);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Phòng đôi";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
