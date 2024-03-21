@@ -70,21 +70,14 @@ namespace DuLich
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
                     double gia = reader.GetDouble(giaColumnIndex);
-                    lbl_Tien.Text = gia.ToString() + "VNĐ";
-                }
-                else
-                {
-                    lbl_Tien.Text = "Giá trị không tồn tại";
+                    lbl_Tien.Text = gia.ToString() + " VNĐ";
                 }
                 int giaColumnIndex1 = reader.GetOrdinal("DANHGIA");
                 if (!reader.IsDBNull(giaColumnIndex1))
                 {
                     double danhgia = reader.GetDouble(giaColumnIndex1);
                     lbl_DanhGia.Text = danhgia.ToString();
-                }
-                else
-                {
-                    lbl_DanhGia.Text = "Giá trị không tồn tại";
+                    label93.Text = danhgia.ToString();
                 }
                 i++;
             }
