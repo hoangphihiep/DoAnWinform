@@ -145,6 +145,7 @@
             btn_ChinhSua.TabIndex = 32;
             btn_ChinhSua.Text = "Chỉnh sửa";
             btn_ChinhSua.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Click += btn_ChinhSua_Click;
             // 
             // lbl_GiaMoiDem
             // 

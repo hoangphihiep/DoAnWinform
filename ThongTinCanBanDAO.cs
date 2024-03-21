@@ -16,7 +16,7 @@ namespace DuLich
         }
         public void Update(ThongTinCanBan acc, string TenQuanHe)
         {
-            string SQL = string.Format("UPDATE {0} SET TENKH = '{1}', MOTA = '{2}', KCTHANHPHO = '{3}', KCSANBAY = '{4}', SAO = '{5}' WHERE MAKS = '{6}' AND TK = '{7}'", TenQuanHe, acc.TENKH, acc.MOTA, acc.KCSANBAY, acc.KCSANBAY, acc.SAO, acc.MAKS, acc.TK);
+            string SQL = string.Format("UPDATE {0} SET TENKH = '{1}', MOTA = '{2}', KCTHANHPHO = '{3}', KCSANBAY = '{4}', SAO = '{5}' WHERE MAKS = '{6}' AND TK = '{7}'", TenQuanHe, acc.TENKH, acc.MOTA, acc.KCTHANHPHO, acc.KCSANBAY, acc.SAO, acc.MAKS, acc.TK);
             connection.ThucThi(acc, SQL);
         }
     }

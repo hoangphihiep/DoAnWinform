@@ -37,14 +37,14 @@
             txt_Email = new TextBox();
             btn_ChinhSua = new Button();
             txt_DiaChi = new TextBox();
-            txt_ThanhPho = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            txt_Tinh = new TextBox();
             label3 = new Label();
             checkedListBox3 = new CheckedListBox();
             txt_HoVaTenChuKhachSan = new TextBox();
             lbl_HoVaTenChuKhachSan = new Label();
+            cbb_Tinh = new ComboBox();
+            cbb_ThanhPho = new ComboBox();
             SuspendLayout();
             // 
             // lbl_MaKS
@@ -126,13 +126,6 @@
             txt_DiaChi.Size = new Size(313, 27);
             txt_DiaChi.TabIndex = 31;
             // 
-            // txt_ThanhPho
-            // 
-            txt_ThanhPho.Location = new Point(298, 319);
-            txt_ThanhPho.Name = "txt_ThanhPho";
-            txt_ThanhPho.Size = new Size(313, 27);
-            txt_ThanhPho.TabIndex = 30;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -152,13 +145,6 @@
             label2.Size = new Size(99, 25);
             label2.TabIndex = 28;
             label2.Text = "Thành phố";
-            // 
-            // txt_Tinh
-            // 
-            txt_Tinh.Location = new Point(298, 262);
-            txt_Tinh.Name = "txt_Tinh";
-            txt_Tinh.Size = new Size(313, 27);
-            txt_Tinh.TabIndex = 27;
             // 
             // label3
             // 
@@ -196,18 +182,38 @@
             lbl_HoVaTenChuKhachSan.TabIndex = 118;
             lbl_HoVaTenChuKhachSan.Text = "Họ và tên chủ khách sạn\r\n";
             // 
+            // cbb_Tinh
+            // 
+            cbb_Tinh.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            cbb_Tinh.FormattingEnabled = true;
+            cbb_Tinh.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
+            cbb_Tinh.Location = new Point(298, 258);
+            cbb_Tinh.Name = "cbb_Tinh";
+            cbb_Tinh.Size = new Size(313, 31);
+            cbb_Tinh.TabIndex = 121;
+            // 
+            // cbb_ThanhPho
+            // 
+            cbb_ThanhPho.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            cbb_ThanhPho.FormattingEnabled = true;
+            cbb_ThanhPho.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
+            cbb_ThanhPho.Location = new Point(298, 320);
+            cbb_ThanhPho.Name = "cbb_ThanhPho";
+            cbb_ThanhPho.Size = new Size(313, 31);
+            cbb_ThanhPho.TabIndex = 120;
+            // 
             // UHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbb_Tinh);
+            Controls.Add(cbb_ThanhPho);
             Controls.Add(txt_HoVaTenChuKhachSan);
             Controls.Add(lbl_HoVaTenChuKhachSan);
             Controls.Add(checkedListBox3);
             Controls.Add(txt_DiaChi);
-            Controls.Add(txt_ThanhPho);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(txt_Tinh);
             Controls.Add(label3);
             Controls.Add(btn_ChinhSua);
             Controls.Add(txt_Email);
@@ -234,13 +240,13 @@
         private TextBox txt_Email;
         private Button btn_ChinhSua;
         private TextBox txt_DiaChi;
-        private TextBox txt_ThanhPho;
         private Label label1;
         private Label label2;
-        private TextBox txt_Tinh;
         private Label label3;
         private CheckedListBox checkedListBox3;
         private TextBox txt_HoVaTenChuKhachSan;
         private Label lbl_HoVaTenChuKhachSan;
+        private ComboBox cbb_Tinh;
+        private ComboBox cbb_ThanhPho;
     }
 }
