@@ -178,5 +178,27 @@ namespace DuLich
         {
 
         }
+
+        private void tab_ChiTietPhongO_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            var lastIndex = this.tab_ChiTietPhongO.TabCount - 1;
+            if (this.tab_ChiTietPhongO.GetTabRect(lastIndex).Contains(e.Location))
+            {
+                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "New Tab");
+                this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
+            }
+        }
+
+        private void tab_ChiTietPhongO_Selected(object sender, TabControlEventArgs e)
+        {
+
+        }
+
+        private void tab_ChiTietPhongO_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPageIndex == this.tab_ChiTietPhongO.TabCount - 1)
+                e.Cancel = true;
+        }
     }
 }
