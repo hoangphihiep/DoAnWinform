@@ -35,6 +35,7 @@ namespace DuLich
                 thongTinCanBan.KCSANBAY = int.Parse(txt_KhoangCachSB.Text);
                 thongTinCanBan.SAO = int.Parse(cbb_DanhGiaSao.Text);
                 Dao.Update(thongTinCanBan, "TaiKhoan1");
+                MessageBox.Show("Chỉnh sửa thành công");
             }
 
         }

@@ -57,6 +57,7 @@ namespace DuLich
                     account.setSoDienThoai(sdt);
                     account.setNgayThangNamSinh(ngaythangnamsinh);
                     Dao.UpdateAccount(account, "TaiKhoan1");
+                    MessageBox.Show("Chỉnh sửa thành công");
                 }
             }
         }

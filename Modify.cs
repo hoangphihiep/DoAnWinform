@@ -108,6 +108,22 @@ namespace DuLich
             }
             return accounts;
         }
+        public List<KhachSanThuocTaiKhoan> KhachSanThuocTaiKhoan(string table)
+        {
+            List<KhachSanThuocTaiKhoan> accounts = new List<KhachSanThuocTaiKhoan>();
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                cmd = new SqlCommand(table, conn);
+                data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    accounts.Add(new KhachSanThuocTaiKhoan(data.GetString(0), data.GetInt32(1)));
+                }
+                conn.Close();
+            }
+            return accounts;
+        }
         
     }
 }

@@ -51,7 +51,10 @@ namespace DuLich
                     }
                     account.setMatKhau(txt_NhapMatKhauMoi.Text);
                     if (txt_NhapMatKhauMoi.Text == txt_NhapLaiMatKhau.Text)
+                    {
                         Dao.UpdateAccount(account, "TaiKhoan1");
+                        MessageBox.Show("Chỉnh sửa thành công");
+                    }
                     else
                         MessageBox.Show("Mật khẩu nhập lại không chính xác");
 

@@ -122,6 +122,7 @@ namespace DuLich
                         if (cb_ToiDongY.Checked == true)
                         {
                             Dao.AddAccount(tk, "TaiKhoan1");
+                            MessageBox.Show("Đăng kí thành công");
                             this.Close();
                         }
                         else

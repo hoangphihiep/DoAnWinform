@@ -33,9 +33,10 @@ namespace DuLich
             if (list_HoSo.Count() != 0)
             {
                 viTri.DIACHI = txt_DiaChi.Text;
-                viTri.TENTHANHPHO = txt_ThanhPho.Text;
-                viTri.TINH = txt_Tinh.Text;
+                viTri.TENTHANHPHO = cbb_ThanhPho.Text;
+                viTri.TINH = cbb_Tinh.Text;
                 Dao.Update(viTri, "ViTri");
+                MessageBox.Show("Chỉnh sửa thành công");
             }
         }
 

@@ -49,6 +49,7 @@ namespace DuLich
                 int amThuc2 = clb_AmThuc.GetItemChecked(2) ? 1 : 0;
 
                 Dao.Update(tienNghi, "TIENGNHI");
+                MessageBox.Show("Chỉnh sửa thành công");
             }
         }
 
