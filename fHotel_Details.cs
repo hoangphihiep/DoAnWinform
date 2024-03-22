@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace DuLich
 {
@@ -52,7 +53,7 @@ namespace DuLich
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))
                 {
-                    pictureBox2.Image = Image.FromStream(ms);
+                    ptbTotalImage1.Image = Image.FromStream(ms);
                 }
             }
             string query = "SELECT * FROM KhachSan WHERE TENKS = @tenKS";
@@ -126,11 +127,6 @@ namespace DuLich
             lblComment.ForeColor = Color.DarkTurquoise;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblConvenientDetail_Click(object sender, EventArgs e)
         {
             DeleteColor();
@@ -148,6 +144,11 @@ namespace DuLich
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRoomChoose_Click(object sender, EventArgs e)
+        {
+            ptbTotalImage1.Image = Properties.Resources.khachsan1;
         }
     }
 }

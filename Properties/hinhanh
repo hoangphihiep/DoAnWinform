@@ -118,28 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-summer-travel-exclusive-seaside-background-material-picture-image_909955" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-summer-travel-exclusive-seaside-background-material-picture-image_909955.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-summer-travel-exclusive-seaside-background-material-picture-image_9099551" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-summer-travel-exclusive-seaside-background-material-picture-image_9099551.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="z4899699868584_aa8e46fd9265d476eadec8b8d60a6238" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z4899699868584_aa8e46fd9265d476eadec8b8d60a6238.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dulichPhuQuoc-1649392573-9234-1649405369" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dulichPhuQuoc-1649392573-9234-1649405369.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="khachsan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\hinhanh\khachsan1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>componentResourcesManager winform là gì</value>
+    <value>..\Resources\khachsan1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
