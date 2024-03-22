@@ -93,6 +93,16 @@ namespace DuLich.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap khachsan1 {
+            get {
+                object obj = ResourceManager.GetObject("khachsan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_summer_travel_exclusive_seaside_background_material_picture_image_909955 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-summer-travel-exclusive-seaside-background-material-picture-image_909955", resourceCulture);
@@ -108,6 +118,15 @@ namespace DuLich.Properties {
                 object obj = ResourceManager.GetObject("pngtree-summer-travel-exclusive-seaside-background-material-picture-image_9099551" +
                         "", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to componentResourcesManager winform là gì.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         
