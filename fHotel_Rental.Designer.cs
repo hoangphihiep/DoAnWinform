@@ -47,6 +47,7 @@
             tab_ChiTietPhongO = new TabControl();
             tabPage1 = new TabPage();
             label21 = new Label();
+            tabPage2 = new TabPage();
             txt_DiaChi2 = new TextBox();
             lbl_HinhAnhRatQuanTrong = new Label();
             lbl_ChiTietPhongO = new Label();
@@ -124,7 +125,7 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel6 = new Panel();
-            tabPage2 = new TabPage();
+            phong1 = new Phong();
             pn_Goc.SuspendLayout();
             pn_ThongTin.SuspendLayout();
             tab_ChiTietPhongO.SuspendLayout();
@@ -377,6 +378,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(phong1);
             tabPage1.Controls.Add(label21);
             tabPage1.Location = new Point(4, 50);
             tabPage1.Name = "tabPage1";
@@ -395,6 +397,15 @@
             label21.Name = "label21";
             label21.Size = new Size(0, 31);
             label21.TabIndex = 63;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 50);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(192, 46);
+            tabPage2.TabIndex = 4;
+            tabPage2.Text = "+";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // txt_DiaChi2
             // 
@@ -1145,14 +1156,13 @@
             panel6.Size = new Size(1, 42);
             panel6.TabIndex = 11;
             // 
-            // tabPage2
+            // phong1
             // 
-            tabPage2.Location = new Point(4, 50);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Size = new Size(1117, 816);
-            tabPage2.TabIndex = 4;
-            tabPage2.Text = "+";
-            tabPage2.UseVisualStyleBackColor = true;
+            phong1.Location = new Point(9, 6);
+            phong1.Margin = new Padding(6, 6, 6, 6);
+            phong1.Name = "phong1";
+            phong1.Size = new Size(1115, 801);
+            phong1.TabIndex = 64;
             // 
             // fHotel_Rental
             // 
@@ -1299,5 +1309,6 @@
         private Panel panel6;
         private Label label36;
         private TabPage tabPage2;
+        private Phong phong1;
     }
 }

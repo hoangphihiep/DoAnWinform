@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,6 +54,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fHotel_Rental.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
+              "RelativeDocumentMoniker": "fHotel_Rental.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs [Design]*",
+              "RelativeToolTip": "fHotel_Rental.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T01:15:16.101Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Phong.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Phong.cs",
+              "RelativeDocumentMoniker": "Phong.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Phong.cs",
+              "RelativeToolTip": "Phong.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAzwFgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T01:03:44.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fHotel_Rental.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
+              "RelativeDocumentMoniker": "fHotel_Rental.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs*",
+              "RelativeToolTip": "fHotel_Rental.cs*",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAcwM8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T00:22:32.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Phong.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Phong.cs",
@@ -53,19 +99,7 @@
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Phong.cs [Design]",
               "RelativeToolTip": "Phong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T13:30:54.519Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fHotel_Rental.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
-              "RelativeDocumentMoniker": "fHotel_Rental.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs [Design]",
-              "RelativeToolTip": "fHotel_Rental.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T01:00:40.906Z",
+              "WhenOpened": "2024-03-21T13:39:58.517Z",
               "EditorCaption": " [Design]"
             }
           ]

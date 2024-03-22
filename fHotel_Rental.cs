@@ -200,5 +200,11 @@ namespace DuLich
             if (e.TabPageIndex == this.tab_ChiTietPhongO.TabCount - 1)
                 e.Cancel = true;
         }
+        byte[] ImageToByterArray(Image image)
+        {
+            MemoryStream m = new MemoryStream();
+            image.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+            return m.ToArray();
+        }
     }
 }
