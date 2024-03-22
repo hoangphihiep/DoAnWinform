@@ -145,7 +145,74 @@ namespace DuLich
             btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             //MessageBox.Show(diadiem);
-            string query = "SELECT * FROM ThongTinTimKiem WHERE TenViTri = @diadiem";
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+            data.Add("An Giang");
+            data.Add("Bà rịa Vũng Tàu");
+            data.Add("Bạc Liêu");
+            data.Add("Bắc Giang");
+            data.Add("Bắc Kạn");
+            data.Add("Bắc Ninh");
+            data.Add("Bến Tre");
+            data.Add("Bình Dương");
+            data.Add("Bình Định");
+            data.Add("Bình Phước");
+            data.Add("Bình Thuận");
+            data.Add("Cà Mau");
+            data.Add("Cao Bằng");
+            data.Add("Cần Thơ");
+            data.Add("Đà Nẵng");
+            data.Add("Đắk Lắk");
+            data.Add("Đắk Nông");
+            data.Add("Điện Biên");
+            data.Add("Đồng Nai");
+            data.Add("Đồng Tháp");
+            data.Add("Gia Lai");
+            data.Add("Hà Giang");
+            data.Add("Hà Nam");
+            data.Add("Hà Nội");
+            data.Add("Hà Tĩnh");
+            data.Add("Hải Dương");
+            data.Add("Hải Phòng");
+            data.Add("Hậu Giang");
+            data.Add("Hòa Bình");
+            data.Add("Hưng Yên");
+            data.Add("Khánh Hòa");
+            data.Add("Kiên Giang");
+            data.Add("Kon Tum");
+            data.Add("Lai Châu");
+            data.Add("Lạng Sơn");
+            data.Add("Lào Cai");
+            data.Add("Lâm Đồng");
+            data.Add("Long An");
+            data.Add("Nam Định");
+            data.Add("Nghệ An");
+            data.Add("Ninh Bình");
+            data.Add("Ninh Thuận");
+            data.Add("Phú Thọ");
+            data.Add("Phú Yên");
+            data.Add("Quảng Bình");
+            data.Add("Quảng Nam");
+            data.Add("Quảng Ngãi");
+            data.Add("Quảng Ninh");
+            data.Add("Quảng Trị");
+            data.Add("Sóc Trăng");
+            data.Add("Sơn La");
+            data.Add("Tây Ninh");
+            data.Add("Thái Bình");
+            data.Add("Thái Nguyên");
+            data.Add("Thanh Hóa");
+            data.Add("Thừa Thiên Huế");
+            data.Add("Tiền Giang");
+            data.Add("TP Hồ Chí Minh");
+            data.Add("Trà Vinh");
+            data.Add("Tuyên Quang");
+            data.Add("Vĩnh Long");
+            data.Add("Vĩnh Phúc");
+            data.Add("Yên Bái");
+            lb_TimKiem.AutoCompleteMode = AutoCompleteMode.Suggest;
+            lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            lb_TimKiem.AutoCompleteCustomSource = data;
+            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
@@ -155,18 +222,53 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
-                string tenViTri = reader.GetString(reader.GetOrdinal("TenViTri"));
-                string tenKhachSan = reader.GetString(reader.GetOrdinal("TenKhachSan"));
-                byte[] hinhanh = (byte[])reader["HinhAnh"];
-                UKhungKetQua uc = new UKhungKetQua();
+                string tenTinh = reader.GetString(reader.GetOrdinal("TINH"));
+                string tenThanhPho = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
+                string tenKhachSan = reader.GetString(reader.GetOrdinal("TENKH"));
+                //byte[] hinhanh = (byte[])reader["HinhAnh"];
+                int giaColumnIndex = reader.GetOrdinal("GIA");
+                UKhungKetQua uc = new UKhungKetQua();// tab phu hop nhat
                 uc.viTri = i * 148;
-                uc.tenViTri = tenViTri;
+                uc.tenViTri = tenThanhPho + ", " + tenTinh;
                 uc.tenKhachSan = tenKhachSan;
-                uc.hinhanh = hinhanh;
+                if (!reader.IsDBNull(giaColumnIndex))
+                {
+                    int gia = reader.GetInt32(giaColumnIndex);
+                    string tienThapNhat = gia.ToString() + " VNĐ";
+                    uc.tien = tienThapNhat;
+                }
+                // uc.hinhanh = hinhanh;
                 tab_PhuHopNhat.Controls.Add(uc);
                 i++;
             }
+            int j = 0;
             conn.Close();
+            string query1 = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem AND ThongTinCanBan.GIA = (SELECT MIN(GIA) FROM ThongTinCanBan)";
+            SqlConnection conn1 = Connection_to_SQL.getConnection();
+            conn1.Open();
+            SqlCommand command1 = new SqlCommand(query1, conn1);
+            command1.Parameters.AddWithValue("@diadiem", diadiem);
+            SqlDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
+            {
+                string tenTinh = reader1.GetString(reader1.GetOrdinal("TINH"));
+                string tenThanhPho = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
+                string tenKhachSan = reader1.GetString(reader1.GetOrdinal("TENKH"));
+                UKhungKetQua uc = new UKhungKetQua();
+                uc.viTri = j * 148;
+                uc.tenViTri = tenThanhPho + ", " + tenTinh;
+                uc.tenKhachSan = tenKhachSan;
+                int giaColumnIndex = reader1.GetOrdinal("GIA");
+                if (!reader1.IsDBNull(giaColumnIndex))
+                {
+                    int gia = reader1.GetInt32(giaColumnIndex);
+                    string tienThapNhat = gia.ToString() + " VNĐ";
+                    uc.tien = tienThapNhat;
+                }
+                tab_GiaThapNhat.Controls.Add(uc);
+                j++;
+            }
+            conn1.Close();
         }
         public int kiemtradangkiKS1;
         int dem = 0;

@@ -25,13 +25,14 @@ namespace DuLich
             f.tenViTri = lbl_ViTri.Text;
             f.hinhanh = hinhanh;
             f.ShowDialog();
-          
+
             this.Show();
         }
 
         public int viTri;
         public string tenViTri;
         public string tenKhachSan;
+        public string tien;
         public byte[] hinhanh;
         private void UKhungKetQua_Load(object sender, EventArgs e)
         {
@@ -43,15 +44,18 @@ namespace DuLich
             pictureBox1.Location = new Point(15, 10);
             lbl_ViTri.Size = new Size(56, 20);
             lbl_ViTri.Location = new Point(217, 101);
+            lbl_Tien.Size = new Size(59, 20);
+            lbl_Tien.Location = new Point(706, 67);
             lbl_ViTri.Text = tenViTri;
             lbl_TenKhachSan.Text = tenKhachSan;
-            if (hinhanh != null)
+            lbl_Tien.Text = tien;
+            /*if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))
                 {
                     pictureBox1.Image = Image.FromStream(ms);
                 }
-            }
+            }*/
         }
     }
 }

@@ -52,9 +52,9 @@
             lb_TimKiem = new TextBox();
             tabControl1 = new TabControl();
             tab_PhuHopNhat = new TabPage();
-            tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            tabPage4 = new TabPage();
+            tab_GiaThapNhat = new TabPage();
+            tabKhoangCach = new TabPage();
+            tab_DanhGiaCao = new TabPage();
             trackBar1 = new TrackBar();
             label1 = new Label();
             lbl_Min = new Label();
@@ -63,20 +63,16 @@
             lbl_max = new Label();
             label9 = new Label();
             label10 = new Label();
-            panel5 = new Panel();
-            checkBox11 = new CheckBox();
-            checkBox10 = new CheckBox();
-            checkBox9 = new CheckBox();
-            checkBox8 = new CheckBox();
-            checkBox7 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox5 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
             panel2 = new Panel();
             panel1 = new Panel();
+            checkedListBox1 = new CheckedListBox();
+            panel4 = new Panel();
+            checkedListBox4 = new CheckedListBox();
+            label12 = new Label();
+            checkedListBox3 = new CheckedListBox();
+            checkedListBox2 = new CheckedListBox();
+            label11 = new Label();
+            label2 = new Label();
             panel_menu.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -84,7 +80,7 @@
             tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
-            panel5.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel_menu
@@ -93,7 +89,7 @@
             panel_menu.Controls.Add(btn_Thoat);
             panel_menu.Controls.Add(btn_ThongTinTaiKhoan);
             panel_menu.Controls.Add(btn_KSDaDat);
-            panel_menu.Location = new Point(1108, 70);
+            panel_menu.Location = new Point(1115, 70);
             panel_menu.Name = "panel_menu";
             panel_menu.Size = new Size(198, 203);
             panel_menu.TabIndex = 35;
@@ -317,9 +313,9 @@
             // tabControl1
             // 
             tabControl1.Controls.Add(tab_PhuHopNhat);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tab_GiaThapNhat);
+            tabControl1.Controls.Add(tabKhoangCach);
+            tabControl1.Controls.Add(tab_DanhGiaCao);
             tabControl1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tabControl1.Location = new Point(319, 164);
             tabControl1.Name = "tabControl1";
@@ -340,33 +336,33 @@
             tab_PhuHopNhat.UseVisualStyleBackColor = true;
             tab_PhuHopNhat.Click += tabPage1_Click;
             // 
-            // tabPage2
+            // tab_GiaThapNhat
             // 
-            tabPage2.Location = new Point(4, 50);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(990, 479);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Giá thấp nhất";
-            tabPage2.UseVisualStyleBackColor = true;
+            tab_GiaThapNhat.Location = new Point(4, 50);
+            tab_GiaThapNhat.Name = "tab_GiaThapNhat";
+            tab_GiaThapNhat.Padding = new Padding(3);
+            tab_GiaThapNhat.Size = new Size(990, 479);
+            tab_GiaThapNhat.TabIndex = 1;
+            tab_GiaThapNhat.Text = "Giá thấp nhất";
+            tab_GiaThapNhat.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabKhoangCach
             // 
-            tabPage3.Location = new Point(4, 50);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(990, 479);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Khoảng cách";
-            tabPage3.UseVisualStyleBackColor = true;
+            tabKhoangCach.Location = new Point(4, 50);
+            tabKhoangCach.Name = "tabKhoangCach";
+            tabKhoangCach.Size = new Size(990, 479);
+            tabKhoangCach.TabIndex = 2;
+            tabKhoangCach.Text = "Khoảng cách";
+            tabKhoangCach.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tab_DanhGiaCao
             // 
-            tabPage4.Location = new Point(4, 50);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(990, 479);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Được đánh giá nhiều nhất";
-            tabPage4.UseVisualStyleBackColor = true;
+            tab_DanhGiaCao.Location = new Point(4, 50);
+            tab_DanhGiaCao.Name = "tab_DanhGiaCao";
+            tab_DanhGiaCao.Size = new Size(990, 479);
+            tab_DanhGiaCao.TabIndex = 3;
+            tab_DanhGiaCao.Text = "Được đánh giá cao";
+            tab_DanhGiaCao.UseVisualStyleBackColor = true;
             // 
             // trackBar1
             // 
@@ -410,7 +406,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(30, 362);
+            label3.Location = new Point(30, 351);
             label3.Name = "label3";
             label3.Size = new Size(60, 20);
             label3.TabIndex = 24;
@@ -419,7 +415,7 @@
             // lbl_max
             // 
             lbl_max.AutoSize = true;
-            lbl_max.Location = new Point(115, 362);
+            lbl_max.Location = new Point(115, 351);
             lbl_max.Name = "lbl_max";
             lbl_max.Size = new Size(17, 20);
             lbl_max.TabIndex = 25;
@@ -439,150 +435,11 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(20, 405);
+            label10.Location = new Point(10, 14);
             label10.Name = "label10";
-            label10.Size = new Size(69, 23);
+            label10.Size = new Size(128, 23);
             label10.TabIndex = 27;
-            label10.Text = "Tiện ích";
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(checkBox11);
-            panel5.Controls.Add(checkBox10);
-            panel5.Controls.Add(checkBox9);
-            panel5.Controls.Add(checkBox8);
-            panel5.Controls.Add(checkBox7);
-            panel5.Controls.Add(checkBox6);
-            panel5.Controls.Add(checkBox5);
-            panel5.Controls.Add(checkBox4);
-            panel5.Controls.Add(checkBox3);
-            panel5.Controls.Add(checkBox2);
-            panel5.Controls.Add(checkBox1);
-            panel5.Location = new Point(30, 431);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(283, 234);
-            panel5.TabIndex = 28;
-            // 
-            // checkBox11
-            // 
-            checkBox11.AutoSize = true;
-            checkBox11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox11.Location = new Point(129, 104);
-            checkBox11.Name = "checkBox11";
-            checkBox11.Size = new Size(151, 24);
-            checkBox11.TabIndex = 10;
-            checkBox11.Text = "Sản phẩm vệ sinh";
-            checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            checkBox10.AutoSize = true;
-            checkBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox10.Location = new Point(129, 74);
-            checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(146, 24);
-            checkBox10.TabIndex = 9;
-            checkBox10.Text = "Đưa đón sân bay";
-            checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            checkBox9.AutoSize = true;
-            checkBox9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox9.Location = new Point(129, 44);
-            checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(129, 24);
-            checkBox9.TabIndex = 8;
-            checkBox9.Text = "Dịch vụ giặt là";
-            checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            checkBox8.AutoSize = true;
-            checkBox8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox8.Location = new Point(129, 14);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(102, 24);
-            checkBox8.TabIndex = 7;
-            checkBox8.Text = "Bãi đậu xe";
-            checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            checkBox7.AutoSize = true;
-            checkBox7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox7.Location = new Point(10, 194);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(93, 24);
-            checkBox7.TabIndex = 6;
-            checkBox7.Text = "Bữa sáng";
-            checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            checkBox6.AutoSize = true;
-            checkBox6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox6.Location = new Point(11, 164);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(94, 24);
-            checkBox6.TabIndex = 5;
-            checkBox6.Text = "Quày bar";
-            checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            checkBox5.AutoSize = true;
-            checkBox5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox5.Location = new Point(11, 134);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(96, 24);
-            checkBox5.TabIndex = 4;
-            checkBox5.Text = "Tiệm cafe";
-            checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox4.Location = new Point(11, 104);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(58, 24);
-            checkBox4.TabIndex = 3;
-            checkBox4.Text = "Wifi";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox3.Location = new Point(11, 74);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(77, 24);
-            checkBox3.TabIndex = 2;
-            checkBox3.Text = "Hồ bơi";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox2.Location = new Point(11, 44);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(99, 24);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "Nhà hàng";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox1.Location = new Point(11, 14);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(95, 24);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Máy lạnh";
-            checkBox1.UseVisualStyleBackColor = true;
+            label10.Text = "Tiện nghi chính";
             // 
             // panel2
             // 
@@ -600,11 +457,94 @@
             panel1.Size = new Size(1, 53);
             panel1.TabIndex = 37;
             // 
+            // checkedListBox1
+            // 
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Máy lạnh", "Nhà hàng", "Hồ bơi", "Lễ tân 24h", "Wifi" });
+            checkedListBox1.Location = new Point(10, 37);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(260, 114);
+            checkedListBox1.TabIndex = 38;
+            // 
+            // panel4
+            // 
+            panel4.AutoScroll = true;
+            panel4.Controls.Add(checkedListBox4);
+            panel4.Controls.Add(label12);
+            panel4.Controls.Add(checkedListBox3);
+            panel4.Controls.Add(checkedListBox2);
+            panel4.Controls.Add(label11);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(checkedListBox1);
+            panel4.Controls.Add(label10);
+            panel4.Location = new Point(11, 385);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(302, 308);
+            panel4.TabIndex = 38;
+            // 
+            // checkedListBox4
+            // 
+            checkedListBox4.FormattingEnabled = true;
+            checkedListBox4.Items.AddRange(new object[] { "Quầy bar", "Bữa sáng", "Quầy bar bên hồ bơi" });
+            checkedListBox4.Location = new Point(10, 474);
+            checkedListBox4.Name = "checkedListBox4";
+            checkedListBox4.Size = new Size(260, 70);
+            checkedListBox4.TabIndex = 42;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(13, 448);
+            label12.Name = "label12";
+            label12.Size = new Size(76, 23);
+            label12.TabIndex = 41;
+            label12.Text = "Ẩm thực";
+            // 
+            // checkedListBox3
+            // 
+            checkedListBox3.FormattingEnabled = true;
+            checkedListBox3.Items.AddRange(new object[] { "Quầy lễ tân", "Dịch vụ thu đổi ngoại lệ", "Dịch vụ tiệc cưới", "Dịch vụ hỗ trợ đặt tour", "Nhân viên đa ngôn ngữ" });
+            checkedListBox3.Location = new Point(10, 319);
+            checkedListBox3.Name = "checkedListBox3";
+            checkedListBox3.Size = new Size(260, 114);
+            checkedListBox3.TabIndex = 41;
+            // 
+            // checkedListBox2
+            // 
+            checkedListBox2.FormattingEnabled = true;
+            checkedListBox2.Items.AddRange(new object[] { "Bãi đậu xe", "Tiệm cafe", "Thang máy" });
+            checkedListBox2.Location = new Point(10, 189);
+            checkedListBox2.Name = "checkedListBox2";
+            checkedListBox2.Size = new Size(260, 92);
+            checkedListBox2.TabIndex = 40;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(10, 293);
+            label11.Name = "label11";
+            label11.Size = new Size(150, 23);
+            label11.TabIndex = 40;
+            label11.Text = "Dịch vụ khách sạn";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(10, 163);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 23);
+            label2.TabIndex = 39;
+            label2.Text = "Tiện nghi công cộng";
+            // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 709);
+            Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(btn_DangNhap);
@@ -613,8 +553,6 @@
             Controls.Add(panel3);
             Controls.Add(btn_DangKyKS);
             Controls.Add(btn_MyTaiKhoan);
-            Controls.Add(panel5);
-            Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(lbl_max);
             Controls.Add(label3);
@@ -635,8 +573,8 @@
             tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -651,9 +589,9 @@
         private NumericUpDown numericUpDown2;
         private TabControl tabControl1;
         private TabPage tab_PhuHopNhat;
-        private TabPage tabPage2;
-        private TabPage tabPage3;
-        private TabPage tabPage4;
+        private TabPage tab_GiaThapNhat;
+        private TabPage tabKhoangCach;
+        private TabPage tab_DanhGiaCao;
         private TrackBar trackBar1;
         private Label label1;
         private Label lbl_Min;
@@ -670,18 +608,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private Panel panel5;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private CheckBox checkBox11;
-        private CheckBox checkBox10;
-        private CheckBox checkBox9;
         private Button btn_MyTaiKhoan;
         private Panel panel_menu;
         private Button btn_menuTaiKhoan;
@@ -690,5 +616,13 @@
         private Button btn_KSDaDat;
         private Panel panel2;
         private Panel panel1;
+        private CheckedListBox checkedListBox1;
+        private Panel panel4;
+        private Label label12;
+        private Label label11;
+        private Label label2;
+        private CheckedListBox checkedListBox4;
+        private CheckedListBox checkedListBox3;
+        private CheckedListBox checkedListBox2;
     }
 }

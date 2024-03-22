@@ -32,6 +32,7 @@
             lbl_TenKhachSan = new Label();
             pictureBox1 = new PictureBox();
             lbl_ViTri = new Label();
+            lbl_Tien = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             lbl_TenKhachSan.AutoSize = true;
             lbl_TenKhachSan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_TenKhachSan.Location = new Point(353, 10);
+            lbl_TenKhachSan.Location = new Point(235, 10);
             lbl_TenKhachSan.Name = "lbl_TenKhachSan";
             lbl_TenKhachSan.Size = new Size(437, 38);
             lbl_TenKhachSan.TabIndex = 2;
@@ -68,11 +69,22 @@
             lbl_ViTri.TabIndex = 4;
             lbl_ViTri.Text = "Địa chỉ";
             // 
+            // lbl_Tien
+            // 
+            lbl_Tien.AutoSize = true;
+            lbl_Tien.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Tien.Location = new Point(706, 67);
+            lbl_Tien.Name = "lbl_Tien";
+            lbl_Tien.Size = new Size(59, 20);
+            lbl_Tien.TabIndex = 5;
+            lbl_Tien.Text = "Số Tiền";
+            // 
             // UKhungKetQua
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
+            Controls.Add(lbl_Tien);
             Controls.Add(lbl_ViTri);
             Controls.Add(pictureBox1);
             Controls.Add(lbl_TenKhachSan);
@@ -89,5 +101,6 @@
         private Label lbl_TenKhachSan;
         private PictureBox pictureBox1;
         private Label lbl_ViTri;
+        private Label lbl_Tien;
     }
 }

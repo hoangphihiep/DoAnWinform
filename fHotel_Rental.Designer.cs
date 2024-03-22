@@ -381,6 +381,7 @@
             tabPage1.TabIndex = 5;
             tabPage1.Text = "Phòng 1";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click_1;
             // 
             // tabPage2
             // 
