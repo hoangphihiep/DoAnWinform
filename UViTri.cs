@@ -27,18 +27,23 @@ namespace DuLich
         {
             try
             {
-                Modify modify = new Modify();
-                ViTri viTri = new ViTri(int.Parse(txt_MaKhachSan.Text), tentk, null, null, null);
-                string query = "Select * from ViTri where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and TK = '" + tentk + "' ";
-                ViTriDao Dao = new ViTriDao();
-                List<ViTri> list_HoSo = modify.ViTri(query);
-                if (list_HoSo.Count() != 0)
+                if (txt_MaKhachSan.Text == "")
+                    MessageBox.Show("Hãy nhập mã khách sạn");
+                else
                 {
-                    viTri.DIACHI = txt_DiaChi.Text;
-                    viTri.TENTHANHPHO = cbb_ThanhPho.Text;
-                    viTri.TINH = cbb_Tinh.Text;
-                    Dao.Update(viTri, "ViTri");
-                    MessageBox.Show("Chỉnh sửa thành công");
+                    Modify modify = new Modify();
+                    ViTri viTri = new ViTri(int.Parse(txt_MaKhachSan.Text), tentk, null, null, null);
+                    string query = "Select * from ViTri where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and TK = '" + tentk + "' ";
+                    ViTriDao Dao = new ViTriDao();
+                    List<ViTri> list_HoSo = modify.ViTri(query);
+                    if (list_HoSo.Count() != 0)
+                    {
+                        viTri.DIACHI = txt_DiaChi.Text;
+                        viTri.TENTHANHPHO = cbb_ThanhPho.Text;
+                        viTri.TINH = cbb_Tinh.Text;
+                        Dao.Update(viTri, "ViTri");
+                        MessageBox.Show("Chỉnh sửa thành công");
+                    }
                 }
             }
             catch (Exception ex)
