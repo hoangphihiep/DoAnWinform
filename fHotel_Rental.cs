@@ -190,11 +190,11 @@ namespace DuLich
             if (this.tab_ChiTietPhongO.GetTabRect(lastIndex).Contains(e.Location))
             {
                 i++;
-                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng "+i);
-                
+                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng " + i);
+
                 this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
                 UPhong uPhong = new UPhong();
-                TabPage tabPage1 = tab_ChiTietPhongO.TabPages[i-1];
+                TabPage tabPage1 = tab_ChiTietPhongO.TabPages[i - 1];
                 uPhong.Size = tabPage1.Size;
                 tabPage1.Controls.Add(uPhong);
                 uPhong.BringToFront();
