@@ -1,6 +1,6 @@
 ﻿namespace DuLich
 {
-    partial class Phong
+    partial class UPhong
     {
         /// <summary> 
         /// Required designer variable.

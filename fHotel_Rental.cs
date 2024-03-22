@@ -16,6 +16,7 @@ namespace DuLich
 {
     public partial class fHotel_Rental : Form
     {
+        public int i = 1;
         public string tk;
         public string mk;
         public int MaKhachSan = 0;
@@ -135,7 +136,19 @@ namespace DuLich
 
         private void fHotel_Rental_Load(object sender, EventArgs e)
         {
+            UPhong uPhong = new UPhong();
 
+            // Lấy TabPage từ TabControl, ví dụ TabPage có index là 1
+            TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
+
+            // Đặt kích thước của UserControl bằng với kích thước của TabPage
+            uPhong.Size = tabPage1.Size;
+
+            // Thêm UserControl vào TabPage
+            tabPage1.Controls.Add(uPhong);
+
+            // Đảm bảo UserControl được hiển thị
+            uPhong.BringToFront();
         }
 
         private void lbl_ThongTin_Click(object sender, EventArgs e)
@@ -181,11 +194,11 @@ namespace DuLich
 
         private void tab_ChiTietPhongO_MouseClick(object sender, MouseEventArgs e)
         {
-
             var lastIndex = this.tab_ChiTietPhongO.TabCount - 1;
             if (this.tab_ChiTietPhongO.GetTabRect(lastIndex).Contains(e.Location))
             {
-                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "New Tab");
+                i++;
+                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng "+i);
                 this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
             }
         }
@@ -205,6 +218,11 @@ namespace DuLich
             MemoryStream m = new MemoryStream();
             image.Save(m, System.Drawing.Imaging.ImageFormat.Png);
             return m.ToArray();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

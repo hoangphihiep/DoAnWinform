@@ -4,15 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DuLich
 {
-    public partial class Phong : UserControl
+    public partial class UPhong : UserControl
     {
-        public Phong()
+        public UPhong()
         {
             InitializeComponent();
         }
@@ -89,7 +90,7 @@ namespace DuLich
 
         private void Phong_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size (1115, 801);
         }
     }
 }
