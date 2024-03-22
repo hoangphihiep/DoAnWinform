@@ -137,17 +137,9 @@ namespace DuLich
         private void fHotel_Rental_Load(object sender, EventArgs e)
         {
             UPhong uPhong = new UPhong();
-
-            // Lấy TabPage từ TabControl, ví dụ TabPage có index là 1
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
-
-            // Đặt kích thước của UserControl bằng với kích thước của TabPage
             uPhong.Size = tabPage1.Size;
-
-            // Thêm UserControl vào TabPage
             tabPage1.Controls.Add(uPhong);
-
-            // Đảm bảo UserControl được hiển thị
             uPhong.BringToFront();
         }
 
@@ -199,7 +191,13 @@ namespace DuLich
             {
                 i++;
                 this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng "+i);
+                
                 this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
+                UPhong uPhong = new UPhong();
+                TabPage tabPage1 = tab_ChiTietPhongO.TabPages[i-1];
+                uPhong.Size = tabPage1.Size;
+                tabPage1.Controls.Add(uPhong);
+                uPhong.BringToFront();
             }
         }
 
