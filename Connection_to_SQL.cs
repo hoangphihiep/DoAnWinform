@@ -10,7 +10,7 @@ namespace DuLich
     public class Connection_to_SQL
     {
         
-        private static string Connection = @"Data Source=MSI;Initial Catalog=Account;Integrated Security=True";
+        private static string Connection = @"Data Source=MSI;Initial Catalog=Account1;Integrated Security=True";
 
         public static SqlConnection getConnection() 
         {
@@ -24,10 +24,6 @@ namespace DuLich
                 // Ket noi
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    
-                }
             }
             catch (Exception ex)
             {
