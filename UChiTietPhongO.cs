@@ -16,5 +16,15 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ChinhSua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

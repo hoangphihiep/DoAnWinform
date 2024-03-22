@@ -10,6 +10,9 @@ namespace DoAnDuLich
     public partial class FTrangChuTK : Form
     {
         public string rename;
+        public string tentk;
+        public string mk;
+        public string MaKS;
         public FTrangChuTK()
         {
             InitializeComponent();
@@ -715,6 +718,8 @@ namespace DoAnDuLich
             {
                 int t = 0;
                 fHotel_Rental f = new fHotel_Rental();
+                f.tk = mk;
+                f.mk = mk;
                 KT_DangNhap++;
                 f.kiemtratrang7 = t;
                 this.Hide();
@@ -801,6 +806,8 @@ namespace DoAnDuLich
         private void btn_ThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             fThongTinTaiKhoan t = new fThongTinTaiKhoan();
+            t.tentk = tentk;
+            t.mk = mk;
             if (kiemtradangkiKS == 1)
             {
                 this.Hide();

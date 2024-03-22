@@ -52,7 +52,7 @@
             btn_DangKy.Location = new Point(46, 400);
             btn_DangKy.Name = "btn_DangKy";
             btn_DangKy.Size = new Size(319, 54);
-            btn_DangKy.TabIndex = 2;
+            btn_DangKy.TabIndex = 4;
             btn_DangKy.Text = "Đăng ký";
             btn_DangKy.UseVisualStyleBackColor = true;
             btn_DangKy.Click += btn_DangKy_Click;
@@ -98,7 +98,7 @@
             txt_MatKhau.Location = new Point(111, 284);
             txt_MatKhau.Name = "txt_MatKhau";
             txt_MatKhau.Size = new Size(254, 21);
-            txt_MatKhau.TabIndex = 3;
+            txt_MatKhau.TabIndex = 2;
             txt_MatKhau.Text = "Mật khẩu";
             txt_MatKhau.UseSystemPasswordChar = true;
             txt_MatKhau.MouseClick += txt_MatKhau_MouseClick;
@@ -148,7 +148,7 @@
             btn_DangNhap.Location = new Point(46, 332);
             btn_DangNhap.Name = "btn_DangNhap";
             btn_DangNhap.Size = new Size(319, 52);
-            btn_DangNhap.TabIndex = 11;
+            btn_DangNhap.TabIndex = 3;
             btn_DangNhap.Text = "Đăng nhập";
             btn_DangNhap.UseVisualStyleBackColor = false;
             btn_DangNhap.Click += btn_DangNhap_Click;

@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fHotel_Rental));
             pn_Goc = new Panel();
             pn_ThongTin = new Panel();
+            label36 = new Label();
             lbl_TenChuKhachSan = new Label();
             txt_TenChuKhachSan = new TextBox();
             btn_QuayLai = new Button();
-            checkedListBox3 = new CheckedListBox();
+            clb_ThanhToan = new CheckedListBox();
             button1 = new Button();
             btn_TiepTheo = new Button();
             label27 = new Label();
@@ -44,60 +45,12 @@
             label28 = new Label();
             lbl_Anh = new Label();
             tab_ChiTietPhongO = new TabControl();
-            tabPage2 = new TabPage();
-            lbl_SauKhiNhieuHon = new Label();
-            lbl_Nguoi = new Label();
-            textBox2 = new TextBox();
-            lbl_ThemKhach = new Label();
-            lbl_VND = new Label();
-            textBox1 = new TextBox();
-            lbl_GiaToiThieuMoiDem = new Label();
-            lbl_GiaGocChoPhongTieuChuan = new Label();
-            lbl_VuiLong = new Label();
-            lbl_GiaMoiDem = new Label();
-            lbl_ChiDemSoLuong = new Label();
-            lbl_SoLuongNguoi = new Label();
-            lbl_SoGiuong = new Label();
-            txt_PhongTam = new TextBox();
-            lbl_SucChua = new Label();
-            txt_SucChua = new TextBox();
-            lbl_m2 = new Label();
-            lbl_KichThuoc = new Label();
-            txt_KichThuoc = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
-            lbl_QuyDoiTac = new Label();
-            lbl_ChiTietPhong = new Label();
-            lbl_ThietLap = new Label();
             tabPage1 = new TabPage();
-            label6 = new Label();
-            label7 = new Label();
-            textBox3 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
-            textBox4 = new TextBox();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            textBox5 = new TextBox();
-            label17 = new Label();
-            textBox6 = new TextBox();
-            label18 = new Label();
-            label19 = new Label();
-            textBox7 = new TextBox();
-            label20 = new Label();
             label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            textBox8 = new TextBox();
+            txt_DiaChi2 = new TextBox();
             lbl_HinhAnhRatQuanTrong = new Label();
             lbl_ChiTietPhongO = new Label();
-            cbb_TieuBangTinh = new ComboBox();
+            cbb_Tinh2 = new ComboBox();
             label26 = new Label();
             clb_DichVuKhachSan = new CheckedListBox();
             cbb_ThanhPho = new ComboBox();
@@ -149,17 +102,6 @@
             lbl_KhoangCachThanhPho = new Label();
             txt_KhoangCachThanhPho = new TextBox();
             lbl_ThongTinCoIch = new Label();
-            cbb_Den2 = new ComboBox();
-            cbb_Tu2 = new ComboBox();
-            ccb_Den1 = new ComboBox();
-            cbb_Tu1 = new ComboBox();
-            lbl_Den2 = new Label();
-            lbl_Tu2 = new Label();
-            lbl_Den1 = new Label();
-            lbl_Tu1 = new Label();
-            lbl_KhiNaoKhachTraPhong = new Label();
-            lbl_KhiNaoKhachNhanPhong = new Label();
-            lbl_ThoiGianNhanTraPhong = new Label();
             txt_MoTa = new TextBox();
             lbl_NhungDacDiem = new Label();
             lbl_MoTaNhaCuaBan = new Label();
@@ -182,11 +124,10 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel6 = new Panel();
-            label36 = new Label();
+            tabPage2 = new TabPage();
             pn_Goc.SuspendLayout();
             pn_ThongTin.SuspendLayout();
             tab_ChiTietPhongO.SuspendLayout();
-            tabPage2.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -206,7 +147,7 @@
             pn_ThongTin.Controls.Add(lbl_TenChuKhachSan);
             pn_ThongTin.Controls.Add(txt_TenChuKhachSan);
             pn_ThongTin.Controls.Add(btn_QuayLai);
-            pn_ThongTin.Controls.Add(checkedListBox3);
+            pn_ThongTin.Controls.Add(clb_ThanhToan);
             pn_ThongTin.Controls.Add(button1);
             pn_ThongTin.Controls.Add(btn_TiepTheo);
             pn_ThongTin.Controls.Add(label27);
@@ -216,10 +157,10 @@
             pn_ThongTin.Controls.Add(label28);
             pn_ThongTin.Controls.Add(lbl_Anh);
             pn_ThongTin.Controls.Add(tab_ChiTietPhongO);
-            pn_ThongTin.Controls.Add(textBox8);
+            pn_ThongTin.Controls.Add(txt_DiaChi2);
             pn_ThongTin.Controls.Add(lbl_HinhAnhRatQuanTrong);
             pn_ThongTin.Controls.Add(lbl_ChiTietPhongO);
-            pn_ThongTin.Controls.Add(cbb_TieuBangTinh);
+            pn_ThongTin.Controls.Add(cbb_Tinh2);
             pn_ThongTin.Controls.Add(label26);
             pn_ThongTin.Controls.Add(clb_DichVuKhachSan);
             pn_ThongTin.Controls.Add(cbb_ThanhPho);
@@ -271,17 +212,6 @@
             pn_ThongTin.Controls.Add(lbl_KhoangCachThanhPho);
             pn_ThongTin.Controls.Add(txt_KhoangCachThanhPho);
             pn_ThongTin.Controls.Add(lbl_ThongTinCoIch);
-            pn_ThongTin.Controls.Add(cbb_Den2);
-            pn_ThongTin.Controls.Add(cbb_Tu2);
-            pn_ThongTin.Controls.Add(ccb_Den1);
-            pn_ThongTin.Controls.Add(cbb_Tu1);
-            pn_ThongTin.Controls.Add(lbl_Den2);
-            pn_ThongTin.Controls.Add(lbl_Tu2);
-            pn_ThongTin.Controls.Add(lbl_Den1);
-            pn_ThongTin.Controls.Add(lbl_Tu1);
-            pn_ThongTin.Controls.Add(lbl_KhiNaoKhachTraPhong);
-            pn_ThongTin.Controls.Add(lbl_KhiNaoKhachNhanPhong);
-            pn_ThongTin.Controls.Add(lbl_ThoiGianNhanTraPhong);
             pn_ThongTin.Controls.Add(txt_MoTa);
             pn_ThongTin.Controls.Add(lbl_NhungDacDiem);
             pn_ThongTin.Controls.Add(lbl_MoTaNhaCuaBan);
@@ -296,6 +226,16 @@
             pn_ThongTin.Size = new Size(1212, 3751);
             pn_ThongTin.TabIndex = 0;
             pn_ThongTin.Paint += pn_ThongTin_Paint;
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label36.Location = new Point(166, 476);
+            label36.Name = "label36";
+            label36.Size = new Size(45, 28);
+            label36.TabIndex = 126;
+            label36.Text = "Sao";
             // 
             // lbl_TenChuKhachSan
             // 
@@ -327,14 +267,14 @@
             btn_QuayLai.Text = "QUAY LẠI";
             btn_QuayLai.UseVisualStyleBackColor = false;
             // 
-            // checkedListBox3
+            // clb_ThanhToan
             // 
-            checkedListBox3.FormattingEnabled = true;
-            checkedListBox3.Items.AddRange(new object[] { "Thẻ điện tử", "Tiền gửi trực tiếp vào ngân hàng" });
-            checkedListBox3.Location = new Point(42, 3541);
-            checkedListBox3.Name = "checkedListBox3";
-            checkedListBox3.Size = new Size(413, 48);
-            checkedListBox3.TabIndex = 116;
+            clb_ThanhToan.FormattingEnabled = true;
+            clb_ThanhToan.Items.AddRange(new object[] { "Thẻ điện tử", "Tiền gửi trực tiếp vào ngân hàng" });
+            clb_ThanhToan.Location = new Point(42, 3541);
+            clb_ThanhToan.Name = "clb_ThanhToan";
+            clb_ThanhToan.Size = new Size(413, 48);
+            clb_ThanhToan.TabIndex = 116;
             // 
             // button1
             // 
@@ -423,510 +363,29 @@
             // 
             // tab_ChiTietPhongO
             // 
-            tab_ChiTietPhongO.Controls.Add(tabPage2);
             tab_ChiTietPhongO.Controls.Add(tabPage1);
+            tab_ChiTietPhongO.Controls.Add(tabPage2);
             tab_ChiTietPhongO.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tab_ChiTietPhongO.Location = new Point(34, 1764);
             tab_ChiTietPhongO.Name = "tab_ChiTietPhongO";
             tab_ChiTietPhongO.SelectedIndex = 0;
-            tab_ChiTietPhongO.Size = new Size(1125, 870);
+            tab_ChiTietPhongO.Size = new Size(1141, 870);
             tab_ChiTietPhongO.TabIndex = 77;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(lbl_SauKhiNhieuHon);
-            tabPage2.Controls.Add(lbl_Nguoi);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(lbl_ThemKhach);
-            tabPage2.Controls.Add(lbl_VND);
-            tabPage2.Controls.Add(textBox1);
-            tabPage2.Controls.Add(lbl_GiaToiThieuMoiDem);
-            tabPage2.Controls.Add(lbl_GiaGocChoPhongTieuChuan);
-            tabPage2.Controls.Add(lbl_VuiLong);
-            tabPage2.Controls.Add(lbl_GiaMoiDem);
-            tabPage2.Controls.Add(lbl_ChiDemSoLuong);
-            tabPage2.Controls.Add(lbl_SoLuongNguoi);
-            tabPage2.Controls.Add(lbl_SoGiuong);
-            tabPage2.Controls.Add(txt_PhongTam);
-            tabPage2.Controls.Add(lbl_SucChua);
-            tabPage2.Controls.Add(txt_SucChua);
-            tabPage2.Controls.Add(lbl_m2);
-            tabPage2.Controls.Add(lbl_KichThuoc);
-            tabPage2.Controls.Add(txt_KichThuoc);
-            tabPage2.Controls.Add(label4);
-            tabPage2.Controls.Add(label5);
-            tabPage2.Controls.Add(lbl_QuyDoiTac);
-            tabPage2.Controls.Add(lbl_ChiTietPhong);
-            tabPage2.Controls.Add(lbl_ThietLap);
-            tabPage2.Location = new Point(4, 50);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1117, 816);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Phòng đơn";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // lbl_SauKhiNhieuHon
-            // 
-            lbl_SauKhiNhieuHon.AutoSize = true;
-            lbl_SauKhiNhieuHon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_SauKhiNhieuHon.Location = new Point(16, 724);
-            lbl_SauKhiNhieuHon.Name = "lbl_SauKhiNhieuHon";
-            lbl_SauKhiNhieuHon.Size = new Size(374, 40);
-            lbl_SauKhiNhieuHon.TabIndex = 84;
-            lbl_SauKhiNhieuHon.Text = "Sau khi nhiều hơn một khách , tính phí thêm mỗi người \r\n\r\n";
-            // 
-            // lbl_Nguoi
-            // 
-            lbl_Nguoi.AutoSize = true;
-            lbl_Nguoi.BackColor = SystemColors.Window;
-            lbl_Nguoi.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Nguoi.Location = new Point(614, 767);
-            lbl_Nguoi.Name = "lbl_Nguoi";
-            lbl_Nguoi.Size = new Size(58, 23);
-            lbl_Nguoi.TabIndex = 83;
-            lbl_Nguoi.Text = "Người";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(15, 766);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(593, 30);
-            textBox2.TabIndex = 82;
-            // 
-            // lbl_ThemKhach
-            // 
-            lbl_ThemKhach.AutoSize = true;
-            lbl_ThemKhach.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ThemKhach.ImageAlign = ContentAlignment.BottomRight;
-            lbl_ThemKhach.Location = new Point(15, 686);
-            lbl_ThemKhach.Name = "lbl_ThemKhach";
-            lbl_ThemKhach.Size = new Size(104, 23);
-            lbl_ThemKhach.TabIndex = 81;
-            lbl_ThemKhach.Text = "Thêm khách";
-            // 
-            // lbl_VND
-            // 
-            lbl_VND.AutoSize = true;
-            lbl_VND.BackColor = SystemColors.Window;
-            lbl_VND.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_VND.Location = new Point(615, 648);
-            lbl_VND.Name = "lbl_VND";
-            lbl_VND.Size = new Size(46, 23);
-            lbl_VND.TabIndex = 80;
-            lbl_VND.Text = "VND";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(16, 647);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(593, 30);
-            textBox1.TabIndex = 79;
-            // 
-            // lbl_GiaToiThieuMoiDem
-            // 
-            lbl_GiaToiThieuMoiDem.AutoSize = true;
-            lbl_GiaToiThieuMoiDem.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaToiThieuMoiDem.Location = new Point(15, 621);
-            lbl_GiaToiThieuMoiDem.Name = "lbl_GiaToiThieuMoiDem";
-            lbl_GiaToiThieuMoiDem.Size = new Size(290, 23);
-            lbl_GiaToiThieuMoiDem.TabIndex = 78;
-            lbl_GiaToiThieuMoiDem.Text = "Giá tối thiểu mỗi đêm là bao nhiêu ?";
-            // 
-            // lbl_GiaGocChoPhongTieuChuan
-            // 
-            lbl_GiaGocChoPhongTieuChuan.AutoSize = true;
-            lbl_GiaGocChoPhongTieuChuan.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaGocChoPhongTieuChuan.Location = new Point(16, 579);
-            lbl_GiaGocChoPhongTieuChuan.Name = "lbl_GiaGocChoPhongTieuChuan";
-            lbl_GiaGocChoPhongTieuChuan.Size = new Size(242, 23);
-            lbl_GiaGocChoPhongTieuChuan.TabIndex = 77;
-            lbl_GiaGocChoPhongTieuChuan.Text = "Giá gốc cho phòng tiêu chuẩn";
-            // 
-            // lbl_VuiLong
-            // 
-            lbl_VuiLong.AutoSize = true;
-            lbl_VuiLong.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_VuiLong.Location = new Point(15, 544);
-            lbl_VuiLong.Name = "lbl_VuiLong";
-            lbl_VuiLong.Size = new Size(415, 20);
-            lbl_VuiLong.TabIndex = 76;
-            lbl_VuiLong.Text = "Vui lòng nhập giá mỗi đêm của quý đối tác cho chỗ  nghỉ này";
-            // 
-            // lbl_GiaMoiDem
-            // 
-            lbl_GiaMoiDem.AutoSize = true;
-            lbl_GiaMoiDem.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaMoiDem.Location = new Point(15, 502);
-            lbl_GiaMoiDem.Name = "lbl_GiaMoiDem";
-            lbl_GiaMoiDem.Size = new Size(146, 31);
-            lbl_GiaMoiDem.TabIndex = 75;
-            lbl_GiaMoiDem.Text = "Giá mỗi đêm";
-            // 
-            // lbl_ChiDemSoLuong
-            // 
-            lbl_ChiDemSoLuong.AutoSize = true;
-            lbl_ChiDemSoLuong.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_ChiDemSoLuong.Location = new Point(14, 416);
-            lbl_ChiDemSoLuong.Name = "lbl_ChiDemSoLuong";
-            lbl_ChiDemSoLuong.Size = new Size(399, 20);
-            lbl_ChiDemSoLuong.TabIndex = 74;
-            lbl_ChiDemSoLuong.Text = "Chỉ đếm số lượng giường của quý đối tác cho chỗ nghỉ này\r\n";
-            // 
-            // lbl_SoLuongNguoi
-            // 
-            lbl_SoLuongNguoi.AutoSize = true;
-            lbl_SoLuongNguoi.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_SoLuongNguoi.Location = new Point(14, 288);
-            lbl_SoLuongNguoi.Name = "lbl_SoLuongNguoi";
-            lbl_SoLuongNguoi.Size = new Size(559, 40);
-            lbl_SoLuongNguoi.TabIndex = 73;
-            lbl_SoLuongNguoi.Text = "Số lượng người tối đa có thể ngủ thoải mái theo số lượng giường và sofa cung cấp\r\n\r\n";
-            // 
-            // lbl_SoGiuong
-            // 
-            lbl_SoGiuong.AutoSize = true;
-            lbl_SoGiuong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_SoGiuong.Location = new Point(15, 377);
-            lbl_SoGiuong.Name = "lbl_SoGiuong";
-            lbl_SoGiuong.Size = new Size(103, 23);
-            lbl_SoGiuong.TabIndex = 72;
-            lbl_SoGiuong.Text = "Số giường : \r\n";
-            // 
-            // txt_PhongTam
-            // 
-            txt_PhongTam.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_PhongTam.Location = new Point(14, 457);
-            txt_PhongTam.Name = "txt_PhongTam";
-            txt_PhongTam.Size = new Size(633, 30);
-            txt_PhongTam.TabIndex = 71;
-            // 
-            // lbl_SucChua
-            // 
-            lbl_SucChua.AutoSize = true;
-            lbl_SucChua.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_SucChua.Location = new Point(15, 252);
-            lbl_SucChua.Name = "lbl_SucChua";
-            lbl_SucChua.Size = new Size(95, 23);
-            lbl_SucChua.TabIndex = 70;
-            lbl_SucChua.Text = "Sức chứa : ";
-            // 
-            // txt_SucChua
-            // 
-            txt_SucChua.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_SucChua.Location = new Point(14, 332);
-            txt_SucChua.Name = "txt_SucChua";
-            txt_SucChua.Size = new Size(633, 30);
-            txt_SucChua.TabIndex = 69;
-            // 
-            // lbl_m2
-            // 
-            lbl_m2.AutoSize = true;
-            lbl_m2.BackColor = SystemColors.Window;
-            lbl_m2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_m2.Location = new Point(614, 210);
-            lbl_m2.Name = "lbl_m2";
-            lbl_m2.Size = new Size(34, 23);
-            lbl_m2.TabIndex = 68;
-            lbl_m2.Text = "m2";
-            // 
-            // lbl_KichThuoc
-            // 
-            lbl_KichThuoc.AutoSize = true;
-            lbl_KichThuoc.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_KichThuoc.Location = new Point(15, 172);
-            lbl_KichThuoc.Name = "lbl_KichThuoc";
-            lbl_KichThuoc.Size = new Size(106, 23);
-            lbl_KichThuoc.TabIndex = 66;
-            lbl_KichThuoc.Text = "Kích thước : ";
-            // 
-            // txt_KichThuoc
-            // 
-            txt_KichThuoc.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_KichThuoc.Location = new Point(15, 209);
-            txt_KichThuoc.Name = "txt_KichThuoc";
-            txt_KichThuoc.Size = new Size(593, 30);
-            txt_KichThuoc.TabIndex = 65;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(15, 53);
-            label4.Name = "label4";
-            label4.Size = new Size(460, 20);
-            label4.TabIndex = 64;
-            label4.Text = "Chọn giá phòng mỗi đêm theo số lượng khách và các điều kiện khác\r\n";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            label5.Location = new Point(9, 213);
-            label5.Name = "label5";
-            label5.Size = new Size(0, 31);
-            label5.TabIndex = 63;
-            // 
-            // lbl_QuyDoiTac
-            // 
-            lbl_QuyDoiTac.AutoSize = true;
-            lbl_QuyDoiTac.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_QuyDoiTac.Location = new Point(9, 126);
-            lbl_QuyDoiTac.Name = "lbl_QuyDoiTac";
-            lbl_QuyDoiTac.Size = new Size(785, 20);
-            lbl_QuyDoiTac.TabIndex = 61;
-            lbl_QuyDoiTac.Text = "Quý đối tác chỉ cần tạo một loại phòng . Sau đó có thể thêm các loại phòng thông qua mạng diện rộng của chúng tôi\r\n";
-            // 
-            // lbl_ChiTietPhong
-            // 
-            lbl_ChiTietPhong.AutoSize = true;
-            lbl_ChiTietPhong.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ChiTietPhong.Location = new Point(9, 84);
-            lbl_ChiTietPhong.Name = "lbl_ChiTietPhong";
-            lbl_ChiTietPhong.Size = new Size(181, 31);
-            lbl_ChiTietPhong.TabIndex = 60;
-            lbl_ChiTietPhong.Text = "Chi tiết phòng ở";
-            // 
-            // lbl_ThietLap
-            // 
-            lbl_ThietLap.AutoSize = true;
-            lbl_ThietLap.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ThietLap.Location = new Point(9, 15);
-            lbl_ThietLap.Name = "lbl_ThietLap";
-            lbl_ThietLap.Size = new Size(218, 38);
-            lbl_ThietLap.TabIndex = 59;
-            lbl_ThietLap.Text = "Thiết lập phòng";
+            tab_ChiTietPhongO.Selecting += tab_ChiTietPhongO_Selecting;
+            tab_ChiTietPhongO.Selected += tab_ChiTietPhongO_Selected;
+            tab_ChiTietPhongO.MouseClick += tab_ChiTietPhongO_MouseClick;
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(label6);
-            tabPage1.Controls.Add(label7);
-            tabPage1.Controls.Add(textBox3);
-            tabPage1.Controls.Add(label8);
-            tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(textBox4);
-            tabPage1.Controls.Add(label10);
-            tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(label12);
-            tabPage1.Controls.Add(label13);
-            tabPage1.Controls.Add(label14);
-            tabPage1.Controls.Add(label15);
-            tabPage1.Controls.Add(label16);
-            tabPage1.Controls.Add(textBox5);
-            tabPage1.Controls.Add(label17);
-            tabPage1.Controls.Add(textBox6);
-            tabPage1.Controls.Add(label18);
-            tabPage1.Controls.Add(label19);
-            tabPage1.Controls.Add(textBox7);
-            tabPage1.Controls.Add(label20);
             tabPage1.Controls.Add(label21);
-            tabPage1.Controls.Add(label22);
-            tabPage1.Controls.Add(label23);
-            tabPage1.Controls.Add(label24);
             tabPage1.Location = new Point(4, 50);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1117, 816);
+            tabPage1.Size = new Size(1133, 816);
             tabPage1.TabIndex = 3;
-            tabPage1.Text = "Phòng đôi";
+            tabPage1.Text = "Phòng";
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(19, 727);
-            label6.Name = "label6";
-            label6.Size = new Size(374, 20);
-            label6.TabIndex = 84;
-            label6.Text = "Sau khi nhiều hơn một khách , tính phí thêm mỗi người ";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = SystemColors.Window;
-            label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(617, 770);
-            label7.Name = "label7";
-            label7.Size = new Size(58, 23);
-            label7.TabIndex = 83;
-            label7.Text = "Người";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(15, 766);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(593, 30);
-            textBox3.TabIndex = 82;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ImageAlign = ContentAlignment.BottomRight;
-            label8.Location = new Point(18, 689);
-            label8.Name = "label8";
-            label8.Size = new Size(104, 23);
-            label8.TabIndex = 81;
-            label8.Text = "Thêm khách";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = SystemColors.Window;
-            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(618, 651);
-            label9.Name = "label9";
-            label9.Size = new Size(46, 23);
-            label9.TabIndex = 80;
-            label9.Text = "VND";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(16, 647);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(593, 30);
-            textBox4.TabIndex = 79;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(18, 624);
-            label10.Name = "label10";
-            label10.Size = new Size(290, 23);
-            label10.TabIndex = 78;
-            label10.Text = "Giá tối thiểu mỗi đêm là bao nhiêu ?";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(19, 582);
-            label11.Name = "label11";
-            label11.Size = new Size(242, 23);
-            label11.TabIndex = 77;
-            label11.Text = "Giá gốc cho phòng tiêu chuẩn";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(18, 547);
-            label12.Name = "label12";
-            label12.Size = new Size(415, 20);
-            label12.TabIndex = 76;
-            label12.Text = "Vui lòng nhập giá mỗi đêm của quý đối tác cho chỗ  nghỉ này";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(18, 505);
-            label13.Name = "label13";
-            label13.Size = new Size(146, 31);
-            label13.TabIndex = 75;
-            label13.Text = "Giá mỗi đêm";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(17, 419);
-            label14.Name = "label14";
-            label14.Size = new Size(424, 20);
-            label14.TabIndex = 74;
-            label14.Text = "Chỉ đếm số lượng phòng tắm của quý đối tác cho chỗ nghỉ này\r\n";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(17, 291);
-            label15.Name = "label15";
-            label15.Size = new Size(559, 40);
-            label15.TabIndex = 73;
-            label15.Text = "Số lượng người tối đa có thể ngủ thoải mái theo số lượng giường và sofa cung cấp\r\n\r\n";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(18, 380);
-            label16.Name = "label16";
-            label16.Size = new Size(109, 23);
-            label16.TabIndex = 72;
-            label16.Text = "Phòng tắm : ";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox5.Location = new Point(14, 457);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(633, 30);
-            textBox5.TabIndex = 71;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(18, 255);
-            label17.Name = "label17";
-            label17.Size = new Size(95, 23);
-            label17.TabIndex = 70;
-            label17.Text = "Sức chứa : ";
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox6.Location = new Point(14, 332);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(633, 30);
-            textBox6.TabIndex = 69;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.BackColor = SystemColors.Window;
-            label18.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label18.Location = new Point(617, 213);
-            label18.Name = "label18";
-            label18.Size = new Size(34, 23);
-            label18.TabIndex = 68;
-            label18.Text = "m2";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.Location = new Point(18, 175);
-            label19.Name = "label19";
-            label19.Size = new Size(106, 23);
-            label19.TabIndex = 66;
-            label19.Text = "Kích thước : ";
-            // 
-            // textBox7
-            // 
-            textBox7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox7.Location = new Point(15, 209);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(593, 30);
-            textBox7.TabIndex = 65;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(18, 56);
-            label20.Name = "label20";
-            label20.Size = new Size(460, 20);
-            label20.TabIndex = 64;
-            label20.Text = "Chọn giá phòng mỗi đêm theo số lượng khách và các điều kiện khác\r\n";
             // 
             // label21
             // 
@@ -937,43 +396,13 @@
             label21.Size = new Size(0, 31);
             label21.TabIndex = 63;
             // 
-            // label22
+            // txt_DiaChi2
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(12, 129);
-            label22.Name = "label22";
-            label22.Size = new Size(785, 20);
-            label22.TabIndex = 61;
-            label22.Text = "Quý đối tác chỉ cần tạo một loại phòng . Sau đó có thể thêm các loại phòng thông qua mạng diện rộng của chúng tôi\r\n";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.Location = new Point(12, 87);
-            label23.Name = "label23";
-            label23.Size = new Size(181, 31);
-            label23.TabIndex = 60;
-            label23.Text = "Chi tiết phòng ở";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label24.Location = new Point(12, 18);
-            label24.Name = "label24";
-            label24.Size = new Size(218, 38);
-            label24.TabIndex = 59;
-            label24.Text = "Thiết lập phòng";
-            // 
-            // textBox8
-            // 
-            textBox8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox8.Location = new Point(180, 3396);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(301, 30);
-            textBox8.TabIndex = 111;
+            txt_DiaChi2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_DiaChi2.Location = new Point(180, 3396);
+            txt_DiaChi2.Name = "txt_DiaChi2";
+            txt_DiaChi2.Size = new Size(301, 30);
+            txt_DiaChi2.TabIndex = 111;
             // 
             // lbl_HinhAnhRatQuanTrong
             // 
@@ -997,15 +426,15 @@
             lbl_ChiTietPhongO.TabIndex = 76;
             lbl_ChiTietPhongO.Text = "Chi tiết phòng ở\r\n";
             // 
-            // cbb_TieuBangTinh
+            // cbb_Tinh2
             // 
-            cbb_TieuBangTinh.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            cbb_TieuBangTinh.FormattingEnabled = true;
-            cbb_TieuBangTinh.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
-            cbb_TieuBangTinh.Location = new Point(42, 3335);
-            cbb_TieuBangTinh.Name = "cbb_TieuBangTinh";
-            cbb_TieuBangTinh.Size = new Size(229, 31);
-            cbb_TieuBangTinh.TabIndex = 110;
+            cbb_Tinh2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            cbb_Tinh2.FormattingEnabled = true;
+            cbb_Tinh2.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
+            cbb_Tinh2.Location = new Point(42, 3335);
+            cbb_Tinh2.Name = "cbb_Tinh2";
+            cbb_Tinh2.Size = new Size(229, 31);
+            cbb_Tinh2.TabIndex = 110;
             // 
             // label26
             // 
@@ -1411,7 +840,7 @@
             cbb_DanhGiaSao.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             cbb_DanhGiaSao.FormattingEnabled = true;
             cbb_DanhGiaSao.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            cbb_DanhGiaSao.Location = new Point(639, 580);
+            cbb_DanhGiaSao.Location = new Point(18, 476);
             cbb_DanhGiaSao.Name = "cbb_DanhGiaSao";
             cbb_DanhGiaSao.Size = new Size(121, 31);
             cbb_DanhGiaSao.TabIndex = 55;
@@ -1420,7 +849,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(639, 535);
+            label3.Location = new Point(18, 431);
             label3.Name = "label3";
             label3.Size = new Size(415, 23);
             label3.TabIndex = 54;
@@ -1430,7 +859,7 @@
             // 
             lbl_XepLoaiSao.AutoSize = true;
             lbl_XepLoaiSao.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_XepLoaiSao.Location = new Point(639, 504);
+            lbl_XepLoaiSao.Location = new Point(18, 400);
             lbl_XepLoaiSao.Name = "lbl_XepLoaiSao";
             lbl_XepLoaiSao.Size = new Size(140, 31);
             lbl_XepLoaiSao.TabIndex = 53;
@@ -1440,7 +869,7 @@
             // 
             lbl_km2.AutoSize = true;
             lbl_km2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_km2.Location = new Point(966, 440);
+            lbl_km2.Location = new Point(966, 457);
             lbl_km2.Name = "lbl_km2";
             lbl_km2.Size = new Size(33, 23);
             lbl_km2.TabIndex = 52;
@@ -1450,7 +879,7 @@
             // 
             lbl_KhoangCachSanBay.AutoSize = true;
             lbl_KhoangCachSanBay.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_KhoangCachSanBay.Location = new Point(639, 398);
+            lbl_KhoangCachSanBay.Location = new Point(639, 415);
             lbl_KhoangCachSanBay.Name = "lbl_KhoangCachSanBay";
             lbl_KhoangCachSanBay.Size = new Size(195, 23);
             lbl_KhoangCachSanBay.TabIndex = 51;
@@ -1459,7 +888,7 @@
             // txt_KhoangCachSanBay
             // 
             txt_KhoangCachSanBay.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_KhoangCachSanBay.Location = new Point(639, 436);
+            txt_KhoangCachSanBay.Location = new Point(639, 453);
             txt_KhoangCachSanBay.Name = "txt_KhoangCachSanBay";
             txt_KhoangCachSanBay.Size = new Size(306, 30);
             txt_KhoangCachSanBay.TabIndex = 50;
@@ -1495,122 +924,12 @@
             // lbl_ThongTinCoIch
             // 
             lbl_ThongTinCoIch.AutoSize = true;
-            lbl_ThongTinCoIch.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_ThongTinCoIch.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThongTinCoIch.Location = new Point(639, 263);
             lbl_ThongTinCoIch.Name = "lbl_ThongTinCoIch";
-            lbl_ThongTinCoIch.Size = new Size(178, 31);
+            lbl_ThongTinCoIch.Size = new Size(181, 31);
             lbl_ThongTinCoIch.TabIndex = 46;
             lbl_ThongTinCoIch.Text = "Thông tin có ích";
-            // 
-            // cbb_Den2
-            // 
-            cbb_Den2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            cbb_Den2.FormattingEnabled = true;
-            cbb_Den2.Items.AddRange(new object[] { "0 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 AM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM" });
-            cbb_Den2.Location = new Point(236, 580);
-            cbb_Den2.Name = "cbb_Den2";
-            cbb_Den2.Size = new Size(98, 31);
-            cbb_Den2.TabIndex = 45;
-            // 
-            // cbb_Tu2
-            // 
-            cbb_Tu2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            cbb_Tu2.FormattingEnabled = true;
-            cbb_Tu2.Items.AddRange(new object[] { "0 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 AM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM" });
-            cbb_Tu2.Location = new Point(65, 580);
-            cbb_Tu2.Name = "cbb_Tu2";
-            cbb_Tu2.Size = new Size(98, 31);
-            cbb_Tu2.TabIndex = 44;
-            // 
-            // ccb_Den1
-            // 
-            ccb_Den1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            ccb_Den1.FormattingEnabled = true;
-            ccb_Den1.Items.AddRange(new object[] { "0 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 AM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM" });
-            ccb_Den1.Location = new Point(236, 484);
-            ccb_Den1.Name = "ccb_Den1";
-            ccb_Den1.Size = new Size(98, 31);
-            ccb_Den1.TabIndex = 43;
-            // 
-            // cbb_Tu1
-            // 
-            cbb_Tu1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            cbb_Tu1.FormattingEnabled = true;
-            cbb_Tu1.Items.AddRange(new object[] { "0 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 AM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM" });
-            cbb_Tu1.Location = new Point(65, 484);
-            cbb_Tu1.Name = "cbb_Tu1";
-            cbb_Tu1.Size = new Size(98, 31);
-            cbb_Tu1.TabIndex = 42;
-            // 
-            // lbl_Den2
-            // 
-            lbl_Den2.AutoSize = true;
-            lbl_Den2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_Den2.Location = new Point(177, 585);
-            lbl_Den2.Name = "lbl_Den2";
-            lbl_Den2.Size = new Size(41, 23);
-            lbl_Den2.TabIndex = 41;
-            lbl_Den2.Text = "Đến";
-            // 
-            // lbl_Tu2
-            // 
-            lbl_Tu2.AutoSize = true;
-            lbl_Tu2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_Tu2.Location = new Point(30, 585);
-            lbl_Tu2.Name = "lbl_Tu2";
-            lbl_Tu2.Size = new Size(29, 23);
-            lbl_Tu2.TabIndex = 40;
-            lbl_Tu2.Text = "Từ";
-            // 
-            // lbl_Den1
-            // 
-            lbl_Den1.AutoSize = true;
-            lbl_Den1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_Den1.Location = new Point(177, 489);
-            lbl_Den1.Name = "lbl_Den1";
-            lbl_Den1.Size = new Size(41, 23);
-            lbl_Den1.TabIndex = 39;
-            lbl_Den1.Text = "Đến";
-            // 
-            // lbl_Tu1
-            // 
-            lbl_Tu1.AutoSize = true;
-            lbl_Tu1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_Tu1.Location = new Point(30, 489);
-            lbl_Tu1.Name = "lbl_Tu1";
-            lbl_Tu1.Size = new Size(29, 23);
-            lbl_Tu1.TabIndex = 38;
-            lbl_Tu1.Text = "Từ";
-            // 
-            // lbl_KhiNaoKhachTraPhong
-            // 
-            lbl_KhiNaoKhachTraPhong.AutoSize = true;
-            lbl_KhiNaoKhachTraPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_KhiNaoKhachTraPhong.Location = new Point(30, 529);
-            lbl_KhiNaoKhachTraPhong.Name = "lbl_KhiNaoKhachTraPhong";
-            lbl_KhiNaoKhachTraPhong.Size = new Size(316, 23);
-            lbl_KhiNaoKhachTraPhong.TabIndex = 37;
-            lbl_KhiNaoKhachTraPhong.Text = "Khi nào khách hàng sẽ phải trả phòng ?\r\n";
-            // 
-            // lbl_KhiNaoKhachNhanPhong
-            // 
-            lbl_KhiNaoKhachNhanPhong.AutoSize = true;
-            lbl_KhiNaoKhachNhanPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_KhiNaoKhachNhanPhong.Location = new Point(30, 447);
-            lbl_KhiNaoKhachNhanPhong.Name = "lbl_KhiNaoKhachNhanPhong";
-            lbl_KhiNaoKhachNhanPhong.Size = new Size(328, 23);
-            lbl_KhiNaoKhachNhanPhong.TabIndex = 36;
-            lbl_KhiNaoKhachNhanPhong.Text = "Khi nào khách hàng có thể nhận phòng ?\r\n";
-            // 
-            // lbl_ThoiGianNhanTraPhong
-            // 
-            lbl_ThoiGianNhanTraPhong.AutoSize = true;
-            lbl_ThoiGianNhanTraPhong.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ThoiGianNhanTraPhong.Location = new Point(18, 403);
-            lbl_ThoiGianNhanTraPhong.Name = "lbl_ThoiGianNhanTraPhong";
-            lbl_ThoiGianNhanTraPhong.Size = new Size(367, 31);
-            lbl_ThoiGianNhanTraPhong.TabIndex = 35;
-            lbl_ThoiGianNhanTraPhong.Text = "Thời gian nhận phòng / trả phòng\r\n";
             // 
             // txt_MoTa
             // 
@@ -1826,15 +1145,14 @@
             panel6.Size = new Size(1, 42);
             panel6.TabIndex = 11;
             // 
-            // label36
+            // tabPage2
             // 
-            label36.AutoSize = true;
-            label36.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label36.Location = new Point(787, 580);
-            label36.Name = "label36";
-            label36.Size = new Size(45, 28);
-            label36.TabIndex = 126;
-            label36.Text = "Sao";
+            tabPage2.Location = new Point(4, 50);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(1117, 816);
+            tabPage2.TabIndex = 4;
+            tabPage2.Text = "+";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // fHotel_Rental
             // 
@@ -1861,8 +1179,6 @@
             pn_ThongTin.ResumeLayout(false);
             pn_ThongTin.PerformLayout();
             tab_ChiTietPhongO.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1934,58 +1250,10 @@
         private Label lbl_CoGiDocDao;
         private Label lbl_ChiTietPhongO;
         private TabControl tab_ChiTietPhongO;
-        private TabPage tabPage2;
         private PictureBox pictureBox1;
         private Label label2;
-        private Label lbl_ChiDemSoLuong;
-        private Label lbl_SoLuongNguoi;
-        private Label lbl_SoGiuong;
-        private TextBox txt_PhongTam;
-        private Label lbl_SucChua;
-        private TextBox txt_SucChua;
-        private Label lbl_m2;
-        private Label lbl_KichThuoc;
-        private TextBox txt_KichThuoc;
-        private Label label4;
-        private Label label5;
-        private Label lbl_QuyDoiTac;
-        private Label lbl_ChiTietPhong;
-        private Label lbl_ThietLap;
-        private Label lbl_SauKhiNhieuHon;
-        private Label lbl_Nguoi;
-        private TextBox textBox2;
-        private Label lbl_ThemKhach;
-        private Label lbl_VND;
-        private TextBox textBox1;
-        private Label lbl_GiaToiThieuMoiDem;
-        private Label lbl_GiaGocChoPhongTieuChuan;
-        private Label lbl_VuiLong;
-        private Label lbl_GiaMoiDem;
         private TabPage tabPage1;
-        private Label label6;
-        private Label label7;
-        private TextBox textBox3;
-        private Label label8;
-        private Label label9;
-        private TextBox textBox4;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
-        private Label label16;
-        private TextBox textBox5;
-        private Label label17;
-        private TextBox textBox6;
-        private Label label18;
-        private Label label19;
-        private TextBox textBox7;
-        private Label label20;
         private Label label21;
-        private Label label22;
-        private Label label23;
-        private Label label24;
         private Label lbl_Anh;
         private Label label25;
         private Label lbl_HinhAnhRatQuanTrong;
@@ -1996,8 +1264,8 @@
         private Label label27;
         private Label lbl_QuyDoiTacNhanThanhToan;
         private Label label28;
-        private TextBox textBox8;
-        private ComboBox cbb_TieuBangTinh;
+        private TextBox txt_DiaChi2;
+        private ComboBox cbb_Tinh2;
         private ComboBox cbb_ThanhPho;
         private ComboBox cbb_QuocGiaDiaDiem;
         private Label label29;
@@ -2010,7 +1278,7 @@
         private Label lbl_SoDienThoaiLienHe;
         private Label label31;
         private Button button1;
-        private CheckedListBox checkedListBox3;
+        private CheckedListBox clb_ThanhToan;
         private Button btn_QuayLai;
         private Button btn_TiepTheo;
         private Label lbl_TenChuKhachSan;
@@ -2030,5 +1298,6 @@
         private Panel panel5;
         private Panel panel6;
         private Label label36;
+        private TabPage tabPage2;
     }
 }

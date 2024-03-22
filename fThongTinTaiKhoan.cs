@@ -12,6 +12,8 @@ namespace DuLich
 {
     public partial class fThongTinTaiKhoan : Form
     {
+        public string tentk;
+        public string mk;
         public fThongTinTaiKhoan()
         {
             InitializeComponent();
@@ -19,6 +21,19 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            uThongtin2.tentk = tentk;
+            uThongtin2.mk = mk;
+            uThongTinKhachSan1.tentk = tentk;
+            uThongtin1.tentk = tentk;
+            uViTri1.tentk = tentk;
+            uHoSo1.tentk = tentk;
+            Modify modify = new Modify();
+            string query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tentk + "' ";
+            var result = modify.KhachSanThuocTaiKhoan(query);
+            if (result.Count() > 0)
+            {
+                btn_ThongTinKhachSan.Visible = true;
+            }
 
         }
         public void ShowThongTinCanBan()
@@ -102,7 +117,6 @@ namespace DuLich
         int dem = 0;
         private void btn_ThongTinKhachSan_Click(object sender, EventArgs e)
         {
-
             if (dem % 2 == 0)
             {
                 ShowThongTinCanBan();
@@ -121,6 +135,11 @@ namespace DuLich
                 HideHoSo();
                 dem++;
             }
+        }
+
+        private void uThongtin2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
