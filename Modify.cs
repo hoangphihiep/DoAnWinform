@@ -134,6 +134,21 @@ namespace DuLich
             }
             return accounts;
         }
-        
+        public List<UuDai> UuDai(string table)
+        {
+            List<UuDai> accounts = new List<UuDai>();
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                cmd = new SqlCommand(table, conn);
+                data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    accounts.Add(new UuDai(data.GetInt32(0), data.GetInt32(1),data.GetString(2),data.GetInt32(3)));
+                }
+                conn.Close();
+            }
+            return accounts;
+        }
     }
 }

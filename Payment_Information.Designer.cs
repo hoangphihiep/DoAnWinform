@@ -629,6 +629,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Payment_Information";
             Load += Payment_Information_Load;
+            Shown += Payment_Information_Shown;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);

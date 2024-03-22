@@ -5,10 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Reflection;
 namespace DuLich
 {
     public partial class UPhong : UserControl
@@ -20,11 +21,23 @@ namespace DuLich
 
         private void ptb_AnhBia_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+
+            // OpenFileDialog to select an image
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_AnhBia.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                // Get image path and name
+                string imagePath = dialog.FileName;
+                string imageName = Path.GetFileNameWithoutExtension(imagePath);
+
+                // **Add the image as an embedded resource:**
+                //Properties.Resources.AddResource(imageName, imagePath);
+
+                //// Access the image from resources using its name
+                //ptb_AnhBia.Image = Properties.Resources.imageName;
+                ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 

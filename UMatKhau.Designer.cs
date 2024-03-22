@@ -140,6 +140,7 @@
             Name = "UMatKhau";
             Size = new Size(684, 502);
             Load += UMatKhau_Load;
+            VisibleChanged += UMatKhau_VisibleChanged;
             ResumeLayout(false);
             PerformLayout();
         }

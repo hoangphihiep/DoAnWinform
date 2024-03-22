@@ -73,5 +73,10 @@ namespace DuLich
         {
 
         }
+
+        private void Customer_Information_Shown(object sender, EventArgs e)
+        {
+            panel1.VerticalScroll.Value = 0;
+        }
     }
 }

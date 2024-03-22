@@ -42,13 +42,14 @@
             lbl_MaKS = new Label();
             cbb_DanhGiaSao = new ComboBox();
             label36 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lbl_TenKhachSan
             // 
             lbl_TenKhachSan.AutoSize = true;
             lbl_TenKhachSan.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_TenKhachSan.Location = new Point(32, 74);
+            lbl_TenKhachSan.Location = new Point(32, 134);
             lbl_TenKhachSan.Name = "lbl_TenKhachSan";
             lbl_TenKhachSan.Size = new Size(125, 25);
             lbl_TenKhachSan.TabIndex = 0;
@@ -106,7 +107,7 @@
             // 
             // txt_TenKS
             // 
-            txt_TenKS.Location = new Point(322, 72);
+            txt_TenKS.Location = new Point(322, 132);
             txt_TenKS.Name = "txt_TenKS";
             txt_TenKS.Size = new Size(313, 27);
             txt_TenKS.TabIndex = 15;
@@ -134,7 +135,7 @@
             // 
             // txt_MaKhachSan
             // 
-            txt_MaKhachSan.Location = new Point(322, 134);
+            txt_MaKhachSan.Location = new Point(322, 74);
             txt_MaKhachSan.Name = "txt_MaKhachSan";
             txt_MaKhachSan.Size = new Size(313, 27);
             txt_MaKhachSan.TabIndex = 25;
@@ -143,7 +144,7 @@
             // 
             lbl_MaKS.AutoSize = true;
             lbl_MaKS.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_MaKS.Location = new Point(32, 136);
+            lbl_MaKS.Location = new Point(32, 76);
             lbl_MaKS.Name = "lbl_MaKS";
             lbl_MaKS.Size = new Size(122, 25);
             lbl_MaKS.TabIndex = 24;
@@ -169,10 +170,21 @@
             label36.TabIndex = 127;
             label36.Text = "Sao";
             // 
+            // button1
+            // 
+            button1.Location = new Point(673, 74);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 27);
+            button1.TabIndex = 128;
+            button1.Text = "Refresh";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // UThongTinKhachSan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(label36);
             Controls.Add(cbb_DanhGiaSao);
             Controls.Add(txt_MaKhachSan);
@@ -189,6 +201,7 @@
             Controls.Add(lbl_TenKhachSan);
             Name = "UThongTinKhachSan";
             Size = new Size(887, 655);
+            Load += UThongTinKhachSan_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,5 +222,6 @@
         private Label lbl_MaKS;
         private ComboBox cbb_DanhGiaSao;
         private Label label36;
+        private Button button1;
     }
 }

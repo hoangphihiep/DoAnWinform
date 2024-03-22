@@ -453,6 +453,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Customer_Information";
             Load += Customer_Information_Load;
+            Shown += Customer_Information_Shown;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);

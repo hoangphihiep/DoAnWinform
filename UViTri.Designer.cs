@@ -37,6 +37,7 @@
             lbl_MaKS = new Label();
             cbb_ThanhPho = new ComboBox();
             cbb_Tinh = new ComboBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lbl_DiaChi
@@ -124,10 +125,21 @@
             cbb_Tinh.Size = new Size(313, 31);
             cbb_Tinh.TabIndex = 75;
             // 
+            // button1
+            // 
+            button1.Location = new Point(631, 24);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 27);
+            button1.TabIndex = 76;
+            button1.Text = "Refresh";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // UViTri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(cbb_Tinh);
             Controls.Add(cbb_ThanhPho);
             Controls.Add(txt_MaKhachSan);
@@ -140,6 +152,7 @@
             Name = "UViTri";
             Size = new Size(807, 563);
             Load += UViTri_Load;
+            VisibleChanged += UViTri_VisibleChanged;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +168,6 @@
         private Label lbl_MaKS;
         private ComboBox cbb_ThanhPho;
         private ComboBox cbb_Tinh;
+        private Button button1;
     }
 }

@@ -101,41 +101,41 @@ namespace DuLich
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-                Account_DAO Dao = new Account_DAO();
-                Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-                if (!tk.checkInput(tk))
-                {
+            Account_DAO Dao = new Account_DAO();
+            Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
+            if (!tk.checkInput(tk))
+            {
 
-                }
-                else
+            }
+            else
+            {
+                Modify modify = new Modify();
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk.getTenDangNhap + "'";
+                if (modify.accounts(query).Count() == 0)
                 {
-                    Modify modify = new Modify();
-                    string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk.getTenDangNhap + "'";
-                    if (modify.accounts(query).Count() == 0)
+                    if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
                     {
-                        if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
-                        {
-                            MessageBox.Show("Mật khẩu nhập lại không trùng khớp");
-                        }
-                        else
-                        {
-                            if (cb_ToiDongY.Checked == true)
-                            {
-                                Dao.AddAccount(tk, "TaiKhoan1");
-                                MessageBox.Show("Đăng kí thành công");
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Hãy đọc kĩ điều khoản và điều kiện đăng ký");
-                            }
-                        }
+                        MessageBox.Show("Mật khẩu nhập lại không trùng khớp");
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản đã tồn tại");
+                        if (cb_ToiDongY.Checked == true)
+                        {
+                            Dao.AddAccount(tk, "TaiKhoan1");
+                            MessageBox.Show("Đăng kí thành công");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hãy đọc kĩ điều khoản và điều kiện đăng ký");
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
+                }
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
