@@ -46,7 +46,7 @@ namespace DuLich
                     MessageBox.Show("Chỉnh sửa thành công");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -55,6 +55,55 @@ namespace DuLich
         private void lbl_Email_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UHoSo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UHoSo_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                if (txt_MaKhachSan.Text == "")
+                    MessageBox.Show("Hãy nhập mã khách sạn");
+                else
+                {
+                    string query = "Select * from HOSO where TK = '" + tentk + "' and MAKS = '" + txt_MaKhachSan.Text + "' ";
+                    HoSoDAO Dao = new HoSoDAO();
+                    List<HoSo> list_HoSo = modify.HoSo(query);
+                    if (list_HoSo.Count() != 0)
+                    {
+                        HoSo hoSo1 = list_HoSo[0];
+                        txt_DiaChi.Text = hoSo1.DIACHI;
+                        txt_Email.Text = hoSo1.EMAIL;
+                        txt_HoVaTenChuKhachSan.Text = hoSo1.TENCHUKS;
+                        txt_SoDienThoai.Text = hoSo1.SODIENTHOAI;
+                        cbb_ThanhPho.Text = hoSo1.TENTHANHPHO;
+                        cbb_Tinh.Text = hoSo1.TINH;
+                        bool check0 = hoSo1.THEDIENTU != 0;
+                        bool check1 = hoSo1.NGANHANG != 0;
+
+                        checkedListBox3.SetItemChecked(0, check0);
+                        checkedListBox3.SetItemChecked(1, check1);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại mã khách sạn này");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

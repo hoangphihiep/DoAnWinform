@@ -10,7 +10,7 @@ namespace DuLich
     public class Connection_to_SQL
     {
         
-        private static string Connection = @"Data Source=DESKTOP-OOU6GPH;Initial Catalog=Account;Integrated Security=True";
+        private static string Connection = @"Data Source=LAPTOP-NJM7CAI2;Initial Catalog=Account;Integrated Security=True;Encrypt=False";
 
         public static SqlConnection getConnection() 
         {
@@ -33,6 +33,10 @@ namespace DuLich
             {
                 conn.Close();
             }
+        }
+        public static string getConnnection()
+        {
+            return Connection;
         }
     }
 }

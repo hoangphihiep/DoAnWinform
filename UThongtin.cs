@@ -78,5 +78,30 @@ namespace DuLich
         {
 
         }
+
+        private void UThongtin_VisibleChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tentk + "' ";
+                Account_DAO Dao = new Account_DAO();
+                List<Account> accounts = modify.accounts(query);
+                if (accounts.Count() != 0)
+                {
+                    Account acc = accounts[0];
+                    txt_HoTen.Text = acc.getHoTen;
+                    txt_DiaChi.Text = acc.getDiaChi;
+                    txt_Email.Text = acc.getEmail;
+                    txt_GioiTinh.Text = acc.getGioiTinh;
+                    txt_SoDienThoai.Text = acc.getSoDienThoai;
+                    dtp_ngaythangnamsinh.Value = acc.getNgayThangNamSinh;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

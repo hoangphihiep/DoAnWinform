@@ -94,6 +94,9 @@
     <Compile Update="UTienNghi.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="U_UuDai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UViTri.cs">
       <SubType>UserControl</SubType>
     </Compile>

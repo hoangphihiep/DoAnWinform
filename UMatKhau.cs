@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DuLich
 {
     public partial class UMatKhau : UserControl
     {
+        public string tentk;
         public UMatKhau()
         {
             InitializeComponent();
@@ -79,6 +81,26 @@ namespace DuLich
         private void UMatKhau_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void UMatKhau_VisibleChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tentk + "' ";
+                Account_DAO Dao = new Account_DAO();
+                List<Account> accounts = modify.accounts(query);
+                if (accounts.Count() != 0)
+                {
+                    Account acc = accounts[0];
+                    txt_TenDangNhap.Text = acc.getTenDangNhap;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

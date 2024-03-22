@@ -45,5 +45,43 @@ namespace DuLich
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                if (txt_MaKhachSan.Text == "")
+                    MessageBox.Show("Hãy nhập mã khách sạn");
+                else
+                {
+                    string query = "Select * from ThongTinCanBan where TK = '" + tentk + "' and MAKS = '" + txt_MaKhachSan.Text + "' ";
+                    ThongTinCanBanDAO Dao = new ThongTinCanBanDAO();
+                    List<ThongTinCanBan> thongTinCanBans = modify.ThongTinCanBan(query);
+                    if (thongTinCanBans.Count() != 0)
+                    {
+                        ThongTinCanBan ThongTin = thongTinCanBans[0];
+                        txt_TenKS.Text = ThongTin.TENKH;
+                        txt_MoTa.Text = ThongTin.MOTA;
+                        txt_KhoangCachSB.Text = ThongTin.KCSANBAY?.ToString();
+                        txt_KhoangCachTP.Text = ThongTin.KCTHANHPHO?.ToString();
+                        cbb_DanhGiaSao.Text = ThongTin.SAO.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại mã khách sạn này");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void UThongTinKhachSan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

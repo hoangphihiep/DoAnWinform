@@ -176,6 +176,7 @@
             Name = "UThongtin";
             Size = new Size(824, 606);
             Load += UThongtin_Load;
+            VisibleChanged += UThongtin_VisibleChanged;
             ResumeLayout(false);
             PerformLayout();
         }

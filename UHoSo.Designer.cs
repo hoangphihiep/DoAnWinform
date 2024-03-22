@@ -45,6 +45,7 @@
             lbl_HoVaTenChuKhachSan = new Label();
             cbb_Tinh = new ComboBox();
             cbb_ThanhPho = new ComboBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lbl_MaKS
@@ -202,10 +203,21 @@
             cbb_ThanhPho.Size = new Size(313, 31);
             cbb_ThanhPho.TabIndex = 120;
             // 
+            // button1
+            // 
+            button1.Location = new Point(656, 37);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 27);
+            button1.TabIndex = 122;
+            button1.Text = "Refresh";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // UHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(cbb_Tinh);
             Controls.Add(cbb_ThanhPho);
             Controls.Add(txt_HoVaTenChuKhachSan);
@@ -225,6 +237,8 @@
             Controls.Add(lbl_MaKS);
             Name = "UHoSo";
             Size = new Size(821, 563);
+            Load += UHoSo_Load;
+            VisibleChanged += UHoSo_VisibleChanged;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -248,5 +262,6 @@
         private Label lbl_HoVaTenChuKhachSan;
         private ComboBox cbb_Tinh;
         private ComboBox cbb_ThanhPho;
+        private Button button1;
     }
 }

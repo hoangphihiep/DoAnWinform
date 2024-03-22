@@ -52,5 +52,10 @@ namespace DuLich
         {
 
         }
+
+        private void Payment_Information_Shown(object sender, EventArgs e)
+        {
+            panel1.VerticalScroll.Value = 0;
+        }
     }
 }
