@@ -16,10 +16,11 @@ namespace DuLich
 {
     public partial class fHotel_Rental : Form
     {
-        public int i = 1;
+        public int MaPhong = 1;
         public string tk;
         public string mk;
-        public int MaKhachSan = 0;
+        public int MaKhachSan = 1;
+        List<Phong> Phongs = new List<Phong>();
         public fHotel_Rental()
         {
             InitializeComponent();
@@ -31,8 +32,7 @@ namespace DuLich
             label32.ForeColor = Color.Black;
             label30.ForeColor = Color.Black;
             label33.ForeColor = Color.Black;
-            label34.ForeColor = Color.Black;
-            label35.ForeColor = Color.Black;
+            lbl_Ho.ForeColor = Color.Black;
         }
         public List<string> LayCacMucDaChon(CheckedListBox checkedListBox)
         {
@@ -113,6 +113,7 @@ namespace DuLich
                 ViTriDao viTriDao = new ViTriDao();
                 TienNghiDAO tienNghiDAO = new TienNghiDAO();
                 HoSoDAO hoSoDAO = new HoSoDAO();
+                PhongDAO phongDAO = new PhongDAO();
 
                 //Truyền đối tượng nào hàm DAO đẻ add vào SQL
                 khachSanThuocTaiKhoanDAO.Add(khachSanThuocTaiKhoan, "KHACHSAN_THUOC_TAIKHOAN");
@@ -120,6 +121,20 @@ namespace DuLich
                 viTriDao.Add(viTri, "ViTri");
                 tienNghiDAO.Add(tienNghi, "TIENNGHI");
                 hoSoDAO.Add(hoSo, "HOSO");
+
+                while (true)
+                {
+                    query = "Select * from PHONG where TaiKhoan = '" + tk + "' and MaKS = '" + MaKhachSan + "' and MAPHONG = '" + MaPhong + "' ";
+                    var result = modify.Phong(query);
+                    if (result.Count() > 0)
+                        MaPhong++;
+                    else
+                        break;
+                }
+                foreach(Phong phong in Phongs)
+                {
+                    phongDAO.Add(phong, "PHONG");
+                }
 
                 MessageBox.Show("Đăng tải hoàn tất ");
             }
@@ -170,7 +185,7 @@ namespace DuLich
         private void label34_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            pn_Goc.VerticalScroll.Value = 2630;
+            pn_Goc.VerticalScroll.Value = 2650;
         }
 
         private void label35_Click(object sender, EventArgs e)
@@ -189,13 +204,15 @@ namespace DuLich
             var lastIndex = this.tab_ChiTietPhongO.TabCount - 1;
             if (this.tab_ChiTietPhongO.GetTabRect(lastIndex).Contains(e.Location))
             {
-                i++;
-                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng " + i);
+                MaPhong++;
+                this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng " + MaPhong);
 
                 this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
                 UPhong uPhong = new UPhong();
-                uPhong.phong = i;
-                TabPage tabPage1 = tab_ChiTietPhongO.TabPages[i - 1];
+                uPhong.phong = MaPhong;
+                uPhong.taikhoan = tk;
+                //Phongs.Add(new Phong(uPhong.));
+                TabPage tabPage1 = tab_ChiTietPhongO.TabPages[MaPhong - 1];
                 uPhong.Size = tabPage1.Size;
                 tabPage1.Controls.Add(uPhong);
                 uPhong.BringToFront();
