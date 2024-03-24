@@ -148,7 +148,10 @@ namespace DuLich
 
         private void btnRoomChoose_Click(object sender, EventArgs e)
         {
-            ptbTotalImage1.Image = Properties.Resources.khachsan1;
+            FAddAnh f= new FAddAnh();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }
