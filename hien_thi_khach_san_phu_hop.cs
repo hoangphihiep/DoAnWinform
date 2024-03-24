@@ -358,7 +358,6 @@ namespace DuLich
                 int demTrung = 0;
                 demTrung = thucHienDemTrung(maks,demTrung);
                 soLuong.Add(demTrung);
-                MessageBox.Show(demTrung.ToString());
             }
             if (soLuong .Count > 0)
             {

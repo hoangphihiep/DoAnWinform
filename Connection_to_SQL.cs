@@ -22,8 +22,8 @@ namespace DuLich
             try
             {
                 // Ket noi
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                //conn.Open();
+                //SqlCommand cmd = new SqlCommand(sql, conn);
             }
             catch (Exception ex)
             {

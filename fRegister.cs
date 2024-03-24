@@ -103,15 +103,16 @@ namespace DuLich
         {
             Account_DAO Dao = new Account_DAO();
             Account tk = new Account(txt_TenDangNhap.Text, txt_HoVaTen.Text, cbb_GioiTinh.Text, txt_DiaChi.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_SoDienThoai.Text, txt_MatKhau.Text);
-            if (!tk.checkInput(tk))
-            {
+           // if (!tk.checkInput(tk))
+           // {
 
-            }
-            else
-            {
+           // }
+           // else
+            //{
                 Modify modify = new Modify();
                 string query = "Select * from TaiKhoan1 where TenDangNhap = '" + tk.getTenDangNhap + "'";
-                if (modify.accounts(query).Count() == 0)
+                Dao.AddAccount(tk, "TaiKhoan1");
+            /*if (modify.accounts(query).Count() == 0)
                 {
                     if (txt_MatKhau.Text != txt_NhapLaiMatKhau.Text)
                     {
@@ -121,7 +122,7 @@ namespace DuLich
                     {
                         if (cb_ToiDongY.Checked == true)
                         {
-                            Dao.AddAccount(tk, "TaiKhoan1");
+                            
                             MessageBox.Show("Đăng kí thành công");
                             this.Close();
                         }
@@ -134,8 +135,8 @@ namespace DuLich
                 else
                 {
                     MessageBox.Show("Tài khoản đã tồn tại");
-                }
-            }
+                }*/
+            //}
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
