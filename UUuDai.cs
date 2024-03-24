@@ -159,6 +159,7 @@ namespace DuLich
                         UuDai uuDai = list_UuDai[0];
                         txt_TenUuDai.Text = uuDai.TenUuDai;
                         txt_GiaTriUuDai.Text = uuDai.GiaTriUuDai.ToString();
+                        dataGridView1.Refresh();
                     }
                     else
                     {

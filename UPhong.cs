@@ -10,94 +10,270 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using DuLich.Properties;
+
 namespace DuLich
 {
     public partial class UPhong : UserControl
     {
+        public string taikhoan;
+        public int phong;
+        public string anhBia;
+        public string anh1;
+        public string anh2;
+        public string anh3;
+        public string anh4;
+        public string anh5;
+        public string anh6;
         public UPhong()
         {
             InitializeComponent();
+
         }
 
         private void ptb_AnhBia_Click(object sender, EventArgs e)
         {
 
-            // OpenFileDialog to select an image
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                // Get image path and name
                 string imagePath = dialog.FileName;
-                string imageName = Path.GetFileNameWithoutExtension(imagePath);
 
-                // **Add the image as an embedded resource:**
-                //Properties.Resources.AddResource(imageName, imagePath);
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
 
-                //// Access the image from resources using its name
-                //ptb_AnhBia.Image = Properties.Resources.imageName;
-                ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_AnhBia.Image = Image.FromFile(targetPath);
+                    ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anhBia = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh1.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh1.Image = Image.FromFile(targetPath);
+                    ptb_Anh1.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh1 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh2.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh2.Image = Image.FromFile(targetPath);
+                    ptb_Anh2.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh2 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh3.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh3.Image = Image.FromFile(targetPath);
+                    ptb_Anh3.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh3 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh4_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh4.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh4.Image = Image.FromFile(targetPath);
+                    ptb_Anh4.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh4 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh5_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh5.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh5.Image = Image.FromFile(targetPath);
+                    ptb_Anh5.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh5 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ptb_Anh6_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                ptb_Anh5.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh6.Image = Image.FromFile(targetPath);
+                    ptb_Anh6.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    anh6 = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -167,6 +343,20 @@ namespace DuLich
             ptb_Anh6.Size = new Size(135, 119);
             ptb_Anh6.Location = new Point(969, 517);
 
+        }
+
+        private void btn_UploadAnh_Click(object sender, EventArgs e)
+        {
+            Modify modify = new Modify();
+            string query = "Select * from HinhAnh where PHONG = '" + phong + "' ";
+            HinhAnh hinh = new HinhAnh(taikhoan,phong, anhBia, anh1, anh2, anh3, anh4, anh5, anh6);
+            HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
+            List<HinhAnh> list_accounts = modify.HinhAnh(query);
+            if (list_accounts.Count() == 0)
+            {
+                hinhAnhDAO.Add(hinh, "HinhAnh");
+                MessageBox.Show("Upload ảnh thành công");
+            }
         }
     }
 }

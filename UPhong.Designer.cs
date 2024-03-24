@@ -60,6 +60,7 @@
             ptb_Anh4 = new PictureBox();
             ptb_Anh5 = new PictureBox();
             ptb_Anh6 = new PictureBox();
+            btn_UploadAnh = new Button();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
@@ -382,10 +383,21 @@
             ptb_Anh6.TabStop = false;
             ptb_Anh6.Click += ptb_Anh6_Click;
             // 
+            // btn_UploadAnh
+            // 
+            btn_UploadAnh.Location = new Point(829, 672);
+            btn_UploadAnh.Name = "btn_UploadAnh";
+            btn_UploadAnh.Size = new Size(94, 29);
+            btn_UploadAnh.TabIndex = 107;
+            btn_UploadAnh.Text = "Upload ảnh";
+            btn_UploadAnh.UseVisualStyleBackColor = true;
+            btn_UploadAnh.Click += btn_UploadAnh_Click;
+            // 
             // UPhong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btn_UploadAnh);
             Controls.Add(ptb_Anh6);
             Controls.Add(ptb_Anh5);
             Controls.Add(ptb_Anh4);
@@ -466,5 +478,6 @@
         private PictureBox ptb_Anh4;
         private PictureBox ptb_Anh5;
         private PictureBox ptb_Anh6;
+        private Button btn_UploadAnh;
     }
 }

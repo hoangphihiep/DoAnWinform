@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btn_UDai = new Button();
+            panel4 = new Panel();
             btn_HoSo = new Button();
             btn_Anh = new Button();
             btn_ChiTietPhong = new Button();
@@ -48,10 +50,8 @@
             uHoSo1 = new UHoSo();
             uAnh1 = new UAnh();
             uChiTietPhongo1 = new UChiTietPhongO();
-            panel4 = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -60,7 +60,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btn_UDai);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(btn_HoSo);
             panel1.Controls.Add(btn_Anh);
@@ -76,6 +76,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(190, 654);
             panel1.TabIndex = 0;
+            // 
+            // btn_UDai
+            // 
+            btn_UDai.Location = new Point(44, 181);
+            btn_UDai.Name = "btn_UDai";
+            btn_UDai.Size = new Size(146, 41);
+            btn_UDai.TabIndex = 9;
+            btn_UDai.Text = "Ưu đãi";
+            btn_UDai.TextAlign = ContentAlignment.MiddleLeft;
+            btn_UDai.UseVisualStyleBackColor = true;
+            btn_UDai.Visible = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ButtonFace;
+            panel4.Location = new Point(190, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(903, 40);
+            panel4.TabIndex = 0;
             // 
             // btn_HoSo
             // 
@@ -259,25 +278,6 @@
             uChiTietPhongo1.Size = new Size(900, 611);
             uChiTietPhongo1.TabIndex = 5;
             // 
-            // panel4
-            // 
-            panel4.BackColor = SystemColors.ButtonFace;
-            panel4.Location = new Point(93, 420);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(903, 40);
-            panel4.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(44, 181);
-            button1.Name = "button1";
-            button1.Size = new Size(146, 41);
-            button1.TabIndex = 9;
-            button1.Text = "Ưu đãi";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
-            // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -319,6 +319,6 @@
         private UChiTietPhongO uChiTietPhongo1;
         private UAnh uAnh1;
         private UHoSo uHoSo1;
-        private Button button1;
+        private Button btn_UDai;
     }
 }

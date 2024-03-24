@@ -674,39 +674,39 @@ namespace DoAnDuLich
         {
             //MessageBox.Show(txt_DiaDiem.Text);
             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-               if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
-                {
-                    
-                    k.ShowMenuStrip();
-                    k.HideDangKy();
-                    k.HideDangNhap();
-                    k.HidePanle2();
-                    k.diadiem = txt_DiaDiem.Text;
-               
-                    this.Hide();
-                    k.ShowDialog();
-                    this.Show();
-                }
-                else if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
-                {
-                    k.ShowMenuStrip();
-                    k.HideDangKy();
-                    k.HideDangNhap();
-                    k.HideDangKyKS();
-                    k.HidePanle2();
-                    k.diadiem = txt_DiaDiem.Text;
-                    this.Hide();
-                    k.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    k.diadiem = txt_DiaDiem.Text;
-                    this.Hide();
-                    k.ShowDialog();
-                    this.Show();
-                }
-                     
+            if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == true)
+            {
+
+                k.ShowMenuStrip();
+                k.HideDangKy();
+                k.HideDangNhap();
+                k.HidePanle2();
+                k.diadiem = txt_DiaDiem.Text;
+
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+            else if (btn_MyTaiKhoan.Visible == true && btn_DangKyKS.Visible == false)
+            {
+                k.ShowMenuStrip();
+                k.HideDangKy();
+                k.HideDangNhap();
+                k.HideDangKyKS();
+                k.HidePanle2();
+                k.diadiem = txt_DiaDiem.Text;
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                k.diadiem = txt_DiaDiem.Text;
+                this.Hide();
+                k.ShowDialog();
+                this.Show();
+            }
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -825,8 +825,8 @@ namespace DoAnDuLich
 
         private void btn_KSDaDat_Click(object sender, EventArgs e)
         {
-            fCollections f = new fCollections();
-            f.kiemtratrang = 1;
+            fHotel_booked f = new fHotel_booked();
+            //f.kiemtratrang = 1;
             this.Hide();
             f.ShowDialog();
             this.Show();

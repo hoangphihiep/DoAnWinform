@@ -378,6 +378,8 @@
             // 
             // btn_ThongTinTaiKhoan
             // 
+            btn_ThongTinTaiKhoan.FlatAppearance.BorderSize = 0;
+            btn_ThongTinTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_ThongTinTaiKhoan.Location = new Point(0, 46);
             btn_ThongTinTaiKhoan.Name = "btn_ThongTinTaiKhoan";
             btn_ThongTinTaiKhoan.Size = new Size(196, 53);
@@ -388,6 +390,8 @@
             // 
             // btn_KSDaDat
             // 
+            btn_KSDaDat.FlatAppearance.BorderSize = 0;
+            btn_KSDaDat.FlatStyle = FlatStyle.Flat;
             btn_KSDaDat.Location = new Point(0, 97);
             btn_KSDaDat.Name = "btn_KSDaDat";
             btn_KSDaDat.Size = new Size(196, 53);
@@ -398,6 +402,8 @@
             // 
             // btn_Thoat
             // 
+            btn_Thoat.FlatAppearance.BorderSize = 0;
+            btn_Thoat.FlatStyle = FlatStyle.Flat;
             btn_Thoat.Location = new Point(0, 148);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(196, 53);
@@ -420,6 +426,8 @@
             // 
             // btn_menuTaiKhoan
             // 
+            btn_menuTaiKhoan.FlatAppearance.BorderSize = 0;
+            btn_menuTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_menuTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;
             btn_menuTaiKhoan.Location = new Point(0, 0);
             btn_menuTaiKhoan.Name = "btn_menuTaiKhoan";

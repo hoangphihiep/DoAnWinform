@@ -10,12 +10,16 @@ using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DuLich
 {
     public partial class hien_thi_khach_san_phu_hop : Form
     {
         TruyenDuLieu truyen = new TruyenDuLieu();
+        int value3;
+        int value2;
+        int value;
         public hien_thi_khach_san_phu_hop()
         {
             InitializeComponent();
@@ -23,11 +27,11 @@ namespace DuLich
             trackBar1.Scroll += trackBar1_Scroll;
             trackBar2.Value = 4000000; // Giá trị mặc định
             trackBar2.Scroll += trackBar2_Scroll;
-            int value = trackBar1.Value;
+            value = trackBar1.Value;
             lbl_Min.Text = $"{value}";
-            int value2 = trackBar2.Value;
-            value = trackBar2.Maximum - value2;
-            lbl_max.Text = value.ToString();
+            value2 = trackBar2.Value;
+            value3 = trackBar2.Maximum - value2;
+            lbl_max.Text = value3.ToString();
 
 
         }
@@ -304,10 +308,6 @@ namespace DuLich
             KT_DangNhap1 = 0;
         }
 
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
@@ -320,8 +320,12 @@ namespace DuLich
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
+
+            //AND ThongTinCanBan.GIA >= {1} AND ThongTinCanBan.GIA <= {2}
             diadiem = lb_TimKiem.Text;
-            truyen.Truyen(diadiem, "TENKH");
+            int min = trackBar1.Value;
+            int max = trackBar2.Maximum - trackBar2.Value;
+            truyen.Truyen2(diadiem, min, max);
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
@@ -332,35 +336,35 @@ namespace DuLich
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             // khi có chọn tiện ích
-            List<int> maksList = new List<int>();
-            string query = "SELECT * FROM ViTri WHERE Tinh = @diadiem";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@diadiem", diadiem);
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            if (clBox_TienNghiChinh.SelectedIndex != -1 || clBox_TienNghiCC.SelectedIndex != -1 || clBox_DichVu.SelectedIndex != -1 || clBox_AmThuc.SelectedIndex != -1)
             {
-                int maColumnIndex = reader.GetOrdinal("MAKS");
-                if (!reader.IsDBNull(maColumnIndex))
+                List<int> maksList = new List<int>();
+                string query = "SELECT * FROM ViTri WHERE Tinh = @diadiem";
+                SqlConnection conn = Connection_to_SQL.getConnection();
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@diadiem", diadiem);
+                SqlDataReader reader = command.ExecuteReader();
+                int i = 0;
+                while (reader.Read())
                 {
-                    int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
-                    maksList.Add(maKS);
+                    int maColumnIndex = reader.GetOrdinal("MAKS");
+                    if (!reader.IsDBNull(maColumnIndex))
+                    {
+                        int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
+                        maksList.Add(maKS);
 
+                    }
+                    i++;
                 }
-                i++;
-            }
-            conn.Close();    
-            List<int> soLuong = new List<int>();
-            foreach (int maks in maksList)
-            {
-                int demTrung = 0;
-                demTrung = thucHienDemTrung(maks,demTrung);
-                soLuong.Add(demTrung);
-            }
-            if (soLuong .Count > 0)
-            {
+                conn.Close();
+                List<int> soLuong = new List<int>();
+                foreach (int maks in maksList)
+                {
+                    int demTrung = 0;
+                    demTrung = thucHienDemTrung(maks, demTrung);
+                    soLuong.Add(demTrung);
+                }
                 for (int j = 0; j < soLuong.Count - 1; j++)
                 {
                     for (int k = j + 1; k < soLuong.Count; k++)
@@ -426,7 +430,6 @@ namespace DuLich
                     tab_PhuHopNhat.Controls.Add(uc);
                 }
             }
-            
         }
         public int thucHienDemTrung(int maks, int demTrung)
         {

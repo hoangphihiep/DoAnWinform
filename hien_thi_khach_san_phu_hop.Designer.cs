@@ -76,6 +76,7 @@
             clBox_TienNghiCC = new CheckedListBox();
             label11 = new Label();
             label2 = new Label();
+            panel5 = new Panel();
             panel_menu.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel_menu
@@ -102,6 +104,8 @@
             // 
             // btn_menuTaiKhoan
             // 
+            btn_menuTaiKhoan.FlatAppearance.BorderSize = 0;
+            btn_menuTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_menuTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;
             btn_menuTaiKhoan.Location = new Point(0, 0);
             btn_menuTaiKhoan.Name = "btn_menuTaiKhoan";
@@ -113,6 +117,8 @@
             // 
             // btn_Thoat
             // 
+            btn_Thoat.FlatAppearance.BorderSize = 0;
+            btn_Thoat.FlatStyle = FlatStyle.Flat;
             btn_Thoat.Location = new Point(0, 146);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(196, 53);
@@ -123,6 +129,8 @@
             // 
             // btn_ThongTinTaiKhoan
             // 
+            btn_ThongTinTaiKhoan.FlatAppearance.BorderSize = 0;
+            btn_ThongTinTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_ThongTinTaiKhoan.Location = new Point(0, 46);
             btn_ThongTinTaiKhoan.Name = "btn_ThongTinTaiKhoan";
             btn_ThongTinTaiKhoan.Size = new Size(196, 53);
@@ -133,6 +141,8 @@
             // 
             // btn_KSDaDat
             // 
+            btn_KSDaDat.FlatAppearance.BorderSize = 0;
+            btn_KSDaDat.FlatStyle = FlatStyle.Flat;
             btn_KSDaDat.Location = new Point(-1, 93);
             btn_KSDaDat.Name = "btn_KSDaDat";
             btn_KSDaDat.Size = new Size(196, 53);
@@ -407,7 +417,7 @@
             // 
             // trackBar1
             // 
-            trackBar1.Location = new Point(20, 230);
+            trackBar1.Location = new Point(13, 52);
             trackBar1.Maximum = 5000000;
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(229, 56);
@@ -417,7 +427,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(30, 276);
+            label1.Location = new Point(26, 91);
             label1.Name = "label1";
             label1.Size = new Size(60, 20);
             label1.TabIndex = 21;
@@ -426,7 +436,7 @@
             // lbl_Min
             // 
             lbl_Min.AutoSize = true;
-            lbl_Min.Location = new Point(115, 276);
+            lbl_Min.Location = new Point(108, 91);
             lbl_Min.Name = "lbl_Min";
             lbl_Min.Size = new Size(17, 20);
             lbl_Min.TabIndex = 22;
@@ -434,7 +444,7 @@
             // 
             // trackBar2
             // 
-            trackBar2.Location = new Point(20, 303);
+            trackBar2.Location = new Point(13, 130);
             trackBar2.Maximum = 5000000;
             trackBar2.Name = "trackBar2";
             trackBar2.RightToLeft = RightToLeft.Yes;
@@ -447,7 +457,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(30, 351);
+            label3.Location = new Point(23, 166);
             label3.Name = "label3";
             label3.Size = new Size(60, 20);
             label3.TabIndex = 24;
@@ -456,7 +466,7 @@
             // lbl_max
             // 
             lbl_max.AutoSize = true;
-            lbl_max.Location = new Point(115, 351);
+            lbl_max.Location = new Point(108, 166);
             lbl_max.Name = "lbl_max";
             lbl_max.Size = new Size(17, 20);
             lbl_max.TabIndex = 25;
@@ -466,7 +476,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(20, 189);
+            label9.Location = new Point(13, 9);
             label9.Name = "label9";
             label9.Size = new Size(103, 23);
             label9.TabIndex = 26;
@@ -580,11 +590,26 @@
             label2.TabIndex = 39;
             label2.Text = "Tiện nghi công cộng";
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(label9);
+            panel5.Controls.Add(lbl_max);
+            panel5.Controls.Add(label1);
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(lbl_Min);
+            panel5.Controls.Add(trackBar2);
+            panel5.Controls.Add(trackBar1);
+            panel5.Location = new Point(11, 181);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(280, 198);
+            panel5.TabIndex = 39;
+            // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 709);
+            Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -594,13 +619,6 @@
             Controls.Add(panel3);
             Controls.Add(btn_DangKyKS);
             Controls.Add(btn_MyTaiKhoan);
-            Controls.Add(label9);
-            Controls.Add(lbl_max);
-            Controls.Add(label3);
-            Controls.Add(trackBar2);
-            Controls.Add(lbl_Min);
-            Controls.Add(label1);
-            Controls.Add(trackBar1);
             Controls.Add(tabControl1);
             Name = "hien_thi_khach_san_phu_hop";
             StartPosition = FormStartPosition.CenterScreen;
@@ -618,8 +636,9 @@
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -670,5 +689,6 @@
         private Panel panel_KhoangCach;
         private Button btn_SanBay;
         private Button btn_ThanhPho;
+        private Panel panel5;
     }
 }

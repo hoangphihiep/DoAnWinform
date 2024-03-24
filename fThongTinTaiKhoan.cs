@@ -81,6 +81,14 @@ namespace DuLich
         {
             btn_ThongTinKhachSan.Visible = true;
         }
+        public void ShowUDai()
+        {
+            btn_UDai.Visible = true;
+        }
+        public void HideUDai()
+        {
+            btn_UDai.Visible = false;
+        }
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
             uThongtin2.BringToFront();
@@ -125,6 +133,7 @@ namespace DuLich
                 ShowChiTietPhong();
                 ShowAnh();
                 ShowHoSo();
+                ShowUDai();
                 dem++;
             }
             else
@@ -134,6 +143,7 @@ namespace DuLich
                 HideChiTietPhong();
                 HideAnh();
                 HideHoSo();
+                HideUDai();
                 dem++;
             }
         }
