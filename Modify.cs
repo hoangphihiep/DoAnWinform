@@ -150,5 +150,22 @@ namespace DuLich
             }
             return accounts;
         }
+        public List<HinhAnh> HinhAnh(string table)
+        {
+            List<HinhAnh> accounts = new List<HinhAnh>();
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                cmd = new SqlCommand(table, conn);
+                data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    accounts.Add(new HinhAnh(data.GetString(0),data.GetInt32(1), data.GetString(2), data.GetString(3), data.GetString(4),data.GetString(5),data.GetString(6),data.GetString(7),data.GetString(8)));
+                }
+                conn.Close();
+            }
+            return accounts;
+        }
+
     }
 }

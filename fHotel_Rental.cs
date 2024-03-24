@@ -194,6 +194,7 @@ namespace DuLich
 
                 this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
                 UPhong uPhong = new UPhong();
+                uPhong.phong = i;
                 TabPage tabPage1 = tab_ChiTietPhongO.TabPages[i - 1];
                 uPhong.Size = tabPage1.Size;
                 tabPage1.Controls.Add(uPhong);
