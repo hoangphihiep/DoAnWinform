@@ -34,6 +34,15 @@ namespace DuLich
         public string tenKhachSan;
         public string tien;
         public byte[] hinhanh;
+        public string khoangCach;
+        public void ShowKhoangCach()
+        {
+            lbl_KhoangCach.Visible = true;
+        }
+        public void HideKhoangCach()
+        {
+            lbl_KhoangCach.Visible = false;
+        }
         private void UKhungKetQua_Load(object sender, EventArgs e)
         {
             this.Size = new Size(917, 137);
@@ -46,9 +55,12 @@ namespace DuLich
             lbl_ViTri.Location = new Point(217, 101);
             lbl_Tien.Size = new Size(59, 20);
             lbl_Tien.Location = new Point(706, 67);
+            lbl_KhoangCach.Size = new Size(97, 20);
+            lbl_KhoangCach.Location = new Point(217, 67);
             lbl_ViTri.Text = tenViTri;
             lbl_TenKhachSan.Text = tenKhachSan;
             lbl_Tien.Text = tien;
+            lbl_KhoangCach.Text = khoangCach;
             /*if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))

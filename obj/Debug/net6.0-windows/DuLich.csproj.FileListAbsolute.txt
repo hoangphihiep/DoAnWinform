@@ -171,3 +171,4 @@ C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.pdb
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.genruntimeconfig.cache
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\ref\DuLich.dll
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.U_UuDai.resources
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UUuDai.resources

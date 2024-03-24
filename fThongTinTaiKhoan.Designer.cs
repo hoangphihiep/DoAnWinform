@@ -51,6 +51,7 @@
             panel4 = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -59,6 +60,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(btn_HoSo);
             panel1.Controls.Add(btn_Anh);
             panel1.Controls.Add(btn_ChiTietPhong);
@@ -76,7 +79,7 @@
             // 
             // btn_HoSo
             // 
-            btn_HoSo.Location = new Point(44, 278);
+            btn_HoSo.Location = new Point(44, 320);
             btn_HoSo.Name = "btn_HoSo";
             btn_HoSo.Size = new Size(146, 41);
             btn_HoSo.TabIndex = 8;
@@ -88,7 +91,7 @@
             // 
             // btn_Anh
             // 
-            btn_Anh.Location = new Point(44, 246);
+            btn_Anh.Location = new Point(44, 288);
             btn_Anh.Name = "btn_Anh";
             btn_Anh.Size = new Size(146, 41);
             btn_Anh.TabIndex = 7;
@@ -100,7 +103,7 @@
             // 
             // btn_ChiTietPhong
             // 
-            btn_ChiTietPhong.Location = new Point(44, 212);
+            btn_ChiTietPhong.Location = new Point(44, 254);
             btn_ChiTietPhong.Name = "btn_ChiTietPhong";
             btn_ChiTietPhong.Size = new Size(146, 41);
             btn_ChiTietPhong.TabIndex = 6;
@@ -112,7 +115,7 @@
             // 
             // btn_ViTri
             // 
-            btn_ViTri.Location = new Point(44, 177);
+            btn_ViTri.Location = new Point(44, 219);
             btn_ViTri.Name = "btn_ViTri";
             btn_ViTri.Size = new Size(146, 41);
             btn_ViTri.TabIndex = 5;
@@ -179,7 +182,6 @@
             // 
             panel3.BackColor = SystemColors.ButtonHighlight;
             panel3.Controls.Add(panel5);
-            panel3.Controls.Add(panel4);
             panel3.Location = new Point(190, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(903, 654);
@@ -260,10 +262,21 @@
             // panel4
             // 
             panel4.BackColor = SystemColors.ButtonFace;
-            panel4.Location = new Point(0, 3);
+            panel4.Location = new Point(93, 420);
             panel4.Name = "panel4";
             panel4.Size = new Size(903, 40);
             panel4.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(44, 181);
+            button1.Name = "button1";
+            button1.Size = new Size(146, 41);
+            button1.TabIndex = 9;
+            button1.Text = "Ưu đãi";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
             // 
             // fThongTinTaiKhoan
             // 
@@ -306,5 +319,6 @@
         private UChiTietPhongO uChiTietPhongo1;
         private UAnh uAnh1;
         private UHoSo uHoSo1;
+        private Button button1;
     }
 }

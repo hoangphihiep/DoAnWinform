@@ -54,6 +54,9 @@
             tab_PhuHopNhat = new TabPage();
             tab_GiaThapNhat = new TabPage();
             tabKhoangCach = new TabPage();
+            panel_KhoangCach = new Panel();
+            btn_SanBay = new Button();
+            btn_ThanhPho = new Button();
             tab_DanhGiaCao = new TabPage();
             trackBar1 = new TrackBar();
             label1 = new Label();
@@ -65,12 +68,12 @@
             label10 = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            checkedListBox1 = new CheckedListBox();
+            clBox_TienNghiChinh = new CheckedListBox();
             panel4 = new Panel();
-            checkedListBox4 = new CheckedListBox();
+            clBox_AmThuc = new CheckedListBox();
             label12 = new Label();
-            checkedListBox3 = new CheckedListBox();
-            checkedListBox2 = new CheckedListBox();
+            clBox_DichVu = new CheckedListBox();
+            clBox_TienNghiCC = new CheckedListBox();
             label11 = new Label();
             label2 = new Label();
             panel_menu.SuspendLayout();
@@ -78,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
+            tabKhoangCach.SuspendLayout();
+            panel_KhoangCach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             panel4.SuspendLayout();
@@ -322,6 +327,7 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(998, 533);
             tabControl1.TabIndex = 18;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tab_PhuHopNhat
             // 
@@ -348,12 +354,47 @@
             // 
             // tabKhoangCach
             // 
+            tabKhoangCach.Controls.Add(panel_KhoangCach);
             tabKhoangCach.Location = new Point(4, 50);
             tabKhoangCach.Name = "tabKhoangCach";
             tabKhoangCach.Size = new Size(990, 479);
             tabKhoangCach.TabIndex = 2;
             tabKhoangCach.Text = "Khoảng cách";
             tabKhoangCach.UseVisualStyleBackColor = true;
+            tabKhoangCach.Click += tabKhoangCach_Click;
+            tabKhoangCach.Move += tabKhoangCach_Move;
+            // 
+            // panel_KhoangCach
+            // 
+            panel_KhoangCach.Controls.Add(btn_SanBay);
+            panel_KhoangCach.Controls.Add(btn_ThanhPho);
+            panel_KhoangCach.Location = new Point(378, 0);
+            panel_KhoangCach.Name = "panel_KhoangCach";
+            panel_KhoangCach.Size = new Size(184, 125);
+            panel_KhoangCach.TabIndex = 0;
+            panel_KhoangCach.Visible = false;
+            // 
+            // btn_SanBay
+            // 
+            btn_SanBay.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_SanBay.Location = new Point(0, 52);
+            btn_SanBay.Name = "btn_SanBay";
+            btn_SanBay.Size = new Size(184, 52);
+            btn_SanBay.TabIndex = 2;
+            btn_SanBay.Text = "Đến sân bay";
+            btn_SanBay.UseVisualStyleBackColor = true;
+            btn_SanBay.Click += btn_SanBay_Click;
+            // 
+            // btn_ThanhPho
+            // 
+            btn_ThanhPho.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_ThanhPho.Location = new Point(0, 0);
+            btn_ThanhPho.Name = "btn_ThanhPho";
+            btn_ThanhPho.Size = new Size(184, 52);
+            btn_ThanhPho.TabIndex = 1;
+            btn_ThanhPho.Text = "Đến thành phố";
+            btn_ThanhPho.UseVisualStyleBackColor = true;
+            btn_ThanhPho.Click += btn_ThanhPho_Click;
             // 
             // tab_DanhGiaCao
             // 
@@ -457,39 +498,39 @@
             panel1.Size = new Size(1, 53);
             panel1.TabIndex = 37;
             // 
-            // checkedListBox1
+            // clBox_TienNghiChinh
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Items.AddRange(new object[] { "Máy lạnh", "Nhà hàng", "Hồ bơi", "Lễ tân 24h", "Wifi" });
-            checkedListBox1.Location = new Point(10, 37);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(260, 114);
-            checkedListBox1.TabIndex = 38;
+            clBox_TienNghiChinh.FormattingEnabled = true;
+            clBox_TienNghiChinh.Items.AddRange(new object[] { "Máy lạnh", "Nhà hàng", "Hồ bơi", "Lễ tân 24h", "Wifi" });
+            clBox_TienNghiChinh.Location = new Point(10, 37);
+            clBox_TienNghiChinh.Name = "clBox_TienNghiChinh";
+            clBox_TienNghiChinh.Size = new Size(260, 114);
+            clBox_TienNghiChinh.TabIndex = 38;
             // 
             // panel4
             // 
             panel4.AutoScroll = true;
-            panel4.Controls.Add(checkedListBox4);
+            panel4.Controls.Add(clBox_AmThuc);
             panel4.Controls.Add(label12);
-            panel4.Controls.Add(checkedListBox3);
-            panel4.Controls.Add(checkedListBox2);
+            panel4.Controls.Add(clBox_DichVu);
+            panel4.Controls.Add(clBox_TienNghiCC);
             panel4.Controls.Add(label11);
             panel4.Controls.Add(label2);
-            panel4.Controls.Add(checkedListBox1);
+            panel4.Controls.Add(clBox_TienNghiChinh);
             panel4.Controls.Add(label10);
             panel4.Location = new Point(11, 385);
             panel4.Name = "panel4";
             panel4.Size = new Size(302, 308);
             panel4.TabIndex = 38;
             // 
-            // checkedListBox4
+            // clBox_AmThuc
             // 
-            checkedListBox4.FormattingEnabled = true;
-            checkedListBox4.Items.AddRange(new object[] { "Quầy bar", "Bữa sáng", "Quầy bar bên hồ bơi" });
-            checkedListBox4.Location = new Point(10, 474);
-            checkedListBox4.Name = "checkedListBox4";
-            checkedListBox4.Size = new Size(260, 70);
-            checkedListBox4.TabIndex = 42;
+            clBox_AmThuc.FormattingEnabled = true;
+            clBox_AmThuc.Items.AddRange(new object[] { "Quầy bar", "Bữa sáng", "Quầy bar bên hồ bơi" });
+            clBox_AmThuc.Location = new Point(10, 474);
+            clBox_AmThuc.Name = "clBox_AmThuc";
+            clBox_AmThuc.Size = new Size(260, 70);
+            clBox_AmThuc.TabIndex = 42;
             // 
             // label12
             // 
@@ -501,23 +542,23 @@
             label12.TabIndex = 41;
             label12.Text = "Ẩm thực";
             // 
-            // checkedListBox3
+            // clBox_DichVu
             // 
-            checkedListBox3.FormattingEnabled = true;
-            checkedListBox3.Items.AddRange(new object[] { "Quầy lễ tân", "Dịch vụ thu đổi ngoại lệ", "Dịch vụ tiệc cưới", "Dịch vụ hỗ trợ đặt tour", "Nhân viên đa ngôn ngữ" });
-            checkedListBox3.Location = new Point(10, 319);
-            checkedListBox3.Name = "checkedListBox3";
-            checkedListBox3.Size = new Size(260, 114);
-            checkedListBox3.TabIndex = 41;
+            clBox_DichVu.FormattingEnabled = true;
+            clBox_DichVu.Items.AddRange(new object[] { "Quầy lễ tân", "Dịch vụ thu đổi ngoại tệ", "Dịch vụ tiệc cưới", "Dịch vụ hỗ trợ đặt tour", "Nhân viên đa ngôn ngữ" });
+            clBox_DichVu.Location = new Point(10, 319);
+            clBox_DichVu.Name = "clBox_DichVu";
+            clBox_DichVu.Size = new Size(260, 114);
+            clBox_DichVu.TabIndex = 41;
             // 
-            // checkedListBox2
+            // clBox_TienNghiCC
             // 
-            checkedListBox2.FormattingEnabled = true;
-            checkedListBox2.Items.AddRange(new object[] { "Bãi đậu xe", "Tiệm cafe", "Thang máy" });
-            checkedListBox2.Location = new Point(10, 189);
-            checkedListBox2.Name = "checkedListBox2";
-            checkedListBox2.Size = new Size(260, 92);
-            checkedListBox2.TabIndex = 40;
+            clBox_TienNghiCC.FormattingEnabled = true;
+            clBox_TienNghiCC.Items.AddRange(new object[] { "Bãi đậu xe", "Tiệm cafe", "Thang máy" });
+            clBox_TienNghiCC.Location = new Point(10, 189);
+            clBox_TienNghiCC.Name = "clBox_TienNghiCC";
+            clBox_TienNghiCC.Size = new Size(260, 92);
+            clBox_TienNghiCC.TabIndex = 40;
             // 
             // label11
             // 
@@ -571,6 +612,8 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
+            tabKhoangCach.ResumeLayout(false);
+            panel_KhoangCach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             panel4.ResumeLayout(false);
@@ -616,13 +659,16 @@
         private Button btn_KSDaDat;
         private Panel panel2;
         private Panel panel1;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox clBox_TienNghiChinh;
         private Panel panel4;
         private Label label12;
         private Label label11;
         private Label label2;
-        private CheckedListBox checkedListBox4;
-        private CheckedListBox checkedListBox3;
-        private CheckedListBox checkedListBox2;
+        private CheckedListBox clBox_AmThuc;
+        private CheckedListBox clBox_DichVu;
+        private CheckedListBox clBox_TienNghiCC;
+        private Panel panel_KhoangCach;
+        private Button btn_SanBay;
+        private Button btn_ThanhPho;
     }
 }

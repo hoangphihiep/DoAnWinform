@@ -470,37 +470,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> 316f663bd7056f738f6a5ff5130d5bbda63ddffc
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DuLich.csproj",
       "projectName": "DuLich",
       "projectPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\DuLich.csproj",
       "packagesPath": "C:\\Users\\phihi_6b0xaz1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\phihi_6b0xaz1\\Desktop\\nganh_IT_lap_trinh\\laptrinhW\\DoAnDuLich\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
-      "projectName": "DuLich",
-      "projectPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\",
->>>>>>> 316f663bd7056f738f6a5ff5130d5bbda63ddffc
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\phihi_6b0xaz1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 316f663bd7056f738f6a5ff5130d5bbda63ddffc
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -520,11 +502,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -555,7 +532,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

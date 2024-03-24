@@ -15,6 +15,7 @@ namespace DuLich
 {
     public partial class hien_thi_khach_san_phu_hop : Form
     {
+        TruyenDuLieu truyen = new TruyenDuLieu();
         public hien_thi_khach_san_phu_hop()
         {
             InitializeComponent();
@@ -212,63 +213,43 @@ namespace DuLich
             lb_TimKiem.AutoCompleteMode = AutoCompleteMode.Suggest;
             lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
             lb_TimKiem.AutoCompleteCustomSource = data;
-            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@diadiem", diadiem);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            truyen.Truyen(diadiem, "TENKH");
+            for (int j = 0; j < truyen.soLuong; j++)
             {
-                string tenTinh = reader.GetString(reader.GetOrdinal("TINH"));
-                string tenThanhPho = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
-                string tenKhachSan = reader.GetString(reader.GetOrdinal("TENKH"));
-                //byte[] hinhanh = (byte[])reader["HinhAnh"];
-                int giaColumnIndex = reader.GetOrdinal("GIA");
-                UKhungKetQua uc = new UKhungKetQua();// tab phu hop nhat
-                uc.viTri = i * 148;
-                uc.tenViTri = tenThanhPho + ", " + tenTinh;
-                uc.tenKhachSan = tenKhachSan;
-                if (!reader.IsDBNull(giaColumnIndex))
-                {
-                    int gia = reader.GetInt32(giaColumnIndex);
-                    string tienThapNhat = gia.ToString() + " VNĐ";
-                    uc.tien = tienThapNhat;
-                }
-                // uc.hinhanh = hinhanh;
-                tab_PhuHopNhat.Controls.Add(uc);
-                i++;
-            }
-            int j = 0;
-            conn.Close();
-            string query1 = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem AND ThongTinCanBan.GIA = (SELECT MIN(GIA) FROM ThongTinCanBan)";
-            SqlConnection conn1 = Connection_to_SQL.getConnection();
-            conn1.Open();
-            SqlCommand command1 = new SqlCommand(query1, conn1);
-            command1.Parameters.AddWithValue("@diadiem", diadiem);
-            SqlDataReader reader1 = command1.ExecuteReader();
-            while (reader1.Read())
-            {
-                string tenTinh = reader1.GetString(reader1.GetOrdinal("TINH"));
-                string tenThanhPho = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
-                string tenKhachSan = reader1.GetString(reader1.GetOrdinal("TENKH"));
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
-                uc.tenViTri = tenThanhPho + ", " + tenTinh;
-                uc.tenKhachSan = tenKhachSan;
-                int giaColumnIndex = reader1.GetOrdinal("GIA");
-                if (!reader1.IsDBNull(giaColumnIndex))
-                {
-                    int gia = reader1.GetInt32(giaColumnIndex);
-                    string tienThapNhat = gia.ToString() + " VNĐ";
-                    uc.tien = tienThapNhat;
-                }
-                tab_GiaThapNhat.Controls.Add(uc);
-                j++;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.tien = truyen.soTien[j];
+                tab_PhuHopNhat.Controls.Add(uc);
             }
-            conn1.Close();
+            truyen.Truyen(diadiem, "GIA");
+            for (int j = 0; j < truyen.soLuong; j++)
+            {
+                UKhungKetQua uc = new UKhungKetQua();
+                uc.viTri = j * 148;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.tien = truyen.soTien[j];
+                tab_GiaThapNhat.Controls.Add(uc);
+            }
+            truyen.Truyen(diadiem, "SAO");
+            for (int j = 0; j < truyen.soLuong; j++)
+            {
+                UKhungKetQua uc = new UKhungKetQua();
+                uc.viTri = j * 148;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.tien = truyen.soTien[j];
+                uc.khoangCach = truyen.danhGia[j];
+                uc.ShowKhoangCach();
+                tab_DanhGiaCao.Controls.Add(uc);
+            }
+            foreach (object itemChecked in clBox_TienNghiChinh.CheckedItems)
+            {
+                string value = itemChecked.ToString();
+            }
+
         }
         public int kiemtradangkiKS1;
         int dem = 0;
@@ -330,35 +311,289 @@ namespace DuLich
 
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
-            for (int i = tab_PhuHopNhat.Controls.Count - 1; i >= 0; i--)
+            for (int j = tab_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
             {
-                Control control = tab_PhuHopNhat.Controls[i];
+                Control control = tab_PhuHopNhat.Controls[j];
                 if (control is UserControl)
                 {
-                    tab_PhuHopNhat.Controls.RemoveAt(i);
+                    tab_PhuHopNhat.Controls.RemoveAt(j);
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
             diadiem = lb_TimKiem.Text;
-            string query = "SELECT * FROM ThongTinTimKiem WHERE TenViTri = @diadiem";
+            truyen.Truyen(diadiem, "TENKH");
+            for (int j = 0; j < truyen.soLuong; j++)
+            {
+                UKhungKetQua uc = new UKhungKetQua();
+                uc.viTri = j * 148;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.tien = truyen.soTien[j];
+                tab_PhuHopNhat.Controls.Add(uc);
+            }
+            // khi có chọn tiện ích
+            List<int> maksList = new List<int>();
+            string query = "SELECT * FROM ViTri WHERE Tinh = @diadiem";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
             command.Parameters.AddWithValue("@diadiem", diadiem);
             SqlDataReader reader = command.ExecuteReader();
-            int j = 0;
+            int i = 0;
             while (reader.Read())
             {
-                string tenViTri = reader.GetString(reader.GetOrdinal("TenViTri"));
-                string tenKhachSan = reader.GetString(reader.GetOrdinal("TenKhachSan"));
+                int maColumnIndex = reader.GetOrdinal("MAKS");
+                if (!reader.IsDBNull(maColumnIndex))
+                {
+                    int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
+                    maksList.Add(maKS);
+
+                }
+                i++;
+            }
+            conn.Close();    
+            List<int> soLuong = new List<int>();
+            foreach (int maks in maksList)
+            {
+                int demTrung = 0;
+                demTrung = thucHienDemTrung(maks,demTrung);
+                soLuong.Add(demTrung);
+                MessageBox.Show(demTrung.ToString());
+            }
+            if (soLuong .Count > 0)
+            {
+                for (int j = 0; j < soLuong.Count - 1; j++)
+                {
+                    for (int k = j + 1; k < soLuong.Count; k++)
+                    {
+                        if (soLuong[j] < soLuong[k])
+                        {
+                            int t = (int)soLuong[j];
+                            soLuong[j] = soLuong[k];
+                            soLuong[k] = t;
+                            int t1 = (int)maksList[j];
+                            maksList[j] = maksList[k];
+                            maksList[k] = t1;
+                        }
+
+                    }
+                }
+                int soLuong1 = 0;
+                string[] tenTinh = new string[100];
+                string[] tenThanhPho = new string[100];
+                string[] tenKhachSan = new string[100];
+                string[] soTien = new string[100];
+                for (int maks = 0; maks < maksList.Count; maks++)
+                {
+                    string query1 = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = {0}", maksList[maks]);
+                    SqlConnection conn1 = Connection_to_SQL.getConnection();
+                    conn1.Open();
+                    SqlCommand command1 = new SqlCommand(query1, conn1);
+                    SqlDataReader reader1 = command1.ExecuteReader();
+
+                    while (reader1.Read())
+                    {
+                        tenTinh[soLuong1] = reader1.GetString(reader1.GetOrdinal("TINH"));
+                        tenThanhPho[soLuong1] = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
+                        tenKhachSan[soLuong1] = reader1.GetString(reader1.GetOrdinal("TENKH"));
+                        //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
+                        //byte[] hinhanh = (byte[])reader["HinhAnh"];    
+                        int giaColumnIndex = reader1.GetOrdinal("GIA");
+                        if (!reader1.IsDBNull(giaColumnIndex))
+                        {
+                            int gia = reader1.GetInt32(giaColumnIndex);
+                            soTien[soLuong1] = gia.ToString() + " VNĐ";
+                        }
+                        soLuong1++;
+                    }
+
+                }
+                for (int j = tab_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
+                {
+                    Control control = tab_PhuHopNhat.Controls[j];
+                    if (control is UserControl)
+                    {
+                        tab_PhuHopNhat.Controls.RemoveAt(j);
+                        control.Dispose(); // Giải phóng bộ nhớ cho UserControl
+                    }
+                }
+                for (int j = 0; j < soLuong1; j++)
+                {
+                    UKhungKetQua uc = new UKhungKetQua();
+                    uc.viTri = j * 148;
+                    uc.tenViTri = tenThanhPho[j] + ", " + tenTinh[j];
+                    uc.tenKhachSan = tenKhachSan[j];
+                    uc.tien = soTien[j];
+                    tab_PhuHopNhat.Controls.Add(uc);
+                }
+            }
+            
+        }
+        public int thucHienDemTrung(int maks, int demTrung)
+        {
+            TruyenDuLieuTienNghi tiennghi = new TruyenDuLieuTienNghi();
+            tiennghi.thucHienTruyen(maks);
+            foreach (string selectedFeature in clBox_TienNghiChinh.CheckedItems)
+            {
+                if (selectedFeature == tiennghi.mayLanhSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.nhaHangSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.hoBoiSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.leTan24hSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.WifiSelected)
+                {
+                    demTrung++;
+                }
+            }
+            foreach (string selectedFeature in clBox_DichVu.CheckedItems)
+            {
+                if (selectedFeature == tiennghi.quayLeTanSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.dichVuThuDoiNgoaiTeSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.dichVuTiecCuoiSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.dichVuHoTroDatTourSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.nhanVienDaNgonNguSelected)
+                {
+                    demTrung++;
+                }
+            }
+            foreach (string selectedFeature in clBox_TienNghiCC.CheckedItems)
+            {
+                if (selectedFeature == tiennghi.baiDauXeSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.tiemCaFeSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.thangMaySelected)
+                {
+                    demTrung++;
+                }
+            }
+            foreach (string selectedFeature in clBox_AmThuc.CheckedItems)
+            {
+                if (selectedFeature == tiennghi.quayBarSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.buaSangSelected)
+                {
+                    demTrung++;
+                }
+                else if (selectedFeature == tiennghi.quayBarBenHoBoiSelected)
+                {
+                    demTrung++;
+                }
+            }
+            return demTrung;
+        }
+        int demTab = 0;
+        private void tabKhoangCach_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void tabKhoangCach_Move(object sender, EventArgs e)
+        {
+            if (demTab % 2 == 0)
+            {
+                panel_KhoangCach.Visible = true;
+            }
+            else
+            {
+                panel_KhoangCach.Visible = false;
+            }
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TabPage selectedTabPage = tabControl1.SelectedTab;
+
+            if (selectedTabPage == tabKhoangCach)
+            {
+                panel_KhoangCach.Visible = true;
+            }
+            else
+            {
+                panel_KhoangCach.Visible = false;
+            }
+
+        }
+
+        private void btn_ThanhPho_Click(object sender, EventArgs e)
+        {
+            for (int k = tabKhoangCach.Controls.Count - 1; k >= 0; k--)
+            {
+                Control control = tabKhoangCach.Controls[k];
+                if (control is UserControl)
+                {
+                    tabKhoangCach.Controls.RemoveAt(k);
+                    control.Dispose(); // Giải phóng bộ nhớ cho UserControl
+                }
+            }
+            truyen.Truyen(diadiem, "KCTHANHPHO");
+            for (int j = 0; j < truyen.soLuong; j++)
+            {
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
-                uc.tenViTri = tenViTri;
-                uc.tenKhachSan = tenKhachSan;
-                tab_PhuHopNhat.Controls.Add(uc);
-                j++;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.khoangCach = truyen.khoangCachTP[j] + " km đến trung tâm";
+                uc.tien = truyen.soTien[j];
+                uc.ShowKhoangCach();
+                panel_KhoangCach.Visible = false;
+                tabKhoangCach.Controls.Add(uc);
             }
-            conn.Close();
+        }
+
+        private void btn_SanBay_Click(object sender, EventArgs e)
+        {
+            for (int k = tabKhoangCach.Controls.Count - 1; k >= 0; k--)
+            {
+                Control control = tabKhoangCach.Controls[k];
+                if (control is UserControl)
+                {
+                    tabKhoangCach.Controls.RemoveAt(k);
+                    control.Dispose(); // Giải phóng bộ nhớ cho UserControl
+                }
+            }
+            truyen.Truyen(diadiem, "KCSANBAY");
+            for (int j = 0; j < truyen.soLuong; j++)
+            {
+                UKhungKetQua uc = new UKhungKetQua();
+                uc.viTri = j * 148;
+                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+                uc.tenKhachSan = truyen.tenKhachSan[j];
+                uc.khoangCach = truyen.khoangCachSanBay[j] + " km đến sân bay gần nhất";
+                uc.tien = truyen.soTien[j];
+                uc.ShowKhoangCach();
+                panel_KhoangCach.Visible = false;
+                tabKhoangCach.Controls.Add(uc);
+            }
         }
     }
 }
