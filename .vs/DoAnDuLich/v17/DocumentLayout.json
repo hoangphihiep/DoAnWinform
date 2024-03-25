@@ -7,8 +7,55 @@
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\room_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:room_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\phongdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:phongdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\uuudai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uuudai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\khachsan_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:khachsan_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\hosodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:hosodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\hinhanhdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:hinhanhdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\khachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:khachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.KHACHSAN.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\ql_tn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ql_tn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\ql_tn_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ql_tn_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.PHONG.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -16,18 +63,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\hinhanhdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:hinhanhdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\ftrangchutk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -52,10 +87,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\uuudai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uuudai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\uuudai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -110,17 +141,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "fHotel_Rental.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
               "RelativeDocumentMoniker": "fHotel_Rental.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
               "RelativeToolTip": "fHotel_Rental.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwCQBAAARAAAA",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAYwNcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T02:55:35.942Z",
               "IsPinned": true,
@@ -152,17 +183,170 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.PHONG [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.PHONG.sql",
-              "ToolTip": "dbo.PHONG [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-03-25T07:55:26.256Z",
+              "DocumentIndex": 0,
+              "Title": "UPhong.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs",
+              "RelativeDocumentMoniker": "UPhong.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs",
+              "RelativeToolTip": "UPhong.cs",
+              "ViewState": "AQIAAF8BAAAAAAAAAAAswHABAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:07:40.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Room.cs",
+              "RelativeDocumentMoniker": "Room.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Room.cs",
+              "RelativeToolTip": "Room.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAQwBAAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T18:10:28.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fHotel_Rental.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
+              "RelativeDocumentMoniker": "fHotel_Rental.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs [Design]",
+              "RelativeToolTip": "fHotel_Rental.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T05:05:36.865Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Room_DAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Room_DAO.cs",
+              "RelativeDocumentMoniker": "Room_DAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Room_DAO.cs",
+              "RelativeToolTip": "Room_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T18:12:08.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PhongDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\PhongDAO.cs",
+              "RelativeDocumentMoniker": "PhongDAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\PhongDAO.cs",
+              "RelativeToolTip": "PhongDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T18:12:13.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KHACHSAN_DAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\KHACHSAN_DAO.cs",
+              "RelativeDocumentMoniker": "KHACHSAN_DAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\KHACHSAN_DAO.cs",
+              "RelativeToolTip": "KHACHSAN_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:55:22.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UUuDai.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs",
+              "RelativeDocumentMoniker": "UUuDai.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs",
+              "RelativeToolTip": "UUuDai.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAawHsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:39:46.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HinhAnhDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\HinhAnhDAO.cs",
+              "RelativeDocumentMoniker": "HinhAnhDAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\HinhAnhDAO.cs",
+              "RelativeToolTip": "HinhAnhDAO.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T02:07:27.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HoSoDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\HoSoDAO.cs",
+              "RelativeDocumentMoniker": "HoSoDAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\HoSoDAO.cs",
+              "RelativeToolTip": "HoSoDAO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:55:56.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KHACHSAN.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\KHACHSAN.cs",
+              "RelativeDocumentMoniker": "KHACHSAN.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\KHACHSAN.cs",
+              "RelativeToolTip": "KHACHSAN.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowBMAAACAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:52:04.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dbo.KHACHSAN [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.KHACHSAN.sql",
+              "ToolTip": "dbo.KHACHSAN [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-25T17:53:22.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QL_TN.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\QL_TN.cs",
+              "RelativeDocumentMoniker": "QL_TN.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\QL_TN.cs",
+              "RelativeToolTip": "QL_TN.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:09:12.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "QL_TN_DAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\QL_TN_DAO.cs",
+              "RelativeDocumentMoniker": "QL_TN_DAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\QL_TN_DAO.cs",
+              "RelativeToolTip": "QL_TN_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:08:50.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Connection_to_SQL.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Connection_to_SQL.cs",
               "RelativeDocumentMoniker": "Connection_to_SQL.cs",
@@ -170,60 +354,20 @@
               "RelativeToolTip": "Connection_to_SQL.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T00:09:40.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T00:09:40.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UPhong.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs",
-              "RelativeDocumentMoniker": "UPhong.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs [Design]",
-              "RelativeToolTip": "UPhong.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T02:37:23.715Z",
-              "EditorCaption": " [Design]"
+              "DocumentIndex": 14,
+              "Title": "dbo.PHONG [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.PHONG.sql",
+              "ToolTip": "dbo.PHONG [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-25T07:55:26.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UPhong.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs",
-              "RelativeDocumentMoniker": "UPhong.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UPhong.cs",
-              "RelativeToolTip": "UPhong.cs",
-              "ViewState": "AQIAAEIBAAAAAAAAAAAYwFoBAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T07:07:40.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HinhAnhDAO.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\HinhAnhDAO.cs",
-              "RelativeDocumentMoniker": "HinhAnhDAO.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\HinhAnhDAO.cs",
-              "RelativeToolTip": "HinhAnhDAO.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAjwBAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T02:07:27.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "fHotel_Rental.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs",
-              "RelativeDocumentMoniker": "fHotel_Rental.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fHotel_Rental.cs [Design]",
-              "RelativeToolTip": "fHotel_Rental.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T05:05:36.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "fThongTinTaiKhoan.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fThongTinTaiKhoan.cs",
               "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
@@ -235,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "FTrangChuTK.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\FTrangChuTK.cs",
               "RelativeDocumentMoniker": "FTrangChuTK.cs",
@@ -247,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "fThongTinTaiKhoan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fThongTinTaiKhoan.cs",
               "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
@@ -258,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "FTrangChuTK.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\FTrangChuTK.cs",
               "RelativeDocumentMoniker": "FTrangChuTK.cs",
@@ -269,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "fLogin.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs",
               "RelativeDocumentMoniker": "fLogin.cs",
@@ -281,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "fLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs",
               "RelativeDocumentMoniker": "fLogin.cs",
@@ -292,30 +436,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UUuDai.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs",
-              "RelativeDocumentMoniker": "UUuDai.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs",
-              "RelativeToolTip": "UUuDai.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAvwHQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T07:39:46.288Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "UUuDai.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs",
               "RelativeDocumentMoniker": "UUuDai.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\UUuDai.cs [Design]",
               "RelativeToolTip": "UUuDai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T01:28:13.412Z"
+              "WhenOpened": "2024-03-25T01:28:13.412Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "dbo.TIENNGHI [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.TIENNGHI.sql",
               "ToolTip": "dbo.TIENNGHI [Data]",
@@ -324,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "TienNghi.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\TienNghi.cs",
               "RelativeDocumentMoniker": "TienNghi.cs",
@@ -336,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "dbo.KHACHSAN_THUOC_TAIKHOAN [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.KHACHSAN_THUOC_TAIKHOAN.sql",
               "ToolTip": "dbo.KHACHSAN_THUOC_TAIKHOAN [Data]",
@@ -345,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "dbo.ViTri [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.ViTri.sql",
               "ToolTip": "dbo.ViTri [Data]",
@@ -354,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "Modify.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Modify.cs",
               "RelativeDocumentMoniker": "Modify.cs",
@@ -366,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "HinhAnh.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\HinhAnh.cs",
               "RelativeDocumentMoniker": "HinhAnh.cs",
@@ -378,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "UuDai.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\UuDai.cs",
               "RelativeDocumentMoniker": "UuDai.cs",
@@ -390,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "hien_thi_khach_san_phu_hop.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\hien_thi_khach_san_phu_hop.cs",
               "RelativeDocumentMoniker": "hien_thi_khach_san_phu_hop.cs",
@@ -401,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "Account_DAO.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Account_DAO.cs",
               "RelativeDocumentMoniker": "Account_DAO.cs",
@@ -413,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Account.cs",
               "RelativeDocumentMoniker": "Account.cs",
@@ -425,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

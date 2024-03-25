@@ -16,11 +16,13 @@ namespace DuLich
 {
     public partial class fHotel_Rental : Form
     {
+        public int MaAnh;
         public int MaPhong = 1;
         public string tk;
         public string mk;
         public int MaKhachSan = 1;
         public string AnhBia;
+
         List<Phong> Phongs = new List<Phong>();
         public fHotel_Rental()
         {
@@ -211,7 +213,84 @@ namespace DuLich
                                 dichVuKhachSan0, dichVuKhachSan1, dichVuKhachSan2, dichVuKhachSan3, dichVuKhachSan4,
                                 tienNghiCongCong0, tienNghiCongCong1, tienNghiCongCong2,
                                 amThuc0, amThuc1, amThuc2);
-
+                //Add data vao QL_TN
+                QL_TN_DAO ql_TN_DAO = new QL_TN_DAO();
+                List<QL_TN> QL_TNs = new List<QL_TN>();
+                if (tienNghiChinh0 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 1));
+                }
+                if (tienNghiChinh1 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 2));
+                }
+                if (tienNghiChinh2 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 3));
+                }
+                if (tienNghiChinh3 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 4));
+                }
+                if (tienNghiChinh4 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 5));
+                }
+                if (dichVuKhachSan0 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 6));
+                }
+                if (dichVuKhachSan1 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 7));
+                }
+                if (dichVuKhachSan2 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 8));
+                }
+                if (dichVuKhachSan3 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 9));
+                }
+                if (dichVuKhachSan4 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 10));
+                }
+                if (tienNghiCongCong0 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 11));
+                }
+                if (tienNghiCongCong1 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 12));
+                }
+                if (tienNghiCongCong2 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 13));
+                }
+                if (amThuc0 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 14));
+                }
+                if (amThuc1 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 15));
+                }
+                if (amThuc2 == 1)
+                {
+                    QL_TNs.Add(new QL_TN(MaKhachSan, 16));
+                }
+                foreach (var i in QL_TNs)
+                {
+                    ql_TN_DAO.Add(i, "QL_TN");
+                }
+                //Tao Doi Tuong KHACHSAN tu THONGTINCANBAN VA VITRI (Chua co Danh gia , Gia)
+                KHACHSAN_DAO ksDao = new KHACHSAN_DAO();
+                KHACHSAN ks = new KHACHSAN(thongTinCanBan.TENKH,viTri.TINH,viTri.TENTHANHPHO,thongTinCanBan.SAO,thongTinCanBan.SAO,thongTinCanBan.SAO,viTri.DIACHI,thongTinCanBan.MAKS);
+                ksDao.Add(ks, "KHACHSAN");
+                //
+                QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
+                hinhAnhDAO.Add(new QL_HinhAnh(MaKhachSan, "Anh chinh", AnhBia, MaAnh), "QL_ANH");
                 // Chuyển các giá trị bool thành giá trị int
                 int thanhToan0 = clb_ThanhToan.GetItemChecked(0) ? 1 : 0;
                 int thanhToan1 = clb_ThanhToan.GetItemChecked(1) ? 1 : 0;
