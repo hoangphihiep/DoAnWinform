@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using DuLich.Properties;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace DuLich
 {
@@ -26,6 +28,7 @@ namespace DuLich
         public string anh5;
         public string anh6;
         public int MaKS;
+    
         public UPhong()
         {
             InitializeComponent();
@@ -335,9 +338,11 @@ namespace DuLich
             PhongDAO Dao = new PhongDAO();
             Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
             Modify modify = new Modify();
+            string query = "";
             while (true)
             {
-                string query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan + "' AND MAKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
+                query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan + "' AND MaKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
+
                 var result = modify.Phong(query);
                 if (result.Count() > 0)
                     MaPhong++;

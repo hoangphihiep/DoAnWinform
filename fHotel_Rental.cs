@@ -70,6 +70,7 @@ namespace DuLich
             UPhong uPhong = new UPhong();
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
             uPhong.Size = tabPage1.Size;
+            uPhong.MaPhong = MaPhong;
             uPhong.taikhoan = tk;
             tabPage1.Controls.Add(uPhong);
             uPhong.BringToFront();
@@ -170,7 +171,7 @@ namespace DuLich
             try
             {
                 Modify modify = new Modify();
-                string query = " ";
+                string query = "";
                 while (true)
                 {
                     query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tk + "' and MaKS = '" + MaKhachSan + "' ";

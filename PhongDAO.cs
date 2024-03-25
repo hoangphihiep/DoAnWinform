@@ -14,7 +14,6 @@ namespace DuLich
         {
             string sqlStr = string.Format("INSERT INTO {0} (MAPHONG, SOKHACH ,SOGIUONG,GIA, KICHTHUOC,TaiKhoan,GIATHEMKHACH,MAKS) VALUES ('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", TenQuanHe, acc.MaPhong, acc.SoKhach, acc.SoGiuong, acc.Gia, acc.KichThuoc, acc.TaiKhoan, acc.GiaThemKhach, acc.MaKS);
             //connection.ThucThi(acc, sqlStr);
-            MessageBox.Show(acc.TaiKhoan);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
                 conn.Open();
