@@ -148,7 +148,7 @@ namespace DuLich
 
         private void btnRoomChoose_Click(object sender, EventArgs e)
         {
-            FAddAnh f= new FAddAnh();
+            FAddAnh f = new FAddAnh();
             this.Hide();
             f.ShowDialog();
             this.Show();

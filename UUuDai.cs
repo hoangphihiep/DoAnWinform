@@ -121,6 +121,16 @@ namespace DuLich
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader reader = command.ExecuteReader();
+
+                // Xóa bỏ các cột cũ (nếu có)
+                dataGridView1.Columns.Clear();
+
+                // Thêm các cột vào DataGridView
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("MAUUDAI", "MAUUDAI");
+                dataGridView1.Columns.Add("TENUUDAI", "TENUUDAI");
+                dataGridView1.Columns.Add("GIATRIUUDAI", "GIATRIUUDAI");
+
                 while (reader.Read())
                 {
                     int maks = reader.GetInt32(0);
@@ -128,13 +138,11 @@ namespace DuLich
                     string tenuudai = reader.GetString(2);
                     int giatriuudai = reader.GetInt32(3);
 
-                    DataGridViewRow row = new DataGridViewRow();
-                    row.Cells[0].Value = maks;
-                    row.Cells[1].Value = mauudai;
-                    row.Cells[2].Value = tenuudai;
-                    row.Cells[3].Value = giatriuudai;
+                    // Tạo một mảng chứa giá trị của từng cột
+                    string[] rowValues = { maks.ToString(), mauudai.ToString(), tenuudai, giatriuudai.ToString() };
 
-                    dataGridView1.Rows.Add(row);
+                    // Thêm hàng vào DataGridView
+                    dataGridView1.Rows.Add(rowValues);
                 }
                 reader.Close();
             }

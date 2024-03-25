@@ -104,6 +104,7 @@
             // 
             // btn_menuTaiKhoan
             // 
+            btn_menuTaiKhoan.Enabled = false;
             btn_menuTaiKhoan.FlatAppearance.BorderSize = 0;
             btn_menuTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_menuTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;

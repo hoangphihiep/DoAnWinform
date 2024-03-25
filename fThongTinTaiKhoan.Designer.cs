@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btn_TienNghi = new Button();
             btn_UDai = new Button();
             panel4 = new Panel();
             btn_HoSo = new Button();
@@ -42,6 +43,8 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
+            uUuDai1 = new UUuDai();
+            uTienNghi1 = new UTienNghi();
             uThongtin2 = new UThongtin();
             uThongtin1 = new UThongtin();
             uMatKhau1 = new UMatKhau();
@@ -52,7 +55,6 @@
             uChiTietPhongo1 = new UChiTietPhongO();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            btn_TienNghi = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -79,6 +81,18 @@
             panel1.Size = new Size(190, 654);
             panel1.TabIndex = 0;
             // 
+            // btn_TienNghi
+            // 
+            btn_TienNghi.Location = new Point(44, 358);
+            btn_TienNghi.Name = "btn_TienNghi";
+            btn_TienNghi.Size = new Size(146, 41);
+            btn_TienNghi.TabIndex = 10;
+            btn_TienNghi.Text = "Tiện nghi";
+            btn_TienNghi.TextAlign = ContentAlignment.MiddleLeft;
+            btn_TienNghi.UseVisualStyleBackColor = true;
+            btn_TienNghi.Visible = false;
+            btn_TienNghi.Click += btn_TienNghi_Click;
+            // 
             // btn_UDai
             // 
             btn_UDai.Location = new Point(44, 181);
@@ -89,6 +103,7 @@
             btn_UDai.TextAlign = ContentAlignment.MiddleLeft;
             btn_UDai.UseVisualStyleBackColor = true;
             btn_UDai.Visible = false;
+            btn_UDai.Click += btn_UDai_Click;
             // 
             // panel4
             // 
@@ -211,6 +226,8 @@
             // panel5
             // 
             panel5.Controls.Add(uThongtin2);
+            panel5.Controls.Add(uUuDai1);
+            panel5.Controls.Add(uTienNghi1);
             panel5.Controls.Add(uThongtin1);
             panel5.Controls.Add(uMatKhau1);
             panel5.Controls.Add(uThongTinKhachSan1);
@@ -223,9 +240,23 @@
             panel5.Size = new Size(903, 611);
             panel5.TabIndex = 1;
             // 
+            // uUuDai1
+            // 
+            uUuDai1.Location = new Point(0, 6);
+            uUuDai1.Name = "uUuDai1";
+            uUuDai1.Size = new Size(844, 538);
+            uUuDai1.TabIndex = 2;
+            // 
+            // uTienNghi1
+            // 
+            uTienNghi1.Location = new Point(0, 6);
+            uTienNghi1.Name = "uTienNghi1";
+            uTienNghi1.Size = new Size(891, 809);
+            uTienNghi1.TabIndex = 2;
+            // 
             // uThongtin2
             // 
-            uThongtin2.Location = new Point(0, 0);
+            uThongtin2.Location = new Point(-3, 6);
             uThongtin2.Name = "uThongtin2";
             uThongtin2.Size = new Size(903, 611);
             uThongtin2.TabIndex = 1;
@@ -280,17 +311,6 @@
             uChiTietPhongo1.Size = new Size(900, 611);
             uChiTietPhongo1.TabIndex = 5;
             // 
-            // btn_TienNghi
-            // 
-            btn_TienNghi.Location = new Point(44, 358);
-            btn_TienNghi.Name = "btn_TienNghi";
-            btn_TienNghi.Size = new Size(146, 41);
-            btn_TienNghi.TabIndex = 10;
-            btn_TienNghi.Text = "Tiện nghi";
-            btn_TienNghi.TextAlign = ContentAlignment.MiddleLeft;
-            btn_TienNghi.UseVisualStyleBackColor = true;
-            btn_TienNghi.Visible = false;
-            // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -334,5 +354,7 @@
         private UHoSo uHoSo1;
         private Button btn_UDai;
         private Button btn_TienNghi;
+        private UTienNghi uTienNghi1;
+        private UUuDai uUuDai1;
     }
 }
