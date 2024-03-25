@@ -233,22 +233,7 @@
             label13 = new Label();
             label12 = new Label();
             panel6 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            panel7 = new Panel();
-            label7 = new Label();
-            pictureBox9 = new PictureBox();
-            panel8 = new Panel();
-            label8 = new Label();
-            pictureBox10 = new PictureBox();
-            panel9 = new Panel();
-            label9 = new Label();
-            pictureBox11 = new PictureBox();
-            panel10 = new Panel();
-            label10 = new Label();
-            pictureBox12 = new PictureBox();
-            panel11 = new Panel();
-            label11 = new Label();
-            pictureBox13 = new PictureBox();
+            flpTNC = new FlowLayoutPanel();
             lblConvenientDetail = new Label();
             label5 = new Label();
             panel4 = new Panel();
@@ -336,17 +321,6 @@
             panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             panel6.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage6).BeginInit();
@@ -2492,7 +2466,7 @@
             // panel6
             // 
             panel6.BackColor = SystemColors.ControlLightLight;
-            panel6.Controls.Add(flowLayoutPanel1);
+            panel6.Controls.Add(flpTNC);
             panel6.Controls.Add(lblConvenientDetail);
             panel6.Controls.Add(label5);
             panel6.Location = new Point(5, 2);
@@ -2500,163 +2474,13 @@
             panel6.Size = new Size(297, 273);
             panel6.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // flpTNC
             // 
-            flowLayoutPanel1.Controls.Add(panel7);
-            flowLayoutPanel1.Controls.Add(panel8);
-            flowLayoutPanel1.Controls.Add(panel9);
-            flowLayoutPanel1.Controls.Add(panel10);
-            flowLayoutPanel1.Controls.Add(panel11);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(5, 45);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(289, 225);
-            flowLayoutPanel1.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(pictureBox9);
-            panel7.Location = new Point(3, 3);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(136, 48);
-            panel7.TabIndex = 3;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(58, 16);
-            label7.Name = "label7";
-            label7.Size = new Size(61, 17);
-            label7.TabIndex = 0;
-            label7.Text = "Máy lạnh";
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(3, 3);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(51, 42);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 0;
-            pictureBox9.TabStop = false;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(label8);
-            panel8.Controls.Add(pictureBox10);
-            panel8.Location = new Point(3, 57);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(136, 48);
-            panel8.TabIndex = 4;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(58, 16);
-            label8.Name = "label8";
-            label8.Size = new Size(65, 17);
-            label8.TabIndex = 0;
-            label8.Text = "Nhà hàng";
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(3, 3);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(51, 42);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 0;
-            pictureBox10.TabStop = false;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(label9);
-            panel9.Controls.Add(pictureBox11);
-            panel9.Location = new Point(3, 111);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(136, 48);
-            panel9.TabIndex = 5;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(58, 16);
-            label9.Name = "label9";
-            label9.Size = new Size(48, 17);
-            label9.TabIndex = 0;
-            label9.Text = "Hồ bơi";
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(3, 3);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(51, 42);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 0;
-            pictureBox11.TabStop = false;
-            // 
-            // panel10
-            // 
-            panel10.Controls.Add(label10);
-            panel10.Controls.Add(pictureBox12);
-            panel10.Location = new Point(3, 165);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(136, 48);
-            panel10.TabIndex = 6;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(58, 16);
-            label10.Name = "label10";
-            label10.Size = new Size(68, 17);
-            label10.TabIndex = 0;
-            label10.Text = "Lễ tân 24h";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(3, 3);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(51, 42);
-            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 0;
-            pictureBox12.TabStop = false;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(label11);
-            panel11.Controls.Add(pictureBox13);
-            panel11.Location = new Point(145, 3);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(136, 48);
-            panel11.TabIndex = 7;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(58, 16);
-            label11.Name = "label11";
-            label11.Size = new Size(30, 17);
-            label11.TabIndex = 0;
-            label11.Text = "Wifi";
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(3, 3);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(51, 42);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 0;
-            pictureBox13.TabStop = false;
+            flpTNC.FlowDirection = FlowDirection.TopDown;
+            flpTNC.Location = new Point(5, 45);
+            flpTNC.Name = "flpTNC";
+            flpTNC.Size = new Size(289, 225);
+            flpTNC.TabIndex = 2;
             // 
             // lblConvenientDetail
             // 
@@ -2977,22 +2801,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            panel11.ResumeLayout(false);
-            panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage7).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage6).EndInit();
@@ -3030,22 +2838,7 @@
         private Panel panel6;
         private Label lblConvenientDetail;
         private Label label5;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private PictureBox pictureBox9;
-        private Panel panel7;
-        private Label label7;
-        private Panel panel8;
-        private Label label8;
-        private PictureBox pictureBox10;
-        private Panel panel9;
-        private Label label9;
-        private PictureBox pictureBox11;
-        private Panel panel10;
-        private Label label10;
-        private PictureBox pictureBox12;
-        private Panel panel11;
-        private Label label11;
-        private PictureBox pictureBox13;
+        private FlowLayoutPanel flpTNC;
         private Panel panel12;
         private Label label13;
         private Label label12;
