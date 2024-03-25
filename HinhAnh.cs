@@ -17,8 +17,9 @@ namespace DuLich
         public string Anh4 { get; set; }
         public string Anh5 { get; set; }
         public string Anh6 { get; set; }
+        public int MaKS { get; set; }
 
-        public HinhAnh(string taiKhoan, int phong, string anhBia, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6)
+        public HinhAnh(string taiKhoan, int phong, string anhBia, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, int maKS)
         {
             TaiKhoan = taiKhoan;
             Phong = phong;
@@ -29,6 +30,7 @@ namespace DuLich
             Anh4 = anh4;
             Anh5 = anh5;
             Anh6 = anh6;
+            MaKS = maKS;
         }
     }
 }

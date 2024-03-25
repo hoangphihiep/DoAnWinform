@@ -14,6 +14,7 @@ namespace DuLich
 {
     public partial class UUuDai : UserControl
     {
+        public string tentk;
         public int index = 1;
         public UUuDai()
         {
@@ -25,13 +26,13 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0);
+                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
                 else if (txt_MaUuDai.Text == "")
                     MessageBox.Show("Hãy nhập mã ưu đãi");
-                string query = "Select * from UuDai where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' ";
+                string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
                 if (modify.UuDai(query).Count() == 0)
                 {
                     UuDai.MaKS = int.Parse(txt_MaKhachSan.Text);
@@ -58,7 +59,7 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0);
+                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
@@ -66,7 +67,7 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã ưu đãi");
                 else
                 {
-                    string query = "Select * from UuDai where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' ";
+                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
                     if (modify.UuDai(query).Count() == 1)
                     {
                         Dao.Delete(UuDai, "UuDai");
@@ -85,7 +86,7 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0);
+                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
@@ -93,7 +94,8 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã ưu đãi");
                 else
                 {
-                    string query = "Select * from UuDai where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' ";
+                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
+
                     if (modify.UuDai(query).Count() == 0)
                     {
                         UuDai.MaKS = int.Parse(txt_MaKhachSan.Text);
@@ -113,6 +115,7 @@ namespace DuLich
 
         private void U_UuDai_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(tentk);
             using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
             {
                 connection.Open();
@@ -121,21 +124,31 @@ namespace DuLich
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader reader = command.ExecuteReader();
+
+                // Xóa bỏ các cột cũ (nếu có)
+                dataGridView1.Columns.Clear();
+
+                // Thêm các cột vào DataGridView
+                dataGridView1.Columns.Add("Tk", "Tk");
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("MAUUDAI", "MAUUDAI");
+                dataGridView1.Columns.Add("TENUUDAI", "TENUUDAI");
+                dataGridView1.Columns.Add("GIATRIUUDAI", "GIATRIUUDAI");
                 while (reader.Read())
                 {
-                    int maks = reader.GetInt32(0);
-                    int mauudai = reader.GetInt32(1);
-                    string tenuudai = reader.GetString(2);
-                    int giatriuudai = reader.GetInt32(3);
+                    int maks = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    int mauudai = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+                    string tenuudai = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                    int giatriuudai = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
+                    string tk = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
 
-                    DataGridViewRow row = new DataGridViewRow();
-                    row.Cells[0].Value = maks;
-                    row.Cells[1].Value = mauudai;
-                    row.Cells[2].Value = tenuudai;
-                    row.Cells[3].Value = giatriuudai;
+                    // Tạo một mảng chứa giá trị của từng cột
+                    string[] rowValues = { tk,maks.ToString(), mauudai.ToString(), tenuudai, giatriuudai.ToString() };
 
-                    dataGridView1.Rows.Add(row);
+                    // Thêm hàng vào DataGridView
+                    dataGridView1.Rows.Add(rowValues);
                 }
+
                 reader.Close();
             }
         }
@@ -151,7 +164,7 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã ưu đãi");
                 else
                 {
-                    string query = "Select * from UuDai where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' ";
+                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
                     UuDaiDAO Dao = new UuDaiDAO();
                     List<UuDai> list_UuDai = modify.UuDai(query);
                     if (list_UuDai.Count() != 0)

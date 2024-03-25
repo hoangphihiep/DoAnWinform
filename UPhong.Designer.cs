@@ -61,6 +61,7 @@
             ptb_Anh5 = new PictureBox();
             ptb_Anh6 = new PictureBox();
             btn_UploadAnh = new Button();
+            btn_ThemPhong = new Button();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
@@ -393,10 +394,21 @@
             btn_UploadAnh.UseVisualStyleBackColor = true;
             btn_UploadAnh.Click += btn_UploadAnh_Click;
             // 
+            // btn_ThemPhong
+            // 
+            btn_ThemPhong.Location = new Point(693, 672);
+            btn_ThemPhong.Name = "btn_ThemPhong";
+            btn_ThemPhong.Size = new Size(94, 29);
+            btn_ThemPhong.TabIndex = 108;
+            btn_ThemPhong.Text = "Thêm phòng";
+            btn_ThemPhong.UseVisualStyleBackColor = true;
+            btn_ThemPhong.Click += btn_ThemPhong_Click;
+            // 
             // UPhong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btn_ThemPhong);
             Controls.Add(btn_UploadAnh);
             Controls.Add(ptb_Anh6);
             Controls.Add(ptb_Anh5);
@@ -479,5 +491,6 @@
         private PictureBox ptb_Anh5;
         private PictureBox ptb_Anh6;
         private Button btn_UploadAnh;
+        private Button btn_ThemPhong;
     }
 }

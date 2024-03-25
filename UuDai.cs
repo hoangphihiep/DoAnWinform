@@ -12,13 +12,15 @@ namespace DuLich
         public int MaUuDai { get; set; }
         public string TenUuDai { get; set; }
         public int GiaTriUuDai { get; set; }
+        public string TK { get; set; }
 
-        public UuDai(int maKS, int maUuDai, string tenUuDai, int giaTriUuDai)
+        public UuDai(int maKS, int maUuDai, string tenUuDai, int giaTriUuDai, string tK)
         {
             MaKS = maKS;
             MaUuDai = maUuDai;
             TenUuDai = tenUuDai;
             GiaTriUuDai = giaTriUuDai;
+            TK = tK;
         }
     }
 }
