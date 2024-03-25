@@ -28,6 +28,7 @@ namespace DuLich
             uViTri1.tentk = tentk;
             uHoSo1.tentk = tentk;
             uMatKhau1.tentk = tentk;
+            uUuDai1.tentk = tentk;
             Modify modify = new Modify();
             string query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tentk + "' ";
             var result = modify.KhachSanThuocTaiKhoan(query);

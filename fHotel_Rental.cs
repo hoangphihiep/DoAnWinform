@@ -211,6 +211,8 @@ namespace DuLich
                 UPhong uPhong = new UPhong();
                 uPhong.phong = MaPhong;
                 uPhong.taikhoan = tk;
+                uPhong.MaKS = MaKhachSan;
+                uPhong.MaPhong = MaPhong;
                 //Phongs.Add(new Phong(uPhong.));
                 TabPage tabPage1 = tab_ChiTietPhongO.TabPages[MaPhong - 1];
                 uPhong.Size = tabPage1.Size;

@@ -25,7 +25,7 @@ namespace DuLich
             {
                 Modify modify = new Modify();
                 TienNghi tienNghi = new TienNghi(int.Parse(txt_MaKhachSan.Text), tentk, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                string query = "Select * from TIENGNHI where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and TK = '" + tentk + "' ";
+                string query = "Select * from TIENNGHI where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and TK = '" + tentk + "' ";
                 TienNghiDAO Dao = new TienNghiDAO();
                 List<TienNghi> list_HoSo = modify.TienNghi(query);
                 if (list_HoSo.Count() != 0)
@@ -50,7 +50,7 @@ namespace DuLich
                     int amThuc1 = clb_AmThuc.GetItemChecked(1) ? 1 : 0;
                     int amThuc2 = clb_AmThuc.GetItemChecked(2) ? 1 : 0;
 
-                    Dao.Update(tienNghi, "TIENGNHI");
+                    Dao.Update(tienNghi, "TIENNGHI");
                     MessageBox.Show("Chỉnh sửa thành công");
                 }
             }

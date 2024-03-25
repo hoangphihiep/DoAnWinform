@@ -16,6 +16,7 @@ namespace DuLich
 {
     public partial class UPhong : UserControl
     {
+        public int MaPhong;
         public string taikhoan;
         public int phong;
         public string anhBia;
@@ -25,6 +26,7 @@ namespace DuLich
         public string anh4;
         public string anh5;
         public string anh6;
+        public int MaKS;
         public UPhong()
         {
             InitializeComponent();
@@ -349,7 +351,7 @@ namespace DuLich
         {
             Modify modify = new Modify();
             string query = "Select * from HinhAnh where PHONG = '" + phong + "' ";
-            HinhAnh hinh = new HinhAnh(taikhoan,phong, anhBia, anh1, anh2, anh3, anh4, anh5, anh6);
+            HinhAnh hinh = new HinhAnh(taikhoan, phong, anhBia, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
             HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
             List<HinhAnh> list_accounts = modify.HinhAnh(query);
             if (list_accounts.Count() == 0)
@@ -358,5 +360,23 @@ namespace DuLich
                 MessageBox.Show("Upload ảnh thành công");
             }
         }
+
+        private void btn_ThemPhong_Click(object sender, EventArgs e)
+        {
+            PhongDAO Dao = new PhongDAO();
+            Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
+            Modify modify = new Modify();
+            while (true)
+            {
+                string query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan + "' AND MAKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
+                var result = modify.Phong(query);
+                if (result.Count() > 0)
+                    MaPhong++;
+                else
+                    break;
+            }
+            Dao.Add(phong, "PHONG");
+            MessageBox.Show("Add Phòng thành công");
+        }      
     }
 }
