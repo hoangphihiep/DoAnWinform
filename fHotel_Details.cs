@@ -14,8 +14,10 @@ namespace DuLich
 {
     public partial class fHotel_Details : Form
     {
-        public fHotel_Details()
+
+        public fHotel_Details(int maks)
         {
+            this.maks = maks;
             InitializeComponent();
         }
 
@@ -48,8 +50,60 @@ namespace DuLich
         public int maks;
         private void fHotel_Details_Load(object sender, EventArgs e)
         {
-            label2.Text = tenKS;
-            label1.Text = tenViTri;
+            ChenThongTinCanBan();
+            ChenAnhToTal();
+        }
+
+        void ChenAnhToTal()
+        {
+            string query = "SELECT * FROM QL_ANH WHERE QL_ANH.MAKS = @maks";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maks", maks);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            int i = 0;
+            while (reader.Read())
+            {
+                
+                if(i==1)
+                {
+                    ptbTotalImage1.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 2)
+                {
+                    ptbTotalImage2.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 3)
+                {
+                    ptbTotalImage3.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 4)
+                {
+                    ptbTotalImage4.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 5)
+                {
+                    ptbTotalImage5.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 6)
+                {
+                    ptbTotalImage6.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                if (i == 7)
+                {
+                    ptbTotalImage7.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
+                }
+                i++;
+            }
+            conn.Close();
+        }
+
+        void ChenThongTinCanBan()
+        {
+            lblName.Text = tenKS;
+            lblAddress.Text = tenViTri;
             if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))
@@ -67,12 +121,12 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
-                label1.Text = reader.GetString(reader.GetOrdinal("DIACHI"));
+                lblAddress.Text = reader.GetString(reader.GetOrdinal("DIACHI"));
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
                     int gia = reader.GetInt32(giaColumnIndex);
-                    lbl_Tien.Text = gia.ToString() + " VNĐ";
+                    lblPrice.Text = gia.ToString() + " VNĐ";
                 }
                 int giaColumnIndex1 = reader.GetOrdinal("SAO");
                 if (!reader.IsDBNull(giaColumnIndex1))
