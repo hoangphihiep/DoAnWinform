@@ -322,15 +322,25 @@ namespace DuLich
         private void btn_UploadAnh_Click(object sender, EventArgs e)
         {
             Modify modify = new Modify();
-            string query = "Select * from HinhAnh where PHONG = '" + phong + "' ";
             HinhAnh hinh = new HinhAnh(taikhoan, phong, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
             HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
-            List<HinhAnh> list_accounts = modify.HinhAnh(query);
-            if (list_accounts.Count() == 0)
+            bool duplicateFound = false;
+            while (!duplicateFound)
             {
-                hinhAnhDAO.Add(hinh, "HinhAnh");
-                MessageBox.Show("Upload ảnh thành công");
+                string query = "SELECT * FROM HinhAnh WHERE TenDangNhap = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND PHONG = '" + MaPhong + "'";
+                List<HinhAnh> list_accounts = modify.HinhAnh(query);
+                if (list_accounts.Count == 1)
+                {
+                    MaPhong++;
+                }
+                else
+                {
+                    duplicateFound = true;
+                }
             }
+            hinh.Phong = MaPhong;
+            hinhAnhDAO.Add(hinh, "HinhAnh");
+            MessageBox.Show("Upload ảnh thành công");
         }
 
         private void btn_ThemPhong_Click(object sender, EventArgs e)
@@ -338,19 +348,23 @@ namespace DuLich
             PhongDAO Dao = new PhongDAO();
             Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
             Modify modify = new Modify();
-            string query = "";
-            while (true)
+            bool duplicateFound = false;
+            while (!duplicateFound)
             {
-                query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan + "' AND MaKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
-
-                var result = modify.Phong(query);
-                if (result.Count() > 0)
+                string query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
+                List<Phong> list_accounts = modify.Phong(query);
+                if (list_accounts.Count == 1)
+                {
                     MaPhong++;
+                }
                 else
-                    break;
+                {
+                    duplicateFound = true;
+                }
             }
+            phong.MaPhong = MaPhong;
             Dao.Add(phong, "PHONG");
             MessageBox.Show("Add Phòng thành công");
-        }      
+        }    
     }
 }

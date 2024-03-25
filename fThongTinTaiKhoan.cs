@@ -21,7 +21,6 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(tentk);
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
             uThongTinKhachSan1.tentk = tentk;
@@ -36,8 +35,9 @@ namespace DuLich
             if (result.Count() > 0)
             {
                 btn_ThongTinKhachSan.Visible = true;
+                btn_ThongTinKhachSan.Visible = true;
+                uUuDai1.SetTenTK(tentk); // Gán giá trị tentk vào UserControl UUuDai
             }
-
         }
         public void ShowThongTinCanBan()
         {

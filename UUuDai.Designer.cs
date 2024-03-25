@@ -173,7 +173,7 @@
             label1.TabIndex = 137;
             label1.Text = "%";
             // 
-            // U_UuDai
+            // UUuDai
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -191,7 +191,7 @@
             Controls.Add(button1);
             Controls.Add(txt_MaKhachSan);
             Controls.Add(lbl_MaKS);
-            Name = "U_UuDai";
+            Name = "UUuDai";
             Size = new Size(824, 606);
             Load += U_UuDai_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

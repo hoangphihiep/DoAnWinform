@@ -43,9 +43,9 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
+            uThongtin2 = new UThongtin();
             uUuDai1 = new UUuDai();
             uTienNghi1 = new UTienNghi();
-            uThongtin2 = new UThongtin();
             uThongtin1 = new UThongtin();
             uMatKhau1 = new UMatKhau();
             uThongTinKhachSan1 = new UThongTinKhachSan();
@@ -240,11 +240,19 @@
             panel5.Size = new Size(903, 611);
             panel5.TabIndex = 1;
             // 
+            // uThongtin2
+            // 
+            uThongtin2.Location = new Point(-3, 6);
+            uThongtin2.Name = "uThongtin2";
+            uThongtin2.Size = new Size(903, 611);
+            uThongtin2.TabIndex = 1;
+            uThongtin2.Load += uThongtin2_Load;
+            // 
             // uUuDai1
             // 
             uUuDai1.Location = new Point(0, 6);
             uUuDai1.Name = "uUuDai1";
-            uUuDai1.Size = new Size(844, 538);
+            uUuDai1.Size = new Size(903, 611);
             uUuDai1.TabIndex = 2;
             // 
             // uTienNghi1
@@ -253,14 +261,6 @@
             uTienNghi1.Name = "uTienNghi1";
             uTienNghi1.Size = new Size(891, 809);
             uTienNghi1.TabIndex = 2;
-            // 
-            // uThongtin2
-            // 
-            uThongtin2.Location = new Point(-3, 6);
-            uThongtin2.Name = "uThongtin2";
-            uThongtin2.Size = new Size(903, 611);
-            uThongtin2.TabIndex = 1;
-            uThongtin2.Load += uThongtin2_Load;
             // 
             // uThongtin1
             // 

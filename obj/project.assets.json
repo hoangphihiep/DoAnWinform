@@ -470,39 +470,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\Anya\\.nuget\\packages\\": {},
->>>>>>> 8638f98138e96a5f3595d2f0c1ef917bb18cb436
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
       "projectName": "DuLich",
       "projectPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\DuLich.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Anya\\source\\repos\\DoAnWinform\\DuLich.csproj",
-      "projectName": "DuLich",
-      "projectPath": "C:\\Users\\Anya\\source\\repos\\DoAnWinform\\DuLich.csproj",
-      "packagesPath": "C:\\Users\\Anya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anya\\source\\repos\\DoAnWinform\\obj\\",
->>>>>>> 8638f98138e96a5f3595d2f0c1ef917bb18cb436
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Anya\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 8638f98138e96a5f3595d2f0c1ef917bb18cb436
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -561,5 +545,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\ADMIN\\Downloads\\Winform\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

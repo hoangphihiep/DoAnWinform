@@ -26,7 +26,7 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
+                UuDai UuDai = new UuDai(0, 0, null, 0, null);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
@@ -39,6 +39,7 @@ namespace DuLich
                     UuDai.MaUuDai = int.Parse(txt_MaUuDai.Text);
                     UuDai.TenUuDai = txt_TenUuDai.Text;
                     UuDai.GiaTriUuDai = int.Parse(txt_GiaTriUuDai.Text);
+                    UuDai.TK = tentk;
                     Dao.Add(UuDai, "UuDai");
                     MessageBox.Show("Thêm ưu đãi thành công");
                 }
@@ -59,7 +60,7 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
+                UuDai UuDai = new UuDai(0, 0, "", 0, tentk);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
@@ -67,9 +68,10 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã ưu đãi");
                 else
                 {
-                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
+                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' AND MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' AND Tk = '" + tentk + "'";
                     if (modify.UuDai(query).Count() == 1)
                     {
+                        UuDai = modify.UuDai(query).First();
                         Dao.Delete(UuDai, "UuDai");
                         MessageBox.Show("Xóa ưu đãi thành công");
                     }
@@ -86,7 +88,7 @@ namespace DuLich
             try
             {
                 UuDaiDAO Dao = new UuDaiDAO();
-                UuDai UuDai = new UuDai(0, 0, null, 0, tentk);
+                UuDai UuDai = new UuDai(0, 0, "", 0, tentk);
                 Modify modify = new Modify();
                 if (txt_MaKhachSan.Text == "")
                     MessageBox.Show("Hãy nhập mã khách sạn");
@@ -94,12 +96,10 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã ưu đãi");
                 else
                 {
-                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + txt_MaKhachSan.Text + "' AND MAUUDAI = '" + txt_MaUuDai.Text + "' AND Tk = '" + tentk + "'";
-
-                    if (modify.UuDai(query).Count() == 0)
+                    string query = "SELECT * FROM UuDai WHERE MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' AND MAUUDAI = '" + int.Parse(txt_MaUuDai.Text) + "' AND Tk = '" + tentk + "'";
+                    if (modify.UuDai(query).Count() == 1)
                     {
-                        UuDai.MaKS = int.Parse(txt_MaKhachSan.Text);
-                        UuDai.MaUuDai = int.Parse(txt_MaUuDai.Text);
+                        UuDai = modify.UuDai(query).First();
                         UuDai.TenUuDai = txt_TenUuDai.Text;
                         UuDai.GiaTriUuDai = int.Parse(txt_GiaTriUuDai.Text);
                         Dao.Update(UuDai, "UuDai");
@@ -118,8 +118,7 @@ namespace DuLich
             using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
             {
                 connection.Open();
-
-                string sql = "SELECT * FROM UuDai";
+                string sql = "SELECT * FROM UuDai WHERE Tk = '" + tentk + "'";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -147,7 +146,6 @@ namespace DuLich
                     // Thêm hàng vào DataGridView
                     dataGridView1.Rows.Add(rowValues);
                 }
-
                 reader.Close();
             }
         }
@@ -183,6 +181,12 @@ namespace DuLich
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public void SetTenTK(string tenTK)
+        {
+            tentk = tenTK;
+            // Gọi lại phương thức load dữ liệu
+            U_UuDai_Load(this, EventArgs.Empty);
         }
     }
 }
