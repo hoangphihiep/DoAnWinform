@@ -308,9 +308,13 @@ namespace DuLich
             KT_DangNhap1 = 0;
         }
 
-
+        public string diaDiem2;
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
+            if (lb_TimKiem.Text != "")
+            {
+                diadiem = lb_TimKiem.Text;
+            }
             for (int j = tab_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
             {
                 Control control = tab_PhuHopNhat.Controls[j];
@@ -320,9 +324,7 @@ namespace DuLich
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
-
-            //AND ThongTinCanBan.GIA >= {1} AND ThongTinCanBan.GIA <= {2}
-            diadiem = lb_TimKiem.Text;
+           
             int min = trackBar1.Value;
             int max = trackBar2.Maximum - trackBar2.Value;
             truyen.Truyen2(diadiem, min, max);

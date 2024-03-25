@@ -682,7 +682,7 @@ namespace DoAnDuLich
                 k.HideDangNhap();
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
-
+                k.diaDiem2 = txt_DiaDiem.Text;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -695,6 +695,7 @@ namespace DoAnDuLich
                 k.HideDangKyKS();
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
+                k.diaDiem2 = txt_DiaDiem.Text;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -702,6 +703,7 @@ namespace DoAnDuLich
             else
             {
                 k.diadiem = txt_DiaDiem.Text;
+                k.diaDiem2 = txt_DiaDiem.Text;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
