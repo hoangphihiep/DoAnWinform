@@ -20,11 +20,9 @@ namespace DuLich
 
         private void label2_Click(object sender, EventArgs e)
         {
-            fHotel_Details f = new fHotel_Details();
+            fHotel_Details f = new fHotel_Details(maks);
             //this.Hide();
-            f.tenKS = lbl_TenKhachSan.Text;
-            f.tenViTri = lbl_ViTri.Text;
-            f.maks = maks;
+            
             f.ShowDialog();
 
             this.Show();
