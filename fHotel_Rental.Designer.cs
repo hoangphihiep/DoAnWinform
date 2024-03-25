@@ -263,6 +263,7 @@
             btn_TiepTheo.TabIndex = 129;
             btn_TiepTheo.Text = "TIẾP THEO";
             btn_TiepTheo.UseVisualStyleBackColor = false;
+            btn_TiepTheo.Click += btn_TiepTheo_Click_1;
             // 
             // txt_TenChuKhachSan
             // 
