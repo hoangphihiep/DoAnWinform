@@ -38,6 +38,7 @@
             txbMaAnh = new TextBox();
             label4 = new Label();
             txbAddress = new TextBox();
+            txbCommand = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -127,12 +128,20 @@
             txbAddress.Size = new Size(193, 23);
             txbAddress.TabIndex = 8;
             // 
+            // txbCommand
+            // 
+            txbCommand.Location = new Point(329, 375);
+            txbCommand.Name = "txbCommand";
+            txbCommand.Size = new Size(315, 23);
+            txbCommand.TabIndex = 10;
+            // 
             // FAddAnh
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txbCommand);
             Controls.Add(label4);
             Controls.Add(txbAddress);
             Controls.Add(label3);
@@ -164,5 +173,6 @@
         private TextBox txbMaAnh;
         private Label label4;
         private TextBox txbAddress;
+        private TextBox txbCommand;
     }
 }
