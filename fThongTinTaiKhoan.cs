@@ -21,6 +21,7 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(tentk);
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
             uThongTinKhachSan1.tentk = tentk;

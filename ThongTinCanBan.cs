@@ -15,16 +15,18 @@ namespace DuLich
         public int? KCTHANHPHO { get; set; }
         public int? KCSANBAY { get; set; }
         public int SAO { get; set; }
+        public string AnhBia { get; set; }
 
-        public ThongTinCanBan(int mAKS,string tk, string tENKH, string mOTA, int? kCTHANHPHO, int? kCSANBAY, int sAO)
+        public ThongTinCanBan(int mAKS, string tK, string tENKH, string mOTA, int? kCTHANHPHO, int? kCSANBAY, int sAO, string anhBia)
         {
             MAKS = mAKS;
-            TK = tk;
+            TK = tK;
             TENKH = tENKH;
             MOTA = mOTA;
             KCTHANHPHO = kCTHANHPHO;
             KCSANBAY = kCSANBAY;
             SAO = sAO;
+            AnhBia = anhBia;
         }
     }
 }

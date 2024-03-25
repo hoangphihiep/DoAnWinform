@@ -19,7 +19,6 @@ namespace DuLich
         public int MaPhong;
         public string taikhoan;
         public int phong;
-        public string anhBia;
         public string anh1;
         public string anh2;
         public string anh3;
@@ -36,37 +35,6 @@ namespace DuLich
         private void ptb_AnhBia_Click(object sender, EventArgs e)
         {
 
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                string imagePath = dialog.FileName;
-
-                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
-                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
-                if (!Directory.Exists(targetDirectory))
-                {
-                    Directory.CreateDirectory(targetDirectory);
-                }
-
-                try
-                {
-                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
-                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
-
-                    // Hiển thị ảnh trong PictureBox
-                    ptb_AnhBia.Image = Image.FromFile(targetPath);
-                    ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
-
-                    //tạo đối tượng
-                    anhBia = targetPath;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
 
         private void ptb_Anh1_Click(object sender, EventArgs e)
@@ -330,28 +298,29 @@ namespace DuLich
             lbl_Nguoi.Location = new Point(562, 761);
             lbl_ThemHinhAnh.Size = new Size(283, 31);
             lbl_ThemHinhAnh.Location = new Point(673, 84);
-            ptb_AnhBia.Size = new Size(452, 228);
-            ptb_AnhBia.Location = new Point(652, 134);
             ptb_Anh1.Size = new Size(135, 119);
-            ptb_Anh1.Location = new Point(652, 377);
+            ptb_Anh1.Location = new Point(637, 148);
             ptb_Anh2.Size = new Size(135, 119);
-            ptb_Anh2.Location = new Point(809, 377);
+            ptb_Anh2.Location = new Point(794, 148);
             ptb_Anh3.Size = new Size(135, 119);
-            ptb_Anh3.Location = new Point(969, 377);
+            ptb_Anh3.Location = new Point(954, 148);
             ptb_Anh4.Size = new Size(135, 119);
-            ptb_Anh4.Location = new Point(652, 517);
+            ptb_Anh4.Location = new Point(637, 288);
             ptb_Anh5.Size = new Size(135, 119);
-            ptb_Anh5.Location = new Point(809, 517);
+            ptb_Anh5.Location = new Point(794, 288);
             ptb_Anh6.Size = new Size(135, 119);
-            ptb_Anh6.Location = new Point(969, 517);
-
+            ptb_Anh6.Location = new Point(954, 288);
+            btn_ThemPhong.Size = new Size(94, 29);
+            btn_ThemPhong.Location = new Point(750, 450);
+            btn_UploadAnh.Size = new Size(94, 29);
+            btn_UploadAnh.Location = new Point(886, 450);
         }
 
         private void btn_UploadAnh_Click(object sender, EventArgs e)
         {
             Modify modify = new Modify();
             string query = "Select * from HinhAnh where PHONG = '" + phong + "' ";
-            HinhAnh hinh = new HinhAnh(taikhoan, phong, anhBia, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
+            HinhAnh hinh = new HinhAnh(taikhoan, phong, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
             HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
             List<HinhAnh> list_accounts = modify.HinhAnh(query);
             if (list_accounts.Count() == 0)
