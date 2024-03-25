@@ -115,7 +115,6 @@ namespace DuLich
 
         private void U_UuDai_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(tentk);
             using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
             {
                 connection.Open();

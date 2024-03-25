@@ -53,7 +53,6 @@
             lbl_GiaMoiDem = new Label();
             txt_SoGiuong = new TextBox();
             lbl_ThemHinhAnh = new Label();
-            ptb_AnhBia = new PictureBox();
             ptb_Anh1 = new PictureBox();
             ptb_Anh2 = new PictureBox();
             ptb_Anh3 = new PictureBox();
@@ -62,7 +61,6 @@
             ptb_Anh6 = new PictureBox();
             btn_UploadAnh = new Button();
             btn_ThemPhong = new Button();
-            ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh3).BeginInit();
@@ -314,20 +312,10 @@
             lbl_ThemHinhAnh.TabIndex = 100;
             lbl_ThemHinhAnh.Text = "Thêm hình ảnh của phòng";
             // 
-            // ptb_AnhBia
-            // 
-            ptb_AnhBia.BackColor = SystemColors.ButtonShadow;
-            ptb_AnhBia.Location = new Point(652, 134);
-            ptb_AnhBia.Name = "ptb_AnhBia";
-            ptb_AnhBia.Size = new Size(452, 228);
-            ptb_AnhBia.TabIndex = 99;
-            ptb_AnhBia.TabStop = false;
-            ptb_AnhBia.Click += ptb_AnhBia_Click;
-            // 
             // ptb_Anh1
             // 
             ptb_Anh1.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh1.Location = new Point(652, 377);
+            ptb_Anh1.Location = new Point(637, 148);
             ptb_Anh1.Name = "ptb_Anh1";
             ptb_Anh1.Size = new Size(135, 119);
             ptb_Anh1.TabIndex = 101;
@@ -337,7 +325,7 @@
             // ptb_Anh2
             // 
             ptb_Anh2.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh2.Location = new Point(809, 377);
+            ptb_Anh2.Location = new Point(794, 148);
             ptb_Anh2.Name = "ptb_Anh2";
             ptb_Anh2.Size = new Size(135, 119);
             ptb_Anh2.TabIndex = 102;
@@ -347,7 +335,7 @@
             // ptb_Anh3
             // 
             ptb_Anh3.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh3.Location = new Point(969, 377);
+            ptb_Anh3.Location = new Point(954, 148);
             ptb_Anh3.Name = "ptb_Anh3";
             ptb_Anh3.Size = new Size(135, 119);
             ptb_Anh3.TabIndex = 103;
@@ -357,7 +345,7 @@
             // ptb_Anh4
             // 
             ptb_Anh4.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh4.Location = new Point(652, 517);
+            ptb_Anh4.Location = new Point(637, 288);
             ptb_Anh4.Name = "ptb_Anh4";
             ptb_Anh4.Size = new Size(135, 119);
             ptb_Anh4.TabIndex = 104;
@@ -367,7 +355,7 @@
             // ptb_Anh5
             // 
             ptb_Anh5.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh5.Location = new Point(809, 517);
+            ptb_Anh5.Location = new Point(794, 288);
             ptb_Anh5.Name = "ptb_Anh5";
             ptb_Anh5.Size = new Size(135, 119);
             ptb_Anh5.TabIndex = 105;
@@ -377,7 +365,7 @@
             // ptb_Anh6
             // 
             ptb_Anh6.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh6.Location = new Point(969, 517);
+            ptb_Anh6.Location = new Point(954, 288);
             ptb_Anh6.Name = "ptb_Anh6";
             ptb_Anh6.Size = new Size(135, 119);
             ptb_Anh6.TabIndex = 106;
@@ -386,7 +374,7 @@
             // 
             // btn_UploadAnh
             // 
-            btn_UploadAnh.Location = new Point(829, 672);
+            btn_UploadAnh.Location = new Point(886, 450);
             btn_UploadAnh.Name = "btn_UploadAnh";
             btn_UploadAnh.Size = new Size(94, 29);
             btn_UploadAnh.TabIndex = 107;
@@ -396,7 +384,7 @@
             // 
             // btn_ThemPhong
             // 
-            btn_ThemPhong.Location = new Point(693, 672);
+            btn_ThemPhong.Location = new Point(750, 450);
             btn_ThemPhong.Name = "btn_ThemPhong";
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.TabIndex = 108;
@@ -417,7 +405,6 @@
             Controls.Add(ptb_Anh2);
             Controls.Add(ptb_Anh1);
             Controls.Add(lbl_ThemHinhAnh);
-            Controls.Add(ptb_AnhBia);
             Controls.Add(lbl_SauKhiNhieuHon);
             Controls.Add(lbl_Nguoi);
             Controls.Add(txt_tienThemKhach);
@@ -445,7 +432,6 @@
             Name = "UPhong";
             Size = new Size(1115, 801);
             Load += Phong_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh3).EndInit();
@@ -483,7 +469,6 @@
         private Label lbl_GiaMoiDem;
         private TextBox txt_SoGiuong;
         private Label lbl_ThemHinhAnh;
-        private PictureBox ptb_AnhBia;
         private PictureBox ptb_Anh1;
         private PictureBox ptb_Anh2;
         private PictureBox ptb_Anh3;

@@ -14,10 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DuLich
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Anya\source\repos\DoAnWinform\
-=======
 build_property.ProjectDir = C:\Users\ADMIN\Downloads\Winform\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
->>>>>>> 64954cf5635a71113397662bbf7b2f2e187c97d5
