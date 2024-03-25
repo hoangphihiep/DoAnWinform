@@ -45,6 +45,7 @@ namespace DuLich
         public string tenKS;
         public string tenViTri;
         public byte[] hinhanh;
+        public int maks;
         private void fHotel_Details_Load(object sender, EventArgs e)
         {
             label2.Text = tenKS;
@@ -56,11 +57,11 @@ namespace DuLich
                     ptbTotalImage1.Image = Image.FromStream(ms);
                 }
             }
-            string query = "SELECT * FROM KhachSan WHERE TENKS = @tenKS";
+            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = @maks";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@tenKS", tenKS);
+            command.Parameters.AddWithValue("@maks", maks);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -70,13 +71,13 @@ namespace DuLich
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
-                    double gia = reader.GetDouble(giaColumnIndex);
+                    int gia = reader.GetInt32(giaColumnIndex);
                     lbl_Tien.Text = gia.ToString() + " VNĐ";
                 }
-                int giaColumnIndex1 = reader.GetOrdinal("DANHGIA");
+                int giaColumnIndex1 = reader.GetOrdinal("SAO");
                 if (!reader.IsDBNull(giaColumnIndex1))
                 {
-                    double danhgia = reader.GetDouble(giaColumnIndex1);
+                    int danhgia = reader.GetInt32(giaColumnIndex1);
                     lbl_DanhGia.Text = danhgia.ToString();
                     label93.Text = danhgia.ToString();
                 }

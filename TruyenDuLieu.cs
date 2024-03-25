@@ -55,7 +55,6 @@ namespace DuLich
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
-               
                 //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
                 address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
                 MessageBox.Show(address[i]);

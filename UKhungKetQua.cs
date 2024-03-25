@@ -24,11 +24,12 @@ namespace DuLich
             //this.Hide();
             f.tenKS = lbl_TenKhachSan.Text;
             f.tenViTri = lbl_ViTri.Text;
+            f.maks = maks;
             f.ShowDialog();
 
             this.Show();
         }
-
+        public int maks;
         public int viTri;
         public string tenViTri;
         public string tenKhachSan;

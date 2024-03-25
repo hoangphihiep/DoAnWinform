@@ -217,6 +217,26 @@ namespace DuLich
             lb_TimKiem.AutoCompleteMode = AutoCompleteMode.Suggest;
             lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
             lb_TimKiem.AutoCompleteCustomSource = data;
+            List<int> maksList = new List<int>();
+            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@diadiem", diadiem);
+            SqlDataReader reader = command.ExecuteReader();
+            int i = 0;
+            while (reader.Read())
+            {
+                int maColumnIndex = reader.GetOrdinal("MAKS");
+                if (!reader.IsDBNull(maColumnIndex))
+                {
+                    int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
+                    maksList.Add(maKS);
+
+                }
+                i++;
+            }
+            conn.Close();
             truyen.Truyen(diadiem, "TENKH");
             for (int j = 0; j < truyen.soLuong; j++)
             {
@@ -226,6 +246,7 @@ namespace DuLich
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
+                uc.maks = maksList[j];
                 //MessageBox.Show(truyen.address[j]);
                 tab_PhuHopNhat.Controls.Add(uc);
             }
@@ -238,7 +259,7 @@ namespace DuLich
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
-
+                uc.maks = maksList[j];
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO");
@@ -251,6 +272,7 @@ namespace DuLich
                 uc.tien = truyen.soTien[j];
                 uc.khoangCach = truyen.danhGia[j];
                 uc.anhBia = truyen.address[j];
+                uc.maks = maksList[j];
                 uc.ShowKhoangCach();
                 tab_DanhGiaCao.Controls.Add(uc);
             }
