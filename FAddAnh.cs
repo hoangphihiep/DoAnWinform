@@ -19,6 +19,7 @@ namespace DuLich
         public FAddAnh()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile("C:\\Users\\Anya\\source\\repos\\DoAnWinform\\bin\\Debug\\net6.0-windows\\Image\\tải xuống (32).jpg");
         }
 
         public void Update(string sqlString)
@@ -26,6 +27,7 @@ namespace DuLich
             try
             {
                 SqlCommand cmd = new SqlCommand(sqlString, conn);
+                txbCommand.Text = sqlString;
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show(sqlString);
@@ -40,6 +42,7 @@ namespace DuLich
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string cmd = string.Format("INSERT INTO QL_ANH (MAKS, MAANH, TENANH, ADDRESS) VALUES ('{0}', '{1}', '{2}', '{3}')", txbMaKS.Text, txbMaAnh.Text, txbTenAnh.Text, txbAddress.Text);
+            txbCommand.Text=cmd;
         }
 
         private void FAddAnh_DragEnter(object sender, DragEventArgs e)
