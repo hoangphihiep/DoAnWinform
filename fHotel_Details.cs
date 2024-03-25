@@ -52,6 +52,25 @@ namespace DuLich
         {
             ChenThongTinCanBan();
             ChenAnhToTal();
+            ChenTNChinh();
+        }
+
+        void ChenTNChinh()
+        {
+            string query = "SELECT * FROM QL_TN INNER JOIN TN ON QL_TN.MATN=TN.MATN WHERE QL_TN.MAKS = @maks AND MALTN=1";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maks", maks);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            int i = 0;
+            while (reader.Read())
+            {
+                flpTNC.Controls.Add(new UCTNChinh(reader.GetInt32(reader.GetOrdinal("MATN"))));
+                i++;
+            }
+            conn.Close();
         }
 
         void ChenAnhToTal()
@@ -66,8 +85,8 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
-                
-                if(i==1)
+
+                if (i == 1)
                 {
                     ptbTotalImage1.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("DIACHI")));
                 }
@@ -121,6 +140,7 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
+                lblName.Text = reader.GetString(reader.GetOrdinal("TENKH"));
                 lblAddress.Text = reader.GetString(reader.GetOrdinal("DIACHI"));
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))

@@ -73,6 +73,9 @@
     <Compile Update="Payment_Information.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UCTNChinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>

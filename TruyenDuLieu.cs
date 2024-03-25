@@ -104,7 +104,7 @@ namespace DuLich
             command.Parameters.AddWithValue("@diadiem", diaDiem);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
+            int i = 1;
             while (reader.Read())
             {
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));

@@ -19,6 +19,7 @@ namespace DuLich
     public partial class UPhong : UserControl
     {
         public int MaPhong;
+        public int MAANH = 0;
         public string taikhoan;
         public int phong;
         public string anh1;
@@ -27,8 +28,9 @@ namespace DuLich
         public string anh4;
         public string anh5;
         public string anh6;
+        public string AnhChinh;
         public int MaKS;
-    
+
         public UPhong()
         {
             InitializeComponent();
@@ -300,53 +302,72 @@ namespace DuLich
             lbl_Nguoi.Size = new Size(46, 23);
             lbl_Nguoi.Location = new Point(562, 761);
             lbl_ThemHinhAnh.Size = new Size(283, 31);
-            lbl_ThemHinhAnh.Location = new Point(673, 84);
+            lbl_ThemHinhAnh.Location = new Point(721, 70);
             ptb_Anh1.Size = new Size(135, 119);
-            ptb_Anh1.Location = new Point(637, 148);
+            ptb_Anh1.Location = new Point(637, 297);
             ptb_Anh2.Size = new Size(135, 119);
-            ptb_Anh2.Location = new Point(794, 148);
+            ptb_Anh2.Location = new Point(794, 297);
             ptb_Anh3.Size = new Size(135, 119);
-            ptb_Anh3.Location = new Point(954, 148);
+            ptb_Anh3.Location = new Point(954, 297);
             ptb_Anh4.Size = new Size(135, 119);
-            ptb_Anh4.Location = new Point(637, 288);
+            ptb_Anh4.Location = new Point(637, 437);
             ptb_Anh5.Size = new Size(135, 119);
-            ptb_Anh5.Location = new Point(794, 288);
+            ptb_Anh5.Location = new Point(794, 437);
             ptb_Anh6.Size = new Size(135, 119);
-            ptb_Anh6.Location = new Point(954, 288);
+            ptb_Anh6.Location = new Point(954, 437);
+            ptb_AnhChinh.Size = new Size(320, 158);
+            ptb_AnhChinh.Location = new Point(707, 117);
             btn_ThemPhong.Size = new Size(94, 29);
-            btn_ThemPhong.Location = new Point(750, 450);
+            btn_ThemPhong.Location = new Point(750, 599);
             btn_UploadAnh.Size = new Size(94, 29);
-            btn_UploadAnh.Location = new Point(886, 450);
+            btn_UploadAnh.Location = new Point(886, 599);
         }
 
         private void btn_UploadAnh_Click(object sender, EventArgs e)
         {
             Modify modify = new Modify();
-            HinhAnh hinh = new HinhAnh(taikhoan, phong, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
-            HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
-            bool duplicateFound = false;
-            while (!duplicateFound)
+            List<QL_HinhAnh> list = new List<QL_HinhAnh>();
+            QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 1", AnhChinh, MAANH));
+            list.Add( new QL_HinhAnh(MaKS, "Anh total 2", anh1,MAANH));
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 3", anh2, MAANH));
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 4", anh3, MAANH));
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 5", anh4, MAANH));
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 6", anh5, MAANH));
+            list.Add(new QL_HinhAnh(MaKS, "Anh total 7", anh6, MAANH));
+            foreach(var i in  list)
             {
-                string query = "SELECT * FROM HinhAnh WHERE TenDangNhap = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND PHONG = '" + MaPhong + "'";
-                List<HinhAnh> list_accounts = modify.HinhAnh(query);
-                if (list_accounts.Count == 1)
-                {
-                    MaPhong++;
-                }
-                else
-                {
-                    duplicateFound = true;
-                }
+                hinhAnhDAO.Add(i,"QL_ANH");
             }
-            hinh.Phong = MaPhong;
-            hinhAnhDAO.Add(hinh, "HinhAnh");
+            //HinhAnh hinh = new HinhAnh(taikhoan, phong, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
+            //HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
+            //bool duplicateFound = false;
+            //while (!duplicateFound)
+            //{
+            //    string query = "SELECT * FROM HinhAnh WHERE TenDangNhap = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND PHONG = '" + MaPhong + "'";
+            //    List<HinhAnh> list_accounts = modify.HinhAnh(query);
+            //    if (list_accounts.Count == 1)
+            //    {
+            //        MaPhong++;
+            //    }
+            //    else
+            //    {
+            //        duplicateFound = true;
+            //    }
+            //}
+            //hinh.Phong = MaPhong;
+            //hinhAnhDAO.Add(hinh, "HinhAnh");
             MessageBox.Show("Upload ảnh thành công");
         }
 
         private void btn_ThemPhong_Click(object sender, EventArgs e)
         {
+            Room_DAO room_DAO = new Room_DAO();
             PhongDAO Dao = new PhongDAO();
             Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
+            //TAO DOI TUONG ROOM TU PHONG
+            Room room = new Room(phong.SoKhach,phong.SoGiuong,phong.Gia, phong.SoGiuong.ToString(),phong.MaPhong);
+            room_DAO.Add(room, "PHONG");
             Modify modify = new Modify();
             bool duplicateFound = false;
             while (!duplicateFound)
@@ -365,6 +386,41 @@ namespace DuLich
             phong.MaPhong = MaPhong;
             Dao.Add(phong, "PHONG");
             MessageBox.Show("Add Phòng thành công");
-        }    
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_Anh1.Image = Image.FromFile(targetPath);
+                    ptb_Anh1.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    AnhChinh = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

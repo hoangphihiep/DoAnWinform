@@ -179,3 +179,5 @@ C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.FAddAnh.r
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.f.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.FAddAnh.resources
 C:\Users\ADMIN\Downloads\Winform\obj\Debug\net6.0-windows\DuLich.FAddAnh.resources
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.UCTNChinh.resources
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UCTNChinh.resources
