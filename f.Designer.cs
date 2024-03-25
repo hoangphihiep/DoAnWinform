@@ -46,6 +46,7 @@
             Controls.Add(uUuDai1);
             Name = "f";
             Text = "f";
+            Load += f_Load;
             ResumeLayout(false);
         }
 

@@ -21,5 +21,10 @@ namespace DuLich
         {
 
         }
+
+        private void f_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
