@@ -52,6 +52,7 @@
             uChiTietPhongo1 = new UChiTietPhongO();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            btn_TienNghi = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -60,6 +61,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(btn_TienNghi);
             panel1.Controls.Add(btn_UDai);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(btn_HoSo);
@@ -278,6 +280,17 @@
             uChiTietPhongo1.Size = new Size(900, 611);
             uChiTietPhongo1.TabIndex = 5;
             // 
+            // btn_TienNghi
+            // 
+            btn_TienNghi.Location = new Point(44, 358);
+            btn_TienNghi.Name = "btn_TienNghi";
+            btn_TienNghi.Size = new Size(146, 41);
+            btn_TienNghi.TabIndex = 10;
+            btn_TienNghi.Text = "Tiện nghi";
+            btn_TienNghi.TextAlign = ContentAlignment.MiddleLeft;
+            btn_TienNghi.UseVisualStyleBackColor = true;
+            btn_TienNghi.Visible = false;
+            // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -320,5 +333,6 @@
         private UAnh uAnh1;
         private UHoSo uHoSo1;
         private Button btn_UDai;
+        private Button btn_TienNghi;
     }
 }
