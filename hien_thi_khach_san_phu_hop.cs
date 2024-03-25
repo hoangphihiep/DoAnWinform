@@ -225,6 +225,8 @@ namespace DuLich
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
+                uc.anhBia = truyen.address[j];
+                //MessageBox.Show(truyen.address[j]);
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA");
@@ -235,6 +237,8 @@ namespace DuLich
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
+                uc.anhBia = truyen.address[j];
+
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO");
@@ -246,12 +250,9 @@ namespace DuLich
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.khoangCach = truyen.danhGia[j];
+                uc.anhBia = truyen.address[j];
                 uc.ShowKhoangCach();
                 tab_DanhGiaCao.Controls.Add(uc);
-            }
-            foreach (object itemChecked in clBox_TienNghiChinh.CheckedItems)
-            {
-                string value = itemChecked.ToString();
             }
 
         }
@@ -335,6 +336,7 @@ namespace DuLich
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
+                uc.anhBia = truyen.address[j];
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             // khi có chọn tiện ích
@@ -388,6 +390,7 @@ namespace DuLich
                 string[] tenThanhPho = new string[100];
                 string[] tenKhachSan = new string[100];
                 string[] soTien = new string[100];
+                string[] anhBia = new string[100];
                 for (int maks = 0; maks < maksList.Count; maks++)
                 {
                     string query1 = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = {0}", maksList[maks]);
@@ -401,6 +404,7 @@ namespace DuLich
                         tenTinh[soLuong1] = reader1.GetString(reader1.GetOrdinal("TINH"));
                         tenThanhPho[soLuong1] = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
                         tenKhachSan[soLuong1] = reader1.GetString(reader1.GetOrdinal("TENKH"));
+                        anhBia[soLuong1] = reader1.GetString(reader1.GetOrdinal("AnhBia"));
                         //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
                         //byte[] hinhanh = (byte[])reader["HinhAnh"];    
                         int giaColumnIndex = reader1.GetOrdinal("GIA");
@@ -429,6 +433,7 @@ namespace DuLich
                     uc.tenViTri = tenThanhPho[j] + ", " + tenTinh[j];
                     uc.tenKhachSan = tenKhachSan[j];
                     uc.tien = soTien[j];
+                    uc.anhBia = truyen.address[j];
                     tab_PhuHopNhat.Controls.Add(uc);
                 }
             }
@@ -568,6 +573,7 @@ namespace DuLich
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.khoangCach = truyen.khoangCachTP[j] + " km đến trung tâm";
                 uc.tien = truyen.soTien[j];
+                uc.anhBia = truyen.address[j];
                 uc.ShowKhoangCach();
                 panel_KhoangCach.Visible = false;
                 tabKhoangCach.Controls.Add(uc);
@@ -594,6 +600,7 @@ namespace DuLich
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.khoangCach = truyen.khoangCachSanBay[j] + " km đến sân bay gần nhất";
                 uc.tien = truyen.soTien[j];
+                uc.anhBia = truyen.address[j];
                 uc.ShowKhoangCach();
                 panel_KhoangCach.Visible = false;
                 tabKhoangCach.Controls.Add(uc);

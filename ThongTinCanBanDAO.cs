@@ -12,7 +12,7 @@ namespace DuLich
         Connection_to_SQL connection = new Connection_to_SQL();
         public void Add(ThongTinCanBan acc, string TenQuanHe)
         {
-            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TK ,TENKH,MOTA, KCTHANHPHO,KCSANBAY,SAO) VALUES ('{1}','{2}','{3}','{4}','{5}','{6}','{7}')", TenQuanHe, acc.MAKS, acc.TK, acc.TENKH, acc.MOTA, acc.KCTHANHPHO, acc.KCSANBAY, acc.SAO);
+            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TK ,TENKH,MOTA, KCTHANHPHO,KCSANBAY,SAO,AnhBia) VALUES ('{1}','{2}',N'{3}',N'{4}','{5}','{6}','{7}','{8}')", TenQuanHe, acc.MAKS, acc.TK, acc.TENKH, acc.MOTA, acc.KCTHANHPHO, acc.KCSANBAY, acc.SAO,acc.AnhBia);
             //connection.ThucThi(acc, sqlStr);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
@@ -26,6 +26,7 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCTHANHPHO", acc.KCTHANHPHO);
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
+                    cmd.Parameters.AddWithValue("@AnhBia", acc.AnhBia);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
@@ -33,7 +34,7 @@ namespace DuLich
         }
         public void Update(ThongTinCanBan acc, string TenQuanHe)
         {
-            string SQL = string.Format("UPDATE {0} SET TENKH = '{1}', MOTA = '{2}', KCTHANHPHO = '{3}', KCSANBAY = '{4}', SAO = '{5}' WHERE MAKS = '{6}' AND TK = '{7}'", TenQuanHe, acc.TENKH, acc.MOTA, acc.KCTHANHPHO, acc.KCSANBAY, acc.SAO, acc.MAKS, acc.TK);
+            string SQL = string.Format("UPDATE {0} SET TENKH = '{1}', MOTA = '{2}', KCTHANHPHO = '{3}', KCSANBAY = '{4}', SAO = '{5}',AnhBia = '{6}' WHERE MAKS = '{7}' AND TK = '{8}'", TenQuanHe, acc.TENKH, acc.MOTA, acc.KCTHANHPHO, acc.KCSANBAY, acc.SAO,acc.AnhBia, acc.MAKS, acc.TK);
             //connection.ThucThi(acc, SQL);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
@@ -47,6 +48,7 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCTHANHPHO", acc.KCTHANHPHO);
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
+                    cmd.Parameters.AddWithValue("@AnhBia", acc.AnhBia);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();

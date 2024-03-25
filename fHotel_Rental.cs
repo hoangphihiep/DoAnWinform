@@ -20,10 +20,12 @@ namespace DuLich
         public string tk;
         public string mk;
         public int MaKhachSan = 1;
+        public string AnhBia;
         List<Phong> Phongs = new List<Phong>();
         public fHotel_Rental()
         {
             InitializeComponent();
+
         }
         public int kiemtratrang7;
         void DeleteColor()
@@ -55,7 +57,6 @@ namespace DuLich
 
         private void btn_TiepTheo_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void pn_ThongTin_Paint(object sender, PaintEventArgs e)
@@ -68,6 +69,8 @@ namespace DuLich
             UPhong uPhong = new UPhong();
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
             uPhong.Size = tabPage1.Size;
+            uPhong.MaPhong = MaPhong;
+            uPhong.taikhoan = tk;
             tabPage1.Controls.Add(uPhong);
             uPhong.BringToFront();
         }
@@ -81,25 +84,25 @@ namespace DuLich
         private void label32_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            pn_Goc.VerticalScroll.Value = 620;
+            pn_Goc.VerticalScroll.Value = 537;
         }
 
         private void label30_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            pn_Goc.VerticalScroll.Value = 1000;
+            pn_Goc.VerticalScroll.Value = 924;
         }
 
         private void label33_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            pn_Goc.VerticalScroll.Value = 1700;
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void label34_Click(object sender, EventArgs e)
         {
             DeleteColor();
-            pn_Goc.VerticalScroll.Value = 2650;
+            pn_Goc.VerticalScroll.Value = 1787;
         }
 
         private void label35_Click(object sender, EventArgs e)
@@ -180,7 +183,7 @@ namespace DuLich
 
                 //Khởi tạo đối tượng
                 KhachSanThuocTaiKhoan khachSanThuocTaiKhoan = new KhachSanThuocTaiKhoan(tk, MaKhachSan);
-                ThongTinCanBan thongTinCanBan = new ThongTinCanBan(MaKhachSan, tk, txt_DatTen.Text, txt_MoTa.Text, int.Parse(txt_KhoangCachSanBay.Text), int.Parse(txt_KhoangCachThanhPho.Text), int.Parse(cbb_DanhGiaSao.Text));
+                ThongTinCanBan thongTinCanBan = new ThongTinCanBan(MaKhachSan, tk, txt_DatTen.Text, txt_MoTa.Text, int.Parse(txt_KhoangCachSanBay.Text), int.Parse(txt_KhoangCachThanhPho.Text), int.Parse(cbb_DanhGiaSao.Text),AnhBia);
                 ViTri viTri = new ViTri(MaKhachSan, tk, txt_DiaChi.Text, cbb_TenThanhPho.Text, cbb_Tinh.Text);
                 // Chuyển các giá trị bool thành giá trị int
                 int tienNghiChinh0 = clb_TienNghiChinh.GetItemChecked(0) ? 1 : 0;
@@ -230,7 +233,6 @@ namespace DuLich
                 viTriDao.Add(viTri, "ViTri");
                 tienNghiDAO.Add(tienNghi, "TIENNGHI");
                 hoSoDAO.Add(hoSo, "HOSO");
-
                 while (true)
                 {
                     query = "Select * from PHONG where TaiKhoan = '" + tk + "' and MaKS = '" + MaKhachSan + "' and MAPHONG = '" + MaPhong + "' ";
@@ -245,12 +247,62 @@ namespace DuLich
                     phongDAO.Add(phong, "PHONG");
                 }
 
+
                 MessageBox.Show("Đăng tải hoàn tất ");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            DeleteColor();
+            pn_Goc.VerticalScroll.Value = 2719;
+        }
+
+        private void ptb_AnhBia_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = dialog.FileName;
+
+                // Tạo thư mục "hinhanh" nếu nó không tồn tại (tùy chọn)
+                string targetDirectory = Path.Combine(Application.StartupPath, "hinhanh");
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                }
+
+                try
+                {
+                    string targetPath = Path.Combine(targetDirectory, Path.GetFileName(imagePath));
+                    File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
+
+                    // Hiển thị ảnh trong PictureBox
+                    ptb_AnhBia.Image = Image.FromFile(targetPath);
+                    ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //tạo đối tượng
+                    AnhBia = targetPath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btn_ThemAnh_Click(object sender, EventArgs e)
+        {
+            ptb_AnhBia.Visible = true;
+            btn_ThemAnh.Visible = false;
+            pn_Goc.VerticalScroll.Value = 1501;
         }
     }
 }

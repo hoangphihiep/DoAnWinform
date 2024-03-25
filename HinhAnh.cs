@@ -9,8 +9,7 @@ namespace DuLich
     public class HinhAnh
     {
         public string TaiKhoan { get; set; }
-        public int Phong {  get; set; }
-        public string AnhBia { get; set; }
+        public int Phong { get; set; }
         public string Anh1 { get; set; }
         public string Anh2 { get; set; }
         public string Anh3 { get; set; }
@@ -19,11 +18,10 @@ namespace DuLich
         public string Anh6 { get; set; }
         public int MaKS { get; set; }
 
-        public HinhAnh(string taiKhoan, int phong, string anhBia, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, int maKS)
+        public HinhAnh(string taiKhoan, int phong, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, int maKS)
         {
             TaiKhoan = taiKhoan;
             Phong = phong;
-            AnhBia = anhBia;
             Anh1 = anh1;
             Anh2 = anh2;
             Anh3 = anh3;

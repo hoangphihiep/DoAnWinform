@@ -12,7 +12,7 @@ namespace DuLich
         Connection_to_SQL connection = new Connection_to_SQL();
         public void Add(HoSo acc, string TenQuanHe)
         {
-            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TK ,TENCHUKS,SODIENTHOAI, EMAIL,DIACHI,TENTHANHPHO,TINH,THEDIENTU,NGANHANG) VALUES ('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", TenQuanHe, acc.MAKS, acc.TK, acc.TENCHUKS, acc.SODIENTHOAI, acc.EMAIL, acc.DIACHI, acc.TENTHANHPHO, acc.TINH,acc.THEDIENTU, acc.NGANHANG);
+            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TK ,TENCHUKS,SODIENTHOAI, EMAIL,DIACHI,TENTHANHPHO,TINH,THEDIENTU,NGANHANG) VALUES ('{1}','{2}',N'{3}','{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}')", TenQuanHe, acc.MAKS, acc.TK, acc.TENCHUKS, acc.SODIENTHOAI, acc.EMAIL, acc.DIACHI, acc.TENTHANHPHO, acc.TINH,acc.THEDIENTU, acc.NGANHANG);
             //connection.ThucThi(acc, sqlStr);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,7 +24,6 @@ namespace DuLich
             //this.Hide();
             f.tenKS = lbl_TenKhachSan.Text;
             f.tenViTri = lbl_ViTri.Text;
-            f.hinhanh = hinhanh;
             f.ShowDialog();
 
             this.Show();
@@ -33,8 +33,8 @@ namespace DuLich
         public string tenViTri;
         public string tenKhachSan;
         public string tien;
-        public byte[] hinhanh;
         public string khoangCach;
+        public string anhBia;
         public void ShowKhoangCach()
         {
             lbl_KhoangCach.Visible = true;
@@ -61,6 +61,7 @@ namespace DuLich
             lbl_TenKhachSan.Text = tenKhachSan;
             lbl_Tien.Text = tien;
             lbl_KhoangCach.Text = khoangCach;
+            pictureBox1.Image = Image.FromFile(anhBia);
             /*if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))

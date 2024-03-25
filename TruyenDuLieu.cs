@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace DuLich
         public string[] khoangCachSanBay { get; set; }
         public string[] danhGia { get; set; }
         public string[] maKS { get; set; }
+        public string[] address { get; set; }
         public TruyenDuLieu()
         {
             // Khởi tạo các mảng
@@ -28,6 +30,7 @@ namespace DuLich
             khoangCachTP = new string[100];
             khoangCachSanBay = new string[100];
             danhGia = new string[100];
+            address = new string[100];
         }
         public void Truyen2 (string diaDiem, int min, int max)
         {
@@ -39,6 +42,7 @@ namespace DuLich
             Array.Clear(khoangCachTP, 0, khoangCachTP.Length);
             Array.Clear(khoangCachSanBay, 0, khoangCachSanBay.Length);
             Array.Clear(danhGia, 0, danhGia.Length);
+            Array.Clear(address, 0, address.Length);
             string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1} ", min,max);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
@@ -51,8 +55,10 @@ namespace DuLich
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
+               
                 //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
-                //byte[] hinhanh = (byte[])reader["HinhAnh"];    
+                address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
+                MessageBox.Show(address[i]);
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
@@ -91,6 +97,7 @@ namespace DuLich
             Array.Clear(khoangCachTP, 0, khoangCachTP.Length);
             Array.Clear(khoangCachSanBay, 0, khoangCachSanBay.Length);
             Array.Clear(danhGia, 0, danhGia.Length);
+            Array.Clear(address, 0, address.Length);
             string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem ORDER BY {0} ASC ", sapXep);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
@@ -104,6 +111,7 @@ namespace DuLich
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
+                
                 //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
                 //byte[] hinhanh = (byte[])reader["HinhAnh"];    
                 int giaColumnIndex = reader.GetOrdinal("GIA");
@@ -130,6 +138,7 @@ namespace DuLich
                     int danhgia = reader.GetInt32(danhGiaColumnIndex);
                     danhGia[i] = "Đánh giá: " + danhgia.ToString();
                 }
+                address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
                 soLuong++;
                 i++;
             }
