@@ -60,7 +60,7 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã khách sạn");
                 else
                 {
-                    string query = "Select * from ThongTinCanBan where TK = '" + tentk + "' and MAKS = '" + txt_MaKhachSan.Text + "' ";
+                    string query = "Select * from ThongTinCanBan where TK = '" + tentk + "' and MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' ";
                     ThongTinCanBanDAO Dao = new ThongTinCanBanDAO();
                     List<ThongTinCanBan> thongTinCanBans = modify.ThongTinCanBan(query);
                     if (thongTinCanBans.Count() != 0)

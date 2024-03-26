@@ -368,23 +368,23 @@ namespace DuLich
             //TAO DOI TUONG ROOM TU PHONG
             Room room = new Room(phong.SoKhach,phong.SoGiuong,phong.Gia, phong.SoGiuong.ToString(),phong.MaPhong);
             room_DAO.Add(room, "PHONG");
-            Modify modify = new Modify();
-            bool duplicateFound = false;
-            while (!duplicateFound)
-            {
-                string query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
-                List<Phong> list_accounts = modify.Phong(query);
-                if (list_accounts.Count == 1)
-                {
-                    MaPhong++;
-                }
-                else
-                {
-                    duplicateFound = true;
-                }
-            }
-            phong.MaPhong = MaPhong;
-            Dao.Add(phong, "PHONG");
+            //Modify modify = new Modify();
+            //bool duplicateFound = false;
+            //while (!duplicateFound)
+            //{
+            //    string query = "SELECT * FROM PHONG WHERE TaiKhoan = '" + taikhoan.ToString() + "' AND MaKS = '" + MaKS + "' AND MAPHONG = '" + MaPhong + "'";
+            //    List<Phong> list_accounts = modify.Phong(query);
+            //    if (list_accounts.Count == 1)
+            //    {
+            //        MaPhong++;
+            //    }
+            //    else
+            //    {
+            //        duplicateFound = true;
+            //    }
+            //}
+            //phong.MaPhong = MaPhong;
+            //Dao.Add(phong, "PHONG");
             MessageBox.Show("Add Phòng thành công");
         }
 
@@ -410,8 +410,8 @@ namespace DuLich
                     File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
 
                     // Hiển thị ảnh trong PictureBox
-                    ptb_Anh1.Image = Image.FromFile(targetPath);
-                    ptb_Anh1.SizeMode = PictureBoxSizeMode.Zoom;
+                    ptb_AnhChinh.Image = Image.FromFile(targetPath);
+                    ptb_AnhChinh.SizeMode = PictureBoxSizeMode.Zoom;
 
                     //tạo đối tượng
                     AnhChinh = targetPath;

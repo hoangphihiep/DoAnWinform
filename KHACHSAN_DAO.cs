@@ -12,7 +12,7 @@ namespace DuLich
         Connection_to_SQL connection = new Connection_to_SQL();
         public void Add(KHACHSAN acc, string TenQuanHe)
         {
-            string sqlStr = string.Format("INSERT INTO {0} (TENKS, TINH ,THANHPHO,SAO, DANHGIA,GIA,DIACHI,MAKS) VALUES ('{1}','{2}',N'{3}','{4}','{5}',N'{6}',N'{7}',N'{8}')", TenQuanHe, acc.TENKS, acc.TINH, acc.THANHPHO, acc.SAO, acc.DANHGIA,acc.GIA, acc.DIACHI, acc.MAKS);
+            string sqlStr = string.Format("INSERT INTO {0} (TENKS, TINH ,THANHPHO,SAO, DANHGIA,GIA,DIACHI) VALUES (@TENKS, @TINH, @THANHPHO, @SAO, @DANHGIA, @GIA, @DIACHI)", TenQuanHe);
             //connection.ThucThi(acc, sqlStr);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
@@ -26,11 +26,11 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@DANHGIA", acc.DANHGIA);
                     cmd.Parameters.AddWithValue("@GIA", acc.GIA);
                     cmd.Parameters.AddWithValue("@DIACHI", acc.DIACHI);
-                    cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
             }
         }
+
     }
 }
