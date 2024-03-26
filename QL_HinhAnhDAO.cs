@@ -11,7 +11,7 @@ namespace DuLich
     {
         public void Add(QL_HinhAnh acc, string TenQuanHe)
         {
-            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TENANH ,ADDRESS,MAANH) VALUES ('{1}','{2}','{3}','{4}')", TenQuanHe, acc.MAKS, acc.TENANH, acc.ADDRESS, acc.MAANH);
+            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TENANH, ADDRESS) VALUES (@MAKS, @TENANH, @ADDRESS)", TenQuanHe);
             //connection.ThucThi(acc, sqlStr);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
@@ -20,8 +20,11 @@ namespace DuLich
                 {
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
-                    cmd.Parameters.AddWithValue("@ADDRESS", acc.ADDRESS);
-                    cmd.Parameters.AddWithValue("@MAANH", acc.MAANH);
+
+                    // Handle null value for ADDRESS
+                    SqlParameter addressParam = new SqlParameter("@ADDRESS", acc.ADDRESS ?? (object)DBNull.Value);
+                    cmd.Parameters.Add(addressParam);
+
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();

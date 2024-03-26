@@ -32,7 +32,6 @@
             btn_TienNghi = new Button();
             btn_UDai = new Button();
             panel4 = new Panel();
-            btn_HoSo = new Button();
             btn_Anh = new Button();
             btn_ChiTietPhong = new Button();
             btn_ViTri = new Button();
@@ -55,6 +54,7 @@
             uChiTietPhongo1 = new UChiTietPhongO();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            btn_HoSo = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -112,18 +112,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(903, 40);
             panel4.TabIndex = 0;
-            // 
-            // btn_HoSo
-            // 
-            btn_HoSo.Location = new Point(44, 320);
-            btn_HoSo.Name = "btn_HoSo";
-            btn_HoSo.Size = new Size(146, 41);
-            btn_HoSo.TabIndex = 8;
-            btn_HoSo.Text = "Hồ Sơ";
-            btn_HoSo.TextAlign = ContentAlignment.MiddleLeft;
-            btn_HoSo.UseVisualStyleBackColor = true;
-            btn_HoSo.Visible = false;
-            btn_HoSo.Click += btn_HoSo_Click;
             // 
             // btn_Anh
             // 
@@ -311,6 +299,18 @@
             uChiTietPhongo1.Size = new Size(900, 611);
             uChiTietPhongo1.TabIndex = 5;
             // 
+            // btn_HoSo
+            // 
+            btn_HoSo.Location = new Point(44, 320);
+            btn_HoSo.Name = "btn_HoSo";
+            btn_HoSo.Size = new Size(146, 41);
+            btn_HoSo.TabIndex = 8;
+            btn_HoSo.Text = "Hồ Sơ";
+            btn_HoSo.TextAlign = ContentAlignment.MiddleLeft;
+            btn_HoSo.UseVisualStyleBackColor = true;
+            btn_HoSo.Visible = false;
+            btn_HoSo.Click += btn_HoSo_Click;
+            // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -342,7 +342,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private UThongtin uThongtin2;
         private UMatKhau uMatKhau1;
-        private Button btn_HoSo;
         private Button btn_Anh;
         private Button btn_ChiTietPhong;
         private Button btn_ViTri;
@@ -356,5 +355,6 @@
         private Button btn_TienNghi;
         private UTienNghi uTienNghi1;
         private UUuDai uUuDai1;
+        private Button btn_HoSo;
     }
 }

@@ -201,7 +201,6 @@
             Controls.Add(lbl_TenKhachSan);
             Name = "UThongTinKhachSan";
             Size = new Size(887, 655);
-            Load += UThongTinKhachSan_Load;
             ResumeLayout(false);
             PerformLayout();
         }

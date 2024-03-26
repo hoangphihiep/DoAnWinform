@@ -42,6 +42,9 @@ namespace DuLich
                         viTri.TENTHANHPHO = cbb_ThanhPho.Text;
                         viTri.TINH = cbb_Tinh.Text;
                         Dao.Update(viTri, "ViTri");
+                        KHACHSAN khachsan = new KHACHSAN(null, viTri.TINH, viTri.TENTHANHPHO, 0, 0, 0, viTri.DIACHI, viTri.MAKS);
+                        KHACHSAN_DAO ksDAO = new KHACHSAN_DAO();
+                        ksDAO.UpdateFromViTri(khachsan, "KHACHSAN");
                         MessageBox.Show("Chỉnh sửa thành công");
                     }
                 }

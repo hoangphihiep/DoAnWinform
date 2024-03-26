@@ -12,7 +12,7 @@ namespace DuLich
         Connection_to_SQL connection = new Connection_to_SQL();
         public void Add(QL_TN acc, string TenQuanHe)
         {
-            string sqlStr = string.Format("INSERT INTO {0} (MAKS, TK) VALUES ('{1}','{2}')", TenQuanHe, acc.MAKS, acc.MATN);
+            string sqlStr = string.Format("INSERT INTO {0} (MAKS, MATN) VALUES ('{1}','{2}')", TenQuanHe, acc.MAKS, acc.MATN);
             //connection.ThucThi(acc, sqlStr);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
