@@ -32,6 +32,13 @@
             pn_Goc = new Panel();
             pn_ThongTin = new Panel();
             btn_ThemAnh = new Button();
+            ptb_AnhChinh = new PictureBox();
+            ptb_Anh6 = new PictureBox();
+            ptb_Anh5 = new PictureBox();
+            ptb_Anh4 = new PictureBox();
+            ptb_Anh3 = new PictureBox();
+            ptb_Anh2 = new PictureBox();
+            ptb_Anh1 = new PictureBox();
             ptb_AnhBia = new PictureBox();
             lbl_AnhKhachSan = new Label();
             btn_QuayLai = new Button();
@@ -123,6 +130,13 @@
             label4 = new Label();
             pn_Goc.SuspendLayout();
             pn_ThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).BeginInit();
             tab_ChiTietPhongO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -140,6 +154,13 @@
             // pn_ThongTin
             // 
             pn_ThongTin.Controls.Add(btn_ThemAnh);
+            pn_ThongTin.Controls.Add(ptb_AnhChinh);
+            pn_ThongTin.Controls.Add(ptb_Anh6);
+            pn_ThongTin.Controls.Add(ptb_Anh5);
+            pn_ThongTin.Controls.Add(ptb_Anh4);
+            pn_ThongTin.Controls.Add(ptb_Anh3);
+            pn_ThongTin.Controls.Add(ptb_Anh2);
+            pn_ThongTin.Controls.Add(ptb_Anh1);
             pn_ThongTin.Controls.Add(ptb_AnhBia);
             pn_ThongTin.Controls.Add(lbl_AnhKhachSan);
             pn_ThongTin.Controls.Add(btn_QuayLai);
@@ -222,7 +243,7 @@
             // 
             // btn_ThemAnh
             // 
-            btn_ThemAnh.Location = new Point(462, 1623);
+            btn_ThemAnh.Location = new Point(432, 1610);
             btn_ThemAnh.Name = "btn_ThemAnh";
             btn_ThemAnh.Size = new Size(187, 87);
             btn_ThemAnh.TabIndex = 133;
@@ -230,12 +251,89 @@
             btn_ThemAnh.UseVisualStyleBackColor = true;
             btn_ThemAnh.Click += btn_ThemAnh_Click;
             // 
+            // ptb_AnhChinh
+            // 
+            ptb_AnhChinh.BackColor = SystemColors.ButtonShadow;
+            ptb_AnhChinh.Location = new Point(361, 1554);
+            ptb_AnhChinh.Name = "ptb_AnhChinh";
+            ptb_AnhChinh.Size = new Size(214, 192);
+            ptb_AnhChinh.TabIndex = 140;
+            ptb_AnhChinh.TabStop = false;
+            ptb_AnhChinh.Visible = false;
+            ptb_AnhChinh.Click += ptb_AnhChinh_Click;
+            // 
+            // ptb_Anh6
+            // 
+            ptb_Anh6.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh6.Location = new Point(970, 1677);
+            ptb_Anh6.Name = "ptb_Anh6";
+            ptb_Anh6.Size = new Size(135, 119);
+            ptb_Anh6.TabIndex = 139;
+            ptb_Anh6.TabStop = false;
+            ptb_Anh6.Visible = false;
+            ptb_Anh6.Click += ptb_Anh6_Click;
+            // 
+            // ptb_Anh5
+            // 
+            ptb_Anh5.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh5.Location = new Point(810, 1677);
+            ptb_Anh5.Name = "ptb_Anh5";
+            ptb_Anh5.Size = new Size(135, 119);
+            ptb_Anh5.TabIndex = 138;
+            ptb_Anh5.TabStop = false;
+            ptb_Anh5.Visible = false;
+            ptb_Anh5.Click += ptb_Anh5_Click;
+            // 
+            // ptb_Anh4
+            // 
+            ptb_Anh4.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh4.Location = new Point(653, 1677);
+            ptb_Anh4.Name = "ptb_Anh4";
+            ptb_Anh4.Size = new Size(135, 119);
+            ptb_Anh4.TabIndex = 137;
+            ptb_Anh4.TabStop = false;
+            ptb_Anh4.Visible = false;
+            ptb_Anh4.Click += ptb_Anh4_Click;
+            // 
+            // ptb_Anh3
+            // 
+            ptb_Anh3.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh3.Location = new Point(970, 1537);
+            ptb_Anh3.Name = "ptb_Anh3";
+            ptb_Anh3.Size = new Size(135, 119);
+            ptb_Anh3.TabIndex = 136;
+            ptb_Anh3.TabStop = false;
+            ptb_Anh3.Visible = false;
+            ptb_Anh3.Click += ptb_Anh3_Click;
+            // 
+            // ptb_Anh2
+            // 
+            ptb_Anh2.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh2.Location = new Point(810, 1537);
+            ptb_Anh2.Name = "ptb_Anh2";
+            ptb_Anh2.Size = new Size(135, 119);
+            ptb_Anh2.TabIndex = 135;
+            ptb_Anh2.TabStop = false;
+            ptb_Anh2.Visible = false;
+            ptb_Anh2.Click += ptb_Anh2_Click;
+            // 
+            // ptb_Anh1
+            // 
+            ptb_Anh1.BackColor = SystemColors.ButtonShadow;
+            ptb_Anh1.Location = new Point(653, 1537);
+            ptb_Anh1.Name = "ptb_Anh1";
+            ptb_Anh1.Size = new Size(135, 119);
+            ptb_Anh1.TabIndex = 134;
+            ptb_Anh1.TabStop = false;
+            ptb_Anh1.Visible = false;
+            ptb_Anh1.Click += ptb_Anh1_Click;
+            // 
             // ptb_AnhBia
             // 
             ptb_AnhBia.BackColor = SystemColors.ButtonShadow;
-            ptb_AnhBia.Location = new Point(344, 1550);
+            ptb_AnhBia.Location = new Point(68, 1554);
             ptb_AnhBia.Name = "ptb_AnhBia";
-            ptb_AnhBia.Size = new Size(452, 228);
+            ptb_AnhBia.Size = new Size(214, 192);
             ptb_AnhBia.TabIndex = 132;
             ptb_AnhBia.TabStop = false;
             ptb_AnhBia.Visible = false;
@@ -1134,6 +1232,13 @@
             pn_Goc.ResumeLayout(false);
             pn_ThongTin.ResumeLayout(false);
             pn_ThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Anh1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).EndInit();
             tab_ChiTietPhongO.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1250,5 +1355,12 @@
         private PictureBox ptb_AnhBia;
         private Panel panel3;
         private Label label4;
+        private PictureBox ptb_AnhChinh;
+        private PictureBox ptb_Anh6;
+        private PictureBox ptb_Anh5;
+        private PictureBox ptb_Anh4;
+        private PictureBox ptb_Anh3;
+        private PictureBox ptb_Anh2;
+        private PictureBox ptb_Anh1;
     }
 }

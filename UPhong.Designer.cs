@@ -53,22 +53,9 @@
             lbl_GiaMoiDem = new Label();
             txt_SoGiuong = new TextBox();
             lbl_ThemHinhAnh = new Label();
-            ptb_Anh1 = new PictureBox();
-            ptb_Anh2 = new PictureBox();
-            ptb_Anh3 = new PictureBox();
-            ptb_Anh4 = new PictureBox();
-            ptb_Anh5 = new PictureBox();
-            ptb_Anh6 = new PictureBox();
-            btn_UploadAnh = new Button();
             btn_ThemPhong = new Button();
-            ptb_AnhChinh = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).BeginInit();
+            ptb_AnhPhong = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ptb_AnhPhong).BeginInit();
             SuspendLayout();
             // 
             // lbl_ChiDemSoLuong
@@ -314,79 +301,9 @@
             lbl_ThemHinhAnh.TabIndex = 100;
             lbl_ThemHinhAnh.Text = "Thêm hình ảnh của phòng";
             // 
-            // ptb_Anh1
-            // 
-            ptb_Anh1.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh1.Location = new Point(637, 297);
-            ptb_Anh1.Name = "ptb_Anh1";
-            ptb_Anh1.Size = new Size(135, 119);
-            ptb_Anh1.TabIndex = 101;
-            ptb_Anh1.TabStop = false;
-            ptb_Anh1.Click += ptb_Anh1_Click;
-            // 
-            // ptb_Anh2
-            // 
-            ptb_Anh2.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh2.Location = new Point(794, 297);
-            ptb_Anh2.Name = "ptb_Anh2";
-            ptb_Anh2.Size = new Size(135, 119);
-            ptb_Anh2.TabIndex = 102;
-            ptb_Anh2.TabStop = false;
-            ptb_Anh2.Click += ptb_Anh2_Click;
-            // 
-            // ptb_Anh3
-            // 
-            ptb_Anh3.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh3.Location = new Point(954, 297);
-            ptb_Anh3.Name = "ptb_Anh3";
-            ptb_Anh3.Size = new Size(135, 119);
-            ptb_Anh3.TabIndex = 103;
-            ptb_Anh3.TabStop = false;
-            ptb_Anh3.Click += ptb_Anh3_Click;
-            // 
-            // ptb_Anh4
-            // 
-            ptb_Anh4.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh4.Location = new Point(637, 437);
-            ptb_Anh4.Name = "ptb_Anh4";
-            ptb_Anh4.Size = new Size(135, 119);
-            ptb_Anh4.TabIndex = 104;
-            ptb_Anh4.TabStop = false;
-            ptb_Anh4.Click += ptb_Anh4_Click;
-            // 
-            // ptb_Anh5
-            // 
-            ptb_Anh5.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh5.Location = new Point(794, 437);
-            ptb_Anh5.Name = "ptb_Anh5";
-            ptb_Anh5.Size = new Size(135, 119);
-            ptb_Anh5.TabIndex = 105;
-            ptb_Anh5.TabStop = false;
-            ptb_Anh5.Click += ptb_Anh5_Click;
-            // 
-            // ptb_Anh6
-            // 
-            ptb_Anh6.BackColor = SystemColors.ButtonShadow;
-            ptb_Anh6.Location = new Point(954, 437);
-            ptb_Anh6.Name = "ptb_Anh6";
-            ptb_Anh6.Size = new Size(135, 119);
-            ptb_Anh6.TabIndex = 106;
-            ptb_Anh6.TabStop = false;
-            ptb_Anh6.Click += ptb_Anh6_Click;
-            // 
-            // btn_UploadAnh
-            // 
-            btn_UploadAnh.Location = new Point(886, 599);
-            btn_UploadAnh.Name = "btn_UploadAnh";
-            btn_UploadAnh.Size = new Size(94, 29);
-            btn_UploadAnh.TabIndex = 107;
-            btn_UploadAnh.Text = "Upload ảnh";
-            btn_UploadAnh.UseVisualStyleBackColor = true;
-            btn_UploadAnh.Click += btn_UploadAnh_Click;
-            // 
             // btn_ThemPhong
             // 
-            btn_ThemPhong.Location = new Point(750, 599);
+            btn_ThemPhong.Location = new Point(825, 569);
             btn_ThemPhong.Name = "btn_ThemPhong";
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.TabIndex = 108;
@@ -394,29 +311,22 @@
             btn_ThemPhong.UseVisualStyleBackColor = true;
             btn_ThemPhong.Click += btn_ThemPhong_Click;
             // 
-            // ptb_AnhChinh
+            // ptb_AnhPhong
             // 
-            ptb_AnhChinh.BackColor = SystemColors.ButtonShadow;
-            ptb_AnhChinh.Location = new Point(707, 117);
-            ptb_AnhChinh.Name = "ptb_AnhChinh";
-            ptb_AnhChinh.Size = new Size(320, 158);
-            ptb_AnhChinh.TabIndex = 109;
-            ptb_AnhChinh.TabStop = false;
-            ptb_AnhChinh.Click += pictureBox1_Click;
+            ptb_AnhPhong.BackColor = SystemColors.ButtonShadow;
+            ptb_AnhPhong.Location = new Point(676, 172);
+            ptb_AnhPhong.Name = "ptb_AnhPhong";
+            ptb_AnhPhong.Size = new Size(391, 331);
+            ptb_AnhPhong.TabIndex = 109;
+            ptb_AnhPhong.TabStop = false;
+            ptb_AnhPhong.Click += ptb_AnhPhong_Click;
             // 
             // UPhong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ptb_AnhChinh);
+            Controls.Add(ptb_AnhPhong);
             Controls.Add(btn_ThemPhong);
-            Controls.Add(btn_UploadAnh);
-            Controls.Add(ptb_Anh6);
-            Controls.Add(ptb_Anh5);
-            Controls.Add(ptb_Anh4);
-            Controls.Add(ptb_Anh3);
-            Controls.Add(ptb_Anh2);
-            Controls.Add(ptb_Anh1);
             Controls.Add(lbl_ThemHinhAnh);
             Controls.Add(lbl_SauKhiNhieuHon);
             Controls.Add(lbl_Nguoi);
@@ -445,13 +355,7 @@
             Name = "UPhong";
             Size = new Size(1115, 801);
             Load += Phong_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Anh6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_AnhPhong).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -489,8 +393,7 @@
         private PictureBox ptb_Anh4;
         private PictureBox ptb_Anh5;
         private PictureBox ptb_Anh6;
-        private Button btn_UploadAnh;
         private Button btn_ThemPhong;
-        private PictureBox ptb_AnhChinh;
+        private PictureBox ptb_AnhPhong;
     }
 }
