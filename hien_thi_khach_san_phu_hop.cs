@@ -218,7 +218,7 @@ namespace DuLich
             lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
             lb_TimKiem.AutoCompleteCustomSource = data;
             List<int> maksList = new List<int>();
-            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem";
+            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.TINH = @diadiem";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
@@ -243,12 +243,17 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+               
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
                 MessageBox.Show(truyen.address[j]);
                 tab_PhuHopNhat.Controls.Add(uc);
+                MessageBox.Show(truyen.tenThanhPho[j]);
+                MessageBox.Show(truyen.tenTinh[j]);
+                MessageBox.Show(truyen.tenKhachSan[j]);
+                MessageBox.Show(truyen.soTien[j]);
             }
             truyen.Truyen(diadiem, "GIA");
             for (int j = 0; j < truyen.soLuong; j++)

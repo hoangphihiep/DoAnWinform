@@ -43,7 +43,7 @@ namespace DuLich
             Array.Clear(khoangCachSanBay, 0, khoangCachSanBay.Length);
             Array.Clear(danhGia, 0, danhGia.Length);
             Array.Clear(address, 0, address.Length);
-            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1} ", min,max);
+            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE TINH = @diadiem AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1} ", min,max);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
@@ -55,7 +55,6 @@ namespace DuLich
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
-                //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
                 address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
                 MessageBox.Show(address[i]);
                 int giaColumnIndex = reader.GetOrdinal("GIA");
@@ -97,22 +96,19 @@ namespace DuLich
             Array.Clear(khoangCachSanBay, 0, khoangCachSanBay.Length);
             Array.Clear(danhGia, 0, danhGia.Length);
             Array.Clear(address, 0, address.Length);
-            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem ORDER BY {0} ASC ", sapXep);
+            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.TINH = @diadiem ORDER BY {0} ASC ", sapXep);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
             command.Parameters.AddWithValue("@diadiem", diaDiem);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
-            int i = 1;
+            int i = 0;
             while (reader.Read())
             {
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
-                tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
-                
-                //maKS[i] = reader.GetString(reader.GetOrdinal("TK"));
-                //byte[] hinhanh = (byte[])reader["HinhAnh"];    
+                tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));    
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
