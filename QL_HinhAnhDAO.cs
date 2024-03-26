@@ -20,9 +20,10 @@ namespace DuLich
                 {
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
-
+                    string relativePath = ExtractRelativePath(acc.ADDRESS);
+                    MessageBox.Show(relativePath);
                     // Handle null value for ADDRESS
-                    SqlParameter addressParam = new SqlParameter("@ADDRESS", acc.ADDRESS ?? (object)DBNull.Value);
+                    SqlParameter addressParam = new SqlParameter("@ADDRESS", relativePath ?? (object)DBNull.Value);
                     cmd.Parameters.Add(addressParam);
 
                     cmd.ExecuteNonQuery();
@@ -30,6 +31,7 @@ namespace DuLich
                 conn.Close();
             }
         }
+
         public void Update(QL_HinhAnh acc, string TenQuanHe)
         {
             string SQL = string.Format("UPDATE {0} SET TENANH = '{1}', ADDRESS = '{2}', MAANH = '{3}'  WHERE MAKS = '{4}'", TenQuanHe, acc.TENANH, acc.ADDRESS, acc.MAANH, acc.MAKS);
@@ -47,6 +49,23 @@ namespace DuLich
                 }
                 conn.Close();
             }
+
+
+        }
+        static string ExtractRelativePath(string fullPath)
+        {
+            if (fullPath.Contains("hinhanh"))
+            {
+                int index = fullPath.IndexOf(@"hinhanh\");
+                return fullPath.Substring(index);
+            }
+            else if (fullPath.Contains("Image"))
+            {
+                int index = fullPath.IndexOf(@"Image\");
+                return fullPath.Substring(index);
+            }
+            return "Không chứa chuỗi 'hinhanh' hoặc 'Image'.";
+
         }
     }
 }

@@ -60,7 +60,7 @@ namespace DuLich
             lbl_TenKhachSan.Text = tenKhachSan;
             lbl_Tien.Text = tien;
             lbl_KhoangCach.Text = khoangCach;
-            pictureBox1.Image = Image.FromFile(anhBia);
+           // pictureBox1.Image = Image.FromFile(anhBia);
             /*if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))

@@ -72,6 +72,7 @@
             Controls.Add(panel29);
             Name = "UCTN";
             Size = new Size(200, 37);
+            Load += UCTN_Load;
             panel29.ResumeLayout(false);
             panel29.PerformLayout();
             ResumeLayout(false);

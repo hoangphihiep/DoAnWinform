@@ -8,6 +8,7 @@ namespace DuLich
 {
     public class Phong
     {
+        public string TenPhong { get; set; }
         public int MaPhong { get; set; }
         public int SoKhach { get; set; }
         public int SoGiuong { get; set; }
@@ -29,13 +30,14 @@ namespace DuLich
             MaKS = maKS;
         }
 
-        public Phong(int maPhong, int soKhach, int soGiuong, int gia, int maKS)
+        public Phong(int maPhong, string tenphong, int soKhach, int soGiuong, int gia, int maKS)
         {
             MaPhong = maPhong;
             SoKhach = soKhach;
             SoGiuong = soGiuong;
             Gia = gia;
             MaKS = maKS;
+            TenPhong = tenphong;
         }
     }
 }

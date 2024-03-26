@@ -65,25 +65,25 @@
             panel44 = new Panel();
             panel54 = new Panel();
             label118 = new Label();
-            label119 = new Label();
+            lblK2 = new Label();
             label120 = new Label();
             label121 = new Label();
             panel53 = new Panel();
             label114 = new Label();
-            label115 = new Label();
+            lblTB2 = new Label();
             label116 = new Label();
             label117 = new Label();
             panel51 = new Panel();
             label110 = new Label();
-            label111 = new Label();
+            lblT2 = new Label();
             label112 = new Label();
             label113 = new Label();
             panel45 = new Panel();
             label109 = new Label();
-            label105 = new Label();
+            lblRT2 = new Label();
             label104 = new Label();
             label94 = new Label();
-            label93 = new Label();
+            lblDG2 = new Label();
             pictureBox26 = new PictureBox();
             label92 = new Label();
             label91 = new Label();
@@ -125,57 +125,21 @@
             label51 = new Label();
             label50 = new Label();
             panel20 = new Panel();
-            label49 = new Label();
-            label48 = new Label();
-            label47 = new Label();
-            label46 = new Label();
+            lblK1 = new Label();
+            lblTB1 = new Label();
+            lblT1 = new Label();
+            lblRT1 = new Label();
             label45 = new Label();
             label44 = new Label();
             label43 = new Label();
             label42 = new Label();
             label41 = new Label();
-            lbl_DanhGia = new Label();
+            lblDG1 = new Label();
             pictureBox17 = new PictureBox();
             lblCommentDetail = new Label();
             label38 = new Label();
             panel12 = new Panel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            panel13 = new Panel();
-            button2 = new Button();
-            panel14 = new Panel();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label18 = new Label();
-            label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            pictureBox14 = new PictureBox();
-            label14 = new Label();
-            panel15 = new Panel();
-            button3 = new Button();
-            panel16 = new Panel();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
-            pictureBox15 = new PictureBox();
-            label29 = new Label();
-            panel17 = new Panel();
-            button4 = new Button();
-            panel18 = new Panel();
-            label30 = new Label();
-            label31 = new Label();
-            label32 = new Label();
-            label33 = new Label();
-            label34 = new Label();
-            label35 = new Label();
-            label36 = new Label();
-            pictureBox16 = new PictureBox();
-            label37 = new Label();
+            flbRoom = new FlowLayoutPanel();
             label13 = new Label();
             label12 = new Label();
             panel6 = new Panel();
@@ -234,16 +198,6 @@
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             panel12.SuspendLayout();
-            flowLayoutPanel2.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            panel17.SuspendLayout();
-            panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage7).BeginInit();
@@ -629,7 +583,7 @@
             panel44.Controls.Add(panel53);
             panel44.Controls.Add(panel51);
             panel44.Controls.Add(panel45);
-            panel44.Controls.Add(label93);
+            panel44.Controls.Add(lblDG2);
             panel44.Controls.Add(pictureBox26);
             panel44.Controls.Add(label92);
             panel44.Controls.Add(label91);
@@ -641,7 +595,7 @@
             // panel54
             // 
             panel54.Controls.Add(label118);
-            panel54.Controls.Add(label119);
+            panel54.Controls.Add(lblK2);
             panel54.Controls.Add(label120);
             panel54.Controls.Add(label121);
             panel54.Location = new Point(304, 280);
@@ -657,14 +611,14 @@
             label118.Size = new Size(61, 14);
             label118.TabIndex = 3;
             // 
-            // label119
+            // lblK2
             // 
-            label119.AutoSize = true;
-            label119.Location = new Point(398, 18);
-            label119.Name = "label119";
-            label119.Size = new Size(19, 15);
-            label119.TabIndex = 2;
-            label119.Text = "40";
+            lblK2.AutoSize = true;
+            lblK2.Location = new Point(405, 21);
+            lblK2.Name = "lblK2";
+            lblK2.Size = new Size(19, 15);
+            lblK2.TabIndex = 2;
+            lblK2.Text = "40";
             // 
             // label120
             // 
@@ -686,7 +640,7 @@
             // panel53
             // 
             panel53.Controls.Add(label114);
-            panel53.Controls.Add(label115);
+            panel53.Controls.Add(lblTB2);
             panel53.Controls.Add(label116);
             panel53.Controls.Add(label117);
             panel53.Location = new Point(304, 225);
@@ -702,14 +656,14 @@
             label114.Size = new Size(53, 14);
             label114.TabIndex = 3;
             // 
-            // label115
+            // lblTB2
             // 
-            label115.AutoSize = true;
-            label115.Location = new Point(405, 22);
-            label115.Name = "label115";
-            label115.Size = new Size(19, 15);
-            label115.TabIndex = 2;
-            label115.Text = "31";
+            lblTB2.AutoSize = true;
+            lblTB2.Location = new Point(405, 22);
+            lblTB2.Name = "lblTB2";
+            lblTB2.Size = new Size(19, 15);
+            lblTB2.TabIndex = 2;
+            lblTB2.Text = "31";
             // 
             // label116
             // 
@@ -731,7 +685,7 @@
             // panel51
             // 
             panel51.Controls.Add(label110);
-            panel51.Controls.Add(label111);
+            panel51.Controls.Add(lblT2);
             panel51.Controls.Add(label112);
             panel51.Controls.Add(label113);
             panel51.Location = new Point(304, 169);
@@ -747,14 +701,14 @@
             label110.Size = new Size(232, 14);
             label110.TabIndex = 3;
             // 
-            // label111
+            // lblT2
             // 
-            label111.AutoSize = true;
-            label111.Location = new Point(398, 17);
-            label111.Name = "label111";
-            label111.Size = new Size(25, 15);
-            label111.TabIndex = 2;
-            label111.Text = "126";
+            lblT2.AutoSize = true;
+            lblT2.Location = new Point(398, 17);
+            lblT2.Name = "lblT2";
+            lblT2.Size = new Size(25, 15);
+            lblT2.TabIndex = 2;
+            lblT2.Text = "126";
             // 
             // label112
             // 
@@ -776,7 +730,7 @@
             // panel45
             // 
             panel45.Controls.Add(label109);
-            panel45.Controls.Add(label105);
+            panel45.Controls.Add(lblRT2);
             panel45.Controls.Add(label104);
             panel45.Controls.Add(label94);
             panel45.Location = new Point(304, 113);
@@ -792,14 +746,14 @@
             label109.Size = new Size(262, 14);
             label109.TabIndex = 3;
             // 
-            // label105
+            // lblRT2
             // 
-            label105.AutoSize = true;
-            label105.Location = new Point(398, 18);
-            label105.Name = "label105";
-            label105.Size = new Size(25, 15);
-            label105.TabIndex = 2;
-            label105.Text = "150";
+            lblRT2.AutoSize = true;
+            lblRT2.Location = new Point(398, 18);
+            lblRT2.Name = "lblRT2";
+            lblRT2.Size = new Size(25, 15);
+            lblRT2.TabIndex = 2;
+            lblRT2.Text = "150";
             // 
             // label104
             // 
@@ -818,16 +772,17 @@
             label94.TabIndex = 0;
             label94.Text = "Rất tốt :";
             // 
-            // label93
+            // lblDG2
             // 
-            label93.AutoSize = true;
-            label93.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label93.ForeColor = Color.DarkTurquoise;
-            label93.Location = new Point(101, 176);
-            label93.Name = "label93";
-            label93.Size = new Size(128, 86);
-            label93.TabIndex = 5;
-            label93.Text = "8.5";
+            lblDG2.AutoSize = true;
+            lblDG2.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDG2.ForeColor = Color.DarkTurquoise;
+            lblDG2.Location = new Point(101, 176);
+            lblDG2.Name = "lblDG2";
+            lblDG2.Size = new Size(128, 86);
+            lblDG2.TabIndex = 5;
+            lblDG2.Text = "8.5";
+            lblDG2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox26
             // 
@@ -1175,7 +1130,7 @@
             panel19.BackColor = SystemColors.ControlLightLight;
             panel19.Controls.Add(panel21);
             panel19.Controls.Add(panel20);
-            panel19.Controls.Add(lbl_DanhGia);
+            panel19.Controls.Add(lblDG1);
             panel19.Controls.Add(pictureBox17);
             panel19.Controls.Add(lblCommentDetail);
             panel19.Controls.Add(label38);
@@ -1237,10 +1192,10 @@
             // 
             // panel20
             // 
-            panel20.Controls.Add(label49);
-            panel20.Controls.Add(label48);
-            panel20.Controls.Add(label47);
-            panel20.Controls.Add(label46);
+            panel20.Controls.Add(lblK1);
+            panel20.Controls.Add(lblTB1);
+            panel20.Controls.Add(lblT1);
+            panel20.Controls.Add(lblRT1);
             panel20.Controls.Add(label45);
             panel20.Controls.Add(label44);
             panel20.Controls.Add(label43);
@@ -1251,41 +1206,41 @@
             panel20.Size = new Size(122, 154);
             panel20.TabIndex = 5;
             // 
-            // label49
+            // lblK1
             // 
-            label49.AutoSize = true;
-            label49.Location = new Point(95, 128);
-            label49.Name = "label49";
-            label49.Size = new Size(13, 15);
-            label49.TabIndex = 8;
-            label49.Text = "0";
+            lblK1.AutoSize = true;
+            lblK1.Location = new Point(95, 128);
+            lblK1.Name = "lblK1";
+            lblK1.Size = new Size(13, 15);
+            lblK1.TabIndex = 8;
+            lblK1.Text = "0";
             // 
-            // label48
+            // lblTB1
             // 
-            label48.AutoSize = true;
-            label48.Location = new Point(95, 89);
-            label48.Name = "label48";
-            label48.Size = new Size(13, 15);
-            label48.TabIndex = 7;
-            label48.Text = "6";
+            lblTB1.AutoSize = true;
+            lblTB1.Location = new Point(95, 89);
+            lblTB1.Name = "lblTB1";
+            lblTB1.Size = new Size(13, 15);
+            lblTB1.TabIndex = 7;
+            lblTB1.Text = "6";
             // 
-            // label47
+            // lblT1
             // 
-            label47.AutoSize = true;
-            label47.Location = new Point(95, 49);
-            label47.Name = "label47";
-            label47.Size = new Size(19, 15);
-            label47.TabIndex = 6;
-            label47.Text = "72";
+            lblT1.AutoSize = true;
+            lblT1.Location = new Point(95, 49);
+            lblT1.Name = "lblT1";
+            lblT1.Size = new Size(19, 15);
+            lblT1.TabIndex = 6;
+            lblT1.Text = "72";
             // 
-            // label46
+            // lblRT1
             // 
-            label46.AutoSize = true;
-            label46.Location = new Point(95, 9);
-            label46.Name = "label46";
-            label46.Size = new Size(19, 15);
-            label46.TabIndex = 5;
-            label46.Text = "63";
+            lblRT1.AutoSize = true;
+            lblRT1.Location = new Point(95, 9);
+            lblRT1.Name = "lblRT1";
+            lblRT1.Size = new Size(19, 15);
+            lblRT1.TabIndex = 5;
+            lblRT1.Text = "63";
             // 
             // label45
             // 
@@ -1339,16 +1294,17 @@
             label41.Size = new Size(0, 15);
             label41.TabIndex = 0;
             // 
-            // lbl_DanhGia
+            // lblDG1
             // 
-            lbl_DanhGia.AutoSize = true;
-            lbl_DanhGia.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_DanhGia.ForeColor = Color.DarkTurquoise;
-            lbl_DanhGia.Location = new Point(37, 90);
-            lbl_DanhGia.Name = "lbl_DanhGia";
-            lbl_DanhGia.Size = new Size(97, 65);
-            lbl_DanhGia.TabIndex = 4;
-            lbl_DanhGia.Text = "8.5";
+            lblDG1.AutoSize = true;
+            lblDG1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDG1.ForeColor = Color.DarkTurquoise;
+            lblDG1.Location = new Point(37, 90);
+            lblDG1.Name = "lblDG1";
+            lblDG1.Size = new Size(97, 65);
+            lblDG1.TabIndex = 4;
+            lblDG1.Text = "8.5";
+            lblDG1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox17
             // 
@@ -1386,409 +1342,21 @@
             // 
             panel12.AutoSize = true;
             panel12.BackColor = SystemColors.ControlLightLight;
-            panel12.Controls.Add(flowLayoutPanel2);
+            panel12.Controls.Add(flbRoom);
             panel12.Controls.Add(label13);
             panel12.Controls.Add(label12);
             panel12.Location = new Point(322, 3);
             panel12.Name = "panel12";
-            panel12.Size = new Size(577, 671);
+            panel12.Size = new Size(577, 673);
             panel12.TabIndex = 1;
             // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.AutoSize = true;
-            flowLayoutPanel2.Controls.Add(panel13);
-            flowLayoutPanel2.Controls.Add(panel15);
-            flowLayoutPanel2.Controls.Add(panel17);
-            flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel2.Location = new Point(17, 47);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(525, 594);
-            flowLayoutPanel2.TabIndex = 3;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.LightCyan;
-            panel13.Controls.Add(button2);
-            panel13.Controls.Add(panel14);
-            panel13.Controls.Add(pictureBox14);
-            panel13.Controls.Add(label14);
-            panel13.Location = new Point(3, 3);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(511, 192);
-            panel13.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.ControlLightLight;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.DarkTurquoise;
-            button2.Location = new Point(415, 10);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Đặt phòng";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // panel14
-            // 
-            panel14.Controls.Add(label21);
-            panel14.Controls.Add(label20);
-            panel14.Controls.Add(label19);
-            panel14.Controls.Add(label18);
-            panel14.Controls.Add(label17);
-            panel14.Controls.Add(label16);
-            panel14.Controls.Add(label15);
-            panel14.Location = new Point(208, 58);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(289, 115);
-            panel14.TabIndex = 2;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(139, 93);
-            label21.Name = "label21";
-            label21.Size = new Size(79, 15);
-            label21.TabIndex = 6;
-            label21.Text = "/phòng/đêm.";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.ForeColor = Color.DarkTurquoise;
-            label20.Location = new Point(3, 89);
-            label20.Name = "label20";
-            label20.Size = new Size(130, 20);
-            label20.TabIndex = 5;
-            label20.Text = "16.709.490  VND";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(128, 64);
-            label19.Name = "label19";
-            label19.Size = new Size(13, 15);
-            label19.TabIndex = 4;
-            label19.Text = "4";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(3, 64);
-            label18.Name = "label18";
-            label18.Size = new Size(119, 15);
-            label18.TabIndex = 3;
-            label18.Text = "Số phòng còn trống :";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(70, 39);
-            label17.Name = "label17";
-            label17.Size = new Size(13, 15);
-            label17.TabIndex = 2;
-            label17.Text = "2";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.ForeColor = Color.DimGray;
-            label16.Location = new Point(3, 39);
-            label16.Name = "label16";
-            label16.Size = new Size(61, 15);
-            label16.TabIndex = 1;
-            label16.Text = "Số khách :";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.ForeColor = SystemColors.ControlText;
-            label15.Location = new Point(3, 10);
-            label15.Name = "label15";
-            label15.Size = new Size(244, 20);
-            label15.TabIndex = 0;
-            label15.Text = "Beach Front 1 Bedroom Pool Villa";
-            // 
-            // pictureBox14
-            // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(16, 37);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(186, 139);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 1;
-            pictureBox14.TabStop = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.DarkTurquoise;
-            label14.Location = new Point(5, 6);
-            label14.Name = "label14";
-            label14.Size = new Size(310, 25);
-            label14.TabIndex = 0;
-            label14.Text = "1 Bedroom Pool Villa Beach Front";
-            // 
-            // panel15
-            // 
-            panel15.BackColor = Color.LightCyan;
-            panel15.Controls.Add(button3);
-            panel15.Controls.Add(panel16);
-            panel15.Controls.Add(pictureBox15);
-            panel15.Controls.Add(label29);
-            panel15.Location = new Point(3, 201);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(511, 192);
-            panel15.TabIndex = 5;
-            // 
-            // button3
-            // 
-            button3.BackColor = SystemColors.ControlLightLight;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.DarkTurquoise;
-            button3.Location = new Point(415, 10);
-            button3.Name = "button3";
-            button3.Size = new Size(82, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Đặt phòng";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // panel16
-            // 
-            panel16.Controls.Add(label22);
-            panel16.Controls.Add(label23);
-            panel16.Controls.Add(label24);
-            panel16.Controls.Add(label25);
-            panel16.Controls.Add(label26);
-            panel16.Controls.Add(label27);
-            panel16.Controls.Add(label28);
-            panel16.Location = new Point(208, 58);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(289, 115);
-            panel16.TabIndex = 2;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Location = new Point(139, 93);
-            label22.Name = "label22";
-            label22.Size = new Size(79, 15);
-            label22.TabIndex = 6;
-            label22.Text = "/phòng/đêm.";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.ForeColor = Color.DarkTurquoise;
-            label23.Location = new Point(3, 89);
-            label23.Name = "label23";
-            label23.Size = new Size(130, 20);
-            label23.TabIndex = 5;
-            label23.Text = "16.709.490  VND";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(128, 64);
-            label24.Name = "label24";
-            label24.Size = new Size(13, 15);
-            label24.TabIndex = 4;
-            label24.Text = "4";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new Point(3, 64);
-            label25.Name = "label25";
-            label25.Size = new Size(119, 15);
-            label25.TabIndex = 3;
-            label25.Text = "Số phòng còn trống :";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new Point(70, 39);
-            label26.Name = "label26";
-            label26.Size = new Size(13, 15);
-            label26.TabIndex = 2;
-            label26.Text = "2";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.ForeColor = Color.DimGray;
-            label27.Location = new Point(3, 39);
-            label27.Name = "label27";
-            label27.Size = new Size(61, 15);
-            label27.TabIndex = 1;
-            label27.Text = "Số khách :";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label28.ForeColor = SystemColors.ControlText;
-            label28.Location = new Point(3, 10);
-            label28.Name = "label28";
-            label28.Size = new Size(222, 20);
-            label28.TabIndex = 0;
-            label28.Text = "1 Bedroom Pool Villa Sea View";
-            // 
-            // pictureBox15
-            // 
-            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(16, 37);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(186, 139);
-            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox15.TabIndex = 1;
-            pictureBox15.TabStop = false;
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label29.ForeColor = Color.DarkTurquoise;
-            label29.Location = new Point(5, 6);
-            label29.Name = "label29";
-            label29.Size = new Size(283, 25);
-            label29.TabIndex = 0;
-            label29.Text = "1 Bedroom Pool Villa Sea View";
-            // 
-            // panel17
-            // 
-            panel17.BackColor = Color.LightCyan;
-            panel17.Controls.Add(button4);
-            panel17.Controls.Add(panel18);
-            panel17.Controls.Add(pictureBox16);
-            panel17.Controls.Add(label37);
-            panel17.Location = new Point(3, 399);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(511, 192);
-            panel17.TabIndex = 6;
-            // 
-            // button4
-            // 
-            button4.BackColor = SystemColors.ControlLightLight;
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.DarkTurquoise;
-            button4.Location = new Point(415, 10);
-            button4.Name = "button4";
-            button4.Size = new Size(82, 23);
-            button4.TabIndex = 3;
-            button4.Text = "Đặt phòng";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // panel18
-            // 
-            panel18.Controls.Add(label30);
-            panel18.Controls.Add(label31);
-            panel18.Controls.Add(label32);
-            panel18.Controls.Add(label33);
-            panel18.Controls.Add(label34);
-            panel18.Controls.Add(label35);
-            panel18.Controls.Add(label36);
-            panel18.Location = new Point(208, 58);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(289, 115);
-            panel18.TabIndex = 2;
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.Location = new Point(139, 93);
-            label30.Name = "label30";
-            label30.Size = new Size(79, 15);
-            label30.TabIndex = 6;
-            label30.Text = "/phòng/đêm.";
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label31.ForeColor = Color.DarkTurquoise;
-            label31.Location = new Point(3, 89);
-            label31.Name = "label31";
-            label31.Size = new Size(130, 20);
-            label31.TabIndex = 5;
-            label31.Text = "16.709.490  VND";
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Location = new Point(128, 64);
-            label32.Name = "label32";
-            label32.Size = new Size(13, 15);
-            label32.TabIndex = 4;
-            label32.Text = "4";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Location = new Point(3, 64);
-            label33.Name = "label33";
-            label33.Size = new Size(119, 15);
-            label33.TabIndex = 3;
-            label33.Text = "Số phòng còn trống :";
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Location = new Point(70, 39);
-            label34.Name = "label34";
-            label34.Size = new Size(13, 15);
-            label34.TabIndex = 2;
-            label34.Text = "2";
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.ForeColor = Color.DimGray;
-            label35.Location = new Point(3, 39);
-            label35.Name = "label35";
-            label35.Size = new Size(61, 15);
-            label35.TabIndex = 1;
-            label35.Text = "Số khách :";
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label36.ForeColor = SystemColors.ControlText;
-            label36.Location = new Point(3, 10);
-            label36.Name = "label36";
-            label36.Size = new Size(222, 20);
-            label36.TabIndex = 0;
-            label36.Text = "2 Bedroom Pool Villa Sea View";
-            // 
-            // pictureBox16
-            // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(16, 37);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(186, 139);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 1;
-            pictureBox16.TabStop = false;
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label37.ForeColor = Color.DarkTurquoise;
-            label37.Location = new Point(5, 6);
-            label37.Name = "label37";
-            label37.Size = new Size(283, 25);
-            label37.TabIndex = 0;
-            label37.Text = "2 Bedroom Pool Villa Sea View";
+            // flbRoom
+            // 
+            flbRoom.Location = new Point(0, 44);
+            flbRoom.Margin = new Padding(3, 2, 3, 2);
+            flbRoom.Name = "flbRoom";
+            flbRoom.Size = new Size(556, 627);
+            flbRoom.TabIndex = 0;
             // 
             // label13
             // 
@@ -2091,22 +1659,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
-            flowLayoutPanel2.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            panel15.ResumeLayout(false);
-            panel15.PerformLayout();
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            panel17.ResumeLayout(false);
-            panel17.PerformLayout();
-            panel18.ResumeLayout(false);
-            panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
@@ -2150,58 +1702,22 @@
         private Panel panel12;
         private Label label13;
         private Label label12;
-        private Panel panel13;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private PictureBox pictureBox14;
-        private Label label14;
-        private Panel panel14;
-        private Label label16;
-        private Label label15;
-        private Button button2;
-        private Label label21;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label17;
-        private Panel panel15;
-        private Button button3;
-        private Panel panel16;
-        private Label label22;
-        private Label label23;
-        private Label label24;
-        private Label label25;
-        private Label label26;
-        private Label label27;
-        private Label label28;
-        private PictureBox pictureBox15;
-        private Label label29;
-        private Panel panel17;
-        private Button button4;
-        private Panel panel18;
-        private Label label30;
-        private Label label31;
-        private Label label32;
-        private Label label33;
-        private Label label34;
-        private Label label35;
-        private Label label36;
-        private PictureBox pictureBox16;
-        private Label label37;
+        private FlowLayoutPanel flbRoom;
         private Panel panel19;
         private Label lblCommentDetail;
         private Label label38;
         private PictureBox pictureBox17;
-        private Label lbl_DanhGia;
+        private Label lblDG1;
         private Panel panel20;
         private Label label45;
         private Label label44;
         private Label label43;
         private Label label42;
         private Label label41;
-        private Label label46;
-        private Label label49;
-        private Label label48;
-        private Label label47;
+        private Label lblRT1;
+        private Label lblK1;
+        private Label lblTB1;
+        private Label lblT1;
         private Panel panel21;
         private Label label51;
         private Label label50;
@@ -2246,25 +1762,25 @@
         private Label label91;
         private PictureBox pictureBox26;
         private Label label92;
-        private Label label93;
+        private Label lblDG2;
         private Panel panel45;
         private Label label104;
         private Label label94;
         private Label label109;
-        private Label label105;
+        private Label lblRT2;
         private Panel panel54;
         private Label label118;
-        private Label label119;
+        private Label lblK2;
         private Label label120;
         private Label label121;
         private Panel panel53;
         private Label label114;
-        private Label label115;
+        private Label lblTB2;
         private Label label116;
         private Label label117;
         private Panel panel51;
         private Label label110;
-        private Label label111;
+        private Label lblT2;
         private Label label112;
         private Label label113;
         private Panel panel56;

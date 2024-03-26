@@ -218,7 +218,7 @@ namespace DuLich
             lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
             lb_TimKiem.AutoCompleteCustomSource = data;
             List<int> maksList = new List<int>();
-            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.Tinh = @diadiem";
+            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.TINH = @diadiem";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
@@ -230,7 +230,7 @@ namespace DuLich
                 int maColumnIndex = reader.GetOrdinal("MAKS");
                 if (!reader.IsDBNull(maColumnIndex))
                 {
-                    int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
+                    int maKS = reader.GetInt32(maColumnIndex); ;
                     maksList.Add(maKS);
 
                 }
@@ -238,16 +238,18 @@ namespace DuLich
             }
             conn.Close();
             truyen.Truyen(diadiem, "TENKH");
-            for (int j = 0; j < truyen.soLuong; j++)
+            MessageBox.Show(truyen.soLuong.ToString());
+            for (int j = 0; j < 3; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
+               
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
-                //MessageBox.Show(truyen.address[j]);
+               
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA");

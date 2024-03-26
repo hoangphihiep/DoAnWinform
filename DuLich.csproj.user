@@ -73,6 +73,9 @@
     <Compile Update="Payment_Information.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UCPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCTN.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +113,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UViTri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="U_HienThiPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
