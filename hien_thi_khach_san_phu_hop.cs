@@ -247,7 +247,7 @@ namespace DuLich
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
-                //MessageBox.Show(truyen.address[j]);
+                MessageBox.Show(truyen.address[j]);
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA");
