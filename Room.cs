@@ -14,6 +14,9 @@ namespace DuLich
         public string TENPHONG { get; set; }
         public int MAPHONG { get; set; }
 
+        public int SOPHONGDD { get; set; }
+        public int SOPHONG { get; set; }
+
         public Room(int sOKHACH, int sOGIUONG, double gIA, string tENPHONG, int mAPHONG)
         {
             SOKHACH = sOKHACH;
@@ -22,5 +25,17 @@ namespace DuLich
             TENPHONG = tENPHONG;
             MAPHONG = mAPHONG;
         }
+
+        public Room(int sOKHACH, int sOGIUONG, double gIA, string tENPHONG, int mAPHONG, int sophong, int sophongdd)
+        {
+            SOKHACH = sOKHACH;
+            SOGIUONG = sOGIUONG;
+            GIA = gIA;
+            TENPHONG = tENPHONG;
+            MAPHONG = mAPHONG;
+            SOPHONG= sophong;
+            SOPHONGDD = sophongdd;
+        }
     }
 }
+
