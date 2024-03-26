@@ -54,7 +54,63 @@ namespace DuLich
             ChenAnhToTal();
             ChenTNChinh();
             ChenTienNghi();
-            //ChenPhong();
+            ChenPhong();
+            ChenDanhGia();
+        }
+
+        void ChenDanhGia()
+        {
+            string query = "SELECT * FROM DANHGIA WHERE DANHGIA.MAKS = @maks";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maks", maks);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            List<DanhGia> list = new List<DanhGia>();
+            int rt = 0, t = 0, tb = 0, k = 0;
+            int tong = 0;
+            int n = 0;
+            while (reader.Read())
+            {
+                string tenKH = reader.GetString(reader.GetOrdinal("TENKH"));
+                int diem = reader.GetInt32(reader.GetOrdinal("DIEM"));
+                string noidung = reader.GetString(reader.GetOrdinal("NOIDUNG"));
+                int maks = reader.GetInt32(reader.GetOrdinal("MAKS"));
+                if(diem<5)
+                {
+                    k++;
+                }
+                if (diem < 7 && diem >= 5)
+                {
+                    tb++;
+                }
+                if (diem == 8 || diem == 7)
+                {
+                    t++;
+                }
+                if (diem == 10)
+                {
+                    rt++;
+                }
+                tong += diem;
+                n++;
+                DanhGia dg= new DanhGia(tenKH, diem, noidung, maks);
+                list.Add(dg);
+            }
+            double dtb = (float)tong / n;
+            dtb = Math.Round(dtb, 1);
+            lblDG1.Text = dtb.ToString();
+            lblDG2.Text = dtb.ToString();
+            lblRT1.Text = rt.ToString();
+            lblRT2.Text = rt.ToString();
+            lblT1.Text = t.ToString();
+            lblT2.Text = t.ToString();
+            lblTB1.Text = tb.ToString();
+            lblTB2.Text = tb.ToString();
+            lblK1.Text = k.ToString();
+            lblK2.Text = k.ToString();
+            conn.Close();
         }
 
         void ChenPhong()
@@ -72,11 +128,12 @@ namespace DuLich
                 int maphong = reader.GetInt32(reader.GetOrdinal("MAPHONG"));
                 string tenphong = reader.GetString(reader.GetOrdinal("TENPHONG"));
                 int sophong = reader.GetInt32(reader.GetOrdinal("SOPHONG"));
-                int sophongdd = reader.GetInt32(reader.GetOrdinal("SOPHONGDD"));
+                int sophongdd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
                 int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
                 int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
-                double gia = reader.GetDouble(reader.GetOrdinal("PRICE"));
-                Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd);
+                double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
+                string anh = reader.GetString(reader.GetOrdinal("ANH"));
+                Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
                 flbRoom.Controls.Add(new UCPhong(room));
                 i++;
             }
@@ -113,7 +170,7 @@ namespace DuLich
                     flpFood.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("TENTN"))));
                 }
 
-                    i++;
+                i++;
             }
             conn.Close();
         }
@@ -184,15 +241,6 @@ namespace DuLich
 
         void ChenThongTinCanBan()
         {
-            lblName.Text = tenKS;
-            lblAddress.Text = tenViTri;
-            if (hinhanh != null)
-            {
-                using (MemoryStream ms = new MemoryStream(hinhanh))
-                {
-                    ptbTotalImage1.Image = Image.FromStream(ms);
-                }
-            }
             string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = @maks";
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
