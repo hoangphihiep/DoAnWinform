@@ -20,7 +20,11 @@ namespace DuLich
                 {
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
-                    cmd.Parameters.AddWithValue("@ADDRESS", acc.ADDRESS);
+
+                    // Handle null value for ADDRESS
+                    SqlParameter addressParam = new SqlParameter("@ADDRESS", acc.ADDRESS ?? (object)DBNull.Value);
+                    cmd.Parameters.Add(addressParam);
+
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();

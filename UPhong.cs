@@ -28,7 +28,7 @@ namespace DuLich
         public string anh4;
         public string anh5;
         public string anh6;
-        public string AnhChinh;
+        public string AnhPhong;
         public int MaKS;
 
         public UPhong()
@@ -303,24 +303,24 @@ namespace DuLich
             lbl_Nguoi.Location = new Point(562, 761);
             lbl_ThemHinhAnh.Size = new Size(283, 31);
             lbl_ThemHinhAnh.Location = new Point(721, 70);
-            ptb_Anh1.Size = new Size(135, 119);
-            ptb_Anh1.Location = new Point(637, 297);
-            ptb_Anh2.Size = new Size(135, 119);
-            ptb_Anh2.Location = new Point(794, 297);
-            ptb_Anh3.Size = new Size(135, 119);
-            ptb_Anh3.Location = new Point(954, 297);
-            ptb_Anh4.Size = new Size(135, 119);
-            ptb_Anh4.Location = new Point(637, 437);
-            ptb_Anh5.Size = new Size(135, 119);
-            ptb_Anh5.Location = new Point(794, 437);
-            ptb_Anh6.Size = new Size(135, 119);
-            ptb_Anh6.Location = new Point(954, 437);
-            ptb_AnhChinh.Size = new Size(320, 158);
-            ptb_AnhChinh.Location = new Point(707, 117);
+            //ptb_Anh1.Size = new Size(135, 119);
+            //ptb_Anh1.Location = new Point(637, 297);
+            //ptb_Anh2.Size = new Size(135, 119);
+            //ptb_Anh2.Location = new Point(794, 297);
+            //ptb_Anh3.Size = new Size(135, 119);
+            //ptb_Anh3.Location = new Point(954, 297);
+            //ptb_Anh4.Size = new Size(135, 119);
+            //ptb_Anh4.Location = new Point(637, 437);
+            //ptb_Anh5.Size = new Size(135, 119);
+            //ptb_Anh5.Location = new Point(794, 437);
+            //ptb_Anh6.Size = new Size(135, 119);
+            //ptb_Anh6.Location = new Point(954, 437);
+            //ptb_AnhPhong.Size = new Size(320, 158);
+            //ptb_AnhPhong.Location = new Point(707, 117);
             btn_ThemPhong.Size = new Size(94, 29);
-            btn_ThemPhong.Location = new Point(750, 599);
-            btn_UploadAnh.Size = new Size(94, 29);
-            btn_UploadAnh.Location = new Point(886, 599);
+            btn_ThemPhong.Location = new Point(825, 569);
+            ptb_AnhPhong.Size = new Size(391, 331);
+            ptb_AnhPhong.Location = new Point(676, 172);
         }
 
         private void btn_UploadAnh_Click(object sender, EventArgs e)
@@ -328,16 +328,16 @@ namespace DuLich
             Modify modify = new Modify();
             List<QL_HinhAnh> list = new List<QL_HinhAnh>();
             QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 1", AnhChinh, MAANH));
-            list.Add( new QL_HinhAnh(MaKS, "Anh total 2", anh1,MAANH));
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 3", anh2, MAANH));
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 4", anh3, MAANH));
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 5", anh4, MAANH));
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 6", anh5, MAANH));
-            list.Add(new QL_HinhAnh(MaKS, "Anh total 7", anh6, MAANH));
-            foreach(var i in  list)
+            list.Add(new QL_HinhAnh(MaKS, "Anh total", AnhPhong, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 2", anh1, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 3", anh2, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 4", anh3, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 5", anh4, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 6", anh5, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 7", anh6, MAANH));
+            foreach (var i in list)
             {
-                hinhAnhDAO.Add(i,"QL_ANH");
+                hinhAnhDAO.Add(i, "QL_ANH");
             }
             //HinhAnh hinh = new HinhAnh(taikhoan, phong, anh1, anh2, anh3, anh4, anh5, anh6, MaKS);
             //HinhAnhDAO hinhAnhDAO = new HinhAnhDAO();
@@ -366,8 +366,21 @@ namespace DuLich
             PhongDAO Dao = new PhongDAO();
             Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
             //TAO DOI TUONG ROOM TU PHONG
-            Room room = new Room(phong.SoKhach,phong.SoGiuong,phong.Gia, phong.SoGiuong.ToString(),phong.MaPhong);
+            Room room = new Room(phong.SoKhach, phong.SoGiuong, phong.Gia, phong.SoGiuong.ToString(), phong.MaPhong,AnhPhong);
             room_DAO.Add(room, "PHONG");
+            //List<QL_HinhAnh> list = new List<QL_HinhAnh>();
+            //QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total", AnhPhong, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 2", anh1, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 3", anh2, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 4", anh3, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 5", anh4, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 6", anh5, MAANH));
+            //list.Add(new QL_HinhAnh(MaKS, "Anh total 7", anh6, MAANH));
+            //foreach (var i in list)
+            //{
+            //    hinhAnhDAO.Add(i, "QL_ANH");
+            //}
             //Modify modify = new Modify();
             //bool duplicateFound = false;
             //while (!duplicateFound)
@@ -388,7 +401,7 @@ namespace DuLich
             MessageBox.Show("Add Phòng thành công");
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void ptb_AnhPhong_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Images (*.jpg, *.jpeg, *.png) | *.jpg;*.jpeg;*.png";
@@ -410,11 +423,11 @@ namespace DuLich
                     File.Copy(imagePath, targetPath, true);  // Ghi đè lên các tệp hiện có
 
                     // Hiển thị ảnh trong PictureBox
-                    ptb_AnhChinh.Image = Image.FromFile(targetPath);
-                    ptb_AnhChinh.SizeMode = PictureBoxSizeMode.Zoom;
+                    ptb_AnhPhong.Image = Image.FromFile(targetPath);
+                    ptb_AnhPhong.SizeMode = PictureBoxSizeMode.Zoom;
 
                     //tạo đối tượng
-                    AnhChinh = targetPath;
+                    AnhPhong = targetPath;
                 }
                 catch (Exception ex)
                 {
