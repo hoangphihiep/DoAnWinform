@@ -112,5 +112,8 @@
     <Compile Update="UViTri.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="U_HienThiPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

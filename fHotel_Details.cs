@@ -67,8 +67,25 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
-                if(reader.GetBoolean(reader.GetOrdinal("MA")))
-                i++;
+                int ltn = reader.GetInt32(reader.GetOrdinal("MALTN"));
+                if (ltn==1)
+                {
+                    flpTNChinh.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("MATN"))));
+                }
+                if (ltn == 2)
+                {
+                    flpDVKS.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("MATN"))));
+                }
+                if (ltn == 3)
+                {
+                    flpTNCC.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("MATN"))));
+                }
+                if (ltn == 4)
+                {
+                    flpFood.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("MATN"))));
+                }
+
+                    i++;
             }
             conn.Close();
         }
@@ -239,6 +256,11 @@ namespace DuLich
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
