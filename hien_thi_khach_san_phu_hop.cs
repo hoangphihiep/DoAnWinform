@@ -239,7 +239,7 @@ namespace DuLich
             conn.Close();
             truyen.Truyen(diadiem, "TENKH");
             MessageBox.Show(truyen.soLuong.ToString());
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;

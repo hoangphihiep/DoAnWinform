@@ -41,11 +41,11 @@
             lblSoKhach = new Label();
             label16 = new Label();
             lblName2 = new Label();
-            pictureBox14 = new PictureBox();
+            ptbAnh = new PictureBox();
             lblName1 = new Label();
             panel13.SuspendLayout();
             panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             SuspendLayout();
             // 
             // panel13
@@ -53,7 +53,7 @@
             panel13.BackColor = Color.LightCyan;
             panel13.Controls.Add(button2);
             panel13.Controls.Add(panel14);
-            panel13.Controls.Add(pictureBox14);
+            panel13.Controls.Add(ptbAnh);
             panel13.Controls.Add(lblName1);
             panel13.Location = new Point(2, -2);
             panel13.Name = "panel13";
@@ -176,15 +176,15 @@
             lblName2.TabIndex = 0;
             lblName2.Text = "Beach Front 1 Bedroom Pool Villa";
             // 
-            // pictureBox14
+            // ptbAnh
             // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(16, 37);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(186, 139);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 1;
-            pictureBox14.TabStop = false;
+            ptbAnh.Image = (Image)resources.GetObject("ptbAnh.Image");
+            ptbAnh.Location = new Point(16, 37);
+            ptbAnh.Name = "ptbAnh";
+            ptbAnh.Size = new Size(186, 139);
+            ptbAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbAnh.TabIndex = 1;
+            ptbAnh.TabStop = false;
             // 
             // lblName1
             // 
@@ -209,7 +209,7 @@
             panel13.PerformLayout();
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
             ResumeLayout(false);
         }
 
@@ -227,7 +227,7 @@
         private Label lblSoKhach;
         private Label label16;
         private Label lblName2;
-        private PictureBox pictureBox14;
+        private PictureBox ptbAnh;
         private Label lblName1;
     }
 }

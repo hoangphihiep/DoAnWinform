@@ -17,7 +17,6 @@ namespace DuLich
         public int SOPHONGDD { get; set; }
         public int SOPHONG { get; set; }
 
-
         public Room(int sOKHACH, int sOGIUONG, double gIA, string tENPHONG, int mAPHONG, string hinhAnh)
         {
             SOKHACH = sOKHACH;
@@ -28,8 +27,9 @@ namespace DuLich
             HinhAnh = hinhAnh;
         }
 
-        public Room(int sOKHACH, int sOGIUONG, double gIA, string tENPHONG, int mAPHONG, int sophong, int sophongdd)
+        public Room(int sOKHACH, int sOGIUONG, double gIA, string tENPHONG, int mAPHONG, int sophong, int sophongdd, string hinhAnh)
         {
+            HinhAnh = hinhAnh;
             SOKHACH = sOKHACH;
             SOGIUONG = sOGIUONG;
             GIA = gIA;
