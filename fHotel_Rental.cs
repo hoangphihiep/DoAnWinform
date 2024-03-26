@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DuLich
@@ -20,7 +21,7 @@ namespace DuLich
         public int MaPhong = 1;
         public string tk;
         public string mk;
-        public int MaKhachSan = 0;
+        public int MaKhachSan ;
         public string AnhBia;
         public string AnhChinh;
         public string Anh1;
@@ -79,6 +80,7 @@ namespace DuLich
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
             uPhong.Size = tabPage1.Size;
             uPhong.MaPhong = MaPhong;
+            uPhong.MaKS = MaKhachSan;
             uPhong.taikhoan = tk;
             tabPage1.Controls.Add(uPhong);
             uPhong.BringToFront();
@@ -138,7 +140,9 @@ namespace DuLich
                 uPhong.phong = MaPhong;
                 uPhong.taikhoan = tk;
                 uPhong.MaKS = MaKhachSan;
+                uPhong.SetMaKS(MaKhachSan);
                 uPhong.MaPhong = MaPhong;
+
                 //Phongs.Add(new Phong(uPhong.));
                 TabPage tabPage1 = tab_ChiTietPhongO.TabPages[MaPhong - 1];
                 uPhong.Size = tabPage1.Size;
@@ -338,7 +342,6 @@ namespace DuLich
             {
                 phongDAO.Add(phong, "PHONG");
             }
-
 
             MessageBox.Show("Đăng tải hoàn tất ");
         }

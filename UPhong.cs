@@ -41,7 +41,10 @@ namespace DuLich
         {
 
         }
-
+        public void SetMaKS(int maks)
+        {
+            MaKS = maks;
+        }
         private void ptb_Anh1_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -398,6 +401,25 @@ namespace DuLich
             //}
             //phong.MaPhong = MaPhong;
             //Dao.Add(phong, "PHONG");
+            int maPhong;
+            string connectionString = Connection_to_SQL.getConnnection();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query1 = "SELECT MAX(MAPHONG) FROM PHONG";
+
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    // Thực thi truy vấn và nhận giá trị MaPhong
+                    maPhong = int.Parse(command.ExecuteScalar().ToString());
+                    Console.WriteLine("MaPhong: " + maPhong);
+                }
+            }
+            QLPHONG phong1 = new QLPHONG(MaKS, 0, 0, maPhong);
+            QLPHONG_DAO qLPHONG_DAO = new QLPHONG_DAO();
+            qLPHONG_DAO.Add(phong1,"QLPHONG");
             MessageBox.Show("Add Phòng thành công");
         }
 
