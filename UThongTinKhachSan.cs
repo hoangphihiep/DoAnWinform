@@ -27,7 +27,7 @@ namespace DuLich
                     MessageBox.Show("Hãy nhập mã khách sạn");
                 else
                 {
-                    ThongTinCanBan thongTinCanBan = new ThongTinCanBan(int.Parse(txt_MaKhachSan.Text), tentk, null, null, null, null, 0,null);
+                    ThongTinCanBan thongTinCanBan = new ThongTinCanBan(int.Parse(txt_MaKhachSan.Text), tentk, null, null, null, null, 0, null);
                     Modify modify = new Modify();
 
                     string query = "Select * from ThongTinCanBan where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' and TK = '" + tentk + "' ";
@@ -53,40 +53,31 @@ namespace DuLich
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+
+            Modify modify = new Modify();
+            if (txt_MaKhachSan.Text == "")
+                MessageBox.Show("Hãy nhập mã khách sạn");
+            else
             {
-                Modify modify = new Modify();
-                if (txt_MaKhachSan.Text == "")
-                    MessageBox.Show("Hãy nhập mã khách sạn");
+                string query = "Select * from ThongTinCanBan where TK = '" + tentk + "' and MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' ";
+                ThongTinCanBanDAO Dao = new ThongTinCanBanDAO();
+                List<ThongTinCanBan> thongTinCanBans = modify.ThongTinCanBan(query);
+                if (thongTinCanBans.Count() != 0)
+                {
+                    ThongTinCanBan ThongTin = thongTinCanBans[0];
+                    txt_TenKS.Text = ThongTin.TENKH;
+                    txt_MoTa.Text = ThongTin.MOTA;
+                    txt_KhoangCachSB.Text = ThongTin.KCSANBAY?.ToString();
+                    txt_KhoangCachTP.Text = ThongTin.KCTHANHPHO?.ToString();
+                    cbb_DanhGiaSao.Text = ThongTin.SAO.ToString();
+                }
                 else
                 {
-                    string query = "Select * from ThongTinCanBan where TK = '" + tentk + "' and MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' ";
-                    ThongTinCanBanDAO Dao = new ThongTinCanBanDAO();
-                    List<ThongTinCanBan> thongTinCanBans = modify.ThongTinCanBan(query);
-                    if (thongTinCanBans.Count() != 0)
-                    {
-                        ThongTinCanBan ThongTin = thongTinCanBans[0];
-                        txt_TenKS.Text = ThongTin.TENKH;
-                        txt_MoTa.Text = ThongTin.MOTA;
-                        txt_KhoangCachSB.Text = ThongTin.KCSANBAY?.ToString();
-                        txt_KhoangCachTP.Text = ThongTin.KCTHANHPHO?.ToString();
-                        cbb_DanhGiaSao.Text = ThongTin.SAO.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tồn tại mã khách sạn này");
-                    }
+                    MessageBox.Show("Không tồn tại mã khách sạn này");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
-        private void UThongTinKhachSan_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
