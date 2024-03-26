@@ -28,5 +28,14 @@ namespace DuLich
             GiaThemKhach = giaThemKhach;
             MaKS = maKS;
         }
+
+        public Phong(int maPhong, int soKhach, int soGiuong, int gia, int maKS)
+        {
+            MaPhong = maPhong;
+            SoKhach = soKhach;
+            SoGiuong = soGiuong;
+            Gia = gia;
+            MaKS = maKS;
+        }
     }
 }
