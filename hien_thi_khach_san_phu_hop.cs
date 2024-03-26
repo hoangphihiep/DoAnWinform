@@ -230,7 +230,7 @@ namespace DuLich
                 int maColumnIndex = reader.GetOrdinal("MAKS");
                 if (!reader.IsDBNull(maColumnIndex))
                 {
-                    int maKS = reader.GetInt32(maColumnIndex); ; // Lấy giá trị MAKS từ cột đầu tiên (0-indexed)
+                    int maKS = reader.GetInt32(maColumnIndex); ;
                     maksList.Add(maKS);
 
                 }
@@ -248,12 +248,7 @@ namespace DuLich
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
-                MessageBox.Show(truyen.address[j]);
                 tab_PhuHopNhat.Controls.Add(uc);
-                MessageBox.Show(truyen.tenThanhPho[j]);
-                MessageBox.Show(truyen.tenTinh[j]);
-                MessageBox.Show(truyen.tenKhachSan[j]);
-                MessageBox.Show(truyen.soTien[j]);
             }
             truyen.Truyen(diadiem, "GIA");
             for (int j = 0; j < truyen.soLuong; j++)

@@ -20,7 +20,7 @@ namespace DuLich
         public int MaPhong = 1;
         public string tk;
         public string mk;
-        public int MaKhachSan = 1;
+        public int MaKhachSan = 0;
         public string AnhBia;
         public string AnhChinh;
         public string Anh1;
@@ -385,6 +385,7 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void btn_ThemAnh_Click(object sender, EventArgs e)
@@ -435,6 +436,7 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void ptb_Anh1_Click(object sender, EventArgs e)
@@ -471,6 +473,7 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void ptb_Anh2_Click(object sender, EventArgs e)
@@ -506,6 +509,7 @@ namespace DuLich
                 {
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                pn_Goc.VerticalScroll.Value = 1501;
             }
         }
 
@@ -543,6 +547,8 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void ptb_Anh4_Click(object sender, EventArgs e)
@@ -578,7 +584,9 @@ namespace DuLich
                 {
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void ptb_Anh5_Click(object sender, EventArgs e)
@@ -615,6 +623,7 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            pn_Goc.VerticalScroll.Value = 1501;
         }
 
         private void ptb_Anh6_Click(object sender, EventArgs e)
@@ -651,6 +660,8 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            pn_Goc.VerticalScroll.Value = 1501;
         }
     }
 }

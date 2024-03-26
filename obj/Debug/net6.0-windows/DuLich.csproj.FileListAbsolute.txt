@@ -38,6 +38,7 @@ C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.Properties.Resources.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UAnh.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UChiTietPhongO.resources
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UCPhong.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UCTN.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UCTNChinh.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.UHoSo.resources

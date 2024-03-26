@@ -139,43 +139,7 @@
             lblCommentDetail = new Label();
             label38 = new Label();
             panel12 = new Panel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            panel13 = new Panel();
-            button2 = new Button();
-            panel14 = new Panel();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label18 = new Label();
-            label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            pictureBox14 = new PictureBox();
-            label14 = new Label();
-            panel15 = new Panel();
-            button3 = new Button();
-            panel16 = new Panel();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
-            pictureBox15 = new PictureBox();
-            label29 = new Label();
-            panel17 = new Panel();
-            button4 = new Button();
-            panel18 = new Panel();
-            label30 = new Label();
-            label31 = new Label();
-            label32 = new Label();
-            label33 = new Label();
-            label34 = new Label();
-            label35 = new Label();
-            label36 = new Label();
-            pictureBox16 = new PictureBox();
-            label37 = new Label();
+            flbRoom = new FlowLayoutPanel();
             label13 = new Label();
             label12 = new Label();
             panel6 = new Panel();
@@ -234,16 +198,6 @@
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             panel12.SuspendLayout();
-            flowLayoutPanel2.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            panel17.SuspendLayout();
-            panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbTotalImage7).BeginInit();
@@ -1431,7 +1385,7 @@
             // 
             panel12.AutoSize = true;
             panel12.BackColor = SystemColors.ControlLightLight;
-            panel12.Controls.Add(flowLayoutPanel2);
+            panel12.Controls.Add(flbRoom);
             panel12.Controls.Add(label13);
             panel12.Controls.Add(label12);
             panel12.Location = new Point(368, 4);
@@ -1440,6 +1394,7 @@
             panel12.Size = new Size(659, 895);
             panel12.TabIndex = 1;
             // 
+/*<<<<<<< HEAD
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.AutoSize = true;
@@ -1849,6 +1804,16 @@
             label37.Size = new Size(363, 32);
             label37.TabIndex = 0;
             label37.Text = "2 Bedroom Pool Villa Sea View";
+=======
+            // flbRoom
+            // 
+            flbRoom.AutoSize = true;
+            flbRoom.FlowDirection = FlowDirection.TopDown;
+            flbRoom.Location = new Point(17, 47);
+            flbRoom.Name = "flbRoom";
+            flbRoom.Size = new Size(525, 594);
+            flbRoom.TabIndex = 3;
+>>>>>>> a00d72570dcf6bfe1720358e166fb6ab213d03f1*/
             // 
             // label13
             // 
@@ -2165,22 +2130,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
-            flowLayoutPanel2.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            panel15.ResumeLayout(false);
-            panel15.PerformLayout();
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            panel17.ResumeLayout(false);
-            panel17.PerformLayout();
-            panel18.ResumeLayout(false);
-            panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
@@ -2224,43 +2173,7 @@
         private Panel panel12;
         private Label label13;
         private Label label12;
-        private Panel panel13;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private PictureBox pictureBox14;
-        private Label label14;
-        private Panel panel14;
-        private Label label16;
-        private Label label15;
-        private Button button2;
-        private Label label21;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label17;
-        private Panel panel15;
-        private Button button3;
-        private Panel panel16;
-        private Label label22;
-        private Label label23;
-        private Label label24;
-        private Label label25;
-        private Label label26;
-        private Label label27;
-        private Label label28;
-        private PictureBox pictureBox15;
-        private Label label29;
-        private Panel panel17;
-        private Button button4;
-        private Panel panel18;
-        private Label label30;
-        private Label label31;
-        private Label label32;
-        private Label label33;
-        private Label label34;
-        private Label label35;
-        private Label label36;
-        private PictureBox pictureBox16;
-        private Label label37;
+        private FlowLayoutPanel flbRoom;
         private Panel panel19;
         private Label lblCommentDetail;
         private Label label38;

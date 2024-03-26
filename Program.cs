@@ -1,3 +1,5 @@
+using DuLich;
+
 namespace DoAnDuLich
 {
     internal static class Program
