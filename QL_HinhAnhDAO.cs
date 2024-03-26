@@ -20,15 +20,30 @@ namespace DuLich
                 {
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
-
+                    string relativePath = ExtractRelativePath(acc.ADDRESS);
+                    MessageBox.Show(relativePath);
                     // Handle null value for ADDRESS
-                    SqlParameter addressParam = new SqlParameter("@ADDRESS", acc.ADDRESS ?? (object)DBNull.Value);
+                    SqlParameter addressParam = new SqlParameter("@ADDRESS", relativePath ?? (object)DBNull.Value);
                     cmd.Parameters.Add(addressParam);
 
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
             }
+        }
+        static string ExtractRelativePath(string fullPath)
+        {
+            if (fullPath.Contains("hinhanh"))
+            {
+                int index = fullPath.IndexOf(@"hinhanh\");
+                return fullPath.Substring(index);
+            }
+            else if (fullPath.Contains("Image"))
+            {
+                int index = fullPath.IndexOf(@"Image\");
+                return fullPath.Substring(index);
+            }
+            return "Không chứa chuỗi 'hinhanh' hoặc 'Image'.";
         }
     }
 }
