@@ -238,7 +238,8 @@ namespace DuLich
             }
             conn.Close();
             truyen.Truyen(diadiem, "TENKH");
-            for (int j = 0; j < truyen.soLuong; j++)
+            MessageBox.Show(truyen.soLuong.ToString());
+            for (int j = 0; j < 3; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
@@ -248,6 +249,7 @@ namespace DuLich
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
+               
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA");

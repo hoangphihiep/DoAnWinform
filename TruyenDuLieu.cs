@@ -62,9 +62,11 @@ namespace DuLich
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
+                /*string anhBiaCat = reader.GetString(reader.GetOrdinal("AnhBia"));
+                int lastIndex = anhBiaCat.LastIndexOf('\\');
+                address[i] = anhBiaCat.Substring(lastIndex + 1);*/
                 address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
-                MessageBox.Show(address[i]);
-                int giaColumnIndex = reader1.GetOrdinal("GIA");
+                int giaColumnIndex = reader1.GetOrdinal("MinGia");
                 if (!reader1.IsDBNull(giaColumnIndex))
                 {
                     int gia = reader1.GetInt32(giaColumnIndex);
@@ -119,7 +121,7 @@ namespace DuLich
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
-            while (reader.Read() && reader1.Read())
+            while (reader.Read()  &&reader1.Read())
             {
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
@@ -153,7 +155,7 @@ namespace DuLich
                 i++;
             }
             conn.Close();
-            conn1.Close();
+            //conn1.Close();
         }
 
     }
