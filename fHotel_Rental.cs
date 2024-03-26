@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections;
 
 namespace DuLich
 {
@@ -76,6 +77,16 @@ namespace DuLich
 
         private void fHotel_Rental_Load(object sender, EventArgs e)
         {
+            Modify modify = new Modify();
+            while (true)
+            {
+                string query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tk + "' and MaKS = '" + MaKhachSan + "' ";
+                var result = modify.KHACHSAN_THUOC_TAIKHOAN(query);
+                if (result.Count() > 0)
+                    MaKhachSan++;
+                else
+                    break;
+            }
             UPhong uPhong = new UPhong();
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
             uPhong.Size = tabPage1.Size;
