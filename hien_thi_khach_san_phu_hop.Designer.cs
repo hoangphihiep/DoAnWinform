@@ -325,6 +325,7 @@
             lb_TimKiem.Name = "lb_TimKiem";
             lb_TimKiem.Size = new Size(185, 27);
             lb_TimKiem.TabIndex = 10;
+            lb_TimKiem.TextChanged += lb_TimKiem_TextChanged;
             // 
             // tabControl1
             // 

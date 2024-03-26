@@ -152,7 +152,7 @@ namespace DuLich
             //MessageBox.Show(diadiem);
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
             data.Add("An Giang");
-            data.Add("Bà rịa Vũng Tàu");
+            data.Add("Bà Rịa Vũng Tàu");
             data.Add("Bạc Liêu");
             data.Add("Bắc Giang");
             data.Add("Bắc Kạn");
@@ -244,12 +244,12 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-               
+
                 uc.tenKhachSan = truyen.tenKhachSan[j];
                 uc.tien = truyen.soTien[j];
                 uc.anhBia = truyen.address[j];
                 uc.maks = maksList[j];
-               
+
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA");
@@ -349,7 +349,7 @@ namespace DuLich
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
-           
+
             int min = trackBar1.Value;
             int max = trackBar2.Maximum - trackBar2.Value;
             truyen.Truyen2(diadiem, min, max);
@@ -629,6 +629,11 @@ namespace DuLich
                 panel_KhoangCach.Visible = false;
                 tabKhoangCach.Controls.Add(uc);
             }
+        }
+
+        private void lb_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
