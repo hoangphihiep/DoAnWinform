@@ -61,6 +61,15 @@ namespace DuLich.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Source=DESKTOP-OOU6GPH;Initial Catalog=Account;Integrated Security=True.
+        /// </summary>
+        internal static string cnnStr {
+            get {
+                return ResourceManager.GetString("cnnStr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap dulichPhuQuoc_1649392573_9234_1649405369 {
@@ -118,15 +127,6 @@ namespace DuLich.Properties {
                 object obj = ResourceManager.GetObject("pngtree-summer-travel-exclusive-seaside-background-material-picture-image_9099551" +
                         "", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to componentResourcesManager winform là gì.
-        /// </summary>
-        internal static string String {
-            get {
-                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

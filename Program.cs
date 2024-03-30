@@ -13,7 +13,7 @@ namespace DoAnDuLich
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new DuLich.fHotel_Details(3)) ;
+            Application.Run(new FTrangChuTK()) ;
         }
     }
 }

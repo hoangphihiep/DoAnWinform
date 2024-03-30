@@ -139,7 +139,7 @@
   <data name="khachsan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\hinhanh\khachsan1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="String" xml:space="preserve">
-    <value>componentResourcesManager winform là gì</value>
+  <data name="cnnStr" xml:space="preserve">
+    <value>Data Source=DESKTOP-OOU6GPH;Initial Catalog=Account;Integrated Security=True</value>
   </data>
 </root>
