@@ -335,6 +335,7 @@ namespace DuLich
         public string diaDiem2;
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
+
             if (lb_TimKiem.Text != "")
             {
                 diadiem = lb_TimKiem.Text;
@@ -345,7 +346,7 @@ namespace DuLich
                 if (control is UserControl)
                 {
                     tab_PhuHopNhat.Controls.RemoveAt(j);
-                    control.Dispose(); // Giải phóng bộ nhớ cho UserControl
+                    control.Dispose();
                 }
             }
 

@@ -921,12 +921,6 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label127.Text" xml:space="preserve">
-    <value>Rất phù hợp với gia đình đi cùng trẻ nhỏ, vì resort rất rộng, có lẽ rộng nhất VN! Resort dài tới 800 mét và rộng từ đường lộ chính ra biển tầm 300 mét Lưu ý Resort này có 3 khu: KS, căn hộ và villa, cách nhau tầm 300 mét</value>
-  </data>
-  <data name="label131.Text" xml:space="preserve">
-    <value>Lần đầu mình ở hệ thống Mường Thanh, trải nghiệm tốt. Mình đi cùng gia đình, book 3 phòng, khách sạn chuẩn bị như mình mong muốn, ba mẹ mịn rất hài lòng, dặn lần sau đi chơi nhớ book MT tiếp kkk. Sảnh, phòng, hồ bơi, bãi tắm, buffet rất tốt. Mình cảm thấy thoải mái tuy Trải nghiệm ngắn ngày. Sẽ ủng hộ Mường Thanh !</value>
-  </data>
   <data name="pictureBox26.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2488,7 +2482,7 @@
         YdSp8Rv5HnXqYcfh1uRnExMannXquppoi4bn/9k=
 </value>
   </data>
-  <data name="label51.Text" xml:space="preserve">
+  <data name="lblContentDG.Text" xml:space="preserve">
     <value>Rất phù hợp với gia đình đi cùng trẻ nhỏ, vì resort rất rộng, có lẽ rộng nhất VN! Resort dài tới 800 mét và rộng từ đường lộ chính ra biển tầm 300 mét Lưu ý Resort này có 3 khu: KS, căn hộ và villa, cách nhau tầm 300 mét</value>
   </data>
   <data name="pictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

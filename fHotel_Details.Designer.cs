@@ -42,17 +42,7 @@
             label135 = new Label();
             label134 = new Label();
             label133 = new Label();
-            flowLayoutPanel7 = new FlowLayoutPanel();
-            panel57 = new Panel();
-            label125 = new Label();
-            label126 = new Label();
-            label127 = new Label();
-            label128 = new Label();
-            panel58 = new Panel();
-            label129 = new Label();
-            label130 = new Label();
-            label131 = new Label();
-            label132 = new Label();
+            flpDanhGiaKhachHang = new FlowLayoutPanel();
             panel55 = new Panel();
             comboBox1 = new ComboBox();
             label124 = new Label();
@@ -64,28 +54,28 @@
             label122 = new Label();
             panel44 = new Panel();
             panel54 = new Panel();
-            label118 = new Label();
+            lblPtK = new Label();
+            label9 = new Label();
             lblK2 = new Label();
-            label120 = new Label();
             label121 = new Label();
             panel53 = new Panel();
-            label114 = new Label();
+            lblPtTB = new Label();
+            label7 = new Label();
             lblTB2 = new Label();
-            label116 = new Label();
             label117 = new Label();
             panel51 = new Panel();
-            label110 = new Label();
+            lblPtT = new Label();
+            label4 = new Label();
             lblT2 = new Label();
-            label112 = new Label();
             label113 = new Label();
             panel45 = new Panel();
-            label109 = new Label();
+            lblPtRT = new Label();
+            label1 = new Label();
             lblRT2 = new Label();
-            label104 = new Label();
             label94 = new Label();
             lblDG2 = new Label();
             pictureBox26 = new PictureBox();
-            label92 = new Label();
+            lblCommentCount = new Label();
             label91 = new Label();
             panel23 = new Panel();
             panel46 = new Panel();
@@ -121,9 +111,9 @@
             panel19 = new Panel();
             panel21 = new Panel();
             label53 = new Label();
-            label52 = new Label();
-            label51 = new Label();
-            label50 = new Label();
+            lblDiemDG = new Label();
+            lblContentDG = new Label();
+            lblNameDG = new Label();
             panel20 = new Panel();
             lblK1 = new Label();
             lblTB1 = new Label();
@@ -165,9 +155,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel56.SuspendLayout();
-            flowLayoutPanel7.SuspendLayout();
-            panel57.SuspendLayout();
-            panel58.SuspendLayout();
             panel55.SuspendLayout();
             panel44.SuspendLayout();
             panel54.SuspendLayout();
@@ -303,7 +290,7 @@
             panel56.Controls.Add(label135);
             panel56.Controls.Add(label134);
             panel56.Controls.Add(label133);
-            panel56.Controls.Add(flowLayoutPanel7);
+            panel56.Controls.Add(flpDanhGiaKhachHang);
             panel56.Location = new Point(234, 1999);
             panel56.Name = "panel56";
             panel56.Size = new Size(645, 275);
@@ -364,116 +351,12 @@
             label133.TabIndex = 1;
             label133.Text = "<";
             // 
-            // flowLayoutPanel7
+            // flpDanhGiaKhachHang
             // 
-            flowLayoutPanel7.Controls.Add(panel57);
-            flowLayoutPanel7.Controls.Add(panel58);
-            flowLayoutPanel7.Location = new Point(33, 23);
-            flowLayoutPanel7.Name = "flowLayoutPanel7";
-            flowLayoutPanel7.Size = new Size(483, 233);
-            flowLayoutPanel7.TabIndex = 0;
-            // 
-            // panel57
-            // 
-            panel57.BackColor = SystemColors.Control;
-            panel57.Controls.Add(label125);
-            panel57.Controls.Add(label126);
-            panel57.Controls.Add(label127);
-            panel57.Controls.Add(label128);
-            panel57.Location = new Point(3, 3);
-            panel57.Name = "panel57";
-            panel57.Size = new Size(474, 110);
-            panel57.TabIndex = 7;
-            // 
-            // label125
-            // 
-            label125.AutoSize = true;
-            label125.Location = new Point(418, 15);
-            label125.Name = "label125";
-            label125.Size = new Size(24, 15);
-            label125.TabIndex = 3;
-            label125.Text = "/10";
-            // 
-            // label126
-            // 
-            label126.AutoSize = true;
-            label126.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label126.ForeColor = Color.DarkTurquoise;
-            label126.Location = new Point(409, 15);
-            label126.Name = "label126";
-            label126.Size = new Size(14, 15);
-            label126.TabIndex = 2;
-            label126.Text = "9";
-            // 
-            // label127
-            // 
-            label127.Location = new Point(10, 40);
-            label127.Name = "label127";
-            label127.Size = new Size(457, 65);
-            label127.TabIndex = 1;
-            label127.Text = resources.GetString("label127.Text");
-            // 
-            // label128
-            // 
-            label128.AutoSize = true;
-            label128.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label128.ForeColor = Color.DarkTurquoise;
-            label128.Location = new Point(9, 15);
-            label128.Name = "label128";
-            label128.Size = new Size(96, 17);
-            label128.TabIndex = 0;
-            label128.Text = "Nguyễn Văn A";
-            // 
-            // panel58
-            // 
-            panel58.BackColor = SystemColors.Control;
-            panel58.Controls.Add(label129);
-            panel58.Controls.Add(label130);
-            panel58.Controls.Add(label131);
-            panel58.Controls.Add(label132);
-            panel58.Location = new Point(3, 119);
-            panel58.Name = "panel58";
-            panel58.Size = new Size(474, 110);
-            panel58.TabIndex = 8;
-            // 
-            // label129
-            // 
-            label129.AutoSize = true;
-            label129.Location = new Point(418, 15);
-            label129.Name = "label129";
-            label129.Size = new Size(24, 15);
-            label129.TabIndex = 3;
-            label129.Text = "/10";
-            // 
-            // label130
-            // 
-            label130.AutoSize = true;
-            label130.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label130.ForeColor = Color.DarkTurquoise;
-            label130.Location = new Point(409, 15);
-            label130.Name = "label130";
-            label130.Size = new Size(14, 15);
-            label130.TabIndex = 2;
-            label130.Text = "9";
-            // 
-            // label131
-            // 
-            label131.Location = new Point(10, 40);
-            label131.Name = "label131";
-            label131.Size = new Size(439, 65);
-            label131.TabIndex = 1;
-            label131.Text = resources.GetString("label131.Text");
-            // 
-            // label132
-            // 
-            label132.AutoSize = true;
-            label132.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label132.ForeColor = Color.DarkTurquoise;
-            label132.Location = new Point(9, 15);
-            label132.Name = "label132";
-            label132.Size = new Size(74, 17);
-            label132.TabIndex = 0;
-            label132.Text = "Trần Văn B";
+            flpDanhGiaKhachHang.Location = new Point(33, 23);
+            flpDanhGiaKhachHang.Name = "flpDanhGiaKhachHang";
+            flpDanhGiaKhachHang.Size = new Size(483, 233);
+            flpDanhGiaKhachHang.TabIndex = 0;
             // 
             // panel55
             // 
@@ -585,7 +468,7 @@
             panel44.Controls.Add(panel45);
             panel44.Controls.Add(lblDG2);
             panel44.Controls.Add(pictureBox26);
-            panel44.Controls.Add(label92);
+            panel44.Controls.Add(lblCommentCount);
             panel44.Controls.Add(label91);
             panel44.Location = new Point(6, 1637);
             panel44.Name = "panel44";
@@ -594,39 +477,39 @@
             // 
             // panel54
             // 
-            panel54.Controls.Add(label118);
+            panel54.Controls.Add(lblPtK);
+            panel54.Controls.Add(label9);
             panel54.Controls.Add(lblK2);
-            panel54.Controls.Add(label120);
             panel54.Controls.Add(label121);
             panel54.Location = new Point(304, 280);
             panel54.Name = "panel54";
             panel54.Size = new Size(440, 50);
             panel54.TabIndex = 9;
             // 
-            // label118
+            // lblPtK
             // 
-            label118.BackColor = Color.DeepSkyBlue;
-            label118.Location = new Point(78, 18);
-            label118.Name = "label118";
-            label118.Size = new Size(61, 14);
-            label118.TabIndex = 3;
+            lblPtK.BackColor = Color.DarkTurquoise;
+            lblPtK.Location = new Point(90, 17);
+            lblPtK.Name = "lblPtK";
+            lblPtK.Size = new Size(163, 15);
+            lblPtK.TabIndex = 6;
+            // 
+            // label9
+            // 
+            label9.BackColor = SystemColors.ControlLight;
+            label9.Location = new Point(90, 17);
+            label9.Name = "label9";
+            label9.Size = new Size(293, 15);
+            label9.TabIndex = 5;
             // 
             // lblK2
             // 
             lblK2.AutoSize = true;
-            lblK2.Location = new Point(405, 21);
+            lblK2.Location = new Point(404, 17);
             lblK2.Name = "lblK2";
             lblK2.Size = new Size(19, 15);
             lblK2.TabIndex = 2;
             lblK2.Text = "40";
-            // 
-            // label120
-            // 
-            label120.BackColor = SystemColors.Control;
-            label120.Location = new Point(78, 17);
-            label120.Name = "label120";
-            label120.Size = new Size(309, 15);
-            label120.TabIndex = 1;
             // 
             // label121
             // 
@@ -639,39 +522,39 @@
             // 
             // panel53
             // 
-            panel53.Controls.Add(label114);
+            panel53.Controls.Add(lblPtTB);
+            panel53.Controls.Add(label7);
             panel53.Controls.Add(lblTB2);
-            panel53.Controls.Add(label116);
             panel53.Controls.Add(label117);
             panel53.Location = new Point(304, 225);
             panel53.Name = "panel53";
             panel53.Size = new Size(440, 49);
             panel53.TabIndex = 8;
             // 
-            // label114
+            // lblPtTB
             // 
-            label114.BackColor = Color.DeepSkyBlue;
-            label114.Location = new Point(78, 18);
-            label114.Name = "label114";
-            label114.Size = new Size(53, 14);
-            label114.TabIndex = 3;
+            lblPtTB.BackColor = Color.DarkTurquoise;
+            lblPtTB.Location = new Point(90, 17);
+            lblPtTB.Name = "lblPtTB";
+            lblPtTB.Size = new Size(163, 15);
+            lblPtTB.TabIndex = 6;
+            // 
+            // label7
+            // 
+            label7.BackColor = SystemColors.ControlLight;
+            label7.Location = new Point(90, 17);
+            label7.Name = "label7";
+            label7.Size = new Size(293, 15);
+            label7.TabIndex = 5;
             // 
             // lblTB2
             // 
             lblTB2.AutoSize = true;
-            lblTB2.Location = new Point(405, 22);
+            lblTB2.Location = new Point(404, 17);
             lblTB2.Name = "lblTB2";
             lblTB2.Size = new Size(19, 15);
             lblTB2.TabIndex = 2;
             lblTB2.Text = "31";
-            // 
-            // label116
-            // 
-            label116.BackColor = SystemColors.Control;
-            label116.Location = new Point(78, 17);
-            label116.Name = "label116";
-            label116.Size = new Size(309, 15);
-            label116.TabIndex = 1;
             // 
             // label117
             // 
@@ -684,22 +567,30 @@
             // 
             // panel51
             // 
-            panel51.Controls.Add(label110);
+            panel51.Controls.Add(lblPtT);
+            panel51.Controls.Add(label4);
             panel51.Controls.Add(lblT2);
-            panel51.Controls.Add(label112);
             panel51.Controls.Add(label113);
             panel51.Location = new Point(304, 169);
             panel51.Name = "panel51";
             panel51.Size = new Size(440, 50);
             panel51.TabIndex = 7;
             // 
-            // label110
+            // lblPtT
             // 
-            label110.BackColor = Color.DeepSkyBlue;
-            label110.Location = new Point(78, 18);
-            label110.Name = "label110";
-            label110.Size = new Size(232, 14);
-            label110.TabIndex = 3;
+            lblPtT.BackColor = Color.DarkTurquoise;
+            lblPtT.Location = new Point(90, 17);
+            lblPtT.Name = "lblPtT";
+            lblPtT.Size = new Size(163, 15);
+            lblPtT.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.BackColor = SystemColors.ControlLight;
+            label4.Location = new Point(90, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(293, 15);
+            label4.TabIndex = 5;
             // 
             // lblT2
             // 
@@ -709,14 +600,6 @@
             lblT2.Size = new Size(25, 15);
             lblT2.TabIndex = 2;
             lblT2.Text = "126";
-            // 
-            // label112
-            // 
-            label112.BackColor = SystemColors.Control;
-            label112.Location = new Point(78, 17);
-            label112.Name = "label112";
-            label112.Size = new Size(309, 15);
-            label112.TabIndex = 1;
             // 
             // label113
             // 
@@ -729,22 +612,30 @@
             // 
             // panel45
             // 
-            panel45.Controls.Add(label109);
+            panel45.Controls.Add(lblPtRT);
+            panel45.Controls.Add(label1);
             panel45.Controls.Add(lblRT2);
-            panel45.Controls.Add(label104);
             panel45.Controls.Add(label94);
             panel45.Location = new Point(304, 113);
             panel45.Name = "panel45";
             panel45.Size = new Size(440, 50);
             panel45.TabIndex = 6;
             // 
-            // label109
+            // lblPtRT
             // 
-            label109.BackColor = Color.DeepSkyBlue;
-            label109.Location = new Point(78, 18);
-            label109.Name = "label109";
-            label109.Size = new Size(262, 14);
-            label109.TabIndex = 3;
+            lblPtRT.BackColor = Color.DarkTurquoise;
+            lblPtRT.Location = new Point(90, 18);
+            lblPtRT.Name = "lblPtRT";
+            lblPtRT.Size = new Size(163, 15);
+            lblPtRT.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.BackColor = SystemColors.ControlLight;
+            label1.Location = new Point(90, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(293, 15);
+            label1.TabIndex = 3;
             // 
             // lblRT2
             // 
@@ -754,14 +645,6 @@
             lblRT2.Size = new Size(25, 15);
             lblRT2.TabIndex = 2;
             lblRT2.Text = "150";
-            // 
-            // label104
-            // 
-            label104.BackColor = SystemColors.Control;
-            label104.Location = new Point(78, 17);
-            label104.Name = "label104";
-            label104.Size = new Size(309, 15);
-            label104.TabIndex = 1;
             // 
             // label94
             // 
@@ -794,16 +677,16 @@
             pictureBox26.TabIndex = 4;
             pictureBox26.TabStop = false;
             // 
-            // label92
+            // lblCommentCount
             // 
-            label92.AutoSize = true;
-            label92.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label92.ForeColor = SystemColors.ControlDarkDark;
-            label92.Location = new Point(15, 56);
-            label92.Name = "label92";
-            label92.Size = new Size(140, 15);
-            label92.TabIndex = 1;
-            label92.Text = "Từ 500 khách hàng đã ở";
+            lblCommentCount.AutoSize = true;
+            lblCommentCount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCommentCount.ForeColor = SystemColors.ControlDarkDark;
+            lblCommentCount.Location = new Point(15, 56);
+            lblCommentCount.Name = "lblCommentCount";
+            lblCommentCount.Size = new Size(140, 15);
+            lblCommentCount.TabIndex = 1;
+            lblCommentCount.Text = "Từ 500 khách hàng đã ở";
             // 
             // label91
             // 
@@ -1143,9 +1026,9 @@
             // 
             panel21.BackColor = SystemColors.Control;
             panel21.Controls.Add(label53);
-            panel21.Controls.Add(label52);
-            panel21.Controls.Add(label51);
-            panel21.Controls.Add(label50);
+            panel21.Controls.Add(lblDiemDG);
+            panel21.Controls.Add(lblContentDG);
+            panel21.Controls.Add(lblNameDG);
             panel21.Location = new Point(11, 229);
             panel21.Name = "panel21";
             panel21.Size = new Size(275, 110);
@@ -1160,35 +1043,35 @@
             label53.TabIndex = 3;
             label53.Text = "/10";
             // 
-            // label52
+            // lblDiemDG
             // 
-            label52.AutoSize = true;
-            label52.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label52.ForeColor = Color.DarkTurquoise;
-            label52.Location = new Point(225, 17);
-            label52.Name = "label52";
-            label52.Size = new Size(14, 15);
-            label52.TabIndex = 2;
-            label52.Text = "9";
+            lblDiemDG.AutoSize = true;
+            lblDiemDG.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDiemDG.ForeColor = Color.DarkTurquoise;
+            lblDiemDG.Location = new Point(225, 17);
+            lblDiemDG.Name = "lblDiemDG";
+            lblDiemDG.Size = new Size(14, 15);
+            lblDiemDG.TabIndex = 2;
+            lblDiemDG.Text = "9";
             // 
-            // label51
+            // lblContentDG
             // 
-            label51.Location = new Point(10, 40);
-            label51.Name = "label51";
-            label51.Size = new Size(259, 65);
-            label51.TabIndex = 1;
-            label51.Text = resources.GetString("label51.Text");
+            lblContentDG.Location = new Point(10, 40);
+            lblContentDG.Name = "lblContentDG";
+            lblContentDG.Size = new Size(259, 65);
+            lblContentDG.TabIndex = 1;
+            lblContentDG.Text = resources.GetString("lblContentDG.Text");
             // 
-            // label50
+            // lblNameDG
             // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label50.ForeColor = Color.DarkTurquoise;
-            label50.Location = new Point(9, 15);
-            label50.Name = "label50";
-            label50.Size = new Size(96, 17);
-            label50.TabIndex = 0;
-            label50.Text = "Nguyễn Văn A";
+            lblNameDG.AutoSize = true;
+            lblNameDG.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNameDG.ForeColor = Color.DarkTurquoise;
+            lblNameDG.Location = new Point(9, 15);
+            lblNameDG.Name = "lblNameDG";
+            lblNameDG.Size = new Size(96, 17);
+            lblNameDG.TabIndex = 0;
+            lblNameDG.Text = "Nguyễn Văn A";
             // 
             // panel20
             // 
@@ -1608,11 +1491,6 @@
             panel3.PerformLayout();
             panel56.ResumeLayout(false);
             panel56.PerformLayout();
-            flowLayoutPanel7.ResumeLayout(false);
-            panel57.ResumeLayout(false);
-            panel57.PerformLayout();
-            panel58.ResumeLayout(false);
-            panel58.PerformLayout();
             panel55.ResumeLayout(false);
             panel55.PerformLayout();
             panel44.ResumeLayout(false);
@@ -1719,10 +1597,10 @@
         private Label lblTB1;
         private Label lblT1;
         private Panel panel21;
-        private Label label51;
-        private Label label50;
+        private Label lblContentDG;
+        private Label lblNameDG;
         private Label label53;
-        private Label label52;
+        private Label lblDiemDG;
         private Panel panel22;
         private Label lblConvenient;
         private Label lblComment;
@@ -1761,27 +1639,19 @@
         private Panel panel44;
         private Label label91;
         private PictureBox pictureBox26;
-        private Label label92;
+        private Label lblCommentCount;
         private Label lblDG2;
         private Panel panel45;
-        private Label label104;
         private Label label94;
-        private Label label109;
         private Label lblRT2;
         private Panel panel54;
-        private Label label118;
         private Label lblK2;
-        private Label label120;
         private Label label121;
         private Panel panel53;
-        private Label label114;
         private Label lblTB2;
-        private Label label116;
         private Label label117;
         private Panel panel51;
-        private Label label110;
         private Label lblT2;
-        private Label label112;
         private Label label113;
         private Panel panel56;
         private Panel panel55;
@@ -1793,21 +1663,19 @@
         private ComboBox comboBox1;
         private Label label124;
         private Label label123;
-        private FlowLayoutPanel flowLayoutPanel7;
-        private Panel panel57;
-        private Label label125;
-        private Label label126;
-        private Label label127;
-        private Label label128;
-        private Panel panel58;
-        private Label label129;
-        private Label label130;
-        private Label label131;
-        private Label label132;
+        private FlowLayoutPanel flpDanhGiaKhachHang;
         private Label label137;
         private Label label136;
         private Label label135;
         private Label label134;
         private Label label133;
+        private Label lblPtRT;
+        private Label label1;
+        private Label lblPtK;
+        private Label label9;
+        private Label lblPtTB;
+        private Label label7;
+        private Label lblPtT;
+        private Label label4;
     }
 }

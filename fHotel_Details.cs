@@ -15,6 +15,7 @@ namespace DuLich
     public partial class fHotel_Details : Form
     {
 
+        int iDanhGia = 0;
         public fHotel_Details(int maks)
         {
             this.maks = maks;
@@ -58,6 +59,17 @@ namespace DuLich
             ChenDanhGia();
         }
 
+        void ChenDanhGiaKhachHang(List<DanhGia> list)
+        {
+            lblNameDG.Text = list[0].TenKH;
+            lblDiemDG.Text = list[0].Diem.ToString();
+            lblContentDG.Text = list[0].NoiDung;
+            UCComment uc1 = new UCComment(list[iDanhGia++]);
+            UCComment uc2 = new UCComment(list[iDanhGia++]);
+            flpDanhGiaKhachHang.Controls.Add(uc1);
+            flpDanhGiaKhachHang.Controls.Add(uc2);
+        }
+
         void ChenDanhGia()
         {
             string query = "SELECT * FROM DANHGIA WHERE DANHGIA.MAKS = @maks";
@@ -77,7 +89,7 @@ namespace DuLich
                 int diem = reader.GetInt32(reader.GetOrdinal("DIEM"));
                 string noidung = reader.GetString(reader.GetOrdinal("NOIDUNG"));
                 int maks = reader.GetInt32(reader.GetOrdinal("MAKS"));
-                if(diem<5)
+                if (diem < 5)
                 {
                     k++;
                 }
@@ -95,11 +107,20 @@ namespace DuLich
                 }
                 tong += diem;
                 n++;
-                DanhGia dg= new DanhGia(tenKH, diem, noidung, maks);
+                DanhGia dg = new DanhGia(tenKH, diem, noidung, maks);
                 list.Add(dg);
             }
+            lblCommentCount.Text = string.Format("Từ " + n + " khách hàng đã ở");
             double dtb = (float)tong / n;
             dtb = Math.Round(dtb, 1);
+            double ptRT = (double)rt / n;
+            lblPtRT.Size = new Size((int)Math.Round(ptRT * 293, 0), 15);
+            double ptT = (double)t / n;
+            lblPtT.Size = new Size((int)Math.Round(ptT * 293, 0), 15);
+            double ptTB = (double)tb / n;
+            lblPtTB.Size = new Size((int)Math.Round(ptTB * 293, 0), 15);
+            double ptK = (double)k / n;
+            lblPtK.Size = new Size((int)Math.Round(ptK * 293, 0), 15);
             lblDG1.Text = dtb.ToString();
             lblDG2.Text = dtb.ToString();
             lblRT1.Text = rt.ToString();
@@ -110,6 +131,7 @@ namespace DuLich
             lblTB2.Text = tb.ToString();
             lblK1.Text = k.ToString();
             lblK2.Text = k.ToString();
+            ChenDanhGiaKhachHang(list);
             conn.Close();
         }
 
@@ -131,7 +153,7 @@ namespace DuLich
                 int sophongdd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
                 int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
                 int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
-                double gia = reader.GetInt32(reader.GetOrdinal("GIA"));
+                double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
                 Room room = new Room(sokhach, sogiuong,gia, tenphong, maphong, sophong, sophongdd, anh);
                 flbRoom.Controls.Add(new UCPhong(room));
@@ -256,7 +278,7 @@ namespace DuLich
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
-                    int gia = reader.GetInt32(giaColumnIndex);
+                    double gia = reader.GetDouble(giaColumnIndex);
                     lblPrice.Text = gia.ToString() + " VNĐ";
                 }
 
@@ -338,5 +360,6 @@ namespace DuLich
         {
 
         }
+
     }
 }
