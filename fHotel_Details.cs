@@ -131,9 +131,9 @@ namespace DuLich
                 int sophongdd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
                 int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
                 int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
-                double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
+                double gia = reader.GetInt32(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
-                Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
+                Room room = new Room(sokhach, sogiuong,gia, tenphong, maphong, sophong, sophongdd, anh);
                 flbRoom.Controls.Add(new UCPhong(room));
                 i++;
             }

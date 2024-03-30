@@ -33,7 +33,7 @@ namespace DuLich
             int phongtrong = room.SOPHONG - room.SOPHONGDD;
             lblSoPhongTrong.Text = phongtrong.ToString();
             lblPrice.Text = room.GIA.ToString();
-            ptbAnh.Image = Image.FromFile(room.HinhAnh);
+            //ptbAnh.Image = Image.FromFile(room.HinhAnh);
         }
     }
 }

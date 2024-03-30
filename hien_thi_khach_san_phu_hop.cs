@@ -238,7 +238,6 @@ namespace DuLich
             }
             conn.Close();
             truyen.Truyen(diadiem, "TENKH");
-            MessageBox.Show(truyen.soLuong.ToString());
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
@@ -434,7 +433,7 @@ namespace DuLich
                         int giaColumnIndex = reader1.GetOrdinal("GIA");
                         if (!reader1.IsDBNull(giaColumnIndex))
                         {
-                            int gia = reader1.GetInt32(giaColumnIndex);
+                            double gia = reader1.GetDouble(giaColumnIndex);
                             soTien[soLuong1] = gia.ToString() + " VNĐ";
                         }
                         soLuong1++;

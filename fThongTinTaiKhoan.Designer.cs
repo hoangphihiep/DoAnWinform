@@ -32,6 +32,7 @@
             btn_TienNghi = new Button();
             btn_UDai = new Button();
             panel4 = new Panel();
+            btn_HoSo = new Button();
             btn_Anh = new Button();
             btn_ChiTietPhong = new Button();
             btn_ViTri = new Button();
@@ -54,7 +55,6 @@
             uChiTietPhongo1 = new UChiTietPhongO();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            btn_HoSo = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -112,6 +112,18 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(903, 40);
             panel4.TabIndex = 0;
+            // 
+            // btn_HoSo
+            // 
+            btn_HoSo.Location = new Point(44, 320);
+            btn_HoSo.Name = "btn_HoSo";
+            btn_HoSo.Size = new Size(146, 41);
+            btn_HoSo.TabIndex = 8;
+            btn_HoSo.Text = "Hồ Sơ";
+            btn_HoSo.TextAlign = ContentAlignment.MiddleLeft;
+            btn_HoSo.UseVisualStyleBackColor = true;
+            btn_HoSo.Visible = false;
+            btn_HoSo.Click += btn_HoSo_Click;
             // 
             // btn_Anh
             // 
@@ -213,16 +225,16 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(uThongtin2);
-            panel5.Controls.Add(uUuDai1);
-            panel5.Controls.Add(uTienNghi1);
             panel5.Controls.Add(uThongtin1);
-            panel5.Controls.Add(uMatKhau1);
             panel5.Controls.Add(uThongTinKhachSan1);
             panel5.Controls.Add(uViTri1);
             panel5.Controls.Add(uHoSo1);
             panel5.Controls.Add(uAnh1);
             panel5.Controls.Add(uChiTietPhongo1);
+            panel5.Controls.Add(uThongtin2);
+            panel5.Controls.Add(uUuDai1);
+            panel5.Controls.Add(uTienNghi1);
+            panel5.Controls.Add(uMatKhau1);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
             panel5.Size = new Size(903, 611);
@@ -298,18 +310,6 @@
             uChiTietPhongo1.Name = "uChiTietPhongo1";
             uChiTietPhongo1.Size = new Size(900, 611);
             uChiTietPhongo1.TabIndex = 5;
-            // 
-            // btn_HoSo
-            // 
-            btn_HoSo.Location = new Point(44, 320);
-            btn_HoSo.Name = "btn_HoSo";
-            btn_HoSo.Size = new Size(146, 41);
-            btn_HoSo.TabIndex = 8;
-            btn_HoSo.Text = "Hồ Sơ";
-            btn_HoSo.TextAlign = ContentAlignment.MiddleLeft;
-            btn_HoSo.UseVisualStyleBackColor = true;
-            btn_HoSo.Visible = false;
-            btn_HoSo.Click += btn_HoSo_Click;
             // 
             // fThongTinTaiKhoan
             // 

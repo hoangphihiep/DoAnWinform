@@ -8,7 +8,7 @@ namespace DuLich
 {
     public class KHACHSAN
     {
-        public string TENKS { get; set; }
+        /*public string TENKS { get; set; }
         public string TINH { get; set;}
         public string THANHPHO { get; set; }
         public int SAO { get; set; }
@@ -27,6 +27,6 @@ namespace DuLich
             GIA = gIA;
             DIACHI = dIACHI;
             MAKS = mAKS;
-        }
+        }*/
     }
 }

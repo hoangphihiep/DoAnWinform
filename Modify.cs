@@ -167,9 +167,9 @@ namespace DuLich
             }
             return accounts;
         }
-        public List<Phong> Phong(string table)
+        public List<Room> Phong(string table)
         {
-            List<Phong> accounts = new List<Phong>();
+            List<Room> accounts = new List<Room>();
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
                 conn.Open();
@@ -177,7 +177,7 @@ namespace DuLich
                 data = cmd.ExecuteReader();
                 while (data.Read())
                 {
-                    accounts.Add(new Phong(data.GetInt32(0), data.GetInt32(1), data.GetInt32(2), data.GetInt32(3), data.GetInt32(4), data.GetString(5), data.GetInt32(6),data.GetInt32(7)));
+                    accounts.Add(new Room(data.GetInt32(0), data.GetInt32(1), data.GetDouble(2), data.GetString(3), data.GetInt32(4), data.GetString(5)));
                 }
                 conn.Close();
             }

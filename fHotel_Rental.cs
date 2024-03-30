@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections;
 
 namespace DuLich
 {
@@ -20,7 +22,7 @@ namespace DuLich
         public int MaPhong = 1;
         public string tk;
         public string mk;
-        public int MaKhachSan = 0;
+        public int MaKhachSan;
         public string AnhBia;
         public string AnhChinh;
         public string Anh1;
@@ -59,8 +61,6 @@ namespace DuLich
                 // Thêm vào List nếu mục đã được chọn
                 cacMucDaChon.Add(mucDaChon);
             }
-
-            // Trả về danh sách các mục đã chọn
             return cacMucDaChon;
         }
 
@@ -75,10 +75,40 @@ namespace DuLich
 
         private void fHotel_Rental_Load(object sender, EventArgs e)
         {
+            string query1 = string.Format("SELECT MAX(MAKS) as maxKS FROM KHACHSAN_THUOC_TAIKHOAN");
+            SqlConnection conn1 = Connection_to_SQL.getConnection();
+            conn1.Open();
+            SqlCommand command1 = new SqlCommand(query1, conn1);
+            SqlDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
+            {
+                int giaColumnIndex = reader1.GetOrdinal("maxKS");
+                if (!reader1.IsDBNull(giaColumnIndex))
+                {
+                    MaKhachSan = reader1.GetInt32(giaColumnIndex) + 1;
+                }
+            }
+            conn1.Close();
+            string query = string.Format("SELECT MAX(MAPHONG) as maxPhong FROM PHONG");
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataReader reader = command.ExecuteReader();
             UPhong uPhong = new UPhong();
+            while (reader.Read())
+            {
+                int giaColumnIndex = reader.GetOrdinal("maxPhong");
+                if (!reader.IsDBNull(giaColumnIndex))
+                {
+                    int maPhong2 = reader.GetInt32(giaColumnIndex) + 1;
+                    //MessageBox.Show(maPhong2.ToString());
+                    uPhong.MaPhong = maPhong2;
+                }
+            }
+            conn.Close();
             TabPage tabPage1 = tab_ChiTietPhongO.TabPages[0];
             uPhong.Size = tabPage1.Size;
-            uPhong.MaPhong = MaPhong;
+            uPhong.MaKS = MaKhachSan;
             uPhong.taikhoan = tk;
             tabPage1.Controls.Add(uPhong);
             uPhong.BringToFront();
@@ -132,13 +162,31 @@ namespace DuLich
             {
                 MaPhong++;
                 this.tab_ChiTietPhongO.TabPages.Insert(lastIndex, "Phòng " + MaPhong);
-
-                this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
+                string query = string.Format("SELECT MAX(MAPHONG) as maxPhong FROM PHONG");
+                SqlConnection conn = Connection_to_SQL.getConnection();
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                SqlDataReader reader = command.ExecuteReader();
                 UPhong uPhong = new UPhong();
+                while (reader.Read())
+                {
+                    int giaColumnIndex = reader.GetOrdinal("maxPhong");
+                    if (!reader.IsDBNull(giaColumnIndex))
+                    {
+                        int maPhong2 = reader.GetInt32(giaColumnIndex) + 1;
+                        MessageBox.Show(maPhong2.ToString());
+                        uPhong.MaPhong = maPhong2;
+                    }
+                }
+                conn.Close();
+                this.tab_ChiTietPhongO.SelectedIndex = lastIndex;
+                
                 uPhong.phong = MaPhong;
                 uPhong.taikhoan = tk;
                 uPhong.MaKS = MaKhachSan;
-                uPhong.MaPhong = MaPhong;
+                uPhong.SetMaKS(MaKhachSan);
+                
+
                 //Phongs.Add(new Phong(uPhong.));
                 TabPage tabPage1 = tab_ChiTietPhongO.TabPages[MaPhong - 1];
                 uPhong.Size = tabPage1.Size;
@@ -177,16 +225,18 @@ namespace DuLich
         private void btn_TiepTheo_Click_1(object sender, EventArgs e)
         {
 
-            Modify modify = new Modify();
-            string query = " ";
-            while (true)
+            string query1 = string.Format("SELECT MAX(MAKS) as maxKS FROM KHACHSAN_THUOC_TAIKHOAN");
+            SqlConnection conn1 = Connection_to_SQL.getConnection();
+            conn1.Open();
+            SqlCommand command1 = new SqlCommand(query1, conn1);
+            SqlDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
             {
-                query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tk + "' and MaKS = '" + MaKhachSan + "' ";
-                var result = modify.KHACHSAN_THUOC_TAIKHOAN(query);
-                if (result.Count() > 0)
-                    MaKhachSan++;
-                else
-                    break;
+                int giaColumnIndex = reader1.GetOrdinal("maxKS");
+                if (!reader1.IsDBNull(giaColumnIndex))
+                {
+                    MaKhachSan = reader1.GetInt32(giaColumnIndex) + 1;
+                }
             }
 
             //Khởi tạo đối tượng
@@ -300,9 +350,9 @@ namespace DuLich
             qL_HinhAnhDAO.Add(new QL_HinhAnh(MaKhachSan, "Anh total", Anh5, MaAnh), "QL_ANH");
             qL_HinhAnhDAO.Add(new QL_HinhAnh(MaKhachSan, "Anh total", Anh6, MaAnh), "QL_ANH");
             //Tao Doi Tuong KHACHSAN tu THONGTINCANBAN VA VITRI (Chua co Danh gia , Gia)
-            KHACHSAN_DAO ksDao = new KHACHSAN_DAO();
+            /*KHACHSAN_DAO ksDao = new KHACHSAN_DAO();
             KHACHSAN ks = new KHACHSAN(thongTinCanBan.TENKH, viTri.TINH, viTri.TENTHANHPHO, thongTinCanBan.SAO, thongTinCanBan.SAO, thongTinCanBan.SAO, viTri.DIACHI, thongTinCanBan.MAKS);
-            ksDao.Add(ks, "KHACHSAN");
+            ksDao.Add(ks, "KHACHSAN");*/
 
             // Chuyển các giá trị bool thành giá trị int
             int thanhToan0 = clb_ThanhToan.GetItemChecked(0) ? 1 : 0;
@@ -338,7 +388,6 @@ namespace DuLich
             {
                 phongDAO.Add(phong, "PHONG");
             }
-
 
             MessageBox.Show("Đăng tải hoàn tất ");
         }

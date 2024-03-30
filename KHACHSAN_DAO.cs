@@ -9,7 +9,7 @@ namespace DuLich
 {
     public class KHACHSAN_DAO
     {
-        Connection_to_SQL connection = new Connection_to_SQL();
+        /*Connection_to_SQL connection = new Connection_to_SQL();
         public void Add(KHACHSAN acc, string TenQuanHe)
         {
             string sqlStr = string.Format("INSERT INTO {0} (TENKS, TINH ,THANHPHO,SAO, DANHGIA,GIA,DIACHI) VALUES (@TENKS, @TINH, @THANHPHO, @SAO, @DANHGIA, @GIA, @DIACHI)", TenQuanHe);
@@ -67,6 +67,6 @@ namespace DuLich
                 }
                 conn.Close();
             }
-        }
+        }*/
     }
 }

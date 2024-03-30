@@ -30,7 +30,6 @@ namespace DuLich
         public string anh6;
         public string AnhPhong;
         public int MaKS;
-
         public UPhong()
         {
             InitializeComponent();
@@ -41,7 +40,10 @@ namespace DuLich
         {
 
         }
-
+        public void SetMaKS(int maks)
+        {
+            MaKS = maks;
+        }
         private void ptb_Anh1_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -362,11 +364,9 @@ namespace DuLich
 
         private void btn_ThemPhong_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(MaPhong.ToString());
             Room_DAO room_DAO = new Room_DAO();
-            PhongDAO Dao = new PhongDAO();
-            Phong phong = new Phong(MaPhong, int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), int.Parse(txt_KichThuoc.Text), taikhoan, int.Parse(txt_tienThemKhach.Text), MaKS);
-            //TAO DOI TUONG ROOM TU PHONG
-            Room room = new Room(phong.SoKhach, phong.SoGiuong, phong.Gia, phong.SoGiuong.ToString(), phong.MaPhong,AnhPhong);
+            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_SoGiuong.Text, MaPhong, AnhPhong);
             room_DAO.Add(room, "PHONG");
             //List<QL_HinhAnh> list = new List<QL_HinhAnh>();
             //QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
@@ -398,6 +398,25 @@ namespace DuLich
             //}
             //phong.MaPhong = MaPhong;
             //Dao.Add(phong, "PHONG");
+            int maPhong;
+            string connectionString = Connection_to_SQL.getConnnection();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query1 = "SELECT MAX(MAPHONG) FROM PHONG";
+
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    // Thực thi truy vấn và nhận giá trị MaPhong
+                    maPhong = int.Parse(command.ExecuteScalar().ToString());
+                    Console.WriteLine("MaPhong: " + maPhong);
+                }
+            }
+            QLPHONG phong1 = new QLPHONG(MaKS, 0, 0, maPhong);
+            QLPHONG_DAO qLPHONG_DAO = new QLPHONG_DAO();
+            qLPHONG_DAO.Add(phong1,"QLPHONG");
             MessageBox.Show("Add Phòng thành công");
         }
 

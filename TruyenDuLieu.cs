@@ -44,12 +44,6 @@ namespace DuLich
             Array.Clear(khoangCachSanBay, 0, khoangCachSanBay.Length);
             Array.Clear(danhGia, 0, danhGia.Length);
             Array.Clear(address, 0, address.Length);
-            string query1 = string.Format("SELECT MIN(GIA) FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG GROUP BY ViTri.MAKS");
-            SqlConnection conn1 = Connection_to_SQL.getConnection();
-            conn1.Open();
-            SqlCommand command1 = new SqlCommand(query1, conn1);
-            command1.Parameters.AddWithValue("@diadiem", diaDiem);
-            SqlDataReader reader1 = command1.ExecuteReader();
             string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE TINH = @diadiem AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1} ", min,max);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
@@ -57,19 +51,16 @@ namespace DuLich
             command.Parameters.AddWithValue("@diadiem", diaDiem);
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
-            while (reader.Read() && reader1.Read())
+            while (reader.Read())
             {
                 tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));
-                /*string anhBiaCat = reader.GetString(reader.GetOrdinal("AnhBia"));
-                int lastIndex = anhBiaCat.LastIndexOf('\\');
-                address[i] = anhBiaCat.Substring(lastIndex + 1);*/
                 address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
-                int giaColumnIndex = reader1.GetOrdinal("MinGia");
-                if (!reader1.IsDBNull(giaColumnIndex))
+                int giaColumnIndex = reader.GetOrdinal("GIA");
+                if (!reader.IsDBNull(giaColumnIndex))
                 {
-                    int gia = reader1.GetInt32(giaColumnIndex);
+                    double gia = reader.GetDouble(giaColumnIndex);
                     soTien[i] = gia.ToString() + " VNĐ";
                 }
                 int khoangCachTPColumnIndex = reader.GetOrdinal("KCTHANHPHO");
@@ -94,7 +85,6 @@ namespace DuLich
                 i++;
             }
             conn.Close();
-            conn1.Close();
         }
         public void Truyen (string diaDiem, string sapXep)
         {
@@ -112,50 +102,73 @@ namespace DuLich
             conn1.Open();
             SqlCommand command1 = new SqlCommand(query1, conn1);
             command1.Parameters.AddWithValue("@diadiem", diaDiem);
-            SqlDataReader reader1 = command1.ExecuteReader();
-            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.TINH = @diadiem ORDER BY {0} ASC ", sapXep);
+            int i = 0;
+            SqlDataReader reader1 = command1.ExecuteReader(); 
+            while (reader1.Read())
+            {
+                int giaColumnIndex = reader1.GetOrdinal("MinGia");
+                if (!reader1.IsDBNull(giaColumnIndex))
+                {
+                    double gia = reader1.GetDouble(giaColumnIndex);
+                    string sqlStr = "UPDATE ThongTinCanBan SET GIA = @GIA WHERE MAKS = @MAKS";
+                    using (SqlConnection conn2 = Connection_to_SQL.getConnection())
+                    {
+                        conn2.Open();
+                        using (SqlCommand cmd2 = new SqlCommand(sqlStr, conn2))
+                        {
+                            cmd2.Parameters.AddWithValue("@GIA", gia);
+                            cmd2.Parameters.AddWithValue("@MAKS", i);
+                            cmd2.ExecuteNonQuery();
+                        }
+                        conn2.Close();
+                    }
+                }
+                i++;
+            }    
+            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE TINH = @diadiem ORDER BY {0} ASC ", sapXep);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
             command.Parameters.AddWithValue("@diadiem", diaDiem);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read()  &&reader1.Read())
+            int j = 0;
+            while (reader.Read())
             {
-                tenTinh[i] = reader.GetString(reader.GetOrdinal("TINH"));
-                tenThanhPho[i] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
-                tenKhachSan[i] = reader.GetString(reader.GetOrdinal("TENKH"));    
-                int giaColumnIndex = reader1.GetOrdinal("MinGia");
-                if (!reader1.IsDBNull(giaColumnIndex))
+                tenTinh[j] = reader.GetString(reader.GetOrdinal("TINH"));
+                tenThanhPho[j] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
+                tenKhachSan[j] = reader.GetString(reader.GetOrdinal("TENKH"));
+                
+                int giaNhoCachTPColumnIndex = reader.GetOrdinal("GIA");
+                if (!reader.IsDBNull(giaNhoCachTPColumnIndex))
                 {
-                    double gia = reader1.GetDouble(giaColumnIndex);
-                    soTien[i] = gia.ToString() + " VNĐ";
+                    double gia = reader.GetDouble(giaNhoCachTPColumnIndex);
+                    soTien[j] = gia.ToString() + " VNĐ";
                 }
                 int khoangCachTPColumnIndex = reader.GetOrdinal("KCTHANHPHO");
                 if (!reader.IsDBNull(khoangCachTPColumnIndex))
                 {
                     int khoangCach = reader.GetInt32(khoangCachTPColumnIndex);
-                    khoangCachTP[i] = tenThanhPho[i] + " " + khoangCach.ToString() + " km đến trung tâm";
+                    khoangCachTP[j] = tenThanhPho[j] + " " + khoangCach.ToString() + " km đến trung tâm";
                 }
                 int khoangCachSanBayColumnIndex = reader.GetOrdinal("KCSANBAY");
                 if (!reader.IsDBNull(khoangCachSanBayColumnIndex))
                 {
                     int khoangCach = reader.GetInt32(khoangCachSanBayColumnIndex);
-                    khoangCachSanBay[i] = khoangCach.ToString() + " km đến sân bay gần nhất";
+                    khoangCachSanBay[j] = khoangCach.ToString() + " km đến sân bay gần nhất";
                 }
                 int danhGiaColumnIndex = reader.GetOrdinal("SAO");
                 if (!reader.IsDBNull(danhGiaColumnIndex))
                 {
                     int danhgia = reader.GetInt32(danhGiaColumnIndex);
-                    danhGia[i] = "Đánh giá: " + danhgia.ToString();
+                    danhGia[j] = "Đánh giá: " + danhgia.ToString();
                 }
-                address[i] = reader.GetString(reader.GetOrdinal("AnhBia"));
+                address[j] = reader.GetString(reader.GetOrdinal("AnhBia"));
                 soLuong++;
-                i++;
+                j++;
             }
             conn.Close();
-            //conn1.Close();
+            conn1.Close();
         }
 
     }

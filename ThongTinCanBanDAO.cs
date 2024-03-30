@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DuLich
 {
@@ -26,7 +27,8 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCTHANHPHO", acc.KCTHANHPHO);
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
-                    cmd.Parameters.AddWithValue("@AnhBia", acc.AnhBia);
+                    string relativePath = ExtractRelativePath(acc.AnhBia);
+                    cmd.Parameters.AddWithValue("@AnhBia", relativePath);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
@@ -48,11 +50,27 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCTHANHPHO", acc.KCTHANHPHO);
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
-                    cmd.Parameters.AddWithValue("@AnhBia", acc.AnhBia);
+                    string relativePath = ExtractRelativePath(acc.AnhBia);
+                    cmd.Parameters.AddWithValue("@AnhBia", relativePath);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
             }
+        }
+        static string ExtractRelativePath(string fullPath)
+        {
+            if (fullPath.Contains("hinhanh"))
+            {
+                int index = fullPath.IndexOf(@"hinhanh\");
+                return fullPath.Substring(index);
+            }
+            else if (fullPath.Contains("Image"))
+            {
+                int index = fullPath.IndexOf(@"Image\");
+                return fullPath.Substring(index);
+            }
+            return "Không chứa chuỗi 'hinhanh' hoặc 'Image'.";
+
         }
     }
 }

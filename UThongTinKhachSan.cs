@@ -41,9 +41,9 @@ namespace DuLich
                         thongTinCanBan.KCSANBAY = int.Parse(txt_KhoangCachSB.Text);
                         thongTinCanBan.SAO = int.Parse(cbb_DanhGiaSao.Text);
                         Dao.Update(thongTinCanBan, "ThongTinCanBan");
-                        KHACHSAN khachsan = new KHACHSAN(thongTinCanBan.TENKH, null, null, thongTinCanBan.SAO, thongTinCanBan.SAO, thongTinCanBan.SAO, null, thongTinCanBan.MAKS);
+                        /*KHACHSAN khachsan = new KHACHSAN(thongTinCanBan.TENKH, null, null, thongTinCanBan.SAO, thongTinCanBan.SAO, thongTinCanBan.SAO, null, thongTinCanBan.MAKS);
                         KHACHSAN_DAO ksDAO = new KHACHSAN_DAO();
-                        ksDAO.UpdateFromThongTinCanBan(khachsan, "KHACHSAN");
+                        ksDAO.UpdateFromThongTinCanBan(khachsan, "KHACHSAN");*/
                         MessageBox.Show("Chỉnh sửa thành công");
                     }
                 }
