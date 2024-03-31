@@ -34,6 +34,7 @@
             lbl_ViTri = new Label();
             lbl_Tien = new Label();
             lbl_KhoangCach = new Label();
+            lbl_SoLuong = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -91,11 +92,23 @@
             lbl_KhoangCach.Text = "Khoảng cách";
             lbl_KhoangCach.Visible = false;
             // 
+            // lbl_SoLuong
+            // 
+            lbl_SoLuong.AutoSize = true;
+            lbl_SoLuong.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_SoLuong.Location = new Point(706, 101);
+            lbl_SoLuong.Name = "lbl_SoLuong";
+            lbl_SoLuong.Size = new Size(73, 20);
+            lbl_SoLuong.TabIndex = 7;
+            lbl_SoLuong.Text = "Số Lượng";
+            lbl_SoLuong.Visible = false;
+            // 
             // UKhungKetQua
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
+            Controls.Add(lbl_SoLuong);
             Controls.Add(lbl_KhoangCach);
             Controls.Add(lbl_Tien);
             Controls.Add(lbl_ViTri);
@@ -116,5 +129,6 @@
         private Label lbl_ViTri;
         private Label lbl_Tien;
         private Label lbl_KhoangCach;
+        private Label lbl_SoLuong;
     }
 }

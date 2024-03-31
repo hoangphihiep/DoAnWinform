@@ -683,6 +683,10 @@ namespace DoAnDuLich
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
                 k.diaDiem2 = txt_DiaDiem.Text;
+                int number = int.Parse(soLuongNguoiLon.Value.ToString());
+                int number1 = int.Parse(soLuongTreEm.Value.ToString());
+                k.soLuongNguoiLon = number;
+                k.soLuongTreEm = number1;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -696,6 +700,10 @@ namespace DoAnDuLich
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
                 k.diaDiem2 = txt_DiaDiem.Text;
+                int number = int.Parse(soLuongNguoiLon.Value.ToString());
+                int number1 = int.Parse(soLuongTreEm.Value.ToString());
+                k.soLuongNguoiLon = number; 
+                k.soLuongTreEm = number1;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -704,11 +712,14 @@ namespace DoAnDuLich
             {
                 k.diadiem = txt_DiaDiem.Text;
                 k.diaDiem2 = txt_DiaDiem.Text;
+                int number = int.Parse(soLuongNguoiLon.Value.ToString());
+                int number1 = int.Parse(soLuongTreEm.Value.ToString());
+                k.soLuongNguoiLon = number;
+                k.soLuongTreEm = number1;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
             }
-
         }
         private void button2_Click(object sender, EventArgs e)
         {

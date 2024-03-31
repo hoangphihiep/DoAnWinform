@@ -22,7 +22,7 @@ namespace DuLich
         {
             fHotel_Details f = new fHotel_Details(maks);
             //this.Hide();
-            
+
             f.ShowDialog();
 
             this.Show();
@@ -34,6 +34,7 @@ namespace DuLich
         public string tien;
         public string khoangCach;
         public string anhBia;
+        public string soLuong;
         public void ShowKhoangCach()
         {
             lbl_KhoangCach.Visible = true;
@@ -41,6 +42,14 @@ namespace DuLich
         public void HideKhoangCach()
         {
             lbl_KhoangCach.Visible = false;
+        }
+        public void ShowSoKhach()
+        {
+            lbl_SoLuong.Visible = true;
+        }
+        public void HideSoKhach()
+        {
+            lbl_SoLuong.Visible = false;
         }
         private void UKhungKetQua_Load(object sender, EventArgs e)
         {
@@ -56,11 +65,14 @@ namespace DuLich
             lbl_Tien.Location = new Point(706, 67);
             lbl_KhoangCach.Size = new Size(97, 20);
             lbl_KhoangCach.Location = new Point(217, 67);
+            lbl_SoLuong.Size = new Size(73, 20);
+            lbl_SoLuong.Location = new Point(706, 101);
             lbl_ViTri.Text = tenViTri;
             lbl_TenKhachSan.Text = tenKhachSan;
             lbl_Tien.Text = tien;
             lbl_KhoangCach.Text = khoangCach;
             pictureBox1.Image = Image.FromFile(anhBia);
+            lbl_SoLuong.Text = soLuong;
             /*if (hinhanh != null)
             {
                 using (MemoryStream ms = new MemoryStream(hinhanh))
