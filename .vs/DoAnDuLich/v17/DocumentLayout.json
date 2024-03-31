@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\Downloads\\Winform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\customer_information.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:customer_information.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\downloads\\winform\\customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer_Information.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs",
-              "RelativeDocumentMoniker": "Customer_Information.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs [Design]",
-              "RelativeToolTip": "Customer_Information.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T03:55:42.021Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -75,66 +62,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T04:12:26.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "fLogin.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs",
-              "RelativeDocumentMoniker": "fLogin.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs",
-              "RelativeToolTip": "fLogin.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAASwB8AAAAPAAAA",
+              "Title": "Payment_Information.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Payment_Information.cs",
+              "RelativeDocumentMoniker": "Payment_Information.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Payment_Information.cs [Design]",
+              "RelativeToolTip": "Payment_Information.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T04:10:04.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs",
-              "RelativeDocumentMoniker": "fLogin.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fLogin.cs [Design]",
-              "RelativeToolTip": "fLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T04:09:38.078Z",
+              "WhenOpened": "2024-03-31T07:58:47.738Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Payment_Information.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Payment_Information.cs",
+              "RelativeDocumentMoniker": "Payment_Information.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Payment_Information.cs",
+              "RelativeToolTip": "Payment_Information.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAEwDUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T08:51:46.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fPayment_Slip.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fPayment_Slip.cs",
+              "RelativeDocumentMoniker": "fPayment_Slip.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fPayment_Slip.cs",
+              "RelativeToolTip": "fPayment_Slip.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T08:58:43.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "fPayment_Slip.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\fPayment_Slip.cs",
+              "RelativeDocumentMoniker": "fPayment_Slip.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\fPayment_Slip.cs [Design]",
+              "RelativeToolTip": "fPayment_Slip.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T07:58:39.51Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Customer_Information.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs",
+              "RelativeDocumentMoniker": "Customer_Information.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs [Design]",
+              "RelativeToolTip": "Customer_Information.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T09:02:02.131Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Customer_Information.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs",
               "RelativeDocumentMoniker": "Customer_Information.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.cs",
               "RelativeToolTip": "Customer_Information.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAASwGUAAAAYAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAhwGcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T04:08:36.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Customer_Information.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.Designer.cs",
-              "RelativeDocumentMoniker": "Customer_Information.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\Winform\\Customer_Information.Designer.cs",
-              "RelativeToolTip": "Customer_Information.Designer.cs",
-              "ViewState": "AQIAAL0BAAAAAAAAAAAhwMwBAACsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T04:09:15.166Z",
+              "WhenOpened": "2024-03-31T09:02:05.549Z",
               "EditorCaption": ""
             }
           ]
