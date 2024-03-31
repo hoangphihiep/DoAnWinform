@@ -21,6 +21,8 @@ namespace DuLich
         public string Gia;
         public string sdt;
         public string TenKhachHang;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public Payment_Information()
         {
             InitializeComponent();
@@ -59,6 +61,8 @@ namespace DuLich
             f.Gia = Gia;
             f.SetSDT(sdt);
             f.SetTenKhachHang(TenKhachHang);
+            f.NgayNhan = NgayNhan;
+            f.NgayTra = NgayTra;
             this.Hide();
             f.ShowDialog();
             this.Close();

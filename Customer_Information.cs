@@ -20,6 +20,8 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public Customer_Information()
         {
             InitializeComponent();
@@ -102,6 +104,8 @@ namespace DuLich
             f.Gia = Gia;
             f.sdt = txt_SoDienThoai.Text;
             f.TenKhachHang = txt_HoVaTen.Text;
+            f.NgayNhan = NgayNhan;
+            f.NgayTra = NgayTra;
             this.Hide();
             f.ShowDialog();
             this.Close();

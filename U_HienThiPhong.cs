@@ -17,6 +17,8 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public U_HienThiPhong()
         {
             InitializeComponent();

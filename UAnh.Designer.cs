@@ -40,6 +40,7 @@
             txt_MaKhachSan = new TextBox();
             lbl_MaKS = new Label();
             btn_ChinhSua = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh5).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // ptb_AnhChinh
@@ -177,10 +179,21 @@
             btn_ChinhSua.UseVisualStyleBackColor = true;
             btn_ChinhSua.Click += btn_ChinhSua_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(623, 83);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(564, 301);
+            dataGridView1.TabIndex = 153;
+            // 
             // UAnh
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(btn_ChinhSua);
             Controls.Add(button1);
             Controls.Add(txt_MaKhachSan);
@@ -194,7 +207,7 @@
             Controls.Add(ptb_Anh1);
             Controls.Add(ptb_AnhBia);
             Name = "UAnh";
-            Size = new Size(654, 565);
+            Size = new Size(1221, 606);
             Load += UAnh_Load;
             ((System.ComponentModel.ISupportInitialize)ptb_AnhChinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh6).EndInit();
@@ -204,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)ptb_Anh2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Anh1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhBia).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -222,5 +236,6 @@
         private TextBox txt_MaKhachSan;
         private Label lbl_MaKS;
         private Button btn_ChinhSua;
+        private DataGridView dataGridView1;
     }
 }

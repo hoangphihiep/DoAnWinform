@@ -22,6 +22,8 @@ namespace DuLich
         public string Gia;
         public string sdt;
         public string TenKhachHang;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public fPayment_Slip()
         {
             InitializeComponent();
@@ -37,6 +39,23 @@ namespace DuLich
             label25.Text = soKhach;
             label27.Text = Gia;
             pictureBox1.Image = tenAnh;
+
+            int ngayNhan = NgayNhan.Day;
+            int thangNhan = NgayNhan.Month;
+            int namNhan = NgayNhan.Year;
+
+            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
+            DateTime ngayThangNamNhan = new DateTime(namNhan, thangNhan, ngayNhan);
+            label18.Text = ngayThangNamNhan.ToString();
+
+
+            int ngayTra = NgayTra.Day;
+            int thangTra = NgayTra.Month;
+            int namTra = NgayTra.Year;
+
+            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
+            DateTime ngayThangNamTra = new DateTime(namTra, thangTra, ngayTra);
+            label19.Text = ngayThangNamTra.ToString();
         }
         public void SetSDT(string Sdt)
         {
