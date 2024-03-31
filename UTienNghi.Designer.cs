@@ -43,11 +43,14 @@
             lbl_TienNghiChinh = new Label();
             txt_MaKhachSan = new TextBox();
             lbl_MaKS = new Label();
+            dataGridView1 = new DataGridView();
+            btn_Refresh = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btn_ChinhSua
             // 
-            btn_ChinhSua.Location = new Point(643, 556);
+            btn_ChinhSua.Location = new Point(566, 538);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(112, 49);
             btn_ChinhSua.TabIndex = 23;
@@ -59,7 +62,7 @@
             // 
             clb_DichVuKhachSan.FormattingEnabled = true;
             clb_DichVuKhachSan.Items.AddRange(new object[] { "Quầy lễ tân", "Dịch vụ thu đổi ngoại tệ", "Dịch vụ tiệc cưới", "Dịch vụ hỗ trợ đặt tour", "Nhân viên đa ngôn ngữ" });
-            clb_DichVuKhachSan.Location = new Point(410, 192);
+            clb_DichVuKhachSan.Location = new Point(335, 192);
             clb_DichVuKhachSan.Name = "clb_DichVuKhachSan";
             clb_DichVuKhachSan.Size = new Size(284, 114);
             clb_DichVuKhachSan.TabIndex = 87;
@@ -68,17 +71,17 @@
             // 
             lbl_KhachCoTheChon.AutoSize = true;
             lbl_KhachCoTheChon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_KhachCoTheChon.Location = new Point(410, 152);
+            lbl_KhachCoTheChon.Location = new Point(335, 141);
             lbl_KhachCoTheChon.Name = "lbl_KhachCoTheChon";
-            lbl_KhachCoTheChon.Size = new Size(384, 40);
+            lbl_KhachCoTheChon.Size = new Size(242, 60);
             lbl_KhachCoTheChon.TabIndex = 86;
-            lbl_KhachCoTheChon.Text = "Đảm bảo cho du khách biết những dịch vụ của khách sạn\r\n\r\n";
+            lbl_KhachCoTheChon.Text = "Đảm bảo cho du khách biết những \r\ndịch vụ của khách sạn\r\n\r\n";
             // 
             // lbl_DichVuKhachSan
             // 
             lbl_DichVuKhachSan.AutoSize = true;
             lbl_DichVuKhachSan.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_DichVuKhachSan.Location = new Point(410, 110);
+            lbl_DichVuKhachSan.Location = new Point(335, 110);
             lbl_DichVuKhachSan.Name = "lbl_DichVuKhachSan";
             lbl_DichVuKhachSan.Size = new Size(200, 31);
             lbl_DichVuKhachSan.TabIndex = 85;
@@ -88,7 +91,7 @@
             // 
             clb_AmThuc.FormattingEnabled = true;
             clb_AmThuc.Items.AddRange(new object[] { "Quầy bar", "Bữa sáng", "Quầy bar bên hồ bơi" });
-            clb_AmThuc.Location = new Point(410, 418);
+            clb_AmThuc.Location = new Point(335, 418);
             clb_AmThuc.Name = "clb_AmThuc";
             clb_AmThuc.Size = new Size(284, 114);
             clb_AmThuc.TabIndex = 84;
@@ -97,7 +100,7 @@
             // 
             lbl_ChoKhachThayRang.AutoSize = true;
             lbl_ChoKhachThayRang.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_ChoKhachThayRang.Location = new Point(410, 367);
+            lbl_ChoKhachThayRang.Location = new Point(335, 367);
             lbl_ChoKhachThayRang.Name = "lbl_ChoKhachThayRang";
             lbl_ChoKhachThayRang.Size = new Size(275, 40);
             lbl_ChoKhachThayRang.TabIndex = 83;
@@ -107,7 +110,7 @@
             // 
             lbl_AmThuc.AutoSize = true;
             lbl_AmThuc.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_AmThuc.Location = new Point(410, 327);
+            lbl_AmThuc.Location = new Point(335, 327);
             lbl_AmThuc.Name = "lbl_AmThuc";
             lbl_AmThuc.Size = new Size(101, 31);
             lbl_AmThuc.TabIndex = 82;
@@ -155,7 +158,7 @@
             // 
             lbl_DayLaNhungCach.AutoSize = true;
             lbl_DayLaNhungCach.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_DayLaNhungCach.Location = new Point(12, 152);
+            lbl_DayLaNhungCach.Location = new Point(12, 141);
             lbl_DayLaNhungCach.Name = "lbl_DayLaNhungCach";
             lbl_DayLaNhungCach.Size = new Size(286, 60);
             lbl_DayLaNhungCach.TabIndex = 77;
@@ -188,10 +191,32 @@
             lbl_MaKS.TabIndex = 88;
             lbl_MaKS.Text = "Mã khách sạn";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(643, 192);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(564, 340);
+            dataGridView1.TabIndex = 90;
+            // 
+            // btn_Refresh
+            // 
+            btn_Refresh.Location = new Point(769, 56);
+            btn_Refresh.Name = "btn_Refresh";
+            btn_Refresh.Size = new Size(94, 29);
+            btn_Refresh.TabIndex = 91;
+            btn_Refresh.Text = "Refresh";
+            btn_Refresh.UseVisualStyleBackColor = true;
+            btn_Refresh.Click += btn_Refresh_Click;
+            // 
             // UTienNghi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btn_Refresh);
+            Controls.Add(dataGridView1);
             Controls.Add(txt_MaKhachSan);
             Controls.Add(lbl_MaKS);
             Controls.Add(clb_DichVuKhachSan);
@@ -208,8 +233,9 @@
             Controls.Add(lbl_TienNghiChinh);
             Controls.Add(btn_ChinhSua);
             Name = "UTienNghi";
-            Size = new Size(800, 647);
+            Size = new Size(1221, 606);
             Load += UTienNghi_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,5 +256,7 @@
         private Label lbl_TienNghiChinh;
         private TextBox txt_MaKhachSan;
         private Label lbl_MaKS;
+        private DataGridView dataGridView1;
+        private Button btn_Refresh;
     }
 }

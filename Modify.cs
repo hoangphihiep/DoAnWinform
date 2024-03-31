@@ -89,20 +89,43 @@ namespace DuLich
 
         public List<TienNghi> TienNghi(string table)
         {
-            List<TienNghi> accounts = new List<TienNghi>();
+            List<TienNghi> tienNghiList = new List<TienNghi>();
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
                 conn.Open();
                 cmd = new SqlCommand(table, conn);
-                data = cmd.ExecuteReader();
+                SqlDataReader data = cmd.ExecuteReader();
                 while (data.Read())
                 {
-                    accounts.Add(new TienNghi(data.GetInt32(0), data.GetString(1), data.GetInt32(2), data.GetInt32(3), data.GetInt32(4), data.GetInt32(5), data.GetInt32(6), data.GetInt32(7), data.GetInt32(8), data.GetInt32(9), data.GetInt32(10), data.GetInt32(11), data.GetInt32(12), data.GetInt32(13), data.GetInt32(14), data.GetInt32(15), data.GetInt32(16), data.GetInt32(17)));
+                    int maks = data.GetInt32(0);
+                    string tk = data.GetString(1);
+                    int mayLanh = data.GetBoolean(2) ? 1 : 0;
+                    int nhaHang = data.GetBoolean(3) ? 1 : 0;
+                    int hoBoi = data.GetBoolean(4) ? 1 : 0;
+                    int leTan24H = data.GetBoolean(5) ? 1 : 0;
+                    int wifi = data.GetBoolean(6) ? 1 : 0;
+                    int quayLeTan = data.GetBoolean(7) ? 1 : 0;
+                    int dichVuThuDoiNgoaiTe = data.GetBoolean(8) ? 1 : 0;
+                    int dichVuTiecCuoi = data.GetBoolean(9) ? 1 : 0;
+                    int dichVuHoTroDatTour = data.GetBoolean(10) ? 1 : 0;
+                    int nhanVienDangOnNgu = data.GetBoolean(11) ? 1 : 0;
+                    int baiDauXe = data.GetBoolean(12) ? 1 : 0;
+                    int tiemCafe = data.GetBoolean(13) ? 1 : 0;
+                    int thangMay = data.GetBoolean(14) ? 1 : 0;
+                    int quayBar = data.GetBoolean(15) ? 1 : 0;
+                    int buaSang = data.GetBoolean(16) ? 1 : 0;
+                    int quayBarBenHoBoi = data.GetBoolean(17) ? 1 : 0;
+
+                    // Tạo đối tượng TienNghi và thêm vào danh sách
+                    TienNghi tienNghi = new TienNghi(maks, tk, mayLanh, nhaHang, hoBoi, leTan24H, wifi, quayLeTan, dichVuThuDoiNgoaiTe, dichVuTiecCuoi, dichVuHoTroDatTour, nhanVienDangOnNgu, baiDauXe, tiemCafe, thangMay, quayBar, buaSang, quayBarBenHoBoi);
+                    tienNghiList.Add(tienNghi);
                 }
                 conn.Close();
             }
-            return accounts;
+            return tienNghiList;
         }
+
+
         public List<ViTri> ViTri(string table)
         {
             List<ViTri> accounts = new List<ViTri>();

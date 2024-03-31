@@ -43,18 +43,18 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
-            uThongtin2 = new UThongtin();
-            uUuDai1 = new UUuDai();
-            uTienNghi1 = new UTienNghi();
-            uThongtin1 = new UThongtin();
-            uMatKhau1 = new UMatKhau();
             uThongTinKhachSan1 = new UThongTinKhachSan();
             uViTri1 = new UViTri();
             uHoSo1 = new UHoSo();
             uAnh1 = new UAnh();
             uChiTietPhongo1 = new UChiTietPhongO();
+            uThongtin2 = new UThongtin();
+            uUuDai1 = new UUuDai();
+            uTienNghi1 = new UTienNghi();
+            uMatKhau1 = new UMatKhau();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            uThongtin1 = new UThongtin();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -78,7 +78,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(190, 654);
+            panel1.Size = new Size(1221, 674);
             panel1.TabIndex = 0;
             // 
             // btn_TienNghi
@@ -110,7 +110,7 @@
             panel4.BackColor = SystemColors.ButtonFace;
             panel4.Location = new Point(190, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(903, 40);
+            panel4.Size = new Size(1221, 700);
             panel4.TabIndex = 0;
             // 
             // btn_HoSo
@@ -177,7 +177,7 @@
             // 
             panel2.Location = new Point(190, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(247, 125);
+            panel2.Size = new Size(1221, 700);
             panel2.TabIndex = 1;
             // 
             // btn_MatKhau
@@ -220,7 +220,7 @@
             panel3.Controls.Add(panel5);
             panel3.Location = new Point(190, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(903, 654);
+            panel3.Size = new Size(1221, 700);
             panel3.TabIndex = 1;
             // 
             // panel5
@@ -237,14 +237,49 @@
             panel5.Controls.Add(uMatKhau1);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
-            panel5.Size = new Size(903, 611);
+            panel5.Size = new Size(1221, 700);
             panel5.TabIndex = 1;
+            // 
+            // uThongTinKhachSan1
+            // 
+            uThongTinKhachSan1.Location = new Point(0, 0);
+            uThongTinKhachSan1.Name = "uThongTinKhachSan1";
+            uThongTinKhachSan1.Size = new Size(1221, 700);
+            uThongTinKhachSan1.TabIndex = 3;
+            // 
+            // uViTri1
+            // 
+            uViTri1.Location = new Point(0, 0);
+            uViTri1.Name = "uViTri1";
+            uViTri1.Size = new Size(1221, 700);
+            uViTri1.TabIndex = 4;
+            // 
+            // uHoSo1
+            // 
+            uHoSo1.Location = new Point(0, 0);
+            uHoSo1.Name = "uHoSo1";
+            uHoSo1.Size = new Size(1221, 700);
+            uHoSo1.TabIndex = 7;
+            // 
+            // uAnh1
+            // 
+            uAnh1.Location = new Point(0, 0);
+            uAnh1.Name = "uAnh1";
+            uAnh1.Size = new Size(1221, 700);
+            uAnh1.TabIndex = 6;
+            // 
+            // uChiTietPhongo1
+            // 
+            uChiTietPhongo1.Location = new Point(0, 0);
+            uChiTietPhongo1.Name = "uChiTietPhongo1";
+            uChiTietPhongo1.Size = new Size(1221, 700);
+            uChiTietPhongo1.TabIndex = 5;
             // 
             // uThongtin2
             // 
             uThongtin2.Location = new Point(-3, 6);
             uThongtin2.Name = "uThongtin2";
-            uThongtin2.Size = new Size(903, 611);
+            uThongtin2.Size = new Size(1221, 700);
             uThongtin2.TabIndex = 1;
             uThongtin2.Load += uThongtin2_Load;
             // 
@@ -252,70 +287,35 @@
             // 
             uUuDai1.Location = new Point(0, 6);
             uUuDai1.Name = "uUuDai1";
-            uUuDai1.Size = new Size(903, 611);
+            uUuDai1.Size = new Size(1221, 700);
             uUuDai1.TabIndex = 2;
             // 
             // uTienNghi1
             // 
             uTienNghi1.Location = new Point(0, 6);
             uTienNghi1.Name = "uTienNghi1";
-            uTienNghi1.Size = new Size(891, 809);
+            uTienNghi1.Size = new Size(1221, 700);
             uTienNghi1.TabIndex = 2;
-            // 
-            // uThongtin1
-            // 
-            uThongtin1.Location = new Point(1194, 154);
-            uThongtin1.Name = "uThongtin1";
-            uThongtin1.Size = new Size(900, 611);
-            uThongtin1.TabIndex = 0;
             // 
             // uMatKhau1
             // 
             uMatKhau1.Location = new Point(0, 0);
             uMatKhau1.Name = "uMatKhau1";
-            uMatKhau1.Size = new Size(903, 611);
+            uMatKhau1.Size = new Size(1221, 700);
             uMatKhau1.TabIndex = 2;
             // 
-            // uThongTinKhachSan1
+            // uThongtin1
             // 
-            uThongTinKhachSan1.Location = new Point(0, 0);
-            uThongTinKhachSan1.Name = "uThongTinKhachSan1";
-            uThongTinKhachSan1.Size = new Size(903, 611);
-            uThongTinKhachSan1.TabIndex = 3;
-            // 
-            // uViTri1
-            // 
-            uViTri1.Location = new Point(0, 0);
-            uViTri1.Name = "uViTri1";
-            uViTri1.Size = new Size(903, 611);
-            uViTri1.TabIndex = 4;
-            // 
-            // uHoSo1
-            // 
-            uHoSo1.Location = new Point(0, 0);
-            uHoSo1.Name = "uHoSo1";
-            uHoSo1.Size = new Size(903, 614);
-            uHoSo1.TabIndex = 7;
-            // 
-            // uAnh1
-            // 
-            uAnh1.Location = new Point(0, 0);
-            uAnh1.Name = "uAnh1";
-            uAnh1.Size = new Size(903, 611);
-            uAnh1.TabIndex = 6;
-            // 
-            // uChiTietPhongo1
-            // 
-            uChiTietPhongo1.Location = new Point(0, 0);
-            uChiTietPhongo1.Name = "uChiTietPhongo1";
-            uChiTietPhongo1.Size = new Size(900, 611);
-            uChiTietPhongo1.TabIndex = 5;
+            uThongtin1.Location = new Point(-3, 6);
+            uThongtin1.Name = "uThongtin1";
+            uThongtin1.Size = new Size(1221, 700);
+            uThongtin1.TabIndex = 0;
             // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1093, 654);
+            ClientSize = new Size(1501, 674);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "fThongTinTaiKhoan";
@@ -338,7 +338,6 @@
         private Panel panel4;
         private Panel panel5;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private UThongtin uThongtin1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private UThongtin uThongtin2;
         private UMatKhau uMatKhau1;
@@ -356,5 +355,6 @@
         private UTienNghi uTienNghi1;
         private UUuDai uUuDai1;
         private Button btn_HoSo;
+        private UThongtin uThongtin1;
     }
 }

@@ -46,6 +46,8 @@
             cbb_Tinh = new ComboBox();
             cbb_ThanhPho = new ComboBox();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lbl_MaKS
@@ -213,10 +215,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(656, 90);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(564, 301);
+            dataGridView1.TabIndex = 123;
+            // 
             // UHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(cbb_Tinh);
             Controls.Add(cbb_ThanhPho);
@@ -236,9 +249,10 @@
             Controls.Add(txt_MaKhachSan);
             Controls.Add(lbl_MaKS);
             Name = "UHoSo";
-            Size = new Size(821, 563);
+            Size = new Size(1221, 606);
             Load += UHoSo_Load;
             VisibleChanged += UHoSo_VisibleChanged;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,5 +277,6 @@
         private ComboBox cbb_Tinh;
         private ComboBox cbb_ThanhPho;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

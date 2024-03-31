@@ -23,13 +23,14 @@ namespace DuLich
         {
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
-            uThongTinKhachSan1.tentk = tentk;
+            uThongTinKhachSan1.SetTenTK(tentk);
             uThongtin1.tentk = tentk;
-            uViTri1.tentk = tentk;
-            uHoSo1.tentk = tentk;
+            uViTri1.SetTenTK(tentk);
+            uHoSo1.SetTenTK(tentk);
             uMatKhau1.tentk = tentk;
             uUuDai1.tentk = tentk;
             uAnh1.tk = tentk;
+            uTienNghi1.SetTenTK(tentk);
             Modify modify = new Modify();
             string query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tentk + "' ";
             var result = modify.KhachSanThuocTaiKhoan(query);

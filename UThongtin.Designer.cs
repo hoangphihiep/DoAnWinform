@@ -174,7 +174,7 @@
             Controls.Add(lbl_GioiTinh);
             Controls.Add(lbl_HoTen);
             Name = "UThongtin";
-            Size = new Size(824, 606);
+            Size = new Size(1221, 606);
             Load += UThongtin_Load;
             VisibleChanged += UThongtin_VisibleChanged;
             ResumeLayout(false);

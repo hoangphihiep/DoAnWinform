@@ -10,6 +10,7 @@ namespace DuLich
         }
         string tk = "a";
         string mk = "b";
+        bool check = false;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -36,8 +37,6 @@ namespace DuLich
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
-
 
         }
 
@@ -133,6 +132,15 @@ namespace DuLich
                             k.ShowDialog();
                             this.Close();
                         }
+                        //else if(y == 2)
+                        //{
+                        //    Customer_Information k = new Customer_Information();
+                        //    k.tk = tk;
+                        //    k.mk = mk;
+                        //    this.Hide();
+                        //    k.ShowDialog();
+                        //    this.Close();
+                        //}
                         else
                         {
                             FTrangChuTK f = new FTrangChuTK();

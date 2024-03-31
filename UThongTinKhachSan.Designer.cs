@@ -43,6 +43,8 @@
             cbb_DanhGiaSao = new ComboBox();
             label36 = new Label();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lbl_TenKhachSan
@@ -97,7 +99,7 @@
             // 
             // btn_ChinhSua
             // 
-            btn_ChinhSua.Location = new Point(736, 568);
+            btn_ChinhSua.Location = new Point(736, 535);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(112, 49);
             btn_ChinhSua.TabIndex = 14;
@@ -172,7 +174,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(673, 74);
+            button1.Location = new Point(654, 74);
             button1.Name = "button1";
             button1.Size = new Size(112, 27);
             button1.TabIndex = 128;
@@ -180,10 +182,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(654, 132);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(564, 301);
+            dataGridView1.TabIndex = 129;
+            // 
             // UThongTinKhachSan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(label36);
             Controls.Add(cbb_DanhGiaSao);
@@ -200,7 +213,9 @@
             Controls.Add(lbl_MoTa);
             Controls.Add(lbl_TenKhachSan);
             Name = "UThongTinKhachSan";
-            Size = new Size(887, 655);
+            Size = new Size(1221, 606);
+            Load += UThongTinKhachSan_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -222,5 +237,6 @@
         private ComboBox cbb_DanhGiaSao;
         private Label label36;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

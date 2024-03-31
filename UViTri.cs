@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,48 @@ namespace DuLich
         {
             InitializeComponent();
         }
+        public void SetTenTK(string tenTK)
+        {
+            tentk = tenTK;
+            // Gọi lại phương thức load dữ liệu
+            UViTri_Load(this, EventArgs.Empty);
+        }
 
         private void UViTri_Load(object sender, EventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string sql = "SELECT * FROM ViTri WHERE TK = '" + tentk + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
 
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Xóa bỏ các cột cũ (nếu có)
+                dataGridView1.Columns.Clear();
+
+                // Thêm các cột vào DataGridView
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("TK", "TK");
+                dataGridView1.Columns.Add("DIACHI", "DIACHI");
+                dataGridView1.Columns.Add("TENTHANHPHO", "TENTHANHPHO");
+                dataGridView1.Columns.Add("TINH", "TINH");
+                while (reader.Read())
+                {
+                    int maks = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    string tk = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                    string diachi = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                    string tenthanhpho = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                    string tinh = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
+
+                    // Tạo một mảng chứa giá trị của từng cột
+                    string[] rowValues = { tk, maks.ToString(), diachi, tenthanhpho, tinh };
+
+                    // Thêm hàng vào DataGridView
+                    dataGridView1.Rows.Add(rowValues);
+                }
+                reader.Close();
+            }
         }
 
         private void btn_ChinhSua_Click(object sender, EventArgs e)
