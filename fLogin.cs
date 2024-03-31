@@ -132,15 +132,16 @@ namespace DuLich
                             k.ShowDialog();
                             this.Close();
                         }
-                        //else if(y == 2)
-                        //{
-                        //    Customer_Information k = new Customer_Information();
-                        //    k.tk = tk;
-                        //    k.mk = mk;
-                        //    this.Hide();
-                        //    k.ShowDialog();
-                        //    this.Close();
-                        //}
+                        else if (y == 2)
+                        {
+                            Customer_Information k = new Customer_Information();
+                            k.tk = tk;
+                            k.mk = mk;
+                            k.HienThi();
+                            this.Hide();
+                            k.ShowDialog();
+                            this.Close();
+                        }
                         else
                         {
                             FTrangChuTK f = new FTrangChuTK();

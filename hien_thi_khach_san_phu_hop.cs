@@ -241,6 +241,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
 
@@ -255,6 +258,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
@@ -267,6 +273,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
@@ -356,6 +365,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
@@ -453,6 +465,9 @@ namespace DuLich
                 for (int j = 0; j < soLuong1; j++)
                 {
                     UKhungKetQua uc = new UKhungKetQua();
+                    uc.NgayNhan = dateTimePicker2.Value;
+                    uc.NgayTra = dateTimePicker1.Value;
+
                     uc.viTri = j * 148;
                     uc.tenViTri = tenThanhPho[j] + ", " + tenTinh[j];
                     uc.tenKhachSan = tenKhachSan[j];
@@ -592,6 +607,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];
@@ -619,6 +637,9 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 UKhungKetQua uc = new UKhungKetQua();
+                uc.NgayNhan = dateTimePicker2.Value;
+                uc.NgayTra = dateTimePicker1.Value;
+
                 uc.viTri = j * 148;
                 uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                 uc.tenKhachSan = truyen.tenKhachSan[j];

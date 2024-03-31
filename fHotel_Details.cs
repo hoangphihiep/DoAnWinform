@@ -16,6 +16,8 @@ namespace DuLich
     {
 
         int iDanhGia = 0;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public fHotel_Details(int maks)
         {
             this.maks = maks;
@@ -156,7 +158,10 @@ namespace DuLich
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
                 Room room = new Room(sokhach, sogiuong,gia, tenphong, maphong, sophong, sophongdd, anh);
-                flbRoom.Controls.Add(new UCPhong(room));
+                UCPhong uCPhong = new UCPhong(room);
+                uCPhong.NgayNhan = NgayNhan;
+                uCPhong.NgayTra = NgayTra;
+                flbRoom.Controls.Add(uCPhong);
                 i++;
             }
             conn.Close();

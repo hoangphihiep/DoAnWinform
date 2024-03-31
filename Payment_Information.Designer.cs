@@ -38,24 +38,26 @@
             lbl_ChoKhachHangXem = new Label();
             panel1 = new Panel();
             panel3 = new Panel();
-            lbl_TuanTheo = new Label();
+            label3 = new Label();
+            lbl_LastCost = new Label();
+            lbl_CostRoom = new Label();
+            lbl_Cost = new Label();
+            lbl_DichVuVaThue = new Label();
             lbl_Gia = new Label();
-            lbl_ThanHToan = new Label();
             lbl_BaoGom = new Label();
             lbl_GiaPhong = new Label();
             lbl_34 = new Label();
             panel10 = new Panel();
-            btn_ThayDoi = new Button();
-            panel11 = new Panel();
-            label19 = new Label();
-            label20 = new Label();
+            panel14 = new Panel();
             label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            btn_ThayDoi = new Button();
+            ptb_Anh = new Label();
             lbl_ChucMung = new Label();
             panel7 = new Panel();
             lbl_Wewill = new Label();
@@ -82,7 +84,7 @@
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel10.SuspendLayout();
-            panel11.SuspendLayout();
+            panel14.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
@@ -186,57 +188,90 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ButtonHighlight;
-            panel3.Controls.Add(lbl_TuanTheo);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(lbl_LastCost);
+            panel3.Controls.Add(lbl_CostRoom);
+            panel3.Controls.Add(lbl_Cost);
+            panel3.Controls.Add(lbl_DichVuVaThue);
             panel3.Controls.Add(lbl_Gia);
-            panel3.Controls.Add(lbl_ThanHToan);
             panel3.Controls.Add(lbl_BaoGom);
             panel3.Controls.Add(lbl_GiaPhong);
-            panel3.Location = new Point(678, 585);
+            panel3.Location = new Point(678, 594);
             panel3.Name = "panel3";
             panel3.Size = new Size(403, 243);
-            panel3.TabIndex = 120;
+            panel3.TabIndex = 125;
             // 
-            // lbl_TuanTheo
+            // label3
             // 
-            lbl_TuanTheo.AutoSize = true;
-            lbl_TuanTheo.BackColor = SystemColors.ButtonHighlight;
-            lbl_TuanTheo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_TuanTheo.Location = new Point(3, 179);
-            lbl_TuanTheo.Name = "lbl_TuanTheo";
-            lbl_TuanTheo.Size = new Size(367, 23);
-            lbl_TuanTheo.TabIndex = 121;
-            lbl_TuanTheo.Text = "Tuân theo điều khoản hoàn tiền     ₫ 3,894,199";
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ButtonHighlight;
+            label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(3, 173);
+            label3.Name = "label3";
+            label3.Size = new Size(90, 23);
+            label3.TabIndex = 125;
+            label3.Text = "Giá tổng : ";
+            // 
+            // lbl_LastCost
+            // 
+            lbl_LastCost.AutoSize = true;
+            lbl_LastCost.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_LastCost.Location = new Point(238, 175);
+            lbl_LastCost.Name = "lbl_LastCost";
+            lbl_LastCost.Size = new Size(44, 23);
+            lbl_LastCost.TabIndex = 124;
+            lbl_LastCost.Text = "Cost";
+            // 
+            // lbl_CostRoom
+            // 
+            lbl_CostRoom.AutoSize = true;
+            lbl_CostRoom.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_CostRoom.Location = new Point(238, 29);
+            lbl_CostRoom.Name = "lbl_CostRoom";
+            lbl_CostRoom.Size = new Size(44, 23);
+            lbl_CostRoom.TabIndex = 122;
+            lbl_CostRoom.Text = "Cost";
+            // 
+            // lbl_Cost
+            // 
+            lbl_Cost.AutoSize = true;
+            lbl_Cost.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Cost.Location = new Point(238, 92);
+            lbl_Cost.Name = "lbl_Cost";
+            lbl_Cost.Size = new Size(44, 23);
+            lbl_Cost.TabIndex = 123;
+            lbl_Cost.Text = "Cost";
+            // 
+            // lbl_DichVuVaThue
+            // 
+            lbl_DichVuVaThue.AutoSize = true;
+            lbl_DichVuVaThue.BackColor = SystemColors.ButtonHighlight;
+            lbl_DichVuVaThue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_DichVuVaThue.Location = new Point(3, 135);
+            lbl_DichVuVaThue.Name = "lbl_DichVuVaThue";
+            lbl_DichVuVaThue.Size = new Size(241, 20);
+            lbl_DichVuVaThue.TabIndex = 121;
+            lbl_DichVuVaThue.Text = "Sau khi bổ sung phí dịch vụ và thuế";
             // 
             // lbl_Gia
             // 
             lbl_Gia.AutoSize = true;
             lbl_Gia.BackColor = SystemColors.ButtonHighlight;
             lbl_Gia.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Gia.Location = new Point(3, 66);
+            lbl_Gia.Location = new Point(3, 92);
             lbl_Gia.Name = "lbl_Gia";
-            lbl_Gia.Size = new Size(348, 23);
+            lbl_Gia.Size = new Size(265, 23);
             lbl_Gia.TabIndex = 120;
-            lbl_Gia.Text = "Giá                                              ₫ 4,166,731";
-            // 
-            // lbl_ThanHToan
-            // 
-            lbl_ThanHToan.AutoSize = true;
-            lbl_ThanHToan.BackColor = SystemColors.ButtonHighlight;
-            lbl_ThanHToan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_ThanHToan.Location = new Point(3, 121);
-            lbl_ThanHToan.Name = "lbl_ThanHToan";
-            lbl_ThanHToan.Size = new Size(321, 20);
-            lbl_ThanHToan.TabIndex = 119;
-            lbl_ThanHToan.Text = "Thanh toán ₫ 4.166.731 ngay và nhận ₫ 272.532";
+            lbl_Gia.Text = "Giá                                              ";
             // 
             // lbl_BaoGom
             // 
             lbl_BaoGom.AutoSize = true;
             lbl_BaoGom.BackColor = SystemColors.ButtonHighlight;
-            lbl_BaoGom.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_BaoGom.Font = new Font("Segoe UI", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
             lbl_BaoGom.Location = new Point(3, 220);
             lbl_BaoGom.Name = "lbl_BaoGom";
-            lbl_BaoGom.Size = new Size(288, 17);
+            lbl_BaoGom.Size = new Size(279, 17);
             lbl_BaoGom.TabIndex = 118;
             lbl_BaoGom.Text = "Đã bao gồm trong giá: Thuế 8%, Phí dịch vụ 5%";
             // 
@@ -244,11 +279,11 @@
             // 
             lbl_GiaPhong.AutoSize = true;
             lbl_GiaPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaPhong.Location = new Point(3, 3);
+            lbl_GiaPhong.Location = new Point(3, 29);
             lbl_GiaPhong.Name = "lbl_GiaPhong";
-            lbl_GiaPhong.Size = new Size(366, 46);
+            lbl_GiaPhong.Size = new Size(363, 46);
             lbl_GiaPhong.TabIndex = 117;
-            lbl_GiaPhong.Text = "Giá phòng (1 phòng x 1 đêm)         ₫ 3.674.366\r\nPhí đặt chỗ                                      MIỄN PHÍ";
+            lbl_GiaPhong.Text = "Giá phòng (1 phòng x 1 đêm)        \r\nPhí đặt chỗ                                      MIỄN PHÍ";
             // 
             // lbl_34
             // 
@@ -261,18 +296,102 @@
             lbl_34.Size = new Size(260, 23);
             lbl_34.TabIndex = 119;
             lbl_34.Text = "GIẢM GIÁ 34% NGAY HÔM NAY";
+            lbl_34.Visible = false;
             // 
             // panel10
             // 
             panel10.BackColor = SystemColors.ControlLightLight;
+            panel10.Controls.Add(panel14);
             panel10.Controls.Add(btn_ThayDoi);
-            panel10.Controls.Add(panel11);
-            panel10.Controls.Add(label27);
+            panel10.Controls.Add(ptb_Anh);
             panel10.Location = new Point(678, 48);
             panel10.Margin = new Padding(3, 4, 3, 4);
             panel10.Name = "panel10";
             panel10.Size = new Size(403, 372);
             panel10.TabIndex = 119;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(label21);
+            panel14.Controls.Add(label20);
+            panel14.Controls.Add(label19);
+            panel14.Controls.Add(label18);
+            panel14.Controls.Add(label17);
+            panel14.Controls.Add(label16);
+            panel14.Controls.Add(label15);
+            panel14.Location = new Point(16, 197);
+            panel14.Margin = new Padding(3, 4, 3, 4);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(330, 153);
+            panel14.TabIndex = 8;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(159, 124);
+            label21.Name = "label21";
+            label21.Size = new Size(97, 20);
+            label21.TabIndex = 6;
+            label21.Text = "/phòng/đêm.";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.DarkTurquoise;
+            label20.Location = new Point(3, 119);
+            label20.Name = "label20";
+            label20.Size = new Size(162, 25);
+            label20.TabIndex = 5;
+            label20.Text = "16.709.490  VND";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(146, 85);
+            label19.Name = "label19";
+            label19.Size = new Size(17, 20);
+            label19.TabIndex = 4;
+            label19.Text = "4";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(3, 85);
+            label18.Name = "label18";
+            label18.Size = new Size(148, 20);
+            label18.TabIndex = 3;
+            label18.Text = "Số phòng còn trống :";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(80, 52);
+            label17.Name = "label17";
+            label17.Size = new Size(17, 20);
+            label17.TabIndex = 2;
+            label17.Text = "2";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.ForeColor = Color.DimGray;
+            label16.Location = new Point(3, 52);
+            label16.Name = "label16";
+            label16.Size = new Size(75, 20);
+            label16.TabIndex = 1;
+            label16.Text = "Số khách :";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = SystemColors.ControlText;
+            label15.Location = new Point(3, 13);
+            label15.Name = "label15";
+            label15.Size = new Size(310, 25);
+            label15.TabIndex = 0;
+            label15.Text = "Beach Front 1 Bedroom Pool Villa";
             // 
             // btn_ThayDoi
             // 
@@ -285,107 +404,13 @@
             btn_ThayDoi.Text = "Thay đổi";
             btn_ThayDoi.UseVisualStyleBackColor = true;
             // 
-            // panel11
+            // ptb_Anh
             // 
-            panel11.Controls.Add(label19);
-            panel11.Controls.Add(label20);
-            panel11.Controls.Add(label21);
-            panel11.Controls.Add(label22);
-            panel11.Controls.Add(label23);
-            panel11.Controls.Add(label24);
-            panel11.Controls.Add(label25);
-            panel11.Controls.Add(label26);
-            panel11.Location = new Point(15, 193);
-            panel11.Margin = new Padding(3, 4, 3, 4);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(339, 163);
-            panel11.TabIndex = 1;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.ForeColor = SystemColors.ControlDarkDark;
-            label19.Location = new Point(144, 129);
-            label19.Name = "label19";
-            label19.Size = new Size(193, 20);
-            label19.TabIndex = 7;
-            label19.Text = "(2 khách, 1 phòng, 1 đêm)";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.ForeColor = SystemColors.MenuHighlight;
-            label20.Location = new Point(15, 129);
-            label20.Name = "label20";
-            label20.Size = new Size(132, 23);
-            label20.TabIndex = 6;
-            label20.Text = "3,674,366 VNĐ";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(9, 88);
-            label21.Name = "label21";
-            label21.Size = new Size(217, 20);
-            label21.TabIndex = 5;
-            label21.Text = "Nha Trang, Khánh Hòa Province";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Location = new Point(15, 104);
-            label22.Name = "label22";
-            label22.Size = new Size(0, 20);
-            label22.TabIndex = 4;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.ForeColor = SystemColors.HotTrack;
-            label23.Location = new Point(75, 68);
-            label23.Name = "label23";
-            label23.Size = new Size(55, 20);
-            label23.TabIndex = 3;
-            label23.Text = "(9/10)";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(10, 68);
-            label24.Name = "label24";
-            label24.Size = new Size(69, 20);
-            label24.TabIndex = 2;
-            label24.Text = "Đánh giá";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new Point(9, 48);
-            label25.Name = "label25";
-            label25.Size = new Size(179, 20);
-            label25.TabIndex = 1;
-            label25.Text = "Thứ 3, ngày 12 thg 3 2024";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.Location = new Point(9, 20);
-            label26.Name = "label26";
-            label26.Size = new Size(326, 28);
-            label26.TabIndex = 0;
-            label26.Text = "Melia Vinpearl Nha Trang Empire";
-            // 
-            // label27
-            // 
-            label27.Image = (Image)resources.GetObject("label27.Image");
-            label27.Location = new Point(16, 13);
-            label27.Name = "label27";
-            label27.Size = new Size(207, 171);
-            label27.TabIndex = 0;
+            ptb_Anh.Image = (Image)resources.GetObject("ptb_Anh.Image");
+            ptb_Anh.Location = new Point(16, 13);
+            ptb_Anh.Name = "ptb_Anh";
+            ptb_Anh.Size = new Size(207, 171);
+            ptb_Anh.TabIndex = 0;
             // 
             // lbl_ChucMung
             // 
@@ -415,9 +440,9 @@
             lbl_Wewill.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_Wewill.Location = new Point(10, 24);
             lbl_Wewill.Name = "lbl_Wewill";
-            lbl_Wewill.Size = new Size(421, 23);
+            lbl_Wewill.Size = new Size(441, 23);
             lbl_Wewill.TabIndex = 105;
-            lbl_Wewill.Text = "We'll send confirmation of your booking to your email";
+            lbl_Wewill.Text = "Chúng tôi sẽ gửi xác nhận đặt phòng đến email của bạn";
             // 
             // panel6
             // 
@@ -637,8 +662,8 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel10.ResumeLayout(false);
-            panel11.ResumeLayout(false);
-            panel11.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel6.ResumeLayout(false);
@@ -682,23 +707,25 @@
         private Label lbl_ThongTinThanhToan;
         private Panel panel10;
         private Button btn_ThayDoi;
-        private Panel panel11;
-        private Label label19;
-        private Label label20;
-        private Label label21;
-        private Label label22;
-        private Label label23;
-        private Label label24;
-        private Label label25;
-        private Label label26;
-        private Label label27;
+        private Label ptb_Anh;
         private Label lbl_ChucMung;
+        private Label lbl_34;
+        private Panel panel14;
+        private Label label21;
+        private Label label20;
+        private Label label19;
+        private Label label18;
+        private Label label17;
+        private Label label16;
+        private Label label15;
         private Panel panel3;
-        private Label lbl_TuanTheo;
+        private Label label3;
+        private Label lbl_LastCost;
+        private Label lbl_CostRoom;
+        private Label lbl_Cost;
+        private Label lbl_DichVuVaThue;
         private Label lbl_Gia;
-        private Label lbl_ThanHToan;
         private Label lbl_BaoGom;
         private Label lbl_GiaPhong;
-        private Label lbl_34;
     }
 }

@@ -13,6 +13,8 @@ namespace DuLich
 {
     public partial class UKhungKetQua : UserControl
     {
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public UKhungKetQua()
         {
             InitializeComponent();
@@ -22,7 +24,8 @@ namespace DuLich
         {
             fHotel_Details f = new fHotel_Details(maks);
             //this.Hide();
-            
+            f.NgayNhan = NgayNhan;
+            f.NgayTra = NgayTra;
             f.ShowDialog();
 
             this.Show();
