@@ -13,9 +13,9 @@ namespace DuLich
 {
     public partial class fPayment_Slip : Form
     {
-<<<<<<< HEAD
+
         DatPhong datphong;
-=======
+
         public string tk;
         public string mk;
         public Image tenAnh;
@@ -27,7 +27,7 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
->>>>>>> b2ef75ac2af6db1e301d1fd6d64be76a097b8cb9
+
         public fPayment_Slip()
         {
             InitializeComponent();
@@ -40,7 +40,6 @@ namespace DuLich
 
         private void fPayment_Slip_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             lblHotelName.Text= datphong.KS.TENKS;
             lblHotelAddress.Text = datphong.KS.DIACHI;
             lblCheckIn.Text = datphong.NgayNhan.ToString();
@@ -57,32 +56,32 @@ namespace DuLich
         void ChenDuLieuVaoBang()
         {
             string sqlString = string.Format("INSERT INTO ");
-=======
-            label11.Text = tenKhachSan;
-            //Diachi ????
-            label14.Text = sdt;
-            label4.Text = TenKhachHang;
-            label6.Text = sdt;
-            label25.Text = soKhach;
-            label27.Text = Gia;
-            pictureBox1.Image = tenAnh;
 
-            int ngayNhan = NgayNhan.Day;
-            int thangNhan = NgayNhan.Month;
-            int namNhan = NgayNhan.Year;
+            //label11.Text = tenKhachSan;
+            ////Diachi ????
+            //label14.Text = sdt;
+            //label4.Text = TenKhachHang;
+            //label6.Text = sdt;
+            //label25.Text = soKhach;
+            //label27.Text = Gia;
+            //pictureBox1.Image = tenAnh;
 
-            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            DateTime ngayThangNamNhan = new DateTime(namNhan, thangNhan, ngayNhan);
-            label18.Text = ngayThangNamNhan.ToString();
+            //int ngayNhan = NgayNhan.Day;
+            //int thangNhan = NgayNhan.Month;
+            //int namNhan = NgayNhan.Year;
+
+            //// Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
+            //DateTime ngayThangNamNhan = new DateTime(namNhan, thangNhan, ngayNhan);
+            //label18.Text = ngayThangNamNhan.ToString();
 
 
-            int ngayTra = NgayTra.Day;
-            int thangTra = NgayTra.Month;
-            int namTra = NgayTra.Year;
+            //int ngayTra = NgayTra.Day;
+            //int thangTra = NgayTra.Month;
+            //int namTra = NgayTra.Year;
 
-            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            DateTime ngayThangNamTra = new DateTime(namTra, thangTra, ngayTra);
-            label19.Text = ngayThangNamTra.ToString();
+            //// Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
+            //DateTime ngayThangNamTra = new DateTime(namTra, thangTra, ngayTra);
+            //label19.Text = ngayThangNamTra.ToString();
         }
         public void SetSDT(string Sdt)
         {
@@ -95,7 +94,6 @@ namespace DuLich
             TenKhachHang = tenKhachHang;
             // Gọi lại phương thức load dữ liệu
             fPayment_Slip_Load(this, EventArgs.Empty);
->>>>>>> b2ef75ac2af6db1e301d1fd6d64be76a097b8cb9
         }
 
         private void btn_Back_Click(object sender, EventArgs e)

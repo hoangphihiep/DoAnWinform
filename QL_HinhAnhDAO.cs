@@ -34,7 +34,7 @@ namespace DuLich
 
         public void Update(QL_HinhAnh acc, string TenQuanHe)
         {
-            string SQL = string.Format("UPDATE {0} SET TENANH = '{1}', ADDRESS = '{2}', MAANH = '{3}'  WHERE MAKS = '{4}'", TenQuanHe, acc.TENANH, acc.ADDRESS, acc.MAANH, acc.MAKS);
+            string SQL = string.Format("UPDATE {0} SET TENANH = '{1}', ADDRESS = '{2}'  WHERE MAKS = '{3}' and MAANH = '{4}'", TenQuanHe, acc.TENANH, acc.ADDRESS, acc.MAKS,acc.MAANH);
             //connection.ThucThi(acc, SQL);
             using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
@@ -45,13 +45,10 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
                     string relativePath = ExtractRelativePath(acc.ADDRESS);
                     cmd.Parameters.AddWithValue("@ADDRESS", relativePath);
-                    cmd.Parameters.AddWithValue("@MANH", acc.MAANH);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
             }
-
-
         }
         static string ExtractRelativePath(string fullPath)
         {
