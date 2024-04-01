@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,12 @@ namespace DuLich
         {
             InitializeComponent();
         }
-
+        public void SetTenTK(string tenTK)
+        {
+            tentk = tenTK;
+            // Gọi lại phương thức load dữ liệu
+            UThongTinKhachSan_Load(this, EventArgs.Empty);
+        }
         private void btn_ChinhSua_Click(object sender, EventArgs e)
         {
             try
@@ -81,6 +87,48 @@ namespace DuLich
             }
         }
 
+        private void UThongTinKhachSan_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string sql = "SELECT * FROM ThongTinCanBan WHERE TK = '" + tentk + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Clear existing columns in the DataGridView
+                dataGridView1.Columns.Clear();
+
+                // Add columns to the DataGridView
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("TK", "TK");
+                dataGridView1.Columns.Add("TENKH", "Tên KS");
+                dataGridView1.Columns.Add("MOTA", "Mô tả");
+                dataGridView1.Columns.Add("KCTHANHPHO", "Khoảng cách thành phố");
+                dataGridView1.Columns.Add("KCSANBAY", "Khoảng cách sân bay");
+                dataGridView1.Columns.Add("SAO", "Sao");
+                dataGridView1.Columns.Add("GIA", "Giá");
+                dataGridView1.Columns.Add("AnhBia", "Ảnh bìa");
+
+                while (reader.Read())
+                {
+                    int maks = reader.GetInt32(reader.GetOrdinal("MAKS"));
+                    string tk = reader.GetString(reader.GetOrdinal("TK"));
+                    string tenKH = reader.GetString(reader.GetOrdinal("TENKH"));
+                    string moTa = reader.IsDBNull(reader.GetOrdinal("MOTA")) ? string.Empty : reader.GetString(reader.GetOrdinal("MOTA"));
+                    int khoangCachTP = reader.IsDBNull(reader.GetOrdinal("KCTHANHPHO")) ? 0 : reader.GetInt32(reader.GetOrdinal("KCTHANHPHO"));
+                    int khoangCachSB = reader.IsDBNull(reader.GetOrdinal("KCSANBAY")) ? 0 : reader.GetInt32(reader.GetOrdinal("KCSANBAY"));
+                    int sao = reader.IsDBNull(reader.GetOrdinal("SAO")) ? 0 : reader.GetInt32(reader.GetOrdinal("SAO"));
+                    int gia = reader.IsDBNull(reader.GetOrdinal("GIA")) ? 0 : reader.GetInt32(reader.GetOrdinal("GIA"));
+                    string anhBia = reader.IsDBNull(reader.GetOrdinal("AnhBia")) ? string.Empty : reader.GetString(reader.GetOrdinal("AnhBia"));
+
+                    // Add rows to the DataGridView
+                    dataGridView1.Rows.Add(maks, tk, tenKH, moTa, khoangCachTP, khoangCachSB, sao, gia, anhBia);
+                }
+                reader.Close();
+            }
+        }
     }
 }
 

@@ -138,7 +138,7 @@
             Controls.Add(txt_TenDangNhap);
             Controls.Add(lbl_TenDangNhap);
             Name = "UMatKhau";
-            Size = new Size(684, 502);
+            Size = new Size(1221, 606);
             Load += UMatKhau_Load;
             VisibleChanged += UMatKhau_VisibleChanged;
             ResumeLayout(false);

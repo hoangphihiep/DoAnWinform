@@ -192,7 +192,7 @@
             Controls.Add(txt_MaKhachSan);
             Controls.Add(lbl_MaKS);
             Name = "UUuDai";
-            Size = new Size(824, 606);
+            Size = new Size(1221, 606);
             Load += U_UuDai_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

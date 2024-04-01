@@ -38,13 +38,15 @@
             cbb_ThanhPho = new ComboBox();
             cbb_Tinh = new ComboBox();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lbl_DiaChi
             // 
             lbl_DiaChi.AutoSize = true;
             lbl_DiaChi.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_DiaChi.Location = new Point(39, 101);
+            lbl_DiaChi.Location = new Point(39, 123);
             lbl_DiaChi.Name = "lbl_DiaChi";
             lbl_DiaChi.Size = new Size(67, 25);
             lbl_DiaChi.TabIndex = 1;
@@ -52,7 +54,7 @@
             // 
             // txt_DiaChi
             // 
-            txt_DiaChi.Location = new Point(284, 99);
+            txt_DiaChi.Location = new Point(284, 121);
             txt_DiaChi.Name = "txt_DiaChi";
             txt_DiaChi.Size = new Size(313, 27);
             txt_DiaChi.TabIndex = 16;
@@ -61,7 +63,7 @@
             // 
             lbl_Tinh.AutoSize = true;
             lbl_Tinh.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_Tinh.Location = new Point(39, 186);
+            lbl_Tinh.Location = new Point(39, 224);
             lbl_Tinh.Name = "lbl_Tinh";
             lbl_Tinh.Size = new Size(48, 25);
             lbl_Tinh.TabIndex = 19;
@@ -71,7 +73,7 @@
             // 
             lbl_ThanhPho.AutoSize = true;
             lbl_ThanhPho.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ThanhPho.Location = new Point(39, 268);
+            lbl_ThanhPho.Location = new Point(39, 337);
             lbl_ThanhPho.Name = "lbl_ThanhPho";
             lbl_ThanhPho.Size = new Size(99, 25);
             lbl_ThanhPho.TabIndex = 20;
@@ -110,7 +112,7 @@
             cbb_ThanhPho.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             cbb_ThanhPho.FormattingEnabled = true;
             cbb_ThanhPho.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
-            cbb_ThanhPho.Location = new Point(284, 262);
+            cbb_ThanhPho.Location = new Point(284, 331);
             cbb_ThanhPho.Name = "cbb_ThanhPho";
             cbb_ThanhPho.Size = new Size(313, 31);
             cbb_ThanhPho.TabIndex = 74;
@@ -120,7 +122,7 @@
             cbb_Tinh.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             cbb_Tinh.FormattingEnabled = true;
             cbb_Tinh.Items.AddRange(new object[] { "An Giang", "Bà Rịa - Vũng Tàu", "Bạc Liêu", "Bắc Giang", "Bắc Kạn", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh (TP.HCM)", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái" });
-            cbb_Tinh.Location = new Point(284, 180);
+            cbb_Tinh.Location = new Point(284, 218);
             cbb_Tinh.Name = "cbb_Tinh";
             cbb_Tinh.Size = new Size(313, 31);
             cbb_Tinh.TabIndex = 75;
@@ -135,10 +137,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(631, 82);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(564, 301);
+            dataGridView1.TabIndex = 77;
+            // 
             // UViTri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(cbb_Tinh);
             Controls.Add(cbb_ThanhPho);
@@ -150,9 +163,10 @@
             Controls.Add(txt_DiaChi);
             Controls.Add(lbl_DiaChi);
             Name = "UViTri";
-            Size = new Size(807, 563);
+            Size = new Size(1221, 606);
             Load += UViTri_Load;
             VisibleChanged += UViTri_VisibleChanged;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +183,6 @@
         private ComboBox cbb_ThanhPho;
         private ComboBox cbb_Tinh;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,12 @@ namespace DuLich
                 MessageBox.Show(ex.Message);
             }
         }
+        public void SetTenTK(string tenTK)
+        {
+            tentk = tenTK;
+            // Gọi lại phương thức load dữ liệu
+            UHoSo_Load(this, EventArgs.Empty);
+        }
 
         private void lbl_Email_Click(object sender, EventArgs e)
         {
@@ -64,7 +71,47 @@ namespace DuLich
 
         private void UHoSo_Load(object sender, EventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string sql = "SELECT * FROM HOSO WHERE TK = '" + tentk + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
 
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Clear existing columns in the DataGridView
+                dataGridView1.Columns.Clear();
+
+                // Add columns to the DataGridView
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("TK", "TK");
+                dataGridView1.Columns.Add("TENCHUKS", "Tên chủ KS");
+                dataGridView1.Columns.Add("SODIENTHOAI", "Số điện thoại");
+                dataGridView1.Columns.Add("EMAIL", "Email");
+                dataGridView1.Columns.Add("DIACHI", "Địa chỉ");
+                dataGridView1.Columns.Add("TENTHANHPHO", "Tên thành phố");
+                dataGridView1.Columns.Add("TINH", "Tỉnh");
+                dataGridView1.Columns.Add("THEDIENTU", "Thẻ điện tử");
+                dataGridView1.Columns.Add("NGANHANG", "Ngân hàng");
+
+                while (reader.Read())
+                {
+                    int maks = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    string tk = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                    string tenChuKS = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                    string soDienThoai = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                    string email = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
+                    string diaChi = reader.IsDBNull(5) ? string.Empty : reader.GetString(5);
+                    string tenThanhPho = reader.IsDBNull(6) ? string.Empty : reader.GetString(6);
+                    string tinh = reader.IsDBNull(7) ? string.Empty : reader.GetString(7);
+                    bool theDienTu = !reader.IsDBNull(8) && reader.GetBoolean(8);
+                    bool nganHang = !reader.IsDBNull(9) && reader.GetBoolean(9);
+
+                    // Add rows to the DataGridView
+                    dataGridView1.Rows.Add(maks, tk, tenChuKS, soDienThoai, email, diaChi, tenThanhPho, tinh, theDienTu, nganHang);
+                }
+                reader.Close();
+            }
         }
 
         private void UHoSo_VisibleChanged(object sender, EventArgs e)

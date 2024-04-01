@@ -251,7 +251,6 @@ namespace DuLich
                     uc.ShowSoKhach();
                     uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
                     uc.soLuong = truyen.soKhach[j];
-                    MessageBox.Show(truyen.soKhach[j]);
                     uc.tenKhachSan = truyen.tenKhachSan[j];
                     uc.tien = truyen.soTien[j];
                     uc.anhBia = truyen.address[j];
