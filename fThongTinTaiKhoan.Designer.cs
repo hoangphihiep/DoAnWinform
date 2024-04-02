@@ -43,6 +43,7 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
+            uThongtin1 = new UThongtin();
             uThongTinKhachSan1 = new UThongTinKhachSan();
             uViTri1 = new UViTri();
             uHoSo1 = new UHoSo();
@@ -54,7 +55,7 @@
             uMatKhau1 = new UMatKhau();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            uThongtin1 = new UThongtin();
+            uAnh2 = new UAnh();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -235,10 +236,18 @@
             panel5.Controls.Add(uUuDai1);
             panel5.Controls.Add(uTienNghi1);
             panel5.Controls.Add(uMatKhau1);
+            panel5.Controls.Add(uAnh2);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
             panel5.Size = new Size(1221, 700);
             panel5.TabIndex = 1;
+            // 
+            // uThongtin1
+            // 
+            uThongtin1.Location = new Point(-3, 6);
+            uThongtin1.Name = "uThongtin1";
+            uThongtin1.Size = new Size(1221, 700);
+            uThongtin1.TabIndex = 0;
             // 
             // uThongTinKhachSan1
             // 
@@ -304,12 +313,12 @@
             uMatKhau1.Size = new Size(1221, 700);
             uMatKhau1.TabIndex = 2;
             // 
-            // uThongtin1
+            // uAnh2
             // 
-            uThongtin1.Location = new Point(-3, 6);
-            uThongtin1.Name = "uThongtin1";
-            uThongtin1.Size = new Size(1221, 700);
-            uThongtin1.TabIndex = 0;
+            uAnh2.Location = new Point(0, 6);
+            uAnh2.Name = "uAnh2";
+            uAnh2.Size = new Size(1526, 758);
+            uAnh2.TabIndex = 8;
             // 
             // fThongTinTaiKhoan
             // 
@@ -356,5 +365,6 @@
         private UUuDai uUuDai1;
         private Button btn_HoSo;
         private UThongtin uThongtin1;
+        private UAnh uAnh2;
     }
 }

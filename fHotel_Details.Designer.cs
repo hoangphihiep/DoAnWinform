@@ -40,8 +40,8 @@
             label137 = new Label();
             label136 = new Label();
             label135 = new Label();
-            label134 = new Label();
-            label133 = new Label();
+            lblNextComment = new Label();
+            lblBackComment = new Label();
             flpDanhGiaKhachHang = new FlowLayoutPanel();
             panel55 = new Panel();
             comboBox1 = new ComboBox();
@@ -288,8 +288,8 @@
             panel56.Controls.Add(label137);
             panel56.Controls.Add(label136);
             panel56.Controls.Add(label135);
-            panel56.Controls.Add(label134);
-            panel56.Controls.Add(label133);
+            panel56.Controls.Add(lblNextComment);
+            panel56.Controls.Add(lblBackComment);
             panel56.Controls.Add(flpDanhGiaKhachHang);
             panel56.Location = new Point(234, 1999);
             panel56.Name = "panel56";
@@ -329,27 +329,29 @@
             label135.TabIndex = 3;
             label135.Text = ".";
             // 
-            // label134
+            // lblNextComment
             // 
-            label134.AutoSize = true;
-            label134.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label134.ForeColor = Color.DarkTurquoise;
-            label134.Location = new Point(599, 15);
-            label134.Name = "label134";
-            label134.Size = new Size(28, 30);
-            label134.TabIndex = 2;
-            label134.Text = ">";
+            lblNextComment.AutoSize = true;
+            lblNextComment.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNextComment.ForeColor = Color.DarkTurquoise;
+            lblNextComment.Location = new Point(599, 15);
+            lblNextComment.Name = "lblNextComment";
+            lblNextComment.Size = new Size(28, 30);
+            lblNextComment.TabIndex = 2;
+            lblNextComment.Text = ">";
+            lblNextComment.Click += lblNextComment_Click;
             // 
-            // label133
+            // lblBackComment
             // 
-            label133.AutoSize = true;
-            label133.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label133.ForeColor = Color.DarkTurquoise;
-            label133.Location = new Point(529, 15);
-            label133.Name = "label133";
-            label133.Size = new Size(28, 30);
-            label133.TabIndex = 1;
-            label133.Text = "<";
+            lblBackComment.AutoSize = true;
+            lblBackComment.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBackComment.ForeColor = Color.DarkTurquoise;
+            lblBackComment.Location = new Point(529, 15);
+            lblBackComment.Name = "lblBackComment";
+            lblBackComment.Size = new Size(28, 30);
+            lblBackComment.TabIndex = 1;
+            lblBackComment.Text = "<";
+            lblBackComment.Click += lblBackComment_Click;
             // 
             // flpDanhGiaKhachHang
             // 
@@ -1667,8 +1669,8 @@
         private Label label137;
         private Label label136;
         private Label label135;
-        private Label label134;
-        private Label label133;
+        private Label lblNextComment;
+        private Label lblBackComment;
         private Label lblPtRT;
         private Label label1;
         private Label lblPtK;

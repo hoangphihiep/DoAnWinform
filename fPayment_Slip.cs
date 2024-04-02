@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,10 +26,6 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
-        public fPayment_Slip()
-        {
-            InitializeComponent();
-        }
         public fPayment_Slip(DatPhong datphong)
         {
             this.datphong = datphong;
@@ -37,48 +34,34 @@ namespace DuLich
 
         private void fPayment_Slip_Load(object sender, EventArgs e)
         {
-            //lblHotelName.Text= datphong.KS.TENKS;
-            //lblHotelAddress.Text = datphong.KS.DIACHI;
-            //lblCheckIn.Text = datphong.NgayNhan.ToString();
-            //lblCheckOut.Text = datphong.NgayTra.ToString();
-            //lblRoomName.Text = datphong.Phong.ToString();
-            //lblRoomCount.Text = datphong.SoPhong.ToString();
-            //lblCustomerCount.Text = datphong.Phong.SoKhach.ToString();
-            //lblCustomerName.Text = datphong.KhachHang.Ten;
-            //lblPrice.Text = datphong.TongThanhToan.ToString();
-            //lblState.Text = datphong.TongThanhToan.ToString();
-            //lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
             ChenDuLieuVaoBang();
+            lblHotelName.Text= datphong.KS.TENKS;
+            lblHotelAddress.Text = datphong.KS.DIACHI;
+            lblCheckIn.Text = datphong.NgayNhan.ToString();
+            lblCheckOut.Text = datphong.NgayTra.ToString();
+            lblRoomName.Text = datphong.Phong.ToString();
+            lblRoomCount.Text = datphong.SoPhong.ToString();
+            lblCustomerCount.Text = datphong.Phong.SoKhach.ToString();
+            lblCustomerName.Text = datphong.KhachHang.Ten;
+            lblPrice.Text = datphong.TongThanhToan.ToString();
+            lblState.Text = datphong.TongThanhToan.ToString();
+            lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
         }
 
         void ChenDuLieuVaoBang()
         {
-            string sqlString = string.Format("INSERT INTO ");
-            lblHotelName.Text = tenKhachSan;
-            //Diachi ????
-            label14.Text = sdt;
-            lblCustomerName.Text = TenKhachHang;
-            label6.Text = sdt;
-            lblCustomerCount.Text = soKhach;
-            lblPrice.Text = Gia;
-            pictureBox1.Image = tenAnh;
-
-            int ngayNhan = NgayNhan.Day;
-            int thangNhan = NgayNhan.Month;
-            int namNhan = NgayNhan.Year;
-
-            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            DateTime ngayThangNamNhan = new DateTime(namNhan, thangNhan, ngayNhan);
-            lblCheckIn.Text = ngayThangNamNhan.ToString();
-
-
-            int ngayTra = NgayTra.Day;
-            int thangTra = NgayTra.Month;
-            int namTra = NgayTra.Year;
-
-            // Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            DateTime ngayThangNamTra = new DateTime(namTra, thangTra, ngayTra);
-            lblCheckOut.Text = ngayThangNamTra.ToString();
+            
+            try
+            {
+                string sqlString = string.Format("INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES ({0}, '{1}', '{2}', {3}, {4}, '{5}', {6}, {7})", datphong.KS.MAKS, datphong.NgayNhan, datphong.NgayTra, datphong.SoPhong, datphong.Phong.MaPhong, datphong.KhachHang.MaKH, datphong.TongThanhToan);
+                SqlConnection conn = Connection_to_SQL.getConnection();
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void SetSDT(string Sdt)
         {

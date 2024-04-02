@@ -55,7 +55,7 @@
             // ptb_AnhChinh
             // 
             ptb_AnhChinh.BackColor = SystemColors.ButtonShadow;
-            ptb_AnhChinh.Location = new Point(272, 83);
+            ptb_AnhChinh.Location = new Point(20, 83);
             ptb_AnhChinh.Name = "ptb_AnhChinh";
             ptb_AnhChinh.Size = new Size(214, 192);
             ptb_AnhChinh.TabIndex = 148;
@@ -132,7 +132,7 @@
             // ptb_AnhBia
             // 
             ptb_AnhBia.BackColor = SystemColors.ButtonShadow;
-            ptb_AnhBia.Location = new Point(20, 83);
+            ptb_AnhBia.Location = new Point(281, 83);
             ptb_AnhBia.Name = "ptb_AnhBia";
             ptb_AnhBia.Size = new Size(214, 192);
             ptb_AnhBia.TabIndex = 141;

@@ -30,6 +30,7 @@ namespace DuLich
             uMatKhau1.tentk = tentk;
             uUuDai1.tentk = tentk;
             uAnh1.tk = tentk;
+            uAnh2.SetTenTK(tentk);
             uTienNghi1.SetTenTK(tentk);
             Modify modify = new Modify();
             string query = "Select * from KHACHSAN_THUOC_TAIKHOAN where TaiKhoan = '" + tentk + "' ";
@@ -128,7 +129,7 @@ namespace DuLich
 
         private void btn_Anh_Click(object sender, EventArgs e)
         {
-            uAnh1.BringToFront();
+            uAnh2.BringToFront();
         }
 
         private void btn_HoSo_Click(object sender, EventArgs e)

@@ -206,5 +206,21 @@ namespace DuLich
             }
             return accounts;
         }
+        public List<QL_HinhAnh> QL_HinhAnh(string table)
+        {
+            List<QL_HinhAnh> accounts = new List<QL_HinhAnh>();
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                cmd = new SqlCommand(table, conn);
+                data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    accounts.Add(new QL_HinhAnh(data.GetInt32(0), data.GetString(1), data.GetString(2), data.GetInt32(3)));
+                }
+                conn.Close();
+            }
+            return accounts;
+        }
     }
 }

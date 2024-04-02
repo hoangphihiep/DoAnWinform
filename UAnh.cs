@@ -13,13 +13,14 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.Net;
+using System.Net.WebSockets;
 
 namespace DuLich
 {
     public partial class UAnh : UserControl
     {
-        List<int> maAnh = new List<int>();
+        int[] maAnh = new int[8];
         public string tk;
         public string anh1;
         public string anh2;
@@ -33,78 +34,94 @@ namespace DuLich
         {
             InitializeComponent();
         }
+        public void SetTenTK(string tenTK)
+        {
+            tk = tenTK;
+            // Gọi lại phương thức load dữ liệu
+            UAnh_Load(this, EventArgs.Empty);
+        }
 
         private void UAnh_Load(object sender, EventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string sql = "SELECT QA.* " +  "FROM QL_ANH QA " +  "JOIN KHACHSAN_THUOC_TAIKHOAN KT ON QA.MAKS = KT.MaKS " + "WHERE KT.TaiKhoan = '" + tk + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
 
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Clear existing columns in the DataGridView
+                dataGridView1.Columns.Clear();
+
+                // Add columns to the DataGridView
+                dataGridView1.Columns.Add("MAKS", "MAKS");
+                dataGridView1.Columns.Add("TENANH", "TENANH");
+                dataGridView1.Columns.Add("ADDRESS", "ADDRESS");
+                dataGridView1.Columns.Add("MAANH", "MAANH");
+
+                while (reader.Read())
+                {
+                    int maks = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    string tenanh = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                    string address = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                    int maAnh = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
+
+                    // Add rows to the DataGridView
+                    dataGridView1.Rows.Add(maks, tenanh, address, maAnh);
+                }
+                reader.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Modify modify = new Modify();
             if (txt_MaKhachSan.Text == "")
-                MessageBox.Show("Vui lòng nhập mã khách sạn");
+                MessageBox.Show("Hãy nhập mã khách sạn");
             else
             {
-                List<string> list = new List<string>();
-                string connectionString = Connection_to_SQL.getConnnection();
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string query = "SELECT QA.* " +
+                             "FROM QL_ANH QA " +
+                             "JOIN KHACHSAN_THUOC_TAIKHOAN KT ON QA.MAKS = KT.MaKS " +
+                             "WHERE KT.TaiKhoan = '" + tk + "' AND QA.MAKS = " + int.Parse(txt_MaKhachSan.Text);
+                QL_HinhAnhDAO Dao = new QL_HinhAnhDAO();
+                List<QL_HinhAnh> list_Anh = modify.QL_HinhAnh(query);
+                if (list_Anh.Count() >= 8)
                 {
-                    try
+                    ptb_AnhChinh.Visible = true;
+                    ptb_AnhBia.Visible = true;
+                    ptb_Anh1.Visible = true;
+                    ptb_Anh2.Visible = true;
+                    ptb_Anh3.Visible = true;
+                    ptb_Anh4.Visible = true;
+                    ptb_Anh5.Visible = true;
+                    ptb_Anh6.Visible = true;
+                    ptb_AnhChinh.Image = System.Drawing.Image.FromFile(list_Anh[0].ADDRESS);
+                    ptb_AnhBia.Image = System.Drawing.Image.FromFile(list_Anh[1].ADDRESS);
+                    ptb_Anh1.Image = System.Drawing.Image.FromFile(list_Anh[2].ADDRESS);
+                    ptb_Anh2.Image = System.Drawing.Image.FromFile(list_Anh[3].ADDRESS);
+                    ptb_Anh3.Image = System.Drawing.Image.FromFile(list_Anh[4].ADDRESS);
+                    ptb_Anh4.Image = System.Drawing.Image.FromFile(list_Anh[5].ADDRESS);
+                    ptb_Anh5.Image = System.Drawing.Image.FromFile(list_Anh[6].ADDRESS);
+                    ptb_Anh6.Image = System.Drawing.Image.FromFile(list_Anh[7].ADDRESS);
+
+                    anhChinh = list_Anh[0].ADDRESS;
+                    anh1 = list_Anh[1].ADDRESS;
+                    anh2 = list_Anh[2].ADDRESS;
+                    anh3 = list_Anh[3].ADDRESS;
+                    anh4 = list_Anh[4].ADDRESS;
+                    anh5 = list_Anh[5].ADDRESS;
+                    anh6 = list_Anh[6].ADDRESS;
+                    anh7 = list_Anh[7].ADDRESS;
+
+                    for (int i = 0; i < 8; i++)
                     {
-                        connection.Open();
-
-                        string query = "SELECT * FROM QL_ANH WHERE MAKS = @MAKS ";
-
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@MAKS", txt_MaKhachSan.Text);
-
-                            using (SqlDataReader reader = command.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    string address = reader["ADDRESS"].ToString();
-                                    string picture  = reader["MAANH"].ToString();
-                                    maAnh.Add(int.Parse(picture));
-                                    list.Add(address);
-                                }
-                                anhChinh = list[0];
-                                anh1 = list[1];
-                                anh2 = list[2];
-                                anh3 = list[3];
-                                anh4 = list[4];
-                                anh5 = list[5];
-                                anh6 = list[6];
-                                anh7 = list[7];
-                            }
-                        }
-                        if (list.Count >= 8)
-                        {
-                            ptb_AnhChinh.Image = System.Drawing.Image.FromFile(anhChinh);
-                            ptb_AnhBia.Image = System.Drawing.Image.FromFile(anh1);
-                            ptb_Anh1.Image = System.Drawing.Image.FromFile(anh2);
-                            ptb_Anh2.Image = System.Drawing.Image.FromFile(anh3);
-                            ptb_Anh3.Image = System.Drawing.Image.FromFile(anh4);
-                            ptb_Anh4.Image = System.Drawing.Image.FromFile(anh5);
-                            ptb_Anh5.Image = System.Drawing.Image.FromFile(anh6);
-                            ptb_Anh6.Image = System.Drawing.Image.FromFile(anh7);
-                            ptb_AnhChinh.Refresh();
-                            ptb_AnhBia.Refresh();
-                            ptb_Anh1.Refresh();
-                            ptb_Anh2.Refresh();
-                            ptb_Anh3.Refresh();
-                            ptb_Anh4.Refresh();
-                            ptb_Anh5.Refresh();
-                            ptb_Anh6.Refresh();
-                        }
-                    }
-
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error: " + ex.Message);
+                        maAnh[i] = list_Anh[i].MAANH;
                     }
                 }
             }
+
         }
 
         private void btn_ChinhSua_Click(object sender, EventArgs e)
@@ -126,6 +143,7 @@ namespace DuLich
             dao.Update(Anh4, "QL_ANH");
             dao.Update(Anh5, "QL_ANH");
             dao.Update(Anh6, "QL_ANH");
+            MessageBox.Show("Update thành công");
         }
             
 
