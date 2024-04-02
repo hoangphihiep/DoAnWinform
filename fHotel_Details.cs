@@ -22,6 +22,7 @@ namespace DuLich
         public fHotel_Details(int maks)
         {
             this.maks = maks;
+            listdg = new List<DanhGia>();
             InitializeComponent();
         }
 
