@@ -21,7 +21,6 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
                     string relativePath = ExtractRelativePath(acc.ADDRESS);
-                    MessageBox.Show(relativePath);
                     // Handle null value for ADDRESS
                     SqlParameter addressParam = new SqlParameter("@ADDRESS", relativePath ?? (object)DBNull.Value);
                     cmd.Parameters.Add(addressParam);

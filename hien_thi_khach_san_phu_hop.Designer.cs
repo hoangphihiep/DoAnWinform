@@ -45,8 +45,8 @@
             label5 = new Label();
             label4 = new Label();
             btn_TimKiem = new Button();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
+            nUD_treEm = new NumericUpDown();
+            nUD_nguoiLon = new NumericUpDown();
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             lb_TimKiem = new TextBox();
@@ -79,8 +79,8 @@
             panel5 = new Panel();
             panel_menu.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nUD_treEm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).BeginInit();
             tabControl1.SuspendLayout();
             tabKhoangCach.SuspendLayout();
             panel_KhoangCach.SuspendLayout();
@@ -212,8 +212,8 @@
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(btn_TimKiem);
-            panel3.Controls.Add(numericUpDown2);
-            panel3.Controls.Add(numericUpDown1);
+            panel3.Controls.Add(nUD_treEm);
+            panel3.Controls.Add(nUD_nguoiLon);
             panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(dateTimePicker2);
             panel3.Controls.Add(lb_TimKiem);
@@ -290,19 +290,19 @@
             btn_TimKiem.UseVisualStyleBackColor = false;
             btn_TimKiem.Click += btn_TimKiem_Click_1;
             // 
-            // numericUpDown2
+            // nUD_treEm
             // 
-            numericUpDown2.Location = new Point(981, 42);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(175, 27);
-            numericUpDown2.TabIndex = 26;
+            nUD_treEm.Location = new Point(981, 42);
+            nUD_treEm.Name = "nUD_treEm";
+            nUD_treEm.Size = new Size(175, 27);
+            nUD_treEm.TabIndex = 26;
             // 
-            // numericUpDown1
+            // nUD_nguoiLon
             // 
-            numericUpDown1.Location = new Point(779, 42);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(175, 27);
-            numericUpDown1.TabIndex = 25;
+            nUD_nguoiLon.Location = new Point(779, 42);
+            nUD_nguoiLon.Name = "nUD_nguoiLon";
+            nUD_nguoiLon.Size = new Size(175, 27);
+            nUD_nguoiLon.TabIndex = 25;
             // 
             // dateTimePicker1
             // 
@@ -356,6 +356,7 @@
             // 
             // tab_GiaThapNhat
             // 
+            tab_GiaThapNhat.AutoScroll = true;
             tab_GiaThapNhat.Location = new Point(4, 50);
             tab_GiaThapNhat.Name = "tab_GiaThapNhat";
             tab_GiaThapNhat.Padding = new Padding(3);
@@ -366,6 +367,7 @@
             // 
             // tabKhoangCach
             // 
+            tabKhoangCach.AutoScroll = true;
             tabKhoangCach.Controls.Add(panel_KhoangCach);
             tabKhoangCach.Location = new Point(4, 50);
             tabKhoangCach.Name = "tabKhoangCach";
@@ -410,6 +412,7 @@
             // 
             // tab_DanhGiaCao
             // 
+            tab_DanhGiaCao.AutoScroll = true;
             tab_DanhGiaCao.Location = new Point(4, 50);
             tab_DanhGiaCao.Name = "tab_DanhGiaCao";
             tab_DanhGiaCao.Size = new Size(990, 479);
@@ -629,8 +632,8 @@
             panel_menu.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nUD_treEm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).EndInit();
             tabControl1.ResumeLayout(false);
             tabKhoangCach.ResumeLayout(false);
             panel_KhoangCach.ResumeLayout(false);
@@ -649,8 +652,8 @@
         private TextBox lb_TimKiem;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown nUD_nguoiLon;
+        private NumericUpDown nUD_treEm;
         private TabControl tabControl1;
         private TabPage tab_PhuHopNhat;
         private TabPage tab_GiaThapNhat;

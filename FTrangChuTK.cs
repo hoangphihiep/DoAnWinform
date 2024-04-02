@@ -687,6 +687,7 @@ namespace DoAnDuLich
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
+                k.tentk = tentk;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -704,6 +705,7 @@ namespace DoAnDuLich
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number; 
                 k.soLuongTreEm = number1;
+                k.tentk = tentk;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -716,6 +718,7 @@ namespace DoAnDuLich
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
+                k.tentk = tentk;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();

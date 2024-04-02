@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            uUuDai1 = new UUuDai();
+            u_HienThiPhong1 = new U_HienThiPhong();
             SuspendLayout();
             // 
-            // uUuDai1
+            // u_HienThiPhong1
             // 
-            uUuDai1.Location = new Point(12, 12);
-            uUuDai1.Name = "uUuDai1";
-            uUuDai1.Size = new Size(1030, 645);
-            uUuDai1.TabIndex = 0;
+            u_HienThiPhong1.Location = new Point(33, 70);
+            u_HienThiPhong1.Name = "u_HienThiPhong1";
+            u_HienThiPhong1.Size = new Size(730, 320);
+            u_HienThiPhong1.TabIndex = 0;
             // 
             // f
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1057, 674);
-            Controls.Add(uUuDai1);
+            Controls.Add(u_HienThiPhong1);
             Name = "f";
             Text = "f";
             Load += f_Load;
@@ -52,6 +52,6 @@
 
         #endregion
 
-        private UUuDai uUuDai1;
+        private U_HienThiPhong u_HienThiPhong1;
     }
 }

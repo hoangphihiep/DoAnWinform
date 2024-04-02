@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -20,11 +21,9 @@ namespace DuLich
         public string[] khoangCachTP { get; set; }
         public string[] khoangCachSanBay { get; set; }
         public string[] danhGia { get; set; }
-        public string[] maKS { get; set; }
+        public int[] maKS { get; set; }
         public string[] address { get; set; }
         public string[] soKhach { get; set; }
-
-        List<int> soKhach1 = new List<int>();
         public TruyenDuLieu()
         {
             // Khởi tạo các mảng
@@ -37,6 +36,7 @@ namespace DuLich
             danhGia = new string[100];
             address = new string[100];
             soKhach = new string[100];
+            maKS = new int[100];
         }
         public void Truyen2 (string diaDiem, int min, int max)
         {
@@ -50,6 +50,7 @@ namespace DuLich
             Array.Clear(danhGia, 0, danhGia.Length);
             Array.Clear(address, 0, address.Length);
             Array.Clear(soKhach, 0, soKhach.Length);
+            Array.Clear(maKS, 0, maKS.Length);
             string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE TINH = @diadiem AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1} ", min,max);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
@@ -104,7 +105,8 @@ namespace DuLich
             Array.Clear(danhGia, 0, danhGia.Length);
             Array.Clear(address, 0, address.Length);
             Array.Clear(soKhach, 0, soKhach.Length);
-            string query1 = string.Format("SELECT MIN(GIA) as MinGia FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG GROUP BY ViTri.MAKS");
+            Array.Clear(maKS, 0, maKS.Length);
+            string query1 = string.Format("SELECT MIN(GIA) as MinGia, ViTri.MAKS as VMaKS  FROM PHONG,QLPHONG,ViTri WHERE ViTri.TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG GROUP BY ViTri.MAKS");
             SqlConnection conn1 = Connection_to_SQL.getConnection();
             conn1.Open();
             SqlCommand command1 = new SqlCommand(query1, conn1);
@@ -114,9 +116,11 @@ namespace DuLich
             while (reader1.Read())
             {
                 int giaColumnIndex = reader1.GetOrdinal("MinGia");
-                if (!reader1.IsDBNull(giaColumnIndex))
+                int maColumnIndex = reader1.GetOrdinal("VMaKS");
+                if (!reader1.IsDBNull(giaColumnIndex) && !reader1.IsDBNull(maColumnIndex))
                 {
                     double gia = reader1.GetDouble(giaColumnIndex);
+                    int ma = reader1.GetInt32(maColumnIndex);
                     string sqlStr = "UPDATE ThongTinCanBan SET GIA = @GIA WHERE MAKS = @MAKS";
                     using (SqlConnection conn2 = Connection_to_SQL.getConnection())
                     {
@@ -124,7 +128,7 @@ namespace DuLich
                         using (SqlCommand cmd2 = new SqlCommand(sqlStr, conn2))
                         {
                             cmd2.Parameters.AddWithValue("@GIA", gia);
-                            cmd2.Parameters.AddWithValue("@MAKS", i);
+                            cmd2.Parameters.AddWithValue("@MAKS", ma);
                             cmd2.ExecuteNonQuery();
                         }
                         conn2.Close();
@@ -157,6 +161,12 @@ namespace DuLich
                 {
                     double gia = reader.GetDouble(giaNhoCachTPColumnIndex);
                     soTien[j] = gia.ToString() + " VNĐ";
+                }
+                int maksColumnIndex = reader.GetOrdinal("VMaKS");
+                if (!reader.IsDBNull(maksColumnIndex))
+                {
+                    int ma = reader.GetInt32(maksColumnIndex);
+                    maKS[j] = ma;
                 }
                 int khoangCachTPColumnIndex = reader.GetOrdinal("KCTHANHPHO");
                 if (!reader.IsDBNull(khoangCachTPColumnIndex))

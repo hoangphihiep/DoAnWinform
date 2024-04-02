@@ -13,6 +13,8 @@ namespace DuLich
 {
     public partial class UKhungKetQua : UserControl
     {
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public UKhungKetQua()
         {
             InitializeComponent();
@@ -22,7 +24,8 @@ namespace DuLich
         {
             fHotel_Details f = new fHotel_Details(maks);
             //this.Hide();
-
+            f.NgayNhan = NgayNhan;
+            f.NgayTra = NgayTra;
             f.ShowDialog();
 
             this.Show();
@@ -73,13 +76,6 @@ namespace DuLich
             lbl_KhoangCach.Text = khoangCach;
             pictureBox1.Image = Image.FromFile(anhBia);
             lbl_SoLuong.Text = soLuong;
-            /*if (hinhanh != null)
-            {
-                using (MemoryStream ms = new MemoryStream(hinhanh))
-                {
-                    pictureBox1.Image = Image.FromStream(ms);
-                }
-            }*/
         }
     }
 }

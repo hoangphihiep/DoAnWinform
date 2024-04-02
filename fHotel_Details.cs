@@ -16,6 +16,8 @@ namespace DuLich
     {
 
         int iDanhGia = 0;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public fHotel_Details(int maks)
         {
             this.maks = maks;
@@ -56,10 +58,10 @@ namespace DuLich
             ChenTNChinh();
             ChenTienNghi();
             ChenPhong();
-            ChenDanhGia();
+            //ChenDanhGia();
         }
 
-        void ChenDanhGiaKhachHang(List<DanhGia> list)
+        /*void ChenDanhGiaKhachHang(List<DanhGia> list)
         {
             lblNameDG.Text = list[0].TenKH;
             lblDiemDG.Text = list[0].Diem.ToString();
@@ -133,7 +135,7 @@ namespace DuLich
             lblK2.Text = k.ToString();
             ChenDanhGiaKhachHang(list);
             conn.Close();
-        }
+        }*/
 
         void ChenPhong()
         {
@@ -156,7 +158,10 @@ namespace DuLich
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
                 Room room = new Room(sokhach, sogiuong,gia, tenphong, maphong, sophong, sophongdd, anh);
-                flbRoom.Controls.Add(new UCPhong(room));
+                UCPhong uCPhong = new UCPhong(room);
+                uCPhong.NgayNhan = NgayNhan;
+                uCPhong.NgayTra = NgayTra;
+                flbRoom.Controls.Add(uCPhong);
                 i++;
             }
             conn.Close();
@@ -281,7 +286,13 @@ namespace DuLich
                     double gia = reader.GetDouble(giaColumnIndex);
                     lblPrice.Text = gia.ToString() + " VNĐ";
                 }
-
+                int danhGiaColumnIndex = reader.GetOrdinal("SAO");
+                if (!reader.IsDBNull(danhGiaColumnIndex))
+                {
+                    int gia = reader.GetInt32(danhGiaColumnIndex);
+                    lblDG1.Text = gia.ToString();
+                    lblDG2.Text = gia.ToString();
+                }
                 i++;
             }
             conn.Close();

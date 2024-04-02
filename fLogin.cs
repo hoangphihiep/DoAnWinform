@@ -98,6 +98,7 @@ namespace DuLich
                 txt_MatKhau.Clear();
             }
         }
+        public string taikhoan;
         Modify modify = new Modify();
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
@@ -119,10 +120,13 @@ namespace DuLich
                     {
                         name = result.FirstOrDefault().getHoTen.ToString();
                         tk = result.FirstOrDefault().getTenDangNhap.ToString();
+                        taikhoan = tk;
+                        //MessageBox.Show(tk);
                         MessageBox.Show("Đăng nhập thành công");
                         if (y == 1)
                         {
                             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
+                            k.tentk = name;
                             k.KT_DangNhap1++;
                             k.ShowMenuStrip();
                             k.HideDangNhap();
@@ -132,15 +136,16 @@ namespace DuLich
                             k.ShowDialog();
                             this.Close();
                         }
-                        //else if(y == 2)
-                        //{
-                        //    Customer_Information k = new Customer_Information();
-                        //    k.tk = tk;
-                        //    k.mk = mk;
-                        //    this.Hide();
-                        //    k.ShowDialog();
-                        //    this.Close();
-                        //}
+                        else if (y == 2)
+                        {
+                            Customer_Information k = new Customer_Information();
+                            k.tk = tk;
+                            k.mk = mk;
+                            k.HienThi();
+                            this.Hide();
+                            k.ShowDialog();
+                            this.Close();
+                        }
                         else
                         {
                             FTrangChuTK f = new FTrangChuTK();

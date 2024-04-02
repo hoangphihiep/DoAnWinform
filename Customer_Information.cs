@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,13 @@ namespace DuLich
     {
         public string tk;
         public string mk;
+        public Image tenAnh;
+        public string tenKhachSan;
+        public string soKhach;
+        public string soPhongConTrong;
+        public string Gia;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         public Customer_Information()
         {
             InitializeComponent();
@@ -46,6 +54,21 @@ namespace DuLich
         private void Customer_Information_Load(object sender, EventArgs e)
         {
 
+            string GiaChuyenDoi = Gia;
+            double giaTien;
+            double.TryParse(GiaChuyenDoi, out giaTien);
+
+            ptb_Anh.Image = tenAnh;
+            label15.Text = tenKhachSan;
+            label17.Text = soKhach;
+            label19.Text = soPhongConTrong;
+            label20.Text = Gia;
+            lbl_CostRoom.Text = Gia;
+            lbl_Cost.Text = Gia;
+
+            giaTien *= 1.13;
+
+            lbl_LastCost.Text = giaTien.ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -61,6 +84,15 @@ namespace DuLich
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
             Payment_Information f = new Payment_Information();
+            f.tenAnh = tenAnh;
+            f.tenKhachSan = tenKhachSan;
+            f.soKhach = soKhach;
+            f.soPhongConTrong = soPhongConTrong;
+            f.Gia = Gia;
+            f.sdt = txt_SoDienThoai.Text;
+            f.TenKhachHang = txt_HoVaTen.Text;
+            f.NgayNhan = NgayNhan;
+            f.NgayTra = NgayTra;
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -98,11 +130,15 @@ namespace DuLich
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            Modify modify = new Modify();
             fLogin k = new fLogin();
+            k.KiemTra(2);
             this.Hide();
             k.ShowDialog();
             this.Close();
+        }
+        public void HienThi()
+        {
+            Modify modify = new Modify();
             lbl_NhanUuDai.Visible = false;
             btn_DangNhap.Visible = false;
             lbl_MaGiamGia.Visible = true;
@@ -120,6 +156,16 @@ namespace DuLich
             txt_SoDienThoai.Text = acc.getSoDienThoai;
             txt_DiaChi.Text = acc.getDiaChi;
             dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
+        }
+
+        private void btn_ThayDoi_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lbl_DichVuVaThue_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
