@@ -18,6 +18,7 @@ namespace DuLich
         int iDanhGia = 0;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        List<DanhGia> listdg;
         public fHotel_Details(int maks)
         {
             this.maks = maks;
@@ -61,13 +62,13 @@ namespace DuLich
             ChenDanhGia();
         }
 
-        void ChenDanhGiaKhachHang(List<DanhGia> list)
+        void ChenDanhGiaKhachHang()
         {
-            lblNameDG.Text = list[0].TenKH;
-            lblDiemDG.Text = list[0].Diem.ToString();
-            lblContentDG.Text = list[0].NoiDung;
-            UCComment uc1 = new UCComment(list[iDanhGia++]);
-            UCComment uc2 = new UCComment(list[iDanhGia++]);
+            lblNameDG.Text = listdg[0].TenKH;
+            lblDiemDG.Text = listdg[0].Diem.ToString();
+            lblContentDG.Text = listdg[0].NoiDung;
+            UCComment uc1 = new UCComment(listdg[iDanhGia++]);
+            UCComment uc2 = new UCComment(listdg[iDanhGia++]);
             flpDanhGiaKhachHang.Controls.Add(uc1);
             flpDanhGiaKhachHang.Controls.Add(uc2);
         }
@@ -110,7 +111,7 @@ namespace DuLich
                 tong += diem;
                 n++;
                 DanhGia dg = new DanhGia(tenKH, diem, noidung, maks);
-                list.Add(dg);
+                listdg.Add(dg);
             }
             lblCommentCount.Text = string.Format("Từ " + n + " khách hàng đã ở");
             double dtb = (float)tong / n;
@@ -133,7 +134,7 @@ namespace DuLich
             lblTB2.Text = tb.ToString();
             lblK1.Text = k.ToString();
             lblK2.Text = k.ToString();
-            ChenDanhGiaKhachHang(list);
+            ChenDanhGiaKhachHang();
             conn.Close();
         }
 
@@ -157,7 +158,7 @@ namespace DuLich
                 int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
-                Room room = new Room(sokhach, sogiuong,gia, tenphong, maphong, sophong, sophongdd, anh);
+                Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
                 UCPhong uCPhong = new UCPhong(room);
                 uCPhong.NgayNhan = NgayNhan;
                 uCPhong.NgayTra = NgayTra;
@@ -366,5 +367,24 @@ namespace DuLich
 
         }
 
+        private void lblBackComment_Click(object sender, EventArgs e)
+        {
+            if (iDanhGia >= 2)
+            {
+                iDanhGia -= 2;
+                flpDanhGiaKhachHang.Controls.Clear();
+                ChenDanhGiaKhachHang();
+            }
+        }
+
+        private void lblNextComment_Click(object sender, EventArgs e)
+        {
+            if (iDanhGia < listdg.Count-2)
+            {
+                iDanhGia += 2;
+                flpDanhGiaKhachHang.Controls.Clear();
+                ChenDanhGiaKhachHang();
+            }
+        }
     }
 }

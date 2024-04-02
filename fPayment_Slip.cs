@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,33 +56,17 @@ namespace DuLich
 
         void ChenDuLieuVaoBang()
         {
-            string sqlString = string.Format("INSERT INTO ");
-
-            //label11.Text = tenKhachSan;
-            ////Diachi ????
-            //label14.Text = sdt;
-            //label4.Text = TenKhachHang;
-            //label6.Text = sdt;
-            //label25.Text = soKhach;
-            //label27.Text = Gia;
-            //pictureBox1.Image = tenAnh;
-
-            //int ngayNhan = NgayNhan.Day;
-            //int thangNhan = NgayNhan.Month;
-            //int namNhan = NgayNhan.Year;
-
-            //// Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            //DateTime ngayThangNamNhan = new DateTime(namNhan, thangNhan, ngayNhan);
-            //label18.Text = ngayThangNamNhan.ToString();
-
-
-            //int ngayTra = NgayTra.Day;
-            //int thangTra = NgayTra.Month;
-            //int namTra = NgayTra.Year;
-
-            //// Tạo một đối tượng DateTime chỉ chứa ngày tháng năm
-            //DateTime ngayThangNamTra = new DateTime(namTra, thangTra, ngayTra);
-            //label19.Text = ngayThangNamTra.ToString();
+            try
+            {
+                string sqlString = string.Format("INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES ({0}, '{1}', '{2}', {3}, {4}, '{5}', {6}, {7})", datphong.KS.MAKS, datphong.NgayNhan, datphong.NgayTra, datphong.SoPhong, datphong.Phong.MaPhong, datphong.KhachHang.MaKH, datphong.TongThanhToan);
+                SqlConnection conn = Connection_to_SQL.getConnection();
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void SetSDT(string Sdt)
         {
