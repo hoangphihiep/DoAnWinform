@@ -257,50 +257,76 @@ namespace DuLich
         private void Phong_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1115, 801);
+
             lbl_ThietLap.Size = new Size(218, 38);
             lbl_ThietLap.Location = new Point(9, 15);
-            label4.Size = new Size(460, 20);
-            label4.Location = new Point(15, 53);
+
             lbl_ChiTietPhong.Size = new Size(181, 31);
-            lbl_ChiTietPhong.Location = new Point(9, 84);
-            lbl_QuyDoiTac.Size = new Size(545, 20);
-            lbl_QuyDoiTac.Location = new Point(9, 126);
+            lbl_ChiTietPhong.Location = new Point(14, 70);
+
+            lbl_TenPhong.Size = new Size(105, 23);
+            lbl_TenPhong.Location = new Point(17, 111);
+
+            txt_TenPhong.Size = new Size(594, 30);
+            txt_TenPhong.Location = new Point(16, 137);
+
             lbl_KichThuoc.Size = new Size(106, 23);
             lbl_KichThuoc.Location = new Point(15, 172);
+
             txt_KichThuoc.Size = new Size(558, 30);
             txt_KichThuoc.Location = new Point(15, 209);
+
             lbl_m2.Size = new Size(34, 23);
             lbl_m2.Location = new Point(574, 216);
+
             lbl_SucChua.Size = new Size(95, 23);
             lbl_SucChua.Location = new Point(15, 252);
+
             lbl_SoLuongNguoi.Size = new Size(559, 40);
             lbl_SoLuongNguoi.Location = new Point(14, 288);
+
             txt_SucChua.Size = new Size(594, 30);
             txt_SucChua.Location = new Point(14, 332);
+
             lbl_SoGiuong.Size = new Size(103, 23);
             lbl_SoGiuong.Location = new Point(15, 377);
+
             lbl_ChiDemSoLuong.Size = new Size(399, 20);
-            lbl_ChiDemSoLuong.Location = new Point(14, 416);
+            lbl_ChiDemSoLuong.Location = new Point(17, 407);
+
             txt_SoGiuong.Size = new Size(593, 30);
-            txt_SoGiuong.Location = new Point(15, 449);
+            txt_SoGiuong.Location = new Point(18, 440);
+
+            lbl_SoPhong.Size = new Size(98, 23);
+            lbl_SoPhong.Location = new Point(17, 486);
+
+            txt_SoPhong.Size = new Size(594, 30);
+            txt_SoPhong.Location = new Point(16, 512);
+
             lbl_GiaMoiDem.Size = new Size(146, 31);
-            lbl_GiaMoiDem.Location = new Point(16, 494);
-            lbl_VuiLong.Size = new Size(415, 20);
-            lbl_VuiLong.Location = new Point(16, 536);
+            lbl_GiaMoiDem.Location = new Point(17, 554);
+            //lbl_VuiLong.Size = new Size(415, 20);
+            //lbl_VuiLong.Location = new Point(16, 536);
             lbl_GiaGocChoPhongTieuChuan.Size = new Size(242, 23);
-            lbl_GiaGocChoPhongTieuChuan.Location = new Point(17, 571);
+            lbl_GiaGocChoPhongTieuChuan.Location = new Point(17, 610);
+
             lbl_GiaToiThieuMoiDem.Size = new Size(177, 23);
-            lbl_GiaToiThieuMoiDem.Location = new Point(16, 613);
+            lbl_GiaToiThieuMoiDem.Location = new Point(16, 647);
+
             txt_GiaToiThieu.Size = new Size(539, 30);
-            txt_GiaToiThieu.Location = new Point(17, 639);
+            txt_GiaToiThieu.Location = new Point(17, 673);
+
             lbl_VND.Size = new Size(46, 23);
-            lbl_VND.Location = new Point(562, 642);
+            lbl_VND.Location = new Point(562, 676);
+
             lbl_ThemKhach.Size = new Size(131, 23);
-            lbl_ThemKhach.Location = new Point(16, 678);
-            lbl_SauKhiNhieuHon.Size = new Size(374, 40);
-            lbl_SauKhiNhieuHon.Location = new Point(17, 716);
+            lbl_ThemKhach.Location = new Point(16, 716);
+
+            //lbl_SauKhiNhieuHon.Size = new Size(374, 40);
+            //lbl_SauKhiNhieuHon.Location = new Point(17, 716);
             txt_tienThemKhach.Size = new Size(540, 30);
             txt_tienThemKhach.Location = new Point(16, 758);
+
             lbl_Nguoi.Size = new Size(46, 23);
             lbl_Nguoi.Location = new Point(562, 761);
             lbl_ThemHinhAnh.Size = new Size(283, 31);
@@ -321,6 +347,7 @@ namespace DuLich
             //ptb_AnhPhong.Location = new Point(707, 117);
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.Location = new Point(825, 569);
+            //btn_ThemPhong.Font = new System.Drawing.FontFamily("Segoe UI", 9pt, FontStyle.Regular);
             ptb_AnhPhong.Size = new Size(391, 331);
             ptb_AnhPhong.Location = new Point(676, 172);
         }
@@ -366,7 +393,7 @@ namespace DuLich
         {
             MessageBox.Show(MaPhong.ToString());
             Room_DAO room_DAO = new Room_DAO();
-            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_SoGiuong.Text, MaPhong, AnhPhong);
+            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text),txt_TenPhong.Text, MaPhong, AnhPhong);
             room_DAO.Add(room, "PHONG");
             //List<QL_HinhAnh> list = new List<QL_HinhAnh>();
             //QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
@@ -414,9 +441,9 @@ namespace DuLich
                     Console.WriteLine("MaPhong: " + maPhong);
                 }
             }
-            QLPHONG phong1 = new QLPHONG(MaKS, 0, 0, maPhong);
+            QLPHONG phong1 = new QLPHONG(MaKS, int.Parse(txt_SoPhong.Text), 0, maPhong);
             QLPHONG_DAO qLPHONG_DAO = new QLPHONG_DAO();
-            qLPHONG_DAO.Add(phong1,"QLPHONG");
+            qLPHONG_DAO.Add(phong1, "QLPHONG");
             MessageBox.Show("Add Phòng thành công");
         }
 
@@ -453,6 +480,26 @@ namespace DuLich
                     MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void lbl_ChiTietPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_ChiDemSoLuong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_SoPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_m2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
