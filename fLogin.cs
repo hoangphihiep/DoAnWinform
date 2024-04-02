@@ -8,9 +8,18 @@ namespace DuLich
         {
             InitializeComponent();
         }
-        string tk = "a";
-        string mk = "b";
         bool check = false;
+        public string tk;
+        public string mk;
+        public Image tenAnh;
+        public string tenKhachSan;
+        public string TenKhachHang;
+        public string sdt;
+        public string soKhach;
+        public string soPhongConTrong;
+        public string Gia;
+        public DateTime NgayNhan;
+        public DateTime NgayTra;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -137,6 +146,15 @@ namespace DuLich
                             Customer_Information k = new Customer_Information();
                             k.tk = tk;
                             k.mk = mk;
+                            k.tenAnh = tenAnh;
+                            k.tenKhachSan = tenKhachSan;
+                            k.soKhach = soKhach;
+                            k.soPhongConTrong = soPhongConTrong;
+                            k.Gia = Gia;
+                            k.sdt = sdt;
+                            k.TenKhachHang = TenKhachHang;
+                            k.NgayNhan = NgayNhan;
+                            k.NgayTra = NgayTra;
                             k.HienThi();
                             this.Hide();
                             k.ShowDialog();

@@ -71,14 +71,6 @@ namespace DuLich
         private void Payment_Information_Load(object sender, EventArgs e)
         {
             string GiaChuyenDoi = Gia;
-            // Loại bỏ phần văn bản " VND"
-            GiaChuyenDoi = GiaChuyenDoi.Replace(" VND", "");
-
-            // Loại bỏ dấu chấm
-            GiaChuyenDoi = GiaChuyenDoi.Replace(".", "");
-
-            // Chuyển đổi thành kiểu double
-
             double giaTien;
             double.TryParse(GiaChuyenDoi, out giaTien);
 
@@ -91,13 +83,8 @@ namespace DuLich
             lbl_Cost.Text = Gia;
 
             giaTien *= 1.13;
-            // Chuyển đổi số double thành chuỗi và thêm dấu chấm
-            string giaTienChuoi = giaTien.ToString("#,##0");
 
-            // Thêm phần văn bản " VND" vào cuối chuỗi
-            giaTienChuoi += " VND";
-
-            lbl_LastCost.Text = giaTienChuoi;
+            lbl_LastCost.Text = giaTien.ToString();
         }
 
         private void Payment_Information_Shown(object sender, EventArgs e)

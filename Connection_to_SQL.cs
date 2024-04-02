@@ -8,11 +8,11 @@ using System.Data;
 namespace DuLich
 {
     public class Connection_to_SQL
-    { 
-
-        public static SqlConnection getConnection() 
+    {
+        private static string Connection = @"Data Source=LAPTOP-NJM7CAI2;Initial Catalog=Account;Integrated Security=True;Encrypt=False";
+        public static SqlConnection getConnection()
         {
-            return new SqlConnection(Properties.Settings.Default.cnnStr);
+            return new SqlConnection(Connection);
         }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         public void ThucThi<T>(T account, string sql)

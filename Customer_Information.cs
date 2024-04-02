@@ -13,15 +13,19 @@ namespace DuLich
 {
     public partial class Customer_Information : Form
     {
+        Modify modify = new Modify();
         public string tk;
         public string mk;
         public Image tenAnh;
         public string tenKhachSan;
+        public string TenKhachHang;
+        public string sdt;
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        double giaTien;
         public Customer_Information()
         {
             InitializeComponent();
@@ -55,15 +59,7 @@ namespace DuLich
         {
 
             string GiaChuyenDoi = Gia;
-            // Loại bỏ phần văn bản " VND"
-            GiaChuyenDoi = GiaChuyenDoi.Replace(" VND", "");
 
-            // Loại bỏ dấu chấm
-            GiaChuyenDoi = GiaChuyenDoi.Replace(".", "");
-
-            // Chuyển đổi thành kiểu double
-
-            double giaTien;
             double.TryParse(GiaChuyenDoi, out giaTien);
 
             ptb_Anh.Image = tenAnh;
@@ -73,15 +69,21 @@ namespace DuLich
             label20.Text = Gia;
             lbl_CostRoom.Text = Gia;
             lbl_Cost.Text = Gia;
-
             giaTien *= 1.13;
-            // Chuyển đổi số double thành chuỗi và thêm dấu chấm
-            string giaTienChuoi = giaTien.ToString("#,##0");
-
-            // Thêm phần văn bản " VND" vào cuối chuỗi
-            giaTienChuoi += " VND";
-
-            lbl_LastCost.Text = giaTienChuoi;
+            lbl_LastCost.Text = giaTien.ToString();
+            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
+            {
+                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
+                var result = modify.UuDai(query);
+                List<int> GiaTriUuDai = new List<int>();
+                GiaTriUuDai.Add(0);
+                foreach (var item in result)
+                {
+                    GiaTriUuDai.Add(item.GiaTriUuDai);
+                }
+                cbb_MaGiamGia.DataSource = GiaTriUuDai;
+                cbb_MaGiamGia.Text = 0.ToString();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -145,13 +147,21 @@ namespace DuLich
         {
             fLogin k = new fLogin();
             k.KiemTra(2);
+            k.tenAnh = tenAnh;
+            k.tenKhachSan = tenKhachSan;
+            k.soKhach = soKhach;
+            k.soPhongConTrong = soPhongConTrong;
+            k.Gia = Gia;
+            k.sdt = txt_SoDienThoai.Text;
+            k.TenKhachHang = txt_HoVaTen.Text;
+            k.NgayNhan = NgayNhan;
+            k.NgayTra = NgayTra;
             this.Hide();
             k.ShowDialog();
             this.Close();
         }
         public void HienThi()
         {
-            Modify modify = new Modify();
             lbl_NhanUuDai.Visible = false;
             btn_DangNhap.Visible = false;
             lbl_MaGiamGia.Visible = true;
@@ -179,6 +189,13 @@ namespace DuLich
         private void lbl_DichVuVaThue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbb_MaGiamGia_SelectedValueChanged(object sender, EventArgs e)
+        {
+            double gia = giaTien;
+            gia = gia - double.Parse(cbb_MaGiamGia.Text) / 100 * gia;
+            lbl_LastCost.Text = gia.ToString();
         }
     }
 }
