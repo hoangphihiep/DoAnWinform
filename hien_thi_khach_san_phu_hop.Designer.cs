@@ -115,6 +115,7 @@
             btn_menuTaiKhoan.Text = "Tài khoản của tôi";
             btn_menuTaiKhoan.TextAlign = ContentAlignment.MiddleLeft;
             btn_menuTaiKhoan.UseVisualStyleBackColor = true;
+            btn_menuTaiKhoan.Click += btn_menuTaiKhoan_Click;
             // 
             // btn_Thoat
             // 

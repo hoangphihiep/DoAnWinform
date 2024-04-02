@@ -26,6 +26,10 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        public fPayment_Slip()
+        {
+            InitializeComponent();
+        }
         public fPayment_Slip(DatPhong datphong)
         {
             this.datphong = datphong;

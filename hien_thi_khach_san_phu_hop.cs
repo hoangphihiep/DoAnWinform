@@ -11,6 +11,7 @@ using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DuLich
@@ -21,7 +22,9 @@ namespace DuLich
         int value3;
         int value2;
         int value;
+        public string tenKhachHang;
         public string tentk;
+        public string mk;
         public int soLuongNguoiLon;
         public int soLuongTreEm;
         public hien_thi_khach_san_phu_hop()
@@ -145,7 +148,8 @@ namespace DuLich
         public string diadiem;
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(tentk);
+            MessageBox.Show(tenKhachHang);
+            btn_MyTaiKhoan.Text = tenKhachHang;
             btn_DangNhap.FlatStyle = FlatStyle.Flat;
             btn_DangNhap.FlatAppearance.BorderSize = 0;
             btn_DangKy.FlatStyle = FlatStyle.Flat;
@@ -299,7 +303,9 @@ namespace DuLich
         private void btn_ThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             fThongTinTaiKhoan t = new fThongTinTaiKhoan();
-            if (kiemtradangkiKS1 == 2)
+            t.tentk = tentk;
+            t.mk = mk;
+            if (kiemtradangkiKS1 == 1)
             {
                 this.Hide();
                 t.ShowThongTinKS();
@@ -316,8 +322,8 @@ namespace DuLich
 
         private void btn_KSDaDat_Click(object sender, EventArgs e)
         {
-            fCollections f = new fCollections();
-            f.kiemtratrang = 1;
+            fHotel_booked f = new fHotel_booked();
+            //f.kiemtratrang = 1;
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -434,7 +440,7 @@ namespace DuLich
                 uc.ShowKhoangCach();
                 tab_DanhGiaCao.Controls.Add(uc);
             }
-          
+
             // khi có chọn tiện ích
             if (clBox_TienNghiChinh.SelectedIndex != -1 || clBox_TienNghiCC.SelectedIndex != -1 || clBox_DichVu.SelectedIndex != -1 || clBox_AmThuc.SelectedIndex != -1)
             {
@@ -715,6 +721,11 @@ namespace DuLich
         }
 
         private void lb_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_menuTaiKhoan_Click(object sender, EventArgs e)
         {
 
         }

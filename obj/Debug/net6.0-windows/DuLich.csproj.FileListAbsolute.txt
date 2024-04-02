@@ -1,3 +1,15 @@
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.exe
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.dll.config
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.deps.json
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.runtimeconfig.json
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\DuLich.pdb
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.csproj.AssemblyReference.cache
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.Customer_Information.resources
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.f.resources
@@ -45,3 +57,9 @@ C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.AssemblyInfoInputs.cache
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.AssemblyInfo.cs
 C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.csproj.CoreCompileInputs.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.csproj.CopyComplete
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\refint\DuLich.dll
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.pdb
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\DuLich.genruntimeconfig.cache
+C:\Users\phihi_6b0xaz1\Desktop\nganh_IT_lap_trinh\laptrinhW\DoAnDuLich\obj\Debug\net6.0-windows\ref\DuLich.dll

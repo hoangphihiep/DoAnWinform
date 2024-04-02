@@ -13,9 +13,9 @@ namespace DuLich
 
         public static SqlConnection getConnection() 
         {
-            return new SqlConnection(Properties.Settings.Default.cnnStr);
+            return new SqlConnection(Connection);
         }
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        SqlConnection conn = new SqlConnection(Connection);
         public void ThucThi<T>(T account, string sql)
         {
             try
@@ -35,8 +35,8 @@ namespace DuLich
         }
         public static string getConnnection()
         {
-            return Properties.Settings.Default.cnnStr;
-            //return Connection;
+            //return Properties.Settings.Default.cnnStr;
+            return Connection;
         }
     }
 }

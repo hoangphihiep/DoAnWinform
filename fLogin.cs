@@ -126,8 +126,10 @@ namespace DuLich
                         if (y == 1)
                         {
                             hien_thi_khach_san_phu_hop k = new hien_thi_khach_san_phu_hop();
-                            k.tentk = name;
+                            //k.tenKhachHang = name;
                             k.KT_DangNhap1++;
+                            k.mk = mk;
+                            k.tentk = tk;
                             k.ShowMenuStrip();
                             k.HideDangNhap();
                             k.HideDangKy();
