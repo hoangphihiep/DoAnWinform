@@ -36,12 +36,9 @@
             lbl_m2 = new Label();
             lbl_KichThuoc = new Label();
             txt_KichThuoc = new TextBox();
-            label4 = new Label();
             label5 = new Label();
-            lbl_QuyDoiTac = new Label();
             lbl_ChiTietPhong = new Label();
             lbl_ThietLap = new Label();
-            lbl_SauKhiNhieuHon = new Label();
             lbl_Nguoi = new Label();
             txt_tienThemKhach = new TextBox();
             lbl_ThemKhach = new Label();
@@ -49,12 +46,15 @@
             txt_GiaToiThieu = new TextBox();
             lbl_GiaToiThieuMoiDem = new Label();
             lbl_GiaGocChoPhongTieuChuan = new Label();
-            lbl_VuiLong = new Label();
             lbl_GiaMoiDem = new Label();
             txt_SoGiuong = new TextBox();
             lbl_ThemHinhAnh = new Label();
             btn_ThemPhong = new Button();
             ptb_AnhPhong = new PictureBox();
+            lbl_TenPhong = new Label();
+            txt_TenPhong = new TextBox();
+            txt_SoPhong = new TextBox();
+            lbl_SoPhong = new Label();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhPhong).BeginInit();
             SuspendLayout();
             // 
@@ -62,11 +62,12 @@
             // 
             lbl_ChiDemSoLuong.AutoSize = true;
             lbl_ChiDemSoLuong.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_ChiDemSoLuong.Location = new Point(14, 416);
+            lbl_ChiDemSoLuong.Location = new Point(17, 407);
             lbl_ChiDemSoLuong.Name = "lbl_ChiDemSoLuong";
             lbl_ChiDemSoLuong.Size = new Size(399, 20);
             lbl_ChiDemSoLuong.TabIndex = 87;
             lbl_ChiDemSoLuong.Text = "Chỉ đếm số lượng giường của quý đối tác cho chỗ nghỉ này\r\n";
+            lbl_ChiDemSoLuong.Click += lbl_ChiDemSoLuong_Click;
             // 
             // lbl_SoLuongNguoi
             // 
@@ -135,16 +136,6 @@
             txt_KichThuoc.Size = new Size(558, 30);
             txt_KichThuoc.TabIndex = 80;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(15, 53);
-            label4.Name = "label4";
-            label4.Size = new Size(460, 20);
-            label4.TabIndex = 79;
-            label4.Text = "Chọn giá phòng mỗi đêm theo số lượng khách và các điều kiện khác\r\n";
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -154,25 +145,16 @@
             label5.Size = new Size(0, 31);
             label5.TabIndex = 78;
             // 
-            // lbl_QuyDoiTac
-            // 
-            lbl_QuyDoiTac.AutoSize = true;
-            lbl_QuyDoiTac.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_QuyDoiTac.Location = new Point(9, 126);
-            lbl_QuyDoiTac.Name = "lbl_QuyDoiTac";
-            lbl_QuyDoiTac.Size = new Size(545, 20);
-            lbl_QuyDoiTac.TabIndex = 77;
-            lbl_QuyDoiTac.Text = "Quý đối tác có thể thêm các loại phòng thông qua mạng diện rộng của chúng tôi\r\n";
-            // 
             // lbl_ChiTietPhong
             // 
             lbl_ChiTietPhong.AutoSize = true;
             lbl_ChiTietPhong.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_ChiTietPhong.Location = new Point(9, 84);
+            lbl_ChiTietPhong.Location = new Point(14, 70);
             lbl_ChiTietPhong.Name = "lbl_ChiTietPhong";
             lbl_ChiTietPhong.Size = new Size(181, 31);
             lbl_ChiTietPhong.TabIndex = 76;
             lbl_ChiTietPhong.Text = "Chi tiết phòng ở";
+            lbl_ChiTietPhong.Click += lbl_ChiTietPhong_Click;
             // 
             // lbl_ThietLap
             // 
@@ -183,16 +165,6 @@
             lbl_ThietLap.Size = new Size(218, 38);
             lbl_ThietLap.TabIndex = 75;
             lbl_ThietLap.Text = "Thiết lập phòng";
-            // 
-            // lbl_SauKhiNhieuHon
-            // 
-            lbl_SauKhiNhieuHon.AutoSize = true;
-            lbl_SauKhiNhieuHon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_SauKhiNhieuHon.Location = new Point(17, 716);
-            lbl_SauKhiNhieuHon.Name = "lbl_SauKhiNhieuHon";
-            lbl_SauKhiNhieuHon.Size = new Size(374, 40);
-            lbl_SauKhiNhieuHon.TabIndex = 98;
-            lbl_SauKhiNhieuHon.Text = "Sau khi nhiều hơn một khách , tính phí thêm mỗi người \r\n\r\n";
             // 
             // lbl_Nguoi
             // 
@@ -218,7 +190,7 @@
             lbl_ThemKhach.AutoSize = true;
             lbl_ThemKhach.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_ThemKhach.ImageAlign = ContentAlignment.BottomRight;
-            lbl_ThemKhach.Location = new Point(16, 678);
+            lbl_ThemKhach.Location = new Point(16, 716);
             lbl_ThemKhach.Name = "lbl_ThemKhach";
             lbl_ThemKhach.Size = new Size(131, 23);
             lbl_ThemKhach.TabIndex = 95;
@@ -229,7 +201,7 @@
             lbl_VND.AutoSize = true;
             lbl_VND.BackColor = SystemColors.Window;
             lbl_VND.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_VND.Location = new Point(562, 642);
+            lbl_VND.Location = new Point(562, 676);
             lbl_VND.Name = "lbl_VND";
             lbl_VND.Size = new Size(46, 23);
             lbl_VND.TabIndex = 94;
@@ -238,7 +210,7 @@
             // txt_GiaToiThieu
             // 
             txt_GiaToiThieu.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_GiaToiThieu.Location = new Point(17, 639);
+            txt_GiaToiThieu.Location = new Point(17, 673);
             txt_GiaToiThieu.Name = "txt_GiaToiThieu";
             txt_GiaToiThieu.Size = new Size(539, 30);
             txt_GiaToiThieu.TabIndex = 93;
@@ -247,7 +219,7 @@
             // 
             lbl_GiaToiThieuMoiDem.AutoSize = true;
             lbl_GiaToiThieuMoiDem.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaToiThieuMoiDem.Location = new Point(16, 613);
+            lbl_GiaToiThieuMoiDem.Location = new Point(16, 647);
             lbl_GiaToiThieuMoiDem.Name = "lbl_GiaToiThieuMoiDem";
             lbl_GiaToiThieuMoiDem.Size = new Size(177, 23);
             lbl_GiaToiThieuMoiDem.TabIndex = 92;
@@ -257,27 +229,17 @@
             // 
             lbl_GiaGocChoPhongTieuChuan.AutoSize = true;
             lbl_GiaGocChoPhongTieuChuan.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaGocChoPhongTieuChuan.Location = new Point(17, 571);
+            lbl_GiaGocChoPhongTieuChuan.Location = new Point(17, 610);
             lbl_GiaGocChoPhongTieuChuan.Name = "lbl_GiaGocChoPhongTieuChuan";
             lbl_GiaGocChoPhongTieuChuan.Size = new Size(242, 23);
             lbl_GiaGocChoPhongTieuChuan.TabIndex = 91;
             lbl_GiaGocChoPhongTieuChuan.Text = "Giá gốc cho phòng tiêu chuẩn";
             // 
-            // lbl_VuiLong
-            // 
-            lbl_VuiLong.AutoSize = true;
-            lbl_VuiLong.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_VuiLong.Location = new Point(16, 536);
-            lbl_VuiLong.Name = "lbl_VuiLong";
-            lbl_VuiLong.Size = new Size(415, 20);
-            lbl_VuiLong.TabIndex = 90;
-            lbl_VuiLong.Text = "Vui lòng nhập giá mỗi đêm của quý đối tác cho chỗ  nghỉ này";
-            // 
             // lbl_GiaMoiDem
             // 
             lbl_GiaMoiDem.AutoSize = true;
             lbl_GiaMoiDem.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_GiaMoiDem.Location = new Point(16, 494);
+            lbl_GiaMoiDem.Location = new Point(17, 554);
             lbl_GiaMoiDem.Name = "lbl_GiaMoiDem";
             lbl_GiaMoiDem.Size = new Size(146, 31);
             lbl_GiaMoiDem.TabIndex = 89;
@@ -286,7 +248,7 @@
             // txt_SoGiuong
             // 
             txt_SoGiuong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_SoGiuong.Location = new Point(15, 449);
+            txt_SoGiuong.Location = new Point(18, 440);
             txt_SoGiuong.Name = "txt_SoGiuong";
             txt_SoGiuong.Size = new Size(593, 30);
             txt_SoGiuong.TabIndex = 88;
@@ -321,14 +283,54 @@
             ptb_AnhPhong.TabStop = false;
             ptb_AnhPhong.Click += ptb_AnhPhong_Click;
             // 
+            // lbl_TenPhong
+            // 
+            lbl_TenPhong.AutoSize = true;
+            lbl_TenPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_TenPhong.Location = new Point(17, 111);
+            lbl_TenPhong.Name = "lbl_TenPhong";
+            lbl_TenPhong.Size = new Size(105, 23);
+            lbl_TenPhong.TabIndex = 110;
+            lbl_TenPhong.Text = "Tên phòng : ";
+            // 
+            // txt_TenPhong
+            // 
+            txt_TenPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_TenPhong.Location = new Point(16, 137);
+            txt_TenPhong.Name = "txt_TenPhong";
+            txt_TenPhong.Size = new Size(594, 30);
+            txt_TenPhong.TabIndex = 111;
+            // 
+            // txt_SoPhong
+            // 
+            txt_SoPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_SoPhong.Location = new Point(16, 512);
+            txt_SoPhong.Name = "txt_SoPhong";
+            txt_SoPhong.Size = new Size(594, 30);
+            txt_SoPhong.TabIndex = 113;
+            // 
+            // lbl_SoPhong
+            // 
+            lbl_SoPhong.AutoSize = true;
+            lbl_SoPhong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_SoPhong.Location = new Point(17, 486);
+            lbl_SoPhong.Name = "lbl_SoPhong";
+            lbl_SoPhong.Size = new Size(98, 23);
+            lbl_SoPhong.TabIndex = 112;
+            lbl_SoPhong.Text = "Số phòng : ";
+            lbl_SoPhong.Click += lbl_SoPhong_Click;
+            // 
             // UPhong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(txt_SoPhong);
+            Controls.Add(lbl_SoPhong);
+            Controls.Add(txt_TenPhong);
+            Controls.Add(lbl_TenPhong);
             Controls.Add(ptb_AnhPhong);
             Controls.Add(btn_ThemPhong);
             Controls.Add(lbl_ThemHinhAnh);
-            Controls.Add(lbl_SauKhiNhieuHon);
             Controls.Add(lbl_Nguoi);
             Controls.Add(txt_tienThemKhach);
             Controls.Add(lbl_ThemKhach);
@@ -336,7 +338,6 @@
             Controls.Add(txt_GiaToiThieu);
             Controls.Add(lbl_GiaToiThieuMoiDem);
             Controls.Add(lbl_GiaGocChoPhongTieuChuan);
-            Controls.Add(lbl_VuiLong);
             Controls.Add(lbl_GiaMoiDem);
             Controls.Add(txt_SoGiuong);
             Controls.Add(lbl_ChiDemSoLuong);
@@ -347,9 +348,7 @@
             Controls.Add(lbl_m2);
             Controls.Add(lbl_KichThuoc);
             Controls.Add(txt_KichThuoc);
-            Controls.Add(label4);
             Controls.Add(label5);
-            Controls.Add(lbl_QuyDoiTac);
             Controls.Add(lbl_ChiTietPhong);
             Controls.Add(lbl_ThietLap);
             Name = "UPhong";
@@ -370,9 +369,7 @@
         private Label lbl_m2;
         private Label lbl_KichThuoc;
         private TextBox txt_KichThuoc;
-        private Label label4;
         private Label label5;
-        private Label lbl_QuyDoiTac;
         private Label lbl_ChiTietPhong;
         private Label lbl_ThietLap;
         private Label lbl_SauKhiNhieuHon;
@@ -395,5 +392,9 @@
         private PictureBox ptb_Anh6;
         private Button btn_ThemPhong;
         private PictureBox ptb_AnhPhong;
+        private Label lbl_TenPhong;
+        private TextBox txt_TenPhong;
+        private TextBox txt_SoPhong;
+        private Label lbl_SoPhong;
     }
 }
