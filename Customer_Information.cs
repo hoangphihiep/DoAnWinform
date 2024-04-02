@@ -13,15 +13,19 @@ namespace DuLich
 {
     public partial class Customer_Information : Form
     {
+        Modify modify = new Modify();
         public string tk;
         public string mk;
         public Image tenAnh;
         public string tenKhachSan;
+        public string TenKhachHang;
+        public string sdt;
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        double giaTien;
         public Customer_Information()
         {
             InitializeComponent();
@@ -54,21 +58,41 @@ namespace DuLich
         private void Customer_Information_Load(object sender, EventArgs e)
         {
 
-            string GiaChuyenDoi = Gia;
-            double giaTien;
-            double.TryParse(GiaChuyenDoi, out giaTien);
+//            string GiaChuyenDoi = Gia;
+//<<<<<<< HEAD
+//            double giaTien;
+//=======
 
-            ptb_Anh.Image = tenAnh;
-            label15.Text = tenKhachSan;
-            label17.Text = soKhach;
-            label19.Text = soPhongConTrong;
-            label20.Text = Gia;
-            lbl_CostRoom.Text = Gia;
-            lbl_Cost.Text = Gia;
+//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
+//            double.TryParse(GiaChuyenDoi, out giaTien);
 
-            giaTien *= 1.13;
+//            ptb_Anh.Image = tenAnh;
+//            label15.Text = tenKhachSan;
+//            label17.Text = soKhach;
+//            label19.Text = soPhongConTrong;
+//            label20.Text = Gia;
+//            lbl_CostRoom.Text = Gia;
+//            lbl_Cost.Text = Gia;
+//            giaTien *= 1.13;
+//<<<<<<< HEAD
 
-            lbl_LastCost.Text = giaTien.ToString();
+//            lbl_LastCost.Text = giaTien.ToString();
+//=======
+//            lbl_LastCost.Text = giaTien.ToString();
+//            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
+//            {
+//                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
+//                var result = modify.UuDai(query);
+//                List<int> GiaTriUuDai = new List<int>();
+//                GiaTriUuDai.Add(0);
+//                foreach (var item in result)
+//                {
+//                    GiaTriUuDai.Add(item.GiaTriUuDai);
+//                }
+//                cbb_MaGiamGia.DataSource = GiaTriUuDai;
+//                cbb_MaGiamGia.Text = 0.ToString();
+//            }
+//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -132,13 +156,21 @@ namespace DuLich
         {
             fLogin k = new fLogin();
             k.KiemTra(2);
+            k.tenAnh = tenAnh;
+            k.tenKhachSan = tenKhachSan;
+            k.soKhach = soKhach;
+            k.soPhongConTrong = soPhongConTrong;
+            k.Gia = Gia;
+            k.sdt = txt_SoDienThoai.Text;
+            k.TenKhachHang = txt_HoVaTen.Text;
+            k.NgayNhan = NgayNhan;
+            k.NgayTra = NgayTra;
             this.Hide();
             k.ShowDialog();
             this.Close();
         }
         public void HienThi()
         {
-            Modify modify = new Modify();
             lbl_NhanUuDai.Visible = false;
             btn_DangNhap.Visible = false;
             lbl_MaGiamGia.Visible = true;
@@ -166,6 +198,13 @@ namespace DuLich
         private void lbl_DichVuVaThue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbb_MaGiamGia_SelectedValueChanged(object sender, EventArgs e)
+        {
+            double gia = giaTien;
+            gia = gia - double.Parse(cbb_MaGiamGia.Text) / 100 * gia;
+            lbl_LastCost.Text = gia.ToString();
         }
     }
 }

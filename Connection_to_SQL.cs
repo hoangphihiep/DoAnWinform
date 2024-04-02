@@ -10,8 +10,7 @@ namespace DuLich
     public class Connection_to_SQL
     { 
         private static string Connection = @"Data Source=MSI;Initial Catalog=Account;Integrated Security=True";
-
-        public static SqlConnection getConnection() 
+        public static SqlConnection getConnection()
         {
             return new SqlConnection(Connection);
         }

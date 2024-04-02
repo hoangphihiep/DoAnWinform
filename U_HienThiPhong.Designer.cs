@@ -89,9 +89,9 @@
             label20.ForeColor = Color.DarkTurquoise;
             label20.Location = new Point(3, 119);
             label20.Name = "label20";
-            label20.Size = new Size(162, 25);
+            label20.Size = new Size(100, 25);
             label20.TabIndex = 5;
-            label20.Text = "16.709.490  VND";
+            label20.Text = "16709490";
             // 
             // label19
             // 

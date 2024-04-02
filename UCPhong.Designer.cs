@@ -128,9 +128,9 @@
             lblPrice.ForeColor = Color.DarkTurquoise;
             lblPrice.Location = new Point(3, 145);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(162, 25);
+            lblPrice.Size = new Size(100, 25);
             lblPrice.TabIndex = 5;
-            lblPrice.Text = "16.709.490  VND";
+            lblPrice.Text = "16709490";
             // 
             // lblSoPhongTrong
             // 

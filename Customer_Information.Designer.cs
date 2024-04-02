@@ -244,6 +244,7 @@
             cbb_MaGiamGia.Size = new Size(151, 28);
             cbb_MaGiamGia.TabIndex = 132;
             cbb_MaGiamGia.Visible = false;
+            cbb_MaGiamGia.SelectedValueChanged += cbb_MaGiamGia_SelectedValueChanged;
             // 
             // lbl_NhanUuDai
             // 

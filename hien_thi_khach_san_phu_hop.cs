@@ -230,7 +230,6 @@ namespace DuLich
             truyen.Truyen(diadiem, "TENKH", soLuong);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-
                 UKhungKetQua uc = new UKhungKetQua();
                 uc.viTri = j * 148;
                 if (soLuong > 0)
