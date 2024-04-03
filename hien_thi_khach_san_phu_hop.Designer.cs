@@ -376,7 +376,6 @@
             tabKhoangCach.TabIndex = 2;
             tabKhoangCach.Text = "Khoảng cách";
             tabKhoangCach.UseVisualStyleBackColor = true;
-            tabKhoangCach.Click += tabKhoangCach_Click;
             tabKhoangCach.Move += tabKhoangCach_Move;
             // 
             // panel_KhoangCach

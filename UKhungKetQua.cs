@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,11 +16,25 @@ namespace DuLich
     {
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        KHACHSAN ks;
         public UKhungKetQua()
         {
             InitializeComponent();
         }
 
+        public UKhungKetQua(KHACHSAN ks)
+        {
+            InitializeComponent();
+            this.ks = ks;
+            lbl_ViTri.Text = ks.TINH + ", " + ks.THANHPHO;
+            lbl_TenKhachSan.Text = ks.TENKS;
+            lbl_Tien.Text = ks.GIA.ToString() + " VNĐ";
+            lbl_KhoangCachTP.Text = ks.THANHPHO + " " +  ks.khoangCachTP.ToString() + " km đến trung tâm";
+            lbl_KhoangCachSanBay.Text = ks.khoangCachSanBay.ToString() + " km đến sân bay gần nhất";
+            lbl_danhGia.Text = "Đánh giá: " + ks.SAO.ToString();
+            pictureBox1.Image = Image.FromFile(ks.diaChiAnh);
+            lbl_SoLuong.Text = ks.soLuongKhach.ToString();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
             fHotel_Details f = new fHotel_Details(maks);
@@ -38,13 +53,25 @@ namespace DuLich
         public string khoangCach;
         public string anhBia;
         public string soLuong;
-        public void ShowKhoangCach()
+        public string tenTinh;
+        public string tenTP;
+        public void ShowdanhGia()
         {
-            lbl_KhoangCach.Visible = true;
+            lbl_danhGia.Visible = true;
+            lbl_KhoangCachTP.Visible = false;
+            lbl_KhoangCachSanBay.Visible = false;
         }
-        public void HideKhoangCach()
+        public void ShowKhoangCachTP()
         {
-            lbl_KhoangCach.Visible = false;
+            lbl_KhoangCachTP.Visible = true;
+            lbl_danhGia.Visible = false;
+            lbl_KhoangCachSanBay.Visible = false;
+        }
+        public void ShowKhoangCachSB()
+        {
+            lbl_KhoangCachSanBay.Visible = true;
+            lbl_danhGia.Visible = false;
+            lbl_KhoangCachTP.Visible = false;
         }
         public void ShowSoKhach()
         {
@@ -66,16 +93,14 @@ namespace DuLich
             lbl_ViTri.Location = new Point(217, 101);
             lbl_Tien.Size = new Size(59, 20);
             lbl_Tien.Location = new Point(706, 67);
-            lbl_KhoangCach.Size = new Size(97, 20);
-            lbl_KhoangCach.Location = new Point(217, 67);
+            lbl_KhoangCachTP.Size = new Size(97, 20);
+            lbl_KhoangCachTP.Location = new Point(217, 67);
             lbl_SoLuong.Size = new Size(73, 20);
             lbl_SoLuong.Location = new Point(706, 101);
-            lbl_ViTri.Text = tenViTri;
-            lbl_TenKhachSan.Text = tenKhachSan;
-            lbl_Tien.Text = tien;
-            lbl_KhoangCach.Text = khoangCach;
-            pictureBox1.Image = Image.FromFile(anhBia);
-            lbl_SoLuong.Text = soLuong;
+            lbl_KhoangCachSanBay.Size = new Size(153, 20);
+            lbl_KhoangCachSanBay.Location = new Point(217, 67);
+            lbl_danhGia.Size = new Size(69, 20);
+            lbl_danhGia.Location = new Point(217, 67);
         }
     }
 }

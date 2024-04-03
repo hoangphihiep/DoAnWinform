@@ -33,8 +33,10 @@
             pictureBox1 = new PictureBox();
             lbl_ViTri = new Label();
             lbl_Tien = new Label();
-            lbl_KhoangCach = new Label();
+            lbl_KhoangCachTP = new Label();
             lbl_SoLuong = new Label();
+            lbl_KhoangCachSanBay = new Label();
+            lbl_danhGia = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -81,16 +83,16 @@
             lbl_Tien.TabIndex = 5;
             lbl_Tien.Text = "Số Tiền";
             // 
-            // lbl_KhoangCach
+            // lbl_KhoangCachTP
             // 
-            lbl_KhoangCach.AutoSize = true;
-            lbl_KhoangCach.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_KhoangCach.Location = new Point(217, 67);
-            lbl_KhoangCach.Name = "lbl_KhoangCach";
-            lbl_KhoangCach.Size = new Size(97, 20);
-            lbl_KhoangCach.TabIndex = 6;
-            lbl_KhoangCach.Text = "Khoảng cách";
-            lbl_KhoangCach.Visible = false;
+            lbl_KhoangCachTP.AutoSize = true;
+            lbl_KhoangCachTP.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_KhoangCachTP.Location = new Point(217, 67);
+            lbl_KhoangCachTP.Name = "lbl_KhoangCachTP";
+            lbl_KhoangCachTP.Size = new Size(118, 20);
+            lbl_KhoangCachTP.TabIndex = 6;
+            lbl_KhoangCachTP.Text = "Khoảng cách TP";
+            lbl_KhoangCachTP.Visible = false;
             // 
             // lbl_SoLuong
             // 
@@ -103,17 +105,41 @@
             lbl_SoLuong.Text = "Số Lượng";
             lbl_SoLuong.Visible = false;
             // 
+            // lbl_KhoangCachSanBay
+            // 
+            lbl_KhoangCachSanBay.AutoSize = true;
+            lbl_KhoangCachSanBay.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_KhoangCachSanBay.Location = new Point(217, 67);
+            lbl_KhoangCachSanBay.Name = "lbl_KhoangCachSanBay";
+            lbl_KhoangCachSanBay.Size = new Size(153, 20);
+            lbl_KhoangCachSanBay.TabIndex = 8;
+            lbl_KhoangCachSanBay.Text = "Khoảng cách sân bay";
+            lbl_KhoangCachSanBay.Visible = false;
+            // 
+            // lbl_danhGia
+            // 
+            lbl_danhGia.AutoSize = true;
+            lbl_danhGia.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_danhGia.Location = new Point(217, 67);
+            lbl_danhGia.Name = "lbl_danhGia";
+            lbl_danhGia.Size = new Size(69, 20);
+            lbl_danhGia.TabIndex = 9;
+            lbl_danhGia.Text = "đánh giá";
+            lbl_danhGia.Visible = false;
+            // 
             // UKhungKetQua
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
+            Controls.Add(lbl_danhGia);
             Controls.Add(lbl_SoLuong);
-            Controls.Add(lbl_KhoangCach);
+            Controls.Add(lbl_KhoangCachTP);
             Controls.Add(lbl_Tien);
             Controls.Add(lbl_ViTri);
             Controls.Add(pictureBox1);
             Controls.Add(lbl_TenKhachSan);
+            Controls.Add(lbl_KhoangCachSanBay);
             Name = "UKhungKetQua";
             Size = new Size(917, 137);
             Load += UKhungKetQua_Load;
@@ -128,7 +154,9 @@
         private PictureBox pictureBox1;
         private Label lbl_ViTri;
         private Label lbl_Tien;
-        private Label lbl_KhoangCach;
+        private Label lbl_KhoangCachTP;
         private Label lbl_SoLuong;
+        private Label lbl_KhoangCachSanBay;
+        private Label lbl_danhGia;
     }
 }

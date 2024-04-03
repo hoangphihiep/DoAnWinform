@@ -47,8 +47,8 @@
             label6 = new Label();
             label5 = new Label();
             btn_TimKiem = new Button();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            date_NgayDi = new DateTimePicker();
+            date_ngayDen = new DateTimePicker();
             btn_DangNhap = new Button();
             btn_DangKy = new Button();
             panel2 = new Panel();
@@ -171,8 +171,8 @@
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(btn_TimKiem);
-            panel1.Controls.Add(dateTimePicker2);
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(date_NgayDi);
+            panel1.Controls.Add(date_ngayDen);
             panel1.Location = new Point(12, 489);
             panel1.Name = "panel1";
             panel1.Size = new Size(1289, 174);
@@ -273,21 +273,21 @@
             btn_TimKiem.UseVisualStyleBackColor = false;
             btn_TimKiem.Click += button1_Click;
             // 
-            // dateTimePicker2
+            // date_NgayDi
             // 
-            dateTimePicker2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Location = new Point(524, 47);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(322, 34);
-            dateTimePicker2.TabIndex = 11;
+            date_NgayDi.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            date_NgayDi.Location = new Point(524, 47);
+            date_NgayDi.Name = "date_NgayDi";
+            date_NgayDi.Size = new Size(322, 34);
+            date_NgayDi.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // date_ngayDen
             // 
-            dateTimePicker1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(196, 47);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(322, 34);
-            dateTimePicker1.TabIndex = 10;
+            date_ngayDen.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            date_ngayDen.Location = new Point(196, 47);
+            date_ngayDen.Name = "date_ngayDen";
+            date_ngayDen.Size = new Size(322, 34);
+            date_ngayDen.TabIndex = 10;
             // 
             // btn_DangNhap
             // 
@@ -493,8 +493,8 @@
         private PictureBox pictureBox5;
         private Panel panel1;
         private Button btn_TimKiem;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker date_NgayDi;
+        private DateTimePicker date_ngayDen;
         private Button btn_DangNhap;
         private Button btn_DangKy;
         private Label label5;

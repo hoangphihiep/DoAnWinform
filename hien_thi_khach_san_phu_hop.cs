@@ -27,6 +27,8 @@ namespace DuLich
         public string mk;
         public int soLuongNguoiLon;
         public int soLuongTreEm;
+        public DateTime ngayDen;
+        public DateTime ngayDi;
         public hien_thi_khach_san_phu_hop()
         {
             InitializeComponent();
@@ -228,58 +230,39 @@ namespace DuLich
             lb_TimKiem.AutoCompleteCustomSource = data;
             int soLuong = soLuongNguoiLon + soLuongTreEm;
             truyen.Truyen(diadiem, "TENKH", soLuong);
+            List<KHACHSAN> listKS = new List<KHACHSAN>();
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j],truyen.soKhach[j],truyen.khoangCachTP[j],truyen.khoangCachSanBay[j],truyen.address[j],truyen.maKS[j],ngayDen,ngayDi);
+                listKS.Add(ks);              
+                UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.maks = truyen.maKS[j];
                 if (soLuong > 0)
                 {
                     uc.ShowSoKhach();
                 }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
-                MessageBox.Show(truyen.address[j]);
-                uc.maks = truyen.maKS[j];
+                uc.viTri = j * 148;
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA", soLuong);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
-                if (soLuong > 0)
-                {
-                    uc.ShowSoKhach();
-                }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
+                uc.viTri = j * 148;
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO", soLuong);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
-                if (soLuong > 0)
-                {
-                    uc.ShowSoKhach();
-                }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.khoangCach = truyen.danhGia[j];
-                uc.anhBia = truyen.address[j];
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
-                uc.ShowKhoangCach();
+                uc.viTri = j * 148;
+                uc.ShowdanhGia();
                 tab_DanhGiaCao.Controls.Add(uc);
             }
         }
@@ -341,7 +324,7 @@ namespace DuLich
         public string diaDiem2;
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
-
+            List<KHACHSAN> listKS = new List<KHACHSAN>();
             if (lb_TimKiem.Text != "")
             {
                 diadiem = lb_TimKiem.Text;
@@ -361,15 +344,13 @@ namespace DuLich
             truyen.Truyen2(diadiem, min, max);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.NgayNhan = dateTimePicker2.Value;
                 uc.NgayTra = dateTimePicker1.Value;
-
+                uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             int soNguoiLon = int.Parse(nUD_nguoiLon.Value.ToString());
@@ -388,55 +369,37 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
 
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.maks = truyen.maKS[j];
                 if (soLuong2 > 0)
                 {
                     uc.ShowSoKhach();
                 }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
-                uc.maks = truyen.maKS[j];
+                uc.viTri = j * 148;
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA", soLuong2);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
-                if (soLuong2 > 0)
-                {
-                    uc.ShowSoKhach();
-                }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
+                uc.viTri = j * 148;
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO", soLuong2);
             for (int j = 0; j < truyen.soLuong; j++)
             {
 
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.viTri = j * 148;
-                if (soLuong2 > 0)
-                {
-                    uc.ShowSoKhach();
-                }
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.soLuong = truyen.soKhach[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.tien = truyen.soTien[j];
-                uc.khoangCach = truyen.danhGia[j];
-                uc.anhBia = truyen.address[j];
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.ShowdanhGia();
                 uc.maks = truyen.maKS[j];
-                uc.ShowKhoangCach();
+                uc.viTri = j * 148;
                 tab_DanhGiaCao.Controls.Add(uc);
             }
 
@@ -490,7 +453,7 @@ namespace DuLich
                 string[] tenTinh = new string[100];
                 string[] tenThanhPho = new string[100];
                 string[] tenKhachSan = new string[100];
-                string[] soTien = new string[100];
+                double [] soTien = new double[100];
                 string[] anhBia = new string[100];
                 for (int maks = 0; maks < maksList.Count; maks++)
                 {
@@ -512,7 +475,7 @@ namespace DuLich
                         if (!reader1.IsDBNull(giaColumnIndex))
                         {
                             double gia = reader1.GetDouble(giaColumnIndex);
-                            soTien[soLuong1] = gia.ToString() + " VNĐ";
+                            soTien[soLuong1] = gia;
                         }
                         soLuong1++;
                     }
@@ -529,15 +492,12 @@ namespace DuLich
                 }
                 for (int j = 0; j < soLuong1; j++)
                 {
+                    KHACHSAN ks = new KHACHSAN(tenKhachSan[j], tenTinh[j], tenThanhPho[j], truyen.danhGia[j], soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], anhBia[soLuong1], truyen.maKS[j], ngayDen, ngayDi);
+                    listKS.Add(ks);
                     UKhungKetQua uc = new UKhungKetQua();
                     uc.NgayNhan = dateTimePicker2.Value;
                     uc.NgayTra = dateTimePicker1.Value;
-
                     uc.viTri = j * 148;
-                    uc.tenViTri = tenThanhPho[j] + ", " + tenTinh[j];
-                    uc.tenKhachSan = tenKhachSan[j];
-                    uc.tien = soTien[j];
-                    uc.anhBia = truyen.address[j];
                     tab_PhuHopNhat.Controls.Add(uc);
                 }
             }
@@ -625,11 +585,6 @@ namespace DuLich
             return demTrung;
         }
         int demTab = 0;
-        private void tabKhoangCach_Click(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void tabKhoangCach_Move(object sender, EventArgs e)
         {
@@ -641,6 +596,7 @@ namespace DuLich
             {
                 panel_KhoangCach.Visible = false;
             }
+            demTab++;
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -659,6 +615,7 @@ namespace DuLich
 
         private void btn_ThanhPho_Click(object sender, EventArgs e)
         {
+            List<KHACHSAN> listKS = new List<KHACHSAN>();
             for (int k = tabKhoangCach.Controls.Count - 1; k >= 0; k--)
             {
                 Control control = tabKhoangCach.Controls[k];
@@ -672,24 +629,19 @@ namespace DuLich
             truyen.Truyen(diadiem, "KCTHANHPHO", soLuong);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
-                uc.NgayNhan = dateTimePicker2.Value;
-                uc.NgayTra = dateTimePicker1.Value;
-
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.maks = truyen.maKS[j];
+                uc.ShowKhoangCachTP();
                 uc.viTri = j * 148;
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.khoangCach = truyen.khoangCachTP[j] + " km đến trung tâm";
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
-                uc.ShowKhoangCach();
-                panel_KhoangCach.Visible = false;
                 tabKhoangCach.Controls.Add(uc);
             }
         }
 
         private void btn_SanBay_Click(object sender, EventArgs e)
         {
+            List<KHACHSAN> listKS = new List<KHACHSAN>();
             int soLuong = soLuongNguoiLon + soLuongTreEm;
             for (int k = tabKhoangCach.Controls.Count - 1; k >= 0; k--)
             {
@@ -703,18 +655,14 @@ namespace DuLich
             truyen.Truyen(diadiem, "KCSANBAY", soLuong);
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                UKhungKetQua uc = new UKhungKetQua();
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
+                listKS.Add(ks);
+                UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.maks = truyen.maKS[j];
                 uc.NgayNhan = dateTimePicker2.Value;
                 uc.NgayTra = dateTimePicker1.Value;
-
+                uc.ShowKhoangCachSB();
                 uc.viTri = j * 148;
-                uc.tenViTri = truyen.tenThanhPho[j] + ", " + truyen.tenTinh[j];
-                uc.tenKhachSan = truyen.tenKhachSan[j];
-                uc.khoangCach = truyen.khoangCachSanBay[j] + " km đến sân bay gần nhất";
-                uc.tien = truyen.soTien[j];
-                uc.anhBia = truyen.address[j];
-                uc.ShowKhoangCach();
-                panel_KhoangCach.Visible = false;
                 tabKhoangCach.Controls.Add(uc);
             }
         }
