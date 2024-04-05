@@ -16,12 +16,13 @@ namespace DuLich
     {
 
         int iDanhGia = 0;
-        public DateTime NgayNhan;
-        public DateTime NgayTra;
+        DateTime checkin;
+        DateTime checkout;
         List<DanhGia> listdg;
-        public fHotel_Details(int maks)
+        KHACHSAN ks;
+        public fHotel_Details(KHACHSAN ks)
         {
-            this.maks = maks;
+            this.ks=ks;
             listdg = new List<DanhGia>();
             InitializeComponent();
         }
@@ -60,10 +61,8 @@ namespace DuLich
             ChenTNChinh();
             ChenTienNghi();
             ChenPhong();
-            //ChenDanhGia();
+            ChenDanhGia();
         }
-
-        /*void ChenDanhGiaKhachHang(List<DanhGia> list)
         void ChenDanhGiaKhachHang()
         {
             lblNameDG.Text = listdg[0].TenKH;
@@ -81,7 +80,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             List<DanhGia> list = new List<DanhGia>();
@@ -138,7 +137,7 @@ namespace DuLich
             lblK2.Text = k.ToString();
             ChenDanhGiaKhachHang();
             conn.Close();
-        }*/
+        }
 
         void ChenPhong()
         {
@@ -146,7 +145,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -161,9 +160,7 @@ namespace DuLich
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
                 Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
-                UCPhong uCPhong = new UCPhong(room);
-                uCPhong.NgayNhan = NgayNhan;
-                uCPhong.NgayTra = NgayTra;
+                UCPhong uCPhong = new UCPhong(ks,room,checkin,checkout);
                 flbRoom.Controls.Add(uCPhong);
                 i++;
             }
@@ -176,7 +173,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -211,7 +208,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -229,7 +226,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -275,7 +272,7 @@ namespace DuLich
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", maks);
+            command.Parameters.AddWithValue("@maks", ks.MAKS);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
             int i = 0;
@@ -381,7 +378,7 @@ namespace DuLich
             {
                 iDanhGia -= 2;
                 flpDanhGiaKhachHang.Controls.Clear();
-                //ChenDanhGiaKhachHang();
+                ChenDanhGiaKhachHang();
             }
         }
 
@@ -391,8 +388,21 @@ namespace DuLich
             {
                 iDanhGia += 2;
                 flpDanhGiaKhachHang.Controls.Clear();
-                //ChenDanhGiaKhachHang();
+                ChenDanhGiaKhachHang();
             }
         }
+
+        public DateTime CheckIn
+        {
+            get { return checkin; }
+            set { checkin = value; }
+        }
+
+        public DateTime CheckOut
+        {
+            set { checkout = value; }
+            get { return checkout; }
+        }
+
     }
 }

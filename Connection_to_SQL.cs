@@ -8,13 +8,13 @@ using System.Data;
 namespace DuLich
 {
     public class Connection_to_SQL
-    { 
-        private static string Connection = @"Data Source=MSI;Initial Catalog=Account;Integrated Security=True";
+    {
+        static string cnnString = "Data Source=DESKTOP-OOU6GPH;Initial Catalog=Account;Integrated Security=True";
         public static SqlConnection getConnection()
         {
-            return new SqlConnection(Connection);
+            return new SqlConnection(cnnString);
         }
-        SqlConnection conn = new SqlConnection(Connection);
+        SqlConnection conn = new SqlConnection(cnnString);
         public void ThucThi<T>(T account, string sql)
         {
             try
@@ -35,7 +35,7 @@ namespace DuLich
         public static string getConnnection()
         {
             //return Properties.Settings.Default.cnnStr;
-            return Connection;
+            return cnnString;
         }
     }
 }

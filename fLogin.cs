@@ -159,8 +159,6 @@ namespace DuLich
                             k.Gia = Gia;
                             k.sdt = sdt;
                             k.TenKhachHang = TenKhachHang;
-                            k.NgayNhan = NgayNhan;
-                            k.NgayTra = NgayTra;
                             k.HienThi();
                             this.Hide();
                             k.ShowDialog();

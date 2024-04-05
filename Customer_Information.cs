@@ -23,11 +23,25 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
-        public DateTime NgayNhan;
-        public DateTime NgayTra;
         double giaTien;
+        KHACHSAN ks;
+        DateTime checkin;
+        DateTime checkout;
+        KhachHang kh;
+        Room phong;
+        DatPhong datphong;
+
         public Customer_Information()
         {
+            InitializeComponent();
+        }
+
+        public Customer_Information(KHACHSAN ks, Room phong, DateTime checkin, DateTime checkout)
+        {
+            this.checkin = checkin;
+            this.checkout = checkout;
+            this.phong = phong;
+            this.ks = ks;
             InitializeComponent();
         }
 
@@ -57,7 +71,6 @@ namespace DuLich
 
         private void Customer_Information_Load(object sender, EventArgs e)
         {
-
 //            string GiaChuyenDoi = Gia;
 //<<<<<<< HEAD
 //            double giaTien;
@@ -107,16 +120,20 @@ namespace DuLich
 
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
+            this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
+            this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
+            MessageBox.Show(datphong.Phong.MAPHONG.ToString());
             Payment_Information f = new Payment_Information();
-            f.tenAnh = tenAnh;
-            f.tenKhachSan = tenKhachSan;
-            f.soKhach = soKhach;
-            f.soPhongConTrong = soPhongConTrong;
-            f.Gia = Gia;
-            f.sdt = txt_SoDienThoai.Text;
-            f.TenKhachHang = txt_HoVaTen.Text;
-            f.NgayNhan = NgayNhan;
-            f.NgayTra = NgayTra;
+            f.DP = datphong;
+            //f.tenAnh = tenAnh;
+            //f.tenKhachSan = tenKhachSan;
+            //f.soKhach = soKhach;
+            //f.soPhongConTrong = soPhongConTrong;
+            //f.Gia = Gia;
+            //f.sdt = txt_SoDienThoai.Text;
+            //f.TenKhachHang = txt_HoVaTen.Text;
+            //f.NgayNhan = NgayNhan;
+            //f.NgayTra = NgayTra;
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -163,8 +180,8 @@ namespace DuLich
             k.Gia = Gia;
             k.sdt = txt_SoDienThoai.Text;
             k.TenKhachHang = txt_HoVaTen.Text;
-            k.NgayNhan = NgayNhan;
-            k.NgayTra = NgayTra;
+            k.NgayNhan = checkin;
+            k.NgayTra = checkout;
             this.Hide();
             k.ShowDialog();
             this.Close();
@@ -206,5 +223,18 @@ namespace DuLich
             gia = gia - double.Parse(cbb_MaGiamGia.Text) / 100 * gia;
             lbl_LastCost.Text = gia.ToString();
         }
+
+        public DateTime CheckIn
+        {
+            get { return checkin ; }
+            set { checkin = value ; }
+        }
+
+        public DateTime CheckOut
+        {
+            get { return checkout; }
+            set { checkout = value; }
+        }
+
     }
 }

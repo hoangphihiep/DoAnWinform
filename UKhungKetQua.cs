@@ -37,10 +37,10 @@ namespace DuLich
         }
         private void label2_Click(object sender, EventArgs e)
         {
-            fHotel_Details f = new fHotel_Details(maks);
+            fHotel_Details f = new fHotel_Details(ks);
             //this.Hide();
-            f.NgayNhan = NgayNhan;
-            f.NgayTra = NgayTra;
+            f.CheckIn = NgayNhan;
+            f.CheckOut = NgayTra;
             f.ShowDialog();
 
             this.Show();

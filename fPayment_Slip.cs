@@ -38,18 +38,33 @@ namespace DuLich
 
         private void fPayment_Slip_Load(object sender, EventArgs e)
         {
-            ChenDuLieuVaoBang();
             lblHotelName.Text= datphong.KS.TENKS;
             lblHotelAddress.Text = datphong.KS.DIACHI;
-            lblCheckIn.Text = datphong.NgayNhan.ToString();
-            lblCheckOut.Text = datphong.NgayTra.ToString();
-            lblRoomName.Text = datphong.Phong.ToString();
+            lblCheckIn.Text = datphong.NgayNhan.Date.ToString();
+            lblCheckOut.Text = datphong.NgayTra.Date.ToString();
+            lblRoomName.Text = datphong.Phong.TENPHONG.ToString();
             lblRoomCount.Text = datphong.SoPhong.ToString();
-            lblCustomerCount.Text = datphong.Phong.SoKhach.ToString();
+            lblCustomerCount.Text = datphong.Phong.SOKHACH.ToString();
             lblCustomerName.Text = datphong.KhachHang.Ten;
             lblPrice.Text = datphong.TongThanhToan.ToString();
             lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
+        }
+
+        void ChenKhachHangVaoBang()
+        {
+            try
+            {
+                string sqlString = string.Format("INSERT INTO KHACHHANG (TENKH, GIOITINH, BDATE, SDT, GMAIL, DIACHI) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}') ", datphong.KhachHang.Ten, datphong.KhachHang.Gt, datphong.KhachHang.Bdate, datphong.KhachHang.Sdt, datphong.KhachHang.Gmail, datphong.KhachHang.DiaChi);
+                SqlConnection conn = Connection_to_SQL.getConnection();
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         void ChenDuLieuVaoBang()
@@ -57,7 +72,7 @@ namespace DuLich
             
             try
             {
-                string sqlString = string.Format("INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES ({0}, '{1}', '{2}', {3}, {4}, '{5}', {6}, {7})", datphong.KS.MAKS, datphong.NgayNhan, datphong.NgayTra, datphong.SoPhong, datphong.Phong.MaPhong, datphong.KhachHang.MaKH, datphong.TongThanhToan);
+                string sqlString = string.Format("INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES ({0}, '{1}', '{2}', {3}, {4}, '{5}', {6}, {7})", datphong.KS.MAKS, datphong.NgayNhan, datphong.NgayTra, datphong.SoPhong, datphong.Phong.MAPHONG, datphong.KhachHang.MaKH, datphong.TongThanhToan);
                 SqlConnection conn = Connection_to_SQL.getConnection();
                 SqlCommand cmd = new SqlCommand(sqlString, conn);
                 cmd.ExecuteNonQuery();
@@ -82,7 +97,7 @@ namespace DuLich
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            Payment_Information f = new Payment_Information();
+            Payment_Information f = new Payment_Information(datphong);
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -90,7 +105,15 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
-
+            ChenDuLieuVaoBang();
+            ChenKhachHangVaoBang();
         }
+
+        public DatPhong DP
+        {
+            get { return datphong; }
+            set { datphong = value; }
+        }
+
     }
 }
