@@ -122,7 +122,7 @@ namespace DuLich
         {
             this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
             this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
-            MessageBox.Show(datphong.Phong.MAPHONG.ToString());
+            datphong.Phong = this.phong;
             Payment_Information f = new Payment_Information();
             f.DP = datphong;
             //f.tenAnh = tenAnh;
@@ -234,6 +234,12 @@ namespace DuLich
         {
             get { return checkout; }
             set { checkout = value; }
+        }
+
+        public Room Phong
+        {
+            get { return phong ; }
+            set { phong = value ; }
         }
 
     }

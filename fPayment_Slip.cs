@@ -51,37 +51,6 @@ namespace DuLich
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
         }
 
-        void ChenKhachHangVaoBang()
-        {
-            try
-            {
-                string sqlString = string.Format("INSERT INTO KHACHHANG (TENKH, GIOITINH, BDATE, SDT, GMAIL, DIACHI) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}') ", datphong.KhachHang.Ten, datphong.KhachHang.Gt, datphong.KhachHang.Bdate, datphong.KhachHang.Sdt, datphong.KhachHang.Gmail, datphong.KhachHang.DiaChi);
-                SqlConnection conn = Connection_to_SQL.getConnection();
-                SqlCommand cmd = new SqlCommand(sqlString, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
-
-        void ChenDuLieuVaoBang()
-        {
-            
-            try
-            {
-                string sqlString = string.Format("INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES ({0}, '{1}', '{2}', {3}, {4}, '{5}', {6}, {7})", datphong.KS.MAKS, datphong.NgayNhan, datphong.NgayTra, datphong.SoPhong, datphong.Phong.MAPHONG, datphong.KhachHang.MaKH, datphong.TongThanhToan);
-                SqlConnection conn = Connection_to_SQL.getConnection();
-                SqlCommand cmd = new SqlCommand(sqlString, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         public void SetSDT(string Sdt)
         {
             sdt = Sdt;
@@ -105,8 +74,11 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
-            ChenDuLieuVaoBang();
-            ChenKhachHangVaoBang();
+            DatPhongDAO datPhongDAO = new DatPhongDAO();
+            KhachHangDAO khachHangDAO = new KhachHangDAO();
+            datPhongDAO.AddDatPhong(datphong);
+            khachHangDAO.AddKhachHang(datphong.KhachHang);
+            this.Close();
         }
 
         public DatPhong DP

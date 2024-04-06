@@ -70,7 +70,6 @@ namespace DuLich
 
         private void Payment_Information_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(datphong.Phong.MAPHONG.ToString());
             string GiaChuyenDoi = Gia;
             double giaTien;
             double.TryParse(GiaChuyenDoi, out giaTien);

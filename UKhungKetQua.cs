@@ -101,6 +101,7 @@ namespace DuLich
             lbl_KhoangCachSanBay.Location = new Point(217, 67);
             lbl_danhGia.Size = new Size(69, 20);
             lbl_danhGia.Location = new Point(217, 67);
+            MessageBox.Show(NgayNhan.ToString());
         }
     }
 }
