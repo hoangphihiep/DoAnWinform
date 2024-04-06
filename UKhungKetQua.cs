@@ -37,10 +37,10 @@ namespace DuLich
         }
         private void label2_Click(object sender, EventArgs e)
         {
-            fHotel_Details f = new fHotel_Details(maks);
+            fHotel_Details f = new fHotel_Details(ks);
             //this.Hide();
-            f.NgayNhan = NgayNhan;
-            f.NgayTra = NgayTra;
+            f.CheckIn = NgayNhan;
+            f.CheckOut = NgayTra;
             f.ShowDialog();
 
             this.Show();
@@ -101,6 +101,7 @@ namespace DuLich
             lbl_KhoangCachSanBay.Location = new Point(217, 67);
             lbl_danhGia.Size = new Size(69, 20);
             lbl_danhGia.Location = new Point(217, 67);
+            MessageBox.Show(NgayNhan.ToString());
         }
     }
 }

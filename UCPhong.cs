@@ -18,11 +18,15 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
-        public DateTime NgayNhan;
-        public DateTime NgayTra;
+        DateTime checkin;
+        DateTime checkout;
         Room room;
-        public UCPhong(Room room)
+        KHACHSAN ks;
+        public UCPhong(KHACHSAN ks, Room room, DateTime checkin, DateTime checkout)
         {
+            this.ks = ks;
+            this.checkin = checkin;
+            this.checkout = checkout;
             this.room = room;
             InitializeComponent();
         }
@@ -45,27 +49,12 @@ namespace DuLich
             ptbAnh.Image = Image.FromFile(room.HinhAnh);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBook_Click(object sender, EventArgs e)
         {
-            TruyenDaTa();
-            Customer_Information f = new Customer_Information();
-            f.tenAnh = ptbAnh.Image;
-            f.tenKhachSan = tenKhachSan;
-            f.soKhach = soKhach;
-            f.soPhongConTrong = soPhongConTrong;
-            f.Gia = Gia;
-            f.NgayNhan = NgayNhan;
-            f.NgayTra = NgayTra;
+            Customer_Information f = new Customer_Information(ks,room,checkin, checkout);
             this.Hide();
             f.ShowDialog();
-        }
-        public void TruyenDaTa()
-        {
-            tenAnh = ptbAnh.Image;
-            tenKhachSan = lblName2.Text;
-            soKhach = lblSoKhach.Text;
-            soPhongConTrong = lblSoPhongTrong.Text;
-            Gia = lblPrice.Text;
+            this.Show();
         }
     }
 }

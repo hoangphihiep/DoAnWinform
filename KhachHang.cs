@@ -11,11 +11,27 @@ namespace DuLich
         int makh;
         string ten;
         string sdt;
-        public KhachHang(int makh, string ten, string sdt)
+        string gt;
+        DateTime bdate;
+        string gmail;
+        string diachi;
+        public KhachHang(int makh, string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi)
         {
             this.makh = makh;
             this.ten = ten;
             this.sdt = sdt;
+            this.bdate = bdate;
+            this.gmail = gmail;
+            this.diachi = diachi;
+        }
+
+        public KhachHang(string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi)
+        {
+            this.ten = ten;
+            this.sdt = sdt;
+            this.bdate = bdate;
+            this.gmail = gmail;
+            this.diachi = diachi;
         }
 
         public int MaKH
@@ -34,6 +50,30 @@ namespace DuLich
         { 
             get { return sdt; } 
             set { sdt = value; } 
+        }
+
+        public string Gmail
+        {
+            get { return gmail; }
+            set { gmail = value; }
+        }
+
+        public DateTime Bdate
+        {
+            get { return bdate; } 
+            set {  bdate = value; } 
+        }
+
+        public string Gt
+        {
+            get { return gt; }
+            set { gt = value; }
+        }
+
+        public string DiaChi
+        {
+            get { return diachi; }
+            set { diachi = value; }
         }
 
     }

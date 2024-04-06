@@ -23,6 +23,14 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        DatPhong datphong;
+
+        public Payment_Information(DatPhong datPhong)
+        {
+            this.datphong = datphong;
+            InitializeComponent();
+        }
+
         public Payment_Information()
         {
             InitializeComponent();
@@ -54,15 +62,7 @@ namespace DuLich
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
             fPayment_Slip f = new fPayment_Slip();
-            f.tenAnh = tenAnh;
-            f.tenKhachSan = tenKhachSan;
-            f.soKhach = soKhach;
-            f.soPhongConTrong = soPhongConTrong;
-            f.Gia = Gia;
-            f.SetSDT(sdt);
-            f.SetTenKhachHang(TenKhachHang);
-            f.NgayNhan = NgayNhan;
-            f.NgayTra = NgayTra;
+            f.DP = datphong;
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -90,5 +90,12 @@ namespace DuLich
         {
             panel1.VerticalScroll.Value = 0;
         }
+
+        public DatPhong DP
+        {
+            get { return datphong; }
+            set { datphong = value; }
+        }
+
     }
 }

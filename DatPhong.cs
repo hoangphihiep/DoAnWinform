@@ -10,14 +10,14 @@ namespace DuLich
     {
         KhachHang kh;
         KHACHSAN ks;
-        Phong phong;
+        Room phong;
         DateTime ngayNhan;
         DateTime ngayTra;
         int soPhong;
         float tongThanhToan;
         string trangThai;
         string maHanhTrinh;
-        public DatPhong(KhachHang kh, KHACHSAN ks, Phong phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, float tongThanhToan, string trangThai, string maHanhTrinh)
+        public DatPhong(KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, float tongThanhToan, string trangThai, string maHanhTrinh)
         {
             this.kh = kh;
             this.ks = ks;
@@ -29,7 +29,7 @@ namespace DuLich
             this.maHanhTrinh = maHanhTrinh;
         }
 
-        public Phong Phong
+        public Room Phong
         {
             get { return phong; }
             set { phong = value; }
