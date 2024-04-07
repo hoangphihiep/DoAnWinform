@@ -22,9 +22,13 @@ namespace DuLich
         public int[] khoangCachSanBay { get; set; }
         public int[] danhGia { get; set; }
         public int[] maKS { get; set; }
+        public int[] maPhong { get; set; }
         public string[] address { get; set; }
         public int[] soKhach { get; set; }
         public string[] diaChi { get; set; }
+        public string[] tenPhong { get; set; }
+        public int[] soLuongPhong { get; set; }
+        public double[] soTienThanhToan { get; set; }
         public TruyenDuLieu()
         {
             // Khởi tạo các mảng
@@ -39,6 +43,97 @@ namespace DuLich
             soKhach = new int[100];
             maKS = new int[100];
             diaChi = new string[100];
+            maPhong = new int[100];
+            tenPhong = new string[100];
+            soLuongPhong = new int[100];
+            soTienThanhToan = new double[100];
+        }
+        public void Truyen3 (string tenTaiKhoan)
+        {
+            soLuong = 0;
+            Array.Clear(tenTinh, 0, tenTinh.Length);
+            Array.Clear(tenThanhPho, 0, tenThanhPho.Length);
+            Array.Clear(tenKhachSan, 0, tenKhachSan.Length);
+            Array.Clear(maKS, 0, maKS.Length);
+            Array.Clear(maPhong, 0, maPhong.Length);
+            Array.Clear(tenPhong, 0, tenPhong.Length);
+            Array.Clear(diaChi, 0, diaChi.Length);
+            Array.Clear(soLuongPhong, 0, soLuongPhong.Length);
+            Array.Clear(soTienThanhToan, 0, soTienThanhToan.Length);
+            Array.Clear(address, 0, address.Length);
+            Array.Clear(soKhach, 0, soKhach.Length);
+            string query = string.Format("SELECT * FROM DATPHONG WHERE TENDANGNHAP = @taiKhoan");
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@taiKhoan", tenTaiKhoan);
+            SqlDataReader reader = command.ExecuteReader();
+            int i = 0;
+            while (reader.Read())
+            {
+                address[i] = reader.GetString(reader.GetOrdinal("ANHPHONG"));
+                int soLuongPhongColumnIndex = reader.GetOrdinal("SOLUONG");
+                if (!reader.IsDBNull(soLuongPhongColumnIndex))
+                {
+                    int soPhong = reader.GetInt32(soLuongPhongColumnIndex);
+                    soLuongPhong[i] = soPhong;
+                }
+                int soTienTongColumnIndex = reader.GetOrdinal("THANHTOAN");
+                if (!reader.IsDBNull(soTienTongColumnIndex))
+                {
+                    double soTien = reader.GetDouble(soTienTongColumnIndex);
+                    soTienThanhToan[i] = soTien;
+                }
+                int maksColumnIndex = reader.GetOrdinal("MAKS");
+                if (!reader.IsDBNull(maksColumnIndex))
+                {
+                    int ma = reader.GetInt32(maksColumnIndex);
+                    maKS[i] = ma;
+                    string query1 = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = @maks");
+                    SqlConnection conn1 = Connection_to_SQL.getConnection();
+                    conn1.Open();
+                    SqlCommand command1 = new SqlCommand(query1, conn1);
+                    command1.Parameters.AddWithValue("@maks", maKS[i]);
+                    SqlDataReader reader1 = command1.ExecuteReader();
+                    while (reader1.Read())
+                    {
+                        MessageBox.Show(i.ToString());
+                        MessageBox.Show(maKS[i].ToString());
+                        tenTinh[i] = reader1.GetString(reader1.GetOrdinal("TINH"));
+                        tenThanhPho[i] = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
+                        tenKhachSan[i] = reader1.GetString(reader1.GetOrdinal("TENKH"));
+                        diaChi[i] = reader1.GetString(reader1.GetOrdinal("DIACHI"));
+                    }
+                    conn1.Close();
+                }
+                int maPhongColumnIndex = reader.GetOrdinal("MAPHONG");
+                if (!reader.IsDBNull(maPhongColumnIndex))
+                {
+                    int ma = reader.GetInt32(maPhongColumnIndex);
+                    maPhong[i] = ma;
+                    string query1 = string.Format("SELECT * FROM PHONG WHERE MAPHONG = @maphong");
+                    SqlConnection conn1 = Connection_to_SQL.getConnection();
+                    conn1.Open();
+                    SqlCommand command1 = new SqlCommand(query1, conn1);
+                    command1.Parameters.AddWithValue("@maphong", maPhong[i]);
+                    SqlDataReader reader1 = command1.ExecuteReader();
+                    while (reader1.Read())
+                    {
+                        tenPhong[i] = reader1.GetString(reader1.GetOrdinal("TENPHONG"));
+                        int soKhachColumnIndex = reader1.GetOrdinal("SOKHACH");
+                        if (!reader1.IsDBNull(soKhachColumnIndex))
+                        {
+                            int sokhach = reader1.GetInt32(soKhachColumnIndex);
+                            soKhach[i] = sokhach;
+                        }
+                    }
+                    conn1.Close();
+                }
+                soLuong++;
+                i++;
+                
+            }
+            conn.Close();
         }
         public void Truyen2 (string diaDiem, int min, int max)
         {

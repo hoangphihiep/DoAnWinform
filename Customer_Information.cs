@@ -71,41 +71,23 @@ namespace DuLich
 
         private void Customer_Information_Load(object sender, EventArgs e)
         {
-//            string GiaChuyenDoi = Gia;
-//<<<<<<< HEAD
-//            double giaTien;
-//=======
+            string GiaChuyenDoi = Gia;
 
-//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
-//            double.TryParse(GiaChuyenDoi, out giaTien);
-
-//            ptb_Anh.Image = tenAnh;
-//            label15.Text = tenKhachSan;
-//            label17.Text = soKhach;
-//            label19.Text = soPhongConTrong;
-//            label20.Text = Gia;
-//            lbl_CostRoom.Text = Gia;
-//            lbl_Cost.Text = Gia;
-//            giaTien *= 1.13;
-//<<<<<<< HEAD
-
-//            lbl_LastCost.Text = giaTien.ToString();
-//=======
-//            lbl_LastCost.Text = giaTien.ToString();
-//            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
-//            {
-//                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
-//                var result = modify.UuDai(query);
-//                List<int> GiaTriUuDai = new List<int>();
-//                GiaTriUuDai.Add(0);
-//                foreach (var item in result)
-//                {
-//                    GiaTriUuDai.Add(item.GiaTriUuDai);
-//                }
-//                cbb_MaGiamGia.DataSource = GiaTriUuDai;
-//                cbb_MaGiamGia.Text = 0.ToString();
-//            }
-//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
+            lbl_LastCost.Text = giaTien.ToString();
+            lbl_LastCost.Text = giaTien.ToString();
+            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
+           {
+                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
+                var result = modify.UuDai(query);
+                List<int> GiaTriUuDai = new List<int>();
+                GiaTriUuDai.Add(0);
+                foreach (var item in result)
+                {
+                    GiaTriUuDai.Add(item.GiaTriUuDai);
+                }
+                cbb_MaGiamGia.DataSource = GiaTriUuDai;
+                cbb_MaGiamGia.Text = 0.ToString();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)

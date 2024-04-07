@@ -845,6 +845,9 @@ namespace DoAnDuLich
         {
             fHotel_booked f = new fHotel_booked();
             //f.kiemtratrang = 1;
+            f.taiKhoan = tentk;
+            f.ngayDen = date_ngayDen.Value;
+            MessageBox.Show(tentk);
             this.Hide();
             f.ShowDialog();
             this.Show();

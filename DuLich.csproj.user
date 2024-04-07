@@ -103,6 +103,9 @@
     <Compile Update="UMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UPhongDaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UThongtin.cs">
       <SubType>UserControl</SubType>
     </Compile>
