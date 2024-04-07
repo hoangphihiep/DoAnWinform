@@ -72,7 +72,6 @@ namespace DuLich
         private void Customer_Information_Load(object sender, EventArgs e)
         {
             string GiaChuyenDoi = Gia;
-
             lbl_LastCost.Text = giaTien.ToString();
             lbl_LastCost.Text = giaTien.ToString();
             if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
@@ -186,7 +185,7 @@ namespace DuLich
             txt_Email.Text = acc.getEmail;
             txt_SoDienThoai.Text = acc.getSoDienThoai;
             txt_DiaChi.Text = acc.getDiaChi;
-            dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
+           // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
         }
 
         private void btn_ThayDoi_Click(object sender, EventArgs e)

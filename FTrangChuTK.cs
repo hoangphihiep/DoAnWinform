@@ -708,6 +708,8 @@ namespace DoAnDuLich
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
                 k.tenKhachHang = rename;
+                k.ngayDen = date_ngayDen.Value;
+                k.ngayDi = date_NgayDi.Value;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -721,6 +723,8 @@ namespace DoAnDuLich
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
                 k.tenKhachHang = rename;
+                k.ngayDen = date_ngayDen.Value;
+                k.ngayDi = date_NgayDi.Value;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();

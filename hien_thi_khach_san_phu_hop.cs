@@ -234,7 +234,8 @@ namespace DuLich
             for (int j = 0; j < truyen.soLuong; j++)
             {
                 KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j],truyen.soKhach[j],truyen.khoangCachTP[j],truyen.khoangCachSanBay[j],truyen.address[j],truyen.maKS[j],ngayDen,ngayDi);
-                listKS.Add(ks);              
+                listKS.Add(ks);
+                MessageBox.Show(ngayDen.ToString());
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
                 if (soLuong > 0)
@@ -347,8 +348,6 @@ namespace DuLich
                 KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
                 listKS.Add(ks);
                 UKhungKetQua uc = new UKhungKetQua(ks);
-                uc.NgayNhan = dateTimePicker2.Value;
-                uc.NgayTra = dateTimePicker1.Value;
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
                 tab_PhuHopNhat.Controls.Add(uc);
@@ -495,8 +494,6 @@ namespace DuLich
                     KHACHSAN ks = new KHACHSAN(tenKhachSan[j], tenTinh[j], tenThanhPho[j], truyen.danhGia[j], soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], anhBia[soLuong1], truyen.maKS[j], ngayDen, ngayDi);
                     listKS.Add(ks);
                     UKhungKetQua uc = new UKhungKetQua();
-                    uc.NgayNhan = dateTimePicker2.Value;
-                    uc.NgayTra = dateTimePicker1.Value;
                     uc.viTri = j * 148;
                     tab_PhuHopNhat.Controls.Add(uc);
                 }
@@ -659,8 +656,6 @@ namespace DuLich
                 listKS.Add(ks);
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
-                uc.NgayNhan = dateTimePicker2.Value;
-                uc.NgayTra = dateTimePicker1.Value;
                 uc.ShowKhoangCachSB();
                 uc.viTri = j * 148;
                 tabKhoangCach.Controls.Add(uc);
