@@ -23,13 +23,15 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
+        public string lastcost;
         double giaTien;
-        KHACHSAN ks;
-        DateTime checkin;
-        DateTime checkout;
-        KhachHang kh;
-        Room phong;
-        DatPhong datphong;
+        int giamgia;
+        public KHACHSAN ks;
+        public DateTime checkin;
+        public DateTime checkout;
+        public KhachHang kh;
+        public Room phong;
+        public DatPhong datphong;
 
         public Customer_Information()
         {
@@ -71,41 +73,34 @@ namespace DuLich
 
         private void Customer_Information_Load(object sender, EventArgs e)
         {
-//            string GiaChuyenDoi = Gia;
-//<<<<<<< HEAD
-//            double giaTien;
-//=======
+            string GiaChuyenDoi = phong.GIA.ToString();
+            double giaTien;
+            double.TryParse(GiaChuyenDoi, out giaTien);
 
-//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
-//            double.TryParse(GiaChuyenDoi, out giaTien);
-
-//            ptb_Anh.Image = tenAnh;
-//            label15.Text = tenKhachSan;
-//            label17.Text = soKhach;
-//            label19.Text = soPhongConTrong;
-//            label20.Text = Gia;
-//            lbl_CostRoom.Text = Gia;
-//            lbl_Cost.Text = Gia;
-//            giaTien *= 1.13;
-//<<<<<<< HEAD
-
-//            lbl_LastCost.Text = giaTien.ToString();
-//=======
-//            lbl_LastCost.Text = giaTien.ToString();
-//            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
-//            {
-//                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
-//                var result = modify.UuDai(query);
-//                List<int> GiaTriUuDai = new List<int>();
-//                GiaTriUuDai.Add(0);
-//                foreach (var item in result)
-//                {
-//                    GiaTriUuDai.Add(item.GiaTriUuDai);
-//                }
-//                cbb_MaGiamGia.DataSource = GiaTriUuDai;
-//                cbb_MaGiamGia.Text = 0.ToString();
-//            }
-//>>>>>>> 2a2040a2d5be76e6f0a9afa5f94dfa2fe7d7b4d0
+            ptb_Anh.Image = tenAnh;
+            label15.Text = ks.TENKS;
+            label17.Text = phong.SOKHACH.ToString();
+            label19.Text = (phong.SOPHONG - phong.SOPHONGDD).ToString();
+            label20.Text = phong.GIA.ToString();
+            lbl_CostRoom.Text = phong.GIA.ToString();
+            lbl_Cost.Text = phong.GIA.ToString();
+            giaTien *= 1.13;
+            double truncatedNumber = Math.Round(giaTien, 2);
+            lbl_LastCost.Text = truncatedNumber.ToString();
+            //Ma giam gia theo tk
+            if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
+            {
+                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + ks.MAKS + "' ";
+                var result = modify.UuDai(query);
+                List<int> GiaTriUuDai = new List<int>();
+                GiaTriUuDai.Add(0);
+                foreach (var item in result)
+                {
+                    GiaTriUuDai.Add(item.GiaTriUuDai);
+                }
+                cbb_MaGiamGia.DataSource = GiaTriUuDai;
+                cbb_MaGiamGia.Text = 0.ToString();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -120,11 +115,14 @@ namespace DuLich
 
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
+            lastcost = lbl_LastCost.Text;
             this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
             this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
             datphong.Phong = this.phong;
             Payment_Information f = new Payment_Information();
             f.DP = datphong;
+            f.SetLastCost(lastcost);
+            f.giamgia = giamgia;
             //f.tenAnh = tenAnh;
             //f.tenKhachSan = tenKhachSan;
             //f.soKhach = soKhach;
@@ -182,6 +180,10 @@ namespace DuLich
             k.TenKhachHang = txt_HoVaTen.Text;
             k.NgayNhan = checkin;
             k.NgayTra = checkout;
+            k.ks = ks;
+            k.phong = phong;
+            k.kh = kh;
+            k.datphong = datphong;
             this.Hide();
             k.ShowDialog();
             this.Close();
@@ -219,9 +221,13 @@ namespace DuLich
 
         private void cbb_MaGiamGia_SelectedValueChanged(object sender, EventArgs e)
         {
-            double gia = giaTien;
+            double gia = phong.GIA;
+            gia *= 1.13;
             gia = gia - double.Parse(cbb_MaGiamGia.Text) / 100 * gia;
-            lbl_LastCost.Text = gia.ToString();
+            double truncatedNumber = Math.Round(gia, 2);
+            lbl_LastCost.Text = truncatedNumber.ToString();
+            lastcost = truncatedNumber.ToString();
+            giamgia = int.Parse(cbb_MaGiamGia.Text);
         }
 
         public DateTime CheckIn

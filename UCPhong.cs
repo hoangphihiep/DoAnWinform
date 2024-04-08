@@ -52,6 +52,7 @@ namespace DuLich
         private void btnBook_Click(object sender, EventArgs e)
         {
             Customer_Information f = new Customer_Information(ks,room,checkin, checkout);
+            f.tenAnh = ptbAnh.Image;
             this.Hide();
             f.ShowDialog();
             this.Show();

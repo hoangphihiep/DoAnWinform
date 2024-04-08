@@ -256,6 +256,7 @@ namespace DuLich
 
         private void Phong_Load(object sender, EventArgs e)
         {
+
             this.Size = new Size(1115, 801);
 
             lbl_ThietLap.Size = new Size(218, 38);
@@ -500,6 +501,55 @@ namespace DuLich
         private void lbl_m2_Click(object sender, EventArgs e)
         {
 
+        }
+        public void HienThi(int index, List<int> maPhong)
+        {
+            int maPhongHienTai = maPhong[index];
+            string query1 = "SELECT * FROM PHONG WHERE MAPHONG = @MaPhong1";
+            string query2 = "SELECT * FROM QLPHONG WHERE MAPHONG = @MaPhong2";
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+
+                // Thực hiện truy vấn từ bảng PHONG
+                using (SqlCommand command1 = new SqlCommand(query1, connection))
+                {
+                    command1.Parameters.AddWithValue("@MaPhong1", maPhongHienTai); // Thêm tham số cho mã phòng
+                    using (SqlDataReader reader1 = command1.ExecuteReader())
+                    {
+                        while (reader1.Read())
+                        {
+
+                            txt_SucChua.Text = reader1["SOKHACH"].ToString(); 
+                            txt_SoGiuong.Text = reader1["SOGIUONG"].ToString();
+                            txt_GiaToiThieu.Text = reader1["GIA"].ToString(); 
+                            txt_TenPhong.Text = reader1["TENPHONG"].ToString();
+                            ptb_AnhPhong.Image = Image.FromFile(reader1["ANH"].ToString());
+                        }
+                    }
+                }
+
+                // Thực hiện truy vấn từ bảng QLPHONG
+                using (SqlCommand command2 = new SqlCommand(query2, connection))
+                {
+                    command2.Parameters.AddWithValue("@MaPhong2", maPhongHienTai); // Thêm tham số cho mã phòng
+                    using (SqlDataReader reader2 = command2.ExecuteReader())
+                    {
+                        while (reader2.Read())
+                        {
+                            txt_SoPhong.Text = reader2["SOPHONG"].ToString();
+                            txt_tienThemKhach.Text = reader2["SOPHONG_DD"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+        public void Ktr()
+        {
+            btn_ChinhSua.Visible = true;
+            btn_ThemPhong.Visible = false;
+            btn_Next.Visible = true;
+            btn_Back.Visible = true;
         }
     }
 }

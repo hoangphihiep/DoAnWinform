@@ -46,7 +46,7 @@
             lbl_Gia = new Label();
             lbl_BaoGom = new Label();
             lbl_GiaPhong = new Label();
-            lbl_34 = new Label();
+            lbl_giamGia = new Label();
             panel10 = new Panel();
             panel14 = new Panel();
             label21 = new Label();
@@ -168,7 +168,7 @@
             // 
             panel1.AutoScroll = true;
             panel1.Controls.Add(panel3);
-            panel1.Controls.Add(lbl_34);
+            panel1.Controls.Add(lbl_giamGia);
             panel1.Controls.Add(panel10);
             panel1.Controls.Add(lbl_ChucMung);
             panel1.Controls.Add(panel7);
@@ -285,18 +285,18 @@
             lbl_GiaPhong.TabIndex = 117;
             lbl_GiaPhong.Text = "Giá phòng (1 phòng x 1 đêm)        \r\nPhí đặt chỗ                                      MIỄN PHÍ";
             // 
-            // lbl_34
+            // lbl_giamGia
             // 
-            lbl_34.AutoSize = true;
-            lbl_34.BackColor = Color.OrangeRed;
-            lbl_34.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_34.ForeColor = SystemColors.HighlightText;
-            lbl_34.Location = new Point(821, 559);
-            lbl_34.Name = "lbl_34";
-            lbl_34.Size = new Size(260, 23);
-            lbl_34.TabIndex = 119;
-            lbl_34.Text = "GIẢM GIÁ 34% NGAY HÔM NAY";
-            lbl_34.Visible = false;
+            lbl_giamGia.AutoSize = true;
+            lbl_giamGia.BackColor = Color.OrangeRed;
+            lbl_giamGia.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_giamGia.ForeColor = SystemColors.HighlightText;
+            lbl_giamGia.Location = new Point(821, 559);
+            lbl_giamGia.Name = "lbl_giamGia";
+            lbl_giamGia.Size = new Size(260, 23);
+            lbl_giamGia.TabIndex = 119;
+            lbl_giamGia.Text = "GIẢM GIÁ 34% NGAY HÔM NAY";
+            lbl_giamGia.Visible = false;
             // 
             // panel10
             // 
@@ -709,7 +709,7 @@
         private Button btn_ThayDoi;
         private Label ptb_Anh;
         private Label lbl_ChucMung;
-        private Label lbl_34;
+        private Label lbl_giamGia;
         private Panel panel14;
         private Label label21;
         private Label label20;

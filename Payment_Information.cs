@@ -20,7 +20,9 @@ namespace DuLich
         public string soPhongConTrong;
         public string Gia;
         public string sdt;
+        public string lastcost;
         public string TenKhachHang;
+        public int giamgia;
         public DateTime NgayNhan;
         public DateTime NgayTra;
         DatPhong datphong;
@@ -61,6 +63,7 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
+            datphong.TongThanhToan = float.Parse(lbl_LastCost.Text);
             fPayment_Slip f = new fPayment_Slip();
             f.DP = datphong;
             this.Hide();
@@ -70,20 +73,19 @@ namespace DuLich
 
         private void Payment_Information_Load(object sender, EventArgs e)
         {
-            string GiaChuyenDoi = Gia;
-            double giaTien;
-            double.TryParse(GiaChuyenDoi, out giaTien);
-
+            if(giamgia != 0)
+            {
+                lbl_giamGia.Visible = true;
+                lbl_giamGia.Text = "Đã áp dụng mã giảm giá " +giamgia +" %";
+            }
             ptb_Anh.Image = tenAnh;
-            label15.Text = tenKhachSan;
-            label17.Text = soKhach;
-            label19.Text = soPhongConTrong;
-            label20.Text = Gia;
-            lbl_CostRoom.Text = Gia;
-            lbl_Cost.Text = Gia;
-
-            giaTien *= 1.13;
-            lbl_LastCost.Text = giaTien.ToString();
+            label15.Text = datphong.KS.TENKS;
+            label17.Text = datphong.Phong.SOKHACH.ToString();
+            label19.Text = (datphong.Phong.SOPHONG - datphong.Phong.SOPHONGDD).ToString();
+            label20.Text = datphong.Phong.GIA.ToString();
+            lbl_CostRoom.Text = datphong.Phong.GIA.ToString();
+            lbl_Cost.Text = datphong.Phong.GIA.ToString();
+            lbl_LastCost.Text = lastcost;
         }
 
         private void Payment_Information_Shown(object sender, EventArgs e)
@@ -96,6 +98,11 @@ namespace DuLich
             get { return datphong; }
             set { datphong = value; }
         }
-
+        public void SetLastCost(string a)
+        {
+            lastcost = a;
+            // Gọi lại phương thức load dữ liệu
+            Payment_Information_Load(this, EventArgs.Empty);
+        }
     }
 }

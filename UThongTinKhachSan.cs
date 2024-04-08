@@ -120,7 +120,8 @@ namespace DuLich
                     int khoangCachTP = reader.IsDBNull(reader.GetOrdinal("KCTHANHPHO")) ? 0 : reader.GetInt32(reader.GetOrdinal("KCTHANHPHO"));
                     int khoangCachSB = reader.IsDBNull(reader.GetOrdinal("KCSANBAY")) ? 0 : reader.GetInt32(reader.GetOrdinal("KCSANBAY"));
                     int sao = reader.IsDBNull(reader.GetOrdinal("SAO")) ? 0 : reader.GetInt32(reader.GetOrdinal("SAO"));
-                    int gia = reader.IsDBNull(reader.GetOrdinal("GIA")) ? 0 : reader.GetInt32(reader.GetOrdinal("GIA"));
+                    double gia = reader.IsDBNull(reader.GetOrdinal("GIA")) ? 0 : reader.GetDouble(reader.GetOrdinal("GIA"));
+
                     string anhBia = reader.IsDBNull(reader.GetOrdinal("AnhBia")) ? string.Empty : reader.GetString(reader.GetOrdinal("AnhBia"));
 
                     // Add rows to the DataGridView

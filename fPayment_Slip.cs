@@ -49,6 +49,8 @@ namespace DuLich
             lblPrice.Text = datphong.TongThanhToan.ToString();
             lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
+            lbl_SDT1.Text = datphong.KhachHang.Sdt.ToString();
+            lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
         }
 
         public void SetSDT(string Sdt)

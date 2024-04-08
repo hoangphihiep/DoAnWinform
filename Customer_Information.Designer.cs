@@ -79,6 +79,8 @@
             lbl_NeuBan = new Label();
             txt_HoVaTen = new TextBox();
             dtp_NgayThangNamSinh = new DateTimePicker();
+            lbl_SoLuong = new Label();
+            txt_SoLuong = new TextBox();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -193,6 +195,8 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(lbl_SoLuong);
+            panel1.Controls.Add(txt_SoLuong);
             panel1.Controls.Add(lbl_MaGiamGia);
             panel1.Controls.Add(cbb_MaGiamGia);
             panel1.Controls.Add(lbl_NhanUuDai);
@@ -229,7 +233,7 @@
             // lbl_MaGiamGia
             // 
             lbl_MaGiamGia.AutoSize = true;
-            lbl_MaGiamGia.Location = new Point(18, 736);
+            lbl_MaGiamGia.Location = new Point(17, 794);
             lbl_MaGiamGia.Name = "lbl_MaGiamGia";
             lbl_MaGiamGia.Size = new Size(93, 20);
             lbl_MaGiamGia.TabIndex = 133;
@@ -239,7 +243,7 @@
             // cbb_MaGiamGia
             // 
             cbb_MaGiamGia.FormattingEnabled = true;
-            cbb_MaGiamGia.Location = new Point(182, 733);
+            cbb_MaGiamGia.Location = new Point(181, 791);
             cbb_MaGiamGia.Name = "cbb_MaGiamGia";
             cbb_MaGiamGia.Size = new Size(151, 28);
             cbb_MaGiamGia.TabIndex = 132;
@@ -627,6 +631,24 @@
             dtp_NgayThangNamSinh.Size = new Size(449, 27);
             dtp_NgayThangNamSinh.TabIndex = 26;
             // 
+            // lbl_SoLuong
+            // 
+            lbl_SoLuong.AutoSize = true;
+            lbl_SoLuong.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_SoLuong.Location = new Point(17, 712);
+            lbl_SoLuong.Name = "lbl_SoLuong";
+            lbl_SoLuong.Size = new Size(195, 23);
+            lbl_SoLuong.TabIndex = 135;
+            lbl_SoLuong.Text = "Số lượng phòng cần đặt";
+            // 
+            // txt_SoLuong
+            // 
+            txt_SoLuong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_SoLuong.Location = new Point(18, 748);
+            txt_SoLuong.Name = "txt_SoLuong";
+            txt_SoLuong.Size = new Size(447, 30);
+            txt_SoLuong.TabIndex = 134;
+            // 
             // Customer_Information
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -707,5 +729,7 @@
         private Label lbl_DichVuVaThue;
         private Label lbl_LastCost;
         private Label label3;
+        private Label lbl_SoLuong;
+        private TextBox txt_SoLuong;
     }
 }

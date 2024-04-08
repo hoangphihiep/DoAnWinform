@@ -85,6 +85,9 @@
     <Compile Update="UCTNChinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UListPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>

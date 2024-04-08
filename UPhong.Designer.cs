@@ -55,6 +55,9 @@
             txt_TenPhong = new TextBox();
             txt_SoPhong = new TextBox();
             lbl_SoPhong = new Label();
+            btn_ChinhSua = new Button();
+            btn_Next = new Button();
+            btn_Back = new Button();
             ((System.ComponentModel.ISupportInitialize)ptb_AnhPhong).BeginInit();
             SuspendLayout();
             // 
@@ -320,10 +323,43 @@
             lbl_SoPhong.Text = "Số phòng : ";
             lbl_SoPhong.Click += lbl_SoPhong_Click;
             // 
+            // btn_ChinhSua
+            // 
+            btn_ChinhSua.Location = new Point(825, 569);
+            btn_ChinhSua.Name = "btn_ChinhSua";
+            btn_ChinhSua.Size = new Size(94, 29);
+            btn_ChinhSua.TabIndex = 114;
+            btn_ChinhSua.Text = "Chỉnh sửa";
+            btn_ChinhSua.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Visible = false;
+            // 
+            // btn_Next
+            // 
+            btn_Next.Location = new Point(910, 629);
+            btn_Next.Name = "btn_Next";
+            btn_Next.Size = new Size(94, 29);
+            btn_Next.TabIndex = 115;
+            btn_Next.Text = "Next";
+            btn_Next.UseVisualStyleBackColor = true;
+            btn_Next.Visible = false;
+            // 
+            // btn_Back
+            // 
+            btn_Back.Location = new Point(721, 629);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(94, 29);
+            btn_Back.TabIndex = 116;
+            btn_Back.Text = "Back";
+            btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Visible = false;
+            // 
             // UPhong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btn_Back);
+            Controls.Add(btn_Next);
+            Controls.Add(btn_ChinhSua);
             Controls.Add(txt_SoPhong);
             Controls.Add(lbl_SoPhong);
             Controls.Add(txt_TenPhong);
@@ -396,5 +432,8 @@
         private TextBox txt_TenPhong;
         private TextBox txt_SoPhong;
         private Label lbl_SoPhong;
+        private Button btn_ChinhSua;
+        private Button btn_Next;
+        private Button btn_Back;
     }
 }
