@@ -206,7 +206,7 @@ namespace DuLich
             txt_Email.Text = acc.getEmail;
             txt_SoDienThoai.Text = acc.getSoDienThoai;
             txt_DiaChi.Text = acc.getDiaChi;
-            dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
+           // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
         }
 
         private void btn_ThayDoi_Click(object sender, EventArgs e)

@@ -708,6 +708,8 @@ namespace DoAnDuLich
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
                 k.tenKhachHang = rename;
+                k.ngayDen = date_ngayDen.Value;
+                k.ngayDi = date_NgayDi.Value;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -721,6 +723,8 @@ namespace DoAnDuLich
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
                 k.tenKhachHang = rename;
+                k.ngayDen = date_ngayDen.Value;
+                k.ngayDi = date_NgayDi.Value;
                 this.Hide();
                 k.ShowDialog();
                 this.Show();
@@ -845,6 +849,9 @@ namespace DoAnDuLich
         {
             fHotel_booked f = new fHotel_booked();
             //f.kiemtratrang = 1;
+            f.taiKhoan = tentk;
+            f.ngayDen = date_ngayDen.Value;
+            MessageBox.Show(tentk);
             this.Hide();
             f.ShowDialog();
             this.Show();

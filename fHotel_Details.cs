@@ -61,7 +61,7 @@ namespace DuLich
             ChenTNChinh();
             ChenTienNghi();
             ChenPhong();
-            ChenDanhGia();
+           // ChenDanhGia();
             MessageBox.Show(checkin.ToString());
         }
         void ChenDanhGiaKhachHang()
