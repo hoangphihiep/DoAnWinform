@@ -76,6 +76,7 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
+            datphong.TongThanhToan = float.Parse(lblPrice.Text);
             DatPhongDAO datPhongDAO = new DatPhongDAO();
             KhachHangDAO khachHangDAO = new KhachHangDAO();
             datPhongDAO.AddDatPhong(datphong);
