@@ -66,13 +66,13 @@ namespace DuLich
         }
         void ChenDanhGiaKhachHang()
         {
-            lblNameDG.Text = listdg[0].TenKH;
-            lblDiemDG.Text = listdg[0].Diem.ToString();
-            lblContentDG.Text = listdg[0].NoiDung;
-            UCComment uc1 = new UCComment(listdg[iDanhGia++]);
-            UCComment uc2 = new UCComment(listdg[iDanhGia++]);
-            flpDanhGiaKhachHang.Controls.Add(uc1);
-            flpDanhGiaKhachHang.Controls.Add(uc2);
+            //lblNameDG.Text = listdg[0].TenKH;
+            //lblDiemDG.Text = listdg[0].Diem.ToString();
+           // lblContentDG.Text = listdg[0].NoiDung;
+           // UCComment uc1 = new UCComment(listdg[iDanhGia++]);
+            //UCComment uc2 = new UCComment(listdg[iDanhGia++]);
+            //flpDanhGiaKhachHang.Controls.Add(uc1);
+            //flpDanhGiaKhachHang.Controls.Add(uc2);
         }
 
         void ChenDanhGia()

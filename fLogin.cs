@@ -20,6 +20,10 @@ namespace DuLich
         public string Gia;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        public KhachHang kh;
+        public Room phong;
+        public DatPhong datphong;
+        public KHACHSAN ks;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -159,6 +163,10 @@ namespace DuLich
                             k.Gia = Gia;
                             k.sdt = sdt;
                             k.TenKhachHang = TenKhachHang;
+                            k.ks = ks;
+                            k.phong = phong;
+                            k.kh = kh;
+                            k.datphong = datphong;
                             k.HienThi();
                             this.Hide();
                             k.ShowDialog();

@@ -23,13 +23,15 @@ namespace DuLich
         public string soKhach;
         public string soPhongConTrong;
         public string Gia;
+        public string lastcost;
         double giaTien;
-        KHACHSAN ks;
-        DateTime checkin;
-        DateTime checkout;
-        KhachHang kh;
-        Room phong;
-        DatPhong datphong;
+        int giamgia;
+        public KHACHSAN ks;
+        public DateTime checkin;
+        public DateTime checkout;
+        public KhachHang kh;
+        public Room phong;
+        public DatPhong datphong;
 
         public Customer_Information()
         {
@@ -71,12 +73,24 @@ namespace DuLich
 
         private void Customer_Information_Load(object sender, EventArgs e)
         {
-            string GiaChuyenDoi = Gia;
-            lbl_LastCost.Text = giaTien.ToString();
-            lbl_LastCost.Text = giaTien.ToString();
+            string GiaChuyenDoi = phong.GIA.ToString();
+            double giaTien;
+            double.TryParse(GiaChuyenDoi, out giaTien);
+
+            pictureBox1.Image = tenAnh;
+            label15.Text = ks.TENKS;
+            label17.Text = phong.SOKHACH.ToString();
+            label19.Text = (phong.SOPHONG - phong.SOPHONGDD).ToString();
+            label20.Text = phong.GIA.ToString();
+            lbl_CostRoom.Text = phong.GIA.ToString();
+            lbl_Cost.Text = phong.GIA.ToString();
+            giaTien *= 1.13;
+            double truncatedNumber = Math.Round(giaTien, 2);
+            lbl_LastCost.Text = truncatedNumber.ToString();
+            //Ma giam gia theo tk
             if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
-           {
-                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + 2 + "' ";
+            {
+                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + ks.MAKS + "' ";
                 var result = modify.UuDai(query);
                 List<int> GiaTriUuDai = new List<int>();
                 GiaTriUuDai.Add(0);
@@ -101,11 +115,14 @@ namespace DuLich
 
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
+            lastcost = lbl_LastCost.Text;
             this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
             this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
             datphong.Phong = this.phong;
             Payment_Information f = new Payment_Information();
             f.DP = datphong;
+            f.SetLastCost(lastcost);
+            f.giamgia = giamgia;
             //f.tenAnh = tenAnh;
             //f.tenKhachSan = tenKhachSan;
             //f.soKhach = soKhach;
@@ -163,6 +180,10 @@ namespace DuLich
             k.TenKhachHang = txt_HoVaTen.Text;
             k.NgayNhan = checkin;
             k.NgayTra = checkout;
+            k.ks = ks;
+            k.phong = phong;
+            k.kh = kh;
+            k.datphong = datphong;
             this.Hide();
             k.ShowDialog();
             this.Close();
@@ -185,7 +206,7 @@ namespace DuLich
             txt_Email.Text = acc.getEmail;
             txt_SoDienThoai.Text = acc.getSoDienThoai;
             txt_DiaChi.Text = acc.getDiaChi;
-           // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
+            // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
         }
 
         private void btn_ThayDoi_Click(object sender, EventArgs e)
@@ -200,15 +221,19 @@ namespace DuLich
 
         private void cbb_MaGiamGia_SelectedValueChanged(object sender, EventArgs e)
         {
-            double gia = giaTien;
+            double gia = phong.GIA;
+            gia *= 1.13;
             gia = gia - double.Parse(cbb_MaGiamGia.Text) / 100 * gia;
-            lbl_LastCost.Text = gia.ToString();
+            double truncatedNumber = Math.Round(gia, 2);
+            lbl_LastCost.Text = truncatedNumber.ToString();
+            lastcost = truncatedNumber.ToString();
+            giamgia = int.Parse(cbb_MaGiamGia.Text);
         }
 
         public DateTime CheckIn
         {
-            get { return checkin ; }
-            set { checkin = value ; }
+            get { return checkin; }
+            set { checkin = value; }
         }
 
         public DateTime CheckOut
@@ -219,8 +244,8 @@ namespace DuLich
 
         public Room Phong
         {
-            get { return phong ; }
-            set { phong = value ; }
+            get { return phong; }
+            set { phong = value; }
         }
 
     }

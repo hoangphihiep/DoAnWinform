@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ namespace DuLich
     {
         public string tentk;
         public string mk;
+        // Khai báo danh sách để lưu các Mã phòng
+        public List<int> maPhongList = new List<int>();
+        public int index = 0;
         public fThongTinTaiKhoan()
         {
             InitializeComponent();
@@ -41,6 +45,38 @@ namespace DuLich
                 btn_ThongTinKhachSan.Visible = true;
                 uUuDai1.SetTenTK(tentk); // Gán giá trị tentk vào UserControl UUuDai
             }
+            // Tạo kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                // Mở kết nối
+                connection.Open();
+
+                // Chuỗi truy vấn SQL để lấy Mã phòng từ Tài khoản (TK)
+                string query1 = "SELECT DISTINCT QLPHONG.MAPHONG " +
+                               "FROM QLPHONG " +
+                               "JOIN ThongTinCanBan ON QLPHONG.MAKS = ThongTinCanBan.MAKS " +
+                               "WHERE ThongTinCanBan.TK = @TaiKhoan";
+
+                // Tạo và thiết lập đối tượng SqlCommand
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    // Thêm tham số cho truy vấn để tránh tình trạng SQL injection
+                    command.Parameters.AddWithValue("@TaiKhoan", tentk);
+
+                    // Thực thi truy vấn và đọc dữ liệu
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Đọc từng hàng dữ liệu và thêm Mã phòng vào danh sách
+                        while (reader.Read())
+                        {
+                            int maPhong = reader.GetInt32(0);
+                            maPhongList.Add(maPhong);
+                        }
+                    }
+                }
+            }
+            uPhong2.Ktr(index, maPhongList);
+            uPhong2.HienThi(index,maPhongList);
         }
         public void ShowThongTinCanBan()
         {
@@ -124,7 +160,7 @@ namespace DuLich
 
         private void btn_ChiTietPhong_Click(object sender, EventArgs e)
         {
-            uChiTietPhongo1.BringToFront();
+            uPhong2.BringToFront();
         }
 
         private void btn_Anh_Click(object sender, EventArgs e)
@@ -165,7 +201,7 @@ namespace DuLich
 
         private void uThongtin2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_TienNghi_Click(object sender, EventArgs e)

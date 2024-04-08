@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Information));
             lbl_Email = new Label();
             txt_Email = new TextBox();
             label1 = new Label();
@@ -40,6 +39,8 @@
             lbl_ChonLoaiHinh = new Label();
             lbl_ChoKhachHangXem = new Label();
             panel1 = new Panel();
+            lbl_SoLuong = new Label();
+            txt_SoLuong = new TextBox();
             lbl_MaGiamGia = new Label();
             cbb_MaGiamGia = new ComboBox();
             lbl_NhanUuDai = new Label();
@@ -64,6 +65,7 @@
             lbl_BaoGom = new Label();
             lbl_GiaPhong = new Label();
             panel10 = new Panel();
+            pictureBox1 = new PictureBox();
             panel14 = new Panel();
             label21 = new Label();
             label20 = new Label();
@@ -73,7 +75,6 @@
             label16 = new Label();
             label15 = new Label();
             btn_ThayDoi = new Button();
-            ptb_Anh = new Label();
             lbl_34 = new Label();
             lbl_ChucMung = new Label();
             lbl_NeuBan = new Label();
@@ -83,6 +84,7 @@
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel14.SuspendLayout();
             SuspendLayout();
             // 
@@ -193,6 +195,8 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(lbl_SoLuong);
+            panel1.Controls.Add(txt_SoLuong);
             panel1.Controls.Add(lbl_MaGiamGia);
             panel1.Controls.Add(cbb_MaGiamGia);
             panel1.Controls.Add(lbl_NhanUuDai);
@@ -226,10 +230,28 @@
             panel1.TabIndex = 13;
             panel1.TabStop = true;
             // 
+            // lbl_SoLuong
+            // 
+            lbl_SoLuong.AutoSize = true;
+            lbl_SoLuong.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_SoLuong.Location = new Point(17, 712);
+            lbl_SoLuong.Name = "lbl_SoLuong";
+            lbl_SoLuong.Size = new Size(195, 23);
+            lbl_SoLuong.TabIndex = 135;
+            lbl_SoLuong.Text = "Số lượng phòng cần đặt";
+            // 
+            // txt_SoLuong
+            // 
+            txt_SoLuong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_SoLuong.Location = new Point(18, 748);
+            txt_SoLuong.Name = "txt_SoLuong";
+            txt_SoLuong.Size = new Size(447, 30);
+            txt_SoLuong.TabIndex = 134;
+            // 
             // lbl_MaGiamGia
             // 
             lbl_MaGiamGia.AutoSize = true;
-            lbl_MaGiamGia.Location = new Point(18, 736);
+            lbl_MaGiamGia.Location = new Point(17, 794);
             lbl_MaGiamGia.Name = "lbl_MaGiamGia";
             lbl_MaGiamGia.Size = new Size(93, 20);
             lbl_MaGiamGia.TabIndex = 133;
@@ -239,7 +261,7 @@
             // cbb_MaGiamGia
             // 
             cbb_MaGiamGia.FormattingEnabled = true;
-            cbb_MaGiamGia.Location = new Point(182, 733);
+            cbb_MaGiamGia.Location = new Point(181, 791);
             cbb_MaGiamGia.Name = "cbb_MaGiamGia";
             cbb_MaGiamGia.Size = new Size(151, 28);
             cbb_MaGiamGia.TabIndex = 132;
@@ -462,14 +484,23 @@
             // panel10
             // 
             panel10.BackColor = SystemColors.ControlLightLight;
+            panel10.Controls.Add(pictureBox1);
             panel10.Controls.Add(panel14);
             panel10.Controls.Add(btn_ThayDoi);
-            panel10.Controls.Add(ptb_Anh);
             panel10.Location = new Point(643, 64);
             panel10.Margin = new Padding(3, 4, 3, 4);
             panel10.Name = "panel10";
             panel10.Size = new Size(403, 372);
             panel10.TabIndex = 117;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(19, 13);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(207, 171);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
             // 
             // panel14
             // 
@@ -566,14 +597,6 @@
             btn_ThayDoi.UseVisualStyleBackColor = true;
             btn_ThayDoi.Click += btn_ThayDoi_Click;
             // 
-            // ptb_Anh
-            // 
-            ptb_Anh.Image = (Image)resources.GetObject("ptb_Anh.Image");
-            ptb_Anh.Location = new Point(16, 13);
-            ptb_Anh.Name = "ptb_Anh";
-            ptb_Anh.Size = new Size(207, 171);
-            ptb_Anh.TabIndex = 0;
-            // 
             // lbl_34
             // 
             lbl_34.AutoSize = true;
@@ -646,6 +669,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
             ResumeLayout(false);
@@ -674,7 +698,6 @@
         private Label lbl_34;
         private Panel panel10;
         private Button btn_ThayDoi;
-        private Label ptb_Anh;
         private Panel panel3;
         private Label lbl_Gia;
         private Label lbl_BaoGom;
@@ -707,5 +730,8 @@
         private Label lbl_DichVuVaThue;
         private Label lbl_LastCost;
         private Label label3;
+        private Label lbl_SoLuong;
+        private TextBox txt_SoLuong;
+        private PictureBox pictureBox1;
     }
 }

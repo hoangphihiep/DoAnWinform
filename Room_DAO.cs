@@ -31,6 +31,28 @@ namespace DuLich
                 conn.Close();
             }
         }
+        public void Update(Room acc, string TenQuanHe)
+        {
+            string sqlStr = string.Format("UPDATE {0} SET SOKHACH = @SOKHACH, SOGIUONG = @SOGIUONG, GIA = @GIA, TENPHONG = @TENPHONG, ANH = @ANH WHERE MAPHONG = @MAPHONG", TenQuanHe);
+
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    cmd.Parameters.AddWithValue("@SOKHACH", acc.SOKHACH);
+                    cmd.Parameters.AddWithValue("@SOGIUONG", acc.SOGIUONG);
+                    cmd.Parameters.AddWithValue("@GIA", acc.GIA);
+                    cmd.Parameters.AddWithValue("@TENPHONG", acc.TENPHONG);
+                    cmd.Parameters.AddWithValue("@MAPHONG", acc.MAPHONG);
+                    string relativePath = ExtractRelativePath(acc.HinhAnh);
+                    cmd.Parameters.AddWithValue("@ANH", relativePath);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
         static string ExtractRelativePath(string fullPath)
         {
             if (fullPath.Contains("hinhanh"))

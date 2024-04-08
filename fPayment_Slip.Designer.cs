@@ -50,7 +50,7 @@
             label15 = new Label();
             panel3 = new Panel();
             lbl_soDT = new Label();
-            label13 = new Label();
+            lbl_SDT1 = new Label();
             pictureBox2 = new PictureBox();
             lblHotelAddress = new Label();
             lblHotelName = new Label();
@@ -62,7 +62,9 @@
             label9 = new Label();
             lblState = new Label();
             label7 = new Label();
-            lbl_soDT1 = new Label();
+
+
+            lbl_SDT2 = new Label();
             label5 = new Label();
             lblCustomerName = new Label();
             label3 = new Label();
@@ -306,6 +308,7 @@
             // 
             panel3.BackColor = SystemColors.ControlLightLight;
             panel3.Controls.Add(lbl_soDT);
+            //panel3.Controls.Add(lbl_SDT1);
             panel3.Controls.Add(label13);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(lblHotelAddress);
@@ -325,6 +328,7 @@
             lbl_soDT.Size = new Size(97, 20);
             lbl_soDT.TabIndex = 5;
             lbl_soDT.Text = "03982638564";
+            // lbl_SDT1
             // 
             // label13
             // 
@@ -385,7 +389,9 @@
             panel2.Controls.Add(label9);
             panel2.Controls.Add(lblState);
             panel2.Controls.Add(label7);
+
             panel2.Controls.Add(lbl_soDT1);
+            panel2.Controls.Add(lbl_SDT2);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(lblCustomerName);
             panel2.Controls.Add(label3);
@@ -462,6 +468,15 @@
             lbl_soDT1.Size = new Size(100, 23);
             lbl_soDT1.TabIndex = 3;
             lbl_soDT1.Text = "0396418264";
+            // lbl_SDT2
+            // 
+            lbl_SDT2.AutoSize = true;
+            lbl_SDT2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_SDT2.Location = new Point(63, 148);
+            lbl_SDT2.Name = "lbl_SDT2";
+            lbl_SDT2.Size = new Size(100, 23);
+            lbl_SDT2.TabIndex = 3;
+            lbl_SDT2.Text = "0396418264";
             // 
             // label5
             // 
@@ -603,6 +618,7 @@
         private Label lblState;
         private Label label7;
         private Label lbl_soDT1;
+        private Label lbl_SDT2;
         private Panel panel3;
         private Label lblHotelName;
         private PictureBox pictureBox1;
@@ -611,6 +627,7 @@
         private PictureBox pictureBox2;
         private Label label13;
         private Label lbl_soDT;
+        private Label lbl_SDT1;
         private Label label15;
         private Panel panel5;
         private Label label20;
