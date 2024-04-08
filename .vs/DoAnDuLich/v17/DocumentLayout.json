@@ -3,27 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fpayment_slip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ucphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:payment_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:customer_information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -80,10 +88,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:connection_to_sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\uhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,11 +114,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "fThongTinTaiKhoan.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs",
               "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
@@ -123,12 +127,11 @@
               "ViewState": "AQIAACYAAAAAAAAAAAAQwE0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T03:32:03.123Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "UPhong.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs",
               "RelativeDocumentMoniker": "UPhong.cs",
@@ -136,12 +139,11 @@
               "RelativeToolTip": "UPhong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T04:05:17.386Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "UPhong.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs",
               "RelativeDocumentMoniker": "UPhong.cs",
@@ -150,12 +152,11 @@
               "ViewState": "AQIAADgCAAAAAAAAAAAiwEwCAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T04:05:18.607Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Payment_Information.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Payment_Information.cs",
               "RelativeDocumentMoniker": "Payment_Information.cs",
@@ -164,7 +165,19 @@
               "ViewState": "AQIAAAgAAAAAAAAAAAAAABsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T12:07:17.416Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\KhachHang.cs",
+              "RelativeDocumentMoniker": "KhachHang.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\KhachHang.cs",
+              "RelativeToolTip": "KhachHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:18:58.357Z",
               "EditorCaption": ""
             },
             {
@@ -197,32 +210,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Connection_to_SQL.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Connection_to_SQL.cs",
+              "RelativeDocumentMoniker": "Connection_to_SQL.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Connection_to_SQL.cs",
+              "RelativeToolTip": "Connection_to_SQL.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwAwAAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T04:15:35.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "fPayment_Slip.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fPayment_Slip.cs",
               "RelativeDocumentMoniker": "fPayment_Slip.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fPayment_Slip.cs",
               "RelativeToolTip": "fPayment_Slip.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAuwEgAAAA6AAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAiwEgAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T08:49:32.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UCPhong.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UCPhong.cs",
               "RelativeDocumentMoniker": "UCPhong.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UCPhong.cs [Design]",
               "RelativeToolTip": "UCPhong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:07:33.705Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-08T12:07:33.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UCPhong.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UCPhong.cs",
               "RelativeDocumentMoniker": "UCPhong.cs",
@@ -230,36 +255,33 @@
               "RelativeToolTip": "UCPhong.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAASwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:07:35.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T12:07:35.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Payment_Information.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Payment_Information.cs",
               "RelativeDocumentMoniker": "Payment_Information.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Payment_Information.cs [Design]",
               "RelativeToolTip": "Payment_Information.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:07:13.288Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-08T12:07:13.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Customer_Information.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Customer_Information.cs",
               "RelativeDocumentMoniker": "Customer_Information.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Customer_Information.cs [Design]",
               "RelativeToolTip": "Customer_Information.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:06:36.556Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-08T12:06:36.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "dbo.PHONG [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.PHONG.sql",
               "ToolTip": "dbo.PHONG [Data]",
@@ -268,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "fLogin.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fLogin.cs",
               "RelativeDocumentMoniker": "fLogin.cs",
@@ -280,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "DatPhong.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\DatPhong.cs",
               "RelativeDocumentMoniker": "DatPhong.cs",
@@ -292,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Room_DAO.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Room_DAO.cs",
               "RelativeDocumentMoniker": "Room_DAO.cs",
@@ -304,31 +326,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "fThongTinTaiKhoan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs",
               "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs [Design]",
               "RelativeToolTip": "fThongTinTaiKhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T03:32:00.6Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-08T03:32:00.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "fPayment_Slip.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fPayment_Slip.cs",
               "RelativeDocumentMoniker": "fPayment_Slip.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fPayment_Slip.cs [Design]",
               "RelativeToolTip": "fPayment_Slip.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T03:31:57.701Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-08T03:31:57.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "dbo.KHACHHANG [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.KHACHHANG.sql",
               "ToolTip": "dbo.KHACHHANG [Data]",
@@ -337,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "fHotel_Details.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fHotel_Details.cs",
               "RelativeDocumentMoniker": "fHotel_Details.cs",
@@ -349,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Customer_Information.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Customer_Information.cs",
               "RelativeDocumentMoniker": "Customer_Information.cs",
@@ -357,12 +377,11 @@
               "RelativeToolTip": "Customer_Information.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAwwEoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T05:05:41.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T05:05:41.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -374,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "DuLich.csproj.nuget.g.props",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\obj\\DuLich.csproj.nuget.g.props",
               "RelativeDocumentMoniker": "obj\\DuLich.csproj.nuget.g.props",
@@ -386,19 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Connection_to_SQL.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Connection_to_SQL.cs",
-              "RelativeDocumentMoniker": "Connection_to_SQL.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Connection_to_SQL.cs",
-              "RelativeToolTip": "Connection_to_SQL.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAQwAwAAABlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T04:15:35.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "UHoSo.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UHoSo.cs",
               "RelativeDocumentMoniker": "UHoSo.cs",
@@ -409,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UHoSo.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UHoSo.cs",
               "RelativeDocumentMoniker": "UHoSo.cs",
@@ -421,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "fHotel_Rental.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fHotel_Rental.cs",
               "RelativeDocumentMoniker": "fHotel_Rental.cs",
@@ -433,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "dbo.KHACHSAN_THUOC_TAIKHOAN [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.KHACHSAN_THUOC_TAIKHOAN.sql",
               "ToolTip": "dbo.KHACHSAN_THUOC_TAIKHOAN [Data]",
@@ -442,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "UListPhong.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UListPhong.cs",
               "RelativeDocumentMoniker": "UListPhong.cs",

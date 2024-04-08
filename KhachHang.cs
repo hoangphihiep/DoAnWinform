@@ -23,6 +23,7 @@ namespace DuLich
             this.bdate = bdate;
             this.gmail = gmail;
             this.diachi = diachi;
+            this.gt = gt;
         }
 
         public KhachHang(string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi)
@@ -32,6 +33,7 @@ namespace DuLich
             this.bdate = bdate;
             this.gmail = gmail;
             this.diachi = diachi;
+            this.gt = gt;
         }
 
         public int MaKH

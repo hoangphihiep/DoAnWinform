@@ -36,6 +36,8 @@ namespace DuLich
         private void label2_Click(object sender, EventArgs e)
         {
             fHotel_Details f = new fHotel_Details(ks);
+            f.CheckIn = checkin;
+            f.CheckOut = checkout;
             f.ShowDialog();
 
             this.Show();
@@ -50,6 +52,8 @@ namespace DuLich
         public string soLuong;
         public string tenTinh;
         public string tenTP;
+        DateTime checkin;
+        DateTime checkout;
         public void ShowdanhGia()
         {
             lbl_danhGia.Visible = true;
@@ -97,5 +101,18 @@ namespace DuLich
             lbl_danhGia.Size = new Size(69, 20);
             lbl_danhGia.Location = new Point(217, 67);
         }
+
+        public DateTime CheckIn
+        {
+            get { return checkin; }
+            set { checkin = value; }
+        }
+
+        public DateTime CheckOut
+        {
+            get { return checkout; }
+            set { checkout = value; }
+        }
+
     }
 }
