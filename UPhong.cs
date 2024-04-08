@@ -394,7 +394,7 @@ namespace DuLich
         {
             MessageBox.Show(MaPhong.ToString());
             Room_DAO room_DAO = new Room_DAO();
-            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text),txt_TenPhong.Text, MaPhong, AnhPhong);
+            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_TenPhong.Text, MaPhong, AnhPhong);
             room_DAO.Add(room, "PHONG");
             //List<QL_HinhAnh> list = new List<QL_HinhAnh>();
             //QL_HinhAnhDAO hinhAnhDAO = new QL_HinhAnhDAO();
@@ -520,9 +520,9 @@ namespace DuLich
                         while (reader1.Read())
                         {
 
-                            txt_SucChua.Text = reader1["SOKHACH"].ToString(); 
+                            txt_SucChua.Text = reader1["SOKHACH"].ToString();
                             txt_SoGiuong.Text = reader1["SOGIUONG"].ToString();
-                            txt_GiaToiThieu.Text = reader1["GIA"].ToString(); 
+                            txt_GiaToiThieu.Text = reader1["GIA"].ToString();
                             txt_TenPhong.Text = reader1["TENPHONG"].ToString();
                             ptb_AnhPhong.Image = Image.FromFile(reader1["ANH"].ToString());
                         }
@@ -544,12 +544,41 @@ namespace DuLich
                 }
             }
         }
-        public void Ktr()
+        public void Ktr(int index,List<int> maPHong)
         {
+            MaPhong = maPHong[index];
             btn_ChinhSua.Visible = true;
             btn_ThemPhong.Visible = false;
             btn_Next.Visible = true;
             btn_Back.Visible = true;
+        }
+
+        private void btn_ChinhSua_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MaPhong.ToString());
+            Room_DAO room_DAO = new Room_DAO();
+            Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_TenPhong.Text, MaPhong, AnhPhong);
+            room_DAO.Update(room, "PHONG");
+            int maPhong;
+            string connectionString = Connection_to_SQL.getConnnection();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query1 = "SELECT MAX(MAPHONG) FROM PHONG";
+
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    // Thực thi truy vấn và nhận giá trị MaPhong
+                    maPhong = int.Parse(command.ExecuteScalar().ToString());
+                    Console.WriteLine("MaPhong: " + maPhong);
+                }
+            }
+            QLPHONG phong1 = new QLPHONG(MaKS, int.Parse(txt_SoPhong.Text), 0, maPhong);
+            QLPHONG_DAO qLPHONG_DAO = new QLPHONG_DAO();
+            qLPHONG_DAO.Update(phong1, "QLPHONG");
+            MessageBox.Show("Update phòng thành công");
         }
     }
 }

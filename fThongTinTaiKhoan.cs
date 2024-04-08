@@ -75,6 +75,7 @@ namespace DuLich
                     }
                 }
             }
+            uPhong2.Ktr(index, maPhongList);
             uPhong2.HienThi(index,maPhongList);
         }
         public void ShowThongTinCanBan()
@@ -160,7 +161,6 @@ namespace DuLich
         private void btn_ChiTietPhong_Click(object sender, EventArgs e)
         {
             uPhong2.BringToFront();
-            uPhong2.Ktr();
         }
 
         private void btn_Anh_Click(object sender, EventArgs e)

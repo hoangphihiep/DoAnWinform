@@ -29,5 +29,23 @@ namespace DuLich
 
             }
         }
+        public void Update(QLPHONG acc, string TenQuanHe)
+        {
+            string sqlStr = string.Format("UPDATE {0} SET SOPHONG = @SOPHONG, SOPHONG_DD = @SOPHONG_DD WHERE MAPHONG = @MAPHONG", TenQuanHe);
+
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    cmd.Parameters.AddWithValue("@SOPHONG", acc.SOPHONG);
+                    cmd.Parameters.AddWithValue("@SOPHONG_DD", acc.SOPHONG_DD);
+                    cmd.Parameters.AddWithValue("@MAPHONG", acc.MAPHONG);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
     }
 }
