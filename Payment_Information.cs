@@ -25,7 +25,7 @@ namespace DuLich
         public int giamgia;
         public DateTime NgayNhan;
         public DateTime NgayTra;
-        DatPhong datphong;
+        public DatPhong datphong;
 
         public Payment_Information(DatPhong datPhong)
         {
@@ -55,7 +55,8 @@ namespace DuLich
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            Customer_Information f = new Customer_Information();
+            Customer_Information f = new Customer_Information(datphong.KS, datphong.Phong, NgayNhan, NgayTra);
+            f.tenAnh = ptb_Anh.Image;
             this.Hide();
             f.ShowDialog();
             this.Close();

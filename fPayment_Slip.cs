@@ -69,6 +69,8 @@ namespace DuLich
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Payment_Information f = new Payment_Information(datphong);
+            f.datphong = datphong;
+            f.lastcost = datphong.TongThanhToan.ToString();
             this.Hide();
             f.ShowDialog();
             this.Close();
