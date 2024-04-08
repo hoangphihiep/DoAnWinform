@@ -332,6 +332,7 @@
             btn_ChinhSua.Text = "Chỉnh sửa";
             btn_ChinhSua.UseVisualStyleBackColor = true;
             btn_ChinhSua.Visible = false;
+            btn_ChinhSua.Click += btn_ChinhSua_Click;
             // 
             // btn_Next
             // 
