@@ -249,6 +249,7 @@ namespace DuLich
                 tenTinh[j] = reader.GetString(reader.GetOrdinal("TINH"));
                 tenThanhPho[j] = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 tenKhachSan[j] = reader.GetString(reader.GetOrdinal("TENKH"));
+                diaChi[j] = reader.GetString(reader.GetOrdinal("DIACHI"));
                 int soKhachColumnIndex = reader.GetOrdinal("MinKhach");
                 if (!reader.IsDBNull(soKhachColumnIndex))
                 {
