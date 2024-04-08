@@ -237,6 +237,8 @@ namespace DuLich
                 listKS.Add(ks);
                 MessageBox.Show(ngayDen.ToString());
                 UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.CheckIn = ngayDen;
+                uc.CheckOut = ngayDi;
                 uc.maks = truyen.maKS[j];
                 if (soLuong > 0)
                 {
