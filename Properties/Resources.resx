@@ -142,4 +142,7 @@
   <data name="cnnStr" xml:space="preserve">
     <value>Data Source=DESKTOP-OOU6GPH;Initial Catalog=Account;Integrated Security=True</value>
   </data>
+  <data name="tenDangNhap" xml:space="preserve">
+    <value />
+  </data>
 </root>
