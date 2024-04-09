@@ -394,7 +394,6 @@ namespace DuLich
 
         private void btn_ThemPhong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(MaPhong.ToString());
             Room_DAO room_DAO = new Room_DAO();
             Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_TenPhong.Text, MaPhong, AnhPhong);
             room_DAO.Add(room, "PHONG");

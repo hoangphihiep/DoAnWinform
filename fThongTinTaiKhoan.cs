@@ -25,6 +25,7 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            uPhong3.Size = new Size(1221, 620);
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
             uThongTinKhachSan1.SetTenTK(tentk);
@@ -75,8 +76,8 @@ namespace DuLich
                     }
                 }
             }
-            uPhong2.Ktr(index, maPhongList);
-            uPhong2.HienThi(index,maPhongList);
+            uPhong3.Ktr(index, maPhongList);
+            uPhong3.HienThi(index,maPhongList);
         }
         public void ShowThongTinCanBan()
         {
@@ -160,7 +161,7 @@ namespace DuLich
 
         private void btn_ChiTietPhong_Click(object sender, EventArgs e)
         {
-            uPhong2.BringToFront();
+            uPhong3.BringToFront();
         }
 
         private void btn_Anh_Click(object sender, EventArgs e)
