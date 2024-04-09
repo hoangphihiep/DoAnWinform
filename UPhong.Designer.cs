@@ -268,7 +268,7 @@
             // 
             // btn_ThemPhong
             // 
-            btn_ThemPhong.Location = new Point(825, 569);
+            btn_ThemPhong.Location = new Point(825, 516);
             btn_ThemPhong.Name = "btn_ThemPhong";
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.TabIndex = 108;
@@ -325,7 +325,8 @@
             // 
             // btn_ChinhSua
             // 
-            btn_ChinhSua.Location = new Point(825, 569);
+            btn_ChinhSua.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_ChinhSua.Location = new Point(825, 516);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(94, 29);
             btn_ChinhSua.TabIndex = 114;
@@ -336,23 +337,25 @@
             // 
             // btn_Next
             // 
-            btn_Next.Location = new Point(910, 629);
+            btn_Next.Location = new Point(910, 576);
             btn_Next.Name = "btn_Next";
             btn_Next.Size = new Size(94, 29);
             btn_Next.TabIndex = 115;
             btn_Next.Text = "Next";
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Visible = false;
+            btn_Next.Click += btn_Next_Click;
             // 
             // btn_Back
             // 
-            btn_Back.Location = new Point(721, 629);
+            btn_Back.Location = new Point(721, 576);
             btn_Back.Name = "btn_Back";
             btn_Back.Size = new Size(94, 29);
             btn_Back.TabIndex = 116;
             btn_Back.Text = "Back";
             btn_Back.UseVisualStyleBackColor = true;
             btn_Back.Visible = false;
+            btn_Back.Click += btn_Back_Click;
             // 
             // UPhong
             // 

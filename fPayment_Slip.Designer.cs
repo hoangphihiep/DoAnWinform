@@ -49,8 +49,8 @@
             panel4 = new Panel();
             label15 = new Label();
             panel3 = new Panel();
+            lbl_soDT = new Label();
             lbl_SDT1 = new Label();
-            label13 = new Label();
             pictureBox2 = new PictureBox();
             lblHotelAddress = new Label();
             lblHotelName = new Label();
@@ -62,6 +62,8 @@
             label9 = new Label();
             lblState = new Label();
             label7 = new Label();
+
+
             lbl_SDT2 = new Label();
             label5 = new Label();
             lblCustomerName = new Label();
@@ -305,7 +307,8 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ControlLightLight;
-            panel3.Controls.Add(lbl_SDT1);
+            panel3.Controls.Add(lbl_soDT);
+            //panel3.Controls.Add(lbl_SDT1);
             panel3.Controls.Add(label13);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(lblHotelAddress);
@@ -317,23 +320,19 @@
             panel3.Size = new Size(727, 152);
             panel3.TabIndex = 6;
             // 
-            // lbl_SDT1
+            // lbl_soDT
             // 
-            lbl_SDT1.AutoSize = true;
-            lbl_SDT1.Location = new Point(225, 113);
-            lbl_SDT1.Name = "lbl_SDT1";
-            lbl_SDT1.Size = new Size(97, 20);
-            lbl_SDT1.TabIndex = 5;
-            lbl_SDT1.Text = "03982638564";
+            lbl_soDT.AutoSize = true;
+            lbl_soDT.Location = new Point(225, 113);
+            lbl_soDT.Name = "lbl_soDT";
+            lbl_soDT.Size = new Size(97, 20);
+            lbl_soDT.TabIndex = 5;
+            lbl_soDT.Text = "03982638564";
+            // lbl_SDT1
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(190, 113);
-            label13.Name = "label13";
-            label13.Size = new Size(43, 20);
-            label13.TabIndex = 4;
-            label13.Text = "SĐT :";
+            
             // 
             // pictureBox2
             // 
@@ -385,6 +384,8 @@
             panel2.Controls.Add(label9);
             panel2.Controls.Add(lblState);
             panel2.Controls.Add(label7);
+
+            panel2.Controls.Add(lbl_soDT1);
             panel2.Controls.Add(lbl_SDT2);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(lblCustomerName);
@@ -453,6 +454,7 @@
             label7.TabIndex = 4;
             label7.Text = "Trạng thái :";
             // 
+  
             // lbl_SDT2
             // 
             lbl_SDT2.AutoSize = true;
@@ -602,6 +604,7 @@
         private Label label9;
         private Label lblState;
         private Label label7;
+        private Label lbl_soDT1;
         private Label lbl_SDT2;
         private Panel panel3;
         private Label lblHotelName;
@@ -610,7 +613,9 @@
         private Label lblHotelAddress;
         private PictureBox pictureBox2;
         private Label label13;
+        private Label lbl_soDT;
         private Label lbl_SDT1;
+
         private Label label15;
         private Panel panel5;
         private Label label20;

@@ -26,6 +26,7 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        KhachHang kh;
         public fPayment_Slip()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace DuLich
 
         private void fPayment_Slip_Load(object sender, EventArgs e)
         {
-            lblHotelName.Text= datphong.KS.TENKS;
+            lblHotelName.Text = datphong.KS.TENKS;
             lblHotelAddress.Text = datphong.KS.DIACHI;
             lblCheckIn.Text = datphong.NgayNhan.Date.ToString();
             lblCheckOut.Text = datphong.NgayTra.Date.ToString();
@@ -46,29 +47,32 @@ namespace DuLich
             lblRoomCount.Text = datphong.SoPhong.ToString();
             lblCustomerCount.Text = datphong.Phong.SOKHACH.ToString();
             lblCustomerName.Text = datphong.KhachHang.Ten;
+            lbl_soDT.Text = datphong.KhachHang.Sdt;
             lblPrice.Text = datphong.TongThanhToan.ToString();
             lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
-            lbl_SDT1.Text = datphong.KhachHang.Sdt.ToString();
             lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
+            MessageBox.Show(datphong.KhachHang.TENTAIKHOAN);
         }
 
         public void SetSDT(string Sdt)
         {
             sdt = Sdt;
             // Gọi lại phương thức load dữ liệu
-            fPayment_Slip_Load(this, EventArgs.Empty);
+            //fPayment_Slip_Load(this, EventArgs.Empty);
         }
         public void SetTenKhachHang(string tenKhachHang)
         {
-            TenKhachHang = tenKhachHang;
+            //TenKhachHang = tenKhachHang;
             // Gọi lại phương thức load dữ liệu
-            fPayment_Slip_Load(this, EventArgs.Empty);
+            //fPayment_Slip_Load(this, EventArgs.Empty);
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Payment_Information f = new Payment_Information(datphong);
+            f.datphong = datphong;
+            f.lastcost = datphong.TongThanhToan.ToString();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -76,10 +80,12 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
+
             datphong.TongThanhToan = float.Parse(lblPrice.Text);
             DatPhongDAO datPhongDAO = new DatPhongDAO();
             KhachHangDAO khachHangDAO = new KhachHangDAO();
             datPhongDAO.AddDatPhong(datphong);
+
             khachHangDAO.AddKhachHang(datphong.KhachHang);
             this.Close();
         }

@@ -43,7 +43,6 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
-            uPhong2 = new UPhong();
             uThongtin1 = new UThongtin();
             uThongTinKhachSan1 = new UThongTinKhachSan();
             uViTri1 = new UViTri();
@@ -56,8 +55,7 @@
             uMatKhau1 = new UMatKhau();
             uAnh2 = new UAnh();
             uPhong1 = new UPhong();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            uPhong3 = new UPhong();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -228,7 +226,6 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(uPhong2);
             panel5.Controls.Add(uThongtin1);
             panel5.Controls.Add(uThongTinKhachSan1);
             panel5.Controls.Add(uViTri1);
@@ -241,18 +238,11 @@
             panel5.Controls.Add(uMatKhau1);
             panel5.Controls.Add(uAnh2);
             panel5.Controls.Add(uPhong1);
+            panel5.Controls.Add(uPhong3);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
             panel5.Size = new Size(1221, 700);
             panel5.TabIndex = 1;
-            // 
-            // uPhong2
-            // 
-            uPhong2.AutoScroll = true;
-            uPhong2.Location = new Point(0, 6);
-            uPhong2.Name = "uPhong2";
-            uPhong2.Size = new Size(1115, 801);
-            uPhong2.TabIndex = 10;
             // 
             // uThongtin1
             // 
@@ -339,6 +329,14 @@
             uPhong1.Size = new Size(1115, 801);
             uPhong1.TabIndex = 9;
             // 
+            // uPhong3
+            // 
+            uPhong3.AutoScroll = true;
+            uPhong3.Location = new Point(-3, 6);
+            uPhong3.Name = "uPhong3";
+            uPhong3.Size = new Size(1115, 801);
+            uPhong3.TabIndex = 0;
+            // 
             // fThongTinTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -365,8 +363,6 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private UThongtin uThongtin2;
         private UMatKhau uMatKhau1;
         private Button btn_Anh;
@@ -387,5 +383,6 @@
         private UAnh uAnh2;
         private UPhong uPhong2;
         private UPhong uPhong1;
+        private UPhong uPhong3;
     }
 }
