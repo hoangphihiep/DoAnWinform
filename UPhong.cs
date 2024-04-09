@@ -30,6 +30,8 @@ namespace DuLich
         public string anh6;
         public string AnhPhong;
         public int MaKS;
+        public int index;
+        List<int> Ma_Phong = new List<int>();
         public UPhong()
         {
             InitializeComponent();
@@ -504,6 +506,7 @@ namespace DuLich
         }
         public void HienThi(int index, List<int> maPhong)
         {
+            Ma_Phong = maPhong;
             int maPhongHienTai = maPhong[index];
             string query1 = "SELECT * FROM PHONG WHERE MAPHONG = @MaPhong1";
             string query2 = "SELECT * FROM QLPHONG WHERE MAPHONG = @MaPhong2";
@@ -544,7 +547,7 @@ namespace DuLich
                 }
             }
         }
-        public void Ktr(int index,List<int> maPHong)
+        public void Ktr(int index, List<int> maPHong)
         {
             MaPhong = maPHong[index];
             btn_ChinhSua.Visible = true;
@@ -579,6 +582,18 @@ namespace DuLich
             QLPHONG_DAO qLPHONG_DAO = new QLPHONG_DAO();
             qLPHONG_DAO.Update(phong1, "QLPHONG");
             MessageBox.Show("Update phòng thành công");
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            if(index < Ma_Phong.Count -1 )
+                HienThi(++index, Ma_Phong);
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            if (index > 0)
+                HienThi(--index, Ma_Phong);
         }
     }
 }
