@@ -26,6 +26,7 @@ namespace DuLich
         public string TenKhachHang;
         public DateTime NgayNhan;
         public DateTime NgayTra;
+        KhachHang kh;
         public fPayment_Slip()
         {
             InitializeComponent();
@@ -47,12 +48,11 @@ namespace DuLich
             lblCustomerCount.Text = datphong.Phong.SOKHACH.ToString();
             lblCustomerName.Text = datphong.KhachHang.Ten;
             lbl_soDT.Text = datphong.KhachHang.Sdt;
-            lbl_soDT1.Text = datphong.KhachHang.Sdt;
             lblPrice.Text = datphong.TongThanhToan.ToString();
             lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
-            lbl_SDT1.Text = datphong.KhachHang.Sdt.ToString();
             lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
+            MessageBox.Show(datphong.KhachHang.TENTAIKHOAN);
         }
 
         public void SetSDT(string Sdt)
@@ -78,10 +78,12 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
+
             datphong.TongThanhToan = float.Parse(lblPrice.Text);
             DatPhongDAO datPhongDAO = new DatPhongDAO();
             KhachHangDAO khachHangDAO = new KhachHangDAO();
             datPhongDAO.AddDatPhong(datphong);
+
             khachHangDAO.AddKhachHang(datphong.KhachHang);
             this.Close();
         }

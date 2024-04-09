@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
+using System.Security.Cryptography;
 
 namespace DuLich
 {
@@ -16,6 +17,7 @@ namespace DuLich
     {
 
         int iDanhGia = 0;
+        public string tenTaiKhoan;
         DateTime checkin;
         DateTime checkout;
         List<DanhGia> listdg;
@@ -160,10 +162,15 @@ namespace DuLich
                 int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string anh = reader.GetString(reader.GetOrdinal("ANH"));
-                Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
-                UCPhong uCPhong = new UCPhong(ks,room,checkin,checkout);
-                flbRoom.Controls.Add(uCPhong);
-                i++;
+                if (sophong > 0)
+                {
+                    Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
+                    UCPhong uCPhong = new UCPhong(ks, room, checkin, checkout);
+                    uCPhong.tenTaiKhoan = tenTaiKhoan;
+                    flbRoom.Controls.Add(uCPhong);
+                    i++;
+                }
+                
             }
             conn.Close();
         }

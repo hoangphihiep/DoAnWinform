@@ -32,6 +32,7 @@ namespace DuLich
         public KhachHang kh;
         public Room phong;
         public DatPhong datphong;
+        public string TENTAIKHOAN;
 
         public Customer_Information()
         {
@@ -116,8 +117,9 @@ namespace DuLich
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
             lastcost = lbl_LastCost.Text;
-            this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
-            this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
+            int soLuong = int.Parse(txt_SoLuong.Text);
+            this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text,TENTAIKHOAN);
+            this.datphong = new DatPhong(kh, ks, phong, checkin, checkout,soLuong, 10000000, "Đã thanh toán", "11111");
             datphong.Phong = this.phong;
             Payment_Information f = new Payment_Information();
             f.DP = datphong;

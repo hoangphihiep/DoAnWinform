@@ -71,7 +71,7 @@ namespace DuLich
             int i = 0;
             while (reader.Read())
             {
-                address[i] = reader.GetString(reader.GetOrdinal("ANHPHONG"));
+                
                 int soLuongPhongColumnIndex = reader.GetOrdinal("SOLUONG");
                 if (!reader.IsDBNull(soLuongPhongColumnIndex))
                 {
@@ -120,6 +120,7 @@ namespace DuLich
                     while (reader1.Read())
                     {
                         tenPhong[i] = reader1.GetString(reader1.GetOrdinal("TENPHONG"));
+                        address[i] = reader1.GetString(reader1.GetOrdinal("ANH"));
                         int soKhachColumnIndex = reader1.GetOrdinal("SOKHACH");
                         if (!reader1.IsDBNull(soKhachColumnIndex))
                         {

@@ -332,12 +332,7 @@
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(190, 113);
-            label13.Name = "label13";
-            label13.Size = new Size(43, 20);
-            label13.TabIndex = 4;
-            label13.Text = "SĐT :";
+            
             // 
             // pictureBox2
             // 
@@ -459,15 +454,7 @@
             label7.TabIndex = 4;
             label7.Text = "Trạng thái :";
             // 
-            // lbl_soDT1
-            // 
-            lbl_soDT1.AutoSize = true;
-            lbl_soDT1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_soDT1.Location = new Point(63, 148);
-            lbl_soDT1.Name = "lbl_soDT1";
-            lbl_soDT1.Size = new Size(100, 23);
-            lbl_soDT1.TabIndex = 3;
-            lbl_soDT1.Text = "0396418264";
+  
             // lbl_SDT2
             // 
             lbl_SDT2.AutoSize = true;
@@ -628,6 +615,7 @@
         private Label label13;
         private Label lbl_soDT;
         private Label lbl_SDT1;
+
         private Label label15;
         private Panel panel5;
         private Label label20;

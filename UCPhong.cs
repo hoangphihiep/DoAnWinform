@@ -20,6 +20,7 @@ namespace DuLich
         public string Gia;
         DateTime checkin;
         DateTime checkout;
+        public string tenTaiKhoan;
         Room room;
         KHACHSAN ks;
         public UCPhong(KHACHSAN ks, Room room, DateTime checkin, DateTime checkout)
@@ -53,6 +54,7 @@ namespace DuLich
         {
             Customer_Information f = new Customer_Information(ks,room,checkin, checkout);
             f.tenAnh = ptbAnh.Image;
+            f.TENTAIKHOAN = tenTaiKhoan;
             this.Hide();
             f.ShowDialog();
             this.Show();

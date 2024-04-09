@@ -29,6 +29,7 @@ namespace DuLich
         public int soLuongTreEm;
         public DateTime ngayDen;
         public DateTime ngayDi;
+        public KhachHang kh;
         public hien_thi_khach_san_phu_hop()
         {
             InitializeComponent();
@@ -235,14 +236,16 @@ namespace DuLich
             {
                 KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j],truyen.soKhach[j],truyen.khoangCachTP[j],truyen.khoangCachSanBay[j],truyen.address[j],truyen.maKS[j],ngayDen,ngayDi);
                 listKS.Add(ks);
-                MessageBox.Show(ngayDen.ToString());
                 UKhungKetQua uc = new UKhungKetQua(ks);
+                uc.CheckIn = ngayDen;
+                uc.CheckOut = ngayDi;
                 uc.maks = truyen.maKS[j];
                 if (soLuong > 0)
                 {
                     uc.ShowSoKhach();
                 }
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "GIA", soLuong);
@@ -253,6 +256,7 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO", soLuong);
@@ -263,6 +267,7 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 uc.ShowdanhGia();
                 tab_DanhGiaCao.Controls.Add(uc);
             }
@@ -350,6 +355,7 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tab_PhuHopNhat.Controls.Add(uc);
             }
             int soNguoiLon = int.Parse(nUD_nguoiLon.Value.ToString());
@@ -376,6 +382,7 @@ namespace DuLich
                 {
                     uc.ShowSoKhach();
                 }
+                uc.tenTaiKhoan = tenKhachHang;
                 uc.viTri = j * 148;
                 tab_PhuHopNhat.Controls.Add(uc);
             }
@@ -387,6 +394,7 @@ namespace DuLich
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tab_GiaThapNhat.Controls.Add(uc);
             }
             truyen.Truyen(diadiem, "SAO", soLuong2);
@@ -399,6 +407,7 @@ namespace DuLich
                 uc.ShowdanhGia();
                 uc.maks = truyen.maKS[j];
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tab_DanhGiaCao.Controls.Add(uc);
             }
 
@@ -486,6 +495,7 @@ namespace DuLich
                     if (control is UserControl)
                     {
                         tab_PhuHopNhat.Controls.RemoveAt(j);
+                  
                         control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                     }
                 }
@@ -495,6 +505,7 @@ namespace DuLich
                     listKS.Add(ks);
                     UKhungKetQua uc = new UKhungKetQua();
                     uc.viTri = j * 148;
+                    uc.tenTaiKhoan = tenKhachHang;
                     tab_PhuHopNhat.Controls.Add(uc);
                 }
             }
@@ -632,6 +643,7 @@ namespace DuLich
                 uc.maks = truyen.maKS[j];
                 uc.ShowKhoangCachTP();
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tabKhoangCach.Controls.Add(uc);
             }
         }
@@ -658,6 +670,7 @@ namespace DuLich
                 uc.maks = truyen.maKS[j];
                 uc.ShowKhoangCachSB();
                 uc.viTri = j * 148;
+                uc.tenTaiKhoan = tenKhachHang;
                 tabKhoangCach.Controls.Add(uc);
             }
         }
