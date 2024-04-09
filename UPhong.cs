@@ -350,7 +350,7 @@ namespace DuLich
             //ptb_AnhPhong.Location = new Point(707, 117);
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.Location = new Point(825, 569);
-            //btn_ThemPhong.Font = new System.Drawing.FontFamily("Segoe UI", 9pt, FontStyle.Regular);
+            btn_ThemPhong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)));
             ptb_AnhPhong.Size = new Size(391, 331);
             ptb_AnhPhong.Location = new Point(676, 172);
         }

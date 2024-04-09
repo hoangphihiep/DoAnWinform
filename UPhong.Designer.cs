@@ -325,6 +325,7 @@
             // 
             // btn_ChinhSua
             // 
+            btn_ChinhSua.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btn_ChinhSua.Location = new Point(825, 516);
             btn_ChinhSua.Name = "btn_ChinhSua";
             btn_ChinhSua.Size = new Size(94, 29);
