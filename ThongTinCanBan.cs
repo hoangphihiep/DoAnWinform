@@ -14,6 +14,7 @@ namespace DuLich
         public string MOTA { get; set; }
         public int? KCTHANHPHO { get; set; }
         public int? KCSANBAY { get; set; }
+        public double GIA { get; set; }
         public int SAO { get; set; }
         public string AnhBia { get; set; }
 
@@ -25,6 +26,18 @@ namespace DuLich
             MOTA = mOTA;
             KCTHANHPHO = kCTHANHPHO;
             KCSANBAY = kCSANBAY;
+            SAO = sAO;
+            AnhBia = anhBia;
+        }
+        public ThongTinCanBan(int mAKS, string tK, string tENKH, string mOTA, int? kCTHANHPHO, int? kCSANBAY,double Gia ,int sAO, string anhBia)
+        {
+            MAKS = mAKS;
+            TK = tK;
+            TENKH = tENKH;
+            MOTA = mOTA;
+            KCTHANHPHO = kCTHANHPHO;
+            KCSANBAY = kCSANBAY;
+            GIA = Gia;
             SAO = sAO;
             AnhBia = anhBia;
         }

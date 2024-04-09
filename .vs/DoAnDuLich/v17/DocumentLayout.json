@@ -3,23 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.UuDai.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\phongdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:phongdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.QLPHONG.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\fthongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fthongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\dulich.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:dulich.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\thongtincanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:thongtincanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\uvitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uvitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.ViTri.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\uvitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:uvitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\fthongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fthongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\utiennghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:utiennghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\utiennghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:utiennghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\ql_tn_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ql_tn_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.QL_TN.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.TIENNGHI.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\ql_tn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:ql_tn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:fhotel_rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\khachsan_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:khachsan_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|c:\\users\\admin\\source\\repos\\doanwinform\\hosodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12EDF224-04F1-4F1D-AC30-61F5F5E11FD7}|DuLich.csproj|solutionrelative:hosodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,61 +110,221 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UPhong.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs",
-              "RelativeDocumentMoniker": "UPhong.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs",
-              "RelativeToolTip": "UPhong.cs",
-              "ViewState": "AQIAAE0BAAAAAAAAAAAwwGABAACXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T02:22:34.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UPhong.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs",
-              "RelativeDocumentMoniker": "UPhong.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UPhong.cs [Design]",
-              "RelativeToolTip": "UPhong.cs [Design]",
+              "Title": "PhongDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\PhongDAO.cs",
+              "RelativeDocumentMoniker": "PhongDAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\PhongDAO.cs",
+              "RelativeToolTip": "PhongDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T02:22:28.725Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.QLPHONG [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.QLPHONG.sql",
-              "ToolTip": "dbo.QLPHONG [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-09T02:21:11.253Z",
+              "WhenOpened": "2024-04-09T04:18:30.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DuLich",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\DuLich.csproj",
-              "RelativeDocumentMoniker": "DuLich.csproj",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\DuLich.csproj",
-              "RelativeToolTip": "DuLich.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-09T02:20:11.867Z",
+              "DocumentIndex": 5,
+              "Title": "UViTri.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UViTri.cs",
+              "RelativeDocumentMoniker": "UViTri.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UViTri.cs",
+              "RelativeToolTip": "UViTri.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAkwDcAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T03:37:24.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.UuDai [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.UuDai.sql",
+              "ToolTip": "dbo.UuDai [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-09T03:35:26.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "fHotel_Rental.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fHotel_Rental.cs",
+              "RelativeDocumentMoniker": "fHotel_Rental.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fHotel_Rental.cs",
+              "RelativeToolTip": "fHotel_Rental.cs",
+              "ViewState": "AQIAAPEAAAAAAAAAAAAAAPYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:51:49.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "QL_TN.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\QL_TN.cs",
+              "RelativeDocumentMoniker": "QL_TN.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\QL_TN.cs",
+              "RelativeToolTip": "QL_TN.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:50:03.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UTienNghi.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UTienNghi.cs",
+              "RelativeDocumentMoniker": "UTienNghi.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UTienNghi.cs",
+              "RelativeToolTip": "UTienNghi.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAQwB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:49:41.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Settings.settings",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Properties\\Settings.settings",
-              "RelativeDocumentMoniker": "Properties\\Settings.settings",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Properties\\Settings.settings",
-              "RelativeToolTip": "Properties\\Settings.settings",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
-              "WhenOpened": "2024-04-09T02:19:12.522Z",
+              "Title": "Modify.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Modify.cs",
+              "RelativeDocumentMoniker": "Modify.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\Modify.cs",
+              "RelativeToolTip": "Modify.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwFIAAACzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T03:04:12.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fThongTinTaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs",
+              "RelativeToolTip": "fThongTinTaiKhoan.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:47:20.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThongTinCanBan.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\ThongTinCanBan.cs",
+              "RelativeDocumentMoniker": "ThongTinCanBan.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\ThongTinCanBan.cs",
+              "RelativeToolTip": "ThongTinCanBan.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA0wCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T03:58:28.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UViTri.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UViTri.cs",
+              "RelativeDocumentMoniker": "UViTri.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UViTri.cs [Design]",
+              "RelativeToolTip": "UViTri.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T03:37:21.346Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.ViTri [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.ViTri.sql",
+              "ToolTip": "dbo.ViTri [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-09T03:38:08.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fThongTinTaiKhoan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "fThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\fThongTinTaiKhoan.cs [Design]",
+              "RelativeToolTip": "fThongTinTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:47:17.18Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dbo.QL_TN [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.QL_TN.sql",
+              "ToolTip": "dbo.QL_TN [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-09T03:21:16.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UTienNghi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UTienNghi.cs",
+              "RelativeDocumentMoniker": "UTienNghi.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\UTienNghi.cs [Design]",
+              "RelativeToolTip": "UTienNghi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:49:39.807Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QL_TN_DAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\QL_TN_DAO.cs",
+              "RelativeDocumentMoniker": "QL_TN_DAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\QL_TN_DAO.cs",
+              "RelativeToolTip": "QL_TN_DAO.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwB4AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:48:57.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "dbo.TIENNGHI [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_NJM7CAI2/Account/True/SqlTable/dbo.TIENNGHI.sql",
+              "ToolTip": "dbo.TIENNGHI [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-09T03:21:11.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "KHACHSAN_DAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\KHACHSAN_DAO.cs",
+              "RelativeDocumentMoniker": "KHACHSAN_DAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\KHACHSAN_DAO.cs",
+              "RelativeToolTip": "KHACHSAN_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:48:53.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HoSoDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\HoSoDAO.cs",
+              "RelativeDocumentMoniker": "HoSoDAO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\DoAnWinform\\HoSoDAO.cs",
+              "RelativeToolTip": "HoSoDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:48:52.085Z",
               "EditorCaption": ""
             }
           ]
