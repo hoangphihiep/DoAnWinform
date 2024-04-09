@@ -131,6 +131,15 @@ namespace DuLich.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string tenDangNhap {
+            get {
+                return ResourceManager.GetString("tenDangNhap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap z4899699868584_aa8e46fd9265d476eadec8b8d60a6238 {
