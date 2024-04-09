@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DuLich")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c8a4650768eee6838164b735c525dd9008b55af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbb77ed26e939e0e3f6a0cd267399b539e92cef8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DuLich")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DuLich")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

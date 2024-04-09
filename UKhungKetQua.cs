@@ -30,7 +30,7 @@ namespace DuLich
             lbl_KhoangCachTP.Text = ks.THANHPHO + " " +  ks.khoangCachTP.ToString() + " km đến trung tâm";
             lbl_KhoangCachSanBay.Text = ks.khoangCachSanBay.ToString() + " km đến sân bay gần nhất";
             lbl_danhGia.Text = "Đánh giá: " + ks.SAO.ToString();
-           // pictureBox1.Image = Image.FromFile(ks.diaChiAnh);
+            pictureBox1.Image = Image.FromFile(ks.diaChiAnh);
             lbl_SoLuong.Text = ks.soLuongKhach.ToString();
         }
         private void label2_Click(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace DuLich
             fHotel_Details f = new fHotel_Details(ks);
             f.CheckIn = checkin;
             f.CheckOut = checkout;
+            f.tenTaiKhoan = tenTaiKhoan;
             f.ShowDialog();
 
             this.Show();
@@ -52,6 +53,7 @@ namespace DuLich
         public string soLuong;
         public string tenTinh;
         public string tenTP;
+        public string tenTaiKhoan;
         DateTime checkin;
         DateTime checkout;
         public void ShowdanhGia()

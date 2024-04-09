@@ -32,6 +32,7 @@ namespace DuLich
         public KhachHang kh;
         public Room phong;
         public DatPhong datphong;
+        public string TENTAIKHOAN;
 
         public Customer_Information()
         {
@@ -77,7 +78,7 @@ namespace DuLich
             double giaTien;
             double.TryParse(GiaChuyenDoi, out giaTien);
 
-            ptb_Anh.Image = tenAnh;
+            pictureBox1.Image = tenAnh;
             label15.Text = ks.TENKS;
             label17.Text = phong.SOKHACH.ToString();
             label19.Text = (phong.SOPHONG - phong.SOPHONGDD).ToString();
@@ -116,8 +117,9 @@ namespace DuLich
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
             lastcost = lbl_LastCost.Text;
-            this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text);
-            this.datphong = new DatPhong(kh, ks, phong, checkin, checkout, 1, 10000000, "Đã thanh toán", "11111");
+            int soLuong = int.Parse(txt_SoLuong.Text);
+            this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text,TENTAIKHOAN);
+            this.datphong = new DatPhong(kh, ks, phong, checkin, checkout,soLuong, 10000000, "Đã thanh toán", "11111");
             datphong.Phong = this.phong;
             Payment_Information f = new Payment_Information();
             f.DP = datphong;
@@ -206,7 +208,7 @@ namespace DuLich
             txt_Email.Text = acc.getEmail;
             txt_SoDienThoai.Text = acc.getSoDienThoai;
             txt_DiaChi.Text = acc.getDiaChi;
-           // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
+            // dtp_NgayThangNamSinh.Value = acc.getNgayThangNamSinh;
         }
 
         private void btn_ThayDoi_Click(object sender, EventArgs e)
@@ -232,8 +234,8 @@ namespace DuLich
 
         public DateTime CheckIn
         {
-            get { return checkin ; }
-            set { checkin = value ; }
+            get { return checkin; }
+            set { checkin = value; }
         }
 
         public DateTime CheckOut
@@ -244,8 +246,8 @@ namespace DuLich
 
         public Room Phong
         {
-            get { return phong ; }
-            set { phong = value ; }
+            get { return phong; }
+            set { phong = value; }
         }
 
     }

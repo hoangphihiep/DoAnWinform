@@ -8,6 +8,7 @@ namespace DuLich
 {
     public class KhachHang
     {
+        string tenTaiKhoan;
         int makh;
         string ten;
         string sdt;
@@ -15,6 +16,10 @@ namespace DuLich
         DateTime bdate;
         string gmail;
         string diachi;
+        public KhachHang (string tenTaiKhoan)
+        {
+            this.tenTaiKhoan = tenTaiKhoan;
+        }
         public KhachHang(int makh, string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi)
         {
             this.makh = makh;
@@ -26,7 +31,7 @@ namespace DuLich
             this.gt = gt;
         }
 
-        public KhachHang(string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi)
+        public KhachHang(string ten, string sdt, string gt, DateTime bdate, string gmail, string diachi, string tenTaiKhoan)
         {
             this.ten = ten;
             this.sdt = sdt;
@@ -34,8 +39,14 @@ namespace DuLich
             this.gmail = gmail;
             this.diachi = diachi;
             this.gt = gt;
+            this.tenTaiKhoan = tenTaiKhoan;
         }
 
+        public string TENTAIKHOAN
+        {
+            get { return tenTaiKhoan; }
+            set { this.tenTaiKhoan = value; }
+        }
         public int MaKH
         {
             get { return makh; }
