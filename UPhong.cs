@@ -586,7 +586,7 @@ namespace DuLich
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            if(index < Ma_Phong.Count -1 )
+            if (index < Ma_Phong.Count - 1)
                 HienThi(++index, Ma_Phong);
         }
 

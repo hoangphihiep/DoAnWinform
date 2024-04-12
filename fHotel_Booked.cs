@@ -34,11 +34,11 @@ namespace DuLich
             List<PhongDaDat> listPhongDat = new List<PhongDaDat>();
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                PhongDaDat pd = new PhongDaDat(truyen.maKS[j], truyen.maPhong[j], truyen.tenPhong[j], truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.diaChi[j], truyen.soLuongPhong[j], truyen.soTienThanhToan[j], truyen.address[j],truyen.soKhach[j],ngayDen);
+                PhongDaDat pd = new PhongDaDat(truyen.maKS[j], truyen.maPhong[j], truyen.tenPhong[j], truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.diaChi[j], truyen.soLuongPhong[j], truyen.soTienThanhToan[j], truyen.address[j], truyen.soKhach[j], ngayDen);
                 listPhongDat.Add(pd);
                 UPhongDaDat uc = new UPhongDaDat(pd);
-                uc.viTri = j * 148;
-                flowLayoutPanel1.Controls.Add(uc);
+                uc.viTri = j * 210;
+                panel1.Controls.Add(uc);
             }
         }
     }

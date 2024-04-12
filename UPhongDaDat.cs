@@ -53,10 +53,18 @@ namespace DuLich
             lbl_soPhongDat.Location = new Point(366, 154);
             lbl_thoiGianConLai.Size = new Size(182, 20);
             lbl_thoiGianConLai.Location = new Point(605, 22);
-            label2.Size = new Size(108, 20);
-            label2.Location = new Point(664, 126);
-            btn_huyDat.Size = new Size(114, 31);
+            btn_huyDat.Size = new Size(134, 34);
             btn_huyDat.Location = new Point(648, 154);
+        }
+
+        private void lbl_TenKhachSan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_huyDat_Click(object sender, EventArgs e)
+        {
+            btn_huyDat.Text = "Đang chờ xử lý";
         }
     }
 }

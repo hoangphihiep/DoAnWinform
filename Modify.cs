@@ -80,7 +80,7 @@ namespace DuLich
                 data = cmd.ExecuteReader();
                 while (data.Read())
                 {
-                    accounts.Add(new ThongTinCanBan(data.GetInt32(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetInt32(4), data.GetInt32(5), data.GetInt32(6), data.GetInt32(7).ToString()));
+                    accounts.Add(new ThongTinCanBan(data.GetInt32(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetInt32(4), data.GetInt32(5), data.GetDouble(6), data.GetInt32(7), data.GetString(8)));
                 }
                 conn.Close();
             }

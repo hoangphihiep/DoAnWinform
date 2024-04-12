@@ -25,6 +25,7 @@ namespace DuLich
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            uPhong2.Size = new Size(1224, 801);
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
             uThongTinKhachSan1.SetTenTK(tentk);
@@ -76,7 +77,16 @@ namespace DuLich
                 }
             }
             uPhong2.Ktr(index, maPhongList);
-            uPhong2.HienThi(index,maPhongList);
+            uPhong2.HienThi(index, maPhongList);
+        }
+        public void ShowQLHuy()
+        {
+            panel6.Visible = true;
+            btn_QuanLyHuy.Visible = true;
+        }
+        public void HideQLHuy()
+        {
+            panel6.Visible = false;
         }
         public void ShowThongTinCanBan()
         {
@@ -141,36 +151,50 @@ namespace DuLich
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
             uThongtin2.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_MatKhau_Click(object sender, EventArgs e)
         {
             uMatKhau1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_ThongTingKS_Click(object sender, EventArgs e)
         {
             uThongTinKhachSan1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_ViTri_Click(object sender, EventArgs e)
         {
             uViTri1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_ChiTietPhong_Click(object sender, EventArgs e)
         {
             uPhong2.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_Anh_Click(object sender, EventArgs e)
         {
             uAnh2.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_HoSo_Click(object sender, EventArgs e)
         {
             uHoSo1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
         int dem = 0;
         private void btn_ThongTinKhachSan_Click(object sender, EventArgs e)
@@ -184,6 +208,7 @@ namespace DuLich
                 ShowHoSo();
                 ShowUDai();
                 ShowTienNghi();
+                ShowQLHuy();
                 dem++;
             }
             else
@@ -195,23 +220,39 @@ namespace DuLich
                 HideHoSo();
                 HideUDai();
                 HideTienNghi();
+                HideQLHuy();
                 dem++;
             }
         }
 
         private void uThongtin2_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_TienNghi_Click(object sender, EventArgs e)
         {
             uTienNghi1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
         }
 
         private void btn_UDai_Click(object sender, EventArgs e)
         {
             uUuDai1.BringToFront();
+            panel6.Visible = false;
+            panel6.SendToBack();
+        }
+
+        private void btn_QuanLyHuy_Click(object sender, EventArgs e)
+        {
+            panel6.BringToFront();
+            panel6.Visible = true;
+        }
+
+        private void uChiTietPhongo1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

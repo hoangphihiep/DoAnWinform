@@ -161,80 +161,12 @@ namespace DuLich
             btn_DangKyKS.FlatAppearance.BorderSize = 0;
             btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
-            //MessageBox.Show(diadiem);
-            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
-            data.Add("An Giang");
-            data.Add("Bà Rịa Vũng Tàu");
-            data.Add("Bạc Liêu");
-            data.Add("Bắc Giang");
-            data.Add("Bắc Kạn");
-            data.Add("Bắc Ninh");
-            data.Add("Bến Tre");
-            data.Add("Bình Dương");
-            data.Add("Bình Định");
-            data.Add("Bình Phước");
-            data.Add("Bình Thuận");
-            data.Add("Cà Mau");
-            data.Add("Cao Bằng");
-            data.Add("Cần Thơ");
-            data.Add("Đà Nẵng");
-            data.Add("Đắk Lắk");
-            data.Add("Đắk Nông");
-            data.Add("Điện Biên");
-            data.Add("Đồng Nai");
-            data.Add("Đồng Tháp");
-            data.Add("Gia Lai");
-            data.Add("Hà Giang");
-            data.Add("Hà Nam");
-            data.Add("Hà Nội");
-            data.Add("Hà Tĩnh");
-            data.Add("Hải Dương");
-            data.Add("Hải Phòng");
-            data.Add("Hậu Giang");
-            data.Add("Hòa Bình");
-            data.Add("Hưng Yên");
-            data.Add("Khánh Hòa");
-            data.Add("Kiên Giang");
-            data.Add("Kon Tum");
-            data.Add("Lai Châu");
-            data.Add("Lạng Sơn");
-            data.Add("Lào Cai");
-            data.Add("Lâm Đồng");
-            data.Add("Long An");
-            data.Add("Nam Định");
-            data.Add("Nghệ An");
-            data.Add("Ninh Bình");
-            data.Add("Ninh Thuận");
-            data.Add("Phú Thọ");
-            data.Add("Phú Yên");
-            data.Add("Quảng Bình");
-            data.Add("Quảng Nam");
-            data.Add("Quảng Ngãi");
-            data.Add("Quảng Ninh");
-            data.Add("Quảng Trị");
-            data.Add("Sóc Trăng");
-            data.Add("Sơn La");
-            data.Add("Tây Ninh");
-            data.Add("Thái Bình");
-            data.Add("Thái Nguyên");
-            data.Add("Thanh Hóa");
-            data.Add("Thừa Thiên Huế");
-            data.Add("Tiền Giang");
-            data.Add("TP Hồ Chí Minh");
-            data.Add("Trà Vinh");
-            data.Add("Tuyên Quang");
-            data.Add("Vĩnh Long");
-            data.Add("Vĩnh Phúc");
-            data.Add("Yên Bái");
-            lb_TimKiem.AutoCompleteMode = AutoCompleteMode.Suggest;
-            lb_TimKiem.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            lb_TimKiem.AutoCompleteCustomSource = data;
             int soLuong = soLuongNguoiLon + soLuongTreEm;
             truyen.Truyen(diadiem, "TENKH", soLuong);
             List<KHACHSAN> listKS = new List<KHACHSAN>();
             for (int j = 0; j < truyen.soLuong; j++)
             {
-                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j],truyen.soKhach[j],truyen.khoangCachTP[j],truyen.khoangCachSanBay[j],truyen.address[j],truyen.maKS[j],ngayDen,ngayDi);
+                KHACHSAN ks = new KHACHSAN(truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.danhGia[j], truyen.soTien[j], truyen.diaChi[j], truyen.soKhach[j], truyen.khoangCachTP[j], truyen.khoangCachSanBay[j], truyen.address[j], truyen.maKS[j], ngayDen, ngayDi);
                 listKS.Add(ks);
                 UKhungKetQua uc = new UKhungKetQua(ks);
                 uc.CheckIn = ngayDen;
@@ -461,7 +393,7 @@ namespace DuLich
                 string[] tenTinh = new string[100];
                 string[] tenThanhPho = new string[100];
                 string[] tenKhachSan = new string[100];
-                double [] soTien = new double[100];
+                double[] soTien = new double[100];
                 string[] anhBia = new string[100];
                 for (int maks = 0; maks < maksList.Count; maks++)
                 {
@@ -495,7 +427,7 @@ namespace DuLich
                     if (control is UserControl)
                     {
                         tab_PhuHopNhat.Controls.RemoveAt(j);
-                  
+
                         control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                     }
                 }

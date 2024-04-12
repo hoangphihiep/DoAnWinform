@@ -282,6 +282,7 @@
             ptb_AnhPhong.Location = new Point(676, 172);
             ptb_AnhPhong.Name = "ptb_AnhPhong";
             ptb_AnhPhong.Size = new Size(391, 331);
+            ptb_AnhPhong.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_AnhPhong.TabIndex = 109;
             ptb_AnhPhong.TabStop = false;
             ptb_AnhPhong.Click += ptb_AnhPhong_Click;

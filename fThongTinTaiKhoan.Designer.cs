@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel6 = new Panel();
+            btn_QuanLyHuy = new Button();
             btn_TienNghi = new Button();
             btn_UDai = new Button();
             panel4 = new Panel();
@@ -43,9 +45,9 @@
             btn_ThongTin = new Button();
             panel3 = new Panel();
             panel5 = new Panel();
-            uPhong2 = new UPhong();
-            uThongtin1 = new UThongtin();
+            uPhong1 = new UPhong();
             uThongTinKhachSan1 = new UThongTinKhachSan();
+            uPhong2 = new UPhong();
             uViTri1 = new UViTri();
             uHoSo1 = new UHoSo();
             uAnh1 = new UAnh();
@@ -55,7 +57,8 @@
             uTienNghi1 = new UTienNghi();
             uMatKhau1 = new UMatKhau();
             uAnh2 = new UAnh();
-            uPhong1 = new UPhong();
+            uThongtin1 = new UThongtin();
+            panel_QuanLyHuy = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
@@ -66,6 +69,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(btn_QuanLyHuy);
             panel1.Controls.Add(btn_TienNghi);
             panel1.Controls.Add(btn_UDai);
             panel1.Controls.Add(panel4);
@@ -83,6 +88,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1221, 674);
             panel1.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            panel6.Location = new Point(187, 46);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1227, 671);
+            panel6.TabIndex = 11;
+            panel6.Visible = false;
+            // 
+            // btn_QuanLyHuy
+            // 
+            btn_QuanLyHuy.Location = new Point(44, 395);
+            btn_QuanLyHuy.Name = "btn_QuanLyHuy";
+            btn_QuanLyHuy.Size = new Size(146, 41);
+            btn_QuanLyHuy.TabIndex = 11;
+            btn_QuanLyHuy.Text = "Quản lý hủy đặt";
+            btn_QuanLyHuy.UseVisualStyleBackColor = true;
+            btn_QuanLyHuy.Visible = false;
+            btn_QuanLyHuy.Click += btn_QuanLyHuy_Click;
             // 
             // btn_TienNghi
             // 
@@ -221,6 +245,7 @@
             // 
             panel3.BackColor = SystemColors.ButtonHighlight;
             panel3.Controls.Add(panel5);
+            panel3.Controls.Add(panel_QuanLyHuy);
             panel3.Location = new Point(190, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(1221, 700);
@@ -228,9 +253,9 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(uPhong2);
-            panel5.Controls.Add(uThongtin1);
+            panel5.Controls.Add(uPhong1);
             panel5.Controls.Add(uThongTinKhachSan1);
+            panel5.Controls.Add(uPhong2);
             panel5.Controls.Add(uViTri1);
             panel5.Controls.Add(uHoSo1);
             panel5.Controls.Add(uAnh1);
@@ -240,11 +265,26 @@
             panel5.Controls.Add(uTienNghi1);
             panel5.Controls.Add(uMatKhau1);
             panel5.Controls.Add(uAnh2);
-            panel5.Controls.Add(uPhong1);
+            panel5.Controls.Add(uThongtin1);
             panel5.Location = new Point(0, 43);
             panel5.Name = "panel5";
             panel5.Size = new Size(1221, 700);
             panel5.TabIndex = 1;
+            // 
+            // uPhong1
+            // 
+            uPhong1.AutoScroll = true;
+            uPhong1.Location = new Point(-3, 6);
+            uPhong1.Name = "uPhong1";
+            uPhong1.Size = new Size(1218, 801);
+            uPhong1.TabIndex = 9;
+            // 
+            // uThongTinKhachSan1
+            // 
+            uThongTinKhachSan1.Location = new Point(0, 0);
+            uThongTinKhachSan1.Name = "uThongTinKhachSan1";
+            uThongTinKhachSan1.Size = new Size(1221, 700);
+            uThongTinKhachSan1.TabIndex = 3;
             // 
             // uPhong2
             // 
@@ -253,20 +293,6 @@
             uPhong2.Name = "uPhong2";
             uPhong2.Size = new Size(1115, 801);
             uPhong2.TabIndex = 10;
-            // 
-            // uThongtin1
-            // 
-            uThongtin1.Location = new Point(-3, 6);
-            uThongtin1.Name = "uThongtin1";
-            uThongtin1.Size = new Size(1221, 700);
-            uThongtin1.TabIndex = 0;
-            // 
-            // uThongTinKhachSan1
-            // 
-            uThongTinKhachSan1.Location = new Point(0, 0);
-            uThongTinKhachSan1.Name = "uThongTinKhachSan1";
-            uThongTinKhachSan1.Size = new Size(1221, 700);
-            uThongTinKhachSan1.TabIndex = 3;
             // 
             // uViTri1
             // 
@@ -295,6 +321,7 @@
             uChiTietPhongo1.Name = "uChiTietPhongo1";
             uChiTietPhongo1.Size = new Size(1221, 700);
             uChiTietPhongo1.TabIndex = 5;
+            uChiTietPhongo1.Load += uChiTietPhongo1_Load;
             // 
             // uThongtin2
             // 
@@ -320,7 +347,7 @@
             // 
             // uMatKhau1
             // 
-            uMatKhau1.Location = new Point(0, 0);
+            uMatKhau1.Location = new Point(3, 6);
             uMatKhau1.Name = "uMatKhau1";
             uMatKhau1.Size = new Size(1221, 700);
             uMatKhau1.TabIndex = 2;
@@ -332,12 +359,19 @@
             uAnh2.Size = new Size(1526, 758);
             uAnh2.TabIndex = 8;
             // 
-            // uPhong1
+            // uThongtin1
             // 
-            uPhong1.Location = new Point(-3, 6);
-            uPhong1.Name = "uPhong1";
-            uPhong1.Size = new Size(1115, 801);
-            uPhong1.TabIndex = 9;
+            uThongtin1.Location = new Point(-3, 6);
+            uThongtin1.Name = "uThongtin1";
+            uThongtin1.Size = new Size(1221, 700);
+            uThongtin1.TabIndex = 0;
+            // 
+            // panel_QuanLyHuy
+            // 
+            panel_QuanLyHuy.Location = new Point(0, 43);
+            panel_QuanLyHuy.Name = "panel_QuanLyHuy";
+            panel_QuanLyHuy.Size = new Size(1218, 801);
+            panel_QuanLyHuy.TabIndex = 11;
             // 
             // fThongTinTaiKhoan
             // 
@@ -387,5 +421,8 @@
         private UAnh uAnh2;
         private UPhong uPhong2;
         private UPhong uPhong1;
+        private Button btn_QuanLyHuy;
+        private Panel panel_QuanLyHuy;
+        private Panel panel6;
     }
 }

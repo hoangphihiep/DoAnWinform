@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             lbl_thoiGianConLai = new Label();
-            label2 = new Label();
             btn_huyDat = new Button();
             pB_anhPhong = new PictureBox();
             lbl_tenPhong = new Label();
@@ -55,27 +54,17 @@
             lbl_thoiGianConLai.TabIndex = 9;
             lbl_thoiGianConLai.Text = "Thời gian còn lại : 2 ngày";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.DarkTurquoise;
-            label2.Location = new Point(664, 126);
-            label2.Name = "label2";
-            label2.Size = new Size(108, 20);
-            label2.TabIndex = 8;
-            label2.Text = "Xem chi tiết >";
-            // 
             // btn_huyDat
             // 
             btn_huyDat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_huyDat.Location = new Point(648, 154);
+            btn_huyDat.Location = new Point(638, 143);
             btn_huyDat.Margin = new Padding(3, 4, 3, 4);
             btn_huyDat.Name = "btn_huyDat";
-            btn_huyDat.Size = new Size(114, 31);
+            btn_huyDat.Size = new Size(134, 34);
             btn_huyDat.TabIndex = 7;
             btn_huyDat.Text = "Hủy đặt phòng";
             btn_huyDat.UseVisualStyleBackColor = true;
+            btn_huyDat.Click += btn_huyDat_Click;
             // 
             // pB_anhPhong
             // 
@@ -173,11 +162,13 @@
             lbl_TenKhachSan.Size = new Size(326, 28);
             lbl_TenKhachSan.TabIndex = 11;
             lbl_TenKhachSan.Text = "Melia Vinpearl Nha Trang Empire";
+            lbl_TenKhachSan.Click += lbl_TenKhachSan_Click;
             // 
             // UPhongDaDat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Gainsboro;
             Controls.Add(lbl_tenPhong);
             Controls.Add(lbl_soPhongDat);
             Controls.Add(lbl_soTien);
@@ -189,7 +180,6 @@
             Controls.Add(lbl_TenKhachSan);
             Controls.Add(pB_anhPhong);
             Controls.Add(lbl_thoiGianConLai);
-            Controls.Add(label2);
             Controls.Add(btn_huyDat);
             Name = "UPhongDaDat";
             Size = new Size(793, 199);
@@ -202,7 +192,6 @@
         #endregion
 
         private Label lbl_thoiGianConLai;
-        private Label label2;
         private Button btn_huyDat;
         private PictureBox pB_anhPhong;
         private Label lbl_tenPhong;

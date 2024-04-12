@@ -27,7 +27,7 @@ namespace DuLich
             lbl_ViTri.Text = ks.TINH + ", " + ks.THANHPHO;
             lbl_TenKhachSan.Text = ks.TENKS;
             lbl_Tien.Text = ks.GIA.ToString() + " VNĐ";
-            lbl_KhoangCachTP.Text = ks.THANHPHO + " " +  ks.khoangCachTP.ToString() + " km đến trung tâm";
+            lbl_KhoangCachTP.Text = ks.THANHPHO + " " + ks.khoangCachTP.ToString() + " km đến trung tâm";
             lbl_KhoangCachSanBay.Text = ks.khoangCachSanBay.ToString() + " km đến sân bay gần nhất";
             lbl_danhGia.Text = "Đánh giá: " + ks.SAO.ToString();
             pictureBox1.Image = Image.FromFile(ks.diaChiAnh);

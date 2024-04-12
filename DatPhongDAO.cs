@@ -16,7 +16,7 @@ namespace DuLich
         public int soLuongPhong;
         public void AddDatPhong( DatPhong datPhong )
         {
-            /*MessageBox.Show(TenTaiKhoan);
+            MessageBox.Show(TenTaiKhoan);
             string query1 = string.Format("SELECT MAX(MADAT) as maxKS FROM DATPHONG");
             SqlConnection conn1 = Connection_to_SQL.getConnection();
             conn1.Open();
@@ -30,7 +30,7 @@ namespace DuLich
                     madatphong = reader1.GetInt32(giaColumnIndex) + 1;
                 }
             }
-            conn1.Close();*/
+            conn1.Close();
             string query2 = "SELECT SOPHONG FROM QLPHONG WHERE MAPHONG = @MAPHONG";
             SqlConnection conn3 = Connection_to_SQL.getConnection();
             conn3.Open();
@@ -62,10 +62,10 @@ namespace DuLich
             try
             {
                 conn.Open();
-                string sqlString = "INSERT INTO DATPHONG (MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES (@maks, @checkIn, @checkOut, @soluong, @maphong, @tendangnhap, @maks, @thanhtoan)";
+                string sqlString = "INSERT INTO DATPHONG (MADAT,MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES (@madat,@maks, @checkIn, @checkOut, @soluong, @maphong, @tendangnhap, @maks, @thanhtoan)";
                 using(SqlCommand cmd = new SqlCommand(sqlString, conn))
                 {
-                    //cmd.Parameters.AddWithValue("@madat", madatphong);
+                    cmd.Parameters.AddWithValue("@madat", madatphong);
                     cmd.Parameters.AddWithValue("@maks", datPhong.KS.MAKS);
                     cmd.Parameters.AddWithValue("@checkIn", datPhong.NgayNhan);
                     cmd.Parameters.AddWithValue("@checkOut", datPhong.NgayTra);
