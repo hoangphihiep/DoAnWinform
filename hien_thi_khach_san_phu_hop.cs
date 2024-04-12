@@ -482,7 +482,7 @@ namespace DuLich
                         int giaColumnIndex = reader1.GetOrdinal("GIA");
                         if (!reader1.IsDBNull(giaColumnIndex))
                         {
-                            double gia = reader1.GetDouble(giaColumnIndex);
+                            double gia = reader1.Getdouble(giaColumnIndex);
                             soTien[soLuong1] = gia;
                         }
                         soLuong1++;

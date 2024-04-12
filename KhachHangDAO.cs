@@ -36,5 +36,24 @@ namespace DuLich
                 conn.Close();
             }
         }
+
+        public KhachHang Get(int makh)
+        {
+            string sqlString = string.Format("SELECT * FROM KHACHHANG WHERE MAKH= '{0}'", makh);
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(sqlString, conn);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            string tenkh = reader.GetString(reader.GetOrdinal("TENKH"));
+            string gt = reader.GetString(reader.GetOrdinal("GIOITINH"));
+            DateTime bdate = reader.GetDateTime(reader.GetOrdinal("BDATE"));
+            string sdt = reader.GetString(reader.GetOrdinal("SDT"));
+            string gmail = reader.GetString(reader.GetOrdinal("GMAIL"));
+            string diachi = reader.GetString(reader.GetOrdinal("DIACHI"));
+            KhachHang kh = new KhachHang(makh, tenkh, sdt, gt, bdate, gmail, diachi);
+            return kh;
+        }
+
     }
 }

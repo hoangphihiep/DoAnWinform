@@ -81,7 +81,7 @@ namespace DuLich
                 int soTienTongColumnIndex = reader.GetOrdinal("THANHTOAN");
                 if (!reader.IsDBNull(soTienTongColumnIndex))
                 {
-                    double soTien = reader.GetDouble(soTienTongColumnIndex);
+                    double soTien = reader.Getdouble(soTienTongColumnIndex);
                     soTienThanhToan[i] = soTien;
                 }
                 int maksColumnIndex = reader.GetOrdinal("MAKS");
@@ -167,7 +167,7 @@ namespace DuLich
                 int giaColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
-                    double gia = reader.GetDouble(giaColumnIndex);
+                    double gia = reader.Getdouble(giaColumnIndex);
                     soTien[i] = gia;
                 }
                 int khoangCachTPColumnIndex = reader.GetOrdinal("KCTHANHPHO");
@@ -260,7 +260,7 @@ namespace DuLich
                 int giaNhoCachTPColumnIndex = reader.GetOrdinal("GIA");
                 if (!reader.IsDBNull(giaNhoCachTPColumnIndex))
                 {
-                    double gia = reader.GetDouble(giaNhoCachTPColumnIndex);
+                    double gia = reader.Getdouble(giaNhoCachTPColumnIndex);
                     soTien[j] = gia;
                 }
                 int maksColumnIndex = reader.GetOrdinal("VMaKS");

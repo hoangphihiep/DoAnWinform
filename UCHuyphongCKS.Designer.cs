@@ -44,6 +44,8 @@
             label22 = new Label();
             lblCheckIn = new Label();
             lblName = new Label();
+            label5 = new Label();
+            lblRoomName = new Label();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbImage).BeginInit();
             panel11.SuspendLayout();
@@ -92,6 +94,8 @@
             // 
             // panel11
             // 
+            panel11.Controls.Add(lblRoomName);
+            panel11.Controls.Add(label5);
             panel11.Controls.Add(lblSoPhong);
             panel11.Controls.Add(label2);
             panel11.Controls.Add(lblCusName);
@@ -211,6 +215,24 @@
             lblName.TabIndex = 0;
             lblName.Text = "Melia Vinpearl Nha Trang Empire";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(8, 63);
+            label5.Name = "label5";
+            label5.Size = new Size(69, 15);
+            label5.TabIndex = 14;
+            label5.Text = "Tên phòng: ";
+            // 
+            // lblRoomName
+            // 
+            lblRoomName.AutoSize = true;
+            lblRoomName.Location = new Point(77, 65);
+            lblRoomName.Name = "lblRoomName";
+            lblRoomName.Size = new Size(38, 15);
+            lblRoomName.TabIndex = 15;
+            lblRoomName.Text = "label6";
+            // 
             // UCHuyphongCKS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -245,5 +267,7 @@
         private Label label4;
         private Label label2;
         private Label lblSoPhong;
+        private Label lblRoomName;
+        private Label label5;
     }
 }

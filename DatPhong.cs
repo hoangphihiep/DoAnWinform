@@ -14,11 +14,25 @@ namespace DuLich
         DateTime ngayNhan;
         DateTime ngayTra;
         int soPhong;
-        float tongThanhToan;
+        double tongThanhToan;
         string trangThai;
         string maHanhTrinh;
-        public DatPhong(KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, float tongThanhToan, string trangThai, string maHanhTrinh)
+        int maDat;
+        public DatPhong(KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan, string trangThai, string maHanhTrinh)
         {
+            this.kh = kh;
+            this.ks = ks;
+            this.ngayNhan = ngayNhan;
+            this.ngayTra = ngayTra;
+            this.soPhong = soPhong;
+            this.tongThanhToan = tongThanhToan;
+            this.trangThai = trangThai;
+            this.maHanhTrinh = maHanhTrinh;
+        }
+
+        public DatPhong(int maDat, KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan, string trangThai, string maHanhTrinh)
+        {
+            this.maDat = maDat;
             this.kh = kh;
             this.ks = ks;
             this.ngayNhan = ngayNhan;
@@ -65,7 +79,7 @@ namespace DuLich
             set { this.soPhong = value; }
         }
 
-        public float TongThanhToan
+        public double TongThanhToan
         {
             get { return this.tongThanhToan; }
             set { this.tongThanhToan = value; }

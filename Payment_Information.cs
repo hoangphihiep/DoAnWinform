@@ -64,7 +64,7 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
-            datphong.TongThanhToan = float.Parse(lbl_LastCost.Text);
+            datphong.TongThanhToan = double.Parse(lbl_LastCost.Text);
             fPayment_Slip f = new fPayment_Slip();
             f.DP = datphong;
             this.Hide();
