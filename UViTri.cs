@@ -53,7 +53,7 @@ namespace DuLich
                     string tinh = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
 
                     // Tạo một mảng chứa giá trị của từng cột
-                    string[] rowValues = { tk, maks.ToString(), diachi, tenthanhpho, tinh };
+                    string[] rowValues = { maks.ToString(),tk, diachi, tenthanhpho, tinh };
 
                     // Thêm hàng vào DataGridView
                     dataGridView1.Rows.Add(rowValues);

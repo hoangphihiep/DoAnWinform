@@ -26,5 +26,21 @@ namespace DuLich
                 conn.Close();
             }
         }
+        public void Delete(QL_TN acc, string TenQuanHe)
+        {
+            string sqlStr = string.Format("DELETE INTO {0} WHERE MAKS = @MAKS AND MATN = @MATN", TenQuanHe, acc.MAKS, acc.MATN);
+            //connection.ThucThi(acc, sqlStr);
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
+                    cmd.Parameters.AddWithValue("@MATN", acc.MATN);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
     }
 }
