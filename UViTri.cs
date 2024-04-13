@@ -54,7 +54,6 @@ namespace DuLich
 
                     // Tạo một mảng chứa giá trị của từng cột
                     string[] rowValues = { maks.ToString() , tk, diachi, tenthanhpho, tinh };
-
                     // Thêm hàng vào DataGridView
                     dataGridView1.Rows.Add(rowValues);
                 }

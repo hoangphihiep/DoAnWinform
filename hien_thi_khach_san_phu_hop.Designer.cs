@@ -52,8 +52,11 @@
             lb_TimKiem = new TextBox();
             tabControl1 = new TabControl();
             tab_PhuHopNhat = new TabPage();
+            flb_PhuHopNhat = new FlowLayoutPanel();
             tab_GiaThapNhat = new TabPage();
+            flb_GiaThapNhat = new FlowLayoutPanel();
             tabKhoangCach = new TabPage();
+            flp_KhoangCach = new FlowLayoutPanel();
             panel_KhoangCach = new Panel();
             btn_SanBay = new Button();
             btn_ThanhPho = new Button();
@@ -77,13 +80,17 @@
             label11 = new Label();
             label2 = new Label();
             panel5 = new Panel();
+            flb_danhGiaCao = new FlowLayoutPanel();
             panel_menu.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nUD_treEm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).BeginInit();
             tabControl1.SuspendLayout();
+            tab_PhuHopNhat.SuspendLayout();
+            tab_GiaThapNhat.SuspendLayout();
             tabKhoangCach.SuspendLayout();
             panel_KhoangCach.SuspendLayout();
+            tab_DanhGiaCao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             panel4.SuspendLayout();
@@ -348,6 +355,7 @@
             // tab_PhuHopNhat
             // 
             tab_PhuHopNhat.AutoScroll = true;
+            tab_PhuHopNhat.Controls.Add(flb_PhuHopNhat);
             tab_PhuHopNhat.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             tab_PhuHopNhat.Location = new Point(4, 50);
             tab_PhuHopNhat.Name = "tab_PhuHopNhat";
@@ -358,9 +366,18 @@
             tab_PhuHopNhat.UseVisualStyleBackColor = true;
             tab_PhuHopNhat.Click += tabPage1_Click;
             // 
+            // flb_PhuHopNhat
+            // 
+            flb_PhuHopNhat.AutoScroll = true;
+            flb_PhuHopNhat.Location = new Point(0, 0);
+            flb_PhuHopNhat.Name = "flb_PhuHopNhat";
+            flb_PhuHopNhat.Size = new Size(990, 479);
+            flb_PhuHopNhat.TabIndex = 1;
+            // 
             // tab_GiaThapNhat
             // 
             tab_GiaThapNhat.AutoScroll = true;
+            tab_GiaThapNhat.Controls.Add(flb_GiaThapNhat);
             tab_GiaThapNhat.Location = new Point(4, 50);
             tab_GiaThapNhat.Name = "tab_GiaThapNhat";
             tab_GiaThapNhat.Padding = new Padding(3);
@@ -369,10 +386,18 @@
             tab_GiaThapNhat.Text = "Giá thấp nhất";
             tab_GiaThapNhat.UseVisualStyleBackColor = true;
             // 
+            // flb_GiaThapNhat
+            // 
+            flb_GiaThapNhat.Location = new Point(0, 0);
+            flb_GiaThapNhat.Name = "flb_GiaThapNhat";
+            flb_GiaThapNhat.Size = new Size(990, 479);
+            flb_GiaThapNhat.TabIndex = 1;
+            // 
             // tabKhoangCach
             // 
             tabKhoangCach.AutoScroll = true;
             tabKhoangCach.Controls.Add(panel_KhoangCach);
+            tabKhoangCach.Controls.Add(flp_KhoangCach);
             tabKhoangCach.Location = new Point(4, 50);
             tabKhoangCach.Name = "tabKhoangCach";
             tabKhoangCach.Size = new Size(990, 479);
@@ -380,6 +405,14 @@
             tabKhoangCach.Text = "Khoảng cách";
             tabKhoangCach.UseVisualStyleBackColor = true;
             tabKhoangCach.Move += tabKhoangCach_Move;
+            // 
+            // flp_KhoangCach
+            // 
+            flp_KhoangCach.AutoScroll = true;
+            flp_KhoangCach.Location = new Point(0, 2);
+            flp_KhoangCach.Name = "flp_KhoangCach";
+            flp_KhoangCach.Size = new Size(990, 476);
+            flp_KhoangCach.TabIndex = 3;
             // 
             // panel_KhoangCach
             // 
@@ -416,6 +449,7 @@
             // tab_DanhGiaCao
             // 
             tab_DanhGiaCao.AutoScroll = true;
+            tab_DanhGiaCao.Controls.Add(flb_danhGiaCao);
             tab_DanhGiaCao.Location = new Point(4, 50);
             tab_DanhGiaCao.Name = "tab_DanhGiaCao";
             tab_DanhGiaCao.Size = new Size(990, 479);
@@ -612,6 +646,13 @@
             panel5.Size = new Size(280, 198);
             panel5.TabIndex = 39;
             // 
+            // flb_danhGiaCao
+            // 
+            flb_danhGiaCao.Location = new Point(0, 0);
+            flb_danhGiaCao.Name = "flb_danhGiaCao";
+            flb_danhGiaCao.Size = new Size(990, 479);
+            flb_danhGiaCao.TabIndex = 1;
+            // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -638,8 +679,11 @@
             ((System.ComponentModel.ISupportInitialize)nUD_treEm).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).EndInit();
             tabControl1.ResumeLayout(false);
+            tab_PhuHopNhat.ResumeLayout(false);
+            tab_GiaThapNhat.ResumeLayout(false);
             tabKhoangCach.ResumeLayout(false);
             panel_KhoangCach.ResumeLayout(false);
+            tab_DanhGiaCao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             panel4.ResumeLayout(false);
@@ -698,5 +742,9 @@
         private Button btn_SanBay;
         private Button btn_ThanhPho;
         private Panel panel5;
+        private FlowLayoutPanel flb_PhuHopNhat;
+        private FlowLayoutPanel flp_KhoangCach;
+        private FlowLayoutPanel flb_GiaThapNhat;
+        private FlowLayoutPanel flb_danhGiaCao;
     }
 }

@@ -30,16 +30,14 @@ namespace DuLich
 
         private void fHotel_booked_Load(object sender, EventArgs e)
         {
-            truyen.Truyen3(taiKhoan);
             List<PhongDaDat> listPhongDat = new List<PhongDaDat>();
-            for (int j = 0; j < truyen.soLuong; j++)
+            truyen.Truyen3(taiKhoan, listPhongDat);
+            foreach (PhongDaDat i in listPhongDat)
             {
-                PhongDaDat pd = new PhongDaDat(truyen.maKS[j], truyen.maPhong[j], truyen.tenPhong[j], truyen.tenKhachSan[j], truyen.tenTinh[j], truyen.tenThanhPho[j], truyen.diaChi[j], truyen.soLuongPhong[j], truyen.soTienThanhToan[j], truyen.address[j], truyen.soKhach[j], ngayDen);
-                listPhongDat.Add(pd);
-                UPhongDaDat uc = new UPhongDaDat(pd);
-                uc.viTri = j * 210;
-                panel1.Controls.Add(uc);
+                UPhongDaDat uc = new UPhongDaDat(i);
+                flb_PhongDaDat.Controls.Add(uc);
             }
+            listPhongDat.Clear();
         }
     }
 }

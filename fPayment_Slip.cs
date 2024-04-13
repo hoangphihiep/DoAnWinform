@@ -52,7 +52,7 @@ namespace DuLich
             lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
             lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
-            MessageBox.Show(datphong.KhachHang.TENTAIKHOAN);
+           
         }
 
         public void SetSDT(string Sdt)
@@ -80,13 +80,12 @@ namespace DuLich
 
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
-
-            datphong.TongThanhToan = float.Parse(lblPrice.Text);
+            datphong.TongThanhToan = double.Parse(lblPrice.Text);
             DatPhongDAO datPhongDAO = new DatPhongDAO();
-            KhachHangDAO khachHangDAO = new KhachHangDAO();
+            datPhongDAO.TenTaiKhoan = datphong.KhachHang.TENTAIKHOAN;
             datPhongDAO.AddDatPhong(datphong);
-
-            khachHangDAO.AddKhachHang(datphong.KhachHang);
+            MessageBox.Show(datphong.KhachHang.TENTAIKHOAN);
+            
             this.Close();
         }
 

@@ -118,7 +118,7 @@ namespace DuLich
                 listdg.Add(dg);
             }
             lblCommentCount.Text = string.Format("Từ " + n + " khách hàng đã ở");
-            double dtb = (float)tong / n;
+            double dtb = (double)tong / n;
             dtb = Math.Round(dtb, 1);
             double ptRT = (double)rt / n;
             lblPtRT.Size = new Size((int)Math.Round(ptRT * 293, 0), 15);

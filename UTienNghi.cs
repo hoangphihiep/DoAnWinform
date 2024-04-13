@@ -36,6 +36,27 @@ namespace DuLich
                 }
                 else
                 {
+                    int tienNghiChinh0 = clb_TienNghiChinh.GetItemChecked(0) ? 1 : 0;
+                    int tienNghiChinh1 = clb_TienNghiChinh.GetItemChecked(1) ? 1 : 0;
+                    int tienNghiChinh2 = clb_TienNghiChinh.GetItemChecked(2) ? 1 : 0;
+                    int tienNghiChinh3 = clb_TienNghiChinh.GetItemChecked(3) ? 1 : 0;
+                    int tienNghiChinh4 = clb_TienNghiChinh.GetItemChecked(4) ? 1 : 0;
+
+                    int dichVuKhachSan0 = clb_DichVuKhachSan.GetItemChecked(0) ? 1 : 0;
+                    int dichVuKhachSan1 = clb_DichVuKhachSan.GetItemChecked(1) ? 1 : 0;
+                    int dichVuKhachSan2 = clb_DichVuKhachSan.GetItemChecked(2) ? 1 : 0;
+                    int dichVuKhachSan3 = clb_DichVuKhachSan.GetItemChecked(3) ? 1 : 0;
+                    int dichVuKhachSan4 = clb_DichVuKhachSan.GetItemChecked(4) ? 1 : 0;
+
+                    int tienNghiCongCong0 = clb_TienNghiCongCong.GetItemChecked(0) ? 1 : 0;
+                    int tienNghiCongCong1 = clb_TienNghiCongCong.GetItemChecked(1) ? 1 : 0;
+                    int tienNghiCongCong2 = clb_TienNghiCongCong.GetItemChecked(2) ? 1 : 0;
+
+                    int amThuc0 = clb_AmThuc.GetItemChecked(0) ? 1 : 0;
+                    int amThuc1 = clb_AmThuc.GetItemChecked(1) ? 1 : 0;
+                    int amThuc2 = clb_AmThuc.GetItemChecked(2) ? 1 : 0;
+
+
                     Modify modify = new Modify();
                     TienNghi tienNghi = new TienNghi(
                         int.Parse(txt_MaKhachSan.Text),
@@ -70,6 +91,146 @@ namespace DuLich
                     else
                     {
                         MessageBox.Show("Không tồn tại mã khách sạn này");
+                    }
+                    string query1 = "Select * from QL_TN where MAKS = '" + int.Parse(txt_MaKhachSan.Text) + "' ";
+                    QL_TN_DAO qL_TN_DAO = new QL_TN_DAO();
+                    List<QL_TN> qL_TNs = modify.QL_TN(query1);
+                    foreach(QL_TN tn  in qL_TNs) 
+                    {
+                        if (tienNghi.MAYLANH == 0 && tn.MATN == 1)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.NHAHANG == 0 && tn.MATN == 2)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.HOBOI == 0 && tn.MATN == 3)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.LETAN24H == 0 && tn.MATN == 4)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.WIFI == 0 && tn.MATN == 5)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.QUAYLETAN == 0 && tn.MATN == 6)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.DICHVUTHUDOINGOAITE == 0 && tn.MATN == 7)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.DICHVUTIECCUOI == 0 && tn.MATN == 8)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.DICHVUHOTRODATTOUR == 0 && tn.MATN == 9)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.NHANVIENDANGONNGU == 0 && tn.MATN == 10)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.BAIDAUXE == 0 && tn.MATN == 11)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.TIEMCAFE == 0 && tn.MATN == 12)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.THANGMAY == 0 && tn.MATN == 13)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.QUAYBAR == 0 && tn.MATN == 14)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.BUASANG == 0 && tn.MATN == 15)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                        if (tienNghi.QUAYBARBENHOBOI == 0 && tn.MATN == 16)
+                        {
+                            qL_TN_DAO.Delete(tn, "QL_TN");
+                        }
+                    }
+                    QL_TN_DAO ql_TN_DAO = new QL_TN_DAO();
+                    List<QL_TN> QL_TNs = new List<QL_TN>();
+                    if (tienNghiChinh0 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 1));
+                    }
+                    if (tienNghiChinh1 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 2));
+                    }
+                    if (tienNghiChinh2 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 3));
+                    }
+                    if (tienNghiChinh3 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 4));
+                    }
+                    if (tienNghiChinh4 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 5));
+                    }
+                    if (dichVuKhachSan0 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 6));
+                    }
+                    if (dichVuKhachSan1 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 7));
+                    }
+                    if (dichVuKhachSan2 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 8));
+                    }
+                    if (dichVuKhachSan3 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 9));
+                    }
+                    if (dichVuKhachSan4 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 10));
+                    }
+                    if (tienNghiCongCong0 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 11));
+                    }
+                    if (tienNghiCongCong1 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 12));
+                    }
+                    if (tienNghiCongCong2 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 13));
+                    }
+                    if (amThuc0 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 14));
+                    }
+                    if (amThuc1 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 15));
+                    }
+                    if (amThuc2 == 1)
+                    {
+                        QL_TNs.Add(new QL_TN(int.Parse(txt_MaKhachSan.Text), 16));
+                    }
+                    foreach (var i in QL_TNs)
+                    {
+                        ql_TN_DAO.Add(i, "QL_TN");
                     }
                 }
             }

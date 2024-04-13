@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,5 +69,25 @@ namespace DuLich
             return "Không chứa chuỗi 'hinhanh' hoặc 'Image'.";
 
         }
+
+        public Room Get(int maphong)
+        {
+            string sqlString = string.Format("SELECT * FROM PHONG WHERE MAPHONG = {0}", maphong);
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(sqlString, conn);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
+            int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
+            double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
+            string tenphong = reader.GetString(reader.GetOrdinal("TENPHONG"));
+            string anh = reader.GetString(reader.GetOrdinal("ANH"));
+            string maks = reader.GetString(reader.GetOrdinal("MAKS"));
+            Room phong = new Room(sokhach, sogiuong, gia, tenphong, maphong, anh);
+            return phong;
+        }
+        
+
     }
 }

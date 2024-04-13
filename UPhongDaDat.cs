@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DuLich
 {
@@ -32,7 +33,6 @@ namespace DuLich
         private void UPhongDaDat_Load(object sender, EventArgs e)
         {
             this.Size = new Size(793, 199);
-            this.Location = new Point(0, viTri);
             pB_anhPhong.Size = new Size(207, 171);
             pB_anhPhong.Location = new Point(3, 14);
             lbl_TenKhachSan.Size = new Size(326, 28);
@@ -65,6 +65,26 @@ namespace DuLich
         private void btn_huyDat_Click(object sender, EventArgs e)
         {
             btn_huyDat.Text = "Đang chờ xử lý";
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            try
+            {
+                conn.Open();
+                string sqlString = "INSERT INTO HUYPHONG (MADAT,TRANGTHAI) VALUES (@madat,@trangthai)";
+                using (SqlCommand cmd = new SqlCommand(sqlString, conn))
+                {
+                    cmd.Parameters.AddWithValue("@madat", pd.maDat);
+                    cmd.Parameters.AddWithValue("@trangthai", "Chưa đặt");
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

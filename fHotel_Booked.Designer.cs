@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label1 = new Label();
+            flb_PhongDaDat = new FlowLayoutPanel();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.AutoScroll = true;
-            panel1.Location = new Point(5, 59);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(896, 525);
-            panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -52,13 +43,20 @@
             label1.TabIndex = 2;
             label1.Text = "Khách sạn đã đặt";
             // 
+            // flb_PhongDaDat
+            // 
+            flb_PhongDaDat.Location = new Point(5, 59);
+            flb_PhongDaDat.Name = "flb_PhongDaDat";
+            flb_PhongDaDat.Size = new Size(896, 525);
+            flb_PhongDaDat.TabIndex = 3;
+            // 
             // fHotel_booked
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(flb_PhongDaDat);
             Controls.Add(label1);
-            Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "fHotel_booked";
             Text = "Hotel_booked";
@@ -68,8 +66,7 @@
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label1;
+        private FlowLayoutPanel flb_PhongDaDat;
     }
 }

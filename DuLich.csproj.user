@@ -76,6 +76,9 @@
     <Compile Update="UCComment.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCHuyphongCKS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>

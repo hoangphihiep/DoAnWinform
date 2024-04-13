@@ -22,10 +22,11 @@ namespace DuLich
         {
             InitializeComponent();
         }
+        public int maks;
 
         private void fThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-            uPhong2.Size = new Size(1224, 801);
+            uPhong3.Size = new Size(1221, 620);
             uThongtin2.tentk = tentk;
             uThongtin2.mk = mk;
             uThongTinKhachSan1.SetTenTK(tentk);
@@ -76,8 +77,8 @@ namespace DuLich
                     }
                 }
             }
-            uPhong2.Ktr(index, maPhongList);
-            uPhong2.HienThi(index, maPhongList);
+            //uPhong2.Ktr(index, maPhongList);
+            //uPhong2.HienThi(index, maPhongList);
         }
         public void ShowQLHuy()
         {
@@ -87,6 +88,9 @@ namespace DuLich
         public void HideQLHuy()
         {
             panel6.Visible = false;
+            uPhong3.Ktr(index, maPhongList);
+            uPhong3.HienThi(index, maPhongList);
+            btn_QuanLyHuy.Visible = false;
         }
         public void ShowThongTinCanBan()
         {
@@ -151,50 +155,51 @@ namespace DuLich
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
             uThongtin2.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_MatKhau_Click(object sender, EventArgs e)
         {
             uMatKhau1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_ThongTingKS_Click(object sender, EventArgs e)
         {
             uThongTinKhachSan1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_ViTri_Click(object sender, EventArgs e)
         {
             uViTri1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_ChiTietPhong_Click(object sender, EventArgs e)
         {
             uPhong2.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
+            uPhong3.BringToFront();
         }
 
         private void btn_Anh_Click(object sender, EventArgs e)
         {
             uAnh2.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_HoSo_Click(object sender, EventArgs e)
         {
             uHoSo1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
         int dem = 0;
         private void btn_ThongTinKhachSan_Click(object sender, EventArgs e)
@@ -233,24 +238,62 @@ namespace DuLich
         private void btn_TienNghi_Click(object sender, EventArgs e)
         {
             uTienNghi1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_UDai_Click(object sender, EventArgs e)
         {
             uUuDai1.BringToFront();
-            panel6.Visible = false;
-            panel6.SendToBack();
+            flP_QuanLyHuy.Visible = false;
+            flP_QuanLyHuy.SendToBack();
         }
 
         private void btn_QuanLyHuy_Click(object sender, EventArgs e)
         {
-            panel6.BringToFront();
-            panel6.Visible = true;
+            flP_QuanLyHuy.BringToFront();
+            flP_QuanLyHuy.Visible = true;
+            List<DatPhong> listPhongDat = new List<DatPhong>();
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string query1 = "SELECT DATPHONG.MADAT as madatphong, KHACHHANG.MAKH as makh,PHONG.MAPHONG as maphong,ThongTinCanBan.TENKH as tenKS, PHONG.TENPHONG as tenphong, DATPHONG.CHECKIN as ngayDen, DATPHONG.CHECKOUT as ngayDi, KHACHHANG.TENKH as tenKH, DATPHONG.SOLUONG as soPhong, DATPHONG.THANHTOAN as tienTT, PHONG.ANH as anhPhong FROM DATPHONG, HUYPHONG, KHACHSAN_THUOC_TAIKHOAN, ThongTinCanBan,PHONG,KHACHHANG WHERE ThongTinCanBan.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MADAT = HUYPHONG.MADAT AND DATPHONG.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MAPHONG = PHONG.MAPHONG AND DATPHONG.MAKH = KHACHHANG.MAKH AND KHACHSAN_THUOC_TAIKHOAN.TaiKhoan = @tk";
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    command.Parameters.AddWithValue("@tk", tentk);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int maDatPhong = reader.GetInt32(reader.GetOrdinal("madatphong"));
+                            int makhachhang = reader.GetInt32(reader.GetOrdinal("makh"));
+                            int maPhong = reader.GetInt32(reader.GetOrdinal("maphong"));
+                            string TENKS = reader.GetString(reader.GetOrdinal("tenKS"));
+                            MessageBox.Show(TENKS.ToString());
+                            string TENPHONG = reader.GetString(reader.GetOrdinal("tenphong"));
+                            DateTime ngayDen = reader.GetDateTime("ngayDen");
+                            DateTime ngayDi = reader.GetDateTime("ngayDi");
+                            string tenKH = reader.GetString(reader.GetOrdinal("tenKH"));
+                            int soLuongPhong = reader.GetInt32(reader.GetOrdinal("soPhong"));
+                            double tongThanhToan = reader.GetDouble(reader.GetOrdinal("tienTT"));
+                            MessageBox.Show(tongThanhToan.ToString());
+                            string anhPhong = reader.GetString(reader.GetOrdinal("anhPhong"));
+                            DatPhong dp = new DatPhong(maDatPhong, makhachhang, maPhong, TENKS, TENPHONG, tenKH, ngayDen, ngayDi, soLuongPhong, tongThanhToan, anhPhong);
+                            //listPhongDat.Add(dp);z
+                            UCHuyphongCKS uc = new UCHuyphongCKS(dp);
+                            flP_QuanLyHuy.Controls.Add(uc);
+                        }
+                    }
+                }
+            }
         }
 
         private void uChiTietPhongo1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flP_QuanLyHuy_Paint(object sender, PaintEventArgs e)
         {
 
         }

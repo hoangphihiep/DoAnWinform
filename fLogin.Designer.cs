@@ -82,8 +82,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(105, 116);
+            pictureBox2.Location = new Point(111, 131);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(177, 62);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -145,7 +144,7 @@
             btn_DangNhap.BackColor = Color.Azure;
             btn_DangNhap.FlatStyle = FlatStyle.Popup;
             btn_DangNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_DangNhap.Location = new Point(46, 332);
+            btn_DangNhap.Location = new Point(46, 333);
             btn_DangNhap.Name = "btn_DangNhap";
             btn_DangNhap.Size = new Size(319, 52);
             btn_DangNhap.TabIndex = 3;

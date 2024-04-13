@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -49,6 +50,30 @@ namespace DuLich
                 conn.Close();
             }
         }
+
+        public List<QL_HinhAnh> Get(int maks)
+        {
+            List < QL_HinhAnh > list= new List<QL_HinhAnh>();
+            string sqlString = string.Format("SELECT * FROM QL_ANH WHERE MAKS='{0}'", maks.ToString());
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(sqlString, conn);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string tenanh;
+                string address;
+                int maanh;
+                tenanh = reader.GetString(reader.GetOrdinal("TENANH"));
+                address = reader.GetString(reader.GetOrdinal("ADDRESS"));
+                maanh = reader.GetInt32(reader.GetOrdinal("MAANH"));
+                QL_HinhAnh ql = new QL_HinhAnh(maks,tenanh, address,maanh);
+                list.Add(ql);
+            }
+            return list;
+        }
+
         static string ExtractRelativePath(string fullPath)
         {
             if (fullPath.Contains("hinhanh"))

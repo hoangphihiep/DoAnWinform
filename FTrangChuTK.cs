@@ -762,6 +762,7 @@ namespace DoAnDuLich
             fThongTinTaiKhoan t = new fThongTinTaiKhoan();
             t.tentk = tentk;
             t.mk = mk;
+            MessageBox.Show(tentk);
             if (kiemtradangkiKS == 1)
             {
                 this.Hide();

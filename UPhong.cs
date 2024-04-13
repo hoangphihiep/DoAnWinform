@@ -350,7 +350,7 @@ namespace DuLich
             //ptb_AnhPhong.Location = new Point(707, 117);
             btn_ThemPhong.Size = new Size(94, 29);
             btn_ThemPhong.Location = new Point(825, 569);
-            //btn_ThemPhong.Font = new System.Drawing.FontFamily("Segoe UI", 9pt, FontStyle.Regular);
+            btn_ThemPhong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)));
             ptb_AnhPhong.Size = new Size(391, 331);
             ptb_AnhPhong.Location = new Point(676, 172);
         }
@@ -394,7 +394,6 @@ namespace DuLich
 
         private void btn_ThemPhong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(MaPhong.ToString());
             Room_DAO room_DAO = new Room_DAO();
             Room room = new Room(int.Parse(txt_SucChua.Text), int.Parse(txt_SoGiuong.Text), int.Parse(txt_GiaToiThieu.Text), txt_TenPhong.Text, MaPhong, AnhPhong);
             room_DAO.Add(room, "PHONG");

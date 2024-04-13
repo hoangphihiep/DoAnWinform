@@ -8,6 +8,7 @@ namespace DuLich
 {
     public class KHACHSAN
     {
+        int maks;
         public string TENKS { get; set; }
         public string TINH { get; set;}
         public string THANHPHO { get; set; }
@@ -37,6 +38,42 @@ namespace DuLich
             MAKS = maKS;
             this.ngayDen = ngayDen;
             this.ngayDi = ngayDi;
+        }
+
+        public KHACHSAN(int maks, string tenKS, string tinh, string thanhPho, int sao, double gia, string diaChi, int soLuong, int TP, int SanBay, string Anh, DateTime ngayDen, DateTime ngayDi)
+        {
+            MAKS = maks;
+            TENKS = tenKS;
+            TINH = tinh;
+            THANHPHO = thanhPho;
+            SAO = sao;
+            GIA = gia;
+            DIACHI = diaChi;
+            soLuongKhach = soLuong;
+            khoangCachTP = TP;
+            khoangCachSanBay = SanBay;
+            diaChiAnh = Anh;
+            this.ngayDen = ngayDen;
+            this.ngayDi = ngayDi;
+        }
+
+        public KHACHSAN(int maks, string tenKS, string tinh, string thanhPho, int sao, double gia, string diaChi)
+        {
+
+            TENKS = tenKS;
+            TINH = tinh;
+            THANHPHO = thanhPho;
+            SAO = sao;
+            GIA = gia;
+            DIACHI = diaChi;
+            this.ngayDen = ngayDen;
+            this.ngayDi = ngayDi;
+        }
+
+        public int Maks
+        {
+            get { return maks; }
+            set { maks = value; }
         }
     }
 }

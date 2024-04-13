@@ -36,8 +36,8 @@ namespace DuLich
         private void label2_Click(object sender, EventArgs e)
         {
             fHotel_Details f = new fHotel_Details(ks);
-            f.CheckIn = checkin;
-            f.CheckOut = checkout;
+            f.CheckIn = ks.ngayDen;
+            f.CheckOut = ks.ngayDi;
             f.tenTaiKhoan = tenTaiKhoan;
             f.ShowDialog();
 
@@ -85,7 +85,6 @@ namespace DuLich
         private void UKhungKetQua_Load(object sender, EventArgs e)
         {
             this.Size = new Size(917, 137);
-            this.Location = new Point(35, viTri);
             lbl_TenKhachSan.Size = new Size(437, 38);
             lbl_TenKhachSan.Location = new Point(200, 10);
             pictureBox1.Size = new Size(185, 111);
