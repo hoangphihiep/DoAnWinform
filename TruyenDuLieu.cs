@@ -27,7 +27,8 @@ namespace DuLich
                 int maDat = reader.GetInt32(reader.GetOrdinal("MADAT"));
                 int soLuongPhong = reader.GetInt32(reader.GetOrdinal("SOLUONG"));
                 double soTienTong = reader.GetDouble(reader.GetOrdinal("THANHTOAN"));
-                DateTime ngayDen = reader.GetDateTime(reader.GetOrdinal("CHECKIN"));                
+                DateTime ngayDen = reader.GetDateTime(reader.GetOrdinal("CHECKIN"));
+                DateTime ngayDi = reader.GetDateTime(reader.GetOrdinal("CHECKOUT"));
                 string tenTinh = "";
                 string tenThanhPho = "";
                 string tenKhachSan = "";
@@ -77,7 +78,7 @@ namespace DuLich
                     conn1.Close();
                 }
                 i++;
-                PhongDaDat phongDD = new PhongDaDat(maDat, maks, maphong, tenPhong, tenKhachSan, tenTinh, tenThanhPho, diaChi, soLuongPhong, soTienTong, address, soKhach, ngayDen);
+                PhongDaDat phongDD = new PhongDaDat(maDat, maks, maphong, tenPhong, tenKhachSan, tenTinh, tenThanhPho, diaChi, soLuongPhong, soTienTong, address, soKhach, ngayDen, ngayDi);
                 listPhongDat.Add(phongDD);
             }
             conn.Close();

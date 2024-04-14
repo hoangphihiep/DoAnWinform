@@ -25,8 +25,9 @@ namespace DuLich
             lbl_soTien.Text = pd.tienThanhToan.ToString() + " VNĐ";
             lbl_soPhongDat.Text = pd.soLuongPhong.ToString() + " phòng, " + pd.soKhach.ToString() + " người";
             pB_anhPhong.Image = Image.FromFile(pd.anhPhong);
+            MessageBox.Show("ngay di: " + pd.ngayDi.ToString());
             lbl_thoiGianDen.Text = pd.ngayDen.ToString();
-            int thoiGian = Int32.Parse((DateTime.Now - pd.ngayDen).Days.ToString());
+            int thoiGian = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
             lbl_thoiGianConLai.Text = "Thời gian còn lại: " + thoiGian.ToString() + " ngày";
         }
 
