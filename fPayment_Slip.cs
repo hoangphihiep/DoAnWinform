@@ -36,7 +36,6 @@ namespace DuLich
             this.datphong = datphong;
             InitializeComponent();
         }
-
         private void fPayment_Slip_Load(object sender, EventArgs e)
         {
             lblHotelName.Text = datphong.KS.TENKS;
@@ -54,7 +53,6 @@ namespace DuLich
             lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
            
         }
-
         public void SetSDT(string Sdt)
         {
             sdt = Sdt;
@@ -67,7 +65,6 @@ namespace DuLich
             // Gọi lại phương thức load dữ liệu
             //fPayment_Slip_Load(this, EventArgs.Empty);
         }
-
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Payment_Information f = new Payment_Information(datphong);
@@ -77,18 +74,14 @@ namespace DuLich
             f.ShowDialog();
             this.Close();
         }
-
         private void btn_BookNow_Click(object sender, EventArgs e)
         {
             datphong.TongThanhToan = double.Parse(lblPrice.Text);
             DatPhongDAO datPhongDAO = new DatPhongDAO();
             datPhongDAO.TenTaiKhoan = datphong.KhachHang.TENTAIKHOAN;
-            datPhongDAO.AddDatPhong(datphong);
-            MessageBox.Show(datphong.KhachHang.TENTAIKHOAN);
-            
+            datPhongDAO.AddDatPhong(datphong);      
             this.Close();
         }
-
         public DatPhong DP
         {
             get { return datphong; }

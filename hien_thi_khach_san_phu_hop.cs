@@ -136,6 +136,7 @@ namespace DuLich
             fLogin f = new fLogin();
             t = 1;
             KT_DangNhap1++;
+            f.diadiem = diadiem;
             f.KiemTra(t);
             this.Hide();
             f.ShowDialog();
@@ -152,7 +153,7 @@ namespace DuLich
         public string diadiem;
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(ngayDen.ToString());
+            MessageBox.Show(tentk);
             btn_MyTaiKhoan.Text = tenKhachHang;
             btn_DangNhap.FlatStyle = FlatStyle.Flat;
             btn_DangNhap.FlatAppearance.BorderSize = 0;
@@ -168,7 +169,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 uc.ShowSoKhach();
                 flb_PhuHopNhat.Controls.Add(uc);
             }
@@ -177,7 +178,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 flb_GiaThapNhat.Controls.Add(uc);
             }
             listKS.Clear();
@@ -185,7 +186,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 uc.ShowdanhGia();
                 flb_danhGiaCao.Controls.Add(uc);
             }
@@ -272,7 +273,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 uc.ShowSoKhach();
                 flb_PhuHopNhat.Controls.Add(uc);
             }
@@ -293,7 +294,7 @@ namespace DuLich
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
-                    uc.tenTaiKhoan = tenKhachHang;
+                    uc.tenTaiKhoan = tentk;
                     uc.ShowSoKhach();
                     flb_PhuHopNhat.Controls.Add(uc);
                 }
@@ -302,7 +303,7 @@ namespace DuLich
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
-                    uc.tenTaiKhoan = tenKhachHang;
+                    uc.tenTaiKhoan = tentk;
                     flb_GiaThapNhat.Controls.Add(uc);
                 }
                 listKS.Clear();
@@ -310,7 +311,7 @@ namespace DuLich
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
-                    uc.tenTaiKhoan = tenKhachHang;
+                    uc.tenTaiKhoan = tentk;
                     uc.ShowdanhGia();
                     flb_danhGiaCao.Controls.Add(uc);
                 }
@@ -383,7 +384,7 @@ namespace DuLich
                         string anh = reader1.GetString(reader1.GetOrdinal("AnhBia"));
                         KHACHSAN ks = new KHACHSAN(maks, tenKhachSan, tenTinh, tenThanhPho, danhGia, giaNhoNhat, diaChi, soKhachMin, khoangCachTP, khoangCacchSanBay, anh, ngayDen, ngayDi);
                         UKhungKetQua uc = new UKhungKetQua(ks);
-                        uc.tenTaiKhoan = tenKhachHang;
+                        uc.tenTaiKhoan = tentk;
                         uc.ShowSoKhach();
                         flb_PhuHopNhat.Controls.Add(uc);
                     }
@@ -519,7 +520,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 uc.ShowKhoangCachTP();
                 flp_KhoangCach.Controls.Add(uc);
             }
@@ -543,7 +544,7 @@ namespace DuLich
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
-                uc.tenTaiKhoan = tenKhachHang;
+                uc.tenTaiKhoan = tentk;
                 uc.ShowKhoangCachSB();
                 flp_KhoangCach.Controls.Add(uc);
             }

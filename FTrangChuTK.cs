@@ -614,12 +614,12 @@ namespace DoAnDuLich
                 k.HideDangNhap();
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
-                k.diaDiem2 = txt_DiaDiem.Text;
                 int number = int.Parse(soLuongNguoiLon.Value.ToString());
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
-                k.tenKhachHang = tentk;
+                k.tenKhachHang = rename;
+                k.tentk = tentk;
                 k.ngayDen = date_ngayDen.Value;
                 k.ngayDi = date_NgayDi.Value;
                 this.Hide();
@@ -634,12 +634,12 @@ namespace DoAnDuLich
                 k.HideDangKyKS();
                 k.HidePanle2();
                 k.diadiem = txt_DiaDiem.Text;
-                k.diaDiem2 = txt_DiaDiem.Text;
                 int number = int.Parse(soLuongNguoiLon.Value.ToString());
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
-                k.tenKhachHang = tentk;
+                k.tenKhachHang = rename;
+                k.tentk = tentk;
                 k.ngayDen = date_ngayDen.Value;
                 k.ngayDi = date_NgayDi.Value;
                 this.Hide();
@@ -649,12 +649,12 @@ namespace DoAnDuLich
             else
             {
                 k.diadiem = txt_DiaDiem.Text;
-                k.diaDiem2 = txt_DiaDiem.Text;
                 int number = int.Parse(soLuongNguoiLon.Value.ToString());
                 int number1 = int.Parse(soLuongTreEm.Value.ToString());
                 k.soLuongNguoiLon = number;
                 k.soLuongTreEm = number1;
-                k.tenKhachHang = tentk;
+                k.tenKhachHang =  rename;
+                k.tentk = tentk;
                 k.ngayDen = date_ngayDen.Value;
                 k.ngayDi = date_NgayDi.Value;
                 this.Hide();

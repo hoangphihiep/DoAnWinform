@@ -45,6 +45,7 @@
             // 
             // flb_PhongDaDat
             // 
+            flb_PhongDaDat.AutoScroll = true;
             flb_PhongDaDat.Location = new Point(5, 59);
             flb_PhongDaDat.Name = "flb_PhongDaDat";
             flb_PhongDaDat.Size = new Size(896, 525);

@@ -77,7 +77,6 @@ namespace DuLich
             string GiaChuyenDoi = phong.GIA.ToString();
             double giaTien;
             double.TryParse(GiaChuyenDoi, out giaTien);
-
             pictureBox1.Image = tenAnh;
             label15.Text = ks.TENKS;
             label17.Text = phong.SOKHACH.ToString();

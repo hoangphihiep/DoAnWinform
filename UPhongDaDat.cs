@@ -25,12 +25,15 @@ namespace DuLich
             lbl_soTien.Text = pd.tienThanhToan.ToString() + " VNĐ";
             lbl_soPhongDat.Text = pd.soLuongPhong.ToString() + " phòng, " + pd.soKhach.ToString() + " người";
             pB_anhPhong.Image = Image.FromFile(pd.anhPhong);
-            MessageBox.Show("ngay di: " + pd.ngayDi.ToString());
             lbl_thoiGianDen.Text = pd.ngayDen.ToString();
+            if (pd.ngayDen <= DateTime.Now)
+            {
+                pd.ngayDen = DateTime.Now;
+                int thoiGian1 = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
+            }    
             int thoiGian = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
             lbl_thoiGianConLai.Text = "Thời gian còn lại: " + thoiGian.ToString() + " ngày";
         }
-
         private void UPhongDaDat_Load(object sender, EventArgs e)
         {
             this.Size = new Size(793, 199);
@@ -57,12 +60,10 @@ namespace DuLich
             btn_huyDat.Size = new Size(134, 34);
             btn_huyDat.Location = new Point(648, 154);
         }
-
         private void lbl_TenKhachSan_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btn_huyDat_Click(object sender, EventArgs e)
         {
             btn_huyDat.Text = "Đang chờ xử lý";

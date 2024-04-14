@@ -24,6 +24,7 @@ namespace DuLich
         public Room phong;
         public DatPhong datphong;
         public KHACHSAN ks;
+        public string diadiem;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -143,6 +144,8 @@ namespace DuLich
                             k.KT_DangNhap1++;
                             k.mk = mk;
                             k.tentk = tk;
+                            k.tenKhachHang = name;
+                            k.diadiem = diadiem;
                             k.ShowMenuStrip();
                             k.HideDangNhap();
                             k.HideDangKy();
@@ -154,6 +157,7 @@ namespace DuLich
                         else if (y == 2)
                         {
                             Customer_Information k = new Customer_Information();
+                            k.TENTAIKHOAN = tk;
                             k.tk = tk;
                             k.mk = mk;
                             k.tenAnh = tenAnh;
@@ -167,6 +171,8 @@ namespace DuLich
                             k.phong = phong;
                             k.kh = kh;
                             k.datphong = datphong;
+                            k.checkin = NgayNhan;
+                            k.checkout = NgayTra;
                             k.HienThi();
                             this.Hide();
                             k.ShowDialog();
