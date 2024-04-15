@@ -40,6 +40,7 @@
             label24 = new Label();
             lbl_thoiGianDen = new Label();
             lbl_TenKhachSan = new Label();
+            btn_nhanXet = new Button();
             ((System.ComponentModel.ISupportInitialize)pB_anhPhong).BeginInit();
             SuspendLayout();
             // 
@@ -164,11 +165,24 @@
             lbl_TenKhachSan.Text = "Melia Vinpearl Nha Trang Empire";
             lbl_TenKhachSan.Click += lbl_TenKhachSan_Click;
             // 
+            // btn_nhanXet
+            // 
+            btn_nhanXet.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_nhanXet.Location = new Point(638, 143);
+            btn_nhanXet.Name = "btn_nhanXet";
+            btn_nhanXet.RightToLeft = RightToLeft.No;
+            btn_nhanXet.Size = new Size(134, 34);
+            btn_nhanXet.TabIndex = 20;
+            btn_nhanXet.Text = "Gửi nhận xét";
+            btn_nhanXet.UseVisualStyleBackColor = true;
+            btn_nhanXet.Visible = false;
+            // 
             // UPhongDaDat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
+            Controls.Add(btn_nhanXet);
             Controls.Add(lbl_tenPhong);
             Controls.Add(lbl_soPhongDat);
             Controls.Add(lbl_soTien);
@@ -203,5 +217,6 @@
         private Label label24;
         private Label lbl_thoiGianDen;
         private Label lbl_TenKhachSan;
+        private Button btn_nhanXet;
     }
 }

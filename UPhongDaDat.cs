@@ -30,8 +30,17 @@ namespace DuLich
             {
                 pd.ngayDen = DateTime.Now;
                 int thoiGian1 = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
-            }    
+            }
             int thoiGian = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
+            if (thoiGian < 0)
+            {
+                thoiGian = 0;
+            }
+            if (thoiGian == 0)
+            {
+                btn_huyDat.Visible = false;
+                btn_nhanXet.Visible = true;
+            }
             lbl_thoiGianConLai.Text = "Thời gian còn lại: " + thoiGian.ToString() + " ngày";
         }
         private void UPhongDaDat_Load(object sender, EventArgs e)
