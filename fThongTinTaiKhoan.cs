@@ -257,7 +257,7 @@ namespace DuLich
             using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
             {
                 connection.Open();
-                string query1 = "SELECT DATPHONG.MADAT as madatphong, KHACHHANG.MAKH as makh,PHONG.MAPHONG as maphong,ThongTinCanBan.TENKH as tenKS, PHONG.TENPHONG as tenphong, DATPHONG.CHECKIN as ngayDen, DATPHONG.CHECKOUT as ngayDi, KHACHHANG.TENKH as tenKH, DATPHONG.SOLUONG as soPhong, DATPHONG.THANHTOAN as tienTT, PHONG.ANH as anhPhong FROM DATPHONG, HUYPHONG, KHACHSAN_THUOC_TAIKHOAN, ThongTinCanBan,PHONG,KHACHHANG WHERE ThongTinCanBan.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MADAT = HUYPHONG.MADAT AND DATPHONG.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MAPHONG = PHONG.MAPHONG AND DATPHONG.MAKH = KHACHHANG.MAKH AND KHACHSAN_THUOC_TAIKHOAN.TaiKhoan = @tk";
+                string query1 = "SELECT PHONG.GIA as giaPhong,PHONG.SOGIUONG as soGiuong,DATPHONG.SOLUONG as soLK,ViTri.DIACHI as diaChiKS,ThongTinCanBan.GIA as giaKS,ThongTinCanBan.SAO as saoKS,ViTri.TENTHANHPHO as thanhphoks,ViTri.TINH as tinhks,ThongTinCanBan.MAKS as maks, KHACHHANG.DIACHI as DiaChiKH,KHACHHANG.GMAIL as gmail,KHACHHANG.GIOITINH as gTinh,KHACHHANG.BDATE as ngaySinh,KHACHHANG.SDT as soDT, DATPHONG.MADAT as madatphong, KHACHHANG.MAKH as makh,PHONG.MAPHONG as maphong,ThongTinCanBan.TENKH as tenKS, PHONG.TENPHONG as tenphong, DATPHONG.CHECKIN as ngayDen, DATPHONG.CHECKOUT as ngayDi, KHACHHANG.TENKH as tenKH, DATPHONG.SOLUONG as soPhong, DATPHONG.THANHTOAN as tienTT, PHONG.ANH as anhPhong FROM DATPHONG, HUYPHONG, KHACHSAN_THUOC_TAIKHOAN, ThongTinCanBan,PHONG,KHACHHANG,ViTri WHERE ThongTinCanBan.MAKS = ViTri.MAKS AND ThongTinCanBan.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MADAT = HUYPHONG.MADAT AND DATPHONG.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MAPHONG = PHONG.MAPHONG AND DATPHONG.MAKH = KHACHHANG.MAKH AND KHACHSAN_THUOC_TAIKHOAN.TaiKhoan = @tk";
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
                     command.Parameters.AddWithValue("@tk", tentk);
@@ -265,21 +265,42 @@ namespace DuLich
                     {
                         while (reader.Read())
                         {
-                            int maDatPhong = reader.GetInt32(reader.GetOrdinal("madatphong"));
+                            //khách hàng
                             int makhachhang = reader.GetInt32(reader.GetOrdinal("makh"));
-                            int maPhong = reader.GetInt32(reader.GetOrdinal("maphong"));
-                            string TENKS = reader.GetString(reader.GetOrdinal("tenKS"));
-                            MessageBox.Show(TENKS.ToString());
-                            string TENPHONG = reader.GetString(reader.GetOrdinal("tenphong"));
-                            DateTime ngayDen = reader.GetDateTime("ngayDen");
-                            DateTime ngayDi = reader.GetDateTime("ngayDi");
                             string tenKH = reader.GetString(reader.GetOrdinal("tenKH"));
+                            int soDienThoaiInt = reader.GetInt32(reader.GetOrdinal("soDT"));
+                            string soDienThoai = soDienThoaiInt.ToString();
+                            string gioiTinh = reader.GetString(reader.GetOrdinal("gTinh"));
+                            DateTime ngaySinh = reader.GetDateTime("ngaySinh");
+                            string gmail = reader.GetString(reader.GetOrdinal("gmail"));
+                            string diaChiKH = reader.GetString(reader.GetOrdinal("DiaChiKH"));
+                            //khách sạn
+                            int makhachsan = reader.GetInt32(reader.GetOrdinal("maks"));
+                            string TENKS = reader.GetString(reader.GetOrdinal("tenKS"));
+                            string tinhKS = reader.GetString(reader.GetOrdinal("tinhks"));
+                            string thanhphoks = reader.GetString(reader.GetOrdinal("thanhphoks"));
+                            int sao = reader.GetInt32(reader.GetOrdinal("saoKS"));
+                            double giaKS = reader.GetDouble(reader.GetOrdinal("giaKS"));
+                            string diaChiKS = reader.GetString(reader.GetOrdinal("diaChiKS"));
+                            //phong
+                            int maPhong = reader.GetInt32(reader.GetOrdinal("maphong"));
+                            string TENPHONG = reader.GetString(reader.GetOrdinal("tenphong"));
+                            MessageBox.Show(TENPHONG);
                             int soLuongPhong = reader.GetInt32(reader.GetOrdinal("soPhong"));
-                            double tongThanhToan = reader.GetDouble(reader.GetOrdinal("tienTT"));
-                            MessageBox.Show(tongThanhToan.ToString());
                             string anhPhong = reader.GetString(reader.GetOrdinal("anhPhong"));
-                            DatPhong dp = new DatPhong(maDatPhong, makhachhang, maPhong, TENKS, TENPHONG, tenKH, ngayDen, ngayDi, soLuongPhong, tongThanhToan, anhPhong);
-                            //listPhongDat.Add(dp);z
+                            int soLuongKhach = reader.GetInt32(reader.GetOrdinal("soLK"));
+                            int soGiuong = reader.GetInt32(reader.GetOrdinal("soGiuong"));
+                            double giaPhong = reader.GetDouble(reader.GetOrdinal("giaPhong"));
+                            //đặt phòng
+                            int maDatPhong = reader.GetInt32(reader.GetOrdinal("madatphong")); 
+                            DateTime ngayDen = reader.GetDateTime("ngayDen");
+                            DateTime ngayDi = reader.GetDateTime("ngayDi");                                                 
+                            double tongThanhToan = reader.GetDouble(reader.GetOrdinal("tienTT"));
+                            KhachHang kh = new KhachHang(makhachhang,tenKH,soDienThoai,gioiTinh,ngaySinh,gmail,diaChiKH);
+                            KHACHSAN ks = new KHACHSAN(makhachsan,TENKS,tinhKS, thanhphoks,sao,giaKS,diaChiKS);
+                            Room phong = new Room(soLuongKhach, soGiuong, giaPhong,TENPHONG, maPhong, anhPhong);
+                            
+                            DatPhong dp = new DatPhong(maDatPhong, kh, ks, phong, ngayDen, ngayDi, soLuongPhong, tongThanhToan, "Đã thanh toán", "111111");
                             UCHuyphongCKS uc = new UCHuyphongCKS(dp);
                             flP_QuanLyHuy.Controls.Add(uc);
                         }
