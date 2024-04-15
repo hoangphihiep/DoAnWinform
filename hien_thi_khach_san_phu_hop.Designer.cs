@@ -39,16 +39,14 @@
             btn_DangNhap = new Button();
             btn_DangKyKS = new Button();
             panel3 = new Panel();
-            label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             btn_TimKiem = new Button();
-            nUD_treEm = new NumericUpDown();
             nUD_nguoiLon = new NumericUpDown();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            date_ngayDi = new DateTimePicker();
+            date_ngayDen = new DateTimePicker();
             lb_TimKiem = new TextBox();
             tabControl1 = new TabControl();
             tab_PhuHopNhat = new TabPage();
@@ -56,11 +54,12 @@
             tab_GiaThapNhat = new TabPage();
             flb_GiaThapNhat = new FlowLayoutPanel();
             tabKhoangCach = new TabPage();
-            flp_KhoangCach = new FlowLayoutPanel();
             panel_KhoangCach = new Panel();
             btn_SanBay = new Button();
             btn_ThanhPho = new Button();
+            flp_KhoangCach = new FlowLayoutPanel();
             tab_DanhGiaCao = new TabPage();
+            flb_danhGiaCao = new FlowLayoutPanel();
             trackBar1 = new TrackBar();
             label1 = new Label();
             lbl_Min = new Label();
@@ -80,10 +79,8 @@
             label11 = new Label();
             label2 = new Label();
             panel5 = new Panel();
-            flb_danhGiaCao = new FlowLayoutPanel();
             panel_menu.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nUD_treEm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).BeginInit();
             tabControl1.SuspendLayout();
             tab_PhuHopNhat.SuspendLayout();
@@ -214,32 +211,19 @@
             // panel3
             // 
             panel3.BackColor = Color.Navy;
-            panel3.Controls.Add(label8);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(btn_TimKiem);
-            panel3.Controls.Add(nUD_treEm);
             panel3.Controls.Add(nUD_nguoiLon);
-            panel3.Controls.Add(dateTimePicker1);
-            panel3.Controls.Add(dateTimePicker2);
+            panel3.Controls.Add(date_ngayDi);
+            panel3.Controls.Add(date_ngayDen);
             panel3.Controls.Add(lb_TimKiem);
             panel3.Location = new Point(-1, 72);
             panel3.Name = "panel3";
             panel3.Size = new Size(1318, 90);
             panel3.TabIndex = 17;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(981, 7);
-            label8.Name = "label8";
-            label8.Size = new Size(147, 25);
-            label8.TabIndex = 31;
-            label8.Text = "Số lượng trẻ em";
             // 
             // label7
             // 
@@ -298,33 +282,26 @@
             btn_TimKiem.UseVisualStyleBackColor = false;
             btn_TimKiem.Click += btn_TimKiem_Click_1;
             // 
-            // nUD_treEm
-            // 
-            nUD_treEm.Location = new Point(981, 42);
-            nUD_treEm.Name = "nUD_treEm";
-            nUD_treEm.Size = new Size(175, 27);
-            nUD_treEm.TabIndex = 26;
-            // 
             // nUD_nguoiLon
             // 
             nUD_nguoiLon.Location = new Point(779, 42);
             nUD_nguoiLon.Name = "nUD_nguoiLon";
-            nUD_nguoiLon.Size = new Size(175, 27);
+            nUD_nguoiLon.Size = new Size(364, 27);
             nUD_nguoiLon.TabIndex = 25;
             // 
-            // dateTimePicker1
+            // date_ngayDi
             // 
-            dateTimePicker1.Location = new Point(502, 42);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 18;
+            date_ngayDi.Location = new Point(502, 42);
+            date_ngayDi.Name = "date_ngayDi";
+            date_ngayDi.Size = new Size(250, 27);
+            date_ngayDi.TabIndex = 18;
             // 
-            // dateTimePicker2
+            // date_ngayDen
             // 
-            dateTimePicker2.Location = new Point(225, 44);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 12;
+            date_ngayDen.Location = new Point(225, 44);
+            date_ngayDen.Name = "date_ngayDen";
+            date_ngayDen.Size = new Size(250, 27);
+            date_ngayDen.TabIndex = 12;
             // 
             // lb_TimKiem
             // 
@@ -406,14 +383,6 @@
             tabKhoangCach.UseVisualStyleBackColor = true;
             tabKhoangCach.Move += tabKhoangCach_Move;
             // 
-            // flp_KhoangCach
-            // 
-            flp_KhoangCach.AutoScroll = true;
-            flp_KhoangCach.Location = new Point(0, 2);
-            flp_KhoangCach.Name = "flp_KhoangCach";
-            flp_KhoangCach.Size = new Size(990, 476);
-            flp_KhoangCach.TabIndex = 3;
-            // 
             // panel_KhoangCach
             // 
             panel_KhoangCach.Controls.Add(btn_SanBay);
@@ -446,6 +415,14 @@
             btn_ThanhPho.UseVisualStyleBackColor = true;
             btn_ThanhPho.Click += btn_ThanhPho_Click;
             // 
+            // flp_KhoangCach
+            // 
+            flp_KhoangCach.AutoScroll = true;
+            flp_KhoangCach.Location = new Point(0, 2);
+            flp_KhoangCach.Name = "flp_KhoangCach";
+            flp_KhoangCach.Size = new Size(990, 476);
+            flp_KhoangCach.TabIndex = 3;
+            // 
             // tab_DanhGiaCao
             // 
             tab_DanhGiaCao.AutoScroll = true;
@@ -456,6 +433,13 @@
             tab_DanhGiaCao.TabIndex = 3;
             tab_DanhGiaCao.Text = "Được đánh giá cao";
             tab_DanhGiaCao.UseVisualStyleBackColor = true;
+            // 
+            // flb_danhGiaCao
+            // 
+            flb_danhGiaCao.Location = new Point(0, 0);
+            flb_danhGiaCao.Name = "flb_danhGiaCao";
+            flb_danhGiaCao.Size = new Size(990, 479);
+            flb_danhGiaCao.TabIndex = 1;
             // 
             // trackBar1
             // 
@@ -646,13 +630,6 @@
             panel5.Size = new Size(280, 198);
             panel5.TabIndex = 39;
             // 
-            // flb_danhGiaCao
-            // 
-            flb_danhGiaCao.Location = new Point(0, 0);
-            flb_danhGiaCao.Name = "flb_danhGiaCao";
-            flb_danhGiaCao.Size = new Size(990, 479);
-            flb_danhGiaCao.TabIndex = 1;
-            // 
             // hien_thi_khach_san_phu_hop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -676,7 +653,6 @@
             panel_menu.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nUD_treEm).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUD_nguoiLon).EndInit();
             tabControl1.ResumeLayout(false);
             tab_PhuHopNhat.ResumeLayout(false);
@@ -697,10 +673,9 @@
         private Button btn_DangKyKS;
         private Panel panel3;
         private TextBox lb_TimKiem;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker date_ngayDen;
+        private DateTimePicker date_ngayDi;
         private NumericUpDown nUD_nguoiLon;
-        private NumericUpDown nUD_treEm;
         private TabControl tabControl1;
         private TabPage tab_PhuHopNhat;
         private TabPage tab_GiaThapNhat;
@@ -719,7 +694,6 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label label8;
         private Label label9;
         private Label label10;
         private Button btn_MyTaiKhoan;

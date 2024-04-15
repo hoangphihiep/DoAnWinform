@@ -44,7 +44,8 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@MAKS", acc.MAKS);
                     cmd.Parameters.AddWithValue("@TENANH", acc.TENANH);
                     string relativePath = ExtractRelativePath(acc.ADDRESS);
-                    cmd.Parameters.AddWithValue("@ADDRESS", relativePath);
+                    SqlParameter addressParam = new SqlParameter("@ADDRESS", relativePath ?? (object)DBNull.Value);
+                    cmd.Parameters.Add(addressParam);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();

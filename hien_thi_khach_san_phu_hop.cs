@@ -27,7 +27,6 @@ namespace DuLich
         public string tentk;
         public string mk;
         public int soLuongNguoiLon;
-        public int soLuongTreEm;
         public DateTime ngayDen;
         public DateTime ngayDi;
         public KhachHang kh;
@@ -163,7 +162,7 @@ namespace DuLich
             btn_DangKyKS.FlatAppearance.BorderSize = 0;
             btn_MyTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
-            int soLuong = soLuongNguoiLon + soLuongTreEm;
+            int soLuong = soLuongNguoiLon;
             List<KHACHSAN> listKS = new List<KHACHSAN>();
             truyen.Truyen(diadiem, "TENKH", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
@@ -246,10 +245,14 @@ namespace DuLich
             panel_menu.Visible = false;
             KT_DangNhap1 = 0;
         }
-
         public string diaDiem2;
         private void btn_TimKiem_Click_1(object sender, EventArgs e)
         {
+            if (date_ngayDen.Value != DateTime.Now && date_ngayDi.Value != DateTime.Now)
+            {
+                ngayDen = date_ngayDen.Value;
+                ngayDi = date_ngayDi.Value;
+            }
             List<KHACHSAN> listKS = new List<KHACHSAN>();
             for (int j = flb_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
             {
@@ -263,13 +266,12 @@ namespace DuLich
             int min = trackBar1.Value;
             int max = trackBar2.Maximum - trackBar2.Value;
             int soNguoiLon = int.Parse(nUD_nguoiLon.Value.ToString());
-            int soTreEm = int.Parse(nUD_treEm.Value.ToString());
-            int soLuong2 = soNguoiLon + soTreEm;
+            int soLuong2 = soNguoiLon;
             if (soLuong2 == 0)
             {
-                soLuong2 = soLuongNguoiLon + soLuongTreEm;
+                soLuong2 = soLuongNguoiLon;
             }
-            truyen.Truyen2(diadiem, min, max,soLuong2, listKS, ngayDen, ngayDi);
+            truyen.Truyen2(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
@@ -515,7 +517,7 @@ namespace DuLich
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
-            int soLuong = soLuongNguoiLon + soLuongTreEm;
+            int soLuong = soLuongNguoiLon;
             truyen.Truyen(diadiem, "KCTHANHPHO", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
@@ -530,7 +532,7 @@ namespace DuLich
         private void btn_SanBay_Click(object sender, EventArgs e)
         {
             List<KHACHSAN> listKS = new List<KHACHSAN>();
-            int soLuong = soLuongNguoiLon + soLuongTreEm;
+            int soLuong = soLuongNguoiLon;
             for (int k = flp_KhoangCach.Controls.Count - 1; k >= 0; k--)
             {
                 Control control = flp_KhoangCach.Controls[k];

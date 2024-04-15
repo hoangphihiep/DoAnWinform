@@ -39,9 +39,7 @@
             pictureBox5 = new PictureBox();
             panel1 = new Panel();
             txt_DiaDiem = new TextBox();
-            soLuongTreEm = new NumericUpDown();
             soLuongNguoiLon = new NumericUpDown();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             label6 = new Label();
@@ -69,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)soLuongTreEm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)soLuongNguoiLon).BeginInit();
             panel_menu.SuspendLayout();
             SuspendLayout();
@@ -163,9 +160,7 @@
             panel1.BackColor = Color.WhiteSmoke;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(txt_DiaDiem);
-            panel1.Controls.Add(soLuongTreEm);
             panel1.Controls.Add(soLuongNguoiLon);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label6);
@@ -187,44 +182,25 @@
             txt_DiaDiem.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txt_DiaDiem.Location = new Point(29, 47);
             txt_DiaDiem.Name = "txt_DiaDiem";
-            txt_DiaDiem.Size = new Size(161, 34);
+            txt_DiaDiem.Size = new Size(233, 34);
             txt_DiaDiem.TabIndex = 26;
             txt_DiaDiem.Click += textBox1_Click;
             txt_DiaDiem.TextChanged += textBox1_TextChanged;
             // 
-            // soLuongTreEm
-            // 
-            soLuongTreEm.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            soLuongTreEm.Location = new Point(1062, 47);
-            soLuongTreEm.Name = "soLuongTreEm";
-            soLuongTreEm.Size = new Size(196, 34);
-            soLuongTreEm.TabIndex = 25;
-            // 
             // soLuongNguoiLon
             // 
             soLuongNguoiLon.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            soLuongNguoiLon.Location = new Point(855, 47);
+            soLuongNguoiLon.Location = new Point(993, 47);
             soLuongNguoiLon.Name = "soLuongNguoiLon";
-            soLuongNguoiLon.Size = new Size(193, 34);
+            soLuongNguoiLon.Size = new Size(266, 34);
             soLuongNguoiLon.TabIndex = 24;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(1062, 17);
-            label3.Name = "label3";
-            label3.Size = new Size(148, 25);
-            label3.TabIndex = 23;
-            label3.Text = "Số lượng trẻ em";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(855, 17);
+            label2.Location = new Point(993, 17);
             label2.Name = "label2";
             label2.Size = new Size(175, 25);
             label2.TabIndex = 22;
@@ -235,7 +211,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(524, 17);
+            label1.Location = new Point(639, 17);
             label1.Name = "label1";
             label1.Size = new Size(78, 25);
             label1.TabIndex = 21;
@@ -246,7 +222,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(196, 17);
+            label6.Location = new Point(288, 17);
             label6.Name = "label6";
             label6.Size = new Size(94, 25);
             label6.TabIndex = 20;
@@ -279,7 +255,7 @@
             // date_NgayDi
             // 
             date_NgayDi.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            date_NgayDi.Location = new Point(524, 47);
+            date_NgayDi.Location = new Point(639, 47);
             date_NgayDi.Name = "date_NgayDi";
             date_NgayDi.Size = new Size(322, 34);
             date_NgayDi.TabIndex = 11;
@@ -287,9 +263,9 @@
             // date_ngayDen
             // 
             date_ngayDen.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            date_ngayDen.Location = new Point(196, 47);
+            date_ngayDen.Location = new Point(288, 47);
             date_ngayDen.Name = "date_ngayDen";
-            date_ngayDen.Size = new Size(322, 34);
+            date_ngayDen.Size = new Size(324, 34);
             date_ngayDen.TabIndex = 10;
             // 
             // btn_DangNhap
@@ -479,7 +455,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)soLuongTreEm).EndInit();
             ((System.ComponentModel.ISupportInitialize)soLuongNguoiLon).EndInit();
             panel_menu.ResumeLayout(false);
             ResumeLayout(false);
@@ -501,14 +476,12 @@
         private Button btn_DangNhap;
         private Button btn_DangKy;
         private Label label5;
-        private Label label3;
         private Label label2;
         private Label label1;
         private Label label6;
         private Panel panel2;
         private Label label4;
         private NumericUpDown soLuongNguoiLon;
-        private NumericUpDown soLuongTreEm;
         private Button btn_DangKyKS;
         private TextBox txt_DiaDiem;
         private Panel panel3;

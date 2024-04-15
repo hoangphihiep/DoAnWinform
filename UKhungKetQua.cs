@@ -31,7 +31,7 @@ namespace DuLich
             lbl_KhoangCachSanBay.Text = ks.khoangCachSanBay.ToString() + " km đến sân bay gần nhất";
             lbl_danhGia.Text = "Đánh giá: " + ks.SAO.ToString();
             pictureBox1.Image = Image.FromFile(ks.diaChiAnh);
-            lbl_SoLuong.Text = ks.soLuongKhach.ToString();
+            lbl_SoLuong.Text = "Tối đa " + ks.soLuongKhach.ToString() + " khách";
         }
         private void label2_Click(object sender, EventArgs e)
         {

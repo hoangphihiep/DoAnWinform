@@ -28,7 +28,8 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
                     string relativePath = ExtractRelativePath(acc.AnhBia);
-                    cmd.Parameters.AddWithValue("@AnhBia", relativePath);
+                    SqlParameter addressParam = new SqlParameter("@AnhBia", relativePath ?? (object)DBNull.Value);
+                    cmd.Parameters.Add(addressParam);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();
@@ -51,7 +52,8 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@KCSANBAY", acc.KCSANBAY);
                     cmd.Parameters.AddWithValue("@SAO", acc.SAO);
                     string relativePath = ExtractRelativePath(acc.AnhBia);
-                    cmd.Parameters.AddWithValue("@AnhBia", relativePath);
+                    SqlParameter addressParam = new SqlParameter("@AnhBia", relativePath ?? (object)DBNull.Value);
+                    cmd.Parameters.Add(addressParam);
                     cmd.ExecuteNonQuery();
                 }
                 conn.Close();

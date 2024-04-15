@@ -101,7 +101,6 @@ namespace DuLich
                 if (!reader.IsDBNull(giaColumnIndex))
                 {
                     int maPhong2 = reader.GetInt32(giaColumnIndex) + 1;
-                    //MessageBox.Show(maPhong2.ToString());
                     uPhong.MaPhong = maPhong2;
                 }
             }

@@ -90,7 +90,7 @@ namespace DuLich
             //Ma giam gia theo tk
             if (lbl_MaGiamGia.Visible == true && cbb_MaGiamGia.Visible == true)
             {
-                string query = "Select * from UuDai where Tk = '" + tk + "' and MAKS = '" + ks.MAKS + "' ";
+                string query = "Select * from UuDai where MAKS = '" + ks.MAKS + "' ";
                 var result = modify.UuDai(query);
                 List<int> GiaTriUuDai = new List<int>();
                 GiaTriUuDai.Add(0);
