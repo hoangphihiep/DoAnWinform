@@ -24,7 +24,7 @@ namespace DuLich
         KHACHSAN ks;
         public fHotel_Details(KHACHSAN ks)
         {
-            this.ks=ks;
+            this.ks = ks;
             listdg = new List<DanhGia>();
             InitializeComponent();
         }
@@ -63,18 +63,21 @@ namespace DuLich
             ChenTNChinh();
             ChenTienNghi();
             ChenPhong();
-           // ChenDanhGia();
+            ChenDanhGia();
             MessageBox.Show(checkin.ToString());
         }
         void ChenDanhGiaKhachHang()
         {
-            //lblNameDG.Text = listdg[0].TenKH;
-            //lblDiemDG.Text = listdg[0].Diem.ToString();
-           // lblContentDG.Text = listdg[0].NoiDung;
-           // UCComment uc1 = new UCComment(listdg[iDanhGia++]);
-            //UCComment uc2 = new UCComment(listdg[iDanhGia++]);
-            //flpDanhGiaKhachHang.Controls.Add(uc1);
-            //flpDanhGiaKhachHang.Controls.Add(uc2);
+            if (listdg.Any())
+            {
+                lblNameDG.Text = listdg[0].TenKH;
+                lblDiemDG.Text = listdg[0].Diem.ToString();
+                lblContentDG.Text = listdg[0].NoiDung;
+                UCComment uc1 = new UCComment(listdg[iDanhGia++]);
+                UCComment uc2 = new UCComment(listdg[iDanhGia++]);
+                flpDanhGiaKhachHang.Controls.Add(uc1);
+                flpDanhGiaKhachHang.Controls.Add(uc2);
+            }
         }
 
         void ChenDanhGia()
@@ -128,8 +131,16 @@ namespace DuLich
             lblPtTB.Size = new Size((int)Math.Round(ptTB * 293, 0), 15);
             double ptK = (double)k / n;
             lblPtK.Size = new Size((int)Math.Round(ptK * 293, 0), 15);
-            lblDG1.Text = dtb.ToString();
-            lblDG2.Text = dtb.ToString();
+            if (dtb.ToString() == "NaN")
+            {
+                lblDG1.Text = "0";
+                lblDG2.Text = "0";
+            } 
+            else
+            {
+                lblDG1.Text = dtb.ToString();
+                lblDG2.Text = dtb.ToString();
+            }     
             lblRT1.Text = rt.ToString();
             lblRT2.Text = rt.ToString();
             lblT1.Text = t.ToString();
@@ -170,7 +181,7 @@ namespace DuLich
                     flbRoom.Controls.Add(uCPhong);
                     i++;
                 }
-                
+
             }
             conn.Close();
         }
@@ -298,6 +309,7 @@ namespace DuLich
                 if (!reader.IsDBNull(danhGiaColumnIndex))
                 {
                     int gia = reader.GetInt32(danhGiaColumnIndex);
+                    MessageBox.Show(gia.ToString());
                     lblDG1.Text = gia.ToString();
                     lblDG2.Text = gia.ToString();
                 }
@@ -392,7 +404,7 @@ namespace DuLich
 
         private void lblNextComment_Click(object sender, EventArgs e)
         {
-            if (iDanhGia < listdg.Count-2)
+            if (iDanhGia < listdg.Count - 2)
             {
                 iDanhGia += 2;
                 flpDanhGiaKhachHang.Controls.Clear();

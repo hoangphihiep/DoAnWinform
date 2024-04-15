@@ -173,7 +173,7 @@
             btn_nhanXet.RightToLeft = RightToLeft.No;
             btn_nhanXet.Size = new Size(134, 34);
             btn_nhanXet.TabIndex = 20;
-            btn_nhanXet.Text = "Gửi nhận xét";
+            btn_nhanXet.Text = "Nhận xét";
             btn_nhanXet.UseVisualStyleBackColor = true;
             btn_nhanXet.Visible = false;
             // 
