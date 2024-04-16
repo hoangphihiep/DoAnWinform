@@ -29,14 +29,37 @@ namespace DuLich
 
         private void fHotel_booked_Load(object sender, EventArgs e)
         {
-            List<PhongDaDat> listPhongDat = new List<PhongDaDat>();
-            truyen.Truyen3(taiKhoan, listPhongDat);
-            foreach (PhongDaDat i in listPhongDat)
+            List<DatPhong> list = new SupFHotelBooked().KhachSanSapToi(taiKhoan);
+            foreach (DatPhong dp in list)
             {
-                UPhongDaDat uc = new UPhongDaDat(i);
-                flb_PhongDaDat.Controls.Add(uc);
+                UPhongDaDat uPhongDaDat = new UPhongDaDat(dp);
+                flb_PhongDaDat.Controls.Add(uPhongDaDat);
             }
-            listPhongDat.Clear();
+        }
+
+        private void pSapDen_Paint(object sender, PaintEventArgs e)
+        {
+            List<DatPhong> list = new SupFHotelBooked().KhachSanSapToi(taiKhoan);
+            foreach(DatPhong dp in list)
+            {
+                UPhongDaDat uPhongDaDat = new UPhongDaDat(dp);
+                flb_PhongDaDat.Controls.Add(uPhongDaDat);
+            }
+        }
+
+        private void pDangTraiNghiem_Paint(object sender, PaintEventArgs e)
+        {
+            List<DatPhong> list = new SupFHotelBooked().KhachSanDangTraiNghiem(taiKhoan);
+            foreach (DatPhong dp in list)
+            {
+                UPhongDaDat uPhongDaDat = new UPhongDaDat(dp);
+                flb_PhongDaDat.Controls.Add(uPhongDaDat);
+            }
+        }
+
+        private void pDaTraiNghiem_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -13,30 +13,25 @@ namespace DuLich
 {
     public partial class UPhongDaDat : UserControl
     {
-        PhongDaDat pd;
-        public int viTri;
-        public UPhongDaDat(PhongDaDat pd)
+        DatPhong dp;
+        public UPhongDaDat(DatPhong dp)
         {
             InitializeComponent();
-            this.pd = pd;
-            lbl_TenKhachSan.Text = pd.tenKS;
-            lbl_tenPhong.Text = pd.tenPhong;
-            lbl_diaChi.Text = pd.tenTP + ", " + pd.tenTinh;
-            lbl_soTien.Text = pd.tienThanhToan.ToString() + " VNĐ";
-            lbl_soPhongDat.Text = pd.soLuongPhong.ToString() + " phòng, " + pd.soKhach.ToString() + " người";
-            pB_anhPhong.Image = Image.FromFile(pd.anhPhong);
-            lbl_thoiGianDen.Text = pd.ngayDen.ToString();
-            int thoiGian = Int32.Parse((pd.ngayDen - DateTime.Now ).Days.ToString());
-            if (pd.ngayDen <= DateTime.Now)
+            this.dp = dp;
+            lbl_TenKhachSan.Text = dp.KS.TENKS;
+            lbl_tenPhong.Text = dp.Phong.TENPHONG;
+            lbl_diaChi.Text = dp.KS.THANHPHO + ", " + dp.KS.TINH + " Province ";
+            lbl_soTien.Text = dp.TongThanhToan.ToString() + " VNĐ";
+            lbl_soPhongDat.Text = dp.SoPhong.ToString() + " phòng, " + dp.Phong.SOKHACH.ToString() + " người";
+            pB_anhPhong.Image = Image.FromFile(new SupFHotelBooked().AnhPhong(dp.Phong.MAPHONG));
+            lbl_thoiGianDen.Text = dp.NgayNhan.ToString();
+            if (dp.NgayNhan < DateTime.Now)
+                lbl_thoiGianConLai.Text = "Đang trải nghiệm";
+            else
             {
-                thoiGian = 0;
+                int thoiGian = Int32.Parse((dp.NgayNhan - DateTime.Now).Days.ToString());
+                lbl_thoiGianConLai.Text = "Thời gian còn lại: " + thoiGian.ToString() + " ngày";
             }
-            if (thoiGian == 0)
-            {
-                btn_huyDat.Visible = false;
-                btn_nhanXet.Visible = true;
-            }
-            lbl_thoiGianConLai.Text = "Thời gian còn lại: " + thoiGian.ToString() + " ngày";
         }
         private void UPhongDaDat_Load(object sender, EventArgs e)
         {
@@ -78,7 +73,7 @@ namespace DuLich
                 string sqlString = "INSERT INTO HUYPHONG (MADAT,TRANGTHAI) VALUES (@madat,@trangthai)";
                 using (SqlCommand cmd = new SqlCommand(sqlString, conn))
                 {
-                    cmd.Parameters.AddWithValue("@madat", pd.maDat);
+                    cmd.Parameters.AddWithValue("@madat", dp.MADAT);
                     cmd.Parameters.AddWithValue("@trangthai", "Chưa đặt");
                     cmd.ExecuteNonQuery();
                 }
