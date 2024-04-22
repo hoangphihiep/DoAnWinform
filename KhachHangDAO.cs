@@ -46,6 +46,7 @@ namespace DuLich
             SqlCommand command = new SqlCommand(sqlString, conn);
             command.CommandTimeout = 120;
             SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
             string tenkh = reader.GetString(reader.GetOrdinal("TENKH"));
             string gt = reader.GetString(reader.GetOrdinal("GIOITINH"));
             DateTime bdate = reader.GetDateTime(reader.GetOrdinal("BDATE"));

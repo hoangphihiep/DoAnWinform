@@ -248,3 +248,5 @@ C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\refint\DuLich.dl
 C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.pdb
 C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.genruntimeconfig.cache
 C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\ref\DuLich.dll
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.FComment.resources
+C:\Users\Anya\source\repos\DoAnWinform\obj\Debug\net6.0-windows\DuLich.UCPhongDaTraiNghiem.resources

@@ -55,7 +55,7 @@
             panel1.Controls.Add(pDangTraiNghiem);
             panel1.Controls.Add(pSapDen);
             panel1.Controls.Add(flb_PhongDaDat);
-            panel1.Location = new Point(12, 165);
+            panel1.Location = new Point(12, 101);
             panel1.Name = "panel1";
             panel1.Size = new Size(776, 523);
             panel1.TabIndex = 0;
@@ -69,7 +69,7 @@
             pDaTraiNghiem.Name = "pDaTraiNghiem";
             pDaTraiNghiem.Size = new Size(215, 148);
             pDaTraiNghiem.TabIndex = 8;
-            pDaTraiNghiem.Paint += pDaTraiNghiem_Paint;
+            pDaTraiNghiem.Click += pDaTraiNghiem_Click;
             // 
             // label6
             // 
@@ -98,7 +98,7 @@
             pDangTraiNghiem.Name = "pDangTraiNghiem";
             pDangTraiNghiem.Size = new Size(215, 148);
             pDangTraiNghiem.TabIndex = 7;
-            pDangTraiNghiem.Paint += pDangTraiNghiem_Paint;
+            pDangTraiNghiem.Click += pDangTraiNghiem_Click;
             // 
             // label2
             // 
@@ -127,7 +127,7 @@
             pSapDen.Name = "pSapDen";
             pSapDen.Size = new Size(215, 148);
             pSapDen.TabIndex = 6;
-            pSapDen.Paint += pSapDen_Paint;
+            pSapDen.Click += pSapDen_Click;
             // 
             // label4
             // 
@@ -161,7 +161,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkTurquoise;
-            label1.Location = new Point(12, 80);
+            label1.Location = new Point(12, 34);
             label1.Name = "label1";
             label1.Size = new Size(181, 30);
             label1.TabIndex = 4;
@@ -171,10 +171,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoScroll = true;
+            ClientSize = new Size(811, 413);
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "fHotel_booked";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Hotel_booked";
             Load += fHotel_booked_Load;
             panel1.ResumeLayout(false);

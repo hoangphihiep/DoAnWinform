@@ -32,7 +32,7 @@
             label1 = new Label();
             label2 = new Label();
             nUDDiemDG = new NumericUpDown();
-            button1 = new Button();
+            btn_NhanXet = new Button();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)nUDDiemDG).BeginInit();
             SuspendLayout();
@@ -74,14 +74,15 @@
             nUDDiemDG.Size = new Size(120, 23);
             nUDDiemDG.TabIndex = 7;
             // 
-            // button1
+            // btn_NhanXet
             // 
-            button1.Location = new Point(520, 404);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 23);
-            button1.TabIndex = 8;
-            button1.Text = "Nhận xét";
-            button1.UseVisualStyleBackColor = true;
+            btn_NhanXet.Location = new Point(520, 404);
+            btn_NhanXet.Name = "btn_NhanXet";
+            btn_NhanXet.Size = new Size(100, 23);
+            btn_NhanXet.TabIndex = 8;
+            btn_NhanXet.Text = "Nhận xét";
+            btn_NhanXet.UseVisualStyleBackColor = true;
+            btn_NhanXet.Click += btn_NhanXet_Click;
             // 
             // label3
             // 
@@ -99,12 +100,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(632, 448);
             Controls.Add(label3);
-            Controls.Add(button1);
+            Controls.Add(btn_NhanXet);
             Controls.Add(nUDDiemDG);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txbDanhGia);
             Name = "FComment";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FComment";
             ((System.ComponentModel.ISupportInitialize)nUDDiemDG).EndInit();
             ResumeLayout(false);
@@ -117,7 +119,7 @@
         private Label label1;
         private Label label2;
         private NumericUpDown nUDDiemDG;
-        private Button button1;
+        private Button btn_NhanXet;
         private Label label3;
     }
 }

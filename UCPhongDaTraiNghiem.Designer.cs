@@ -148,6 +148,7 @@
             button1.TabIndex = 30;
             button1.Text = "Đánh giá";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // UCPhongDaTraiNghiem
             // 

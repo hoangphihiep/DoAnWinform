@@ -14,18 +14,21 @@ namespace DuLich
     public partial class UPhongDaDat : UserControl
     {
         DatPhong dp;
+        Room phong;
+        KhachHang kh;
         public UPhongDaDat(DatPhong dp)
         {
             InitializeComponent();
             this.dp = dp;
+            this.phong = new Room_DAO().Get(dp.maphong);
             lbl_TenKhachSan.Text = dp.KS.TENKS;
-            lbl_tenPhong.Text = dp.Phong.TENPHONG;
+            lbl_tenPhong.Text = phong.TENPHONG;
             lbl_diaChi.Text = dp.KS.THANHPHO + ", " + dp.KS.TINH + " Province ";
             lbl_soTien.Text = dp.TongThanhToan.ToString() + " VNĐ";
-            lbl_soPhongDat.Text = dp.SoPhong.ToString() + " phòng, " + dp.Phong.SOKHACH.ToString() + " người";
-            pB_anhPhong.Image = Image.FromFile(new SupFHotelBooked().AnhPhong(dp.Phong.MAPHONG));
+            lbl_soPhongDat.Text = dp.SoPhong.ToString() + " phòng, " + phong.SOKHACH.ToString() + " người";
+            pB_anhPhong.Image = Image.FromFile(phong.HinhAnh);
             lbl_thoiGianDen.Text = dp.NgayNhan.ToString();
-            if (dp.NgayNhan < DateTime.Now)
+            if (dp.NgayNhan < DateTime.Now && dp.NgayTra > DateTime.Now)
                 lbl_thoiGianConLai.Text = "Đang trải nghiệm";
             else
             {

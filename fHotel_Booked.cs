@@ -37,18 +37,20 @@ namespace DuLich
             }
         }
 
-        private void pSapDen_Paint(object sender, PaintEventArgs e)
+        private void pSapDen_Click(object sender, EventArgs e)
         {
+            flb_PhongDaDat.Update();
             List<DatPhong> list = new SupFHotelBooked().KhachSanSapToi(taiKhoan);
-            foreach(DatPhong dp in list)
+            foreach (DatPhong dp in list)
             {
                 UPhongDaDat uPhongDaDat = new UPhongDaDat(dp);
                 flb_PhongDaDat.Controls.Add(uPhongDaDat);
             }
         }
 
-        private void pDangTraiNghiem_Paint(object sender, PaintEventArgs e)
+        private void pDangTraiNghiem_Click(object sender, EventArgs e)
         {
+            flb_PhongDaDat.Update();
             List<DatPhong> list = new SupFHotelBooked().KhachSanDangTraiNghiem(taiKhoan);
             foreach (DatPhong dp in list)
             {
@@ -57,9 +59,15 @@ namespace DuLich
             }
         }
 
-        private void pDaTraiNghiem_Paint(object sender, PaintEventArgs e)
+        private void pDaTraiNghiem_Click(object sender, EventArgs e)
         {
-
+            flb_PhongDaDat.Update();
+            List<DatPhong> list = new SupFHotelBooked().KhachSanDaTraiNghiem(taiKhoan);
+            foreach (DatPhong dp in list)
+            {
+                UCPhongDaTraiNghiem uc = new UCPhongDaTraiNghiem(dp);
+                flb_PhongDaDat.Controls.Add(uc);
+            }
         }
     }
 }

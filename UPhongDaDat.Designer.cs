@@ -57,7 +57,7 @@
             // btn_huyDat
             // 
             btn_huyDat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_huyDat.Location = new Point(558, 107);
+            btn_huyDat.Location = new Point(540, 105);
             btn_huyDat.Name = "btn_huyDat";
             btn_huyDat.Size = new Size(117, 26);
             btn_huyDat.TabIndex = 7;
