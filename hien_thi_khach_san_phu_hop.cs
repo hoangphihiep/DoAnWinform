@@ -152,7 +152,7 @@ namespace DuLich
         public string diadiem;
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(tentk);
+            //MessageBox.Show(tentk);
             btn_MyTaiKhoan.Text = tenKhachHang;
             btn_DangNhap.FlatStyle = FlatStyle.Flat;
             btn_DangNhap.FlatAppearance.BorderSize = 0;
@@ -359,7 +359,7 @@ namespace DuLich
                             maksList[j] = maksList[k];
                             maksList[k] = t1;
                         }
-
+                        MessageBox.Show(maksList[k].ToString() + "so luong: " + soLuong[k].ToString());
                     }
                 }
                 for (int i = 0; i < maksList.Count; i++)

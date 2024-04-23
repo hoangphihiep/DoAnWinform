@@ -26,8 +26,13 @@ namespace DuLich
             lbl_soPhongDat.Text = pd.soLuongPhong.ToString() + " phòng, " + pd.soKhach.ToString() + " người";
             pB_anhPhong.Image = Image.FromFile(pd.anhPhong);
             lbl_thoiGianDen.Text = pd.ngayDen.ToString();
-            int thoiGian = Int32.Parse((pd.ngayDen - DateTime.Now ).Days.ToString());
             if (pd.ngayDen <= DateTime.Now)
+            {
+                pd.ngayDen = DateTime.Now;
+                int thoiGian1 = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
+            }
+            int thoiGian = Int32.Parse((pd.ngayDi - pd.ngayDen).Days.ToString());
+            if (thoiGian < 0)
             {
                 thoiGian = 0;
             }

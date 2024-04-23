@@ -24,15 +24,23 @@ namespace DuLich
 
         private void UCHuyphongCKS_Load(object sender, EventArgs e)
         {
-            lblName.Text = dp.KS.TENKS;
-            lblRoomName.Text = dp.Phong.TENPHONG.ToString();
+            lblName.Text = dp.TENKS;
+            lblRoomName.Text = dp.TENPHONG;
             lblCheckIn.Text = dp.NgayNhan.Date.ToString();
             lblCheckOut.Text = dp.NgayTra.Date.ToString();
-            lblCusName.Text = dp.KhachHang.Ten;
+            lblCusName.Text = dp.TENKH;
             lblSoPhong.Text = dp.SoPhong.ToString();
+            //MessageBox.Show(dp.TongThanhToan.ToString());
             lblPrice.Text = dp.TongThanhToan.ToString();
-            lblAddress.Text = dp.KS.THANHPHO + ", " + dp.KS.TINH;
-            ptbImage.Image = Image.FromFile(dp.Phong.HinhAnh.ToString());
+            /*List<QL_HinhAnh> list = (new QL_HinhAnhDAO().Get(dp.KS.MAKS));
+            foreach (QL_HinhAnh anh in list)
+            {
+                if (anh.TENANH == "anh chinh")
+                {
+                    ptbImage.Image = Image.FromFile(anh.ADDRESS);
+                }
+            }*/
+            ptbImage.Image = Image.FromFile(dp.ANHPHONG);
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
@@ -70,7 +78,7 @@ namespace DuLich
                 conn2.Open();
                 using (SqlCommand cmd2 = new SqlCommand(sqlStr2, conn2))
                 {
-                    cmd2.Parameters.AddWithValue("@MAKH", dp.KhachHang.MaKH);
+                    cmd2.Parameters.AddWithValue("@MAKH", dp.MAKH);
                     cmd2.ExecuteNonQuery();
                 }
               
@@ -80,7 +88,7 @@ namespace DuLich
             SqlConnection conn3 = Connection_to_SQL.getConnection();
             conn3.Open();
             SqlCommand command3 = new SqlCommand(sqlStr3, conn3);
-            command3.Parameters.AddWithValue("@MAPHONG", dp.Phong.MAPHONG);
+            command3.Parameters.AddWithValue("@MAPHONG", dp.MAPHONG);
             SqlDataReader reader3 = command3.ExecuteReader();
             while (reader3.Read())
             {
@@ -97,7 +105,7 @@ namespace DuLich
                 conn4.Open();
                 using (SqlCommand cmd4 = new SqlCommand(sqlStr4, conn4))
                 {
-                    cmd4.Parameters.AddWithValue("@MAPHONG", dp.Phong.MAPHONG);
+                    cmd4.Parameters.AddWithValue("@MAPHONG", dp.MAPHONG);
                     cmd4.Parameters.AddWithValue("@SOPHONG", soLuongPhongTong + dp.SoPhong);
                     cmd4.ExecuteNonQuery();
                 }
