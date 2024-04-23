@@ -121,9 +121,37 @@ namespace DuLich
                 string trangthai = reader.GetString(reader.GetOrdinal("TRANGTHAI"));
                 string mahanhtrinh = reader.GetString(reader.GetOrdinal("MAHANHTRINH"));
                 DatPhong dp = new DatPhong(maDat, kh, ks, phong, checkin, checkout, soluong, gia, trangthai, mahanhtrinh);
+                dp.maks = maks;
                 list.Add(dp);
             }
             return list;
+        }
+
+        public DatPhong GetWithMaDat(int maDat)
+        {
+            string sqlString = string.Format("SELECT * FROM DATPHONG WHERE MADAT= '{0}'", maDat);
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            SqlCommand command = new SqlCommand(sqlString, conn);
+            command.CommandTimeout = 120;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int maks = reader.GetInt32(reader.GetOrdinal("MAKS"));
+                KHACHSAN ks = (new KHACHSAN_DAO().Get(maks));
+                DateTime checkin = reader.GetDateTime(reader.GetOrdinal("CHECKIN"));
+                DateTime checkout = reader.GetDateTime(reader.GetOrdinal("CHECKOUT"));
+                int soluong = reader.GetInt32(reader.GetOrdinal("SOLUONG"));
+                int maphong = reader.GetInt32(reader.GetOrdinal("MAPHONG"));
+                string tendangnhap = reader.GetString(reader.GetOrdinal("TENDANGNHAP"));
+                int makh = reader.GetInt32(reader.GetOrdinal("MAKH"));
+                double gia = reader.GetDouble(reader.GetOrdinal("THANHTOAN"));
+                string trangthai = reader.GetString(reader.GetOrdinal("TRANGTHAI"));
+                string mahanhtrinh = reader.GetString(reader.GetOrdinal("MAHANHTRINH"));
+                DatPhong dp = new DatPhong(maDat, makh, ks, maphong, checkin, checkout, soluong, gia, trangthai, mahanhtrinh);
+                return dp;
+            }
+            return null;
         }
             
     }

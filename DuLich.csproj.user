@@ -16,6 +16,9 @@
     <Compile Update="fCollections.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fHotel_Booked.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +83,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCPhongDaTraiNghiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCTN.cs">

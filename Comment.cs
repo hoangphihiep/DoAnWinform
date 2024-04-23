@@ -8,6 +8,7 @@ namespace DuLich
 {
     public class Comment
     {
+        int maks;
         string tenkh;
         int diem;
         string noidung;
@@ -16,6 +17,14 @@ namespace DuLich
             this.tenkh = tenkh;
             this.diem = diem;
             this.noidung = noidung;
+        }
+
+        public Comment(int maks, string tenkh, int diem, string noidung)
+        {
+            this.tenkh = tenkh;
+            this.diem = diem;
+            this.noidung = noidung;
+            this.maks = maks;
         }
 
         public string Tenkh
@@ -28,6 +37,13 @@ namespace DuLich
             get { return diem; }
             set { diem = value; }
         }
+
+        public int MaKS
+        {
+            get { return maks; }
+            set { maks = value; }
+        }
+
         public string NoiDung
         {
             get { return noidung; }

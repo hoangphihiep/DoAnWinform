@@ -167,6 +167,7 @@ namespace DuLich
             truyen.Truyen(diadiem, "TENKH", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
+                
                 UKhungKetQua uc = new UKhungKetQua(i);
                 uc.tenTaiKhoan = tentk;
                 uc.ShowSoKhach();
@@ -274,6 +275,7 @@ namespace DuLich
             truyen.Truyen2(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
+                MessageBox.Show("maks: " + i.Maks.ToString() + " tenks: " + i.TENKS + " gia: " + i.GIA + " so khach: " + i.soLuongKhach);
                 UKhungKetQua uc = new UKhungKetQua(i);
                 uc.tenTaiKhoan = tentk;
                 uc.ShowSoKhach();
@@ -318,6 +320,7 @@ namespace DuLich
                     flb_danhGiaCao.Controls.Add(uc);
                 }
                 listKS.Clear();
+                lb_TimKiem.Clear();
             }
             // khi có chọn tiện ích
             if (clBox_TienNghiChinh.SelectedIndex != -1 || clBox_TienNghiCC.SelectedIndex != -1 || clBox_DichVu.SelectedIndex != -1 || clBox_AmThuc.SelectedIndex != -1)
@@ -337,6 +340,7 @@ namespace DuLich
                 foreach (KHACHSAN i in listKS)
                 {
                     maksList.Add(i.Maks);
+                    
                 }
                 listKS.Clear();
                 List<int> soLuong = new List<int>();
@@ -359,7 +363,6 @@ namespace DuLich
                             maksList[j] = maksList[k];
                             maksList[k] = t1;
                         }
-                        MessageBox.Show(maksList[k].ToString() + "so luong: " + soLuong[k].ToString());
                     }
                 }
                 for (int i = 0; i < maksList.Count; i++)

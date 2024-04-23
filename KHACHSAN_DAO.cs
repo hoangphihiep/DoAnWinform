@@ -12,7 +12,7 @@ namespace DuLich
 
         public KHACHSAN Get(int maks)
         {
-            string sqlString = string.Format("SELECT * FROM ThongTinCanBan INNER JOIN ViTri ON ThongTinCanBan.MAKS= ViTri.MAKS WHERE MAKS = {0}", maks);
+            string sqlString = string.Format("SELECT * FROM ThongTinCanBan INNER JOIN ViTri ON ThongTinCanBan.MAKS= ViTri.MAKS WHERE ViTri.MAKS = {0}", maks);
             SqlConnection conn = Connection_to_SQL.getConnection();
             conn.Open();
             SqlCommand command = new SqlCommand(sqlString, conn);
@@ -20,9 +20,9 @@ namespace DuLich
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                string tenks = reader.GetString(reader.GetOrdinal("TENKS"));
+                string tenks = reader.GetString(reader.GetOrdinal("TENKH"));
                 string tinh = reader.GetString(reader.GetOrdinal("TINH"));
-                string tp = reader.GetString(reader.GetOrdinal("THANHPHO"));
+                string tp = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
                 int sao = reader.GetInt32(reader.GetOrdinal("SAO"));
                 double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
                 string diachi = reader.GetString(reader.GetOrdinal("DIACHI"));

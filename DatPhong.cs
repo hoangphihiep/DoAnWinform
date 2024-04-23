@@ -18,13 +18,15 @@ namespace DuLich
         string trangThai;
         string maHanhTrinh;
         int maDat;
+
         int makh;
         int maPhong;
-        //bosung
+
         string tenKS;
         string tenPhong;
         string tenKH;
         string anhPhong;
+        public int maphong;
         public DatPhong(int maDat, int makh,int maPhong,string tenKS, string tenPhong, string tenKH, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan,string anhPhong) 
         {
             this.maDat = maDat;
@@ -39,6 +41,8 @@ namespace DuLich
             this.tongThanhToan = tongThanhToan;
             this.anhPhong = anhPhong;
         }
+
+        public int maks;
         public DatPhong(KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan, string trangThai, string maHanhTrinh)
         {
             this.kh = kh;
@@ -68,6 +72,21 @@ namespace DuLich
             get { return maPhong; }
             set { maPhong = value; }
         }
+
+        public DatPhong(int maDat, int makh, KHACHSAN ks, int maphong, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan, string trangThai, string maHanhTrinh)
+        {
+            this.maDat = maDat;
+            this.makh = makh;
+            this.ks = ks;
+            this.ngayNhan = ngayNhan;
+            this.ngayTra = ngayTra;
+            this.soPhong = soPhong;
+            this.tongThanhToan = tongThanhToan;
+            this.trangThai = trangThai;
+            this.maHanhTrinh = maHanhTrinh;
+            this.maphong = maphong;
+        }
+
         public int MADAT
         {
             get { return maDat; }

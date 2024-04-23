@@ -72,8 +72,8 @@ namespace DuLich
 
         public int Maks
         {
-            get { return maks; }
-            set { maks = value; }
+            get { return MAKS; }
+            set { MAKS = value; }
         }
     }
 }
