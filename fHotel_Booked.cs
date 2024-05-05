@@ -39,7 +39,7 @@ namespace DuLich
 
         private void pSapDen_Click(object sender, EventArgs e)
         {
-            flb_PhongDaDat.Update();
+            flb_PhongDaDat.Controls.Clear();
             List<DatPhong> list = new SupFHotelBooked().KhachSanSapToi(taiKhoan);
             foreach (DatPhong dp in list)
             {
@@ -50,7 +50,7 @@ namespace DuLich
 
         private void pDangTraiNghiem_Click(object sender, EventArgs e)
         {
-            flb_PhongDaDat.Update();
+            flb_PhongDaDat.Controls.Clear();
             List<DatPhong> list = new SupFHotelBooked().KhachSanDangTraiNghiem(taiKhoan);
             foreach (DatPhong dp in list)
             {
@@ -61,7 +61,7 @@ namespace DuLich
 
         private void pDaTraiNghiem_Click(object sender, EventArgs e)
         {
-            flb_PhongDaDat.Update();
+            flb_PhongDaDat.Controls.Clear();
             List<DatPhong> list = new SupFHotelBooked().KhachSanDaTraiNghiem(taiKhoan);
             foreach (DatPhong dp in list)
             {
