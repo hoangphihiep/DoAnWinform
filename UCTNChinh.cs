@@ -14,31 +14,17 @@ namespace DuLich
 {
     public partial class UCTNChinh : UserControl
     {
-        int matn;
-        public UCTNChinh(int matn)
+        TienNghiChinh tnc;
+        public UCTNChinh(TienNghiChinh tnc)
         {
-            this.matn = matn;
+            this.tnc = tnc;
             InitializeComponent();
         }
 
         private void UCTNChinh_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM TNChinh WHERE TNChinh.MATN = @matn";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@matn", matn);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-                string address = reader.GetString(reader.GetOrdinal("Anh"));
-                ptbTNC.Image = Image.FromFile(address);
-                lblTNC.Text = reader.GetString(reader.GetOrdinal("TENTN"));
-                i++;
-            }
-            conn.Close();
+            ptbTNC.Image = Image.FromFile(tnc.HinhAnh);
+            lblTNC.Text = tnc.TenTN;
         }
     }
 }

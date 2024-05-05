@@ -88,6 +88,40 @@ namespace DuLich
             return phong;
         }
         
+        public List<Room> GetListRoom(int maks)
+        {
+            List<Room> list = new List<Room>();
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            try
+            {
+                string sqlString = string.Format("SELECT * FROM PHONG INNER JOIN QLPHONG ON PHONG.MAPHONG = QLPHONG.MAPHONG WHERE MAKS = {0}", maks);
+                MessageBox.Show(sqlString);
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
+                    int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
+                    double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
+                    string tenphong = reader.GetString(reader.GetOrdinal("TENPHONG"));
+                    int maphong = reader.GetInt32(reader.GetOrdinal("MAPHONG"));
+                    int sophong = reader.GetInt32(reader.GetOrdinal("SOPHONG"));
+                    int sophong_dd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
+                    string hinhanh = reader.GetString(reader.GetOrdinal("ANH"));
+                    Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, hinhanh);
+                    list.Add(room);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return list;
+        }
 
     }
 }

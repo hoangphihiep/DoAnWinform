@@ -10,6 +10,7 @@ namespace DuLich
     public class QL_TN_DAO
     {
         Connection_to_SQL connection = new Connection_to_SQL();
+        SqlConnection conn = Connection_to_SQL.getConnection();
         public void Add(QL_TN acc, string TenQuanHe)
         {
             string sqlStr = string.Format("INSERT INTO {0} (MAKS, MATN) VALUES ('{1}','{2}')", TenQuanHe, acc.MAKS, acc.MATN);
@@ -41,6 +42,31 @@ namespace DuLich
                 }
                 conn.Close();
             }
+        }
+        public List<string> GetListTienNghi(int maks, int maltn)
+        {
+            string sqlString = string.Format("SELECT * FROM QL_TN INNER JOIN TN ON " +
+                "QL_TN.MATN = TN.MATN WHERE MAKS = {0} AND MALTN = {1}", maks, maltn);
+            conn.Open();
+            List<string> list=  new List<string>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    string tn = reader.GetString(reader.GetOrdinal("TENTN"));
+                    list.Add(tn);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return list;
         }
     }
 }
