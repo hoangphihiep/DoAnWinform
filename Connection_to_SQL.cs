@@ -38,5 +38,6 @@ namespace DuLich
             //return Properties.Settings.Default.cnnStr;
             return cnnString;
         }
+
     }
 }

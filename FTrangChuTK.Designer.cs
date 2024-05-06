@@ -202,9 +202,9 @@
             label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(993, 17);
             label2.Name = "label2";
-            label2.Size = new Size(175, 25);
+            label2.Size = new Size(143, 25);
             label2.TabIndex = 22;
-            label2.Text = "Số lượng người lớn";
+            label2.Text = "Số lượng người";
             // 
             // label1
             // 

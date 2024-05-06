@@ -232,9 +232,9 @@
             label7.ForeColor = SystemColors.ButtonHighlight;
             label7.Location = new Point(779, 7);
             label7.Name = "label7";
-            label7.Size = new Size(173, 25);
+            label7.Size = new Size(141, 25);
             label7.TabIndex = 29;
-            label7.Text = "Số lượng người lớn";
+            label7.Text = "Số lượng người";
             // 
             // label6
             // 
@@ -349,7 +349,7 @@
             flb_PhuHopNhat.Location = new Point(0, 0);
             flb_PhuHopNhat.Name = "flb_PhuHopNhat";
             flb_PhuHopNhat.Size = new Size(990, 479);
-            flb_PhuHopNhat.TabIndex = 1;
+            flb_PhuHopNhat.TabIndex = 2;
             // 
             // tab_GiaThapNhat
             // 
@@ -365,10 +365,12 @@
             // 
             // flb_GiaThapNhat
             // 
+            flb_GiaThapNhat.AutoScroll = true;
+            flb_GiaThapNhat.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             flb_GiaThapNhat.Location = new Point(0, 0);
             flb_GiaThapNhat.Name = "flb_GiaThapNhat";
-            flb_GiaThapNhat.Size = new Size(990, 479);
-            flb_GiaThapNhat.TabIndex = 1;
+            flb_GiaThapNhat.Size = new Size(950, 479);
+            flb_GiaThapNhat.TabIndex = 2;
             // 
             // tabKhoangCach
             // 
@@ -436,10 +438,12 @@
             // 
             // flb_danhGiaCao
             // 
+            flb_danhGiaCao.AutoScroll = true;
+            flb_danhGiaCao.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             flb_danhGiaCao.Location = new Point(0, 0);
             flb_danhGiaCao.Name = "flb_danhGiaCao";
-            flb_danhGiaCao.Size = new Size(990, 479);
-            flb_danhGiaCao.TabIndex = 1;
+            flb_danhGiaCao.Size = new Size(950, 479);
+            flb_danhGiaCao.TabIndex = 4;
             // 
             // trackBar1
             // 
@@ -718,7 +722,7 @@
         private Panel panel5;
         private FlowLayoutPanel flb_PhuHopNhat;
         private FlowLayoutPanel flp_KhoangCach;
-        private FlowLayoutPanel flb_GiaThapNhat;
         private FlowLayoutPanel flb_danhGiaCao;
+        private FlowLayoutPanel flb_GiaThapNhat;
     }
 }

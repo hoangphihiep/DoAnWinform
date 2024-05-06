@@ -37,6 +37,33 @@ namespace DuLich
             }
         }
 
+        public List<DanhGia> GetDanhGia(int maks)
+        {
+            SqlConnection conn = Connection_to_SQL.getConnection();
+            conn.Open();
+            try
+            {
+                List<DanhGia> list = new List<DanhGia>();
+                string sqlString = string.Format("SELECT * FROM DANHGIA WHERE MAKS = {0}", maks);
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string tenKH = reader.GetString(reader.GetOrdinal("TENKH"));
+                    int diem = reader.GetInt32(reader.GetOrdinal("DIEM"));
+                    string noidung = reader.GetString(reader.GetOrdinal("NOIDUNG"));
+                    DanhGia dg = new DanhGia(tenKH, diem, noidung, maks);
+                    list.Add(dg);
+                }
+                return list;
+            }catch(Exception ex)
+            { }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
 
     }
 }

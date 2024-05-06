@@ -21,41 +21,14 @@ namespace DuLich
         DateTime checkin;
         DateTime checkout;
         List<DanhGia> listdg;
+        List<Room> listRoom;
         KHACHSAN ks;
         public fHotel_Details(KHACHSAN ks)
         {
             this.ks = ks;
-            listdg = new List<DanhGia>();
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Customer_Information f = new Customer_Information();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Customer_Information f = new Customer_Information();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Customer_Information f = new Customer_Information();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-        public string tenKS;
-        public string tenViTri;
-        public byte[] hinhanh;
-        public int maks;
         private void fHotel_Details_Load(object sender, EventArgs e)
         {
             ChenThongTinCanBan();
@@ -64,7 +37,6 @@ namespace DuLich
             ChenTienNghi();
             ChenPhong();
             ChenDanhGia();
-            MessageBox.Show(checkin.ToString());
         }
         void ChenDanhGiaKhachHang()
         {
@@ -75,6 +47,7 @@ namespace DuLich
                 lblContentDG.Text = listdg[0].NoiDung;
                 UCComment uc1 = new UCComment(listdg[iDanhGia++]);
                 UCComment uc2 = new UCComment(listdg[iDanhGia++]);
+                flpDanhGiaKhachHang.Controls.Clear();
                 flpDanhGiaKhachHang.Controls.Add(uc1);
                 flpDanhGiaKhachHang.Controls.Add(uc2);
             }
@@ -82,43 +55,30 @@ namespace DuLich
 
         void ChenDanhGia()
         {
-            string query = "SELECT * FROM DANHGIA WHERE DANHGIA.MAKS = @maks";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            List<DanhGia> list = new List<DanhGia>();
+            this.listdg = new DanhGiaDAO().GetDanhGia(ks.Maks);
             int rt = 0, t = 0, tb = 0, k = 0;
             int tong = 0;
             int n = 0;
-            while (reader.Read())
+            foreach (DanhGia danhgia in listdg)
             {
-                string tenKH = reader.GetString(reader.GetOrdinal("TENKH"));
-                int diem = reader.GetInt32(reader.GetOrdinal("DIEM"));
-                string noidung = reader.GetString(reader.GetOrdinal("NOIDUNG"));
-                int maks = reader.GetInt32(reader.GetOrdinal("MAKS"));
-                if (diem < 5)
+                if (danhgia.Diem < 5)
                 {
                     k++;
                 }
-                if (diem < 7 && diem >= 5)
+                if (danhgia.Diem < 7 && danhgia.Diem >= 5)
                 {
                     tb++;
                 }
-                if (diem == 8 || diem == 7)
+                if (danhgia.Diem < 9 && danhgia.Diem >= 7)
                 {
                     t++;
                 }
-                if (diem == 10)
+                if (danhgia.Diem >= 9)
                 {
                     rt++;
                 }
-                tong += diem;
+                tong += danhgia.Diem;
                 n++;
-                DanhGia dg = new DanhGia(tenKH, diem, noidung, maks);
-                listdg.Add(dg);
             }
             lblCommentCount.Text = string.Format("Từ " + n + " khách hàng đã ở");
             double dtb = (double)tong / n;
@@ -131,16 +91,16 @@ namespace DuLich
             lblPtTB.Size = new Size((int)Math.Round(ptTB * 293, 0), 15);
             double ptK = (double)k / n;
             lblPtK.Size = new Size((int)Math.Round(ptK * 293, 0), 15);
-            if (dtb.ToString() == "NaN")
+            if (n == 0)
             {
                 lblDG1.Text = "0";
                 lblDG2.Text = "0";
-            } 
+            }
             else
             {
                 lblDG1.Text = dtb.ToString();
                 lblDG2.Text = dtb.ToString();
-            }     
+            }
             lblRT1.Text = rt.ToString();
             lblRT2.Text = rt.ToString();
             lblT1.Text = t.ToString();
@@ -150,172 +110,76 @@ namespace DuLich
             lblK1.Text = k.ToString();
             lblK2.Text = k.ToString();
             ChenDanhGiaKhachHang();
-            conn.Close();
         }
 
         void ChenPhong()
         {
-            string query = "SELECT * FROM PHONG INNER JOIN QLPHONG ON QLPHONG.MAPHONG=PHONG.MAPHONG WHERE QLPHONG.MAKS = @maks";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            this.listRoom = new Room_DAO().GetListRoom(ks.MAKS);
+            foreach (Room room in listRoom)
             {
-                int maphong = reader.GetInt32(reader.GetOrdinal("MAPHONG"));
-                string tenphong = reader.GetString(reader.GetOrdinal("TENPHONG"));
-                int sophong = reader.GetInt32(reader.GetOrdinal("SOPHONG"));
-                int sophongdd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
-                int sokhach = reader.GetInt32(reader.GetOrdinal("SOKHACH"));
-                int sogiuong = reader.GetInt32(reader.GetOrdinal("SOGIUONG"));
-                double gia = reader.GetDouble(reader.GetOrdinal("GIA"));
-                string anh = reader.GetString(reader.GetOrdinal("ANH"));
-                if (sophong > 0)
-                {
-                    Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophongdd, anh);
-                    UCPhong uCPhong = new UCPhong(ks, room, checkin, checkout);
-                    uCPhong.tenTaiKhoan = tenTaiKhoan;
-                    flbRoom.Controls.Add(uCPhong);
-                    i++;
-                }
-
+                UCPhong uc = new UCPhong(ks, room, checkin, checkout);
+                flbRoom.Controls.Add(uc);
             }
-            conn.Close();
         }
 
         void ChenTienNghi()
         {
-            string query = "SELECT * FROM QL_TN INNER JOIN TN ON QL_TN.MATN=TN.MATN WHERE QL_TN.MAKS = @maks";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            List<string> listTNC = new QL_TN_DAO().GetListTienNghi(ks.MAKS, 1);
+            foreach (string tenTN in listTNC)
             {
-                int ltn = reader.GetInt32(reader.GetOrdinal("MALTN"));
-                if (ltn == 1)
-                {
-                    flpTNChinh.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("TENTN"))));
-                }
-                if (ltn == 2)
-                {
-                    flpDVKS.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("TENTN"))));
-                }
-                if (ltn == 3)
-                {
-                    flpTNCC.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("TENTN"))));
-                }
-                if (ltn == 4)
-                {
-                    flpFood.Controls.Add(new UCTN(reader.GetString(reader.GetOrdinal("TENTN"))));
-                }
-
-                i++;
+                UCTN uc = new UCTN(tenTN);
+                flpTNChinh.Controls.Add(uc);
             }
-            conn.Close();
+            List<string> listDVKS = new QL_TN_DAO().GetListTienNghi(ks.MAKS, 2);
+            foreach (string tenTN in listDVKS)
+            {
+                UCTN uc = new UCTN(tenTN);
+                flpDVKS.Controls.Add(uc);
+            }
+            List<string> listTNCC = new QL_TN_DAO().GetListTienNghi(ks.MAKS, 3);
+            foreach (string tenTN in listTNCC)
+            {
+                UCTN uc = new UCTN(tenTN);
+                flpTNCC.Controls.Add(uc);
+            }
+            List<string> listAmThuc = new QL_TN_DAO().GetListTienNghi(ks.MAKS, 4);
+            foreach (string tenTN in listAmThuc)
+            {
+                UCTN uc = new UCTN(tenTN);
+                flpFood.Controls.Add(uc);
+            }
         }
 
         void ChenTNChinh()
         {
-            string query = "SELECT * FROM QL_TN INNER JOIN TN ON QL_TN.MATN=TN.MATN WHERE QL_TN.MAKS = @maks AND MALTN=1";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            List<TienNghiChinh> list = new TienNghiChinhDAO().GetListTNC(ks.MAKS);
+            foreach (TienNghiChinh tnc in list)
             {
-                flpTNC.Controls.Add(new UCTNChinh(reader.GetInt32(reader.GetOrdinal("MATN"))));
-                i++;
+                UCTNChinh uc = new UCTNChinh(tnc);
+                flpTNC.Controls.Add(uc);
             }
-            conn.Close();
         }
 
         void ChenAnhToTal()
         {
-            string query = "SELECT * FROM QL_ANH WHERE QL_ANH.MAKS = @maks";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-
-                if (i == 1)
-                {
-                    ptbTotalImage1.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 2)
-                {
-                    ptbTotalImage2.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 3)
-                {
-                    ptbTotalImage3.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 4)
-                {
-                    ptbTotalImage4.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 5)
-                {
-                    ptbTotalImage5.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 6)
-                {
-                    ptbTotalImage6.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                if (i == 7)
-                {
-                    ptbTotalImage7.Image = Image.FromFile(reader.GetString(reader.GetOrdinal("ADDRESS")));
-                }
-                i++;
-            }
-            conn.Close();
+            List<QL_HinhAnh> list = new QL_HinhAnhDAO().Get(ks.MAKS);
+            ptbTotalImage1.Image = Image.FromFile(list[0].ADDRESS);
+            ptbTotalImage2.Image = Image.FromFile(list[1].ADDRESS);
+            ptbTotalImage3.Image = Image.FromFile(list[2].ADDRESS);
+            ptbTotalImage4.Image = Image.FromFile(list[3].ADDRESS);
+            ptbTotalImage5.Image = Image.FromFile(list[4].ADDRESS);
+            ptbTotalImage6.Image = Image.FromFile(list[5].ADDRESS);
+            ptbTotalImage7.Image = Image.FromFile(list[6].ADDRESS);
         }
 
         void ChenThongTinCanBan()
         {
-            string query = "SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = @maks";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@maks", ks.MAKS);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-                lblName.Text = reader.GetString(reader.GetOrdinal("TENKH"));
-                lblAddress.Text = reader.GetString(reader.GetOrdinal("DIACHI"));
-                int giaColumnIndex = reader.GetOrdinal("GIA");
-                if (!reader.IsDBNull(giaColumnIndex))
-                {
-                    double gia = reader.GetDouble(giaColumnIndex);
-                    lblPrice.Text = gia.ToString() + " VNĐ";
-                }
-                int danhGiaColumnIndex = reader.GetOrdinal("SAO");
-                if (!reader.IsDBNull(danhGiaColumnIndex))
-                {
-                    int gia = reader.GetInt32(danhGiaColumnIndex);
-                    MessageBox.Show(gia.ToString());
-                    lblDG1.Text = gia.ToString();
-                    lblDG2.Text = gia.ToString();
-                }
-                i++;
-            }
-            conn.Close();
+
+            lblName.Text = ks.TENKS;
+            lblAddress.Text = ks.DIACHI;
+            lblPrice.Text = ks.GIA.ToString() + " VNĐ";
+            lblDG1.Text = ks.GIA.ToString();
+            lblDG2.Text = ks.GIA.ToString();
         }
 
         private void fHotel_Details_Shown(object sender, EventArgs e)
@@ -410,6 +274,59 @@ namespace DuLich
                 flpDanhGiaKhachHang.Controls.Clear();
                 ChenDanhGiaKhachHang();
             }
+        }
+
+        private void cbRatTot_CheckedChanged(object sender, EventArgs e)
+        {
+            SelectDanhGia();
+        }
+
+        void SelectDanhGia()
+        {
+            listdg.Clear();
+            if (cbRatTot.Checked)
+            {
+                AddDanhGia(9, 10);
+            }
+            if (cbTot.Checked)
+            {
+                AddDanhGia(7, 8);
+            }
+            if (cbTrungBinh.Checked)
+            {
+                AddDanhGia(5, 6);
+            }
+            if (cbKem.Checked)
+            {
+                AddDanhGia(0, 4);
+            }
+            ChenDanhGiaKhachHang();
+        }
+
+        void AddDanhGia(int min, int max)
+        {
+            foreach (DanhGia dg in new DanhGiaDAO().GetDanhGia(ks.Maks))
+            {
+                if (dg.Diem >= min && dg.Diem <= max)
+                {
+                    listdg.Add(dg);
+                }
+            }
+        }
+
+        private void cbTot_CheckedChanged(object sender, EventArgs e)
+        {
+            SelectDanhGia();
+        }
+
+        private void cbTrungBinh_CheckedChanged(object sender, EventArgs e)
+        {
+            SelectDanhGia();
+        }
+
+        private void cbKem_CheckedChanged(object sender, EventArgs e)
+        {
+            SelectDanhGia();
         }
 
         public DateTime CheckIn

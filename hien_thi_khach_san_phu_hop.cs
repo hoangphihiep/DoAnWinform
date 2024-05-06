@@ -167,7 +167,7 @@ namespace DuLich
             truyen.Truyen(diadiem, "TENKH", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
-                
+
                 UKhungKetQua uc = new UKhungKetQua(i);
                 uc.tenTaiKhoan = tentk;
                 uc.ShowSoKhach();
@@ -324,13 +324,22 @@ namespace DuLich
             // khi có chọn tiện ích
             if (clBox_TienNghiChinh.SelectedIndex != -1 || clBox_TienNghiCC.SelectedIndex != -1 || clBox_DichVu.SelectedIndex != -1 || clBox_AmThuc.SelectedIndex != -1)
             {
-                
+                for (int j = flb_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
+                {
+                    Control control = flb_PhuHopNhat.Controls[j];
+                    if (control is UserControl)
+                    {
+                        flb_PhuHopNhat.Controls.RemoveAt(j);
+
+                        control.Dispose();
+                    }
+                }
                 List<int> maksList = new List<int>();
                 truyen.Truyen2(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
                 foreach (KHACHSAN i in listKS)
                 {
                     maksList.Add(i.Maks);
-                    
+
                 }
                 listKS.Clear();
                 List<int> soLuong = new List<int>();
@@ -339,6 +348,7 @@ namespace DuLich
                     int demTrung = 0;
                     demTrung = thucHienDemTrung(maks, demTrung);
                     soLuong.Add(demTrung);
+                    MessageBox.Show("maks: " + maks.ToString() + "soLuongTrung: " + demTrung.ToString());
                 }
                 for (int j = 0; j < soLuong.Count - 1; j++)
                 {
@@ -354,49 +364,17 @@ namespace DuLich
                             maksList[k] = t1;
                         }
                     }
-                    
-                }
-                for (int j = tab_PhuHopNhat.Controls.Count - 1; j >= 0; j--)
-                {
-                    Control control = tab_PhuHopNhat.Controls[j];
-                    if (control is UserControl)
-                    {
-                        tab_PhuHopNhat.Controls.RemoveAt(j);
-
-                        control.Dispose();
-                    }
-                }
-                for (int i = 0; i < maksList.Count; i++)
-                {
-                    MessageBox.Show(maksList[i].ToString());
-                    string query1 = string.Format("SELECT * FROM ThongTinCanBan, ViTri,(SELECT MIN (PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach. VMaKS  = ViTri.MAKS AND ThongTinCanBan.MAKS = ViTri.MAKS AND ViTri.MAKS = {0} AND ThongTinCanBan.GIA >= {1} AND ThongTinCanBan.GIA <= {2}", maksList[i], min, max);
-                    SqlConnection conn1 = Connection_to_SQL.getConnection();
-                    conn1.Open();
-                    SqlCommand command1 = new SqlCommand(query1, conn1);
-                    command1.Parameters.AddWithValue("@diadiem", diadiem);
-                    command1.Parameters.AddWithValue("@soLuong1", soLuong2);
-                    SqlDataReader reader1 = command1.ExecuteReader();
-                    while (reader1.Read())
-                    {
-                        string tenTinh = reader1.GetString(reader1.GetOrdinal("TINH"));
-                        string tenThanhPho = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
-                        string tenKhachSan = reader1.GetString(reader1.GetOrdinal("TENKH"));
-                        string diaChi = reader1.GetString(reader1.GetOrdinal("DIACHI"));
-                        int soKhachMin = reader1.GetInt32(reader1.GetOrdinal("MinKhach"));
-                        double giaNhoNhat = reader1.GetDouble(reader1.GetOrdinal("GIA"));
-                        int maks = reader1.GetInt32(reader1.GetOrdinal("VMaKS"));
-                        int khoangCachTP = reader1.GetInt32(reader1.GetOrdinal("KCTHANHPHO"));
-                        int khoangCacchSanBay = reader1.GetInt32(reader1.GetOrdinal("KCSANBAY"));
-                        int danhGia = reader1.GetInt32(reader1.GetOrdinal("SAO"));
-                        string anh = reader1.GetString(reader1.GetOrdinal("AnhBia"));
-                        KHACHSAN ks = new KHACHSAN(maks, tenKhachSan, tenTinh, tenThanhPho, danhGia, giaNhoNhat, diaChi, soKhachMin, khoangCachTP, khoangCacchSanBay, anh, ngayDen, ngayDi);
-                        UKhungKetQua uc = new UKhungKetQua(ks);
-                        uc.tenTaiKhoan = tentk;
-                        uc.ShowSoKhach();
-                        flb_PhuHopNhat.Controls.Add(uc);
-                    }
 
                 }
+                truyen.layDuLieuTienNghi(diadiem, soLuong2, min, max, listKS, ngayDen, ngayDi, maksList);
+                foreach (KHACHSAN i in listKS)
+                {
+                    UKhungKetQua uc = new UKhungKetQua(i);
+                    uc.tenTaiKhoan = tentk;
+                    uc.ShowSoKhach();
+                    flb_PhuHopNhat.Controls.Add(uc);
+                }
+                listKS.Clear();
             }
         }
         public int thucHienDemTrung(int maks, int demTrung)

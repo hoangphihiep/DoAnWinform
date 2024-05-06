@@ -44,6 +44,7 @@ namespace DuLich
             lblSoKhach.Text = room.SOKHACH.ToString();
             lblSoGiuong.Text = room.SOGIUONG.ToString();
             int phongtrong = room.SOPHONG - room.SOPHONGDD;
+            //MessageBox.Show(room.TENPHONG.ToString());
             lblSoPhongTrong.Text = phongtrong.ToString();
             lblPrice.Text = room.GIA.ToString();
             //ptbAnh.Image = Image.FromFile(tenAnh);

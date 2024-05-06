@@ -8,119 +8,64 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DuLich
 {
     public class TruyenDuLieu
     {
-        public void Truyen3 (string tenTaiKhoan, List<PhongDaDat> listPhongDat)
+        private List<KHACHSAN> LayDanhSachKhachSan(string query, string[] parameters, object[] values, DateTime ngayDen, DateTime ngayDi)
         {
-            string query = string.Format("SELECT * FROM DATPHONG WHERE TENDANGNHAP = @taiKhoan");
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@taiKhoan", tenTaiKhoan);
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
+            List<KHACHSAN> listKS = new List<KHACHSAN>();
+
+            using (SqlConnection conn = Connection_to_SQL.getConnection())
             {
-                int maDat = reader.GetInt32(reader.GetOrdinal("MADAT"));
-                int soLuongPhong = reader.GetInt32(reader.GetOrdinal("SOLUONG"));
-                double soTienTong = reader.GetDouble(reader.GetOrdinal("THANHTOAN"));
-                DateTime ngayDen = reader.GetDateTime(reader.GetOrdinal("CHECKIN"));
-                DateTime ngayDi = reader.GetDateTime(reader.GetOrdinal("CHECKOUT"));
-                string tenTinh = "";
-                string tenThanhPho = "";
-                string tenKhachSan = "";
-                string diaChi = "";
-                int maks = 0;
-                int maphong = 0;
-                string tenPhong = "";
-                string address = "";
-                int soKhach = 0; ;
-                int maksColumnIndex = reader.GetOrdinal("MAKS");
-                if (!reader.IsDBNull(maksColumnIndex))
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    int ma = reader.GetInt32(maksColumnIndex);
-                    maks = ma;
-                    string query1 = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS WHERE ViTri.MAKS = @maks");
-                    SqlConnection conn1 = Connection_to_SQL.getConnection();
-                    conn1.Open();
-                    SqlCommand command1 = new SqlCommand(query1, conn1);
-                    command1.Parameters.AddWithValue("@maks", maks);
-                    SqlDataReader reader1 = command1.ExecuteReader();
-                    while (reader1.Read())
+                    for (int i = 0; i < parameters.Length; i++)
                     {
-                        tenTinh = reader1.GetString(reader1.GetOrdinal("TINH"));
-                        tenThanhPho = reader1.GetString(reader1.GetOrdinal("TENTHANHPHO"));
-                        tenKhachSan = reader1.GetString(reader1.GetOrdinal("TENKH"));
-                        diaChi = reader1.GetString(reader1.GetOrdinal("DIACHI"));
+                        command.Parameters.AddWithValue(parameters[i], values[i]);
                     }
-                    conn1.Close();
-                }
-                int maPhongColumnIndex = reader.GetOrdinal("MAPHONG");
-                if (!reader.IsDBNull(maPhongColumnIndex))
-                {
-                    int ma = reader.GetInt32(maPhongColumnIndex);
-                    maphong = ma;
-                    string query1 = string.Format("SELECT * FROM PHONG WHERE MAPHONG = @maphong");
-                    SqlConnection conn1 = Connection_to_SQL.getConnection();
-                    conn1.Open();
-                    SqlCommand command1 = new SqlCommand(query1, conn1);
-                    command1.Parameters.AddWithValue("@maphong", maphong);
-                    SqlDataReader reader1 = command1.ExecuteReader();
-                    while (reader1.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        tenPhong = reader1.GetString(reader1.GetOrdinal("TENPHONG"));
-                        address = reader1.GetString(reader1.GetOrdinal("ANH"));
-                        soKhach = reader1.GetInt32(reader1.GetOrdinal("SOKHACH"));
+                        while (reader.Read())
+                        {
+                            string tenTinh = reader.GetString(reader.GetOrdinal("TINH"));
+                            string tenThanhPho = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
+                            string tenKhachSan = reader.GetString(reader.GetOrdinal("TENKH"));
+                            string diaChi = reader.GetString(reader.GetOrdinal("DIACHI"));
+                            int soKhachMin = reader.GetInt32(reader.GetOrdinal("MinKhach"));
+                            double giaNhoNhat = reader.GetDouble(reader.GetOrdinal("GIA"));
+                            int maks = reader.GetInt32(reader.GetOrdinal("VMaKS"));
+                            int khoangCachTP = reader.GetInt32(reader.GetOrdinal("KCTHANHPHO"));
+                            int khoangCacchSanBay = reader.GetInt32(reader.GetOrdinal("KCSANBAY"));
+                            int danhGia = reader.GetInt32(reader.GetOrdinal("SAO"));
+                            string anh = reader.GetString(reader.GetOrdinal("AnhBia"));
+                            KHACHSAN ks = new KHACHSAN(maks, tenKhachSan, tenTinh, tenThanhPho, danhGia, giaNhoNhat, diaChi, soKhachMin, khoangCachTP, khoangCacchSanBay, anh, ngayDen, ngayDi);
+                            listKS.Add(ks);
+                        }
                     }
-                    conn1.Close();
                 }
-                i++;
-                PhongDaDat phongDD = new PhongDaDat(maDat, maks, maphong, tenPhong, tenKhachSan, tenTinh, tenThanhPho, diaChi, soLuongPhong, soTienTong, address, soKhach, ngayDen, ngayDi);
-                listPhongDat.Add(phongDD);
             }
-            conn.Close();
+            return listKS;
         }
         public void Truyen2 (string diaDiem, int min, int max,int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
         {
-            string query = string.Format("SELECT * FROM ThongTinCanBan, ViTri,(SELECT MIN (PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach. VMaKS  = ViTri.MAKS AND ThongTinCanBan.MAKS = ViTri.MAKS AND ThongTinCanBan.GIA >= {0} AND ThongTinCanBan.GIA <= {1}", min,max);
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@diadiem", diaDiem);
-            command.Parameters.AddWithValue("@soLuong1", soLuong1);
-            SqlDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-                string tenTinh = reader.GetString(reader.GetOrdinal("TINH"));
-                string tenThanhPho = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
-                string tenKhachSan = reader.GetString(reader.GetOrdinal("TENKH"));
-                string diaChi = reader.GetString(reader.GetOrdinal("DIACHI"));
-                int soKhachMin = reader.GetInt32(reader.GetOrdinal("MinKhach"));
-                double giaNhoNhat = reader.GetDouble(reader.GetOrdinal("GIA"));
-                int maks = reader.GetInt32(reader.GetOrdinal("VMaKS"));
-                int khoangCachTP = reader.GetInt32(reader.GetOrdinal("KCTHANHPHO"));
-                int khoangCacchSanBay = reader.GetInt32(reader.GetOrdinal("KCSANBAY"));
-                int danhGia = reader.GetInt32(reader.GetOrdinal("SAO"));
-                string anh = reader.GetString(reader.GetOrdinal("AnhBia"));
-                MessageBox.Show(giaNhoNhat.ToString());
-                KHACHSAN ks = new KHACHSAN(maks, tenKhachSan, tenTinh, tenThanhPho, danhGia, giaNhoNhat, diaChi, soKhachMin, khoangCachTP, khoangCacchSanBay, anh, ngayDen, ngayDi);
-                listKS.Add(ks);
-                i++;
-            }
-            conn.Close();
+            string query = "SELECT * FROM ThongTinCanBan, ViTri, (SELECT MIN(PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach.VMaKS = ViTri.MAKS AND ThongTinCanBan.MAKS = ViTri.MAKS AND ThongTinCanBan.GIA >= @min AND ThongTinCanBan.GIA <= @max";
+            string[] parameters = { "@diadiem", "@soLuong1", "@min", "@max" };
+            object[] values = { diaDiem, soLuong1, min, max };
+            List<KHACHSAN> results = LayDanhSachKhachSan(query, parameters, values, ngayDen, ngayDi);
+            listKS.AddRange(results);
         }
         public void Truyen (string diaDiem, string sapXep, int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
         {
             string query1 = string.Format("SELECT MIN(GIA) as MinGia, ViTri.MAKS as VMaKS  FROM PHONG,QLPHONG,ViTri WHERE ViTri.TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG GROUP BY ViTri.MAKS");
+            
             SqlConnection conn1 = Connection_to_SQL.getConnection();
             conn1.Open();
             SqlCommand command1 = new SqlCommand(query1, conn1);
             command1.Parameters.AddWithValue("@diadiem", diaDiem);
-            int i = 0;
             SqlDataReader reader1 = command1.ExecuteReader(); 
             while (reader1.Read())
             {
@@ -143,37 +88,24 @@ namespace DuLich
                         conn2.Close();
                     }
                 }
-                i++;
-            }    
-            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS,(SELECT MIN (PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach. VMaKS  = ViTri.MAKS ORDER BY {0} ASC ", sapXep);
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@diadiem", diaDiem);
-            command.Parameters.AddWithValue("@soLuong1", soLuong1);
-            command.CommandTimeout = 120;
-            SqlDataReader reader = command.ExecuteReader();
-            int j = 0;
-            while (reader.Read())
-            {
-                string tenTinh = reader.GetString(reader.GetOrdinal("TINH"));
-                string  tenThanhPho = reader.GetString(reader.GetOrdinal("TENTHANHPHO"));
-                string tenKhachSan = reader.GetString(reader.GetOrdinal("TENKH"));
-                string diaChi = reader.GetString(reader.GetOrdinal("DIACHI"));
-                int soKhachMin = reader.GetInt32(reader.GetOrdinal("MinKhach"));
-                double giaNhoNhat = reader.GetDouble(reader.GetOrdinal("GIA"));
-                int maks = reader.GetInt32(reader.GetOrdinal("VMaKS"));
-                int khoangCachTP = reader.GetInt32(reader.GetOrdinal("KCTHANHPHO"));
-                int khoangCacchSanBay = reader.GetInt32(reader.GetOrdinal("KCSANBAY"));
-                int danhGia = reader.GetInt32(reader.GetOrdinal("SAO"));
-                string anh = reader.GetString(reader.GetOrdinal("AnhBia"));
-                KHACHSAN ks = new KHACHSAN(maks, tenKhachSan, tenTinh, tenThanhPho, danhGia, giaNhoNhat, diaChi, soKhachMin, khoangCachTP, khoangCacchSanBay, anh, ngayDen, ngayDi);
-                listKS.Add(ks);
-                j++;
             }
-            conn.Close();
+            string query = string.Format("SELECT * FROM ThongTinCanBan inner join ViTri ON ThongTinCanBan.MAKS = ViTri.MAKS,(SELECT MIN (PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach.VMaKS = ViTri.MAKS ORDER BY {0} ASC ", sapXep);
+            string[] parameters = { "@diadiem", "@soLuong1" };
+            object[] values = { diaDiem, soLuong1 };
+            List<KHACHSAN> results = LayDanhSachKhachSan(query, parameters, values, ngayDen, ngayDi);
+            listKS.AddRange(results);
             conn1.Close();
         }
-
+        public void layDuLieuTienNghi (string diaDiem, int soLuong1, int min, int max, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi,List<int> maKS)
+        {
+            foreach (int i in maKS)
+            {
+                string query = "SELECT * FROM ThongTinCanBan, ViTri,(SELECT MIN (PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach.VMaKS = ViTri.MAKS AND ThongTinCanBan.MAKS = ViTri.MAKS AND ViTri.MAKS = @maKS AND ThongTinCanBan.GIA >= @min AND ThongTinCanBan.GIA <= @max";
+                string[] parameters = { "@diadiem", "@soLuong1", "@min", "@max", "@maKS" };
+                object[] values = { diaDiem, soLuong1, min, max, i };
+                List<KHACHSAN> results = LayDanhSachKhachSan(query, parameters, values, ngayDen, ngayDi);
+                listKS.AddRange(results);
+            }
+        }
     }
 }
