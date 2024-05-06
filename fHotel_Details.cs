@@ -46,10 +46,10 @@ namespace DuLich
                 lblDiemDG.Text = listdg[0].Diem.ToString();
                 lblContentDG.Text = listdg[0].NoiDung;
                 UCComment uc1 = new UCComment(listdg[iDanhGia++]);
-                UCComment uc2 = new UCComment(listdg[iDanhGia++]);
+               // UCComment uc2 = new UCComment(listdg[iDanhGia++]);
                 flpDanhGiaKhachHang.Controls.Clear();
                 flpDanhGiaKhachHang.Controls.Add(uc1);
-                flpDanhGiaKhachHang.Controls.Add(uc2);
+                //flpDanhGiaKhachHang.Controls.Add(uc2);
             }
         }
 
@@ -251,11 +251,6 @@ namespace DuLich
             this.Show();
         }
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void lblBackComment_Click(object sender, EventArgs e)
         {
             if (iDanhGia >= 2)
@@ -328,6 +323,8 @@ namespace DuLich
         {
             SelectDanhGia();
         }
+
+
 
         public DateTime CheckIn
         {

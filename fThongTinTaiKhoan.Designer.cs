@@ -90,15 +90,16 @@
             // 
             // panel6
             // 
-            panel6.Location = new Point(187, 46);
+            panel6.Location = new Point(190, 46);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1227, 671);
+            panel6.Size = new Size(1224, 671);
             panel6.TabIndex = 11;
             panel6.Visible = false;
             // 
             // btn_QuanLyHuy
             // 
-            btn_QuanLyHuy.Location = new Point(44, 395);
+            btn_QuanLyHuy.FlatStyle = FlatStyle.Flat;
+            btn_QuanLyHuy.Location = new Point(44, 440);
             btn_QuanLyHuy.Name = "btn_QuanLyHuy";
             btn_QuanLyHuy.Size = new Size(146, 41);
             btn_QuanLyHuy.TabIndex = 11;
@@ -109,7 +110,8 @@
             // 
             // btn_TienNghi
             // 
-            btn_TienNghi.Location = new Point(44, 358);
+            btn_TienNghi.FlatStyle = FlatStyle.Flat;
+            btn_TienNghi.Location = new Point(44, 399);
             btn_TienNghi.Name = "btn_TienNghi";
             btn_TienNghi.Size = new Size(146, 41);
             btn_TienNghi.TabIndex = 10;
@@ -121,7 +123,8 @@
             // 
             // btn_UDai
             // 
-            btn_UDai.Location = new Point(44, 181);
+            btn_UDai.FlatStyle = FlatStyle.Flat;
+            btn_UDai.Location = new Point(44, 194);
             btn_UDai.Name = "btn_UDai";
             btn_UDai.Size = new Size(146, 41);
             btn_UDai.TabIndex = 9;
@@ -141,7 +144,8 @@
             // 
             // btn_HoSo
             // 
-            btn_HoSo.Location = new Point(44, 320);
+            btn_HoSo.FlatStyle = FlatStyle.Flat;
+            btn_HoSo.Location = new Point(44, 358);
             btn_HoSo.Name = "btn_HoSo";
             btn_HoSo.Size = new Size(146, 41);
             btn_HoSo.TabIndex = 8;
@@ -153,7 +157,8 @@
             // 
             // btn_Anh
             // 
-            btn_Anh.Location = new Point(44, 288);
+            btn_Anh.FlatStyle = FlatStyle.Flat;
+            btn_Anh.Location = new Point(44, 317);
             btn_Anh.Name = "btn_Anh";
             btn_Anh.Size = new Size(146, 41);
             btn_Anh.TabIndex = 7;
@@ -165,7 +170,8 @@
             // 
             // btn_ChiTietPhong
             // 
-            btn_ChiTietPhong.Location = new Point(44, 254);
+            btn_ChiTietPhong.FlatStyle = FlatStyle.Flat;
+            btn_ChiTietPhong.Location = new Point(44, 276);
             btn_ChiTietPhong.Name = "btn_ChiTietPhong";
             btn_ChiTietPhong.Size = new Size(146, 41);
             btn_ChiTietPhong.TabIndex = 6;
@@ -177,7 +183,8 @@
             // 
             // btn_ViTri
             // 
-            btn_ViTri.Location = new Point(44, 219);
+            btn_ViTri.FlatStyle = FlatStyle.Flat;
+            btn_ViTri.Location = new Point(44, 235);
             btn_ViTri.Name = "btn_ViTri";
             btn_ViTri.Size = new Size(146, 41);
             btn_ViTri.TabIndex = 5;
@@ -189,7 +196,8 @@
             // 
             // btn_ThongTingKS
             // 
-            btn_ThongTingKS.Location = new Point(44, 143);
+            btn_ThongTingKS.FlatStyle = FlatStyle.Flat;
+            btn_ThongTingKS.Location = new Point(44, 153);
             btn_ThongTingKS.Name = "btn_ThongTingKS";
             btn_ThongTingKS.Size = new Size(146, 41);
             btn_ThongTingKS.TabIndex = 4;
@@ -208,9 +216,10 @@
             // 
             // btn_MatKhau
             // 
-            btn_MatKhau.Location = new Point(0, 49);
+            btn_MatKhau.FlatStyle = FlatStyle.Flat;
+            btn_MatKhau.Location = new Point(0, 51);
             btn_MatKhau.Name = "btn_MatKhau";
-            btn_MatKhau.Size = new Size(190, 47);
+            btn_MatKhau.Size = new Size(190, 51);
             btn_MatKhau.TabIndex = 3;
             btn_MatKhau.Text = "Mật khẩu";
             btn_MatKhau.TextAlign = ContentAlignment.MiddleLeft;
@@ -219,9 +228,10 @@
             // 
             // btn_ThongTinKhachSan
             // 
-            btn_ThongTinKhachSan.Location = new Point(0, 93);
+            btn_ThongTinKhachSan.FlatStyle = FlatStyle.Flat;
+            btn_ThongTinKhachSan.Location = new Point(0, 102);
             btn_ThongTinKhachSan.Name = "btn_ThongTinKhachSan";
-            btn_ThongTinKhachSan.Size = new Size(190, 53);
+            btn_ThongTinKhachSan.Size = new Size(190, 51);
             btn_ThongTinKhachSan.TabIndex = 2;
             btn_ThongTinKhachSan.Text = "Thông tin khách sạn";
             btn_ThongTinKhachSan.TextAlign = ContentAlignment.MiddleLeft;
@@ -231,6 +241,7 @@
             // 
             // btn_ThongTin
             // 
+            btn_ThongTin.FlatStyle = FlatStyle.Flat;
             btn_ThongTin.Location = new Point(0, 0);
             btn_ThongTin.Name = "btn_ThongTin";
             btn_ThongTin.Size = new Size(190, 51);

@@ -27,7 +27,7 @@ namespace DuLich
             pB_anhPhong.Image = Image.FromFile(phong.HinhAnh);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDanhGia_Click(object sender, EventArgs e)
         {
             this.Hide();
             FComment f = new FComment(dp);

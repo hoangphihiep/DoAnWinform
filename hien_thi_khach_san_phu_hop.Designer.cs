@@ -391,12 +391,14 @@
             panel_KhoangCach.Controls.Add(btn_ThanhPho);
             panel_KhoangCach.Location = new Point(378, 0);
             panel_KhoangCach.Name = "panel_KhoangCach";
-            panel_KhoangCach.Size = new Size(184, 125);
+            panel_KhoangCach.Size = new Size(184, 106);
             panel_KhoangCach.TabIndex = 0;
             panel_KhoangCach.Visible = false;
+            panel_KhoangCach.Paint += panel_KhoangCach_Paint;
             // 
             // btn_SanBay
             // 
+            btn_SanBay.FlatStyle = FlatStyle.Flat;
             btn_SanBay.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             btn_SanBay.Location = new Point(0, 52);
             btn_SanBay.Name = "btn_SanBay";
@@ -408,6 +410,7 @@
             // 
             // btn_ThanhPho
             // 
+            btn_ThanhPho.FlatStyle = FlatStyle.Flat;
             btn_ThanhPho.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             btn_ThanhPho.Location = new Point(0, 0);
             btn_ThanhPho.Name = "btn_ThanhPho";

@@ -50,7 +50,8 @@ namespace DuLich
             string tenkh = reader.GetString(reader.GetOrdinal("TENKH"));
             string gt = reader.GetString(reader.GetOrdinal("GIOITINH"));
             DateTime bdate = reader.GetDateTime(reader.GetOrdinal("BDATE"));
-            string sdt = reader.GetString(reader.GetOrdinal("SDT"));
+            int sdt1 = reader.GetInt32(reader.GetOrdinal("SDT"));
+            string sdt = sdt1.ToString();
             string gmail = reader.GetString(reader.GetOrdinal("GMAIL"));
             string diachi = reader.GetString(reader.GetOrdinal("DIACHI"));
             KhachHang kh = new KhachHang(makh, tenkh, sdt, gt, bdate, gmail, diachi);

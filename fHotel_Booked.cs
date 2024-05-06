@@ -69,5 +69,20 @@ namespace DuLich
                 flb_PhongDaDat.Controls.Add(uc);
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pDaTraiNghiem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

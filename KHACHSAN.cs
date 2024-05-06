@@ -43,7 +43,7 @@ namespace DuLich
 
         public KHACHSAN(int maks, string tenKS, string tinh, string thanhPho, int sao, double gia, string diaChi)
         {
-
+            MAKS = maks;
             TENKS = tenKS;
             TINH = tinh;
             THANHPHO = thanhPho;

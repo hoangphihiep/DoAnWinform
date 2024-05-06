@@ -109,7 +109,7 @@ namespace DuLich
                     int sophong = reader.GetInt32(reader.GetOrdinal("SOPHONG"));
                     int sophong_dd = reader.GetInt32(reader.GetOrdinal("SOPHONG_DD"));
                     string hinhanh = reader.GetString(reader.GetOrdinal("ANH"));
-                    Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, hinhanh);
+                    Room room = new Room(sokhach, sogiuong, gia, tenphong, maphong, sophong, sophong_dd, hinhanh);
                     list.Add(room);
                 }
             }catch(Exception ex)

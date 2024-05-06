@@ -72,6 +72,7 @@
             pDaTraiNghiem.Size = new Size(246, 197);
             pDaTraiNghiem.TabIndex = 8;
             pDaTraiNghiem.Click += pDaTraiNghiem_Click;
+            pDaTraiNghiem.Paint += pDaTraiNghiem_Paint;
             // 
             // label6
             // 
@@ -82,6 +83,7 @@
             label6.Size = new Size(143, 25);
             label6.TabIndex = 1;
             label6.Text = "Đã trải nghiệm";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -90,6 +92,7 @@
             label7.Name = "label7";
             label7.Size = new Size(246, 147);
             label7.TabIndex = 0;
+            label7.Click += label7_Click;
             // 
             // pDangTraiNghiem
             // 

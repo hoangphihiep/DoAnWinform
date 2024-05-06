@@ -22,10 +22,10 @@ namespace DuLich
         private void btn_NhanXet_Click(object sender, EventArgs e)
         {
             int diem = Int32.Parse(nUDDiemDG.Text);
-            KhachHang kh = new KhachHangDAO().Get(dp.KS.Maks);
+            KhachHang kh = new KhachHangDAO().Get(dp.MAKH);
             string tenkh = kh.Ten;
             string noidung = txbDanhGia.Text;
-            int maks = dp.maks;
+            int maks = dp.KS.MAKS;
             DanhGia dg = new DanhGia(tenkh, diem, noidung, maks);
             DanhGiaDAO dgDAO = new DanhGiaDAO();
             dgDAO.Add(dg);

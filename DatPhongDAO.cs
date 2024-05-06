@@ -68,7 +68,7 @@ namespace DuLich
             try
             {
                 conn.Open();
-                string sqlString = "INSERT INTO DATPHONG (MADAT,MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN) VALUES (@madat,@maks, @checkIn, @checkOut, @soluong, @maphong, @tendangnhap, @makh, @thanhtoan)";
+                string sqlString = "INSERT INTO DATPHONG (MADAT,MAKS, CHECKIN, CHECKOUT, SOLUONG, MAPHONG, TENDANGNHAP, MAKH, THANHTOAN, TRANGTHAI, MAHANHTRINH) VALUES (@madat,@maks, @checkIn, @checkOut, @soluong, @maphong, @tendangnhap, @makh, @thanhtoan, @trangthai, @mahanhtrinh)";
                 using(SqlCommand cmd = new SqlCommand(sqlString, conn))
                 {
                     cmd.Parameters.AddWithValue("@madat", madatphong);
@@ -77,10 +77,11 @@ namespace DuLich
                     cmd.Parameters.AddWithValue("@checkOut", datPhong.NgayTra);
                     cmd.Parameters.AddWithValue("@soluong", datPhong.SoPhong);
                     cmd.Parameters.AddWithValue("@maphong", datPhong.Phong.MAPHONG);
-                    MessageBox.Show(TenTaiKhoan);
                     cmd.Parameters.AddWithValue("@tendangnhap", TenTaiKhoan);
                     cmd.Parameters.AddWithValue("@makh", makhachhang);
                     cmd.Parameters.AddWithValue("@thanhtoan", datPhong.TongThanhToan);
+                    cmd.Parameters.AddWithValue("@trangthai", "đã đặt");
+                    cmd.Parameters.AddWithValue("@mahanhtrinh", "11111");
                     cmd.ExecuteNonQuery();
                 }
             }

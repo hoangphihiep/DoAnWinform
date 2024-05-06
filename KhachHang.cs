@@ -9,7 +9,7 @@ namespace DuLich
     public class KhachHang
     {
         string tenTaiKhoan;
-        int makh;
+        public int makh { get; set; }
         string ten;
         string sdt;
         string gt;

@@ -490,6 +490,7 @@ namespace DuLich
 
         private void btn_ThanhPho_Click(object sender, EventArgs e)
         {
+            panel_KhoangCach.Visible = false;
             List<KHACHSAN> listKS = new List<KHACHSAN>();
             for (int k = flp_KhoangCach.Controls.Count - 1; k >= 0; k--)
             {
@@ -514,6 +515,7 @@ namespace DuLich
 
         private void btn_SanBay_Click(object sender, EventArgs e)
         {
+            panel_KhoangCach.Visible = false;
             List<KHACHSAN> listKS = new List<KHACHSAN>();
             int soLuong = soLuongNguoiLon;
             for (int k = flp_KhoangCach.Controls.Count - 1; k >= 0; k--)
@@ -542,6 +544,11 @@ namespace DuLich
         }
 
         private void btn_menuTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_KhoangCach_Paint(object sender, PaintEventArgs e)
         {
 
         }

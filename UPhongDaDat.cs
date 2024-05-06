@@ -69,26 +69,8 @@ namespace DuLich
         private void btn_huyDat_Click(object sender, EventArgs e)
         {
             btn_huyDat.Text = "Đang chờ xử lý";
-            SqlConnection conn = Connection_to_SQL.getConnection();
-            try
-            {
-                conn.Open();
-                string sqlString = "INSERT INTO HUYPHONG (MADAT,TRANGTHAI) VALUES (@madat,@trangthai)";
-                using (SqlCommand cmd = new SqlCommand(sqlString, conn))
-                {
-                    cmd.Parameters.AddWithValue("@madat", dp.MADAT);
-                    cmd.Parameters.AddWithValue("@trangthai", "Chưa đặt");
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            HuyPhongDAO huyPhongDAO = new HuyPhongDAO();
+            huyPhongDAO.Add(dp.MADAT);
         }
     }
 }
