@@ -50,7 +50,7 @@ namespace DuLich
             }
             return listKS;
         }
-        public void Truyen2 (string diaDiem, int min, int max,int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
+        public void Truyen2(string diaDiem, int min, int max, int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
         {
             string query = "SELECT * FROM ThongTinCanBan, ViTri, (SELECT MIN(PHONG.SOKHACH) as MinKhach, ViTri.MAKS as VMaKS FROM PHONG,QLPHONG,ViTri WHERE TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG AND PHONG.SOKHACH >= @soLuong1 GROUP BY ViTri.MAKS) as QLKhach WHERE TINH = @diadiem AND QLKhach.VMaKS = ViTri.MAKS AND ThongTinCanBan.MAKS = ViTri.MAKS AND ThongTinCanBan.GIA >= @min AND ThongTinCanBan.GIA <= @max";
             string[] parameters = { "@diadiem", "@soLuong1", "@min", "@max" };
@@ -58,15 +58,15 @@ namespace DuLich
             List<KHACHSAN> results = LayDanhSachKhachSan(query, parameters, values, ngayDen, ngayDi);
             listKS.AddRange(results);
         }
-        public void Truyen (string diaDiem, string sapXep, int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
+        public void Truyen(string diaDiem, string sapXep, int soLuong1, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi)
         {
             string query1 = string.Format("SELECT MIN(GIA) as MinGia, ViTri.MAKS as VMaKS  FROM PHONG,QLPHONG,ViTri WHERE ViTri.TINH = @diadiem AND ViTri.MAKS = QLPHONG.MAKS AND QLPHONG.MAPHONG = PHONG.MAPHONG GROUP BY ViTri.MAKS");
-            
+
             SqlConnection conn1 = Connection_to_SQL.getConnection();
             conn1.Open();
             SqlCommand command1 = new SqlCommand(query1, conn1);
             command1.Parameters.AddWithValue("@diadiem", diaDiem);
-            SqlDataReader reader1 = command1.ExecuteReader(); 
+            SqlDataReader reader1 = command1.ExecuteReader();
             while (reader1.Read())
             {
                 int giaColumnIndex = reader1.GetOrdinal("MinGia");
@@ -96,7 +96,7 @@ namespace DuLich
             listKS.AddRange(results);
             conn1.Close();
         }
-        public void layDuLieuTienNghi (string diaDiem, int soLuong1, int min, int max, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi,List<int> maKS)
+        public void layDuLieuTienNghi(string diaDiem, int soLuong1, int min, int max, List<KHACHSAN> listKS, DateTime ngayDen, DateTime ngayDi, List<int> maKS)
         {
             foreach (int i in maKS)
             {
@@ -105,6 +105,39 @@ namespace DuLich
                 object[] values = { diaDiem, soLuong1, min, max, i };
                 List<KHACHSAN> results = LayDanhSachKhachSan(query, parameters, values, ngayDen, ngayDi);
                 listKS.AddRange(results);
+            }
+        }
+        public void hienThiPhongMuonHuy(string tentk, List<DatPhong> listPhongDat)
+        {
+            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            {
+                connection.Open();
+                string query1 = "SELECT DATPHONG.MADAT as madatphong, KHACHHANG.MAKH as makh,PHONG.MAPHONG as maphong,ThongTinCanBan.TENKH as tenKS, PHONG.TENPHONG as tenphong, DATPHONG.CHECKIN as ngayDen, DATPHONG.CHECKOUT as ngayDi, KHACHHANG.TENKH as tenKH, DATPHONG.SOLUONG as soPhong, DATPHONG.THANHTOAN as tienTT, PHONG.ANH as anhPhong FROM DATPHONG, HUYPHONG, KHACHSAN_THUOC_TAIKHOAN, ThongTinCanBan,PHONG,KHACHHANG WHERE ThongTinCanBan.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MADAT = HUYPHONG.MADAT AND DATPHONG.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MAPHONG = PHONG.MAPHONG AND DATPHONG.MAKH = KHACHHANG.MAKH AND KHACHSAN_THUOC_TAIKHOAN.TaiKhoan = @tk";
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    command.Parameters.AddWithValue("@tk", tentk);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int maDatPhong = reader.GetInt32(reader.GetOrdinal("madatphong"));
+                            int makhachhang = reader.GetInt32(reader.GetOrdinal("makh"));
+                            int maPhong = reader.GetInt32(reader.GetOrdinal("maphong"));
+                            string TENKS = reader.GetString(reader.GetOrdinal("tenKS"));
+                            MessageBox.Show(TENKS.ToString());
+                            string TENPHONG = reader.GetString(reader.GetOrdinal("tenphong"));
+                            DateTime ngayDen = reader.GetDateTime("ngayDen");
+                            DateTime ngayDi = reader.GetDateTime("ngayDi");
+                            string tenKH = reader.GetString(reader.GetOrdinal("tenKH"));
+                            int soLuongPhong = reader.GetInt32(reader.GetOrdinal("soPhong"));
+                            double tongThanhToan = reader.GetDouble(reader.GetOrdinal("tienTT"));
+                            MessageBox.Show(tongThanhToan.ToString());
+                            string anhPhong = reader.GetString(reader.GetOrdinal("anhPhong"));
+                            DatPhong dp = new DatPhong(maDatPhong, makhachhang, maPhong, TENKS, TENPHONG, tenKH, ngayDen, ngayDi, soLuongPhong, tongThanhToan, anhPhong);
+                            listPhongDat.Add(dp);
+                        }
+                    }
+                }
             }
         }
     }

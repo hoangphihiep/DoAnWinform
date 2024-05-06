@@ -48,7 +48,7 @@ namespace DuLich
             lblCustomerName.Text = datphong.KhachHang.Ten;
             lbl_soDT.Text = datphong.KhachHang.Sdt;
             lblPrice.Text = datphong.TongThanhToan.ToString();
-            lblState.Text = datphong.TongThanhToan.ToString();
+            //lblState.Text = datphong.TongThanhToan.ToString();
             lblMaHanhTrinh.Text = datphong.MaHanhTrinh.ToString();
             lbl_SDT2.Text = datphong.KhachHang.Sdt.ToString();
            

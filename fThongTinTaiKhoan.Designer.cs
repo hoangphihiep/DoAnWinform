@@ -104,6 +104,7 @@
             btn_QuanLyHuy.Size = new Size(146, 41);
             btn_QuanLyHuy.TabIndex = 11;
             btn_QuanLyHuy.Text = "Quản lý hủy đặt";
+            btn_QuanLyHuy.TextAlign = ContentAlignment.MiddleLeft;
             btn_QuanLyHuy.UseVisualStyleBackColor = true;
             btn_QuanLyHuy.Visible = false;
             btn_QuanLyHuy.Click += btn_QuanLyHuy_Click;

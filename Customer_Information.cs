@@ -83,7 +83,7 @@ namespace DuLich
             label19.Text = (phong.SOPHONG - phong.SOPHONGDD).ToString();
             label20.Text = phong.GIA.ToString();
             lbl_CostRoom.Text = phong.GIA.ToString();
-            lbl_Cost.Text = phong.GIA.ToString();
+            lbl_Cost.Text = phong.GIA.ToString();          
             giaTien *= 1.13;
             double truncatedNumber = Math.Round(giaTien, 2);
             lbl_LastCost.Text = truncatedNumber.ToString();
@@ -115,7 +115,20 @@ namespace DuLich
 
         private void btn_NEXT_Click(object sender, EventArgs e)
         {
-            lastcost = lbl_LastCost.Text;
+            string GiaChuyenDoi = phong.GIA.ToString();
+            double giaTien;
+            double.TryParse(GiaChuyenDoi, out giaTien);
+            if (txt_SoLuong.Text != "")
+            {
+                int soLuong1 = int.Parse(txt_SoLuong.Text);
+                if (soLuong1 > 0)
+                {
+                    giaTien = giaTien * soLuong1;
+                }
+            }
+            giaTien *= 1.13;
+            double truncatedNumber = Math.Round(giaTien, 2);
+            lastcost = truncatedNumber.ToString();
             int soLuong = int.Parse(txt_SoLuong.Text);
             this.kh = new KhachHang(txt_HoVaTen.Text, txt_SoDienThoai.Text, txt_GioiTinh.Text, dtp_NgayThangNamSinh.Value, txt_Email.Text, txt_DiaChi.Text,TENTAIKHOAN);
             this.datphong = new DatPhong(kh, ks, phong, checkin, checkout,soLuong, 10000000, "Đã thanh toán", "11111");

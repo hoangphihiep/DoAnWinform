@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,26 +48,8 @@ namespace DuLich
                 btn_ThongTinKhachSan.Visible = true;
                 uUuDai1.SetTenTK(tentk);
             }
-            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
-            {
-                connection.Open();
-                string query1 = "SELECT DISTINCT QLPHONG.MAPHONG " +
-                               "FROM QLPHONG " +
-                               "JOIN ThongTinCanBan ON QLPHONG.MAKS = ThongTinCanBan.MAKS " +
-                               "WHERE ThongTinCanBan.TK = @TaiKhoan";
-                using (SqlCommand command = new SqlCommand(query1, connection))
-                {
-                    command.Parameters.AddWithValue("@TaiKhoan", tentk);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int maPhong = reader.GetInt32(0);
-                            maPhongList.Add(maPhong);
-                        }
-                    }
-                }
-            }
+            luuTruMaPhong luutru = new luuTruMaPhong();
+            luutru.luuMaPhong(tentk, maPhongList);   
         }
         public void ShowQLHuy()
         {
@@ -242,37 +225,12 @@ namespace DuLich
             flP_QuanLyHuy.BringToFront();
             flP_QuanLyHuy.Visible = true;
             List<DatPhong> listPhongDat = new List<DatPhong>();
-            using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
+            TruyenDuLieu truyen = new TruyenDuLieu();
+            truyen.hienThiPhongMuonHuy(tentk, listPhongDat);
+            foreach (DatPhong i in listPhongDat)
             {
-                connection.Open();
-                string query1 = "SELECT DATPHONG.MADAT as madatphong, KHACHHANG.MAKH as makh,PHONG.MAPHONG as maphong,ThongTinCanBan.TENKH as tenKS, PHONG.TENPHONG as tenphong, DATPHONG.CHECKIN as ngayDen, DATPHONG.CHECKOUT as ngayDi, KHACHHANG.TENKH as tenKH, DATPHONG.SOLUONG as soPhong, DATPHONG.THANHTOAN as tienTT, PHONG.ANH as anhPhong FROM DATPHONG, HUYPHONG, KHACHSAN_THUOC_TAIKHOAN, ThongTinCanBan,PHONG,KHACHHANG WHERE ThongTinCanBan.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MADAT = HUYPHONG.MADAT AND DATPHONG.MAKS = KHACHSAN_THUOC_TAIKHOAN.MAKS AND DATPHONG.MAPHONG = PHONG.MAPHONG AND DATPHONG.MAKH = KHACHHANG.MAKH AND KHACHSAN_THUOC_TAIKHOAN.TaiKhoan = @tk";
-                using (SqlCommand command = new SqlCommand(query1, connection))
-                {
-                    command.Parameters.AddWithValue("@tk", tentk);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int maDatPhong = reader.GetInt32(reader.GetOrdinal("madatphong"));
-                            int makhachhang = reader.GetInt32(reader.GetOrdinal("makh"));
-                            int maPhong = reader.GetInt32(reader.GetOrdinal("maphong"));
-                            string TENKS = reader.GetString(reader.GetOrdinal("tenKS"));
-                            MessageBox.Show(TENKS.ToString());
-                            string TENPHONG = reader.GetString(reader.GetOrdinal("tenphong"));
-                            DateTime ngayDen = reader.GetDateTime("ngayDen");
-                            DateTime ngayDi = reader.GetDateTime("ngayDi");
-                            string tenKH = reader.GetString(reader.GetOrdinal("tenKH"));
-                            int soLuongPhong = reader.GetInt32(reader.GetOrdinal("soPhong"));
-                            double tongThanhToan = reader.GetDouble(reader.GetOrdinal("tienTT"));
-                            MessageBox.Show(tongThanhToan.ToString());
-                            string anhPhong = reader.GetString(reader.GetOrdinal("anhPhong"));
-                            DatPhong dp = new DatPhong(maDatPhong, makhachhang, maPhong, TENKS, TENPHONG, tenKH, ngayDen, ngayDi, soLuongPhong, tongThanhToan, anhPhong);
-                            //listPhongDat.Add(dp);z
-                            UCHuyphongCKS uc = new UCHuyphongCKS(dp);
-                            flP_QuanLyHuy.Controls.Add(uc);
-                        }
-                    }
-                }
+                UCHuyphongCKS uc = new UCHuyphongCKS(i);
+                flP_QuanLyHuy.Controls.Add(uc);
             }
         }
 

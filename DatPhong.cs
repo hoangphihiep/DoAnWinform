@@ -53,6 +53,7 @@ namespace DuLich
             this.tongThanhToan = tongThanhToan;
             this.trangThai = trangThai;
             this.maHanhTrinh = maHanhTrinh;
+            this.phong = phong;
         }
 
         public DatPhong(int maDat, KhachHang kh, KHACHSAN ks, Room phong, DateTime ngayNhan, DateTime ngayTra, int soPhong, double tongThanhToan, string trangThai, string maHanhTrinh)
@@ -66,6 +67,7 @@ namespace DuLich
             this.tongThanhToan = tongThanhToan;
             this.trangThai = trangThai;
             this.maHanhTrinh = maHanhTrinh;
+            this.phong = phong;
         }
         public int MAPHONG
         {

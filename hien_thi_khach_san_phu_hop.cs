@@ -232,6 +232,7 @@ namespace DuLich
         {
             fHotel_booked f = new fHotel_booked();
             //f.kiemtratrang = 1;
+            f.taiKhoan = tentk;
             this.Hide();
             f.ShowDialog();
             this.Show();
