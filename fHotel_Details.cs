@@ -251,11 +251,6 @@ namespace DuLich
             this.Show();
         }
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void lblBackComment_Click(object sender, EventArgs e)
         {
             if (iDanhGia >= 2)
@@ -328,6 +323,8 @@ namespace DuLich
         {
             SelectDanhGia();
         }
+
+
 
         public DateTime CheckIn
         {

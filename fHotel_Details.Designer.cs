@@ -44,8 +44,6 @@
             lblBackComment = new Label();
             flpDanhGiaKhachHang = new FlowLayoutPanel();
             panel55 = new Panel();
-            comboBox1 = new ComboBox();
-            label124 = new Label();
             label123 = new Label();
             cbKem = new CheckBox();
             cbTrungBinh = new CheckBox();
@@ -363,8 +361,6 @@
             // panel55
             // 
             panel55.BackColor = SystemColors.ControlLightLight;
-            panel55.Controls.Add(comboBox1);
-            panel55.Controls.Add(label124);
             panel55.Controls.Add(label123);
             panel55.Controls.Add(cbKem);
             panel55.Controls.Add(cbTrungBinh);
@@ -375,26 +371,6 @@
             panel55.Name = "panel55";
             panel55.Size = new Size(208, 274);
             panel55.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Đánh giá tăng dần", "Đánh giá giảm dần", "Thời gian gần đây" });
-            comboBox1.Location = new Point(14, 219);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(177, 23);
-            comboBox1.TabIndex = 7;
-            // 
-            // label124
-            // 
-            label124.AutoSize = true;
-            label124.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label124.ForeColor = Color.DarkTurquoise;
-            label124.Location = new Point(17, 177);
-            label124.Name = "label124";
-            label124.Size = new Size(63, 20);
-            label124.TabIndex = 6;
-            label124.Text = "Sắp xếp";
             // 
             // label123
             // 
@@ -1666,8 +1642,6 @@
         private CheckBox cbTrungBinh;
         private CheckBox cbTot;
         private CheckBox cbRatTot;
-        private ComboBox comboBox1;
-        private Label label124;
         private Label label123;
         private FlowLayoutPanel flpDanhGiaKhachHang;
         private Label label137;

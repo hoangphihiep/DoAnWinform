@@ -38,7 +38,7 @@
             lbl_thoiGianDen = new Label();
             lbl_TenKhachSan = new Label();
             pB_anhPhong = new PictureBox();
-            button1 = new Button();
+            btnDanhGia = new Button();
             ((System.ComponentModel.ISupportInitialize)pB_anhPhong).BeginInit();
             SuspendLayout();
             // 
@@ -140,21 +140,21 @@
             pB_anhPhong.TabIndex = 20;
             pB_anhPhong.TabStop = false;
             // 
-            // button1
+            // btnDanhGia
             // 
-            button1.Location = new Point(560, 117);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 23);
-            button1.TabIndex = 30;
-            button1.Text = "Đánh giá";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnDanhGia.Location = new Point(560, 117);
+            btnDanhGia.Name = "btnDanhGia";
+            btnDanhGia.Size = new Size(82, 23);
+            btnDanhGia.TabIndex = 30;
+            btnDanhGia.Text = "Đánh giá";
+            btnDanhGia.UseVisualStyleBackColor = true;
+            btnDanhGia.Click += btnDanhGia_Click;
             // 
             // UCPhongDaTraiNghiem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
+            Controls.Add(btnDanhGia);
             Controls.Add(lbl_tenPhong);
             Controls.Add(lbl_soPhongDat);
             Controls.Add(lbl_soTien);
@@ -184,6 +184,6 @@
         private Label lbl_thoiGianDen;
         private Label lbl_TenKhachSan;
         private PictureBox pB_anhPhong;
-        private Button button1;
+        private Button btnDanhGia;
     }
 }

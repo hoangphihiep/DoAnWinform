@@ -63,7 +63,7 @@
             lblDiem.AutoSize = true;
             lblDiem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblDiem.ForeColor = Color.DarkTurquoise;
-            lblDiem.Location = new Point(409, 15);
+            lblDiem.Location = new Point(398, 15);
             lblDiem.Name = "lblDiem";
             lblDiem.Size = new Size(14, 15);
             lblDiem.TabIndex = 2;

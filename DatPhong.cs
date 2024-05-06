@@ -87,6 +87,17 @@ namespace DuLich
             this.maphong = maphong;
         }
 
+        public DatPhong(int maDat, int makh, int maks, int maphong, DateTime ngayNhan, DateTime ngayTra, int sophong)
+        {
+            this.maDat = maDat;
+            this.makh = makh;
+            this.maks = maks;
+            this.maphong = maphong;
+            this.ngayNhan = ngayNhan;
+            this.ngayTra = ngayTra;
+            this.soPhong = soPhong;
+        }
+
         public int MADAT
         {
             get { return maDat; }
