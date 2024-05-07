@@ -46,7 +46,7 @@ namespace DuLich
             using (SqlConnection connection = new SqlConnection(Connection_to_SQL.getConnnection()))
             {
                 connection.Open();
-                string sql = "SELECT QA.* " +  "FROM QL_ANH QA " +  "JOIN KHACHSAN_THUOC_TAIKHOAN KT ON QA.MAKS = KT.MaKS " + "WHERE KT.TaiKhoan = '" + tk + "'";
+                string sql = "SELECT QA.* " + "FROM QL_ANH QA " + "JOIN KHACHSAN_THUOC_TAIKHOAN KT ON QA.MAKS = KT.MaKS " + "WHERE KT.TaiKhoan = '" + tk + "'";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -145,7 +145,7 @@ namespace DuLich
             dao.Update(Anh6, "QL_ANH");
             MessageBox.Show("Update thành công");
         }
-            
+
 
         private void ptb_AnhBia_Click(object sender, EventArgs e)
         {

@@ -58,6 +58,7 @@
             ptb_AnhChinh.Location = new Point(20, 83);
             ptb_AnhChinh.Name = "ptb_AnhChinh";
             ptb_AnhChinh.Size = new Size(214, 192);
+            ptb_AnhChinh.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_AnhChinh.TabIndex = 148;
             ptb_AnhChinh.TabStop = false;
             ptb_AnhChinh.Visible = false;
@@ -69,6 +70,7 @@
             ptb_Anh6.Location = new Point(360, 426);
             ptb_Anh6.Name = "ptb_Anh6";
             ptb_Anh6.Size = new Size(135, 119);
+            ptb_Anh6.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh6.TabIndex = 147;
             ptb_Anh6.TabStop = false;
             ptb_Anh6.Visible = false;
@@ -80,6 +82,7 @@
             ptb_Anh5.Location = new Point(360, 301);
             ptb_Anh5.Name = "ptb_Anh5";
             ptb_Anh5.Size = new Size(135, 119);
+            ptb_Anh5.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh5.TabIndex = 146;
             ptb_Anh5.TabStop = false;
             ptb_Anh5.Visible = false;
@@ -91,6 +94,7 @@
             ptb_Anh4.Location = new Point(193, 301);
             ptb_Anh4.Name = "ptb_Anh4";
             ptb_Anh4.Size = new Size(135, 119);
+            ptb_Anh4.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh4.TabIndex = 145;
             ptb_Anh4.TabStop = false;
             ptb_Anh4.Visible = false;
@@ -102,6 +106,7 @@
             ptb_Anh3.Location = new Point(193, 426);
             ptb_Anh3.Name = "ptb_Anh3";
             ptb_Anh3.Size = new Size(135, 119);
+            ptb_Anh3.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh3.TabIndex = 144;
             ptb_Anh3.TabStop = false;
             ptb_Anh3.Visible = false;
@@ -113,6 +118,7 @@
             ptb_Anh2.Location = new Point(20, 426);
             ptb_Anh2.Name = "ptb_Anh2";
             ptb_Anh2.Size = new Size(135, 119);
+            ptb_Anh2.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh2.TabIndex = 143;
             ptb_Anh2.TabStop = false;
             ptb_Anh2.Visible = false;
@@ -124,6 +130,7 @@
             ptb_Anh1.Location = new Point(20, 301);
             ptb_Anh1.Name = "ptb_Anh1";
             ptb_Anh1.Size = new Size(135, 119);
+            ptb_Anh1.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_Anh1.TabIndex = 142;
             ptb_Anh1.TabStop = false;
             ptb_Anh1.Visible = false;
@@ -135,6 +142,7 @@
             ptb_AnhBia.Location = new Point(281, 83);
             ptb_AnhBia.Name = "ptb_AnhBia";
             ptb_AnhBia.Size = new Size(214, 192);
+            ptb_AnhBia.SizeMode = PictureBoxSizeMode.Zoom;
             ptb_AnhBia.TabIndex = 141;
             ptb_AnhBia.TabStop = false;
             ptb_AnhBia.Visible = false;

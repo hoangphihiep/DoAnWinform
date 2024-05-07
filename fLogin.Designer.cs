@@ -32,7 +32,6 @@
             btn_DangKy = new Button();
             pictureBox1 = new PictureBox();
             txt_TenDangNhap = new TextBox();
-            pictureBox2 = new PictureBox();
             txt_MatKhau = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -40,7 +39,6 @@
             panel2 = new Panel();
             btn_DangNhap = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -71,7 +69,7 @@
             // 
             txt_TenDangNhap.BorderStyle = BorderStyle.None;
             txt_TenDangNhap.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_TenDangNhap.Location = new Point(111, 224);
+            txt_TenDangNhap.Location = new Point(111, 190);
             txt_TenDangNhap.Name = "txt_TenDangNhap";
             txt_TenDangNhap.Size = new Size(254, 21);
             txt_TenDangNhap.TabIndex = 1;
@@ -80,21 +78,11 @@
             txt_TenDangNhap.TextChanged += txt_TenDangNhap_TextChanged;
             txt_TenDangNhap.MouseEnter += txt_TenDangNhap_MouseEnter;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(111, 131);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(177, 62);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
             // txt_MatKhau
             // 
             txt_MatKhau.BorderStyle = BorderStyle.None;
             txt_MatKhau.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_MatKhau.Location = new Point(111, 284);
+            txt_MatKhau.Location = new Point(111, 266);
             txt_MatKhau.Name = "txt_MatKhau";
             txt_MatKhau.Size = new Size(254, 21);
             txt_MatKhau.TabIndex = 2;
@@ -106,7 +94,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(46, 214);
+            pictureBox3.Location = new Point(46, 180);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(46, 37);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -116,7 +104,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(46, 274);
+            pictureBox4.Location = new Point(46, 256);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(46, 37);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -126,7 +114,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Location = new Point(111, 243);
+            panel1.Location = new Point(111, 209);
             panel1.Name = "panel1";
             panel1.Size = new Size(254, 1);
             panel1.TabIndex = 9;
@@ -134,7 +122,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(111, 303);
+            panel2.Location = new Point(111, 285);
             panel2.Name = "panel2";
             panel2.Size = new Size(254, 1);
             panel2.TabIndex = 10;
@@ -144,7 +132,7 @@
             btn_DangNhap.BackColor = Color.Azure;
             btn_DangNhap.FlatStyle = FlatStyle.Popup;
             btn_DangNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_DangNhap.Location = new Point(46, 333);
+            btn_DangNhap.Location = new Point(46, 328);
             btn_DangNhap.Name = "btn_DangNhap";
             btn_DangNhap.Size = new Size(319, 52);
             btn_DangNhap.TabIndex = 3;
@@ -167,14 +155,12 @@
             Controls.Add(pictureBox3);
             Controls.Add(txt_TenDangNhap);
             Controls.Add(pictureBox1);
-            Controls.Add(pictureBox2);
             Name = "fLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
             FormClosing += fLogin_FormClosing;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
@@ -186,7 +172,6 @@
         private Button btn_DangKy;
         private PictureBox pictureBox1;
         private TextBox txt_TenDangNhap;
-        private PictureBox pictureBox2;
         private TextBox txt_MatKhau;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
