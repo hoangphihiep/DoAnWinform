@@ -42,7 +42,7 @@ namespace DuLich
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string cmd = string.Format("INSERT INTO QL_ANH (MAKS, MAANH, TENANH, ADDRESS) VALUES ('{0}', '{1}', '{2}', '{3}')", txbMaKS.Text, txbMaAnh.Text, txbTenAnh.Text, txbAddress.Text);
-            txbCommand.Text=cmd;
+            txbCommand.Text = cmd;
         }
 
         private void FAddAnh_DragEnter(object sender, DragEventArgs e)
@@ -79,6 +79,11 @@ namespace DuLich
                     pictureBox1.Image = Image.FromFile(targetPath);
                 }
             }
+        }
+
+        private void FAddAnh_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

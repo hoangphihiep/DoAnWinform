@@ -19,6 +19,7 @@ namespace DuLich
         // Khai báo danh sách để lưu các Mã phòng
         public List<int> maPhongList = new List<int>();
         public int index = 0;
+        HuyPhongDAO hpdao = new HuyPhongDAO();
         public fThongTinTaiKhoan()
         {
             InitializeComponent();
@@ -225,8 +226,7 @@ namespace DuLich
             flP_QuanLyHuy.BringToFront();
             flP_QuanLyHuy.Visible = true;
             List<DatPhong> listPhongDat = new List<DatPhong>();
-            TruyenDuLieu truyen = new TruyenDuLieu();
-            truyen.hienThiPhongMuonHuy(tentk, listPhongDat);
+            hpdao.getPhongMuonHuy(tentk, listPhongDat);
             foreach (DatPhong i in listPhongDat)
             {
                 UCHuyphongCKS uc = new UCHuyphongCKS(i);

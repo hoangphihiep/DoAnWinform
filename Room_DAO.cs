@@ -96,7 +96,6 @@ namespace DuLich
             try
             {
                 string sqlString = string.Format("SELECT * FROM PHONG INNER JOIN QLPHONG ON PHONG.MAPHONG = QLPHONG.MAPHONG WHERE MAKS = {0}", maks);
-                MessageBox.Show(sqlString);
                 SqlCommand cmd = new SqlCommand(sqlString, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while(reader.Read())

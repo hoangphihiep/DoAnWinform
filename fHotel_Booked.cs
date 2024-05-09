@@ -13,7 +13,6 @@ namespace DuLich
     public partial class fHotel_booked : Form
     {
         public string taiKhoan;
-        TruyenDuLieu truyen = new TruyenDuLieu();
         public fHotel_booked()
         {
             InitializeComponent();

@@ -19,7 +19,8 @@ namespace DuLich
 {
     public partial class hien_thi_khach_san_phu_hop : Form
     {
-        TruyenDuLieu truyen = new TruyenDuLieu();
+        KHACHSAN_DAO ksdao = new KHACHSAN_DAO();
+        TienNghiDAO tndao = new TienNghiDAO();
         int value3;
         int value2;
         int value;
@@ -152,7 +153,6 @@ namespace DuLich
         public string diadiem;
         private void hien_thi_khach_san_phu_hop_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(tentk);
             btn_MyTaiKhoan.Text = tenKhachHang;
             btn_DangNhap.FlatStyle = FlatStyle.Flat;
             btn_DangNhap.FlatAppearance.BorderSize = 0;
@@ -164,7 +164,7 @@ namespace DuLich
             btn_MyTaiKhoan.FlatAppearance.BorderSize = 0;
             int soLuong = soLuongNguoiLon;
             List<KHACHSAN> listKS = new List<KHACHSAN>();
-            truyen.Truyen(diadiem, "TENKH", soLuong, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanTK(diadiem, "TENKH", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
 
@@ -174,7 +174,7 @@ namespace DuLich
                 flb_PhuHopNhat.Controls.Add(uc);
             }
             listKS.Clear();
-            truyen.Truyen(diadiem, "GIA", soLuong, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanTK(diadiem, "GIA", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
@@ -182,7 +182,7 @@ namespace DuLich
                 flb_GiaThapNhat.Controls.Add(uc);
             }
             listKS.Clear();
-            truyen.Truyen(diadiem, "SAO", soLuong, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanTK(diadiem, "SAO", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
@@ -273,7 +273,7 @@ namespace DuLich
             {
                 soLuong2 = soLuongNguoiLon;
             }
-            truyen.Truyen2(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanMinMax(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
@@ -294,7 +294,7 @@ namespace DuLich
                         control.Dispose();
                     }
                 }
-                truyen.Truyen(diadiem, "TENKH", soLuong2, listKS, ngayDen, ngayDi);
+                ksdao.getKhachSanTK(diadiem, "TENKH", soLuong2, listKS, ngayDen, ngayDi);
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
@@ -303,7 +303,7 @@ namespace DuLich
                     flb_PhuHopNhat.Controls.Add(uc);
                 }
                 listKS.Clear();
-                truyen.Truyen(diadiem, "GIA", soLuong2, listKS, ngayDen, ngayDi);
+                ksdao.getKhachSanTK(diadiem, "GIA", soLuong2, listKS, ngayDen, ngayDi);
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
@@ -311,7 +311,7 @@ namespace DuLich
                     flb_GiaThapNhat.Controls.Add(uc);
                 }
                 listKS.Clear();
-                truyen.Truyen(diadiem, "SAO", soLuong2, listKS, ngayDen, ngayDi);
+                ksdao.getKhachSanTK(diadiem, "SAO", soLuong2, listKS, ngayDen, ngayDi);
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
@@ -336,7 +336,7 @@ namespace DuLich
                     }
                 }
                 List<int> maksList = new List<int>();
-                truyen.Truyen2(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
+                ksdao.getKhachSanMinMax(diadiem, min, max, soLuong2, listKS, ngayDen, ngayDi);
                 foreach (KHACHSAN i in listKS)
                 {
                     maksList.Add(i.Maks);
@@ -349,7 +349,6 @@ namespace DuLich
                     int demTrung = 0;
                     demTrung = thucHienDemTrung(maks, demTrung);
                     soLuong.Add(demTrung);
-                    MessageBox.Show("maks: " + maks.ToString() + "soLuongTrung: " + demTrung.ToString());
                 }
                 for (int j = 0; j < soLuong.Count - 1; j++)
                 {
@@ -367,7 +366,7 @@ namespace DuLich
                     }
 
                 }
-                truyen.layDuLieuTienNghi(diadiem, soLuong2, min, max, listKS, ngayDen, ngayDi, maksList);
+                tndao.getDuLieuTienNghi(diadiem, soLuong2, min, max, listKS, ngayDen, ngayDi, maksList);
                 foreach (KHACHSAN i in listKS)
                 {
                     UKhungKetQua uc = new UKhungKetQua(i);
@@ -380,80 +379,79 @@ namespace DuLich
         }
         public int thucHienDemTrung(int maks, int demTrung)
         {
-            TruyenDuLieuTienNghi tiennghi = new TruyenDuLieuTienNghi();
-            tiennghi.thucHienTruyen(maks);
+            tndao.getSLTNTrung(maks);
             foreach (string selectedFeature in clBox_TienNghiChinh.CheckedItems)
             {
-                if (selectedFeature == tiennghi.mayLanhSelected)
+                if (selectedFeature == tndao.mayLanhSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.nhaHangSelected)
+                else if (selectedFeature == tndao.nhaHangSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.hoBoiSelected)
+                else if (selectedFeature == tndao.hoBoiSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.leTan24hSelected)
+                else if (selectedFeature == tndao.leTan24hSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.WifiSelected)
+                else if (selectedFeature == tndao.WifiSelected)
                 {
                     demTrung++;
                 }
             }
             foreach (string selectedFeature in clBox_DichVu.CheckedItems)
             {
-                if (selectedFeature == tiennghi.quayLeTanSelected)
+                if (selectedFeature == tndao.quayLeTanSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.dichVuThuDoiNgoaiTeSelected)
+                else if (selectedFeature == tndao.dichVuThuDoiNgoaiTeSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.dichVuTiecCuoiSelected)
+                else if (selectedFeature == tndao.dichVuTiecCuoiSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.dichVuHoTroDatTourSelected)
+                else if (selectedFeature == tndao.dichVuHoTroDatTourSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.nhanVienDaNgonNguSelected)
+                else if (selectedFeature == tndao.nhanVienDaNgonNguSelected)
                 {
                     demTrung++;
                 }
             }
             foreach (string selectedFeature in clBox_TienNghiCC.CheckedItems)
             {
-                if (selectedFeature == tiennghi.baiDauXeSelected)
+                if (selectedFeature == tndao.baiDauXeSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.tiemCaFeSelected)
+                else if (selectedFeature == tndao.tiemCaFeSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.thangMaySelected)
+                else if (selectedFeature == tndao.thangMaySelected)
                 {
                     demTrung++;
                 }
             }
             foreach (string selectedFeature in clBox_AmThuc.CheckedItems)
             {
-                if (selectedFeature == tiennghi.quayBarSelected)
+                if (selectedFeature == tndao.quayBarSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.buaSangSelected)
+                else if (selectedFeature == tndao.buaSangSelected)
                 {
                     demTrung++;
                 }
-                else if (selectedFeature == tiennghi.quayBarBenHoBoiSelected)
+                else if (selectedFeature == tndao.quayBarBenHoBoiSelected)
                 {
                     demTrung++;
                 }
@@ -503,7 +501,7 @@ namespace DuLich
                 }
             }
             int soLuong = soLuongNguoiLon;
-            truyen.Truyen(diadiem, "KCTHANHPHO", soLuong, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanTK(diadiem, "GIA", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);
@@ -528,7 +526,7 @@ namespace DuLich
                     control.Dispose(); // Giải phóng bộ nhớ cho UserControl
                 }
             }
-            truyen.Truyen(diadiem, "KCSANBAY", soLuong, listKS, ngayDen, ngayDi);
+            ksdao.getKhachSanTK(diadiem, "GIA", soLuong, listKS, ngayDen, ngayDi);
             foreach (KHACHSAN i in listKS)
             {
                 UKhungKetQua uc = new UKhungKetQua(i);

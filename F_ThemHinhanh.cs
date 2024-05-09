@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void F_ThemHinhanh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
