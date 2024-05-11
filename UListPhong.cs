@@ -16,5 +16,10 @@ namespace DuLich
         {
             InitializeComponent();
         }
+
+        private void UListPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

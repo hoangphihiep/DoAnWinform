@@ -173,6 +173,7 @@
             Controls.Add(label14);
             Name = "U_HienThiPhong";
             Size = new Size(584, 256);
+            Load += U_HienThiPhong_Load;
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();

@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Name = "UListPhong";
             Size = new Size(1221, 606);
+            Load += UListPhong_Load;
             ResumeLayout(false);
         }
 

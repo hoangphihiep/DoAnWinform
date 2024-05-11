@@ -45,5 +45,10 @@ namespace DuLich
             soPhongConTrong = label19.Text;
             Gia = label20.Text;
         }
+
+        private void U_HienThiPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
